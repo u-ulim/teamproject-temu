@@ -8,3 +8,11 @@
   @extend .width_inner;
   color: map-get($color-system, success-color);
 }
+
+#main__wrapper {
+  .main {
+    .main__slide {
+      background: url(./);
+    }
+  }
+}

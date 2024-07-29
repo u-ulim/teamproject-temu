@@ -298,8 +298,13 @@ table {
 .width_inner, .hi {
   width: 1384px;
   padding: 0px 15px 0px 15px;
+  margin: 0 auto;
 }
 
 .hi {
   color: #ff6d00;
+}
+
+#main__wrapper .main .main__slide {
+  background: url(./);
 }
