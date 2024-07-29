@@ -4,7 +4,7 @@
 @import "./layout/layout.scss";
 
 .hi {
-  @extend .heading_XL_48;
-  @extend .width_full;
-  color: map-get($color, secondary-color);
+  @extend .heading_XXS_16;
+  @extend .width_inner;
+  color: map-get($color-system, success-color);
 }

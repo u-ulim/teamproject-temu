@@ -14,7 +14,7 @@
   font-size: 56px;
 }
 
-.heading_XL_48, .hi {
+.heading_XL_48 {
   font-family: "Pretendard-Regular";
   font-weight: 700;
   font-style: normal;
@@ -54,7 +54,7 @@
   font-size: 20px;
 }
 
-.heading_XXS_16 {
+.heading_XXS_16, .hi {
   font-family: "Pretendard-Regular";
   font-weight: 700;
   font-style: normal;
@@ -291,15 +291,15 @@ table {
 }
 
 /* VARIABLES */
-.width_full, .hi {
+.width_full {
   width: 100%;
 }
 
-.width_inner {
+.width_inner, .hi {
   width: 1384px;
   padding: 0px 15px 0px 15px;
 }
 
 .hi {
-  color: #009e95;
+  color: #ff6d00;
 }
