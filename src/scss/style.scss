@@ -1,0 +1,10 @@
+@import "./config/fonts.scss";
+@import "./config/reset.scss";
+@import "./config/colors.scss";
+@import "./layout/layout.scss";
+
+.hi {
+  @extend .heading_XL_48;
+  @extend .width_full;
+  color: map-get($color, secondary-color);
+}

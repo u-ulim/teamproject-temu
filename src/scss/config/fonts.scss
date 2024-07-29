@@ -1,0 +1,157 @@
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+$font: (
+  primary-font: "Pretendard-Regular",
+);
+$font-weight: (
+  bold: 700,
+  regular: 400,
+);
+
+/* HEADING */
+/* -2% = 0.02 * 'n'px */ /* -3% = 0.03 * 'n'px */
+.heading_XXL_56 {
+  font-family: map-get($font, primary-font);
+  font-weight: map-get($font-weight, bold);
+  font-style: normal;
+  letter-spacing: -1.12px;
+  font-size: 56px;
+}
+
+.heading_XL_48 {
+  font-family: map-get($font, primary-font);
+  font-weight: map-get($font-weight, bold);
+  font-style: normal;
+  letter-spacing: -0.96px;
+  font-size: 48px;
+}
+
+.heading_L_40 {
+  font-family: map-get($font, primary-font);
+  font-weight: map-get($font-weight, bold);
+  font-style: normal;
+  letter-spacing: -0.8px;
+  font-size: 40px;
+}
+
+.heading_M_32 {
+  font-family: map-get($font, primary-font);
+  font-weight: map-get($font-weight, bold);
+  font-style: normal;
+  letter-spacing: -0.64px;
+  font-size: 32px;
+}
+
+.heading_S_24 {
+  font-family: map-get($font, primary-font);
+  font-weight: map-get($font-weight, bold);
+  font-style: normal;
+  letter-spacing: -0.48px;
+  font-size: 24px;
+}
+
+.heading_XS_20 {
+  font-family: map-get($font, primary-font);
+  font-weight: map-get($font-weight, bold);
+  font-style: normal;
+  letter-spacing: -0.6px;
+  font-size: 20px;
+}
+
+.heading_XXS_16 {
+  font-family: map-get($font, primary-font);
+  font-weight: map-get($font-weight, bold);
+  font-style: normal;
+  letter-spacing: -0.48px;
+  font-size: 16px;
+}
+
+/* TEXT */
+/* -2% = 0.02 * 'n'px */
+/* -3% = 0.03 * 'n'px */
+.text_XXL_26 {
+  font-family: map-get($font, primary-font);
+  font-weight: map-get($font-weight, regular);
+  font-style: normal;
+  letter-spacing: -0.78px;
+  font-size: 26px;
+}
+
+.text_XL_22 {
+  font-family: map-get($font, primary-font);
+  font-weight: map-get($font-weight, regular);
+  font-style: normal;
+  letter-spacing: -0.66px;
+  font-size: 22px;
+}
+
+.text_L_18 {
+  font-family: map-get($font, primary-font);
+  font-weight: map-get($font-weight, regular);
+  font-style: normal;
+  letter-spacing: -0.54px;
+  font-size: 18px;
+}
+
+.text_M_16 {
+  font-family: map-get($font, primary-font);
+  font-weight: map-get($font-weight, regular);
+  font-style: normal;
+  letter-spacing: -0.48px;
+  font-size: 16px;
+}
+.text_S_12 {
+  font-family: map-get($font, primary-font);
+  font-weight: map-get($font-weight, regular);
+  font-style: normal;
+  letter-spacing: -0.36px;
+  font-size: 12px;
+}
+
+/* TEXT BOLD */
+/* -2% = 0.02 * 'n'px */
+/* -3% = 0.03 * 'n'px */
+.text_B_XXL_26 {
+  font-family: map-get($font, primary-font);
+  font-weight: map-get($font-weight, bold);
+  font-style: normal;
+  letter-spacing: -0.78px;
+  font-size: 26px;
+}
+
+.text_B_XL_22 {
+  font-family: map-get($font, primary-font);
+  font-weight: map-get($font-weight, bold);
+  font-style: normal;
+  letter-spacing: -0.66px;
+  font-size: 22px;
+}
+
+.text_B_L_18 {
+  font-family: map-get($font, primary-font);
+  font-weight: map-get($font-weight, bold);
+  font-style: normal;
+  letter-spacing: -0.54px;
+  font-size: 18px;
+}
+
+.text_B_M_16 {
+  font-family: map-get($font, primary-font);
+  font-weight: map-get($font-weight, bold);
+  font-style: normal;
+  letter-spacing: -0.48px;
+  font-size: 16px;
+}
+.text_B_S_12 {
+  font-family: map-get($font, primary-font);
+  font-weight: map-get($font-weight, bold);
+  font-style: normal;
+  letter-spacing: -0.36px;
+  font-size: 12px;
+}
