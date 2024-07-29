@@ -50,4 +50,6 @@ TEMU SHOPINGMALL을 참고하여 만든 클론 사이트입니다.
 
 
 ## 💫 VsCode Common Extension
-- PostCss sorting / properties-order 안에 css 속성들을 정렬해준다. 
+- PostCss sorting / properties-order 안에 css 속성들을 정렬해준다.
+- Error lens / 에러가 있는 부분을 직관적으로 알려준다.
+- Code Spell Checker / 사전에 없거나, 잘 쓰이지 않는 단어들을 알려준다.  
