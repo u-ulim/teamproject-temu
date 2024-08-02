@@ -14,7 +14,7 @@
   font-size: 56px;
 }
 
-.heading_XL_48, .hi {
+.heading_XL_48 {
   font-family: "Pretendard-Regular";
   font-weight: 700;
   font-style: normal;
@@ -46,7 +46,7 @@
   font-size: 24px;
 }
 
-.heading_XS_20 {
+.heading_XS_20, .wrapper .container .login {
   font-family: "Pretendard-Regular";
   font-weight: 700;
   font-style: normal;
@@ -89,7 +89,7 @@
   font-size: 18px;
 }
 
-.text_M_16 {
+.text_M_16, .wrapper .container .inner span {
   font-family: "Pretendard-Regular";
   font-weight: 400;
   font-style: normal;
@@ -97,7 +97,7 @@
   font-size: 16px;
 }
 
-.text_S_12 {
+.text_S_12, .agree, .box .other .line, .email .text__box span, .email .text span, .wrapper .container .data {
   font-family: "Pretendard-Regular";
   font-weight: 400;
   font-style: normal;
@@ -291,7 +291,7 @@ table {
 }
 
 /* VARIABLES */
-.width_full, .hi {
+.width_full {
   width: 100%;
 }
 
@@ -300,6 +300,176 @@ table {
   padding: 0px 15px 0px 15px;
 }
 
-.hi {
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.wrapper {
+  padding: 36px 40px 36px 40px;
+  width: 494px;
+  height: 575px;
+  text-align: center;
+}
+.wrapper .container {
+  margin-bottom: 70px;
+}
+.wrapper .container .inner {
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper .container .inner span {
+  color: #292828;
+}
+.wrapper .container .inner span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.wrapper .container .inner span .fa-chevron-left {
+  width: 17px;
+  height: 17px;
+  font-size: 17px;
+}
+.wrapper .container .inner .fa-xmark {
+  width: 17px;
+  height: 17px;
+  font-size: 17px;
+  transition: all 0.5s;
+  border-radius: 50%;
+}
+.wrapper .container .inner .fa-xmark:hover {
+  background-color: #d4d4d4;
+}
+.wrapper .container .login {
+  margin-bottom: 15px;
+  color: #101010;
+}
+.wrapper .container .data {
+  display: inline-block;
+  margin-right: 6px;
+  font-size: 13px;
   color: #009e95;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.email .text {
+  margin-bottom: 8px;
+}
+.email .text span {
+  display: inline-block;
+  width: 413px;
+  text-align: left;
+}
+.email .email__box input[type=text] {
+  margin-bottom: 20px;
+  padding-left: 20px;
+  border: 1px solid #b5b5b5;
+  width: 413px;
+  height: 45px;
+  border-radius: 8px;
+}
+.email button {
+  margin-bottom: 14px;
+  border: none;
+  width: 413px;
+  height: 47px;
+  background: #ff6d00;
+  color: #fff;
+  transition: all 0.3s;
+  border-radius: 8px;
+}
+.email button:hover {
+  background: rgba(255, 120, 41, 0.8117647059);
+  color: #fff;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.email .text__box span {
+  display: inline-block;
+  margin-bottom: 24px;
+  color: #818181;
+}
+.email .text__box span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.box .other .line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 100%;
+  margin: 8px;
+  margin-bottom: 25px;
+  color: #4a4949;
+}
+.box .other .line::before {
+  flex-grow: 1;
+  margin: 0 12px;
+  height: 1px;
+  background: #9a9a9a;
+  line-height: 0;
+  content: "";
+}
+.box .other .line::after {
+  flex-grow: 1;
+  margin: 0 12px;
+  height: 1px;
+  background: #9a9a9a;
+  line-height: 0;
+  content: "";
+}
+
+.icon {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+.icon span {
+  display: inline-block;
+  margin-bottom: 96px;
+}
+.icon span:hover {
+  cursor: pointer;
+}
+.icon span .google-icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: url("../../assets/images/google.svg") center/cover no-repeat;
+}
+.icon span .naver-icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: url("../../assets/images/naver.svg") center/cover no-repeat;
+}
+.icon span .apple-icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: url("../../assets/images/apple (1).svg") center/cover no-repeat;
+}
+
+.agree {
+  margin-bottom: 36px;
+  color: #292828;
+}
+.agree span {
+  color: #0065be;
+}
+.agree span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 575px) {
+  body {
+    padding: 32px 0;
+    width: 555px;
+    height: 595px;
+  }
+}/*# sourceMappingURL=login.css.map */
