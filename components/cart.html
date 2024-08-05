@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TEMU</title>
+    
+    <!-- FONTAWESOME -->
+    <script
+      src="https://kit.fontawesome.com/6336e5c545.js"
+      crossorigin="anonymous"
+    ></script>
+    
+    <!-- CUSTOM CSS, JS-->
+    <link rel="stylesheet" href="../src/scss/cart.css?after" />
+    <script src="../src/javascript/cart.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav></nav>
+    </header>
+    <div class="container"> 
+    <main>
+      <section class="section__up">
+        <article>
+          <div class="section__title">
+            <div class="category">
+              <span><a href="#">홈</a></span>
+            </div>
+            <span class="select__category">
+              <span>></span>
+              <a href="#none">장바구니</a>
+            </span>
+          </div>
+          <div class="banner">
+            <span>테무는 언제나 무료 배송</span>
+            <div class="close">
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="toolbar">
+            <form method="post" action="/delete-all-product" class="form__left">
+              <div class="custom__box">
+                <input
+                  type="checkbox"
+                  name="checkbox"
+                  id="custom__box"
+                  class="custom__checkbox"
+                />
+                <label for="custom__box" class="select__all"></label>
+              </div>
+              <span>전체삭제</span>
+              <span>(<span id="item__count">2</span>)</span>
+            </form>
+            <button>선택삭제</button>
+          </div>
+          <div class="product">
+            <div class="custom__box">
+              <input
+                type="checkbox"
+                name="checkbox"
+                id="custom__checkbox__2"
+                class="custom__checkbox__2"
+              />
+              <label for="custom__checkbox__2" class="select"></label>
+            </div>
+            <div class="img">
+              <img src="./img/product.png" alt="product" />
+            </div>
+            <div class="product__text">
+              <div class="product__text__up">
+                <span>1/5/10쌍의 남성용 심플 슬리드 라이너</span>
+              </div>
+              <div class="product__text__down">
+                <span>옵션변경</span>
+                <span>|</span>
+                <span>바로구매</span>
+              </div>
+            </div>
+            <div class="number__input">
+              <button>+</button>
+              <span>1</span>
+              <button>-</button>
+            </div>
+            <div class="price__text">
+              <span class="price__text__up"> ￦1,189 </span>
+              <div class="price__text__down">
+                <span class="sale">-71%</span>
+                <span>￦4,219</span>
+              </div>
+            </div>
+            <div class="close">
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </article>
+      </section>
+      <section class="section__down">
+        <article>
+          <h2 class="title">다른 고객이 함께 구매한 상품</h2>
+        </article>
+        <article>
+          <div class="product">
+            <div class="product__up">
+              <div class="product">
+                <div class="product__img">
+                  <img src="./img/product.png" alt="product">
+                </div>
+               <div class="product__text__down">
+                  <span class="first__text"
+                    >귀여운 이불 세트 3개(이불 1개 + 베갯</br>잇 2개, 코어리스), 부드럽고
+                    편안한 침구
+                  </span>
+                  <div class="second__text">
+                    <p class="price">
+                      <span class="sale">62%</span>
+                      <span>19,325</span>
+                    </p>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </div>
+                  <div class="third__text">
+                    <div class="star"><i class="fa-solid fa-star"></i>4.8</div>
+                    <div>리뷰(3,420)</div>
+                  </div>
+                  <div class="last__text">
+                    <span class="sale">매진임박</span>
+                    <span class="remain">12개남음</span>
+                  </div>
+               </div>
+              </div>
+              <div class="product">
+                <div class="product__img">
+                  <img src="./img/product.png" alt="product">
+                </div>
+               <div class="product__text__down">
+                  <span class="first__text"
+                    >귀여운 이불 세트 3개(이불 1개 + 베갯</br>잇 2개, 코어리스), 부드럽고
+                    편안한 침구
+                  </span>
+                  <div class="second__text">
+                    <p class="price">
+                      <span class="sale">62%</span>
+                      <span>19,325</span>
+                    </p>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </div>
+                  <div class="third__text">
+                    <div class="star"><i class="fa-solid fa-star"></i>4.8</div>
+                    <div>리뷰(3,420)</div>
+                  </div>
+                  <div class="last__text">
+                    <span class="sale">매진임박</span>
+                    <span class="remain">12개남음</span>
+                  </div>
+               </div>
+              </div>
+              <div class="product">
+                <div class="product__img">
+                  <img src="./img/product.png" alt="product">
+                </div>
+               <div class="product__text__down">
+                  <span class="first__text"
+                    >귀여운 이불 세트 3개(이불 1개 + 베갯</br>잇 2개, 코어리스), 부드럽고
+                    편안한 침구
+                  </span>
+                  <div class="second__text">
+                    <p class="price">
+                      <span class="sale">62%</span>
+                      <span>19,325</span>
+                    </p>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </div>
+                  <div class="third__text">
+                    <div class="star"><i class="fa-solid fa-star"></i>4.8</div>
+                    <div>리뷰(3,420)</div>
+                  </div>
+                  <div class="last__text">
+                    <span class="sale">매진임박</span>
+                    <span class="remain">12개남음</span>
+                  </div>
+               </div>
+              </div>
+              <div class="product">
+                <div class="product__img">
+                  <img src="./img/product.png" alt="product">
+                </div>
+               <div class="product__text__down">
+                  <span class="first__text"
+                    >귀여운 이불 세트 3개(이불 1개 + 베갯</br>잇 2개, 코어리스), 부드럽고
+                    편안한 침구
+                  </span>
+                  <div class="second__text">
+                    <p class="price">
+                      <span class="sale">62%</span>
+                      <span>19,325</span>
+                    </p>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </div>
+                  <div class="third__text">
+                    <div class="star"><i class="fa-solid fa-star"></i>4.8</div>
+                    <div>리뷰(3,420)</div>
+                  </div>
+                  <div class="last__text">
+                    <span class="sale">매진임박</span>
+                    <span class="remain">12개남음</span>
+                  </div>
+               </div>
+              </div>
+            </div>
+            <div class="product__down">
+              <div class="product">
+                <div class="product__img">
+                  <img src="./img/product.png" alt="product">
+                </div>
+               <div class="product__text__down">
+                  <span class="first__text"
+                    >귀여운 이불 세트 3개(이불 1개 + 베갯</br>잇 2개, 코어리스), 부드럽고
+                    편안한 침구
+                  </span>
+                  <div class="second__text">
+                    <p class="price">
+                      <span class="sale">62%</span>
+                      <span>19,325</span>
+                    </p>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </div>
+                  <div class="third__text">
+                    <div class="star"><i class="fa-solid fa-star"></i>4.8</div>
+                    <div>리뷰(3,420)</div>
+                  </div>
+                  <div class="last__text">
+                    <span class="sale">매진임박</span>
+                    <span class="remain">12개남음</span>
+                  </div>
+               </div>
+              </div>
+              <div class="product">
+                <div class="product__img">
+                  <img src="./img/product.png" alt="product">
+                </div>
+               <div class="product__text__down">
+                  <span class="first__text"
+                    >귀여운 이불 세트 3개(이불 1개 + 베갯</br>잇 2개, 코어리스), 부드럽고
+                    편안한 침구
+                  </span>
+                  <div class="second__text">
+                    <p class="price">
+                      <span class="sale">62%</span>
+                      <span>19,325</span>
+                    </p>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </div>
+                  <div class="third__text">
+                    <div class="star"><i class="fa-solid fa-star"></i>4.8</div>
+                    <div>리뷰(3,420)</div>
+                  </div>
+                  <div class="last__text">
+                    <span class="sale">매진임박</span>
+                    <span class="remain">12개남음</span>
+                  </div>
+               </div>
+              </div>
+              <div class="product">
+                <div class="product__img">
+                  <img src="./img/product.png" alt="product">
+                </div>
+               <div class="product__text__down">
+                  <span class="first__text"
+                    >귀여운 이불 세트 3개(이불 1개 + 베갯</br>잇 2개, 코어리스), 부드럽고
+                    편안한 침구
+                  </span>
+                  <div class="second__text">
+                    <p class="price">
+                      <span class="sale">62%</span>
+                      <span>19,325</span>
+                    </p>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </div>
+                  <div class="third__text">
+                    <div class="star"><i class="fa-solid fa-star"></i>4.8</div>
+                    <div>리뷰(3,420)</div>
+                  </div>
+                  <div class="last__text">
+                    <span class="sale">매진임박</span>
+                    <span class="remain">12개남음</span>
+                  </div>
+               </div>
+              </div>
+              <div class="product">
+                <div class="product__img">
+                  <img src="./img/product.png" alt="product">
+                </div>
+               <div class="product__text__down">
+                  <span class="first__text"
+                    >귀여운 이불 세트 3개(이불 1개 + 베갯</br>잇 2개, 코어리스), 부드럽고
+                    편안한 침구
+                  </span>
+                  <div class="second__text">
+                    <p class="price">
+                      <span class="sale">62%</span>
+                      <span>19,325</span>
+                    </p>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </div>
+                  <div class="third__text">
+                    <div class="star"><i class="fa-solid fa-star"></i>4.8</div>
+                    <div>리뷰(3,420)</div>
+                  </div>
+                  <div class="last__text">
+                    <span class="sale">매진임박</span>
+                    <span class="remain">12개남음</span>
+                  </div>
+               </div>
+              </div>
+            </div>
+            <button>더보기<i class="fa-solid fa-chevron-down"></i></button>
+          </div>
+        </article>
+      </section>
+    </main>
+    <aside>
+      <div class="checkout__summary">
+        <div class="summary__item">
+          <span>상품금액</span>
+          <span class="price">₩11,000</span>
+        </div>
+        <div class="summary__item">
+          <span>상품할인금액</span>
+          <span class="discount">-₩4,200</span>
+        </div>
+        <div class="additional__info">
+          ₩16,000 추가주문 시, <span>구매 가능</span>
+        </div>
+        <hr>
+        <div class="summary__item__total">
+          <p>결제금액<span>(2개상품)</span></p>
+          <span class="price">₩11,000</span>
+        </div>
+        <div class="tax__info">
+          <span class="tax__label">TAX</span>
+          <span class="tax__text">Temu의 가격은 관세가격을 포함합니다.</span>
+        </div>
+        <button class="checkout__button">결제하기</button>
+        <div class="info">
+          <div class="info__text">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <p>결제가 완료될때까지 제품의 가격 및 구매 여부가 보장되지 않습니다.</p>
+          </div>
+          <div class="info__text">
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <p>다음페이지에서 주문서를 확인하기 전까지 결제가 되지 않습니다.</p>
+        </div>
+        <div class="info__text">
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <p>마이페이지>주문내역 상세페이지에서 직접 취소 할 수 있습니다.</p>
+        </div>
+      </div>
+    </div>
+    </aside>
+  </div>
+    <footer></footer>
+  </body>
+</html>

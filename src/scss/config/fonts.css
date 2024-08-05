@@ -97,7 +97,15 @@
   font-size: 16px;
 }
 
-.text_S_12 {
+.text_S_14 {
+  font-family: "Pretendard-Regular";
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: -0.42px;
+  font-size: 14px;
+}
+
+.text_XS_12 {
   font-family: "Pretendard-Regular";
   font-weight: 400;
   font-style: normal;
@@ -140,7 +148,15 @@
   font-size: 16px;
 }
 
-.text_B_S_12 {
+.text_B_S_14 {
+  font-family: "Pretendard-Regular";
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: -0.42px;
+  font-size: 14px;
+}
+
+.text_B_XS_12 {
   font-family: "Pretendard-Regular";
   font-weight: 700;
   font-style: normal;

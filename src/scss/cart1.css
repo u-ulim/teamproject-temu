@@ -90,7 +90,7 @@
   font-size: 18px;
 }
 
-.text_M_16, aside .checkout__summary .summary__item__total p, aside .checkout__summary .summary__item, main .section__down article .product button, main .section__up article .product .number__input span, main .section__up article .product .number__input button, main .section__up article .product .number__input, main .section__up article .toolbar button, main .section__up article .banner {
+.text_M_16, aside .checkout__summary .summary__item__total p, aside .checkout__summary .summary__item, main .section__down article .product button, main .section__up article .toolbar button, main .section__up article .banner {
   font-family: "Pretendard-Regular";
   font-weight: 400;
   font-style: normal;
@@ -98,7 +98,7 @@
   font-size: 16px;
 }
 
-.text_S_14, aside .checkout__summary .info, aside .checkout__summary .summary__item__total p span, aside .checkout__summary .additional__info, main .section__down article .product .product__down .product .product__text__down .third__text, main .section__down article .product .product__down .product .product__text__down .first__text, main .section__down article .product .product__up .product .product__text__down .third__text, main .section__down article .product .product__up .product .product__text__down .first__text, main .section__up article .product .product__text .product__text__down, main .section__up article .product .product__text .product__text__up, main .section__up article .section__title {
+.text_S_14, aside .checkout__summary .info, aside .checkout__summary .summary__item__total p span, aside .checkout__summary .additional__info, main .section__down article .product .product__down .product .product__text__down .third__text, main .section__down article .product .product__down .product .product__text__down .first__text, main .section__down article .product .product__up .product .product__text__down .third__text, main .section__down article .product .product__up .product .product__text__down .first__text, main .section__up article .empty__product .empty__product__up .product__text .product__text__down, main .section__up article .section__title {
   font-family: "Pretendard-Regular";
   font-weight: 400;
   font-style: normal;
@@ -106,7 +106,7 @@
   font-size: 14px;
 }
 
-.text_XS_12, aside .checkout__summary .tax__info, main .section__down article .product .product__down .product .product__text__down .last__text, main .section__down article .product .product__up .product .product__text__down .last__text, main .section__up article .product .price__text .price__text__down {
+.text_XS_12, aside .checkout__summary .tax__info, main .section__down article .product .product__down .product .product__text__down .last__text, main .section__down article .product .product__up .product .product__text__down .last__text {
   font-family: "Pretendard-Regular";
   font-weight: 400;
   font-style: normal;
@@ -133,7 +133,7 @@
   font-size: 22px;
 }
 
-.text_B_L_18, aside .checkout__summary .summary__item__total .price, main .section__down article .product .product__down .product .product__text__down .second__text .price span, main .section__down article .product .product__up .product .product__text__down .second__text .price span, main .section__down article .title, main .section__up article .product .price__text .price__text__up {
+.text_B_L_18, aside .checkout__summary .summary__item__total .price, main .section__down article .product .product__down .product .product__text__down .second__text .price span, main .section__down article .product .product__up .product .product__text__down .second__text .price span, main .section__down article .title {
   font-family: "Pretendard-Regular";
   font-weight: 700;
   font-style: normal;
@@ -141,7 +141,7 @@
   font-size: 18px;
 }
 
-.text_B_M_16, aside .checkout__summary .checkout__button, main .section__up article .toolbar .form__left span {
+.text_B_M_16, aside .checkout__summary .checkout__button, main .section__up article .empty__product .popular_product, main .section__up article .empty__product .empty__product__up .product__text .product__text__up, main .section__up article .toolbar .form__left span {
   font-family: "Pretendard-Regular";
   font-weight: 700;
   font-style: normal;
@@ -149,7 +149,7 @@
   font-size: 16px;
 }
 
-.text_B_S_14, aside .checkout__summary .additional__info span {
+.text_B_XS_14, aside .checkout__summary .additional__info span {
   font-family: "Pretendard-Regular";
   font-weight: 700;
   font-style: normal;
@@ -388,7 +388,7 @@ main .section__up article .toolbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 24px;
+  margin-bottom: 74px;
   padding: 14px 12px 18px 12px;
   border-bottom: 1px solid #b5b5b5;
   height: 51px;
@@ -445,142 +445,52 @@ main .section__up article .toolbar button {
   color: #4a4949;
   cursor: pointer;
 }
-main .section__up article .product {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 40px;
-  padding: 0 12px;
-  height: 176px;
-}
-main .section__up article .product .custom__box {
-  padding-right: 6px;
-  position: relative;
-}
-main .section__up article .product .custom__box input[type=checkbox].custom__checkbox__2 {
-  display: none;
-}
-main .section__up article .product .custom__box .select {
-  display: inline-block;
-  border: 1px solid #000;
-  position: relative;
-  width: 16px;
-  height: 16px;
-  background-color: white;
-  cursor: pointer;
-  border-radius: 50%;
-}
-main .section__up article .product .custom__box .select::after {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 10px;
-  height: 10px;
-  content: "";
-  border-radius: 50%;
-  transform: translate(-50%, -50%) scale(0);
-}
-main .section__up article .product .custom__box input[type=checkbox]:checked + .select {
-  background-color: black;
-}
-main .section__up article .product .custom__box input[type=checkbox]:checked + .select::after {
+main .section__up article .empty__product {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(0, 0, 0);
-  color: rgb(255, 255, 255);
-  content: "✓";
-  transform: translate(-50%, -50%);
-}
-main .section__up article .product .img {
-  width: 128px;
-  height: 128px;
-  border-radius: 8px;
-}
-main .section__up article .product .img img {
-  width: 100%;
-  height: 100%;
-}
-main .section__up article .product .product__text {
-  display: flex;
-  gap: 10px;
-  justify-content: start;
-  flex-direction: column;
-}
-main .section__up article .product .product__text .product__text__down {
-  color: #4a4949;
-}
-main .section__up article .product .number__input {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0;
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  width: 100px;
-  height: 33px;
-  border-radius: 8px;
-}
-main .section__up article .product .number__input button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  width: 37px;
-  height: 34px;
-  background-color: white;
-  text-align: center;
-  cursor: pointer;
-}
-main .section__up article .product .number__input button:hover {
-  background-color: #f0f0f0;
-}
-main .section__up article .product .number__input span {
-  width: 20px;
-  text-align: center;
-}
-main .section__up article .product .price__text {
-  display: flex;
-  gap: 6px;
   flex-direction: column;
   text-align: center;
 }
-main .section__up article .product .price__text .price__text__down {
+main .section__up article .empty__product .empty__product__up {
   display: flex;
-  gap: 3px;
+  gap: 38px;
   align-items: center;
   justify-content: center;
+  margin-bottom: 20px;
+  width: 251px;
+  height: 57px;
 }
-main .section__up article .product .price__text .price__text__down .sale {
-  display: block;
-  padding: 0, 3px;
-  border: 1px solid #ff6d00;
-  width: 33px;
-  height: 14px;
-  color: #ff6d00;
-  border-radius: 5px;
+main .section__up article .empty__product .empty__product__up i.fa-cart-shopping {
+  font-size: 50px;
+  color: #9a9a9a;
 }
-main .section__up article .product .close {
+main .section__up article .empty__product .empty__product__up .product__text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+main .section__up article .empty__product .empty__product__up .product__text .product__text__up {
+  color: #101010;
+}
+main .section__up article .empty__product .empty__product__up .product__text .product__text__down {
+  color: #9a9a9a;
+}
+main .section__up article .empty__product .popular_product {
+  margin-bottom: 75px;
   border: none;
-  position: relative;
-  width: 30px;
-  height: 30px;
-  background: transparent;
+  width: 251px;
+  height: 51px;
+  background-color: #ff6d00;
+  color: #fff;
+  text-align: center;
+  transition: all 0.3s;
+  cursor: pointer;
+  border-radius: 8px;
 }
-main .section__up article .product .close span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 1px;
-  height: 80%;
-  background-color: #000;
-}
-main .section__up article .product .close span:nth-child(1) {
-  transform: translate(-50%, -50%) rotate(-45deg);
-}
-main .section__up article .product .close span:nth-child(2) {
-  transform: translate(-50%, -50%) rotate(45deg);
+main .section__up article .empty__product .popular_product:hover {
+  background-color: #ff7629;
 }
 main .section__down {
   width: 961px;

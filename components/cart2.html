@@ -1,0 +1,286 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TEMU</title>
+
+  <!-- FONTAWESOME -->
+  <script
+    src="https://kit.fontawesome.com/6336e5c545.js"
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- CUSTOM CSS, JS-->
+  <link rel="stylesheet" href="../src/scss/cart2.css" />
+  <script src="../src/javascript/cart2.js"></script>
+</head>
+<body>
+  <header>
+    <nav></nav>
+  </header>
+  <div class="container">
+    <main>
+      <section class="section__up">
+        <article>
+          <div class="section__title">
+            <div class="category">
+              <span><a href="#">홈</a></span>
+            </div>
+            <span class="select__category">
+              <span>></span>
+              <a href="#none">결제</a>
+            </span>
+          </div>
+          <div class="banner">
+            <span>테무는 언제나 무료 배송</span>
+            <div class="close">
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </article>
+      </section>
+      <section class="address">
+        <article class="shopping__info">
+          <div class="info__up">
+            <span>배송정보</span>
+            <span>내용 변경 ></span>
+          </div>
+          <div class="info__down">
+            <ul>
+              <li>
+                <span>홍길동</span>
+                <span>82+ 123-4567-8910</span>
+              </li>
+              <li>01234 대한민국 서울특별시 삼각구</li>
+              <li>이젠 아파트 9동 901호</li>
+            </ul>
+          </div>
+        </article>
+        <article class="delivery__service">
+          <span>배송 :무료</span>
+          <div class="delivery__info">
+            <ul class="delivery__memo">
+              <li>도착 예정: 7월 29일-8월 2일, 80.1% 확률로 7일 이내 도착</li>
+              <li>배송지연에 대해 ￦ 5,300 크레딧 받기</li>
+              <li>
+                배송업체: Lotte Global Logistics, Logistics, Daejang, CJ 등.
+              </li>
+            </ul>
+          </div>
+        </article>
+      </section>
+      <section class="order__info">
+        <h3>주문 상품(<span>2</span>)</h3>
+        <div class="product">
+          <ul>
+            <li class="item">
+              <div class="custom__box">
+                <input
+                  type="checkbox"
+                  name="checkbox"
+                  id="custom__checkbox"
+                  class="custom__checkbox"
+                />
+                <label for="custom__checkbox" class="select"></label>
+              </div>
+              <div class="img">
+                <img src="./img/product.png" alt="product01" />
+              </div>
+              <div class="product__text">
+                <div class="product__text__up">
+                  <span>1/5/10쌍의 남성용 심플 슬리드 라이너</span>
+                </div>
+                <div class="product__text__down">
+                  <span>옵션변경</span>
+                  <span>|</span>
+                  <span>바로구매</span>
+                </div>
+              </div>
+              <div class="price__text">
+                <span class="price__text__up"> ￦1,189 </span>
+                <div class="price__text__down">
+                  <span class="sale">-71%</span>
+                  <span>￦4,219</span>
+                </div>
+              </div>
+              <div class="close">
+                <span></span>
+                <span></span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="coupon">
+        <h2>쿠폰</h2>
+        <form class="coupon__select">
+          <label for="coupon">쿠폰 적용<span>*</span></label>
+          <select id="coupon">
+            <option>사용 가능한 쿠폰 0장 / 전체 1장</option>
+          </select>
+        </form>
+      </section>
+      <section class="credit">
+        <h3>크레딧</h3>
+        <form class="total__credit">
+          <label for="total__credit">보유 잔액<span>*</span></label>
+          <input type="text" id="total__credit__box" placeholder="₩200,000" />
+        </form>
+        <form class="used__credit">
+          <label for="used__credit">사용 잔액<span>*</span></label>
+          <input type="text" id="used__credit__box" placeholder="₩100,000" />
+          <button>전액 사용</button>
+        </form>
+      </section>
+      <section class="payment__method">
+        <h3>결제 수단</h3>
+        <div class="methods">
+          <ul>
+            <li>
+              <span>card</span>
+              <div class="img">
+                <img src="./img/card.png" alt="카드" />
+              </div>
+            </li>
+            <li>
+              <span>KakaoPay</span>
+              <div class="img">
+                <img src="./img/card2.png" alt="kakaopay" />
+              </div>
+            </li>
+            <li>
+              <span>TossPay</span>
+              <div class="img">
+                <img src="./img/card3.png" alt="tosspay" />
+              </div>
+            </li>
+            <li>
+              <span>NaverPay</span>
+              <div class="img">
+                <img src="./img/card4.png" alt="naverpay" />
+              </div>
+            </li>
+            <li>
+              <span>PayPal</span>
+              <div class="img">
+                <img src="./img/card5.png" alt="paypal" />
+              </div>
+            </li>
+            <li>
+              <span>GogglePay</span>
+              <div class="img">
+                <img src="./img/card6.png" alt="gogglpay" />
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <aside>
+      <div class="checkout__summary">
+        <div class="summary__item">
+          <ul>
+            <li class="total__fee">
+              <span>총 상품금액</span>
+              <span class="price">₩11,000</span>
+            </li>
+            <li class="delivery__fee">
+              <span>배송비</span>
+              <span class="delivery__fee">-₩4,200</span>
+            </li>
+            <li class="coupon__fee">
+              <span>쿠폰사용</span>
+              <span class="coupon">-₩4,200</span>
+            </li>
+            <li class="credit__fee">
+              <span>크레딧사용</span>
+              <span class="credit">-₩4,200</span>
+            </li>
+            <li class="additional__info">
+              ₩16,000 추가주문 시, <span>구매 가능</span>
+            </li>
+          </ul>
+        </div>
+        <hr />
+        <div class="summary__price">
+          <ul>
+            <li class="summary__item__total">
+              <p>최종결제금액<span>(2개상품)</span></p>
+              <span class="price">₩11,000</span>
+            </li>
+            <li class="tax__info">
+              <span class="tax__label">TAX</span>
+              <span class="tax__text"
+                >Temu의 가격은 관세가격을 포함합니다.</span
+              >
+            </li>
+          </ul>
+        </div>
+        <hr />
+        <div class="consent">
+          <ul class="consent__list">
+            <li>
+              <input type="radio" id="agreeAll" name="consent" value="all" />
+              <label for="agreeAll">전체 동의</label>
+            </li>
+            <li>
+              <input type="radio" id="terms" name="consent" value="terms" />
+              <label for="terms">테무 이용약관(필수)</label>
+              <span class="dropdown__icon">⌄</span>
+            </li>
+            <li>
+              <input
+                type="radio"
+                id="personalInfo"
+                name="consent"
+                value="personalInfo"
+              />
+              <label for="personalInfo">개인정보 수집 및 이용(필수)</label>
+              <span class="dropdown__icon">⌄</span>
+            </li>
+            <li>
+              <input
+                type="radio"
+                id="transferInfo"
+                name="consent"
+                value="transferInfo"
+              />
+              <label for="transferInfo"
+                >개인정보의 국외 이전에 대한 동의(필수)</label
+              >
+              <span class="dropdown__icon">⌄</span>
+            </li>
+            <li>
+              <input
+                type="radio"
+                id="treePlanting"
+                name="consent"
+                value="treePlanting"
+              />
+              <label for="treePlanting">Temu와 함께 나무 심기</label>
+              <span class="dropdown__icon">⌄</span>
+            </li>
+          </ul>
+        </div>
+        <button class="checkout__button">결제하기</button>
+        <div class="info">
+          <div class="info__text">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <p>
+              결제가 완료될때까지 제품의 가격 및 구매 여부가 보장되지 않습니다.
+            </p>
+          </div>
+          <div class="info__text">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <p>다음페이지에서 주문서를 확인하기 전까지 결제가 되지 않습니다.</p>
+          </div>
+          <div class="info__text">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <p>마이페이지>주문내역 상세페이지에서 직접 취소 할 수 있습니다.</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+  <footer></footer>
+</body>
