@@ -1,0 +1,34 @@
+ol,
+li {
+  list-style: none;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+.wrapper {
+  .box {
+    border: 1px solid #f00;
+    width: 1382px;
+    height: 130px;
+    margin-bottom: 16px;
+  }
+  .container {
+    .text {
+      span {
+        border: 1px solid #f00;
+      }
+    }
+    .menu {
+      ul {
+        li {
+          img {
+            border: 1px solid #f00;
+          }
+        }
+      }
+    }
+  }
+}
