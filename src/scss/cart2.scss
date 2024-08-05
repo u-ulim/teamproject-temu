@@ -499,52 +499,67 @@ aside {
         }
       }
     }
-    .summary__item__total {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 10px;
-      padding-top: 20px;
-      p {
-        @extend .text_M_16;
-        color: map-get($color, color-Black);
-        span {
-          @extend .text_S_14;
-        }
-      }
-      .price {
-        @extend .text_B_L_18;
-        color: map-get($color, primary-color);
-      }
-    }
-    .tax__info {
-      display: flex;
-      gap: 4px;
-      align-items: center;
-      justify-content: flex-end;
-      margin-bottom: 23.5px;
-      @extend .text_XS_12;
-      .tax__label {
-        padding: 0 2px;
-        border: 1px solid map-get($color-system, info-color);
-        color: map-get($color-system, info-color);
-      }
-      .tex__text {
-        color: map-get($color, color-Neutrals-Grey-600);
-      }
-    }
-    .consent__list {
-      li {
-        border: 1px solid #f00;
-        height: 60px;
+    .summary__price {
+      .summary__item__total {
         display: flex;
         align-items: center;
-        padding: 10px 22px;
-        span {
-          padding-left: 177px;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        padding-top: 20px;
+        p {
+          @extend .text_M_16;
+          color: map-get($color, color-Black);
+          span {
+            @extend .text_S_14;
+          }
+        }
+        .price {
+          @extend .text_B_L_18;
+          color: map-get($color, primary-color);
+        }
+      }
+      .tax__info {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+        justify-content: flex-end;
+        margin-bottom: 23.5px;
+        @extend .text_XS_12;
+        .tax__label {
+          padding: 0 2px;
+          border: 1px solid map-get($color-system, info-color);
+          color: map-get($color-system, info-color);
+        }
+        .tex__text {
+          color: map-get($color, color-Neutrals-Grey-600);
         }
       }
     }
+    .consent {
+      .consent__list {
+        li {
+          height: 60px;
+          @extend .text_S_14;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px 19px;
+          border-bottom: 1px solid map-get($color, color-Neutrals-Grey-400);
+          &:last-child {
+            border-bottom: none;
+          }
+          div {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+          }
+          i {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
     .checkout__button {
       margin-bottom: 20px;
       border: none;

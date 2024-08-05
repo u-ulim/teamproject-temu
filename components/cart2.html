@@ -220,64 +220,103 @@
         <div class="consent">
           <ul class="consent__list">
             <li>
-              <input type="radio" id="agreeAll" name="consent" value="all" />
-              <label for="agreeAll">전체 동의</label>
+              <div class="custom__box">
+                <input
+                  type="checkbox"
+                  name="agreeAll"
+                  id="agreeAll"
+                  class="agreeAll"
+                />
+                <label for="agreeAll">전체 동의</label>
+              </div>
             </li>
             <li>
-              <input type="radio" id="terms" name="consent" value="terms" />
-              <label for="terms">테무 이용약관(필수)</label>
-              <span class="dropdown__icon">⌄</span>
+              <div class="custom__box">
+                <input
+                  type="checkbox"
+                  name="terms"
+                  id="agreeAll"
+                  class="terms"
+                />
+                <label for="terms">테무 이용약관(필수)</label>
+              </div>
+              <i class="fa-solid fa-angle-down"></i>
             </li>
             <li>
-              <input
-                type="radio"
-                id="personalInfo"
-                name="consent"
-                value="personalInfo"
-              />
-              <label for="personalInfo">개인정보 수집 및 이용(필수)</label>
-              <span class="dropdown__icon">⌄</span>
+              <div class="custom__box">
+                <input
+                  type="checkbox"
+                  name="personalInfo"
+                  id="agreeAll"
+                  class="personalInfo"
+                />
+                <label for="personalInfo">개인정보 수집 및 이용(필수)</label>
+              </div>
+              <i class="fa-solid fa-angle-down"></i>
             </li>
             <li>
-              <input
-                type="radio"
-                id="transferInfo"
-                name="consent"
-                value="transferInfo"
-              />
-              <label for="transferInfo"
-                >개인정보의 국외 이전에 대한 동의(필수)</label
-              >
-              <span class="dropdown__icon">⌄</span>
+              <div>
+                <input
+                  type="checkbox"
+                  name="transferInfo"
+                  id="agreeAll"
+                  class="transferInfo"
+                />
+                <label for="transferInfo"
+                  >개인정보의 국외 이전에 대한 동의(필수)</label
+                >
+              </div>
+              <i class="fa-solid fa-angle-down"></i>
             </li>
             <li>
-              <input
-                type="radio"
-                id="treePlanting"
-                name="consent"
-                value="treePlanting"
-              />
-              <label for="treePlanting">Temu와 함께 나무 심기</label>
-              <span class="dropdown__icon">⌄</span>
+              <div>
+                <input
+                  type="checkbox"
+                  name="treePlanting"
+                  id="agreeAll"
+                  class="treePlanting"
+                />
+                <label for="treePlanting">Temu와 함께 나무 심기</label>
+              </div>
+              <i class="fa-solid fa-angle-down"></i>
             </li>
           </ul>
         </div>
         <button class="checkout__button">결제하기</button>
         <div class="info">
-          <div class="info__text">
-            <i class="fa-solid fa-circle-exclamation"></i>
-            <p>
-              결제가 완료될때까지 제품의 가격 및 구매 여부가 보장되지 않습니다.
-            </p>
-          </div>
-          <div class="info__text">
-            <i class="fa-solid fa-circle-exclamation"></i>
-            <p>다음페이지에서 주문서를 확인하기 전까지 결제가 되지 않습니다.</p>
-          </div>
-          <div class="info__text">
-            <i class="fa-solid fa-circle-exclamation"></i>
-            <p>마이페이지>주문내역 상세페이지에서 직접 취소 할 수 있습니다.</p>
-          </div>
+          <ul>
+            <li>
+              <div>
+                <i class="fa-solid fa-shield"></i>
+                <p>Temu는 사용자의 카드 정보를 보호합니다.</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <i class="fa-solid fa-check"></i>
+                Temu는 카드 정보를 처리할 때 지불 카드 보안 표준(PCI DSS)을
+                따릅니다.
+              </div>
+            </li>
+            <li>
+              <div>
+                <i class="fa-solid fa-check"></i>
+                Temu는 카드 정보를 안전하게 보호하여 유출을 방지합니다.
+              </div>
+            </li>
+            <li>
+              <div>
+                <i class="fa-solid fa-check"></i>
+                모든 데이터는 암호화됩니다.
+              </div>
+            </li>
+            <li>
+              <div>
+                <i class="fa-solid fa-check"></i>
+                Temu는 귀하의 카드 정보를 절대 판매하지 않습니다.
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </aside>

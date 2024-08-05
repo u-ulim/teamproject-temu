@@ -1,66 +1,59 @@
 @charset "UTF-8";
 @font-face {
   font-family: "Pretendard-Regular";
-  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
 }
 /* HEADING */
 /* -2% = 0.02 * 'n'px */ /* -3% = 0.03 * 'n'px */
 .heading_XXL_56 {
-  font-family: "Pretendard-Regular";
-  font-weight: 700;
+  font-family: "Pretendard-Bold";
+  font-size: 56px;
   font-style: normal;
   letter-spacing: -1.12px;
-  font-size: 56px;
 }
 
 .heading_XL_48, .hi {
-  font-family: "Pretendard-Regular";
-  font-weight: 700;
+  font-family: "Pretendard-Bold";
+  font-size: 48px;
   font-style: normal;
   letter-spacing: -0.96px;
-  font-size: 48px;
 }
 
 .heading_L_40 {
-  font-family: "Pretendard-Regular";
-  font-weight: 700;
+  font-family: "Pretendard-Bold";
+  font-size: 40px;
   font-style: normal;
   letter-spacing: -0.8px;
-  font-size: 40px;
 }
 
 .heading_M_32 {
-  font-family: "Pretendard-Regular";
-  font-weight: 700;
+  font-family: "Pretendard-Bold";
+  font-size: 32px;
   font-style: normal;
   letter-spacing: -0.64px;
-  font-size: 32px;
 }
 
 .heading_S_24 {
-  font-family: "Pretendard-Regular";
-  font-weight: 700;
+  font-family: "Pretendard-Bold";
+  font-size: 24px;
   font-style: normal;
   letter-spacing: -0.48px;
-  font-size: 24px;
 }
 
 .heading_XS_20 {
-  font-family: "Pretendard-Regular";
-  font-weight: 700;
+  font-family: "Pretendard-Bold";
+  font-size: 20px;
   font-style: normal;
   letter-spacing: -0.6px;
-  font-size: 20px;
 }
 
 .heading_XXS_16 {
-  font-family: "Pretendard-Regular";
-  font-weight: 700;
+  font-family: "Pretendard-Bold";
+  font-size: 16px;
   font-style: normal;
   letter-spacing: -0.48px;
-  font-size: 16px;
 }
 
 /* TEXT */
@@ -68,101 +61,101 @@
 /* -3% = 0.03 * 'n'px */
 .text_XXL_26 {
   font-family: "Pretendard-Regular";
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: -0.78px;
   font-size: 26px;
+  font-style: normal;
+  line-height: 34px;
+  letter-spacing: -0.78px;
 }
 
 .text_XL_22 {
   font-family: "Pretendard-Regular";
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: -0.66px;
   font-size: 22px;
+  font-style: normal;
+  line-height: 30px;
+  letter-spacing: -0.66px;
 }
 
 .text_L_18 {
   font-family: "Pretendard-Regular";
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: -0.54px;
   font-size: 18px;
+  font-style: normal;
+  line-height: 26px;
+  letter-spacing: -0.54px;
 }
 
-.text_M_16, aside .checkout__summary .summary__item__total p, aside .checkout__summary .summary__item li, main .section__up article .banner {
+.text_M_16, aside .checkout__summary .summary__price .summary__item__total p, aside .checkout__summary .summary__item li, main .section__up article .banner {
   font-family: "Pretendard-Regular";
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: -0.48px;
   font-size: 16px;
+  font-style: normal;
+  line-height: 24px;
+  letter-spacing: -0.48px;
 }
 
-.text_S_14, aside .checkout__summary .info, aside .checkout__summary .summary__item__total p span, aside .checkout__summary .summary__item .additional__info, main .credit .used__credit #used__credit__box, main .credit .used__credit label span, main .credit .used__credit label, main .credit .total__credit #total__credit__box, main .credit .total__credit label span, main .credit .total__credit label, main .coupon .coupon__select #coupon, main .coupon .coupon__select label span, main .coupon .coupon__select label, main .order__info .product .item .product__text .product__text__down, main .order__info .product .item .product__text .product__text__up, main .address .delivery__service .delivery__info .delivery__memo li:nth-child(1), main .address .shopping__info .info__down ul li span:nth-child(2), main .address .shopping__info .info__up span:nth-child(2), main .section__up article .section__title {
+.text_S_14, aside .checkout__summary .info, aside .checkout__summary .consent .consent__list li, aside .checkout__summary .summary__price .summary__item__total p span, aside .checkout__summary .summary__item .additional__info, main .credit .used__credit #used__credit__box, main .credit .used__credit label span, main .credit .used__credit label, main .credit .total__credit #total__credit__box, main .credit .total__credit label span, main .credit .total__credit label, main .coupon .coupon__select #coupon, main .coupon .coupon__select label span, main .coupon .coupon__select label, main .order__info .product .item .product__text .product__text__down, main .order__info .product .item .product__text .product__text__up, main .address .delivery__service .delivery__info .delivery__memo li:nth-child(1), main .address .shopping__info .info__down ul li span:nth-child(2), main .address .shopping__info .info__up span:nth-child(2), main .section__up article .section__title {
   font-family: "Pretendard-Regular";
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: -0.42px;
   font-size: 14px;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: -0.42px;
 }
 
-.text_XS_12, aside .checkout__summary .tax__info, main .payment__method .methods ul li, main .order__info .product .item .price__text .price__text__down, main .address .delivery__service .delivery__info .delivery__memo li:nth-child(3), main .address .delivery__service .delivery__info .delivery__memo li:nth-child(2) {
+.text_XS_12, aside .checkout__summary .summary__price .tax__info, main .payment__method .methods ul li, main .order__info .product .item .price__text .price__text__down, main .address .delivery__service .delivery__info .delivery__memo li:nth-child(3), main .address .delivery__service .delivery__info .delivery__memo li:nth-child(2) {
   font-family: "Pretendard-Regular";
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: -0.36px;
   font-size: 12px;
+  font-style: normal;
+  line-height: 18px;
+  letter-spacing: -0.36px;
 }
 
 /* TEXT BOLD */
 /* -2% = 0.02 * 'n'px */
 /* -3% = 0.03 * 'n'px */
 .text_B_XXL_26 {
-  font-family: "Pretendard-Regular";
-  font-weight: 700;
-  font-style: normal;
-  letter-spacing: -0.78px;
+  font-family: "Pretendard-Bold";
   font-size: 26px;
+  font-style: normal;
+  line-height: 34px;
+  letter-spacing: -0.78px;
 }
 
 .text_B_XL_22 {
-  font-family: "Pretendard-Regular";
-  font-weight: 700;
-  font-style: normal;
-  letter-spacing: -0.66px;
+  font-family: "Pretendard-Bold";
   font-size: 22px;
+  font-style: normal;
+  line-height: 30px;
+  letter-spacing: -0.66px;
 }
 
-.text_B_L_18, aside .checkout__summary .summary__item__total .price, main .order__info .product .item .price__text .price__text__up {
-  font-family: "Pretendard-Regular";
-  font-weight: 700;
-  font-style: normal;
-  letter-spacing: -0.54px;
+.text_B_L_18, aside .checkout__summary .summary__price .summary__item__total .price, main .order__info .product .item .price__text .price__text__up {
+  font-family: "Pretendard-Bold";
   font-size: 18px;
+  font-style: normal;
+  line-height: 26px;
+  letter-spacing: -0.54px;
 }
 
 .text_B_M_16, aside .checkout__summary .checkout__button, main .payment__method h3, main .credit h3, main .coupon h2, main .order__info h3 span, main .order__info h3, main .address .delivery__service span, main .address .shopping__info .info__down ul li span:nth-child(1), main .address .shopping__info .info__up span:nth-child(1) {
-  font-family: "Pretendard-Regular";
-  font-weight: 700;
-  font-style: normal;
-  letter-spacing: -0.48px;
+  font-family: "Pretendard-Bold";
   font-size: 16px;
+  font-style: normal;
+  line-height: 24px;
+  letter-spacing: -0.48px;
 }
 
 .text_B_S_14, aside .checkout__summary .summary__item .additional__info span, main .address .shopping__info .info__down ul li:nth-child(3), main .address .shopping__info .info__down ul li:nth-child(2) {
-  font-family: "Pretendard-Regular";
-  font-weight: 700;
-  font-style: normal;
-  letter-spacing: -0.42px;
+  font-family: "Pretendard-Bold";
   font-size: 14px;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: -0.42px;
 }
 
 .text_B_XS_12 {
-  font-family: "Pretendard-Regular";
-  font-weight: 700;
-  font-style: normal;
-  letter-spacing: -0.36px;
+  font-family: "Pretendard-Bold";
   font-size: 12px;
+  font-style: normal;
+  line-height: 18px;
+  letter-spacing: -0.36px;
 }
 
 html,
@@ -315,6 +308,7 @@ table {
 .width_inner, .container {
   width: 1384px;
   padding: 0px 15px 0px 15px;
+  margin: 0 auto;
 }
 
 .hi {
@@ -734,43 +728,52 @@ aside .checkout__summary .summary__item .additional__info {
   justify-content: flex-end;
   padding-bottom: 10px;
 }
-aside .checkout__summary .summary__item__total {
+aside .checkout__summary .summary__price .summary__item__total {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 10px;
   padding-top: 20px;
 }
-aside .checkout__summary .summary__item__total p {
+aside .checkout__summary .summary__price .summary__item__total p {
   color: #101010;
 }
-aside .checkout__summary .summary__item__total .price {
+aside .checkout__summary .summary__price .summary__item__total .price {
   color: #ff6d00;
 }
-aside .checkout__summary .tax__info {
+aside .checkout__summary .summary__price .tax__info {
   display: flex;
   gap: 4px;
   align-items: center;
   justify-content: flex-end;
   margin-bottom: 23.5px;
 }
-aside .checkout__summary .tax__info .tax__label {
+aside .checkout__summary .summary__price .tax__info .tax__label {
   padding: 0 2px;
   border: 1px solid #0a8800;
   color: #0a8800;
 }
-aside .checkout__summary .tax__info .tex__text {
+aside .checkout__summary .summary__price .tax__info .tex__text {
   color: #6a6a6a;
 }
-aside .checkout__summary .consent__list li {
-  border: 1px solid #f00;
+aside .checkout__summary .consent .consent__list li {
   height: 60px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 10px 22px;
+  padding: 10px 19px;
+  border-bottom: 1px solid #9a9a9a;
 }
-aside .checkout__summary .consent__list li span {
-  padding-left: 177px;
+aside .checkout__summary .consent .consent__list li:last-child {
+  border-bottom: none;
+}
+aside .checkout__summary .consent .consent__list li div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+aside .checkout__summary .consent .consent__list li i {
+  cursor: pointer;
 }
 aside .checkout__summary .checkout__button {
   margin-bottom: 20px;
