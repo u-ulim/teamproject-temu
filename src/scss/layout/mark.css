@@ -141,27 +141,243 @@ table {
 }
 
 /* VARIABLES */
+@font-face {
+  font-family: "Pretendard-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+}
+/* HEADING */
+/* -2% = 0.02 * 'n'px */ /* -3% = 0.03 * 'n'px */
+.heading_XXL_56 {
+  font-family: "Pretendard-Bold";
+  font-size: 56px;
+  font-style: normal;
+  letter-spacing: -1.12px;
+}
+
+.heading_XL_48 {
+  font-family: "Pretendard-Bold";
+  font-size: 48px;
+  font-style: normal;
+  letter-spacing: -0.96px;
+}
+
+.heading_L_40 {
+  font-family: "Pretendard-Bold";
+  font-size: 40px;
+  font-style: normal;
+  letter-spacing: -0.8px;
+}
+
+.heading_M_32 {
+  font-family: "Pretendard-Bold";
+  font-size: 32px;
+  font-style: normal;
+  letter-spacing: -0.64px;
+}
+
+.heading_S_24 {
+  font-family: "Pretendard-Bold";
+  font-size: 24px;
+  font-style: normal;
+  letter-spacing: -0.48px;
+}
+
+.heading_XS_20 {
+  font-family: "Pretendard-Bold";
+  font-size: 20px;
+  font-style: normal;
+  letter-spacing: -0.6px;
+}
+
+.heading_XXS_16 {
+  font-family: "Pretendard-Bold";
+  font-size: 16px;
+  font-style: normal;
+  letter-spacing: -0.48px;
+}
+
+/* TEXT */
+/* -2% = 0.02 * 'n'px */
+/* -3% = 0.03 * 'n'px */
+.text_XXL_26 {
+  font-family: "Pretendard-Regular";
+  font-size: 26px;
+  font-style: normal;
+  line-height: 34px;
+  letter-spacing: -0.78px;
+}
+
+.text_XL_22 {
+  font-family: "Pretendard-Regular";
+  font-size: 22px;
+  font-style: normal;
+  line-height: 30px;
+  letter-spacing: -0.66px;
+}
+
+.text_L_18, .wrapper .rightmenu .contents span {
+  font-family: "Pretendard-Regular";
+  font-size: 18px;
+  font-style: normal;
+  line-height: 26px;
+  letter-spacing: -0.54px;
+}
+
+.text_M_16 {
+  font-family: "Pretendard-Regular";
+  font-size: 16px;
+  font-style: normal;
+  line-height: 24px;
+  letter-spacing: -0.48px;
+}
+
+.text_S_14, .wrapper .leftmenu ul li span {
+  font-family: "Pretendard-Regular";
+  font-size: 14px;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: -0.42px;
+}
+
+.text_XS_12, .wrapper .leftmenu ul .home {
+  font-family: "Pretendard-Regular";
+  font-size: 12px;
+  font-style: normal;
+  line-height: 18px;
+  letter-spacing: -0.36px;
+}
+
+/* TEXT BOLD */
+/* -2% = 0.02 * 'n'px */
+/* -3% = 0.03 * 'n'px */
+.text_B_XXL_26 {
+  font-family: "Pretendard-Bold";
+  font-size: 26px;
+  font-style: normal;
+  line-height: 34px;
+  letter-spacing: -0.78px;
+}
+
+.text_B_XL_22 {
+  font-family: "Pretendard-Bold";
+  font-size: 22px;
+  font-style: normal;
+  line-height: 30px;
+  letter-spacing: -0.66px;
+}
+
+.text_B_L_18 {
+  font-family: "Pretendard-Bold";
+  font-size: 18px;
+  font-style: normal;
+  line-height: 26px;
+  letter-spacing: -0.54px;
+}
+
+.text_B_M_16 {
+  font-family: "Pretendard-Bold";
+  font-size: 16px;
+  font-style: normal;
+  line-height: 24px;
+  letter-spacing: -0.48px;
+}
+
+.text_B_S_14 {
+  font-family: "Pretendard-Bold";
+  font-size: 14px;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: -0.42px;
+}
+
+.text_B_XS_12 {
+  font-family: "Pretendard-Bold";
+  font-size: 12px;
+  font-style: normal;
+  line-height: 18px;
+  letter-spacing: -0.36px;
+}
+
+.background_cover, .wrapper .rightmenu .icon .starmark, .wrapper .leftmenu ul li .event, .wrapper .leftmenu ul li .star, .wrapper .leftmenu ul li .delivery, .wrapper .leftmenu ul li .review, .wrapper .leftmenu ul li .document {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 body {
   width: 100%;
   height: 100vh;
 }
 
-.wrapper .box {
+.wrapper {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 1382px;
-  height: 130px;
-  margin-bottom: 16px;
+  height: 100%;
 }
-.wrapper .container .text span {
-  border: 1px solid #f00;
+.wrapper .leftmenu {
+  width: 200px;
+  height: 100%;
 }
-.wrapper .container .menu {
-  width: 214px;
-  height: 478px;
-  border: 1px solid #f00;
+.wrapper .leftmenu ul .home {
+  padding: 20px 18px;
 }
-.wrapper .container .menu > ul {
+.wrapper .leftmenu ul li {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 179px;
+}
+.wrapper .leftmenu ul li > div {
+  display: flex;
+  justify-content: space-between;
+  width: 149px;
+}
+.wrapper .leftmenu ul li .document {
+  width: 24px;
+  height: 24px;
+  background-image: url(../../../assets/images/document.svg);
+}
+.wrapper .leftmenu ul li .review {
+  width: 24px;
+  height: 24px;
+  background-image: url(../../../assets/images/review.svg);
+}
+.wrapper .leftmenu ul li .delivery {
+  width: 24px;
+  height: 24px;
+  background-image: url(../../../assets/images/delivery.svg);
+}
+.wrapper .leftmenu ul li .star {
+  width: 24px;
+  height: 24px;
+  background-image: url(../../../assets/images/star.svg);
+}
+.wrapper .leftmenu ul li .event {
+  width: 24px;
+  height: 24px;
+  background-image: url(../../../assets/images/event.svg);
+}
+.wrapper .rightmenu {
+  padding: 60px 40px;
   width: 100%;
   height: 100%;
+}
+.wrapper .rightmenu .icon {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
   flex-direction: column;
+}
+.wrapper .rightmenu .icon .starmark {
+  width: 160px;
+  height: 187px;
+  background-image: url(../../../assets/./images/starmark.svg);
 }/*# sourceMappingURL=mark.css.map */

@@ -1,5 +1,7 @@
 @import "../config/./reset.scss";
 @import "../config/./colors.scss";
+@import "../config/./fonts.scss";
+@import "../config/./image.scss";
 
 body {
   width: 100%;
@@ -7,30 +9,94 @@ body {
 }
 
 .wrapper {
-  .box {
-    width: 1382px;
-    height: 130px;
-    margin-bottom: 16px;
-  }
-  .container {
-    .text {
-      span {
-        border: 1px solid #f00;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1382px;
+  height: 100%;
+  .leftmenu {
+    // border: 1px solid #f00;
+    width: 200px;
+    height: 100%;
+    ul {
+      .home {
+        // border: 1px solid #f00;
+        padding: 20px 18px;
+        @extend .text_XS_12;
+      }
+      li {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        margin-bottom: 20px;
+        width: 179px;
+        & > div {
+          // border: 1px solid #f00;
+          display: flex;
+          justify-content: space-between;
+          width: 149px;
+        }
+        .document {
+          width: 24px;
+          height: 24px;
+          background-image: url(../../../assets/images/document.svg);
+          @extend .background_cover;
+        }
+        .review {
+          width: 24px;
+          height: 24px;
+          background-image: url(../../../assets/images/review.svg);
+          @extend .background_cover;
+        }
+        .delivery {
+          width: 24px;
+          height: 24px;
+          background-image: url(../../../assets/images/delivery.svg);
+          @extend .background_cover;
+        }
+        .star {
+          width: 24px;
+          height: 24px;
+          background-image: url(../../../assets/images/star.svg);
+          @extend .background_cover;
+        }
+        .event {
+          width: 24px;
+          height: 24px;
+          background-image: url(../../../assets/images/event.svg);
+          @extend .background_cover;
+        }
+        span {
+          @extend .text_S_14;
+        }
       }
     }
-    .menu {
-      width: 214px;
-      height: 478px;
-      border: 1px solid #f00;
-      & > ul {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        li {
-          img {
-          }
-        }
+  }
+  .rightmenu {
+    padding: 60px 40px;
+    // border: 1px solid #f00;
+    width: 100%;
+    height: 100%;
+    .contents {
+      span {
+        @extend .text_L_18;
+      }
+    }
+    .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      // border: 1px solid #f00;
+      flex-direction: column;
+      .starmark {
+        width: 160px;
+        height: 187px;
+        background-image: url(../../../assets/./images/starmark.svg);
+        @extend .background_cover;
+        // filter: grayscale(100%);
       }
     }
   }
