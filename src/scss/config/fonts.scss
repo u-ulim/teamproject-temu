@@ -117,7 +117,7 @@ $font: (
 .text_B_XXL_26 {
   font-family: map-get($font, primary-font-b);
   font-size: 26px;
-  font-style: normal;
+  font-style: bold;
   line-height: 34px;
   letter-spacing: -0.78px;
 }
@@ -125,7 +125,7 @@ $font: (
 .text_B_XL_22 {
   font-family: map-get($font, primary-font-b);
   font-size: 22px;
-  font-style: normal;
+  font-style: bold;
   line-height: 30px;
   letter-spacing: -0.66px;
 }
@@ -133,7 +133,7 @@ $font: (
 .text_B_L_18 {
   font-family: map-get($font, primary-font-b);
   font-size: 18px;
-  font-style: normal;
+  font-style: bold;
   line-height: 26px;
   letter-spacing: -0.54px;
 }
@@ -141,21 +141,21 @@ $font: (
 .text_B_M_16 {
   font-family: map-get($font, primary-font-b);
   font-size: 16px;
-  font-style: normal;
+  font-style: bold;
   line-height: 24px;
   letter-spacing: -0.48px;
 }
 .text_B_S_14 {
   font-family: map-get($font, primary-font-b);
   font-size: 14px;
-  font-style: normal;
+  font-style: bold;
   line-height: 22px;
   letter-spacing: -0.42px;
 }
 .text_B_XS_12 {
   font-family: map-get($font, primary-font-b);
   font-size: 12px;
-  font-style: normal;
+  font-style: bold;
   line-height: 18px;
   letter-spacing: -0.36px;
 }

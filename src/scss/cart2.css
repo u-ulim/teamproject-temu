@@ -113,7 +113,7 @@
 .text_B_XXL_26 {
   font-family: "Pretendard-Bold";
   font-size: 26px;
-  font-style: normal;
+  font-style: bold;
   line-height: 34px;
   letter-spacing: -0.78px;
 }
@@ -121,7 +121,7 @@
 .text_B_XL_22 {
   font-family: "Pretendard-Bold";
   font-size: 22px;
-  font-style: normal;
+  font-style: bold;
   line-height: 30px;
   letter-spacing: -0.66px;
 }
@@ -129,7 +129,7 @@
 .text_B_L_18, aside .checkout__summary .summary__price .summary__item__total .price, main .order__info .product .item .price__text .price__text__up {
   font-family: "Pretendard-Bold";
   font-size: 18px;
-  font-style: normal;
+  font-style: bold;
   line-height: 26px;
   letter-spacing: -0.54px;
 }
@@ -137,7 +137,7 @@
 .text_B_M_16, aside .checkout__summary .checkout__button, main .payment__method h3, main .credit h3, main .coupon h2, main .order__info h3 span, main .order__info h3, main .address .delivery__service span, main .address .shopping__info .info__down ul li span:nth-child(1), main .address .shopping__info .info__up span:nth-child(1) {
   font-family: "Pretendard-Bold";
   font-size: 16px;
-  font-style: normal;
+  font-style: bold;
   line-height: 24px;
   letter-spacing: -0.48px;
 }
@@ -145,7 +145,7 @@
 .text_B_S_14, aside .checkout__summary .summary__item .additional__info span, main .address .shopping__info .info__down ul li:nth-child(3), main .address .shopping__info .info__down ul li:nth-child(2) {
   font-family: "Pretendard-Bold";
   font-size: 14px;
-  font-style: normal;
+  font-style: bold;
   line-height: 22px;
   letter-spacing: -0.42px;
 }
@@ -153,7 +153,7 @@
 .text_B_XS_12 {
   font-family: "Pretendard-Bold";
   font-size: 12px;
-  font-style: normal;
+  font-style: bold;
   line-height: 18px;
   letter-spacing: -0.36px;
 }

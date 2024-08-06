@@ -1,66 +1,59 @@
 @charset "UTF-8";
 @font-face {
   font-family: "Pretendard-Regular";
-  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
 }
 /* HEADING */
 /* -2% = 0.02 * 'n'px */ /* -3% = 0.03 * 'n'px */
 .heading_XXL_56 {
-  font-family: "Pretendard-Regular";
-  font-weight: 700;
+  font-family: "Pretendard-Bold";
+  font-size: 56px;
   font-style: normal;
   letter-spacing: -1.12px;
-  font-size: 56px;
 }
 
 .heading_XL_48, .hi {
-  font-family: "Pretendard-Regular";
-  font-weight: 700;
+  font-family: "Pretendard-Bold";
+  font-size: 48px;
   font-style: normal;
   letter-spacing: -0.96px;
-  font-size: 48px;
 }
 
 .heading_L_40 {
-  font-family: "Pretendard-Regular";
-  font-weight: 700;
+  font-family: "Pretendard-Bold";
+  font-size: 40px;
   font-style: normal;
   letter-spacing: -0.8px;
-  font-size: 40px;
 }
 
 .heading_M_32 {
-  font-family: "Pretendard-Regular";
-  font-weight: 700;
+  font-family: "Pretendard-Bold";
+  font-size: 32px;
   font-style: normal;
   letter-spacing: -0.64px;
-  font-size: 32px;
 }
 
 .heading_S_24 {
-  font-family: "Pretendard-Regular";
-  font-weight: 700;
+  font-family: "Pretendard-Bold";
+  font-size: 24px;
   font-style: normal;
   letter-spacing: -0.48px;
-  font-size: 24px;
 }
 
 .heading_XS_20 {
-  font-family: "Pretendard-Regular";
-  font-weight: 700;
+  font-family: "Pretendard-Bold";
+  font-size: 20px;
   font-style: normal;
   letter-spacing: -0.6px;
-  font-size: 20px;
 }
 
 .heading_XXS_16 {
-  font-family: "Pretendard-Regular";
-  font-weight: 700;
+  font-family: "Pretendard-Bold";
+  font-size: 16px;
   font-style: normal;
   letter-spacing: -0.48px;
-  font-size: 16px;
 }
 
 /* TEXT */
@@ -68,101 +61,101 @@
 /* -3% = 0.03 * 'n'px */
 .text_XXL_26 {
   font-family: "Pretendard-Regular";
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: -0.78px;
   font-size: 26px;
+  font-style: normal;
+  line-height: 34px;
+  letter-spacing: -0.78px;
 }
 
 .text_XL_22 {
   font-family: "Pretendard-Regular";
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: -0.66px;
   font-size: 22px;
+  font-style: normal;
+  line-height: 30px;
+  letter-spacing: -0.66px;
 }
 
 .text_L_18 {
   font-family: "Pretendard-Regular";
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: -0.54px;
   font-size: 18px;
+  font-style: normal;
+  line-height: 26px;
+  letter-spacing: -0.54px;
 }
 
 .text_M_16, aside .checkout__summary .summary__item__total p, aside .checkout__summary .summary__item, main .section__down article .product button, main .section__up article .product .number__input span, main .section__up article .product .number__input button, main .section__up article .product .number__input, main .section__up article .toolbar button, main .section__up article .banner {
   font-family: "Pretendard-Regular";
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: -0.48px;
   font-size: 16px;
+  font-style: normal;
+  line-height: 24px;
+  letter-spacing: -0.48px;
 }
 
 .text_S_14, aside .checkout__summary .info, aside .checkout__summary .summary__item__total p span, aside .checkout__summary .additional__info, main .section__down article .product .product__down .product .product__text__down .third__text, main .section__down article .product .product__down .product .product__text__down .first__text, main .section__down article .product .product__up .product .product__text__down .third__text, main .section__down article .product .product__up .product .product__text__down .first__text, main .section__up article .product .product__text .product__text__down, main .section__up article .product .product__text .product__text__up, main .section__up article .section__title {
   font-family: "Pretendard-Regular";
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: -0.42px;
   font-size: 14px;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: -0.42px;
 }
 
 .text_XS_12, aside .checkout__summary .tax__info, main .section__down article .product .product__down .product .product__text__down .last__text, main .section__down article .product .product__up .product .product__text__down .last__text, main .section__up article .product .price__text .price__text__down {
   font-family: "Pretendard-Regular";
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: -0.36px;
   font-size: 12px;
+  font-style: normal;
+  line-height: 18px;
+  letter-spacing: -0.36px;
 }
 
 /* TEXT BOLD */
 /* -2% = 0.02 * 'n'px */
 /* -3% = 0.03 * 'n'px */
 .text_B_XXL_26 {
-  font-family: "Pretendard-Regular";
-  font-weight: 700;
-  font-style: normal;
-  letter-spacing: -0.78px;
+  font-family: "Pretendard-Bold";
   font-size: 26px;
+  font-style: bold;
+  line-height: 34px;
+  letter-spacing: -0.78px;
 }
 
 .text_B_XL_22 {
-  font-family: "Pretendard-Regular";
-  font-weight: 700;
-  font-style: normal;
-  letter-spacing: -0.66px;
+  font-family: "Pretendard-Bold";
   font-size: 22px;
+  font-style: bold;
+  line-height: 30px;
+  letter-spacing: -0.66px;
 }
 
 .text_B_L_18, aside .checkout__summary .summary__item__total .price, main .section__down article .product .product__down .product .product__text__down .second__text .price span, main .section__down article .product .product__up .product .product__text__down .second__text .price span, main .section__down article .title, main .section__up article .product .price__text .price__text__up {
-  font-family: "Pretendard-Regular";
-  font-weight: 700;
-  font-style: normal;
-  letter-spacing: -0.54px;
+  font-family: "Pretendard-Bold";
   font-size: 18px;
+  font-style: bold;
+  line-height: 26px;
+  letter-spacing: -0.54px;
 }
 
 .text_B_M_16, aside .checkout__summary .checkout__button, main .section__up article .toolbar .form__left span {
-  font-family: "Pretendard-Regular";
-  font-weight: 700;
-  font-style: normal;
-  letter-spacing: -0.48px;
+  font-family: "Pretendard-Bold";
   font-size: 16px;
+  font-style: bold;
+  line-height: 24px;
+  letter-spacing: -0.48px;
 }
 
 .text_B_S_14, aside .checkout__summary .additional__info span {
-  font-family: "Pretendard-Regular";
-  font-weight: 700;
-  font-style: normal;
-  letter-spacing: -0.42px;
+  font-family: "Pretendard-Bold";
   font-size: 14px;
+  font-style: bold;
+  line-height: 22px;
+  letter-spacing: -0.42px;
 }
 
 .text_B_XS_12, main .section__down article .product .product__down .product .product__text__down .second__text .price .sale, main .section__down article .product .product__up .product .product__text__down .second__text .price .sale {
-  font-family: "Pretendard-Regular";
-  font-weight: 700;
-  font-style: normal;
-  letter-spacing: -0.36px;
+  font-family: "Pretendard-Bold";
   font-size: 12px;
+  font-style: bold;
+  line-height: 18px;
+  letter-spacing: -0.36px;
 }
 
 html,
@@ -315,6 +308,7 @@ table {
 .width_inner, .container {
   width: 1384px;
   padding: 0px 15px 0px 15px;
+  margin: 0 auto;
 }
 
 .hi {

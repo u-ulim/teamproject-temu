@@ -1,0 +1,49 @@
+@import "./config/fonts.scss";
+@import "./config/reset.scss";
+@import "./config/colors.scss";
+@import "./layout/layout.scss";
+
+.hi {
+  @extend .heading_XL_48;
+  @extend .width_full;
+  color: map-get($color, secondary-color);
+}
+
+body {
+  @extend .width_full;
+}
+
+.container {
+  @extend .width_inner;
+  margin: 0 auto;
+}
+
+/*header*/
+
+header {
+  margin-bottom: 23px;
+  border-bottom: 1px solid map-get($color, color-Neutrals-Grey-300);
+  height: 82px;
+}
+
+/*main*/
+
+main {
+  .section__up {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .title {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      i {
+        color: map-get($color-system, #0a8800);
+      }
+      h2 {
+        @extend .text_B_L_18;
+      }
+    }
+  }
+}
