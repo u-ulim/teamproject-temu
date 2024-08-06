@@ -752,6 +752,7 @@ aside .checkout__summary .summary__price .tax__info .tax__label {
   padding: 0 2px;
   border: 1px solid #0a8800;
   color: #0a8800;
+  border-radius: 5px;
 }
 aside .checkout__summary .summary__price .tax__info .tex__text {
   color: #6a6a6a;
@@ -789,10 +790,14 @@ aside .checkout__summary .checkout__button:hover {
   background-color: #ff7629;
   cursor: pointer;
 }
-aside .checkout__summary .info .info__text {
+aside .checkout__summary .info ul li div {
   display: flex;
-  gap: 5px;
-  margin-bottom: 20px;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+aside .checkout__summary .info ul li div i {
+  color: #0a8800;
 }
 
 /*footer*/

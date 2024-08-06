@@ -529,6 +529,7 @@ aside {
           padding: 0 2px;
           border: 1px solid map-get($color-system, info-color);
           color: map-get($color-system, info-color);
+          border-radius: 5px;
         }
         .tex__text {
           color: map-get($color, color-Neutrals-Grey-600);
@@ -577,10 +578,18 @@ aside {
     }
     .info {
       @extend .text_S_14;
-      .info__text {
-        display: flex;
-        gap: 5px;
-        margin-bottom: 20px;
+      ul {
+        li {
+          div {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            i {
+              color: map-get($color-system, info-color);
+            }
+          }
+        }
       }
     }
   }
