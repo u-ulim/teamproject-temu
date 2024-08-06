@@ -1,0 +1,37 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "thumbnail": "http://example.com/image1.jpg",
+      "title": "Product 1",
+      "discountRate": "10%",
+      "price": "20,000원",
+      "cartButton": "장바구니",
+      "rating": 4.5,
+      "reviewCount": 100,
+      "quantity": 10
+    },
+    {
+      "id": "2",
+      "thumbnail": "http://example.com/image2.jpg",
+      "title": "Product 2",
+      "discountRate": "15%",
+      "price": "30,000원",
+      "cartButton": "장바구니",
+      "rating": 4.0,
+      "reviewCount": 50,
+      "quantity": 20
+    },
+    {
+      "id": "3",
+      "thumbnail": "http://example.com/image3.jpg",
+      "title": "Product 3",
+      "discountRate": "20%",
+      "price": "40,000원",
+      "cartButton": "장바구니",
+      "rating": 4.8,
+      "reviewCount": 200,
+      "quantity": 5
+    }
+  ]
+}
