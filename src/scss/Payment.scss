@@ -30,8 +30,10 @@ header {
 main {
   padding: 0 12px;
   width: 961px;
+
+  /* section__up*/
   .section__up {
-    width: 961px;
+    width: 100%;
     article {
       .section__title {
         display: flex;
@@ -70,6 +72,7 @@ main {
             width: 1px;
             height: 80%;
             background-color: #000;
+            cursor: pointer;
             &:nth-child(1) {
               transform: translate(-50%, -50%) rotate(-45deg);
             }
@@ -81,6 +84,9 @@ main {
       }
     }
   }
+
+  /*address*/
+
   .address {
     display: flex;
     gap: 55px;
@@ -99,6 +105,7 @@ main {
           }
           &:nth-child(2) {
             @extend .text_S_14;
+            cursor: pointer;
           }
         }
       }
@@ -165,6 +172,8 @@ main {
       }
     }
   }
+
+  /*order__info*/
   .order__info {
     margin-bottom: 38px;
     h3 {
@@ -178,14 +187,16 @@ main {
         color: map-get($color, primary-color);
       }
     }
-    .product {
-      .item {
+    .product__info {
+      .product {
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin-bottom: 40px;
         padding: 0 12px;
         height: 176px;
+
+        /*checkbox*/
         .custom__box {
           padding-right: 6px;
           position: relative;
@@ -225,6 +236,8 @@ main {
             }
           }
         }
+
+        /*img*/
         .img {
           width: 128px;
           height: 128px;
@@ -234,229 +247,281 @@ main {
             height: 100%;
           }
         }
-        .product__text {
+
+        /*product__info */
+        .product__info {
           display: flex;
           gap: 10px;
           justify-content: start;
           flex-direction: column;
-          .product__text__up {
+          .product__text-up {
             @extend .text_S_14;
           }
-          .product__text__down {
+          .product__text-down {
             @extend .text_S_14;
             color: map-get($color, color-Neutrals-Grey-700);
           }
         }
-        .price__text {
+
+        /*number__input */
+        .number__input {
+          div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 100px;
+            height: 33px;
+            border-radius: 8px;
+            @extend .text_M_16;
+            button {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border: none;
+              width: 37px;
+              height: 34px;
+              background-color: white;
+              text-align: center;
+              cursor: pointer;
+              cursor: pointer;
+              @extend .text_M_16;
+              &:hover {
+                background-color: #f0f0f0;
+              }
+            }
+            span {
+              width: 20px;
+              text-align: center;
+              @extend .text_M_16;
+            }
+          }
+        }
+
+        /*price__info */
+        .price__info {
           display: flex;
           gap: 6px;
           flex-direction: column;
           text-align: center;
-          .price__text__up {
+          .price__text-up {
             @extend .text_B_L_18;
           }
-          .price__text__down {
+          .price__text-down {
             display: flex;
             gap: 3px;
             align-items: center;
             justify-content: center;
+            cursor: pointer;
             @extend .text_XS_12;
             .sale {
               display: block;
-              padding: 0, 3px;
               border: 1px solid map-get($color-system, success-color);
               width: 33px;
-              height: 14px;
+              height: 18px;
               color: map-get($color-system, success-color);
               border-radius: 5px;
             }
             span {
               color: map-get($color-system, color-Neutrals-Grey-700);
-            }
-          }
-        }
-        .close {
-          border: none;
-          position: relative;
-          width: 30px;
-          height: 30px;
-          background: transparent;
-          span {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 1px;
-            height: 80%;
-            background-color: #000;
-            &:nth-child(1) {
-              transform: translate(-50%, -50%) rotate(-45deg);
-            }
-            &:nth-child(2) {
-              transform: translate(-50%, -50%) rotate(45deg);
+              cursor: pointer;
             }
           }
         }
       }
-    }
-  }
-  .coupon {
-    margin-bottom: 21px;
-    width: 100%;
-    h2 {
-      margin-bottom: 25px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid map-get($color, color-Neutrals-Grey-400);
-      width: 100%;
-      @extend .text_B_M_16;
-    }
-    .coupon__select {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      padding-left: 10px;
-      label {
-        @extend .text_S_14;
-        span {
-          padding-left: 5px;
-          color: map-get($color-system, error-color);
-          @extend .text_S_14;
-        }
-      }
-      #coupon {
-        width: 553px;
-        height: 38px;
-        color: map-get($color, color-Neutrals-Grey-400);
-        border-radius: 8px;
-        @extend .text_S_14;
-        &:focus {
-          outline: none;
-          cursor: pointer;
-        }
-      }
-    }
-  }
-  .credit {
-    margin-bottom: 21px;
-    width: 100%;
-    h3 {
-      margin-bottom: 25px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid map-get($color, color-Neutrals-Grey-400);
-      width: 100%;
-      @extend .text_B_M_16;
-    }
-    .total__credit {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      margin-bottom: 26px;
-      padding-left: 10px;
-      label {
-        @extend .text_S_14;
-        span {
-          padding-left: 5px;
-          color: map-get($color-system, error-color);
-          @extend .text_S_14;
-        }
-      }
-      #total__credit__box {
-        padding: 0 14px;
-        border: 1px solid map-get($color, color-Neutrals-Grey-400);
-        width: 553px;
-        height: 38px;
-        color: map-get($color, color-Neutrals-Grey-400);
-        border-radius: 8px;
-        @extend .text_S_14;
-        &:focus {
-          outline: none;
-        }
-      }
-    }
-    .used__credit {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      padding-left: 10px;
 
-      label {
-        @extend .text_S_14;
-        span {
-          padding-left: 5px;
-          color: map-get($color-system, error-color);
-          @extend .text_S_14;
-        }
-      }
-      #used__credit__box {
-        padding: 0 14px;
-        border: 1px solid map-get($color, color-Neutrals-Grey-400);
-        width: 364px;
-        height: 38px;
-        color: map-get($color, color-Neutrals-Grey-400);
-        border-radius: 8px;
-        @extend .text_S_14;
-        &:focus {
-          outline: none;
-        }
-      }
-      button {
+      /*close  */
+      .close {
         border: none;
-        width: 158px;
-        height: 38px;
-        background-color: map-get($color, primary-color);
-        color: map-get($color, color-White);
+        position: relative;
+        width: 30px;
+        height: 30px;
+        background: transparent;
+        cursor: pointer;
+        span {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 1px;
+          height: 80%;
+          background-color: #000;
+          &:nth-child(1) {
+            transform: translate(-50%, -50%) rotate(-45deg);
+          }
+          &:nth-child(2) {
+            transform: translate(-50%, -50%) rotate(45deg);
+          }
+        }
+      }
+    }
+  }
+}
+
+/*coupon*/
+.coupon {
+  margin-bottom: 21px;
+  width: 100%;
+  h2 {
+    margin-bottom: 25px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid map-get($color, color-Neutrals-Grey-400);
+    width: 100%;
+    @extend .text_B_M_16;
+  }
+  .coupon__select {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-left: 10px;
+    label {
+      @extend .text_S_14;
+      span {
+        padding-left: 5px;
+        color: map-get($color-system, error-color);
+        @extend .text_S_14;
+      }
+    }
+    #coupon {
+      width: 553px;
+      height: 38px;
+      color: map-get($color, color-Neutrals-Grey-400);
+      border-radius: 8px;
+      @extend .text_S_14;
+      &:focus {
+        outline: none;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+/*credit*/
+.credit {
+  margin-bottom: 21px;
+  width: 100%;
+  h3 {
+    margin-bottom: 25px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid map-get($color, color-Neutrals-Grey-400);
+    width: 100%;
+    @extend .text_B_M_16;
+  }
+  .total__credit {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 26px;
+    padding-left: 10px;
+    label {
+      @extend .text_S_14;
+      span {
+        padding-left: 5px;
+        color: map-get($color-system, error-color);
+        @extend .text_S_14;
+      }
+    }
+    #total__credit__box {
+      padding: 0 14px;
+      border: 1px solid map-get($color, color-Neutrals-Grey-400);
+      width: 553px;
+      height: 38px;
+      color: map-get($color, color-Neutrals-Grey-400);
+      border-radius: 8px;
+      @extend .text_S_14;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  .used__credit {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-left: 10px;
+
+    label {
+      @extend .text_S_14;
+      span {
+        padding-left: 5px;
+        color: map-get($color-system, error-color);
+        @extend .text_S_14;
+      }
+    }
+    #used__credit__box {
+      padding: 0 14px;
+      border: 1px solid map-get($color, color-Neutrals-Grey-400);
+      width: 385px;
+      height: 38px;
+      color: map-get($color, color-Neutrals-Grey-400);
+      border-radius: 8px;
+      @extend .text_S_14;
+      &:focus {
+        outline: none;
+      }
+    }
+    button {
+      border: none;
+      width: 158px;
+      height: 38px;
+      background-color: map-get($color, primary-color);
+      color: map-get($color, color-White);
+      transition: all 0.3s;
+      border-radius: 8px;
+      &:hover {
+        background-color: map-get($color-hover, primary-color);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+/*payment__method*/
+.payment__method {
+  margin-bottom: 21px;
+  width: 100%;
+  h3 {
+    margin-bottom: 30px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid map-get($color, color-Neutrals-Grey-400);
+    width: 100%;
+    @extend .text_B_M_16;
+  }
+  .methods {
+    display: flex;
+    width: 100%;
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding-bottom: 22px;
+      width: 100%;
+      li {
+        padding: 34px 22px;
+        border: 1px solid map-get($color, color-Neutrals-Grey-300);
+        text-align: center;
         transition: all 0.3s;
         border-radius: 8px;
-        &:hover {
-          background-color: map-get($color-hover, primary-color);
-          cursor: pointer;
+        @extend .text_XS_12;
+        span {
+          display: block;
+          padding-bottom: 5px;
         }
-      }
-    }
-  }
-  .payment__method {
-    margin-bottom: 21px;
-    width: 100%;
-    h3 {
-      margin-bottom: 30px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid map-get($color, color-Neutrals-Grey-400);
-      width: 100%;
-      @extend .text_B_M_16;
-    }
-    .methods {
-      display: flex;
-      width: 100%;
-      ul {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        padding-bottom: 22px;
-        width: 100%;
-        li {
-          padding: 34px 22px;
-          border: 1px solid map-get($color, color-Neutrals-Grey-300);
-          text-align: center;
-          transition: all 0.3s;
-          border-radius: 8px;
-          @extend .text_XS_12;
-          span {
-            display: block;
-            padding-bottom: 5px;
+        .img {
+          width: 55px;
+          height: 63px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
           }
-          .img {
-            width: 55px;
-            height: 63px;
-            img {
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-            }
-          }
-          &:hover {
-            border: 1px solid map-get($color-hover, primary-color);
-            box-shadow: 0 0 4px map-get($color-hover, primary-color);
-            cursor: pointer;
-          }
+        }
+        &:hover {
+          border: 1px solid map-get($color-hover, primary-color);
+          box-shadow: 0 0 4px map-get($color-hover, primary-color);
+          cursor: pointer;
         }
       }
     }
@@ -470,35 +535,34 @@ aside {
   position: sticky;
   top: 20px;
   height: fit-content;
+
   .checkout__summary {
     padding: 10px 0;
-    width: 338.32;
-    height: 461px;
+    width: 338.32px;
+
+    /*summary__item*/
     .summary__item {
-      li {
-        display: flex;
-        justify-content: space-between;
-        padding-bottom: 34.5px;
-        @extend .text_M_16;
-        span {
-          &:nth-child(1) {
-            color: map-get($color, color-Black);
-          }
-          &:nth-child(2) {
-            color: map-get($color, color-Neutrals-Grey-700);
-          }
+      ul {
+        li {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding-bottom: 34.5px;
+          @extend .text_M_16;
         }
-      }
-      .additional__info {
-        display: flex;
-        justify-content: flex-end;
-        padding-bottom: 10px;
-        @extend .text_S_14;
-        span {
-          @extend .text_B_S_14;
+        .additional__info {
+          display: flex;
+          justify-content: flex-end;
+          padding-bottom: 10px;
+          @extend .text_S_14;
+          span {
+            @extend .text_B_S_14;
+          }
         }
       }
     }
+
+    /*summary__price*/
     .summary__price {
       .summary__item__total {
         display: flex;
@@ -526,9 +590,11 @@ aside {
         margin-bottom: 23.5px;
         @extend .text_XS_12;
         .tax__label {
-          padding: 0 2px;
+          display: block;
           border: 1px solid map-get($color-system, info-color);
+          width: 28px;
           color: map-get($color-system, info-color);
+          text-align: center;
           border-radius: 5px;
         }
         .tex__text {
@@ -536,23 +602,25 @@ aside {
         }
       }
     }
+
+    /*consent*/
     .consent {
       .consent__list {
         li {
-          height: 60px;
-          @extend .text_S_14;
           display: flex;
-          justify-content: space-between;
           align-items: center;
+          justify-content: space-between;
           padding: 10px 19px;
           border-bottom: 1px solid map-get($color, color-Neutrals-Grey-400);
+          height: 60px;
+          @extend .text_S_14;
           &:last-child {
             border-bottom: none;
           }
           div {
             display: flex;
-            align-items: center;
             gap: 6px;
+            align-items: center;
           }
           i {
             cursor: pointer;
@@ -561,6 +629,7 @@ aside {
       }
     }
 
+    /*checkout__button*/
     .checkout__button {
       margin-bottom: 20px;
       border: none;
@@ -576,14 +645,16 @@ aside {
         cursor: pointer;
       }
     }
+
+    /*info*/
     .info {
       @extend .text_S_14;
       ul {
         li {
           div {
             display: flex;
-            align-items: center;
             gap: 10px;
+            align-items: center;
             margin-bottom: 15px;
             i {
               color: map-get($color-system, info-color);
@@ -593,10 +664,4 @@ aside {
       }
     }
   }
-}
-
-/*footer*/
-footer {
-  width: 1382px;
-  height: 752px;
 }

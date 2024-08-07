@@ -89,7 +89,7 @@
   letter-spacing: -0.54px;
 }
 
-.text_M_16, aside .checkout__summary .summary__price .summary__item__total p, aside .checkout__summary .summary__item li, main .section__up article .banner {
+.text_M_16, aside .checkout__summary .summary__price .summary__item__total p, aside .checkout__summary .summary__item ul li, main .order__info .product__info .product .number__input div span, main .order__info .product__info .product .number__input div button, main .order__info .product__info .product .number__input div, main .section__up article .banner {
   font-family: "Pretendard-Regular";
   font-size: 16px;
   font-style: normal;
@@ -97,7 +97,7 @@
   letter-spacing: -0.48px;
 }
 
-.text_S_14, aside .checkout__summary .info, aside .checkout__summary .consent .consent__list li, aside .checkout__summary .summary__price .summary__item__total p span, aside .checkout__summary .summary__item .additional__info, main .credit .used__credit #used__credit__box, main .credit .used__credit label span, main .credit .used__credit label, main .credit .total__credit #total__credit__box, main .credit .total__credit label span, main .credit .total__credit label, main .coupon .coupon__select #coupon, main .coupon .coupon__select label span, main .coupon .coupon__select label, main .order__info .product .item .product__text .product__text__down, main .order__info .product .item .product__text .product__text__up, main .address .delivery__service .delivery__info .delivery__memo li:nth-child(1), main .address .shopping__info .info__down ul li span:nth-child(2), main .address .shopping__info .info__up span:nth-child(2), main .section__up article .section__title {
+.text_S_14, aside .checkout__summary .info, aside .checkout__summary .consent .consent__list li, aside .checkout__summary .summary__price .summary__item__total p span, aside .checkout__summary .summary__item ul .additional__info, .credit .used__credit #used__credit__box, .credit .used__credit label span, .credit .used__credit label, .credit .total__credit #total__credit__box, .credit .total__credit label span, .credit .total__credit label, .coupon .coupon__select #coupon, .coupon .coupon__select label span, .coupon .coupon__select label, main .order__info .product__info .product .product__info .product__text-down, main .order__info .product__info .product .product__info .product__text-up, main .address .delivery__service .delivery__info .delivery__memo li:nth-child(1), main .address .shopping__info .info__down ul li span:nth-child(2), main .address .shopping__info .info__up span:nth-child(2), main .section__up article .section__title {
   font-family: "Pretendard-Regular";
   font-size: 14px;
   font-style: normal;
@@ -105,7 +105,7 @@
   letter-spacing: -0.42px;
 }
 
-.text_XS_12, aside .checkout__summary .summary__price .tax__info, main .payment__method .methods ul li, main .order__info .product .item .price__text .price__text__down, main .address .delivery__service .delivery__info .delivery__memo li:nth-child(3), main .address .delivery__service .delivery__info .delivery__memo li:nth-child(2) {
+.text_XS_12, aside .checkout__summary .summary__price .tax__info, .payment__method .methods ul li, main .order__info .product__info .product .price__info .price__text-down, main .address .delivery__service .delivery__info .delivery__memo li:nth-child(3), main .address .delivery__service .delivery__info .delivery__memo li:nth-child(2) {
   font-family: "Pretendard-Regular";
   font-size: 12px;
   font-style: normal;
@@ -134,7 +134,7 @@
   letter-spacing: -0.66px;
 }
 
-.text_B_L_18, aside .checkout__summary .summary__price .summary__item__total .price, main .order__info .product .item .price__text .price__text__up {
+.text_B_L_18, aside .checkout__summary .summary__price .summary__item__total .price, main .order__info .product__info .product .price__info .price__text-up {
   font-family: "Pretendard-Bold";
   font-size: 18px;
   font-style: bold;
@@ -143,7 +143,7 @@
   letter-spacing: -0.54px;
 }
 
-.text_B_M_16, aside .checkout__summary .checkout__button, main .payment__method h3, main .credit h3, main .coupon h2, main .order__info h3 span, main .order__info h3, main .address .delivery__service span, main .address .shopping__info .info__down ul li span:nth-child(1), main .address .shopping__info .info__up span:nth-child(1) {
+.text_B_M_16, aside .checkout__summary .checkout__button, .payment__method h3, .credit h3, .coupon h2, main .order__info h3 span, main .order__info h3, main .address .delivery__service span, main .address .shopping__info .info__down ul li span:nth-child(1), main .address .shopping__info .info__up span:nth-child(1) {
   font-family: "Pretendard-Bold";
   font-size: 16px;
   font-style: bold;
@@ -152,7 +152,7 @@
   letter-spacing: -0.48px;
 }
 
-.text_B_S_14, aside .checkout__summary .summary__item .additional__info span, main .address .shopping__info .info__down ul li:nth-child(3), main .address .shopping__info .info__down ul li:nth-child(2) {
+.text_B_S_14, aside .checkout__summary .summary__item ul .additional__info span, main .address .shopping__info .info__down ul li:nth-child(3), main .address .shopping__info .info__down ul li:nth-child(2) {
   font-family: "Pretendard-Bold";
   font-size: 14px;
   font-style: bold;
@@ -344,9 +344,12 @@ header {
 main {
   padding: 0 12px;
   width: 961px;
+  /* section__up*/
+  /*address*/
+  /*order__info*/
 }
 main .section__up {
-  width: 961px;
+  width: 100%;
 }
 main .section__up article .section__title {
   display: flex;
@@ -385,6 +388,7 @@ main .section__up article .banner .close span {
   width: 1px;
   height: 80%;
   background-color: #000;
+  cursor: pointer;
 }
 main .section__up article .banner .close span:nth-child(1) {
   transform: translate(-50%, -50%) rotate(-45deg);
@@ -406,6 +410,9 @@ main .address .shopping__info .info__up {
   display: flex;
   justify-content: space-between;
   margin-bottom: 16px;
+}
+main .address .shopping__info .info__up span:nth-child(2) {
+  cursor: pointer;
 }
 main .address .shopping__info .info__down {
   display: flex;
@@ -462,22 +469,30 @@ main .order__info h3 {
 main .order__info h3 span {
   color: #ff6d00;
 }
-main .order__info .product .item {
+main .order__info .product__info {
+  /*close  */
+}
+main .order__info .product__info .product {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 40px;
   padding: 0 12px;
   height: 176px;
+  /*checkbox*/
+  /*img*/
+  /*product__info */
+  /*number__input */
+  /*price__info */
 }
-main .order__info .product .item .custom__box {
+main .order__info .product__info .product .custom__box {
   padding-right: 6px;
   position: relative;
 }
-main .order__info .product .item .custom__box input[type=checkbox].custom__checkbox {
+main .order__info .product__info .product .custom__box input[type=checkbox].custom__checkbox {
   display: none;
 }
-main .order__info .product .item .custom__box .select {
+main .order__info .product__info .product .custom__box .select {
   display: inline-block;
   border: 1px solid #000;
   position: relative;
@@ -487,7 +502,7 @@ main .order__info .product .item .custom__box .select {
   cursor: pointer;
   border-radius: 50%;
 }
-main .order__info .product .item .custom__box .select::after {
+main .order__info .product__info .product .custom__box .select::after {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -497,10 +512,10 @@ main .order__info .product .item .custom__box .select::after {
   border-radius: 50%;
   transform: translate(-50%, -50%) scale(0);
 }
-main .order__info .product .item .custom__box input[type=checkbox]:checked + .select {
+main .order__info .product__info .product .custom__box input[type=checkbox]:checked + .select {
   background-color: black;
 }
-main .order__info .product .item .custom__box input[type=checkbox]:checked + .select::after {
+main .order__info .product__info .product .custom__box input[type=checkbox]:checked + .select::after {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -509,53 +524,88 @@ main .order__info .product .item .custom__box input[type=checkbox]:checked + .se
   content: "✓";
   transform: translate(-50%, -50%);
 }
-main .order__info .product .item .img {
+main .order__info .product__info .product .img {
   width: 128px;
   height: 128px;
   border-radius: 8px;
 }
-main .order__info .product .item .img img {
+main .order__info .product__info .product .img img {
   width: 100%;
   height: 100%;
 }
-main .order__info .product .item .product__text {
+main .order__info .product__info .product .product__info {
   display: flex;
   gap: 10px;
   justify-content: start;
   flex-direction: column;
 }
-main .order__info .product .item .product__text .product__text__down {
+main .order__info .product__info .product .product__info .product__text-down {
   color: #4a4949;
 }
-main .order__info .product .item .price__text {
+main .order__info .product__info .product .number__input div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100px;
+  height: 33px;
+  border-radius: 8px;
+}
+main .order__info .product__info .product .number__input div button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  width: 37px;
+  height: 34px;
+  background-color: white;
+  text-align: center;
+  cursor: pointer;
+  cursor: pointer;
+}
+main .order__info .product__info .product .number__input div button:hover {
+  background-color: #f0f0f0;
+}
+main .order__info .product__info .product .number__input div span {
+  width: 20px;
+  text-align: center;
+}
+main .order__info .product__info .product .price__info {
   display: flex;
   gap: 6px;
   flex-direction: column;
   text-align: center;
 }
-main .order__info .product .item .price__text .price__text__down {
+main .order__info .product__info .product .price__info .price__text-down {
   display: flex;
   gap: 3px;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
-main .order__info .product .item .price__text .price__text__down .sale {
+main .order__info .product__info .product .price__info .price__text-down .sale {
   display: block;
-  padding: 0, 3px;
   border: 1px solid #ff6d00;
   width: 33px;
-  height: 14px;
+  height: 18px;
   color: #ff6d00;
   border-radius: 5px;
 }
-main .order__info .product .item .close {
+main .order__info .product__info .product .price__info .price__text-down span {
+  cursor: pointer;
+}
+main .order__info .product__info .close {
   border: none;
   position: relative;
   width: 30px;
   height: 30px;
   background: transparent;
+  cursor: pointer;
 }
-main .order__info .product .item .close span {
+main .order__info .product__info .close span {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -563,64 +613,68 @@ main .order__info .product .item .close span {
   height: 80%;
   background-color: #000;
 }
-main .order__info .product .item .close span:nth-child(1) {
+main .order__info .product__info .close span:nth-child(1) {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
-main .order__info .product .item .close span:nth-child(2) {
+main .order__info .product__info .close span:nth-child(2) {
   transform: translate(-50%, -50%) rotate(45deg);
 }
-main .coupon {
+
+/*coupon*/
+.coupon {
   margin-bottom: 21px;
   width: 100%;
 }
-main .coupon h2 {
+.coupon h2 {
   margin-bottom: 25px;
   padding-bottom: 8px;
   border-bottom: 1px solid #9a9a9a;
   width: 100%;
 }
-main .coupon .coupon__select {
+.coupon .coupon__select {
   display: flex;
   gap: 10px;
   align-items: center;
   padding-left: 10px;
 }
-main .coupon .coupon__select label span {
+.coupon .coupon__select label span {
   padding-left: 5px;
   color: #fc3310;
 }
-main .coupon .coupon__select #coupon {
+.coupon .coupon__select #coupon {
   width: 553px;
   height: 38px;
   color: #9a9a9a;
   border-radius: 8px;
 }
-main .coupon .coupon__select #coupon:focus {
+.coupon .coupon__select #coupon:focus {
   outline: none;
   cursor: pointer;
 }
-main .credit {
+
+/*credit*/
+.credit {
   margin-bottom: 21px;
   width: 100%;
 }
-main .credit h3 {
+.credit h3 {
   margin-bottom: 25px;
   padding-bottom: 8px;
   border-bottom: 1px solid #9a9a9a;
   width: 100%;
 }
-main .credit .total__credit {
+.credit .total__credit {
   display: flex;
   gap: 10px;
   align-items: center;
   margin-bottom: 26px;
   padding-left: 10px;
 }
-main .credit .total__credit label span {
+.credit .total__credit label span {
   padding-left: 5px;
   color: #fc3310;
 }
-main .credit .total__credit #total__credit__box {
+.credit .total__credit #total__credit__box {
   padding: 0 14px;
   border: 1px solid #9a9a9a;
   width: 553px;
@@ -628,31 +682,31 @@ main .credit .total__credit #total__credit__box {
   color: #9a9a9a;
   border-radius: 8px;
 }
-main .credit .total__credit #total__credit__box:focus {
+.credit .total__credit #total__credit__box:focus {
   outline: none;
 }
-main .credit .used__credit {
+.credit .used__credit {
   display: flex;
   gap: 10px;
   align-items: center;
   padding-left: 10px;
 }
-main .credit .used__credit label span {
+.credit .used__credit label span {
   padding-left: 5px;
   color: #fc3310;
 }
-main .credit .used__credit #used__credit__box {
+.credit .used__credit #used__credit__box {
   padding: 0 14px;
   border: 1px solid #9a9a9a;
-  width: 364px;
+  width: 385px;
   height: 38px;
   color: #9a9a9a;
   border-radius: 8px;
 }
-main .credit .used__credit #used__credit__box:focus {
+.credit .used__credit #used__credit__box:focus {
   outline: none;
 }
-main .credit .used__credit button {
+.credit .used__credit button {
   border: none;
   width: 158px;
   height: 38px;
@@ -661,52 +715,54 @@ main .credit .used__credit button {
   transition: all 0.3s;
   border-radius: 8px;
 }
-main .credit .used__credit button:hover {
+.credit .used__credit button:hover {
   background-color: #ff7629;
   cursor: pointer;
 }
-main .payment__method {
+
+/*payment__method*/
+.payment__method {
   margin-bottom: 21px;
   width: 100%;
 }
-main .payment__method h3 {
+.payment__method h3 {
   margin-bottom: 30px;
   padding-bottom: 8px;
   border-bottom: 1px solid #9a9a9a;
   width: 100%;
 }
-main .payment__method .methods {
+.payment__method .methods {
   display: flex;
   width: 100%;
 }
-main .payment__method .methods ul {
+.payment__method .methods ul {
   display: flex;
   align-items: center;
   justify-content: space-around;
   padding-bottom: 22px;
   width: 100%;
 }
-main .payment__method .methods ul li {
+.payment__method .methods ul li {
   padding: 34px 22px;
   border: 1px solid #b5b5b5;
   text-align: center;
   transition: all 0.3s;
   border-radius: 8px;
 }
-main .payment__method .methods ul li span {
+.payment__method .methods ul li span {
   display: block;
   padding-bottom: 5px;
 }
-main .payment__method .methods ul li .img {
+.payment__method .methods ul li .img {
   width: 55px;
   height: 63px;
 }
-main .payment__method .methods ul li .img img {
+.payment__method .methods ul li .img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-main .payment__method .methods ul li:hover {
+.payment__method .methods ul li:hover {
   border: 1px solid #ff7629;
   box-shadow: 0 0 4px #ff7629;
   cursor: pointer;
@@ -721,21 +777,20 @@ aside {
 }
 aside .checkout__summary {
   padding: 10px 0;
-  width: 338.32;
-  height: 461px;
+  width: 338.32px;
+  /*summary__item*/
+  /*summary__price*/
+  /*consent*/
+  /*checkout__button*/
+  /*info*/
 }
-aside .checkout__summary .summary__item li {
+aside .checkout__summary .summary__item ul li {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding-bottom: 34.5px;
 }
-aside .checkout__summary .summary__item li span:nth-child(1) {
-  color: #101010;
-}
-aside .checkout__summary .summary__item li span:nth-child(2) {
-  color: #4a4949;
-}
-aside .checkout__summary .summary__item .additional__info {
+aside .checkout__summary .summary__item ul .additional__info {
   display: flex;
   justify-content: flex-end;
   padding-bottom: 10px;
@@ -761,29 +816,31 @@ aside .checkout__summary .summary__price .tax__info {
   margin-bottom: 23.5px;
 }
 aside .checkout__summary .summary__price .tax__info .tax__label {
-  padding: 0 2px;
+  display: block;
   border: 1px solid #0a8800;
+  width: 28px;
   color: #0a8800;
+  text-align: center;
   border-radius: 5px;
 }
 aside .checkout__summary .summary__price .tax__info .tex__text {
   color: #6a6a6a;
 }
 aside .checkout__summary .consent .consent__list li {
-  height: 60px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 10px 19px;
   border-bottom: 1px solid #9a9a9a;
+  height: 60px;
 }
 aside .checkout__summary .consent .consent__list li:last-child {
   border-bottom: none;
 }
 aside .checkout__summary .consent .consent__list li div {
   display: flex;
-  align-items: center;
   gap: 6px;
+  align-items: center;
 }
 aside .checkout__summary .consent .consent__list li i {
   cursor: pointer;
@@ -804,16 +861,10 @@ aside .checkout__summary .checkout__button:hover {
 }
 aside .checkout__summary .info ul li div {
   display: flex;
-  align-items: center;
   gap: 10px;
+  align-items: center;
   margin-bottom: 15px;
 }
 aside .checkout__summary .info ul li div i {
   color: #0a8800;
-}
-
-/*footer*/
-footer {
-  width: 1382px;
-  height: 752px;
 }

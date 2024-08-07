@@ -89,7 +89,7 @@
   letter-spacing: -0.54px;
 }
 
-.text_M_16, aside .checkout__summary .summary__item__total p, aside .checkout__summary .summary__item, main .section__down article .product button, main .section__up article .product .number__input span, main .section__up article .product .number__input button, main .section__up article .product .number__input, main .section__up article .toolbar button, main .section__up article .banner {
+.text_M_16, aside .checkout__summary .summary__Price ul .summary__item__total p, aside .checkout__summary .summary__item ul li, main .section__up article .product__info .product .number__input div span, main .section__up article .product__info .product .number__input div button, main .section__up article .product__info .product .number__input div, main .section__up article .toolbar button, main .section__up article .banner {
   font-family: "Pretendard-Regular";
   font-size: 16px;
   font-style: normal;
@@ -97,7 +97,7 @@
   letter-spacing: -0.48px;
 }
 
-.text_S_14, aside .checkout__summary .info, aside .checkout__summary .summary__item__total p span, aside .checkout__summary .additional__info, main .section__down article .product .product__down .product .product__text__down .third__text, main .section__down article .product .product__down .product .product__text__down .first__text, main .section__down article .product .product__up .product .product__text__down .third__text, main .section__down article .product .product__up .product .product__text__down .first__text, main .section__up article .product .product__text .product__text__down, main .section__up article .product .product__text .product__text__up, main .section__up article .section__title {
+.text_S_14, aside .checkout__summary .info, aside .checkout__summary .summary__Price ul .summary__item__total p span, aside .checkout__summary .summary__item ul .additional__info, main .section__down .section__down-product .product-down .product li .first__text, main .section__down .section__down-product .product-up .product li .first__text, main .section__up article .product__info .product .product__info .product__text-down, main .section__up article .product__info .product .product__info .product__text-up, main .section__up article .section__title {
   font-family: "Pretendard-Regular";
   font-size: 14px;
   font-style: normal;
@@ -105,7 +105,7 @@
   letter-spacing: -0.42px;
 }
 
-.text_XS_12, aside .checkout__summary .tax__info, main .section__down article .product .product__down .product .product__text__down .last__text, main .section__down article .product .product__up .product .product__text__down .last__text, main .section__up article .product .price__text .price__text__down {
+.text_XS_12, aside .checkout__summary .summary__Price ul .tax__info, main .section__down .section__down-product .product-down .product li .last__text, main .section__down .section__down-product .product-up .product li .last__text, main .section__up article .product__info .product .price__info .price__text-down {
   font-family: "Pretendard-Regular";
   font-size: 12px;
   font-style: normal;
@@ -134,7 +134,7 @@
   letter-spacing: -0.66px;
 }
 
-.text_B_L_18, aside .checkout__summary .summary__item__total .price, main .section__down article .product .product__down .product .product__text__down .second__text .price span, main .section__down article .product .product__up .product .product__text__down .second__text .price span, main .section__down article .title, main .section__up article .product .price__text .price__text__up {
+.text_B_L_18, aside .checkout__summary .summary__Price ul .summary__item__total .price, main .section__down .section__down-product .product-down .product li .second__text .price span, main .section__down .section__down-product .product-up .product li .second__text .price span, main .section__down .section__down-title h2, main .section__up article .product__info .product .price__info .price__text-up {
   font-family: "Pretendard-Bold";
   font-size: 18px;
   font-style: bold;
@@ -152,7 +152,7 @@
   letter-spacing: -0.48px;
 }
 
-.text_B_S_14, aside .checkout__summary .additional__info span {
+.text_B_S_14, aside .checkout__summary .summary__item ul .additional__info span, main .section__down .section__down-product .product-down .product li .third__text, main .section__down .section__down-product .product-up .product li .third__text {
   font-family: "Pretendard-Bold";
   font-size: 14px;
   font-style: bold;
@@ -161,7 +161,7 @@
   letter-spacing: -0.42px;
 }
 
-.text_B_XS_12, main .section__down article .product .product__down .product .product__text__down .second__text .price .sale, main .section__down article .product .product__up .product .product__text__down .second__text .price .sale {
+.text_B_XS_12, main .section__down .section__down-product .product-down .product li .second__text .price .sale, main .section__down .section__down-product .product-up .product li .second__text .price .sale {
   font-family: "Pretendard-Bold";
   font-size: 12px;
   font-style: bold;
@@ -343,9 +343,16 @@ header {
 /*main*/
 main {
   width: 961px;
+  /*section__up*/
 }
 main .section__up {
-  width: 961px;
+  width: 100%;
+}
+main .section__up article {
+  /*section__title */
+  /*banner */
+  /*toolbar */
+  /*product__info  */
 }
 main .section__up article .section__title {
   display: flex;
@@ -363,6 +370,7 @@ main .section__up article .banner {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 26px;
   padding: 10px;
   width: 100%;
   height: 48px;
@@ -383,6 +391,7 @@ main .section__up article .banner .close span {
   width: 1px;
   height: 80%;
   background-color: #000;
+  cursor: pointer;
 }
 main .section__up article .banner .close span:nth-child(1) {
   transform: translate(-50%, -50%) rotate(-45deg);
@@ -451,22 +460,30 @@ main .section__up article .toolbar button {
   color: #4a4949;
   cursor: pointer;
 }
-main .section__up article .product {
+main .section__up article .product__info {
+  /*close  */
+}
+main .section__up article .product__info .product {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 40px;
   padding: 0 12px;
   height: 176px;
+  /*checkbox*/
+  /*img*/
+  /*product__info */
+  /*number__input */
+  /*price__info */
 }
-main .section__up article .product .custom__box {
+main .section__up article .product__info .product .custom__box {
   padding-right: 6px;
   position: relative;
 }
-main .section__up article .product .custom__box input[type=checkbox].custom__checkbox__2 {
+main .section__up article .product__info .product .custom__box input[type=checkbox].custom__checkbox {
   display: none;
 }
-main .section__up article .product .custom__box .select {
+main .section__up article .product__info .product .custom__box .select {
   display: inline-block;
   border: 1px solid #000;
   position: relative;
@@ -476,7 +493,7 @@ main .section__up article .product .custom__box .select {
   cursor: pointer;
   border-radius: 50%;
 }
-main .section__up article .product .custom__box .select::after {
+main .section__up article .product__info .product .custom__box .select::after {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -486,10 +503,10 @@ main .section__up article .product .custom__box .select::after {
   border-radius: 50%;
   transform: translate(-50%, -50%) scale(0);
 }
-main .section__up article .product .custom__box input[type=checkbox]:checked + .select {
+main .section__up article .product__info .product .custom__box input[type=checkbox]:checked + .select {
   background-color: black;
 }
-main .section__up article .product .custom__box input[type=checkbox]:checked + .select::after {
+main .section__up article .product__info .product .custom__box input[type=checkbox]:checked + .select::after {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -498,25 +515,25 @@ main .section__up article .product .custom__box input[type=checkbox]:checked + .
   content: "✓";
   transform: translate(-50%, -50%);
 }
-main .section__up article .product .img {
+main .section__up article .product__info .product .img {
   width: 128px;
   height: 128px;
   border-radius: 8px;
 }
-main .section__up article .product .img img {
+main .section__up article .product__info .product .img img {
   width: 100%;
   height: 100%;
 }
-main .section__up article .product .product__text {
+main .section__up article .product__info .product .product__info {
   display: flex;
   gap: 10px;
   justify-content: start;
   flex-direction: column;
 }
-main .section__up article .product .product__text .product__text__down {
+main .section__up article .product__info .product .product__info .product__text-down {
   color: #4a4949;
 }
-main .section__up article .product .number__input {
+main .section__up article .product__info .product .number__input div {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -528,7 +545,7 @@ main .section__up article .product .number__input {
   height: 33px;
   border-radius: 8px;
 }
-main .section__up article .product .number__input button {
+main .section__up article .product__info .product .number__input div button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -538,43 +555,48 @@ main .section__up article .product .number__input button {
   background-color: white;
   text-align: center;
   cursor: pointer;
+  cursor: pointer;
 }
-main .section__up article .product .number__input button:hover {
+main .section__up article .product__info .product .number__input div button:hover {
   background-color: #f0f0f0;
 }
-main .section__up article .product .number__input span {
+main .section__up article .product__info .product .number__input div span {
   width: 20px;
   text-align: center;
 }
-main .section__up article .product .price__text {
+main .section__up article .product__info .product .price__info {
   display: flex;
   gap: 6px;
   flex-direction: column;
   text-align: center;
 }
-main .section__up article .product .price__text .price__text__down {
+main .section__up article .product__info .product .price__info .price__text-down {
   display: flex;
   gap: 3px;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
-main .section__up article .product .price__text .price__text__down .sale {
+main .section__up article .product__info .product .price__info .price__text-down .sale {
   display: block;
-  padding: 0, 3px;
   border: 1px solid #ff6d00;
   width: 33px;
-  height: 14px;
+  height: 18px;
   color: #ff6d00;
   border-radius: 5px;
 }
-main .section__up article .product .close {
+main .section__up article .product__info .product .price__info .price__text-down span {
+  cursor: pointer;
+}
+main .section__up article .product__info .close {
   border: none;
   position: relative;
   width: 30px;
   height: 30px;
   background: transparent;
+  cursor: pointer;
 }
-main .section__up article .product .close span {
+main .section__up article .product__info .close span {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -582,182 +604,164 @@ main .section__up article .product .close span {
   height: 80%;
   background-color: #000;
 }
-main .section__up article .product .close span:nth-child(1) {
+main .section__up article .product__info .close span:nth-child(1) {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
-main .section__up article .product .close span:nth-child(2) {
+main .section__up article .product__info .close span:nth-child(2) {
   transform: translate(-50%, -50%) rotate(45deg);
 }
 main .section__down {
-  width: 961px;
-}
-main .section__down article .title {
-  margin-bottom: 35px;
-}
-main .section__down article .product {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin: 0 auto;
+  width: 961.52px;
+  /*section_down-title*/
+}
+main .section__down .section__down-title {
   margin-bottom: 35px;
+  left: 0;
+  width: 100%;
 }
-main .section__down article .product .product__up {
+main .section__down .section__down-product {
   display: flex;
-  gap: 55.31px;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /*product*/
 }
-main .section__down article .product .product__up .product .product__img {
+main .section__down .section__down-product .product-up {
+  display: flex;
+  gap: 54.99px;
+  margin-bottom: 36px;
+}
+main .section__down .section__down-product .product-up .product li a img {
   margin-bottom: 12.69px;
   width: 199.31px;
   height: 199.31px;
   border-radius: 8px;
 }
-main .section__down article .product .product__up .product .product__img .img {
-  width: 100%;
-  height: 100%;
-}
-main .section__down article .product .product__up .product .product__text__down {
-  display: flex;
-  gap: 7px;
-  flex-direction: column;
-}
-main .section__down article .product .product__up .product .product__text__down .second__text {
+main .section__down .section__down-product .product-up .product li .second__text {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-main .section__down article .product .product__up .product .product__text__down .second__text .price {
+main .section__down .section__down-product .product-up .product li .second__text .price {
+  display: flex;
   gap: 5px;
+  align-items: center;
+  justify-content: center;
 }
-main .section__down article .product .product__up .product .product__text__down .second__text .price .sale {
+main .section__down .section__down-product .product-up .product li .second__text .price .sale {
   color: #ff6d00;
 }
-main .section__down article .product .product__up .product .product__text__down .second__text i {
+main .section__down .section__down-product .product-up .product li .second__text i {
   padding: 5px 8px;
-  border: 1px solid #038b83;
-  width: 35px;
-  height: 25px;
-  color: #038b83;
-  text-align: center;
-  border-radius: 8px;
-}
-main .section__down article .product .product__up .product .product__text__down .third__text {
-  display: flex;
-  gap: 7px;
-  align-items: center;
-}
-main .section__down article .product .product__up .product .product__text__down .third__text .star {
+  border: 1px solid #009e95;
   color: #009e95;
+  border-radius: 8px;
+  cursor: pointer;
 }
-main .section__down article .product .product__up .product .product__text__down .third__text div {
-  color: #6a6a6a;
-}
-main .section__down article .product .product__up .product .product__text__down .last__text {
+main .section__down .section__down-product .product-up .product li .third__text {
   display: flex;
   gap: 5px;
   align-items: center;
 }
-main .section__down article .product .product__up .product .product__text__down .last__text .sale {
-  display: inline-block;
-  padding: 3px 4.5px;
-  border: none;
-  width: 50px;
-  height: 20px;
-  background-color: #ff6d00;
+main .section__down .section__down-product .product-up .product li .third__text div {
+  color: #009e95;
+}
+main .section__down .section__down-product .product-up .product li .third__text .review {
+  color: #6a6a6a;
+}
+main .section__down .section__down-product .product-up .product li .last__text {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+}
+main .section__down .section__down-product .product-up .product li .last__text span:nth-child(1) {
+  padding: 1px 4px;
+  background: #ff6d00;
   color: #fff;
   border-radius: 8px;
 }
-main .section__down article .product .product__up .product .product__text__down .last__text .remain {
-  display: inline-block;
-  padding-right: 5px;
+main .section__down .section__down-product .product-up .product li .last__text span:nth-child(2) {
   color: #ff6d00;
 }
-main .section__down article .product .product__down {
+main .section__down .section__down-product .product-down {
   display: flex;
-  gap: 55.31px;
-  align-items: center;
-  margin-bottom: 37px;
+  gap: 54.99px;
+  margin-bottom: 36px;
+  margin-bottom: 108px;
 }
-main .section__down article .product .product__down .product .product__img {
+main .section__down .section__down-product .product-down .product li a img {
   margin-bottom: 12.69px;
   width: 199.31px;
   height: 199.31px;
   border-radius: 8px;
 }
-main .section__down article .product .product__down .product .product__img .img {
-  width: 100%;
-  height: 100%;
-}
-main .section__down article .product .product__down .product .product__text__down {
-  display: flex;
-  gap: 7px;
-  flex-direction: column;
-}
-main .section__down article .product .product__down .product .product__text__down .second__text {
+main .section__down .section__down-product .product-down .product li .second__text {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-main .section__down article .product .product__down .product .product__text__down .second__text .price {
+main .section__down .section__down-product .product-down .product li .second__text .price {
+  display: flex;
   gap: 5px;
+  align-items: center;
+  justify-content: center;
 }
-main .section__down article .product .product__down .product .product__text__down .second__text .price .sale {
+main .section__down .section__down-product .product-down .product li .second__text .price .sale {
   color: #ff6d00;
 }
-main .section__down article .product .product__down .product .product__text__down .second__text i {
+main .section__down .section__down-product .product-down .product li .second__text i {
   padding: 5px 8px;
-  border: 1px solid #038b83;
-  width: 35px;
-  height: 25px;
-  color: #038b83;
-  text-align: center;
+  border: 1px solid #009e95;
+  color: #009e95;
   border-radius: 8px;
+  cursor: pointer;
 }
-main .section__down article .product .product__down .product .product__text__down .third__text {
+main .section__down .section__down-product .product-down .product li .third__text {
   display: flex;
-  gap: 7px;
+  gap: 5px;
   align-items: center;
 }
-main .section__down article .product .product__down .product .product__text__down .third__text .star {
+main .section__down .section__down-product .product-down .product li .third__text div {
   color: #009e95;
 }
-main .section__down article .product .product__down .product .product__text__down .third__text div {
+main .section__down .section__down-product .product-down .product li .third__text .review {
   color: #6a6a6a;
 }
-main .section__down article .product .product__down .product .product__text__down .last__text {
+main .section__down .section__down-product .product-down .product li .last__text {
   display: flex;
-  gap: 5px;
+  gap: 9px;
   align-items: center;
 }
-main .section__down article .product .product__down .product .product__text__down .last__text .sale {
-  display: inline-block;
-  padding: 3px 4.5px;
-  border: none;
-  width: 50px;
-  height: 20px;
-  background-color: #ff6d00;
+main .section__down .section__down-product .product-down .product li .last__text span:nth-child(1) {
+  padding: 1px 4px;
+  background: #ff6d00;
   color: #fff;
   border-radius: 8px;
 }
-main .section__down article .product .product__down .product .product__text__down .last__text .remain {
-  display: inline-block;
-  padding-right: 5px;
+main .section__down .section__down-product .product-down .product li .last__text span:nth-child(2) {
   color: #ff6d00;
 }
-main .section__down article .product button {
+main .section__down .section__down-product button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: none;
-  width: 220px;
-  height: 52px;
+  width: 158px;
+  height: 38px;
   background-color: #ff6d00;
   color: #fff;
-  text-align: center;
   transition: all 0.3s;
   border-radius: 8px;
 }
-main .section__down article .product button i {
-  padding-left: 5px;
+main .section__down .section__down-product button i {
+  padding-left: 12px;
 }
-main .section__down article .product button:hover {
+main .section__down .section__down-product button:hover {
   background-color: #ff7629;
   cursor: pointer;
 }
@@ -771,45 +775,57 @@ aside {
 }
 aside .checkout__summary {
   padding: 10px 0;
-  width: 338.32;
-  height: 461px;
+  width: 338.32px;
+  /*summary_item*/
+  /*summary__price*/
+  /*checkout__button*/
+  /*info*/
 }
-aside .checkout__summary .summary__item {
+aside .checkout__summary .summary__item ul {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 16px;
+  flex-direction: column;
 }
-aside .checkout__summary .summary__item .price {
+aside .checkout__summary .summary__item ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 34.5px;
+}
+aside .checkout__summary .summary__item ul li .price {
   color: #4a4949;
 }
-aside .checkout__summary .summary__item .discount {
+aside .checkout__summary .summary__item ul li .discount {
   color: #ff6d00;
 }
-aside .checkout__summary .additional__info {
+aside .checkout__summary .summary__item ul .additional__info {
   display: flex;
   justify-content: flex-end;
   padding-bottom: 10px;
 }
-aside .checkout__summary .summary__item__total {
+aside .checkout__summary .summary__Price ul .summary__item__total {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 10px;
   padding-top: 20px;
 }
-aside .checkout__summary .tax__info {
+aside .checkout__summary .summary__Price ul .tax__info {
   display: flex;
   gap: 4px;
   align-items: center;
   justify-content: flex-end;
   margin-bottom: 23.5px;
 }
-aside .checkout__summary .tax__info .tax__label {
-  padding: 0 2px;
+aside .checkout__summary .summary__Price ul .tax__info .tax__label {
+  display: block;
   border: 1px solid #0a8800;
+  width: 28px;
   color: #0a8800;
+  text-align: center;
+  border-radius: 8px;
 }
-aside .checkout__summary .tax__info .tex__text {
+aside .checkout__summary .summary__Price ul .tax__info .tex__text {
   color: #6a6a6a;
 }
 aside .checkout__summary .checkout__button {
@@ -826,8 +842,14 @@ aside .checkout__summary .checkout__button:hover {
   background-color: #ff7629;
   cursor: pointer;
 }
-aside .checkout__summary .info .info__text {
+aside .checkout__summary .info ul {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+aside .checkout__summary .info ul .info__text {
+  display: flex;
+  align-items: center;
   gap: 5px;
   margin-bottom: 20px;
 }

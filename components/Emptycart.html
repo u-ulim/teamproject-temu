@@ -12,18 +12,24 @@
     ></script>
     
     <!-- CUSTOM CSS, JS-->
-    <link rel="stylesheet" href="../src/scss/cart.css?after" />
-    <script src="../src/javascript/cart.js"></script>
+    <link rel="stylesheet" href="../src/scss/Emptycart.css" />
+    <script src="../src/javascript/Emptycart.js"></script>
   </head>
+
+
   <body>
 
     <!--header-->
-    <header></header>
+    <header>
+      <nav></nav>
+    </header>
 
     <div class="container"> 
 
-        <!--MAIN START-->
+  <!-- MAIN START -->
     <main>
+
+      <!--section__up-->
       <section class="section__up">
         <article>
           <div class="section__title">
@@ -58,71 +64,15 @@
             </form>
             <button>선택삭제</button>
           </div>
-          <div class="product__info">
-            <!-- product -->
-            <ul class="product">
-              <!-- checkbox -->
-              <li class="custom__box">
-                <div>
-                  <input
-                    type="checkbox"
-                    name="checkbox"
-                    id="custom__checkbox"
-                    class="custom__checkbox"
-                  />
-                  <label for="custom__checkbox" class="select"></label>
+          <div class="empty__product">
+              <div class="empty__product-up">
+                <i class="fa-solid fa-cart-shopping"></i> 
+                <div class="product-text">
+                  <p class="product__text-up">장바구니가 비어있습니다</p>
+                  <p class="product__text-down">마음에 드는 상품을 추가하세요</p>
                 </div>
-              </li>
-  
-              <!-- img -->
-              <li class="img">
-                <div>
-                  <img src="./img/product.png" alt="product01" />
-                </div>
-              </li>
-  
-              <!-- product__info -->
-              <li class="product__info">
-                <div>
-                  <div class="product__text-up">
-                    <span>1/5/10쌍의 남성용 심플 슬리드 라이너</span>
-                  </div>
-                  <div class="product__text-down">
-                    <span>옵션변경</span>
-                    <span>|</span>
-                    <span>바로구매</span>
-                  </div>
-                </div>
-              </li>
-  
-              <!-- number__input -->
-              <li class="number__input">
-                <div>
-                  <button>+</button>
-                  <span>1</span>
-                  <button>-</button>
-                </div>
-              </li>
-  
-              <!-- price__info -->
-              <li class="price__info">
-                <div>
-                  <span class="price__text-up"> ￦1,189 </span>
-                  <div class="price__text-down">
-                    <span class="sale">-71%</span>
-                    <span>￦4,219</span>
-                  </div>
-                </div>
-              </li>
-  
-              <!-- close-->
-              <li class="close">
-                <div>
-                  <span></span>
-                  <span></span>
-                </div>
-              </li>
-            </ul>
+              </div>
+                <button class="popular-btn">인기상품보기</button>
           </div>
         </article>
       </section>
@@ -444,71 +394,73 @@
             </article>
       </section>
     </main>
-    <!--MAIN END-->
+  <!-- MAIN END -->
 
-     <!--ASIDE END-->
-    <aside>
-      <div class="checkout__summary">
 
-        <!--summary__item-->
-       <div class="summary__item">
-        <ul>
-            <li class="product__fee">
-              <span>상품금액</span>
-              <span class="price">₩11,000</span>
-            </li>
-            <li class="product__sale">
-              <span>상품할인금액</span>
-              <span class="discount">-₩4,200</span>
-            </li>
-            <li class="additional__info">
-              ₩16,000 추가주문 시, <span>구매 가능</span>
-            </li>
-        </ul>
-       </div>
-        <hr>
-
-        <!--summary__price-->
-        <div class="summary__Price">
-         <ul>
-            <li class="summary__item__total">
-              <p>결제금액<span>(2개상품)</span></p>
-              <span class="price">₩11,000</span>
-            </li>
-            <li class="tax__info">
-              <span class="tax__label">TAX</span>
-              <span class="tax__text">Temu의 가격은 관세가격을 포함합니다.</span>
-            </li>
-        </ul>
-         </div>
-
-        <!--button-->
-        <button type="submit" class="checkout__button">결제하기</button>
-        
-        <!--info-->
-        <div class="info">
-          <ul>
-            <li class="info__text">
-              <i class="fa-solid fa-circle-exclamation"></i>
-              <p>결제가 완료될때까지 제품의 가격 및 구매 여부가 보장되지 않습니다.</p>
-            </li>
-            <li class="info__text">
-            <i class="fa-solid fa-circle-exclamation"></i>
-            <p>다음페이지에서 주문서를 확인하기 전까지 결제가 되지 않습니다.</p>
-            </li>
-            <li class="info__text">
-            <i class="fa-solid fa-circle-exclamation"></i>
-            <p>마이페이지>주문내역 상세페이지에서 직접 취소 할 수 있습니다.</p>
-            </li>
-          </ul>
-        </div>
-        
-    </div>
-    </aside>
       <!--ASIDE END-->
+      <aside>
+        <div class="checkout__summary">
+  
+          <!--summary__item-->
+         <div class="summary__item">
+          <ul>
+              <li class="product__fee">
+                <span>상품금액</span>
+                <span class="price">₩11,000</span>
+              </li>
+              <li class="product__sale">
+                <span>상품할인금액</span>
+                <span class="discount">-₩4,200</span>
+              </li>
+              <li class="additional__info">
+                ₩16,000 추가주문 시, <span>구매 가능</span>
+              </li>
+          </ul>
+         </div>
+          <hr>
+  
+          <!--summary__price-->
+          <div class="summary__Price">
+           <ul>
+              <li class="summary__item__total">
+                <p>결제금액<span>(2개상품)</span></p>
+                <span class="price">₩11,000</span>
+              </li>
+              <li class="tax__info">
+                <span class="tax__label">TAX</span>
+                <span class="tax__text">Temu의 가격은 관세가격을 포함합니다.</span>
+              </li>
+          </ul>
+           </div>
+  
+          <!--button-->
+          <button type="submit" class="checkout__button">결제하기</button>
+          
+          <!--info-->
+          <div class="info">
+            <ul>
+              <li class="info__text">
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <p>결제가 완료될때까지 제품의 가격 및 구매 여부가 보장되지 않습니다.</p>
+              </li>
+              <li class="info__text">
+              <i class="fa-solid fa-circle-exclamation"></i>
+              <p>다음페이지에서 주문서를 확인하기 전까지 결제가 되지 않습니다.</p>
+              </li>
+              <li class="info__text">
+              <i class="fa-solid fa-circle-exclamation"></i>
+              <p>마이페이지>주문내역 상세페이지에서 직접 취소 할 수 있습니다.</p>
+              </li>
+            </ul>
+          </div>
+          
+      </div>
+      </aside>
+        <!--ASIDE END-->
   </div>
 
-  <!--footer-->
+
+   <!--footer-->
     <footer></footer>
   </body>
 </html>

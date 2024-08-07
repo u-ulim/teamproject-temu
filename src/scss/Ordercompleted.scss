@@ -31,12 +31,14 @@ header {
 
 main {
   .container {
+    /*section__up*/
     .section__up {
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
-      .section__up__title {
+      /*section__up-title*/
+      .section__up-title {
         display: flex;
         gap: 16px;
         align-items: center;
@@ -46,21 +48,23 @@ main {
           color: map-get($color-system, info-color);
         }
       }
+      /*address_info*/
       .address__info {
         display: flex;
         flex-direction: column;
-        margin-bottom: 41px;
+        margin-bottom: 30px;
         width: 700px;
         height: 168px;
         .info__up {
           display: flex;
           justify-content: space-between;
-          margin-bottom: 13px;
+          margin-bottom: 30px;
           span {
             &:nth-child(1) {
               @extend .text_B_M_16;
             }
             &:nth-child(2) {
+              cursor: pointer;
               @extend .text_S_14;
               color: map-get($color, color-Neutrals-Grey-600);
             }
@@ -88,6 +92,7 @@ main {
           }
         }
       }
+      /*shopping__info*/
       .shopping__info {
         margin-bottom: 30px;
         ul {
@@ -146,6 +151,7 @@ main {
           }
         }
       }
+      /*info*/
       .info {
         margin-bottom: 65px;
         .info-text {
@@ -173,6 +179,7 @@ main {
         }
       }
     }
+    /*section__down*/
     .section__down {
       display: flex;
       align-items: center;
@@ -180,6 +187,7 @@ main {
       flex-direction: column;
       margin: 0 auto;
       width: 961.52px;
+      /*section_down-title*/
       .section__down-title {
         margin-bottom: 35px;
         left: 0;
@@ -193,7 +201,8 @@ main {
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        .product__up {
+        /*product*/
+        .product-up {
           display: flex;
           gap: 54.99px;
           margin-bottom: 36px;
@@ -232,6 +241,7 @@ main {
                   border: 1px solid map-get($color, secondary-color);
                   color: map-get($color, secondary-color);
                   border-radius: 8px;
+                  cursor: pointer;
                 }
               }
               .third__text {
@@ -266,7 +276,7 @@ main {
             }
           }
         }
-        .product__down {
+        .product-down {
           display: flex;
           gap: 54.99px;
           margin-bottom: 36px;
@@ -306,6 +316,7 @@ main {
                   border: 1px solid map-get($color, secondary-color);
                   color: map-get($color, secondary-color);
                   border-radius: 8px;
+                  cursor: pointer;
                 }
               }
               .third__text {
@@ -341,6 +352,9 @@ main {
           }
         }
         button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
           border: none;
           width: 158px;
           height: 38px;
@@ -348,6 +362,9 @@ main {
           color: map-get($color, color-White);
           transition: all 0.3s;
           border-radius: 8px;
+          i {
+            padding-left: 12px;
+          }
           &:hover {
             background-color: map-get($color-hover, primary-color);
             cursor: pointer;

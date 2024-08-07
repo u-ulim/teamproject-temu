@@ -10,15 +10,18 @@
   ></script>
 
   <!-- CUSTOM CSS, JS-->
-  <link rel="stylesheet" href="../src/scss/cart2.css" />
-  <script src="../src/javascript/cart2.js"></script>
+  <link rel="stylesheet" href="../src/scss/Payment.css" />
+  <script src="../src/javascript/Payment.js"></script>
 </head>
 <body>
   <header>
     <nav></nav>
   </header>
+
   <div class="container">
+    <!--MAIN START-->
     <main>
+      <!-- section__up -->
       <section class="section__up">
         <article>
           <div class="section__title">
@@ -39,6 +42,8 @@
           </div>
         </article>
       </section>
+
+      <!-- address-->
       <section class="address">
         <article class="shopping__info">
           <div class="info__up">
@@ -69,12 +74,16 @@
           </div>
         </article>
       </section>
+
+      <!-- order__info-->
       <section class="order__info">
         <h3>주문 상품(<span>2</span>)</h3>
-        <div class="product">
-          <ul>
-            <li class="item">
-              <div class="custom__box">
+        <div class="product__info">
+          <!-- product -->
+          <ul class="product">
+            <!-- checkbox -->
+            <li class="custom__box">
+              <div>
                 <input
                   type="checkbox"
                   name="checkbox"
@@ -83,27 +92,52 @@
                 />
                 <label for="custom__checkbox" class="select"></label>
               </div>
-              <div class="img">
+            </li>
+
+            <!-- img -->
+            <li class="img">
+              <div>
                 <img src="./img/product.png" alt="product01" />
               </div>
-              <div class="product__text">
-                <div class="product__text__up">
+            </li>
+
+            <!-- product__info -->
+            <li class="product__info">
+              <div>
+                <div class="product__text-up">
                   <span>1/5/10쌍의 남성용 심플 슬리드 라이너</span>
                 </div>
-                <div class="product__text__down">
+                <div class="product__text-down">
                   <span>옵션변경</span>
                   <span>|</span>
                   <span>바로구매</span>
                 </div>
               </div>
-              <div class="price__text">
-                <span class="price__text__up"> ￦1,189 </span>
-                <div class="price__text__down">
+            </li>
+
+            <!-- number__input -->
+            <li class="number__input">
+              <div>
+                <button>+</button>
+                <span>1</span>
+                <button>-</button>
+              </div>
+            </li>
+
+            <!-- price__info -->
+            <li class="price__info">
+              <div>
+                <span class="price__text-up"> ￦1,189 </span>
+                <div class="price__text-down">
                   <span class="sale">-71%</span>
                   <span>￦4,219</span>
                 </div>
               </div>
-              <div class="close">
+            </li>
+
+            <!-- close-->
+            <li class="close">
+              <div>
                 <span></span>
                 <span></span>
               </div>
@@ -111,6 +145,8 @@
           </ul>
         </div>
       </section>
+
+      <!-- coupon-->
       <section class="coupon">
         <h2>쿠폰</h2>
         <form class="coupon__select">
@@ -120,6 +156,8 @@
           </select>
         </form>
       </section>
+
+      <!-- credit-->
       <section class="credit">
         <h3>크레딧</h3>
         <form class="total__credit">
@@ -132,6 +170,8 @@
           <button>전액 사용</button>
         </form>
       </section>
+
+      <!-- payment__method-->
       <section class="payment__method">
         <h3>결제 수단</h3>
         <div class="methods">
@@ -176,8 +216,12 @@
         </div>
       </section>
     </main>
+    <!--MAIN END-->
+
+    <!--ASIDE START-->
     <aside>
       <div class="checkout__summary">
+        <!-- summary__item -->
         <div class="summary__item">
           <ul>
             <li class="total__fee">
@@ -190,11 +234,11 @@
             </li>
             <li class="coupon__fee">
               <span>쿠폰사용</span>
-              <span class="coupon">-₩4,200</span>
+              <span class="coupon__fee">-₩4,200</span>
             </li>
             <li class="credit__fee">
               <span>크레딧사용</span>
-              <span class="credit">-₩4,200</span>
+              <span class="credit__fee">-₩4,200</span>
             </li>
             <li class="additional__info">
               ₩16,000 추가주문 시, <span>구매 가능</span>
@@ -202,6 +246,8 @@
           </ul>
         </div>
         <hr />
+
+        <!--summary__price-->
         <div class="summary__price">
           <ul>
             <li class="summary__item__total">
@@ -217,6 +263,8 @@
           </ul>
         </div>
         <hr />
+
+        <!--consent-->
         <div class="consent">
           <ul class="consent__list">
             <li>
@@ -282,7 +330,11 @@
             </li>
           </ul>
         </div>
-        <button class="checkout__button">결제하기</button>
+
+        <!--button-->
+        <button type="submit" class="checkout__button">결제하기</button>
+
+        <!--info-->
         <div class="info">
           <ul>
             <li>
@@ -320,6 +372,6 @@
         </div>
       </div>
     </aside>
+    <!--ASIDE END-->
   </div>
-  <footer></footer>
 </body>
