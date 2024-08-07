@@ -7,9 +7,9 @@
 /* HEADING */
 /* -2% = 0.02 * 'n'px */ /* -3% = 0.03 * 'n'px */
 .heading_XXL_56 {
-  font-family: "Pretendard-Bold";
   font-size: 56px;
   font-style: normal;
+  font-weight: 700;
   letter-spacing: -1.12px;
 }
 
@@ -17,6 +17,7 @@
   font-family: "Pretendard-Bold";
   font-size: 48px;
   font-style: normal;
+  font-weight: 700;
   letter-spacing: -0.96px;
 }
 
@@ -24,6 +25,7 @@
   font-family: "Pretendard-Bold";
   font-size: 40px;
   font-style: normal;
+  font-weight: 700;
   letter-spacing: -0.8px;
 }
 
@@ -31,14 +33,15 @@
   font-family: "Pretendard-Bold";
   font-size: 32px;
   font-style: normal;
-  letter-spacing: -0.64px;
   font-weight: 700;
+  letter-spacing: -0.64px;
 }
 
 .heading_S_24 {
   font-family: "Pretendard-Bold";
   font-size: 24px;
   font-style: normal;
+  font-weight: 700;
   letter-spacing: -0.48px;
 }
 
@@ -46,6 +49,7 @@
   font-family: "Pretendard-Bold";
   font-size: 20px;
   font-style: normal;
+  font-weight: 700;
   letter-spacing: -0.6px;
 }
 
@@ -53,6 +57,7 @@
   font-family: "Pretendard-Bold";
   font-size: 16px;
   font-style: normal;
+  font-weight: 700;
   letter-spacing: -0.48px;
 }
 
@@ -99,7 +104,7 @@
   letter-spacing: -0.42px;
 }
 
-.text_XS_12, #footer .footer-inner .footer-notice-wrapper .footer-notice__desc, #footer .footer-inner .footer-menus-wrapper .footer-menus li ul {
+.text_XS_12, #footer .footer-inner .footer-privacy-wrapper div .footer-privacy__menus, #footer .footer-inner .footer-notice-wrapper .footer-notice__desc, #footer .footer-inner .footer-menus-wrapper .footer-apps li div span, #footer .footer-inner .footer-menus-wrapper .footer-menus > li ul {
   font-family: "Pretendard-Regular";
   font-size: 12px;
   font-style: normal;
@@ -114,6 +119,7 @@
   font-family: "Pretendard-Bold";
   font-size: 26px;
   font-style: normal;
+  font-weight: 700;
   line-height: 34px;
   letter-spacing: -0.78px;
 }
@@ -122,14 +128,16 @@
   font-family: "Pretendard-Bold";
   font-size: 22px;
   font-style: normal;
+  font-weight: 700;
   line-height: 30px;
   letter-spacing: -0.66px;
 }
 
-.text_B_L_18 {
+.text_B_L_18, #footer .footer-inner .footer-menus-wrapper .footer-apps li div h4 {
   font-family: "Pretendard-Bold";
   font-size: 18px;
   font-style: normal;
+  font-weight: 700;
   line-height: 26px;
   letter-spacing: -0.54px;
 }
@@ -138,14 +146,16 @@
   font-family: "Pretendard-Bold";
   font-size: 16px;
   font-style: normal;
+  font-weight: 700;
   line-height: 24px;
   letter-spacing: -0.48px;
 }
 
-.text_B_S_14, #footer .footer-inner .footer-card-wrapper .footer-card__security h3, #footer .footer-inner .footer-notice-wrapper h3, #footer .footer-inner .footer-menus-wrapper .footer-menus li h3 {
+.text_B_S_14, #footer .footer-inner .footer-card-wrapper .footer-card__payment h3, #footer .footer-inner .footer-card-wrapper .footer-card__security h3, #footer .footer-inner .footer-notice-wrapper h3, #footer .footer-inner .footer-menus-wrapper .footer-menus > li h3 {
   font-family: "Pretendard-Bold";
   font-size: 14px;
   font-style: normal;
+  font-weight: 700;
   line-height: 22px;
   letter-spacing: -0.42px;
 }
@@ -154,6 +164,7 @@
   font-family: "Pretendard-Bold";
   font-size: 12px;
   font-style: normal;
+  font-weight: 700;
   line-height: 18px;
   letter-spacing: -0.36px;
 }
@@ -311,32 +322,74 @@ table {
   margin: 0 auto;
 }
 
-.background_cover, #footer .footer-inner .footer-card-wrapper .footer-card__security .footer-card__security__menus li > i {
+.background_cover, #footer .footer-inner .footer-privacy-wrapper div .footer-privacy__menus li i, #footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li, #footer .footer-inner .footer-card-wrapper .footer-card__security .footer-card__security__menus li > i, #footer .footer-inner .footer-menus-wrapper .footer-apps .footer-apps__google-play i, #footer .footer-inner .footer-menus-wrapper .footer-apps .footer-apps__app-store i {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 #footer {
+  padding-top: 47px;
   background-color: #101010;
   color: #fff;
-  padding-top: 47px;
+}
+#footer .footer-inner .footer-menus-wrapper {
+  position: relative;
 }
 #footer .footer-inner .footer-menus-wrapper .footer-menus {
   display: flex;
   justify-content: space-between;
   margin-bottom: 84px;
 }
-#footer .footer-inner .footer-menus-wrapper .footer-menus li {
+#footer .footer-inner .footer-menus-wrapper .footer-menus > li {
   display: flex;
-  flex-direction: column;
   gap: 12px;
+  flex-direction: column;
 }
-#footer .footer-inner .footer-menus-wrapper .footer-menus li ul {
-  color: #d4d4d4;
+#footer .footer-inner .footer-menus-wrapper .footer-menus > li ul {
   display: flex;
-  flex-direction: column;
   gap: 12px;
+  flex-direction: column;
+  color: #d4d4d4;
+}
+#footer .footer-inner .footer-menus-wrapper .footer-apps {
+  position: absolute;
+  right: 330px;
+  top: 150px;
+}
+#footer .footer-inner .footer-menus-wrapper .footer-apps li {
+  display: flex;
+  width: 168px;
+  height: 52px;
+  justify-content: center;
+  gap: 7px;
+  align-items: center;
+  border: 1px solid #b5b5b5;
+  border-radius: 50px;
+}
+#footer .footer-inner .footer-menus-wrapper .footer-apps li div {
+  width: 99px;
+}
+#footer .footer-inner .footer-menus-wrapper .footer-apps li div span {
+  color: #d4d4d4;
+}
+#footer .footer-inner .footer-menus-wrapper .footer-apps li div h4 {
+  line-height: 18px;
+}
+#footer .footer-inner .footer-menus-wrapper .footer-apps .footer-apps__app-store {
+  margin-bottom: 10px;
+}
+#footer .footer-inner .footer-menus-wrapper .footer-apps .footer-apps__app-store i {
+  display: inline-block;
+  width: 27px;
+  height: 32px;
+  background-image: url("../../assets/images/footer/app-store.svg");
+}
+#footer .footer-inner .footer-menus-wrapper .footer-apps .footer-apps__google-play i {
+  display: inline-block;
+  width: 27px;
+  height: 27px;
+  background-image: url("../../assets/images/footer/google-play.svg");
 }
 #footer .footer-inner .footer-notice-wrapper {
   margin-bottom: 73px;
@@ -346,24 +399,30 @@ table {
 }
 #footer .footer-inner .footer-notice-wrapper .footer-notice__desc {
   display: flex;
-  gap: 168px;
+  gap: 188px;
 }
 #footer .footer-inner .footer-notice-wrapper .footer-notice__desc .footer-notice__desc-info {
   display: flex;
-  flex-direction: column;
   gap: 5px;
+  flex-direction: column;
 }
 #footer .footer-inner .footer-notice-wrapper .footer-notice__desc .footer-notice__desc-contents {
   display: flex;
-  flex-direction: column;
   gap: 5px;
+  flex-direction: column;
 }
 #footer .footer-inner .footer-card-wrapper {
   display: flex;
+  gap: 77px;
+  margin-bottom: 82px;
+}
+#footer .footer-inner .footer-card-wrapper .footer-card__security h3 {
+  margin-bottom: 10px;
 }
 #footer .footer-inner .footer-card-wrapper .footer-card__security .footer-card__security__menus {
   display: flex;
   flex-wrap: wrap;
+  gap: 6px;
 }
 #footer .footer-inner .footer-card-wrapper .footer-card__security .footer-card__security__menus li > i {
   display: inline-block;
@@ -380,4 +439,123 @@ table {
 #footer .footer-inner .footer-card-wrapper .footer-card__security .footer-card__security__menus li > i.security__menus__idcheck-img {
   width: 66px;
   background-image: url("../../assets/images/footer/id_check.png");
+}
+#footer .footer-inner .footer-card-wrapper .footer-card__security .footer-card__security__menus li > i.security__menus__safekey-img {
+  width: 66px;
+  background-image: url("../../assets/images/footer/safekey.png");
+}
+#footer .footer-inner .footer-card-wrapper .footer-card__security .footer-card__security__menus li > i.security__menus__protect-img {
+  width: 42px;
+  background-image: url("../../assets/images/footer/protectBuy.png");
+}
+#footer .footer-inner .footer-card-wrapper .footer-card__security .footer-card__security__menus li > i.security__menus__jcb-img {
+  width: 42px;
+  background-image: url("../../assets/images/footer/JCB.png");
+}
+#footer .footer-inner .footer-card-wrapper .footer-card__security .footer-card__security__menus li > i.security__menus__trusted-img {
+  width: 66px;
+  background-image: url("../../assets/images/footer/Thrusted.png");
+}
+#footer .footer-inner .footer-card-wrapper .footer-card__payment h3 {
+  margin-bottom: 10px;
+}
+#footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+#footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li {
+  display: inline-block;
+  width: 40px;
+  height: 27px;
+}
+#footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li:nth-child(1) {
+  background-image: url("../../assets/images/footer/pay_01.png");
+}
+#footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li:nth-child(2) {
+  background-image: url("../../assets/images/footer/pay_02.png");
+}
+#footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li:nth-child(3) {
+  background-image: url("../../assets/images/footer/pay_03.png");
+}
+#footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li:nth-child(4) {
+  background-image: url("../../assets/images/footer/pay_04.png");
+}
+#footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li:nth-child(5) {
+  background-image: url("../../assets/images/footer/pay_05.png");
+}
+#footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li:nth-child(6) {
+  background-image: url("../../assets/images/footer/pay_06.png");
+}
+#footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li:nth-child(7) {
+  background-image: url("../../assets/images/footer/pay_07.png");
+}
+#footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li:nth-child(8) {
+  background-image: url("../../assets/images/footer/pay_08.png");
+}
+#footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li:nth-child(9) {
+  background-image: url("../../assets/images/footer/pay_09.png");
+}
+#footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li:nth-child(10) {
+  background-image: url("../../assets/images/footer/pay_10.png");
+}
+#footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li:nth-child(11) {
+  background-image: url("../../assets/images/footer/pay_11.png");
+}
+#footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li:nth-child(12) {
+  background-image: url("../../assets/images/footer/pay_12.png");
+}
+#footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li:nth-child(13) {
+  background-image: url("../../assets/images/footer/pay_13.png");
+}
+#footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li:nth-child(14) {
+  background-image: url("../../assets/images/footer/pay_14.png");
+}
+#footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li:nth-child(15) {
+  background-image: url("../../assets/images/footer/pay_15.png");
+}
+#footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li:nth-child(16) {
+  background-image: url("../../assets/images/footer/pay_16.png");
+}
+#footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li:nth-child(17) {
+  background-image: url("../../assets/images/footer/pay_17.png");
+}
+#footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li:nth-child(18) {
+  background-image: url("../../assets/images/footer/pay_18.png");
+}
+#footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li:nth-child(19) {
+  background-image: url("../../assets/images/footer/pay_19.png");
+}
+#footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li:nth-child(20) {
+  background-image: url("../../assets/images/footer/pay_20.png");
+}
+#footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li:nth-child(21) {
+  background-image: url("../../assets/images/footer/pay_21.png");
+}
+#footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li:nth-child(22) {
+  background-image: url("../../assets/images/footer/pay_22.png");
+}
+#footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li:nth-child(23) {
+  background-image: url("../../assets/images/footer/pay_23.png");
+}
+#footer .footer-inner .footer-privacy-wrapper {
+  height: 74px;
+}
+#footer .footer-inner .footer-privacy-wrapper div .footer-privacy__menus {
+  display: flex;
+  width: 550px;
+  margin: 0 auto;
+  justify-content: space-between;
+  color: #9a9a9a;
+}
+#footer .footer-inner .footer-privacy-wrapper div .footer-privacy__menus li {
+  display: flex;
+  align-items: center;
+}
+#footer .footer-inner .footer-privacy-wrapper div .footer-privacy__menus li i {
+  display: inline-block;
+  width: 22px;
+  height: 10px;
+  background-image: url("../../assets/images/footer/check.png");
+  margin-left: 4px;
 }

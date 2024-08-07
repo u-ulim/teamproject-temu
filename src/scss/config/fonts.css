@@ -7,9 +7,9 @@
 /* HEADING */
 /* -2% = 0.02 * 'n'px */ /* -3% = 0.03 * 'n'px */
 .heading_XXL_56 {
-  font-family: "Pretendard-Bold";
   font-size: 56px;
   font-style: normal;
+  font-weight: 700;
   letter-spacing: -1.12px;
 }
 
@@ -17,6 +17,7 @@
   font-family: "Pretendard-Bold";
   font-size: 48px;
   font-style: normal;
+  font-weight: 700;
   letter-spacing: -0.96px;
 }
 
@@ -24,6 +25,7 @@
   font-family: "Pretendard-Bold";
   font-size: 40px;
   font-style: normal;
+  font-weight: 700;
   letter-spacing: -0.8px;
 }
 
@@ -31,6 +33,7 @@
   font-family: "Pretendard-Bold";
   font-size: 32px;
   font-style: normal;
+  font-weight: 700;
   letter-spacing: -0.64px;
 }
 
@@ -38,6 +41,7 @@
   font-family: "Pretendard-Bold";
   font-size: 24px;
   font-style: normal;
+  font-weight: 700;
   letter-spacing: -0.48px;
 }
 
@@ -45,6 +49,7 @@
   font-family: "Pretendard-Bold";
   font-size: 20px;
   font-style: normal;
+  font-weight: 700;
   letter-spacing: -0.6px;
 }
 
@@ -52,6 +57,7 @@
   font-family: "Pretendard-Bold";
   font-size: 16px;
   font-style: normal;
+  font-weight: 700;
   letter-spacing: -0.48px;
 }
 
@@ -113,6 +119,7 @@
   font-family: "Pretendard-Bold";
   font-size: 26px;
   font-style: normal;
+  font-weight: 700;
   line-height: 34px;
   letter-spacing: -0.78px;
 }
@@ -121,6 +128,7 @@
   font-family: "Pretendard-Bold";
   font-size: 22px;
   font-style: normal;
+  font-weight: 700;
   line-height: 30px;
   letter-spacing: -0.66px;
 }
@@ -129,6 +137,7 @@
   font-family: "Pretendard-Bold";
   font-size: 18px;
   font-style: normal;
+  font-weight: 700;
   line-height: 26px;
   letter-spacing: -0.54px;
 }
@@ -137,6 +146,7 @@
   font-family: "Pretendard-Bold";
   font-size: 16px;
   font-style: normal;
+  font-weight: 700;
   line-height: 24px;
   letter-spacing: -0.48px;
 }
@@ -145,6 +155,7 @@
   font-family: "Pretendard-Bold";
   font-size: 14px;
   font-style: normal;
+  font-weight: 700;
   line-height: 22px;
   letter-spacing: -0.42px;
 }
@@ -153,6 +164,7 @@
   font-family: "Pretendard-Bold";
   font-size: 12px;
   font-style: normal;
+  font-weight: 700;
   line-height: 18px;
   letter-spacing: -0.36px;
 }

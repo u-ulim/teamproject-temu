@@ -21,47 +21,61 @@
     <link rel="stylesheet" href="./src/scss/style.css" />
   </head>
   <body>
-    <main id="main__wrapper">
-      <div class="main">
+    <!-- MAIN START -->
+    <main id="main">
+      <div class="main__wrapper">
         <div class="main__slide"></div>
         <div class="sub__slide"></div>
       </div>
     </main>
-    <section id="promise__wrapper">
-      <div class="promise">
+    <!-- MAIN END -->
+
+    <!-- PROMISE START -->
+    <section id="promise">
+      <div class="promise__wrapper">
         <div class="promise-top">
           <div class="promise-top-left">
-            <span class="material-symbols-outlined"> verified_user </span>
-            <span>Temu의 공약</span>
+            <i class="promise__shield"></i>
+            <a href="#">Temu의 공약</a>
           </div>
           <div class="promise-top-right">
-            <span class="material-symbols-outlined"> lock </span>
-            <span>개인 정보 보호</span>
-            <i class="fa-regular fa-credit-card"></i>
-            <span>안전한 결제</span>
-            <span class="material-symbols-outlined"> local_shipping </span>
-            <span>배송 보장</span>
-            <i class="fa-solid fa-chevron-right"></i>
+            <div>
+              <i class="promise__lock"></i>
+              <a href="#">개인 정보 보호</a>
+            </div>
+            <p>|</p>
+            <div>
+              <i class="promise__card"></i>
+              <a href="#">안전한 결제</a>
+            </div>
+            <p>|</p>
+            <div>
+              <i class="promise__truck"></i>
+              <a href="#">배송 보장</a>
+            </div>
+            <i class="promise__arrow-right"></i>
           </div>
         </div>
         <div class="promise-bottom">
           <div class="promise__bottom__left">
-            <i class="fa-solid fa-bell"></i>
-            <span
-              >보안 알림 : Temu는 SMS나 이메일을 통해 추가 비용을 요구하지
-              않으니 스팸 메세지와 링크에 주의하세요.</span
+            <i class="promise__bell"></i>
+            <a href="#">
+              보안 알림 : Temu는 SMS나 이메일을 통해 추가 비용을 요구하지 않으니
+              스팸 메세지와 링크에 주의하세요.</a
             >
           </div>
           <div class="promise__bottom__right">
             <span>보기</span>
-            <i class="fa-solid fa-chevron-right"></i>
+            <i class="promise__arrow-right"></i>
           </div>
         </div>
       </div>
     </section>
+    <!-- PROMISE END -->
 
-    <section id="cart_wrapper">
-      <div class="cart">
+    <!-- CART START -->
+    <section id="cart">
+      <div class="cart__wrapper">
         <div class="cart__item-first">
           <div class="cart__item-header">
             <p>장바구니의 <span>7개</span> 상품 품절 임박!</p>
@@ -99,49 +113,49 @@
         </div>
       </div>
     </section>
-    <section id="category_wrapper">
-      <div class="category__title">
-        <div class="category__title-img"></div>
-        <p>카테고리</p>
-      </div>
-      <div class="category__list__conatainer">
-        <ul class="category__list">
-          <li>
-            <div class="category__list-img"></div>
-            <span>전자기기</span>
-          </li>
-          <li>
-            <div class="category__list-img"></div>
-            <span>사무용품</span>
-          </li>
-          <li>
-            <div class="category__list-img"></div>
-            <span>여성의류</span>
-          </li>
-          <li>
-            <div class="category__list-img"></div>
-            <span>인형 & 액세서리</span>
-          </li>
-          <li>
-            <div class="category__list-img"></div>
-            <span>욕실 용품</span>
-          </li>
-          <li>
-            <div class="category__list-img"></div>
-            <span>주방 용품</span>
-          </li>
-          <li>
-            <div class="category__list-img"></div>
-            <span>홈 데코 용품</span>
-          </li>
-        </ul>
+    <!-- CART END -->
+
+    <!-- CATEGORY START -->
+    <section id="category">
+      <div class="category__wrapper">
+        <div class="category__title">
+          <div class="category__title-img"></div>
+          <p>카테고리</p>
+        </div>
+        <div class="category__list__container">
+          <ul class="category__list">
+            <li>
+              <div class="category__list-img"></div>
+              <span>전자기기</span>
+            </li>
+            <li>
+              <div class="category__list-img"></div>
+              <span>사무용품</span>
+            </li>
+            <li>
+              <div class="category__list-img"></div>
+              <span>여성의류</span>
+            </li>
+            <li>
+              <div class="category__list-img"></div>
+              <span>인형 & 액세서리</span>
+            </li>
+            <li>
+              <div class="category__list-img"></div>
+              <span>욕실 용품</span>
+            </li>
+            <li>
+              <div class="category__list-img"></div>
+              <span>주방 용품</span>
+            </li>
+            <li>
+              <div class="category__list-img"></div>
+              <span>홈 데코 용품</span>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
-    <section id="product_wrapper">
-      <div class="product__title">
-        <div class="product__title-img"></div>
-        <p>상품 둘러보기</p>
-      </div>
-    </section>
+    <!-- CATEGORY END -->
   </body>
 </html>
