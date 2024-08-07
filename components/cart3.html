@@ -16,15 +16,19 @@
     <script src="../src/javascript/cart3.js"></script>
   </head>
   <body>
-    <header></header>
+    
+    <header>
+      
+    </header>
+    <!-- MAIN START -->
     <main>
       <div class="container">
         <section class="section__up">
-              <article class="title">
+              <article class="section__up__title">
                 <i class="fa-solid fa-circle-check"></i>
                 <h2>주문완료!</h2>
               </article>
-              <article class="adress__info">
+              <article class="address__info">
                 <div class="info__up">
                   <span>배송정보</span>
                   <span>주소 변경 ></span>
@@ -32,32 +36,33 @@
                 <div class="info__down">
                   <ul>
                     <li>
-                      <span>홍길동</span>
-                      <span>82+ 123-4567-8910</span>
+                      홍길동
                     </li>
-                    <li>01234 대한민국 서울특별시 삼각구</li>
-                    <li>이젠 아파트 9동 901호</li>
+                    <li>82+ 123-4567-8910</li>
+                    <li>
+                      01234 대한민국 서울특별시 삼각구 이젠 아파트 9동 901호
+                    </li>
                   </ul>
                 </div>
               </article>
               <article class="shopping__info">
                 <ul>
                   <li>
-                    <a href="">
-                      <img src="" alt="" />
+                    <a href="#none">
+                      <img src="./img/product.png" alt="product" />
                     </a>
+                    <div>
+                    <span>주문상품 (2건)</span>
+                    <span>배송날짜 1월 4일 - 14일</span>
+                  </div>
                   </li>
-                  <li>
-                    <span>주문상품</span>
-                    <span>(2건)</span>
-                    <span>배송날짜</span>
-                    <span>1월 4일 - 14일</span>
+                  <li>   
+                    <button>주문 / 배송</button>
                   </li>
                 </ul>
-                <button>주문 / 배송</button>
               </article>
               <article class="info">
-                <div class="info">
+                <div class="info-text">
                   <ul>            
                     <li>
                       <div>
@@ -75,10 +80,10 @@
               </article>
         </section>
          <section class="section__down">
-              <article>
-                   <h2 class="title">다른 고객이 함께 구매한 상품</h2>
+              <article class="section__down-title">
+                 <h2 >다른 고객이 함께 구매한 상품</h2>
               </article>
-              <article>
+              <article class="section__down-product">
                   <div class="product__up">
                     <ul class="product">
                       <li>
@@ -102,32 +107,13 @@
                         </div>
                       </li>
                       <li>
-                        <div class="last__text">
-                          <span class="sale">매진임박</span>
-                          <span class="remain">12개남음</span>
-                        </div>
-                      </li>
-                    </ul>
-                    <ul class="product">
-                      <li>
-                        <a href="#none">
-                          <img src="./img/product.png" alt="product01">
-                        </a>
-                      </li>
-                      <li> 
-                        <div class="first__text">
-                        <p>귀여운 이불 세트 3개(이불 1개 + 베갯</br>잇 2개, 코어리스), 부드럽고
-                          편안한 침구</span>
-                      </div>
-                      </li>
-                      <li>
-                        <div class="second__text">
-                          <p class="price">
-                            <span class="sale">62%</span>
-                            <span>19,325</span>
-                          </p>
-                          <i class="fa-solid fa-cart-shopping"></i>
-                        </div>
+                     <div class="third__text">
+                          <div>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.8</span>
+                          </div>
+                          <span class="review">리뷰(3420)</span>
+                     </div>
                       </li>
                       <li>
                         <div class="last__text">
@@ -158,6 +144,15 @@
                         </div>
                       </li>
                       <li>
+                     <div class="third__text">
+                          <div>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.8</span>
+                          </div>
+                          <span class="review">리뷰(3420)</span>
+                     </div>
+                      </li>
+                      <li>
                         <div class="last__text">
                           <span class="sale">매진임박</span>
                           <span class="remain">12개남음</span>
@@ -184,6 +179,52 @@
                           </p>
                           <i class="fa-solid fa-cart-shopping"></i>
                         </div>
+                      </li>
+                      <li>
+                     <div class="third__text">
+                          <div>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.8</span>
+                          </div>
+                          <span class="review">리뷰(3420)</span>
+                     </div>
+                      </li>
+                      <li>
+                        <div class="last__text">
+                          <span class="sale">매진임박</span>
+                          <span class="remain">12개남음</span>
+                        </div>
+                      </li>
+                    </ul>
+                    <ul class="product">
+                      <li>
+                        <a href="#none">
+                          <img src="./img/product.png" alt="product01">
+                        </a>
+                      </li>
+                      <li> 
+                        <div class="first__text">
+                        <p>귀여운 이불 세트 3개(이불 1개 + 베갯</br>잇 2개, 코어리스), 부드럽고
+                          편안한 침구</span>
+                      </div>
+                      </li>
+                      <li>
+                        <div class="second__text">
+                          <p class="price">
+                            <span class="sale">62%</span>
+                            <span>19,325</span>
+                          </p>
+                          <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                      </li>
+                      <li>
+                     <div class="third__text">
+                          <div>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.8</span>
+                          </div>
+                          <span class="review">리뷰(3420)</span>
+                     </div>
                       </li>
                       <li>
                         <div class="last__text">
@@ -193,9 +234,162 @@
                       </li>
                     </ul>
                   </div>
+                  <div class="product__down">
+                    <ul class="product">
+                      <li>
+                        <a href="#none">
+                          <img src="./img/product.png" alt="product01">
+                        </a>
+                      </li>
+                      <li> 
+                        <div class="first__text">
+                        <p>귀여운 이불 세트 3개(이불 1개 + 베갯</br>잇 2개, 코어리스), 부드럽고
+                          편안한 침구</span>
+                      </div>
+                      </li>
+                      <li>
+                        <div class="second__text">
+                          <p class="price">
+                            <span class="sale">62%</span>
+                            <span>19,325</span>
+                          </p>
+                          <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                      </li>
+                      <li>
+                     <div class="third__text">
+                          <div>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.8</span>
+                          </div>
+                          <span class="review">리뷰(3420)</span>
+                     </div>
+                      </li>
+                      <li>
+                        <div class="last__text">
+                          <span class="sale">매진임박</span>
+                          <span class="remain">12개남음</span>
+                        </div>
+                      </li>
+                    </ul>
+                    <ul class="product">
+                      <li>
+                        <a href="#none">
+                          <img src="./img/product.png" alt="product01">
+                        </a>
+                      </li>
+                      <li> 
+                        <div class="first__text">
+                        <p>귀여운 이불 세트 3개(이불 1개 + 베갯</br>잇 2개, 코어리스), 부드럽고
+                          편안한 침구</span>
+                      </div>
+                      </li>
+                      <li>
+                        <div class="second__text">
+                          <p class="price">
+                            <span class="sale">62%</span>
+                            <span>19,325</span>
+                          </p>
+                          <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                      </li>
+                      <li>
+                     <div class="third__text">
+                          <div>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.8</span>
+                          </div>
+                          <span class="review">리뷰(3420)</span>
+                     </div>
+                      </li>
+                      <li>
+                        <div class="last__text">
+                          <span class="sale">매진임박</span>
+                          <span class="remain">12개남음</span>
+                        </div>
+                      </li>
+                    </ul>
+                    <ul class="product">
+                      <li>
+                        <a href="#none">
+                          <img src="./img/product.png" alt="product01">
+                        </a>
+                      </li>
+                      <li> 
+                        <div class="first__text">
+                        <p>귀여운 이불 세트 3개(이불 1개 + 베갯</br>잇 2개, 코어리스), 부드럽고
+                          편안한 침구</span>
+                      </div>
+                      </li>
+                      <li>
+                        <div class="second__text">
+                          <p class="price">
+                            <span class="sale">62%</span>
+                            <span>19,325</span>
+                          </p>
+                          <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                      </li>
+                      <li>
+                     <div class="third__text">
+                          <div>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.8</span>
+                          </div>
+                          <span class="review">리뷰(3420)</span>
+                     </div>
+                      </li>
+                      <li>
+                        <div class="last__text">
+                          <span class="sale">매진임박</span>
+                          <span class="remain">12개남음</span>
+                        </div>
+                      </li>
+                    </ul>
+                    <ul class="product">
+                      <li>
+                        <a href="#none">
+                          <img src="./img/product.png" alt="product01">
+                        </a>
+                      </li>
+                      <li> 
+                        <div class="first__text">
+                        <p>귀여운 이불 세트 3개(이불 1개 + 베갯</br>잇 2개, 코어리스), 부드럽고
+                          편안한 침구</span>
+                      </div>
+                      </li>
+                      <li>
+                        <div class="second__text">
+                          <p class="price">
+                            <span class="sale">62%</span>
+                            <span>19,325</span>
+                          </p>
+                          <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                      </li>
+                      <li>
+                     <div class="third__text">
+                          <div>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.8</span>
+                          </div>
+                          <span class="review">리뷰(3420)</span>
+                     </div>
+                      </li>
+                      <li>
+                        <div class="last__text">
+                          <span class="sale">매진임박</span>
+                          <span class="remain">12개남음</span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <button>더보기<i class="fa-solid fa-chevron-down"></i></button>
               </article>
         </section>
       </div>
     </main> 
+    <!-- MAIN END -->
+<footer></footer>
   </body>
 </html>
