@@ -55,7 +55,7 @@ body {
       margin-right: 6px;
       font-size: 13px;
       color: map-get($color, secondary-color);
-      @extend .text_S_12;
+      @extend .text_XS_12;
     }
   }
 }
@@ -68,7 +68,7 @@ body {
       display: inline-block;
       width: 413px;
       text-align: left;
-      @extend .text_S_12;
+      @extend .text_XS_12;
     }
   }
   .email__box input[type="text"] {
@@ -101,7 +101,7 @@ body {
       margin-bottom: 24px;
       // border: 1px solid #f00;
       color: map-get($color, color-Neutrals-Grey-500);
-      @extend .text_S_12;
+      @extend .text_XS_12;
       &:hover {
         text-decoration: underline;
         cursor: pointer;
@@ -119,7 +119,7 @@ body {
       margin: 8px;
       margin-bottom: 25px;
       color: map-get($color, color-Neutrals-Grey-700);
-      @extend .text_S_12;
+      @extend .text_XS_12;
     }
     .line::before {
       flex-grow: 1;
@@ -154,19 +154,21 @@ body {
       display: inline-block;
       width: 40px;
       height: 40px;
-      background: url("../../assets/images/google.svg") center/cover no-repeat;
+      background: url("../../assets/images/login/google.svg") center/cover
+        no-repeat;
     }
     .naver-icon {
       display: inline-block;
       width: 40px;
       height: 40px;
-      background: url("../../assets/images/naver.svg") center/cover no-repeat;
+      background: url("../../assets/images/login/naver.svg") center/cover
+        no-repeat;
     }
     .apple-icon {
       display: inline-block;
       width: 40px;
       height: 40px;
-      background: url("../../assets/images/apple\ \(1\).svg") center/cover
+      background: url("../../assets/images/login/apple.svg") center/cover
         no-repeat;
     }
   }
@@ -174,7 +176,7 @@ body {
 .agree {
   margin-bottom: 36px;
   color: map-get($color, color-Neutrals-Grey-800);
-  @extend .text_S_12;
+  @extend .text_XS_12;
   span {
     color: #0065be;
     &:hover {

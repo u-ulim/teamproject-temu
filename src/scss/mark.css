@@ -41,7 +41,7 @@
   letter-spacing: -0.48px;
 }
 
-.heading_XS_20, .wrapper .container .login {
+.heading_XS_20 {
   font-family: "Pretendard-Bold";
   font-size: 20px;
   font-style: normal;
@@ -74,7 +74,7 @@
   letter-spacing: -0.66px;
 }
 
-.text_L_18 {
+.text_L_18, .wrapper .mark__inner .rightmenu .contents span {
   font-family: "Pretendard-Regular";
   font-size: 18px;
   font-style: normal;
@@ -82,7 +82,7 @@
   letter-spacing: -0.54px;
 }
 
-.text_M_16, .wrapper .container .inner span {
+.text_M_16 {
   font-family: "Pretendard-Regular";
   font-size: 16px;
   font-style: normal;
@@ -90,7 +90,7 @@
   letter-spacing: -0.48px;
 }
 
-.text_S_14 {
+.text_S_14, .wrapper .mark__inner .leftmenu ul li span {
   font-family: "Pretendard-Regular";
   font-size: 14px;
   font-style: normal;
@@ -98,7 +98,7 @@
   letter-spacing: -0.42px;
 }
 
-.text_XS_12, .agree, .box .other .line, .email .text__box span, .email .text span, .wrapper .container .data {
+.text_XS_12, .wrapper .mark__inner .leftmenu ul .home {
   font-family: "Pretendard-Regular";
   font-size: 12px;
   font-style: normal;
@@ -300,186 +300,93 @@ table {
 }
 
 /* VARIABLES */
+.background_cover, .wrapper .mark__inner .rightmenu .icon .starmark, .wrapper .mark__inner .leftmenu ul li .event, .wrapper .mark__inner .leftmenu ul li .star, .wrapper .mark__inner .leftmenu ul li .delivery, .wrapper .mark__inner .leftmenu ul li .review, .wrapper .mark__inner .leftmenu ul li .document {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .width_full {
   width: 100%;
 }
 
-.width_inner {
+.width_inner, .wrapper .mark__inner {
   width: 1384px;
   padding: 0px 15px 0px 15px;
   margin: 0 auto;
 }
 
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.wrapper {
   width: 100%;
   height: 100vh;
 }
-
-.wrapper {
-  padding: 36px 40px 36px 40px;
-  width: 494px;
-  height: 575px;
-  text-align: center;
+.wrapper .mark__inner {
+  display: flex;
 }
-.wrapper .container {
-  margin-bottom: 70px;
+.wrapper .mark__inner .leftmenu {
+  width: 200px;
+  height: 100%;
 }
-.wrapper .container .inner {
+.wrapper .mark__inner .leftmenu ul .home {
+  padding: 20px 18px;
+}
+.wrapper .mark__inner .leftmenu ul li {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.wrapper .mark__inner .leftmenu ul li > div {
   display: flex;
   justify-content: space-between;
+  width: 149px;
 }
-.wrapper .container .inner span {
-  color: #292828;
+.wrapper .mark__inner .leftmenu ul li .document {
+  width: 24px;
+  height: 24px;
+  background-image: url(../../assets/images/document.svg);
 }
-.wrapper .container .inner span:hover {
-  text-decoration: underline;
-  cursor: pointer;
+.wrapper .mark__inner .leftmenu ul li .review {
+  width: 24px;
+  height: 24px;
+  background-image: url(../../../assets/images/review.svg);
 }
-.wrapper .container .inner span .fa-chevron-left {
-  width: 17px;
-  height: 17px;
-  font-size: 17px;
+.wrapper .mark__inner .leftmenu ul li .delivery {
+  width: 24px;
+  height: 24px;
+  background-image: url(../../../assets/images/delivery.svg);
 }
-.wrapper .container .inner .fa-xmark {
-  width: 17px;
-  height: 17px;
-  font-size: 17px;
-  transition: all 0.5s;
-  border-radius: 50%;
+.wrapper .mark__inner .leftmenu ul li .star {
+  width: 24px;
+  height: 24px;
+  background-image: url(../../../assets/images/star.svg);
 }
-.wrapper .container .inner .fa-xmark:hover {
-  background-color: #d4d4d4;
+.wrapper .mark__inner .leftmenu ul li .event {
+  width: 24px;
+  height: 24px;
+  background-image: url(../../../assets/images/event.svg);
 }
-.wrapper .container .login {
-  margin-bottom: 15px;
-  color: #101010;
+.wrapper .mark__inner .rightmenu {
+  display: flex;
+  padding: 55px 40px;
+  width: 1184px;
+  height: 500px;
 }
-.wrapper .container .data {
+.wrapper .mark__inner .rightmenu .contents span {
   display: inline-block;
-  margin-right: 6px;
-  font-size: 13px;
-  color: #009e95;
+  width: 100px;
 }
-
-.email .text {
-  margin-bottom: 8px;
-}
-.email .text span {
-  display: inline-block;
-  width: 413px;
-  text-align: left;
-}
-.email .email__box input[type=text] {
-  margin-bottom: 20px;
-  padding-left: 20px;
-  border: 1px solid #b5b5b5;
-  width: 413px;
-  height: 45px;
-  border-radius: 8px;
-}
-.email button {
-  margin-bottom: 14px;
-  border: none;
-  width: 413px;
-  height: 47px;
-  background: #ff6d00;
-  color: #fff;
-  transition: all 0.3s;
-  border-radius: 8px;
-}
-.email button:hover {
-  background: rgba(255, 120, 41, 0.8117647059);
-  color: #fff;
-  cursor: pointer;
-  touch-action: manipulation;
-}
-.email .text__box span {
-  display: inline-block;
-  margin-bottom: 24px;
-  color: #818181;
-}
-.email .text__box span:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.box .other .line {
+.wrapper .mark__inner .rightmenu .icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-basis: 100%;
-  margin: 8px;
-  margin-bottom: 25px;
-  color: #4a4949;
+  flex-direction: column;
+  padding-top: 211px;
+  width: 100%;
+  height: 100%;
 }
-.box .other .line::before {
-  flex-grow: 1;
-  margin: 0 12px;
-  height: 1px;
-  background: #9a9a9a;
-  line-height: 0;
-  content: "";
-}
-.box .other .line::after {
-  flex-grow: 1;
-  margin: 0 12px;
-  height: 1px;
-  background: #9a9a9a;
-  line-height: 0;
-  content: "";
-}
-
-.icon {
-  display: flex;
-  gap: 40px;
-  align-items: center;
-  justify-content: center;
-}
-.icon span {
-  display: inline-block;
-  margin-bottom: 96px;
-}
-.icon span:hover {
-  cursor: pointer;
-}
-.icon span .google-icon {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  background: url("../../assets/images/login/google.svg") center/cover no-repeat;
-}
-.icon span .naver-icon {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  background: url("../../assets/images/login/naver.svg") center/cover no-repeat;
-}
-.icon span .apple-icon {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  background: url("../../assets/images/login/apple.svg") center/cover no-repeat;
-}
-
-.agree {
-  margin-bottom: 36px;
-  color: #292828;
-}
-.agree span {
-  color: #0065be;
-}
-.agree span:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-@media screen and (max-width: 575px) {
-  body {
-    padding: 32px 0;
-    width: 555px;
-    height: 595px;
-  }
-}/*# sourceMappingURL=login.css.map */
+.wrapper .mark__inner .rightmenu .icon .starmark {
+  width: 160px;
+  height: 187px;
+  background-image: url(../../../assets/./images/starmark.svg);
+}/*# sourceMappingURL=mark.css.map */

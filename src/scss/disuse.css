@@ -1,3 +1,162 @@
+@font-face {
+  font-family: "Pretendard-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+}
+/* HEADING */
+/* -2% = 0.02 * 'n'px */ /* -3% = 0.03 * 'n'px */
+.heading_XXL_56 {
+  font-family: "Pretendard-Bold";
+  font-size: 56px;
+  font-style: normal;
+  letter-spacing: -1.12px;
+}
+
+.heading_XL_48 {
+  font-family: "Pretendard-Bold";
+  font-size: 48px;
+  font-style: normal;
+  letter-spacing: -0.96px;
+}
+
+.heading_L_40 {
+  font-family: "Pretendard-Bold";
+  font-size: 40px;
+  font-style: normal;
+  letter-spacing: -0.8px;
+}
+
+.heading_M_32 {
+  font-family: "Pretendard-Bold";
+  font-size: 32px;
+  font-style: normal;
+  letter-spacing: -0.64px;
+}
+
+.heading_S_24 {
+  font-family: "Pretendard-Bold";
+  font-size: 24px;
+  font-style: normal;
+  letter-spacing: -0.48px;
+}
+
+.heading_XS_20 {
+  font-family: "Pretendard-Bold";
+  font-size: 20px;
+  font-style: normal;
+  letter-spacing: -0.6px;
+}
+
+.heading_XXS_16 {
+  font-family: "Pretendard-Bold";
+  font-size: 16px;
+  font-style: normal;
+  letter-spacing: -0.48px;
+}
+
+/* TEXT */
+/* -2% = 0.02 * 'n'px */
+/* -3% = 0.03 * 'n'px */
+.text_XXL_26 {
+  font-family: "Pretendard-Regular";
+  font-size: 26px;
+  font-style: normal;
+  line-height: 34px;
+  letter-spacing: -0.78px;
+}
+
+.text_XL_22 {
+  font-family: "Pretendard-Regular";
+  font-size: 22px;
+  font-style: normal;
+  line-height: 30px;
+  letter-spacing: -0.66px;
+}
+
+.text_L_18 {
+  font-family: "Pretendard-Regular";
+  font-size: 18px;
+  font-style: normal;
+  line-height: 26px;
+  letter-spacing: -0.54px;
+}
+
+.text_M_16 {
+  font-family: "Pretendard-Regular";
+  font-size: 16px;
+  font-style: normal;
+  line-height: 24px;
+  letter-spacing: -0.48px;
+}
+
+.text_S_14, .wrapper .mark__inner .leftmenu ul li span {
+  font-family: "Pretendard-Regular";
+  font-size: 14px;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: -0.42px;
+}
+
+.text_XS_12, .wrapper .mark__inner .leftmenu ul .home {
+  font-family: "Pretendard-Regular";
+  font-size: 12px;
+  font-style: normal;
+  line-height: 18px;
+  letter-spacing: -0.36px;
+}
+
+/* TEXT BOLD */
+/* -2% = 0.02 * 'n'px */
+/* -3% = 0.03 * 'n'px */
+.text_B_XXL_26 {
+  font-family: "Pretendard-Bold";
+  font-size: 26px;
+  font-style: normal;
+  line-height: 34px;
+  letter-spacing: -0.78px;
+}
+
+.text_B_XL_22 {
+  font-family: "Pretendard-Bold";
+  font-size: 22px;
+  font-style: normal;
+  line-height: 30px;
+  letter-spacing: -0.66px;
+}
+
+.text_B_L_18 {
+  font-family: "Pretendard-Bold";
+  font-size: 18px;
+  font-style: normal;
+  line-height: 26px;
+  letter-spacing: -0.54px;
+}
+
+.text_B_M_16 {
+  font-family: "Pretendard-Bold";
+  font-size: 16px;
+  font-style: normal;
+  line-height: 24px;
+  letter-spacing: -0.48px;
+}
+
+.text_B_S_14 {
+  font-family: "Pretendard-Bold";
+  font-size: 14px;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: -0.42px;
+}
+
+.text_B_XS_12 {
+  font-family: "Pretendard-Bold";
+  font-size: 12px;
+  font-style: normal;
+  line-height: 18px;
+  letter-spacing: -0.36px;
+}
+
 html,
 body,
 div,
@@ -141,243 +300,118 @@ table {
 }
 
 /* VARIABLES */
-@font-face {
-  font-family: "Pretendard-Regular";
-  font-style: normal;
-  font-weight: 400;
-  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
-}
-/* HEADING */
-/* -2% = 0.02 * 'n'px */ /* -3% = 0.03 * 'n'px */
-.heading_XXL_56 {
-  font-family: "Pretendard-Bold";
-  font-size: 56px;
-  font-style: normal;
-  letter-spacing: -1.12px;
-}
-
-.heading_XL_48 {
-  font-family: "Pretendard-Bold";
-  font-size: 48px;
-  font-style: normal;
-  letter-spacing: -0.96px;
-}
-
-.heading_L_40 {
-  font-family: "Pretendard-Bold";
-  font-size: 40px;
-  font-style: normal;
-  letter-spacing: -0.8px;
-}
-
-.heading_M_32 {
-  font-family: "Pretendard-Bold";
-  font-size: 32px;
-  font-style: normal;
-  letter-spacing: -0.64px;
-}
-
-.heading_S_24 {
-  font-family: "Pretendard-Bold";
-  font-size: 24px;
-  font-style: normal;
-  letter-spacing: -0.48px;
-}
-
-.heading_XS_20 {
-  font-family: "Pretendard-Bold";
-  font-size: 20px;
-  font-style: normal;
-  letter-spacing: -0.6px;
-}
-
-.heading_XXS_16 {
-  font-family: "Pretendard-Bold";
-  font-size: 16px;
-  font-style: normal;
-  letter-spacing: -0.48px;
-}
-
-/* TEXT */
-/* -2% = 0.02 * 'n'px */
-/* -3% = 0.03 * 'n'px */
-.text_XXL_26 {
-  font-family: "Pretendard-Regular";
-  font-size: 26px;
-  font-style: normal;
-  line-height: 34px;
-  letter-spacing: -0.78px;
-}
-
-.text_XL_22 {
-  font-family: "Pretendard-Regular";
-  font-size: 22px;
-  font-style: normal;
-  line-height: 30px;
-  letter-spacing: -0.66px;
-}
-
-.text_L_18, .wrapper .rightmenu .contents span {
-  font-family: "Pretendard-Regular";
-  font-size: 18px;
-  font-style: normal;
-  line-height: 26px;
-  letter-spacing: -0.54px;
-}
-
-.text_M_16 {
-  font-family: "Pretendard-Regular";
-  font-size: 16px;
-  font-style: normal;
-  line-height: 24px;
-  letter-spacing: -0.48px;
-}
-
-.text_S_14, .wrapper .leftmenu ul li span {
-  font-family: "Pretendard-Regular";
-  font-size: 14px;
-  font-style: normal;
-  line-height: 22px;
-  letter-spacing: -0.42px;
-}
-
-.text_XS_12, .wrapper .leftmenu ul .home {
-  font-family: "Pretendard-Regular";
-  font-size: 12px;
-  font-style: normal;
-  line-height: 18px;
-  letter-spacing: -0.36px;
-}
-
-/* TEXT BOLD */
-/* -2% = 0.02 * 'n'px */
-/* -3% = 0.03 * 'n'px */
-.text_B_XXL_26 {
-  font-family: "Pretendard-Bold";
-  font-size: 26px;
-  font-style: normal;
-  line-height: 34px;
-  letter-spacing: -0.78px;
-}
-
-.text_B_XL_22 {
-  font-family: "Pretendard-Bold";
-  font-size: 22px;
-  font-style: normal;
-  line-height: 30px;
-  letter-spacing: -0.66px;
-}
-
-.text_B_L_18 {
-  font-family: "Pretendard-Bold";
-  font-size: 18px;
-  font-style: normal;
-  line-height: 26px;
-  letter-spacing: -0.54px;
-}
-
-.text_B_M_16 {
-  font-family: "Pretendard-Bold";
-  font-size: 16px;
-  font-style: normal;
-  line-height: 24px;
-  letter-spacing: -0.48px;
-}
-
-.text_B_S_14 {
-  font-family: "Pretendard-Bold";
-  font-size: 14px;
-  font-style: normal;
-  line-height: 22px;
-  letter-spacing: -0.42px;
-}
-
-.text_B_XS_12 {
-  font-family: "Pretendard-Bold";
-  font-size: 12px;
-  font-style: normal;
-  line-height: 18px;
-  letter-spacing: -0.36px;
-}
-
-.background_cover, .wrapper .rightmenu .icon .starmark, .wrapper .leftmenu ul li .event, .wrapper .leftmenu ul li .star, .wrapper .leftmenu ul li .delivery, .wrapper .leftmenu ul li .review, .wrapper .leftmenu ul li .document {
+.background_cover, .wrapper .mark__inner .box .icon .coupon__icon, .wrapper .mark__inner .leftmenu ul li .event, .wrapper .mark__inner .leftmenu ul li .star, .wrapper .mark__inner .leftmenu ul li .delivery, .wrapper .mark__inner .leftmenu ul li .review, .wrapper .mark__inner .leftmenu ul li .document {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-body {
+.width_full {
   width: 100%;
-  height: 100vh;
+}
+
+.width_inner, .wrapper .mark__inner {
+  width: 1384px;
+  padding: 0px 15px 0px 15px;
+  margin: 0 auto;
 }
 
 .wrapper {
-  padding: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 1382px;
-  height: 100%;
+  width: 100%;
+  height: 100vh;
 }
-.wrapper .leftmenu {
+.wrapper .mark__inner {
+  display: flex;
+}
+.wrapper .mark__inner .leftmenu {
   width: 200px;
   height: 100%;
 }
-.wrapper .leftmenu ul .home {
+.wrapper .mark__inner .leftmenu ul .home {
   padding: 20px 18px;
 }
-.wrapper .leftmenu ul li {
+.wrapper .mark__inner .leftmenu ul li {
   display: flex;
   gap: 5px;
   align-items: center;
   margin-bottom: 20px;
-  width: 179px;
 }
-.wrapper .leftmenu ul li > div {
+.wrapper .mark__inner .leftmenu ul li > div {
   display: flex;
   justify-content: space-between;
   width: 149px;
 }
-.wrapper .leftmenu ul li .document {
+.wrapper .mark__inner .leftmenu ul li .document {
   width: 24px;
   height: 24px;
-  background-image: url(../../../assets/images/document.svg);
+  background-image: url(../../assets/images/document.svg);
 }
-.wrapper .leftmenu ul li .review {
+.wrapper .mark__inner .leftmenu ul li .review {
   width: 24px;
   height: 24px;
   background-image: url(../../../assets/images/review.svg);
 }
-.wrapper .leftmenu ul li .delivery {
+.wrapper .mark__inner .leftmenu ul li .delivery {
   width: 24px;
   height: 24px;
   background-image: url(../../../assets/images/delivery.svg);
 }
-.wrapper .leftmenu ul li .star {
+.wrapper .mark__inner .leftmenu ul li .star {
   width: 24px;
   height: 24px;
   background-image: url(../../../assets/images/star.svg);
 }
-.wrapper .leftmenu ul li .event {
+.wrapper .mark__inner .leftmenu ul li .event {
   width: 24px;
   height: 24px;
   background-image: url(../../../assets/images/event.svg);
 }
-.wrapper .rightmenu {
-  padding: 60px 40px;
+.wrapper .mark__inner .contents .text {
+  padding-top: 50px;
   width: 100%;
-  height: 100%;
-}
-.wrapper .rightmenu .icon {
+  font-size: 14px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  flex-direction: column;
+  gap: 60px;
+  margin-bottom: 13px;
 }
-.wrapper .rightmenu .icon .starmark {
-  width: 160px;
-  height: 187px;
-  background-image: url(../../../assets/./images/starmark.svg);
-}/*# sourceMappingURL=mark.css.map */
+.wrapper .mark__inner .contents .text span:nth-child(2) {
+  color: #818181;
+}
+.wrapper .mark__inner .contents .text span:nth-child(3) {
+  color: #818181;
+}
+.wrapper .mark__inner .contents .coupon__code {
+  display: flex;
+  gap: 22px;
+}
+.wrapper .mark__inner .contents .coupon__code .code {
+  border: 1px solid #9a9a9a;
+  border-radius: 8px;
+  width: 308px;
+  height: 40px;
+  padding-left: 14px;
+}
+.wrapper .mark__inner .contents .coupon__code button {
+  border: 1px solid #292828;
+  border-radius: 8px;
+  width: 82px;
+  height: 40px;
+  background: #fff;
+}
+.wrapper .mark__inner .contents .coupon__code button:hover {
+  background: #f6f6f6;
+}
+.wrapper .mark__inner .box .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 222px;
+}
+.wrapper .mark__inner .box .icon .coupon__icon {
+  display: inline-block;
+  margin-bottom: 10px;
+  background-image: url(../../assets/images/coupon__icon.svg);
+  width: 120px;
+  height: 120px;
+}/*# sourceMappingURL=disuse.css.map */
