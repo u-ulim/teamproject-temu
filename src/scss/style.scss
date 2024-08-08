@@ -83,7 +83,6 @@
         .promise__arrow-right {
           width: 20px;
           height: 20px;
-          background-image: url(../../assets/images/index/promise__arrow-right.svg);
         }
       }
     }
@@ -97,10 +96,9 @@
       height: 38px;
       background: map-get($color, color-White);
       color: map-get($color, secondary-color);
+      text-align: center;
       border-radius: 0 0 8px 8px;
       i {
-        display: flex;
-        align-items: center;
         width: 24px;
         height: 24px;
         @extend .background_cover;
@@ -108,15 +106,13 @@
           display: flex;
           gap: 20px;
           align-items: center;
-          .promise__bell {
-            background-image: url(../../assets/images/index/promise__bell.svg);
-            background-color: map-get($color, secondary-color);
-          }
-          .promise__bottom__right {
-            display: flex;
-            gap: 20px;
-            display: flex;
-          }
+          justify-content: center;
+        }
+        .promise__bottom__right {
+          display: flex;
+          gap: 20px;
+          align-items: center;
+          justify-content: center;
         }
       }
     }
@@ -292,5 +288,13 @@
         }
       }
     }
+  }
+}
+
+/* product */
+#product {
+  @extend .width_full;
+  .product__wrapper {
+    @extend .width_inner;
   }
 }
