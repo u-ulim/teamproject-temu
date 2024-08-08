@@ -349,22 +349,22 @@ table {
 .wrapper .mark__inner .leftmenu ul li .review {
   width: 24px;
   height: 24px;
-  background-image: url(../../../assets/images/review.svg);
+  background-image: url(../../assets/images/review.svg);
 }
 .wrapper .mark__inner .leftmenu ul li .delivery {
   width: 24px;
   height: 24px;
-  background-image: url(../../../assets/images/delivery.svg);
+  background-image: url(../../assets/images/delivery.svg);
 }
 .wrapper .mark__inner .leftmenu ul li .star {
   width: 24px;
   height: 24px;
-  background-image: url(../../../assets/images/star.svg);
+  background-image: url(../../assets/images/star.svg);
 }
 .wrapper .mark__inner .leftmenu ul li .event {
   width: 24px;
   height: 24px;
-  background-image: url(../../../assets/images/event.svg);
+  background-image: url(../../assets/images/event.svg);
 }
 .wrapper .mark__inner .contents .text {
   padding-top: 50px;
@@ -377,8 +377,14 @@ table {
 .wrapper .mark__inner .contents .text span:nth-child(2) {
   color: #818181;
 }
+.wrapper .mark__inner .contents .text span:nth-child(2):hover {
+  color: #292828;
+}
 .wrapper .mark__inner .contents .text span:nth-child(3) {
   color: #818181;
+}
+.wrapper .mark__inner .contents .text span:nth-child(3):hover {
+  color: #292828;
 }
 .wrapper .mark__inner .contents .coupon__code {
   display: flex;

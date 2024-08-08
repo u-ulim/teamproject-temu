@@ -39,25 +39,25 @@
           .review {
             width: 24px;
             height: 24px;
-            background-image: url(../../../assets/images/review.svg);
+            background-image: url(../../assets/images/review.svg);
             @extend .background_cover;
           }
           .delivery {
             width: 24px;
             height: 24px;
-            background-image: url(../../../assets/images/delivery.svg);
+            background-image: url(../../assets/images/delivery.svg);
             @extend .background_cover;
           }
           .star {
             width: 24px;
             height: 24px;
-            background-image: url(../../../assets/images/star.svg);
+            background-image: url(../../assets/images/star.svg);
             @extend .background_cover;
           }
           .event {
             width: 24px;
             height: 24px;
-            background-image: url(../../../assets/images/event.svg);
+            background-image: url(../../assets/images/event.svg);
             @extend .background_cover;
           }
           span {
@@ -79,9 +79,15 @@
           //   border: 1px solid #f00;
           &:nth-child(2) {
             color: map-get($color, color-Neutrals-Grey-500);
+            &:hover {
+              color: map-get($color, color-Neutrals-Grey-800);
+            }
           }
           &:nth-child(3) {
             color: map-get($color, color-Neutrals-Grey-500);
+            &:hover {
+              color: map-get($color, color-Neutrals-Grey-800);
+            }
           }
         }
       }
