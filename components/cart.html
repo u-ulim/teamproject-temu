@@ -20,7 +20,7 @@
     <!--header-->
     <header></header>
 
-    <div class="container"> 
+    <div class="container "> 
 
         <!--MAIN START-->
     <main>
@@ -88,9 +88,9 @@
                     <span>1/5/10쌍의 남성용 심플 슬리드 라이너</span>
                   </div>
                   <div class="product__text-down">
-                    <span>옵션변경</span>
+                    <button>옵션변경</button>
                     <span>|</span>
-                    <span>바로구매</span>
+                    <button>바로구매</button>
                   </div>
                 </div>
               </li>
@@ -446,7 +446,7 @@
     </main>
     <!--MAIN END-->
 
-     <!--ASIDE END-->
+    <!--ASIDE END-->
     <aside>
       <div class="checkout__summary">
 
@@ -506,7 +506,90 @@
     </div>
     </aside>
       <!--ASIDE END-->
-  </div>
+    </div>
+
+
+    <!--MODAL BOX START-->
+      <div class="modal__box">
+        <div class="modal__inner">
+          <div class="modal__inner-box">
+            <div class="product">
+              <div class="product__img">
+                <img src="./img/product.png" alt="product">
+              </div>
+              <div class="product__info">
+                <p class="product__info-title">
+                  1/5/10 쌍의 남성용 심플 슬리드 라이너
+                </p>
+              </div>
+            </div>
+            <form>
+             <ul>
+                <li>
+                   <label for="color"></label>
+                   <select id="color">
+                     <option  selected disabled>색상</option>
+                     <option>빨강</option>
+                     <option>노랑</option>
+                     <option>초록</option>
+                   </select>
+                </li>
+                <li>
+                   <label for="size"></label>
+                   <select id="size">
+                     <option selected disabled>사이즈</option>
+                     <option>XS</option>
+                     <option>S</option>
+                     <option>M</option>
+                     <option>L</option>
+                     <option>XL</option>
+                   </select>
+                </li>
+               
+             </ul>
+            </form>
+            <div class="product-info">
+              <ul>
+                <li class="info-up">
+                  <h3>1/5/10쌍의 남성용 심플 슬리드</h3>
+                  <div class="close-box">
+                    <div class="close">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    </div>
+                </li>
+                <li class="info-down">
+                  <div class="number__input">
+                    <button>+</button>
+                    <span>2</span>
+                    <button>-</button>
+                  </div>
+                  <span class="price">￦11,000</span>
+                </li>
+              </ul>
+            </div>
+            <hr>
+            <div class="price">
+              <span>결제금액</span>
+              <span>￦11,000</span>
+            </div>
+            <div class="button">
+              <input type="reset" value="취소"></input>
+              <input type="submit" value="확인"></input>
+            </div>
+          </div>
+          <div class="close-box">
+          <div class="close">
+              <span></span>
+              <span></span>
+          </div>
+          </div>
+          </div>
+        </div>
+    </div>
+  <!--MODAL BOX END-->
+
 
   <!--footer-->
     <footer></footer>

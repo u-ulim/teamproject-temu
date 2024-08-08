@@ -89,7 +89,7 @@
   letter-spacing: -0.54px;
 }
 
-.text_M_16, aside .checkout__summary .summary__Price ul .summary__item__total p, aside .checkout__summary .summary__item ul li, main .section__up article .product__info .product .number__input div span, main .section__up article .product__info .product .number__input div button, main .section__up article .product__info .product .number__input div, main .section__up article .toolbar button, main .section__up article .banner {
+.text_M_16, .modal__box .modal__inner .modal__inner-box .button input, .modal__box .modal__inner .modal__inner-box .product-info ul .info-down .number__input .price, .modal__box .modal__inner .modal__inner-box .product-info ul .info-down .number__input button, aside .checkout__summary .summary__Price ul .summary__item__total p, aside .checkout__summary .summary__item ul li, main .section__up article .product__info .product .number__input div span, main .section__up article .product__info .product .number__input div button, main .section__up article .product__info .product .number__input div, main .section__up article .toolbar button, main .section__up article .banner {
   font-family: "Pretendard-Regular";
   font-size: 16px;
   font-style: normal;
@@ -97,7 +97,7 @@
   letter-spacing: -0.48px;
 }
 
-.text_S_14, aside .checkout__summary .info, aside .checkout__summary .summary__Price ul .summary__item__total p span, aside .checkout__summary .summary__item ul .additional__info, main .section__down .section__down-product .product-down .product li .first__text, main .section__down .section__down-product .product-up .product li .first__text, main .section__up article .product__info .product .product__info .product__text-down, main .section__up article .product__info .product .product__info .product__text-up, main .section__up article .section__title {
+.text_S_14, .modal__box .modal__inner .modal__inner-box .product-info ul .info-down .number__input, .modal__box .modal__inner .modal__inner-box .product-info ul .info-up, aside .checkout__summary .info, aside .checkout__summary .summary__Price ul .summary__item__total p span, aside .checkout__summary .summary__item ul .additional__info, main .section__down .section__down-product .product-down .product li .first__text, main .section__down .section__down-product .product-up .product li .first__text, main .section__up article .product__info .product .product__info .product__text-down button, main .section__up article .product__info .product .product__info .product__text-down, main .section__up article .product__info .product .product__info .product__text-up, main .section__up article .section__title {
   font-family: "Pretendard-Regular";
   font-size: 14px;
   font-style: normal;
@@ -143,7 +143,7 @@
   letter-spacing: -0.54px;
 }
 
-.text_B_M_16, aside .checkout__summary .checkout__button, main .section__up article .toolbar .form__left span {
+.text_B_M_16, .modal__box .modal__inner .modal__inner-box .price, .modal__box .modal__inner .modal__inner-box .product-info ul .info-down .price, aside .checkout__summary .checkout__button, main .section__up article .toolbar .form__left span {
   font-family: "Pretendard-Bold";
   font-size: 16px;
   font-style: bold;
@@ -152,7 +152,7 @@
   letter-spacing: -0.48px;
 }
 
-.text_B_S_14, aside .checkout__summary .summary__item ul .additional__info span, main .section__down .section__down-product .product-down .product li .third__text, main .section__down .section__down-product .product-up .product li .third__text {
+.text_B_S_14, .modal__box .modal__inner .modal__inner-box form ul li select, .modal__box .modal__inner .modal__inner-box .product .product__info, aside .checkout__summary .summary__item ul .additional__info span, main .section__down .section__down-product .product-down .product li .third__text, main .section__down .section__down-product .product-up .product li .third__text {
   font-family: "Pretendard-Bold";
   font-size: 14px;
   font-style: bold;
@@ -335,6 +335,7 @@ header {
 }
 
 .container {
+  position: relative;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
@@ -533,6 +534,14 @@ main .section__up article .product__info .product .product__info {
 main .section__up article .product__info .product .product__info .product__text-down {
   color: #4a4949;
 }
+main .section__up article .product__info .product .product__info .product__text-down button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+main .section__up article .product__info .product .product__info .product__text-down button:hover {
+  color: #9a9a9a;
+}
 main .section__up article .product__info .product .number__input div {
   display: flex;
   align-items: center;
@@ -660,8 +669,8 @@ main .section__down .section__down-product .product-up .product li .second__text
   padding: 5px 8px;
   border: 1px solid #009e95;
   color: #009e95;
-  border-radius: 8px;
   cursor: pointer;
+  border-radius: 8px;
 }
 main .section__down .section__down-product .product-up .product li .third__text {
   display: flex;
@@ -718,8 +727,8 @@ main .section__down .section__down-product .product-down .product li .second__te
   padding: 5px 8px;
   border: 1px solid #009e95;
   color: #009e95;
-  border-radius: 8px;
   cursor: pointer;
+  border-radius: 8px;
 }
 main .section__down .section__down-product .product-down .product li .third__text {
   display: flex;
@@ -844,13 +853,13 @@ aside .checkout__summary .checkout__button:hover {
 }
 aside .checkout__summary .info ul {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
 }
 aside .checkout__summary .info ul .info__text {
   display: flex;
-  align-items: center;
   gap: 5px;
+  align-items: center;
   margin-bottom: 20px;
 }
 
@@ -858,4 +867,217 @@ aside .checkout__summary .info ul .info__text {
 footer {
   width: 1382px;
   height: 752px;
+}
+
+/*modal box*/
+.modal__box {
+  position: fixed;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(150, 150, 150, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+.modal__box .modal__inner {
+  top: 20%;
+  right: -35%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 4px #b5b5b5;
+  position: relative;
+  width: 520px;
+  height: 600px;
+  border-radius: 8px;
+}
+.modal__box .modal__inner .modal__inner-box {
+  padding: 50px 70px;
+  width: 100%;
+  height: 100%;
+}
+.modal__box .modal__inner .modal__inner-box .product {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 17px;
+}
+.modal__box .modal__inner .modal__inner-box .product .product__img {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+}
+.modal__box .modal__inner .modal__inner-box .product .product__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.modal__box .modal__inner .modal__inner-box form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.modal__box .modal__inner .modal__inner-box form ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.modal__box .modal__inner .modal__inner-box form ul li {
+  margin-bottom: 17px;
+}
+.modal__box .modal__inner .modal__inner-box form ul li select {
+  padding-left: 10px;
+  border: 1px solid #b5b5b5;
+  width: 100%;
+  height: 40px;
+  color: #9a9a9a;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.modal__box .modal__inner .modal__inner-box form ul li select:hover {
+  border: 1px solid #ff7629;
+}
+.modal__box .modal__inner .modal__inner-box .product-info {
+  margin-bottom: 17px;
+  width: 100%;
+  height: 100px;
+  background: #f6f6f6;
+  border-radius: 8px;
+}
+.modal__box .modal__inner .modal__inner-box .product-info ul {
+  padding: 13px 20px;
+}
+.modal__box .modal__inner .modal__inner-box .product-info ul .info-up {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  position: relative;
+}
+.modal__box .modal__inner .modal__inner-box .product-info ul .info-up .close-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
+.modal__box .modal__inner .modal__inner-box .product-info ul .info-up .close-box .close {
+  position: relative;
+}
+.modal__box .modal__inner .modal__inner-box .product-info ul .info-up .close-box .close span {
+  display: block;
+  border: 1px solid #101010;
+  position: absolute;
+  bottom: -10px;
+  width: 100%;
+  height: 1px;
+}
+.modal__box .modal__inner .modal__inner-box .product-info ul .info-up .close-box .close span:nth-child(1) {
+  transform: rotate(45deg);
+}
+.modal__box .modal__inner .modal__inner-box .product-info ul .info-up .close-box .close span:nth-child(2) {
+  transform: rotate(-45deg);
+}
+.modal__box .modal__inner .modal__inner-box .product-info ul .info-down {
+  display: flex;
+  justify-content: space-between;
+  background: #f6f6f6;
+}
+.modal__box .modal__inner .modal__inner-box .product-info ul .info-down .number__input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 80px;
+  height: 27px;
+  background: #fff;
+  border-radius: 8px;
+}
+.modal__box .modal__inner .modal__inner-box .product-info ul .info-down .number__input button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  width: 30px;
+  height: 34px;
+  background-color: white;
+  color: #b5b5b5;
+  text-align: center;
+  cursor: pointer;
+  cursor: pointer;
+}
+.modal__box .modal__inner .modal__inner-box .product-info ul .info-down .number__input button:hover {
+  color: #818181;
+}
+.modal__box .modal__inner .modal__inner-box .product-info ul .info-down .number__input .price {
+  width: 20px;
+  text-align: center;
+}
+.modal__box .modal__inner .modal__inner-box hr {
+  margin-bottom: 13px;
+  border: 1px solid #d4d4d4;
+}
+.modal__box .modal__inner .modal__inner-box .price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 26px;
+}
+.modal__box .modal__inner .modal__inner-box .button {
+  display: flex;
+  justify-content: space-between;
+}
+.modal__box .modal__inner .modal__inner-box .button input {
+  width: 180px;
+  height: 50px;
+  border-radius: 8px;
+  border: none;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.modal__box .modal__inner .modal__inner-box .button input:nth-child(1) {
+  border: 1px solid #b5b5b5;
+  background: #fff;
+}
+.modal__box .modal__inner .modal__inner-box .button input:nth-child(1):hover {
+  background-color: #f6f6f6;
+}
+.modal__box .modal__inner .modal__inner-box .button input:nth-child(2) {
+  background: #ff6d00;
+  color: #fff;
+}
+.modal__box .modal__inner .modal__inner-box .button input:nth-child(2):hover {
+  background: #ff7629;
+}
+.modal__box .close-box {
+  position: absolute;
+  top: 19px;
+  right: 18px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.modal__box .close-box .close {
+  position: relative;
+}
+.modal__box .close-box .close span {
+  display: block;
+  border: 1px solid #101010;
+  position: absolute;
+  bottom: -10px;
+  width: 100%;
+  height: 1px;
+}
+.modal__box .close-box .close span:nth-child(1) {
+  transform: rotate(45deg);
+}
+.modal__box .close-box .close span:nth-child(2) {
+  transform: rotate(-45deg);
 }

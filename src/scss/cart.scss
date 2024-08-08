@@ -19,8 +19,10 @@ header {
 }
 
 .container {
+  position: relative;
   @extend .width_inner;
   display: flex;
+  // display: none;
   justify-content: space-between;
   margin: 0 auto;
 }
@@ -226,6 +228,15 @@ main {
             .product__text-down {
               @extend .text_S_14;
               color: map-get($color, color-Neutrals-Grey-700);
+              button {
+                border: none;
+                background-color: transparent;
+                cursor: pointer;
+                @extend .text_S_14;
+                &:hover {
+                  color: map-get($color, color-Neutrals-Grey-400);
+                }
+              }
             }
           }
 
@@ -388,8 +399,8 @@ main {
                 padding: 5px 8px;
                 border: 1px solid map-get($color, secondary-color);
                 color: map-get($color, secondary-color);
-                border-radius: 8px;
                 cursor: pointer;
+                border-radius: 8px;
               }
             }
             .third__text {
@@ -463,8 +474,8 @@ main {
                 padding: 5px 8px;
                 border: 1px solid map-get($color, secondary-color);
                 color: map-get($color, secondary-color);
-                border-radius: 8px;
                 cursor: pointer;
+                border-radius: 8px;
               }
             }
             .third__text {
@@ -628,12 +639,12 @@ aside {
       @extend .text_S_14;
       ul {
         display: flex;
-        flex-direction: column;
         align-items: center;
+        flex-direction: column;
         .info__text {
           display: flex;
-          align-items: center;
           gap: 5px;
+          align-items: center;
           margin-bottom: 20px;
         }
       }
@@ -645,4 +656,236 @@ aside {
 footer {
   width: 1382px;
   height: 752px;
+}
+
+/*modal box*/
+.modal__box {
+  position: fixed;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(150, 150, 150, 0.5);
+  justify-content: center;
+  align-items: center;
+  .modal__inner {
+    top: 20%;
+    right: -35%;
+    background: map-get($color, color-White);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 4px map-get($color, color-Neutrals-Grey-300);
+    position: relative;
+    width: 520px;
+    height: 600px;
+    border-radius: 8px;
+    .modal__inner-box {
+      padding: 50px 70px;
+      width: 100%;
+      height: 100%;
+      .product {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 17px;
+        .product__img {
+          width: 100px;
+          height: 100px;
+          border-radius: 8px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .product__info {
+          @extend .text_B_S_14;
+        }
+      }
+
+      form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        ul {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+
+          li {
+            margin-bottom: 17px;
+            select {
+              padding-left: 10px;
+              border: 1px solid map-get($color, color-Neutrals-Grey-300);
+              width: 100%;
+              height: 40px;
+              color: map-get($color, color-Neutrals-Grey-400);
+              cursor: pointer;
+              border-radius: 8px;
+              &:hover {
+                border: 1px solid map-get($color-hover, primary-color);
+              }
+              @extend .text_B_S_14;
+            }
+          }
+        }
+      }
+
+      .product-info {
+        margin-bottom: 17px;
+        width: 100%;
+        height: 100px;
+        background: map-get($color, color-Neutrals-Grey-100);
+        border-radius: 8px;
+
+        ul {
+          padding: 13px 20px;
+          .info-up {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            position: relative;
+            @extend .text_S_14;
+            .close-box {
+              position: absolute;
+              top: 0;
+              right: 0;
+              width: 14px;
+              height: 14px;
+              cursor: pointer;
+              .close {
+                position: relative;
+                span {
+                  display: block;
+                  border: 1px solid map-get($color, color-Black);
+                  position: absolute;
+                  bottom: -10px;
+                  width: 100%;
+                  height: 1px;
+                  &:nth-child(1) {
+                    transform: rotate(45deg);
+                  }
+                  &:nth-child(2) {
+                    transform: rotate(-45deg);
+                  }
+                }
+              }
+            }
+          }
+          .info-down {
+            display: flex;
+            justify-content: space-between;
+            background: map-get($color, color-Neutrals-Grey-100);
+            .number__input {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              padding: 0;
+              border: 1px solid #ccc;
+              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+              overflow: hidden;
+              width: 80px;
+              height: 27px;
+              background: map-get($color, color-White);
+              border-radius: 8px;
+              @extend .text_S_14;
+              button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: none;
+                width: 30px;
+                height: 34px;
+                background-color: white;
+                color: map-get($color, color-Neutrals-Grey-300);
+                text-align: center;
+                cursor: pointer;
+                cursor: pointer;
+                @extend .text_M_16;
+                &:hover {
+                  color: map-get($color, color-Neutrals-Grey-500);
+                }
+              }
+              .price {
+                width: 20px;
+                text-align: center;
+                @extend .text_M_16;
+              }
+            }
+            .price {
+              @extend .text_B_M_16;
+            }
+          }
+        }
+      }
+
+      hr {
+        margin-bottom: 13px;
+        border: 1px solid map-get($color, color-Neutrals-Grey-200);
+      }
+      .price {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 26px;
+        @extend .text_B_M_16;
+      }
+      .button {
+        display: flex;
+        justify-content: space-between;
+        input {
+          width: 180px;
+          height: 50px;
+          border-radius: 8px;
+          border: none;
+          @extend .text_M_16;
+          transition: all 0.3s;
+          cursor: pointer;
+          &:nth-child(1) {
+            border: 1px solid map-get($color, color-Neutrals-Grey-300);
+            background: map-get($color, color-White);
+            &:hover {
+              background-color: map-get($color, color-Neutrals-Grey-100);
+            }
+          }
+          &:nth-child(2) {
+            background: map-get($color, primary-color);
+            color: map-get($color, color-White);
+            &:hover {
+              background: map-get($color-hover, primary-color);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .close-box {
+    position: absolute;
+    top: 19px;
+    right: 18px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    .close {
+      position: relative;
+      span {
+        display: block;
+        border: 1px solid map-get($color, color-Black);
+        position: absolute;
+        bottom: -10px;
+        width: 100%;
+        height: 1px;
+        &:nth-child(1) {
+          transform: rotate(45deg);
+        }
+        &:nth-child(2) {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
 }
