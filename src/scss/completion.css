@@ -90,7 +90,7 @@
   letter-spacing: -0.48px;
 }
 
-.text_S_14, .wrapper .mark__inner .leftmenu ul li span {
+.text_S_14, .wrapper .mark__inner .box .reveiw .text span, .wrapper .mark__inner .box .reveiw .starBox .starImg span, .wrapper .mark__inner .box .item .text__box p, .wrapper .mark__inner .leftmenu ul li span {
   font-family: "Pretendard-Regular";
   font-size: 14px;
   font-style: normal;
@@ -98,7 +98,7 @@
   letter-spacing: -0.42px;
 }
 
-.text_XS_12, .wrapper .mark__inner .leftmenu ul .home {
+.text_XS_12, .wrapper .mark__inner .box .item .text__box span, .wrapper .mark__inner .leftmenu ul .home {
   font-family: "Pretendard-Regular";
   font-size: 12px;
   font-style: normal;
@@ -300,7 +300,7 @@ table {
 }
 
 /* VARIABLES */
-.background_cover, .wrapper .mark__inner .box .icon .coupon__icon, .wrapper .mark__inner .leftmenu ul li .event, .wrapper .mark__inner .leftmenu ul li .star, .wrapper .mark__inner .leftmenu ul li .delivery, .wrapper .mark__inner .leftmenu ul li .review, .wrapper .mark__inner .leftmenu ul li .document {
+.background_cover, .wrapper .mark__inner .box .reveiw .end__box .other span:first-child, .wrapper .mark__inner .box .reveiw .starBox .starImg .img, .wrapper .mark__inner .box .item .productImg, .wrapper .mark__inner .leftmenu ul li .event, .wrapper .mark__inner .leftmenu ul li .star, .wrapper .mark__inner .leftmenu ul li .delivery, .wrapper .mark__inner .leftmenu ul li .review, .wrapper .mark__inner .leftmenu ul li .document {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -371,56 +371,111 @@ table {
   display: flex;
   gap: 60px;
   margin-bottom: 13px;
+  margin-bottom: 20px;
   padding-top: 50px;
   width: 100%;
   font-size: 14px;
+  color: #292828;
   cursor: pointer;
 }
-.wrapper .mark__inner .contents .text span:nth-child(2) {
+.wrapper .mark__inner .contents .text span:hover {
+  cursor: pointer;
+}
+.wrapper .mark__inner .contents .text span:nth-child(1) {
   color: #818181;
 }
-.wrapper .mark__inner .contents .text span:nth-child(2):hover {
+.wrapper .mark__inner .contents .text span:nth-child(1):hover {
   color: #292828;
 }
-.wrapper .mark__inner .contents .text span:nth-child(3) {
-  color: #818181;
-}
-.wrapper .mark__inner .contents .text span:nth-child(3):hover {
-  color: #292828;
-}
-.wrapper .mark__inner .contents .coupon__code {
+.wrapper .mark__inner .box .item {
   display: flex;
-  gap: 22px;
+  align-items: center;
+  margin-bottom: 15px;
+  width: 953px;
+  height: 73px;
 }
-.wrapper .mark__inner .contents .coupon__code .code {
-  padding-left: 14px;
-  border: 1px solid #9a9a9a;
-  width: 308px;
-  height: 40px;
-  border-radius: 8px;
+.wrapper .mark__inner .box .item .productImg {
+  width: 71px;
+  height: 71px;
+  background-image: url(../../assets/images/productImg.svg);
 }
-.wrapper .mark__inner .contents .coupon__code button {
-  border: 1px solid #292828;
-  width: 82px;
-  height: 40px;
-  background: #fff;
-  cursor: pointer;
-  border-radius: 8px;
-}
-.wrapper .mark__inner .contents .coupon__code button:hover {
+.wrapper .mark__inner .box .item .text__box {
+  padding: 14px 11px;
+  width: 953px;
   background: #f6f6f6;
 }
-.wrapper .mark__inner .box .icon {
+.wrapper .mark__inner .box .item .text__box p {
+  margin-bottom: 5px;
+}
+.wrapper .mark__inner .box .item .text__box span {
+  color: #818181;
+}
+.wrapper .mark__inner .box .reveiw .starBox {
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper .mark__inner .box .reveiw .starBox .starImg {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  padding-top: 222px;
+  margin-bottom: 15px;
 }
-.wrapper .mark__inner .box .icon .coupon__icon {
-  display: inline-block;
-  margin-bottom: 10px;
-  width: 120px;
-  height: 120px;
-  background-image: url(../../assets/images/coupon__icon.svg);
-}/*# sourceMappingURL=disuse.css.map */
+.wrapper .mark__inner .box .reveiw .starBox .starImg .img {
+  width: 20px;
+  height: 20px;
+  background-image: url(../../assets/images/reviewstar.svg);
+}
+.wrapper .mark__inner .box .reveiw .starBox .starImg span {
+  padding: 5px;
+}
+.wrapper .mark__inner .box .reveiw .starBox .date {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 8px;
+  width: 200px;
+}
+.wrapper .mark__inner .box .reveiw .starBox .date span {
+  color: #818181;
+}
+.wrapper .mark__inner .box .reveiw .text {
+  margin-bottom: 15px;
+}
+.wrapper .mark__inner .box .reveiw .text span {
+  color: #292828;
+}
+.wrapper .mark__inner .box .reveiw .end__box {
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper .mark__inner .box .reveiw .end__box .other {
+  display: flex;
+  align-items: center;
+}
+.wrapper .mark__inner .box .reveiw .end__box .other span:first-child {
+  width: 18px;
+  height: 18px;
+  background-image: url(../../assets/images/good.svg);
+}
+.wrapper .mark__inner .box .reveiw .end__box .other span:not(:first-child) {
+  margin-right: 10px;
+  color: #292828;
+}
+.wrapper .mark__inner .box .reveiw .end__box .other span:not(:first-child):hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.wrapper .mark__inner .box .reveiw .end__box .share {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #9a9a9a;
+  width: 130px;
+  height: 40px;
+  color: #9a9a9a;
+  border-radius: 8px;
+}
+.wrapper .mark__inner .box .reveiw .end__box .share:hover {
+  background: #f6f6f6;
+  cursor: pointer;
+}/*# sourceMappingURL=completion.css.map */

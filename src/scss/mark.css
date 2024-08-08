@@ -335,6 +335,7 @@ table {
   gap: 5px;
   align-items: center;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 .wrapper .mark__inner .leftmenu ul li > div {
   display: flex;

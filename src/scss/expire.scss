@@ -79,13 +79,13 @@
         cursor: pointer;
         span {
           //   border: 1px solid #f00;
-          &:nth-child(2) {
+          &:nth-child(1) {
             color: map-get($color, color-Neutrals-Grey-500);
             &:hover {
               color: map-get($color, color-Neutrals-Grey-800);
             }
           }
-          &:nth-child(3) {
+          &:nth-child(2) {
             color: map-get($color, color-Neutrals-Grey-500);
             &:hover {
               color: map-get($color, color-Neutrals-Grey-800);
@@ -132,6 +132,18 @@
           height: 120px;
           background-image: url(../../assets/images/coupon__icon.svg);
           @extend .background_cover;
+        }
+        .text__box {
+          span {
+            @extend .text_M_16;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 7px;
+          }
+          p {
+            @extend .text_S_14;
+          }
         }
       }
     }

@@ -82,7 +82,7 @@
   letter-spacing: -0.54px;
 }
 
-.text_M_16 {
+.text_M_16, .wrapper .mark__inner .box .icon .text__box span {
   font-family: "Pretendard-Regular";
   font-size: 16px;
   font-style: normal;
@@ -90,7 +90,7 @@
   letter-spacing: -0.48px;
 }
 
-.text_S_14, .wrapper .mark__inner .leftmenu ul li span {
+.text_S_14, .wrapper .mark__inner .box .icon .text__box p, .wrapper .mark__inner .leftmenu ul li span {
   font-family: "Pretendard-Regular";
   font-size: 14px;
   font-style: normal;
@@ -376,16 +376,16 @@ table {
   font-size: 14px;
   cursor: pointer;
 }
+.wrapper .mark__inner .contents .text span:nth-child(1) {
+  color: #818181;
+}
+.wrapper .mark__inner .contents .text span:nth-child(1):hover {
+  color: #292828;
+}
 .wrapper .mark__inner .contents .text span:nth-child(2) {
   color: #818181;
 }
 .wrapper .mark__inner .contents .text span:nth-child(2):hover {
-  color: #292828;
-}
-.wrapper .mark__inner .contents .text span:nth-child(3) {
-  color: #818181;
-}
-.wrapper .mark__inner .contents .text span:nth-child(3):hover {
   color: #292828;
 }
 .wrapper .mark__inner .contents .coupon__code {
@@ -423,4 +423,10 @@ table {
   width: 120px;
   height: 120px;
   background-image: url(../../assets/images/coupon__icon.svg);
-}/*# sourceMappingURL=disuse.css.map */
+}
+.wrapper .mark__inner .box .icon .text__box span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 7px;
+}/*# sourceMappingURL=expire.css.map */
