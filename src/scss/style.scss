@@ -3,6 +3,9 @@
 @import "./config/colors.scss";
 @import "./layout/layout.scss";
 
+body {
+  font-family: map-get($font, primary-font-r);
+}
 .hi {
   @extend .heading_XL_48;
   @extend .width_full;

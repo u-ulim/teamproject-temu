@@ -1,0 +1,184 @@
+{
+  "products": [
+    {
+      "id": "6b10190e-f13f-40c8-bba7-11f3dc4d6020",
+      "thumbnail": "../../../assets/images/products/a-image-01.webp",
+      "title": "해파리 매력 팔찌: 별모양과 조개 펜던트가 달린 사랑스러운 술 장식 휴대폰 체인",
+      "discountRate": "10%",
+      "price": 1219,
+      "rating": 4.5,
+      "reviewCount": 100,
+      "quantity": 10,
+      "category": "Accessories",
+      "details": {
+        "provider": "ABC Corp",
+        "bookmarkCount": 250,
+        "deliveryEstimate": "2024-07-29 ~ 2024-08-02",
+        "deliveryProbability": "80% 확률로 7일 이내 도착",
+        "deliveryCompany": "CJ"
+      }
+    },
+    {
+      "id": "9a20345f-e45b-41a0-a76b-24f34c3b1a9e",
+      "thumbnail": "../../../assets/images/products/b-image-01.webp",
+      "title": "1pc 925 스털링 실버 반지 미니멀리스트 좁은 밴드 조각 된 태양/달 남성과 여성에 적합 조정 가능한 보석 (태양, 2.8g 달, 2.33g)",
+      "discountRate": "15%",
+      "price": 12825,
+      "rating": 4.7,
+      "reviewCount": 150,
+      "quantity": 25,
+      "category": "Accessories",
+      "details": {
+        "provider": "XYZ Ltd",
+        "bookmarkCount": 300,
+        "deliveryEstimate": "2024-07-30 ~ 2024-08-03",
+        "deliveryProbability": "85% 확률로 7일 이내 도착",
+        "deliveryCompany": "Hanjin"
+      }
+    },
+    {
+      "id": "7c2d8e6b-2b4f-4c29-a8e1-51f7b2c3d8e9",
+      "thumbnail": "../../../assets/images/products/c-image-01.webp",
+      "title": "콘트라스트 레이스 레이어드 헴 스파게티 스트랩 드레스, 우아한 슬리브리스 캐미 드레스 봄 & 여름, 여성 의류",
+      "discountRate": "25%",
+      "price": 10871,
+      "rating": 4.3,
+      "reviewCount": 75,
+      "quantity": 12,
+      "category": "Clothing",
+      "details": {
+        "provider": "Fashionista Inc",
+        "bookmarkCount": 180,
+        "deliveryEstimate": "2024-07-31 ~ 2024-08-04",
+        "deliveryProbability": "90% 확률로 7일 이내 도착",
+        "deliveryCompany": "Korea ePost"
+      }
+    },
+    {
+      "id": "8e7a9f3a-4f5b-4897-bc2d-6a4e3d1f6e1c",
+      "thumbnail": "../../../assets/images/products/d-image-01.webp",
+      "title": "할로윈 장식 크리스마스 선물 추수감사절 면 솜인형, 뽀송한 인형, 귀여운 인형, 교체 가능한 인형",
+      "discountRate": "30%",
+      "price": 6957,
+      "rating": 4.7,
+      "reviewCount": 200,
+      "quantity": 40,
+      "category": "Toys",
+      "details": {
+        "provider": "Toy World",
+        "bookmarkCount": 500,
+        "deliveryEstimate": "2024-08-01 ~ 2024-08-05",
+        "deliveryProbability": "95% 확률로 7일 이내 도착",
+        "deliveryCompany": "KYOUNGDONG"
+      }
+    },
+    {
+      "id": "9f1d6a2b-4c6f-48d8-9c9e-3d7b2f1e9f2a",
+      "thumbnail": "../../../assets/images/products/e-image-01.webp",
+      "title": "현대 숲과 강 풍경 캔버스 아트, 100.08X50.04cm - 거실, 침실, 홈 오피스용 무테 벽 장식 대형 벽 예술, 거실 벽 예술 포함 침실용 프레임",
+      "discountRate": "20%",
+      "price": 846,
+      "rating": 4.6,
+      "reviewCount": 95,
+      "quantity": 5,
+      "category": "Art",
+      "details": {
+        "provider": "Artisan Gallery",
+        "bookmarkCount": 220,
+        "deliveryEstimate": "2024-08-02 ~ 2024-08-06",
+        "deliveryProbability": "88% 확률로 7일 이내 도착",
+        "deliveryCompany": "CJ"
+      }
+    },
+    {
+      "id": "ac5b6f9c-2f1d-4d8c-9b3e-1f8e2c6f7a3d",
+      "thumbnail": "../../../assets/images/products/f-image-01.webp",
+      "title": "시크 플로랄 면 혼방 스퀘어 스카프 - 54.86cm 가벼운, 다용도 여성용 넥 & 헤드 랩 스카프 여성용 실크 스카프",
+      "discountRate": "22%",
+      "price": 8217,
+      "rating": 4.4,
+      "reviewCount": 85,
+      "quantity": 18,
+      "category": "Accessories",
+      "details": {
+        "provider": "Scarves & More",
+        "bookmarkCount": 150,
+        "deliveryEstimate": "2024-08-03 ~ 2024-08-07",
+        "deliveryProbability": "75% 확률로 7일 이내 도착",
+        "deliveryCompany": "Hanjin"
+      }
+    },
+    {
+      "id": "bd7c9e2f-3e4b-4f7a-8d1e-2a7f1c9d6a3b",
+      "thumbnail": "../../../assets/images/products/g-image-01.webp",
+      "title": "밤에 빛나는 별 천장 장식, 어둠 속 별 벽 스티커, 우주 벽 스티커 달 시스템 은하수 행성 벽 스티커, 침실 벽 장식, 생일 파티",
+      "discountRate": "28%",
+      "price": 8459,
+      "rating": 4.8,
+      "reviewCount": 130,
+      "quantity": 7,
+      "category": "Home Decor",
+      "details": {
+        "provider": "Decor Masters",
+        "bookmarkCount": 270,
+        "deliveryEstimate": "2024-08-04 ~ 2024-08-08",
+        "deliveryProbability": "85% 확률로 7일 이내 도착",
+        "deliveryCompany": "Korea ePost"
+      }
+    },
+    {
+      "id": "b9a1d67e-6f2c-4c0d-b9a8-3e8e4f1d2e5f",
+      "thumbnail": "../../../assets/images/products/h-image-01.webp",
+      "title": "더블 침대용 4개 세트, 부드러운 크림 컬러의 침구 세트, 심플하고 세련된 스타일, 이불 커버, 평평한 시트 및 베개커버 2개 포함 (코어 없음) - 아늑한 침실 컬렉션",
+      "discountRate": "18%",
+      "price": 20103,
+      "rating": 4.5,
+      "reviewCount": 65,
+      "quantity": 20,
+      "category": "Home",
+      "details": {
+        "provider": "Sleep Tight",
+        "bookmarkCount": 320,
+        "deliveryEstimate": "2024-08-05 ~ 2024-08-09",
+        "deliveryProbability": "92% 확률로 7일 이내 도착",
+        "deliveryCompany": "KYOUNGDONG"
+      }
+    },
+    {
+      "id": "c3b7f87d-2c3e-4d6a-8a2f-6e7d2f9e1a2c",
+      "thumbnail": "../../../assets/images/products/i-image-01.webp",
+      "title": "에스프레소 기계, 20개의 바 익스프레스 커피 기계, 1.5L 제거 가능한 물탱크, 에스프레소, 라떼, 카푸치노를 위한 스팀 지팡이가 있는 반자동 커피 기계, 1050W (무료 추가 플러그 어댑터)",
+      "discountRate": "20%",
+      "price": 75225,
+      "rating": 4.9,
+      "reviewCount": 120,
+      "quantity": 10,
+      "category": "Appliances",
+      "details": {
+        "provider": "Coffee Experts",
+        "bookmarkCount": 400,
+        "deliveryEstimate": "2024-08-06 ~ 2024-08-10",
+        "deliveryProbability": "98% 확률로 7일 이내 도착",
+        "deliveryCompany": "CJ"
+      }
+    },
+    {
+      "id": "d6e4f89c-4b5d-4d8c-9b1e-3e7f2c8e1f3b",
+      "thumbnail": "../../../assets/images/products/j-image-01.webp",
+      "title": "현대적인 가죽 의자, 나무 기반 철제 프레임 - 기울이지 않는 견고한 등받이 라운지 사이드 의자, 페인트 마감 및 스폰지 충전, 단단한 바닥용 - Y60 단일 조각 현대식 주방 좌석",
+      "discountRate": "15%",
+      "price": 38373,
+      "rating": 4.7,
+      "reviewCount": 65,
+      "quantity": 20,
+      "category": "Home",
+      "details": {
+        "provider": "Sleep Tight",
+        "bookmarkCount": 320,
+        "deliveryEstimate": "2024-08-05 ~ 2024-08-09",
+        "deliveryProbability": "92% 확률로 7일 이내 도착",
+        "deliveryCompany": "KYOUNGDONG"
+      }
+    }
+  ]
+}
