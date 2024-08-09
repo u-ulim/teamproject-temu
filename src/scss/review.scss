@@ -72,8 +72,7 @@
         .text {
           display: flex;
           gap: 60px;
-          margin-bottom: 13px;
-          margin-bottom: 20px;
+          margin-bottom: 77px;
           padding-top: 50px;
           width: 100%;
           font-size: 14px;
@@ -83,7 +82,7 @@
             &:hover {
               cursor: pointer;
             }
-            &:nth-child(1) {
+            &:nth-child(2) {
               color: map-get($color, color-Neutrals-Grey-500);
               &:hover {
                 color: map-get($color, color-Neutrals-Grey-800);
@@ -96,23 +95,21 @@
         //   border: 1px solid #f00;
         .item {
           display: flex;
-          align-items: center;
           margin-bottom: 15px;
           // border: 1px solid #f00;
-          width: 953px;
-          height: 73px;
+          width: 1060px;
+          height: 116px;
+
           .productImg {
-            width: 71px;
-            height: 71px;
+            width: 96px;
+            height: 96px;
             background-image: url(../../assets/images/productImg.svg);
             @extend .background_cover;
           }
           .text__box {
-            padding: 14px 11px;
+            padding-left: 11px;
             //   border: 1px solid #f00;
             width: 953px;
-            //   border: 1px solid #f00;
-            background: map-get($color, color-Neutrals-Grey-100);
             p {
               margin-bottom: 5px;
               @extend .text_S_14;
@@ -123,87 +120,25 @@
             }
           }
         }
-        .reveiw {
-          .starBox {
-            //   border: 1px solid #f00;
+        .end__box {
+          display: flex;
+          justify-content: flex-end;
+          border: 1px solid #f00;
+          width: 400px;
+          .share {
             display: flex;
-            justify-content: space-between;
-            .starImg {
-              // border: 1px solid #f00;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              margin-bottom: 15px;
-              .img {
-                width: 20px;
-                height: 20px;
-                // border: 1px solid #f00;
-                background-image: url(../../assets/images/reviewstar.svg);
-                @extend .background_cover;
-              }
-              span {
-                //   border: 1px solid #f00;
-                padding: 5px;
-                @extend .text_S_14;
-              }
-            }
-            .date {
-              display: flex;
-              justify-content: flex-end;
-              // border: 1px solid #f00;
-              padding-top: 8px;
-              width: 200px;
-              span {
-                color: map-get($color, color-Neutrals-Grey-500);
-              }
-            }
-          }
-          .text {
-            margin-bottom: 15px;
-            span {
-              // border: 1px solid #f00;
-              @extend .text_S_14;
-              color: map-get($color, color-Neutrals-Grey-800);
-            }
-          }
-          .end__box {
-            display: flex;
-            justify-content: space-between;
-            .other {
-              display: flex;
-              align-items: center;
-              //   border: 1px solid #f00;
-              span {
-                &:first-child {
-                  @extend .background_cover;
-                  width: 18px;
-                  height: 18px;
-                  background-image: url(../../assets/images/good.svg);
-                }
-                &:not(:first-child) {
-                  margin-right: 10px;
-                  color: map-get($color, color-Neutrals-Grey-800);
-                  &:hover {
-                    text-decoration: underline;
-                    cursor: pointer;
-                  }
-                }
-              }
-            }
-            .share {
-              display: flex;
-              gap: 5px;
-              align-items: center;
-              justify-content: center;
-              border: 1px solid map-get($color, color-Neutrals-Grey-400);
-              width: 130px;
-              height: 40px;
-              color: map-get($color, color-Neutrals-Grey-400);
-              border-radius: 8px;
-              &:hover {
-                background: map-get($color, color-Neutrals-Grey-100);
-                cursor: pointer;
-              }
+            gap: 5px;
+            align-items: center;
+            justify-content: center;
+            width: 160px;
+            height: 36px;
+            background: map-get($color, primary-color);
+            color: map-get($color, color-White);
+            border-radius: 8px;
+            @extend .text_S_14;
+            &:hover {
+              background: map-get($color, color-Neutrals-Grey-100);
+              cursor: pointer;
             }
           }
         }
