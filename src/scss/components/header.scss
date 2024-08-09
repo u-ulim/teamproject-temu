@@ -1,8 +1,8 @@
-@import "./config/fonts.scss";
-@import "./config/reset.scss";
-@import "./config/colors.scss";
-@import "./layout/layout.scss";
-@import "./config/image.scss";
+@import "../config/fonts.scss";
+@import "../config/reset.scss";
+@import "../config/colors.scss";
+@import "../layout/layout.scss";
+@import "../config/image.scss";
 
 #header {
   @extend .width_full;
@@ -31,7 +31,7 @@
         display: inline-block;
         width: 45px;
         height: 45px;
-        background: url("../../assets/images/header/LOGO.svg") center / cover
+        background: url("../../../assets/images/header/LOGO.svg") center / cover
           no-repeat;
       }
       .nav-left__menus {
@@ -52,13 +52,13 @@
             @extend .background_cover;
           }
           .menu__bestseller-ico {
-            background-image: url("../../assets/images/header/menu_bestseller.svg");
+            background-image: url("../../../assets/images/header/menu_bestseller.svg");
           }
           .menu__star-ico {
-            background-image: url("../../assets/images/header/menu_star.svg");
+            background-image: url("../../../assets/images/header/menu_star.svg");
           }
           .menu__shop-ico {
-            background-image: url("../../assets/images/header/menu_shop.svg");
+            background-image: url("../../../assets/images/header/menu_shop.svg");
           }
           .fa-chevron-down {
             color: map-get($color, color-Black);
@@ -98,7 +98,7 @@
           right: 5px;
           width: 41px;
           height: 31px;
-          background: url("../../assets/images/header/menu_search-ico.svg");
+          background: url("../../../assets/images/header/menu_search-ico.svg");
           @extend .background_cover;
         }
       }
@@ -123,16 +123,16 @@
             @extend .background_cover;
           }
           .menu__login-ico {
-            background-image: url("../../assets/images/header/menu_user.svg");
+            background-image: url("../../../assets/images/header/menu_user.svg");
           }
           .menu__service-ico {
-            background-image: url("../../assets/images/header/menu_service.svg");
+            background-image: url("../../../assets/images/header/menu_service.svg");
           }
           .menu__language-ico {
-            background-image: url("../../assets/images/header/menu_language.svg");
+            background-image: url("../../../assets/images/header/menu_language.svg");
           }
           .menu__cart-ico {
-            background-image: url("../../assets/images/header/menu_cart.svg");
+            background-image: url("../../../assets/images/header/menu_cart.svg");
           }
           .menu__language-text {
             @extend .text_B_S_14;

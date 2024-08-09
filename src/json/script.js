@@ -9,34 +9,30 @@ fetch(productsURL)
     console.log(data);
 
     const createItem = (product) => {
-      const ul = document.querySelector("ul");
-      const li = document.createElement("li");
-      const h3 = document.createElement("h3");
-      const img = document.createElement("img");
-      const span = document.createElement("span");
+      const ul = document.querySelector(".product-lists");
+      const productList = document.createElement("li");
+      const productListTitle = document.createElement("h3");
+      const productListThumb = document.createElement("img");
+      const productListPrice = document.createElement("span");
       const div = document.createElement("div");
       const attr = document.createAttribute("src");
       const price = new Intl.NumberFormat("ko-kr", {}).format(product.price);
 
-      li.id = product.id;
+      productList.id = product.id;
 
-      console.log(li.id);
+      productListTitle.className = "prodcut-list__title";
+      productListTitle.innerText = product.title;
 
-      console.log(price);
-
-      h3.className = "name";
-      h3.innerText = product.title;
-
-      span.className = "price";
-      span.innerText = price;
+      productListPrice.className = "price";
+      productListPrice.innerText = price;
 
       attr.value = product.thumbnail;
-      img.setAttributeNode(attr);
-      ul.appendChild(li);
-      div.append(h3, span);
-      li.append(img, div);
+      productListThumb.setAttributeNode(attr);
+      ul.appendChild(productList);
+      div.append(productListTitle, productListPrice);
+      productList.append(productListThumb, div);
 
-      li.addEventListener("click", () => {
+      productList.addEventListener("click", () => {
         const url = `/html/product.html?category=${
           product.category
         }&name=${encodeURIComponent(product.name)}`;

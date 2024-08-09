@@ -323,6 +323,7 @@ table {
 }
 
 .background_cover, #footer .footer-inner .footer-privacy-wrapper div .footer-privacy__menus li i, #footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li, #footer .footer-inner .footer-card-wrapper .footer-card__security .footer-card__security__menus li > i, #footer .footer-inner .footer-menus-wrapper .footer-apps .footer-apps__google-play i, #footer .footer-inner .footer-menus-wrapper .footer-apps .footer-apps__app-store i {
+  display: inline-block;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -383,13 +384,13 @@ table {
   display: inline-block;
   width: 27px;
   height: 32px;
-  background-image: url("../../assets/images/footer/app-store.svg");
+  background-image: url("../../../assets/images/footer/app-store.svg");
 }
 #footer .footer-inner .footer-menus-wrapper .footer-apps .footer-apps__google-play i {
   display: inline-block;
   width: 27px;
   height: 27px;
-  background-image: url("../../assets/images/footer/google-play.svg");
+  background-image: url("../../../assets/images/footer/google-play.svg");
 }
 #footer .footer-inner .footer-notice-wrapper {
   margin-bottom: 73px;
@@ -430,31 +431,31 @@ table {
 }
 #footer .footer-inner .footer-card-wrapper .footer-card__security .footer-card__security__menus li > i.security__menus__dss-img {
   width: 43px;
-  background-image: url("../../assets/images/footer/DSS.png");
+  background-image: url("../../../assets/images/footer/DSS.png");
 }
 #footer .footer-inner .footer-card-wrapper .footer-card__security .footer-card__security__menus li > i.security__menus__visa-img {
   width: 31px;
-  background-image: url("../../assets/images/footer/visa.png");
+  background-image: url("../../../assets/images/footer/visa.png");
 }
 #footer .footer-inner .footer-card-wrapper .footer-card__security .footer-card__security__menus li > i.security__menus__idcheck-img {
   width: 66px;
-  background-image: url("../../assets/images/footer/id_check.png");
+  background-image: url("../../../assets/images/footer/id_check.png");
 }
 #footer .footer-inner .footer-card-wrapper .footer-card__security .footer-card__security__menus li > i.security__menus__safekey-img {
   width: 66px;
-  background-image: url("../../assets/images/footer/safekey.png");
+  background-image: url("../../../assets/images/footer/safekey.png");
 }
 #footer .footer-inner .footer-card-wrapper .footer-card__security .footer-card__security__menus li > i.security__menus__protect-img {
   width: 42px;
-  background-image: url("../../assets/images/footer/protectBuy.png");
+  background-image: url("../../../assets/images/footer/protectBuy.png");
 }
 #footer .footer-inner .footer-card-wrapper .footer-card__security .footer-card__security__menus li > i.security__menus__jcb-img {
   width: 42px;
-  background-image: url("../../assets/images/footer/JCB.png");
+  background-image: url("../../../assets/images/footer/JCB.png");
 }
 #footer .footer-inner .footer-card-wrapper .footer-card__security .footer-card__security__menus li > i.security__menus__trusted-img {
   width: 66px;
-  background-image: url("../../assets/images/footer/Thrusted.png");
+  background-image: url("../../../assets/images/footer/Thrusted.png");
 }
 #footer .footer-inner .footer-card-wrapper .footer-card__payment h3 {
   margin-bottom: 10px;
@@ -470,73 +471,73 @@ table {
   height: 27px;
 }
 #footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li:nth-child(1) {
-  background-image: url("../../assets/images/footer/pay_01.png");
+  background-image: url("../../../assets/images/footer/pay_01.png");
 }
 #footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li:nth-child(2) {
-  background-image: url("../../assets/images/footer/pay_02.png");
+  background-image: url("../../../assets/images/footer/pay_02.png");
 }
 #footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li:nth-child(3) {
-  background-image: url("../../assets/images/footer/pay_03.png");
+  background-image: url("../../../assets/images/footer/pay_03.png");
 }
 #footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li:nth-child(4) {
-  background-image: url("../../assets/images/footer/pay_04.png");
+  background-image: url("../../../assets/images/footer/pay_04.png");
 }
 #footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li:nth-child(5) {
-  background-image: url("../../assets/images/footer/pay_05.png");
+  background-image: url("../../../assets/images/footer/pay_05.png");
 }
 #footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li:nth-child(6) {
-  background-image: url("../../assets/images/footer/pay_06.png");
+  background-image: url("../../../assets/images/footer/pay_06.png");
 }
 #footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li:nth-child(7) {
-  background-image: url("../../assets/images/footer/pay_07.png");
+  background-image: url("../../../assets/images/footer/pay_07.png");
 }
 #footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li:nth-child(8) {
-  background-image: url("../../assets/images/footer/pay_08.png");
+  background-image: url("../../../assets/images/footer/pay_08.png");
 }
 #footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li:nth-child(9) {
-  background-image: url("../../assets/images/footer/pay_09.png");
+  background-image: url("../../../assets/images/footer/pay_09.png");
 }
 #footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li:nth-child(10) {
-  background-image: url("../../assets/images/footer/pay_10.png");
+  background-image: url("../../../assets/images/footer/pay_10.png");
 }
 #footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li:nth-child(11) {
-  background-image: url("../../assets/images/footer/pay_11.png");
+  background-image: url("../../../assets/images/footer/pay_11.png");
 }
 #footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li:nth-child(12) {
-  background-image: url("../../assets/images/footer/pay_12.png");
+  background-image: url("../../../assets/images/footer/pay_12.png");
 }
 #footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li:nth-child(13) {
-  background-image: url("../../assets/images/footer/pay_13.png");
+  background-image: url("../../../assets/images/footer/pay_13.png");
 }
 #footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li:nth-child(14) {
-  background-image: url("../../assets/images/footer/pay_14.png");
+  background-image: url("../../../assets/images/footer/pay_14.png");
 }
 #footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li:nth-child(15) {
-  background-image: url("../../assets/images/footer/pay_15.png");
+  background-image: url("../../../assets/images/footer/pay_15.png");
 }
 #footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li:nth-child(16) {
-  background-image: url("../../assets/images/footer/pay_16.png");
+  background-image: url("../../../assets/images/footer/pay_16.png");
 }
 #footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li:nth-child(17) {
-  background-image: url("../../assets/images/footer/pay_17.png");
+  background-image: url("../../../assets/images/footer/pay_17.png");
 }
 #footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li:nth-child(18) {
-  background-image: url("../../assets/images/footer/pay_18.png");
+  background-image: url("../../../assets/images/footer/pay_18.png");
 }
 #footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li:nth-child(19) {
-  background-image: url("../../assets/images/footer/pay_19.png");
+  background-image: url("../../../assets/images/footer/pay_19.png");
 }
 #footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li:nth-child(20) {
-  background-image: url("../../assets/images/footer/pay_20.png");
+  background-image: url("../../../assets/images/footer/pay_20.png");
 }
 #footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li:nth-child(21) {
-  background-image: url("../../assets/images/footer/pay_21.png");
+  background-image: url("../../../assets/images/footer/pay_21.png");
 }
 #footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li:nth-child(22) {
-  background-image: url("../../assets/images/footer/pay_22.png");
+  background-image: url("../../../assets/images/footer/pay_22.png");
 }
 #footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li:nth-child(23) {
-  background-image: url("../../assets/images/footer/pay_23.png");
+  background-image: url("../../../assets/images/footer/pay_23.png");
 }
 #footer .footer-inner .footer-privacy-wrapper {
   height: 74px;
@@ -556,6 +557,6 @@ table {
   display: inline-block;
   width: 22px;
   height: 10px;
-  background-image: url("../../assets/images/footer/check.png");
+  background-image: url("../../..//assets/images/footer/check.png");
   margin-left: 4px;
 }

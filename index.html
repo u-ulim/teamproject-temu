@@ -9,9 +9,43 @@
 
     <!-- CUSTOM CSS, JS-->
     <link rel="stylesheet" href="./src/scss/style.css" />
-    <script defer type="module" src="/src/json/script.js"></script>
+    <!-- <script defer type="module" src="/src/json/script.js"></script> -->
   </head>
   <body>
-    <ul></ul>
+    <section id="product-list">
+      <ul class="product-lists"></ul>
+    </section>
+    <section id="product-list-section">
+      <ul class="test-lists">
+        <li>
+          <img
+            class="product-list__thumb"
+            src="/assets/images/products/a-image-01.webp"
+            alt="product-thumbnail"
+          />
+          <h3 class="product-list__title">
+            귀여운 이불 세트 3개(이불 1개 + 베갯잎 2개, 코어리스), 부드럽고
+            편안한 침구
+          </h3>
+          <div class="product-list__counters">
+            <div>
+              <span class="product-list__discount">65%</span>
+              <span class="product-list__price">19,325</span>
+            </div>
+            <span class="product-list__cart-ico"></span>
+          </div>
+          <div class="product-list__reviews">
+            <i class="product-list__star"></i>
+            <span class="product-list__rating">4.8</span>
+            <span class="product-list__review-text">리뷰</span>
+            <span class="product-list__review-count">(3,420)</span>
+          </div>
+          <div class="product-list__solds">
+            <div class="product-list__solds-out">매진임박</div>
+            <span class="product-list__quantity">12개 남음</span>
+          </div>
+        </li>
+      </ul>
+    </section>
   </body>
 </html>
