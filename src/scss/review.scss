@@ -10,6 +10,7 @@
   .mark__inner {
     @extend .width_inner;
     display: flex;
+    // border: 1px solid #f00;
     .leftmenu {
       // border: 1px solid #f00;
       width: 200px;
@@ -70,11 +71,12 @@
     .container {
       .contents {
         .text {
+          // border: 1px solid #f00;
           display: flex;
           gap: 60px;
-          margin-bottom: 77px;
-          padding-top: 50px;
-          width: 100%;
+          margin-bottom: 20px;
+          padding-top: 77px;
+          padding-left: 10px;
           font-size: 14px;
           color: map-get($color, color-Neutrals-Grey-800);
           cursor: pointer;
@@ -90,26 +92,38 @@
             }
           }
         }
+        .examine {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 20px;
+          padding: 5px 15px;
+          border: 1px solid map-get($color, color-Neutrals-Grey-200);
+          width: 1000px;
+          border-radius: 8px;
+          p {
+            @extend .text_XS_12;
+          }
+          span {
+            @extend .text_S_14;
+          }
+        }
       }
       .box {
-        //   border: 1px solid #f00;
+        display: flex;
         .item {
           display: flex;
           margin-bottom: 15px;
-          // border: 1px solid #f00;
-          width: 1060px;
-          height: 116px;
-
+          height: 100px;
           .productImg {
+            margin-right: 11px;
             width: 96px;
             height: 96px;
             background-image: url(../../assets/images/productImg.svg);
             @extend .background_cover;
           }
           .text__box {
-            padding-left: 11px;
-            //   border: 1px solid #f00;
-            width: 953px;
+            width: 730px;
             p {
               margin-bottom: 5px;
               @extend .text_S_14;
@@ -122,9 +136,9 @@
         }
         .end__box {
           display: flex;
-          justify-content: flex-end;
-          border: 1px solid #f00;
-          width: 400px;
+          align-items: flex-end;
+          height: 100%;
+          // border: 1px solid #f00;
           .share {
             display: flex;
             gap: 5px;
@@ -137,7 +151,7 @@
             border-radius: 8px;
             @extend .text_S_14;
             &:hover {
-              background: map-get($color, color-Neutrals-Grey-100);
+              background: map-get($color, primary-color);
               cursor: pointer;
             }
           }

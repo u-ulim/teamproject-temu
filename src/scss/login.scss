@@ -89,7 +89,7 @@ body {
     transition: all 0.3s;
     border-radius: 8px;
     &:hover {
-      background: #ff7829cf;
+      background: map-get($color, primary-color);
       color: map-get($color, color-White);
       cursor: pointer;
       touch-action: manipulation;

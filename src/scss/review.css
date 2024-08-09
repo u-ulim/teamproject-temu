@@ -90,7 +90,7 @@
   letter-spacing: -0.48px;
 }
 
-.text_S_14, .wrapper .mark__inner .container .box .end__box .share, .wrapper .mark__inner .container .box .item .text__box p, .wrapper .mark__inner .leftmenu ul li span {
+.text_S_14, .wrapper .mark__inner .container .box .end__box .share, .wrapper .mark__inner .container .box .item .text__box p, .wrapper .mark__inner .container .contents .examine span, .wrapper .mark__inner .leftmenu ul li span {
   font-family: "Pretendard-Regular";
   font-size: 14px;
   font-style: normal;
@@ -98,7 +98,7 @@
   letter-spacing: -0.42px;
 }
 
-.text_XS_12, .wrapper .mark__inner .container .box .item .text__box span, .wrapper .mark__inner .leftmenu ul .home {
+.text_XS_12, .wrapper .mark__inner .container .box .item .text__box span, .wrapper .mark__inner .container .contents .examine p, .wrapper .mark__inner .leftmenu ul .home {
   font-family: "Pretendard-Regular";
   font-size: 12px;
   font-style: normal;
@@ -370,9 +370,9 @@ table {
 .wrapper .mark__inner .container .contents .text {
   display: flex;
   gap: 60px;
-  margin-bottom: 77px;
-  padding-top: 50px;
-  width: 100%;
+  margin-bottom: 20px;
+  padding-top: 77px;
+  padding-left: 10px;
   font-size: 14px;
   color: #292828;
   cursor: pointer;
@@ -386,20 +386,32 @@ table {
 .wrapper .mark__inner .container .contents .text span:nth-child(2):hover {
   color: #292828;
 }
+.wrapper .mark__inner .container .contents .examine {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 5px 15px;
+  border: 1px solid #d4d4d4;
+  width: 1000px;
+  border-radius: 8px;
+}
+.wrapper .mark__inner .container .box {
+  display: flex;
+}
 .wrapper .mark__inner .container .box .item {
   display: flex;
   margin-bottom: 15px;
-  width: 1060px;
-  height: 116px;
+  height: 100px;
 }
 .wrapper .mark__inner .container .box .item .productImg {
+  margin-right: 11px;
   width: 96px;
   height: 96px;
   background-image: url(../../assets/images/productImg.svg);
 }
 .wrapper .mark__inner .container .box .item .text__box {
-  padding-left: 11px;
-  width: 953px;
+  width: 730px;
 }
 .wrapper .mark__inner .container .box .item .text__box p {
   margin-bottom: 5px;
@@ -409,9 +421,8 @@ table {
 }
 .wrapper .mark__inner .container .box .end__box {
   display: flex;
-  justify-content: flex-end;
-  border: 1px solid #f00;
-  width: 400px;
+  align-items: flex-end;
+  height: 100%;
 }
 .wrapper .mark__inner .container .box .end__box .share {
   display: flex;
@@ -425,6 +436,6 @@ table {
   border-radius: 8px;
 }
 .wrapper .mark__inner .container .box .end__box .share:hover {
-  background: #f6f6f6;
+  background: #ff6d00;
   cursor: pointer;
 }/*# sourceMappingURL=review.css.map */

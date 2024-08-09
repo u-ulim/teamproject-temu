@@ -391,7 +391,7 @@ body {
   border-radius: 8px;
 }
 .email button:hover {
-  background: rgba(255, 120, 41, 0.8117647059);
+  background: #ff6d00;
   color: #fff;
   cursor: pointer;
   touch-action: manipulation;
