@@ -1,0 +1,195 @@
+@import "./config/fonts.scss";
+@import "./config/reset.scss";
+@import "./config/colors.scss";
+@import "./layout/layout.scss";
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.wrapper {
+  padding: 36px 40px 36px 40px;
+  width: 494px;
+  height: 575px;
+  text-align: center;
+  .container {
+    margin-bottom: 70px;
+    .inner {
+      display: flex;
+      justify-content: space-between;
+      span {
+        @include text_M_16;
+        color: map-get($color, color-Neutrals-Grey-800);
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+        .fa-chevron-left {
+          width: 17px;
+          height: 17px;
+          font-size: 17px;
+        }
+      }
+      .fa-xmark {
+        width: 17px;
+        height: 17px;
+        font-size: 17px;
+        transition: all 0.5s;
+        border-radius: 50%;
+        &:hover {
+          background-color: map-get($color, color-Neutrals-Grey-200);
+        }
+      }
+    }
+    .login {
+      margin-bottom: 15px;
+      color: map-get($color, color-Black);
+      @include heading_XS_20;
+    }
+    .data {
+      display: inline-block;
+      margin-right: 6px;
+      font-size: 13px;
+      color: map-get($color, secondary-color);
+      @include text_XS_12;
+    }
+  }
+}
+
+.email {
+  // border: 1px solid #f00;
+  .text {
+    margin-bottom: 8px;
+    span {
+      display: inline-block;
+      width: 413px;
+      text-align: left;
+      @include text_XS_12;
+    }
+  }
+  .email__box input[type="text"] {
+    margin-bottom: 20px;
+    padding-left: 20px;
+    border: 1px solid map-get($color, color-Neutrals-Grey-300);
+    width: 413px;
+    height: 45px;
+    border-radius: 8px;
+  }
+  button {
+    margin-bottom: 14px;
+    border: none;
+    width: 413px;
+    height: 47px;
+    background: map-get($color, primary-color);
+    color: map-get($color, color-White);
+    transition: all 0.3s;
+    border-radius: 8px;
+    &:hover {
+      background: map-get($color, primary-color);
+      color: map-get($color, color-White);
+      cursor: pointer;
+      touch-action: manipulation;
+    }
+  }
+  .text__box {
+    span {
+      display: inline-block;
+      margin-bottom: 24px;
+      // border: 1px solid #f00;
+      color: map-get($color, color-Neutrals-Grey-500);
+      @include text_XS_12;
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.box {
+  .other {
+    .line {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-basis: 100%;
+      margin: 8px;
+      margin-bottom: 25px;
+      color: map-get($color, color-Neutrals-Grey-700);
+      @include text_XS_12;
+    }
+    .line::before {
+      flex-grow: 1;
+      margin: 0 12px;
+      height: 1px;
+      background: map-get($color, color-Neutrals-Grey-400);
+      line-height: 0;
+      content: "";
+    }
+    .line::after {
+      flex-grow: 1;
+      margin: 0 12px;
+      height: 1px;
+      background: map-get($color, color-Neutrals-Grey-400);
+      line-height: 0;
+      content: "";
+    }
+  }
+}
+.icon {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  span {
+    display: inline-block;
+    margin-bottom: 96px;
+    &:hover {
+      cursor: pointer;
+    }
+    .google-icon {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background: url("../../assets/images/mypage/google-icon.svg") center/cover
+        no-repeat;
+    }
+    .naver-icon {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background: url("../../assets/images/mypage/naver.svg") center/cover
+        no-repeat;
+    }
+    .apple-icon {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background: url("../../assets/images/mypage/apple.svg") center/cover
+        no-repeat;
+    }
+  }
+}
+.agree {
+  margin-bottom: 36px;
+  color: map-get($color, color-Neutrals-Grey-800);
+  @include text_XS_12;
+  span {
+    color: #0065be;
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  body {
+    padding: 32px 0;
+    width: 555px;
+    height: 595px;
+  }
+}
