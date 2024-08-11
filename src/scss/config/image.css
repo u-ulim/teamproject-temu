@@ -1,5 +1,11 @@
 .background_cover {
+  display: inline-block;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.object_cover {
+  object-fit: cover;
+  object-position: center;
 }

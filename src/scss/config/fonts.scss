@@ -17,7 +17,7 @@ $font-weight: (
 
 /* HEADING */
 /* -2% = 0.02 * 'n'px */ /* -3% = 0.03 * 'n'px */
-.heading_XXL_56 {
+@mixin heading__XXL_56 {
   font-family: map-get($font, primary-font);
   font-size: 56px;
   font-style: normal;
@@ -25,7 +25,7 @@ $font-weight: (
   letter-spacing: -1.12px;
 }
 
-.heading_XL_48 {
+@mixin heading_XL_48 {
   font-family: map-get($font, primary-font-b);
   font-size: 48px;
   font-style: normal;
@@ -33,7 +33,7 @@ $font-weight: (
   letter-spacing: -0.96px;
 }
 
-.heading_L_40 {
+@mixin heading_L_40 {
   font-family: map-get($font, primary-font-b);
   font-size: 40px;
   font-style: normal;
@@ -41,7 +41,7 @@ $font-weight: (
   letter-spacing: -0.8px;
 }
 
-.heading_M_32 {
+@mixin heading_M_32 {
   font-family: map-get($font, primary-font-b);
   font-size: 32px;
   font-style: normal;
@@ -49,7 +49,7 @@ $font-weight: (
   letter-spacing: -0.64px;
 }
 
-.heading_S_24 {
+@mixin heading_S_24 {
   font-family: map-get($font, primary-font-b);
   font-size: 24px;
   font-style: normal;
@@ -57,7 +57,7 @@ $font-weight: (
   letter-spacing: -0.48px;
 }
 
-.heading_XS_20 {
+@mixin heading_XS_20 {
   font-family: map-get($font, primary-font-b);
   font-size: 20px;
   font-style: normal;
@@ -65,7 +65,7 @@ $font-weight: (
   letter-spacing: -0.6px;
 }
 
-.heading_XXS_16 {
+@mixin heading_XXS_16 {
   font-family: map-get($font, primary-font-b);
   font-size: 16px;
   font-style: normal;
@@ -76,7 +76,7 @@ $font-weight: (
 /* TEXT */
 /* -2% = 0.02 * 'n'px */
 /* -3% = 0.03 * 'n'px */
-.text_XXL_26 {
+@mixin text_XXL_26 {
   font-family: map-get($font, primary-font-r);
   font-size: 26px;
   font-style: normal;
@@ -84,7 +84,7 @@ $font-weight: (
   letter-spacing: -0.78px;
 }
 
-.text_XL_22 {
+@mixin text_XL_22 {
   font-family: map-get($font, primary-font-r);
   font-size: 22px;
   font-style: normal;
@@ -92,7 +92,7 @@ $font-weight: (
   letter-spacing: -0.66px;
 }
 
-.text_L_18 {
+@mixin text_L_18 {
   font-family: map-get($font, primary-font-r);
 
   font-size: 18px;
@@ -101,21 +101,23 @@ $font-weight: (
   letter-spacing: -0.54px;
 }
 
-.text_M_16 {
+@mixin text_M_16 {
   font-family: map-get($font, primary-font-r);
   font-size: 16px;
   font-style: normal;
   line-height: 24px;
   letter-spacing: -0.48px;
 }
-.text_S_14 {
+
+@mixin text_S_14 {
   font-family: map-get($font, primary-font-r);
   font-size: 14px;
   font-style: normal;
   line-height: 22px;
   letter-spacing: -0.42px;
 }
-.text_XS_12 {
+
+@mixin text_XS_12 {
   font-family: map-get($font, primary-font-r);
   font-size: 12px;
   font-style: normal;
@@ -126,7 +128,8 @@ $font-weight: (
 /* TEXT BOLD */
 /* -2% = 0.02 * 'n'px */
 /* -3% = 0.03 * 'n'px */
-.text_B_XXL_26 {
+
+@mixin text_B_XXL_26 {
   font-family: map-get($font, primary-font-b);
   font-size: 26px;
   font-style: normal;
@@ -135,17 +138,16 @@ $font-weight: (
   letter-spacing: -0.78px;
 }
 
-.text_B_XL_22 {
+@mixin text_B_XL_22 {
   font-family: map-get($font, primary-font-b);
   font-size: 22px;
   font-style: normal;
   font-weight: 700;
   line-height: 30px;
-
   letter-spacing: -0.66px;
 }
 
-.text_B_L_18 {
+@mixin text_B_L_18 {
   font-family: map-get($font, primary-font-b);
   font-size: 18px;
   font-style: normal;
@@ -154,7 +156,7 @@ $font-weight: (
   letter-spacing: -0.54px;
 }
 
-.text_B_M_16 {
+@mixin text_B_M_16 {
   font-family: map-get($font, primary-font-b);
   font-size: 16px;
   font-style: normal;
@@ -162,7 +164,8 @@ $font-weight: (
   line-height: 24px;
   letter-spacing: -0.48px;
 }
-.text_B_S_14 {
+
+@mixin text_B_S_14 {
   font-family: map-get($font, primary-font-b);
   font-size: 14px;
   font-style: normal;
@@ -171,7 +174,8 @@ $font-weight: (
 
   letter-spacing: -0.42px;
 }
-.text_B_XS_12 {
+
+@mixin text_B_XS_12 {
   font-family: map-get($font, primary-font-b);
   font-size: 12px;
   font-style: normal;
