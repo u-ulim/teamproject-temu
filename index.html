@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- fontawesome -->
-  <script src="https://kit.fontawesome.com/fc51ef092a.js" crossorigin="anonymous"></script>
+  <script defer src="https://kit.fontawesome.com/fc51ef092a.js" crossorigin="anonymous"></script>
   <!-- Material Symbols -->
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
@@ -13,6 +13,11 @@
 
   <!-- CUSTOM CSS, JS-->
   <link rel="stylesheet" href="./src/scss/style.css" />
+  <link rel="stylesheet" href="./src/scss/components/product-list.css" />
+
+  <script defer src="./src/js/index.js"></script>
+  <script defer src="./src/json/product-list.js"></script>
+
   <!-- <script defer type="module" src="/src/json/script.js"></script> -->
 </head>
 
@@ -24,8 +29,20 @@
   <!-- MAIN START -->
   <main id="main">
     <div class="main__wrapper">
-      <div class="main__slide"></div>
-      <div class="sub__slide"></div>
+      <div class="main__banner"></div>
+      <div class="main__slide__wrapper">
+        <div class="main__slide">
+          <div class="main__slide-pagination">
+            <p>1/5 +</p>
+          </div>
+        </div>
+        <div class="main__slide-btn-right">
+          <i class="fa-solid fa-chevron-right"></i>
+        </div>
+        <div class="main__slide-btn-left">
+          <i class="fa-solid fa-chevron-left"></i>
+        </div>
+      </div>
     </div>
   </main>
   <!-- MAIN END -->
@@ -122,6 +139,14 @@
         <p>카테고리</p>
       </div>
       <div class="category__list__container">
+        <div class="category__btn">
+          <div class="category__slide-btn-right">
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <div class="category__slide-btn-left">
+            <i class="fa-solid fa-chevron-left"></i>
+          </div>
+        </div>
         <ul class="category__list">
           <li>
             <div class="category__list-img"></div>
@@ -164,6 +189,9 @@
         <div class="product__title-img"></div>
         <p>상품 둘러보기</p>
       </div>
+    </div>
+    <div id="product-list">
+
     </div>
   </section>
   <!-- PRODUCT END -->
