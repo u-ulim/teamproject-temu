@@ -10,7 +10,7 @@
   background-color: map-get($color, color-Black);
   color: map-get($color, color-White);
   .footer-inner {
-    @extend .width_inner;
+    @include width_inner;
     .footer-menus-wrapper {
       position: relative;
       .footer-menus {
@@ -22,10 +22,10 @@
           gap: 12px;
           flex-direction: column;
           h3 {
-            @extend .text_B_S_14;
+            @include text_B_S_14;
           }
           ul {
-            @extend .text_XS_12;
+            @include text_XS_12;
             display: flex;
             gap: 12px;
             flex-direction: column;
@@ -49,11 +49,11 @@
           div {
             width: 99px;
             span {
-              @extend .text_XS_12;
+              @include text_XS_12;
               color: map-get($color, color-Neutrals-Grey-200);
             }
             h4 {
-              @extend .text_B_L_18;
+              @include text_B_L_18;
               line-height: 18px;
             }
           }
@@ -62,7 +62,7 @@
           margin-bottom: 10px;
           i {
             display: inline-block;
-            @extend .background_cover;
+            @include background_cover;
             width: 27px;
             height: 32px;
             background-image: url("../../../assets/images/footer/app-store.svg");
@@ -71,7 +71,7 @@
         .footer-apps__google-play {
           i {
             display: inline-block;
-            @extend .background_cover;
+            @include background_cover;
             width: 27px;
             height: 27px;
             background-image: url("../../../assets/images/footer/google-play.svg");
@@ -83,12 +83,12 @@
       margin-bottom: 73px;
       h3 {
         margin-bottom: 10px;
-        @extend .text_B_S_14;
+        @include text_B_S_14;
       }
       .footer-notice__desc {
         display: flex;
         gap: 188px;
-        @extend .text_XS_12;
+        @include text_XS_12;
         .footer-notice__desc-info {
           display: flex;
           gap: 5px;
@@ -107,7 +107,7 @@
       margin-bottom: 82px;
       .footer-card__security {
         h3 {
-          @extend .text_B_S_14;
+          @include text_B_S_14;
           margin-bottom: 10px;
         }
         .footer-card__security__menus {
@@ -117,7 +117,7 @@
           li > i {
             display: inline-block;
             height: 27px;
-            @extend .background_cover;
+            @include background_cover;
             &.security__menus__dss-img {
               width: 43px;
               background-image: url("../../../assets/images/footer/DSS.png");
@@ -151,7 +151,7 @@
       }
       .footer-card__payment {
         h3 {
-          @extend .text_B_S_14;
+          @include text_B_S_14;
           margin-bottom: 10px;
         }
         .footer-card__payment__menus {
@@ -162,7 +162,7 @@
             display: inline-block;
             width: 40px;
             height: 27px;
-            @extend .background_cover;
+            @include background_cover;
           }
           li:nth-child(1) {
             background-image: url("../../../assets/images/footer/pay_01.png");
@@ -244,7 +244,7 @@
           width: 550px;
           margin: 0 auto;
           justify-content: space-between;
-          @extend .text_XS_12;
+          @include text_XS_12;
           color: map-get($color, color-Neutrals-Grey-400);
           li {
             display: flex;
@@ -253,7 +253,7 @@
               display: inline-block;
               width: 22px;
               height: 10px;
-              @extend .background_cover;
+              @include background_cover;
               background-image: url("../../..//assets/images/footer/check.png");
               margin-left: 4px;
             }
@@ -262,4 +262,7 @@
       }
     }
   }
+}
+
+@media (max-width: 1384px) {
 }

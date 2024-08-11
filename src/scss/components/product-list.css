@@ -6,169 +6,12 @@
 }
 /* HEADING */
 /* -2% = 0.02 * 'n'px */ /* -3% = 0.03 * 'n'px */
-.heading_XXL_56 {
-  font-size: 56px;
-  font-style: normal;
-  font-weight: 700;
-  letter-spacing: -1.12px;
-}
-
-.heading_XL_48 {
-  font-family: "Pretendard-Bold";
-  font-size: 48px;
-  font-style: normal;
-  font-weight: 700;
-  letter-spacing: -0.96px;
-}
-
-.heading_L_40 {
-  font-family: "Pretendard-Bold";
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 700;
-  letter-spacing: -0.8px;
-}
-
-.heading_M_32 {
-  font-family: "Pretendard-Bold";
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 700;
-  letter-spacing: -0.64px;
-}
-
-.heading_S_24 {
-  font-family: "Pretendard-Bold";
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  letter-spacing: -0.48px;
-}
-
-.heading_XS_20 {
-  font-family: "Pretendard-Bold";
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  letter-spacing: -0.6px;
-}
-
-.heading_XXS_16 {
-  font-family: "Pretendard-Bold";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  letter-spacing: -0.48px;
-}
-
 /* TEXT */
 /* -2% = 0.02 * 'n'px */
 /* -3% = 0.03 * 'n'px */
-.text_XXL_26 {
-  font-family: "Pretendard-Regular";
-  font-size: 26px;
-  font-style: normal;
-  line-height: 34px;
-  letter-spacing: -0.78px;
-}
-
-.text_XL_22 {
-  font-family: "Pretendard-Regular";
-  font-size: 22px;
-  font-style: normal;
-  line-height: 30px;
-  letter-spacing: -0.66px;
-}
-
-.text_L_18 {
-  font-family: "Pretendard-Regular";
-  font-size: 18px;
-  font-style: normal;
-  line-height: 26px;
-  letter-spacing: -0.54px;
-}
-
-.text_M_16 {
-  font-family: "Pretendard-Regular";
-  font-size: 16px;
-  font-style: normal;
-  line-height: 24px;
-  letter-spacing: -0.48px;
-}
-
-.text_S_14, .product-lists .product-list .product-list__reviews, .product-lists .product-list .product-list__title {
-  font-family: "Pretendard-Regular";
-  font-size: 14px;
-  font-style: normal;
-  line-height: 22px;
-  letter-spacing: -0.42px;
-}
-
-.text_XS_12, .product-lists .product-list .product-list__solds {
-  font-family: "Pretendard-Regular";
-  font-size: 12px;
-  font-style: normal;
-  line-height: 18px;
-  letter-spacing: -0.36px;
-}
-
 /* TEXT BOLD */
 /* -2% = 0.02 * 'n'px */
 /* -3% = 0.03 * 'n'px */
-.text_B_XXL_26 {
-  font-family: "Pretendard-Bold";
-  font-size: 26px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 34px;
-  letter-spacing: -0.78px;
-}
-
-.text_B_XL_22, .product-lists .product-list .product-list__counters > div .product-list__price, .product-lists .product-list .product-list__counters > div .product-list__discount {
-  font-family: "Pretendard-Bold";
-  font-size: 22px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 30px;
-  letter-spacing: -0.66px;
-}
-
-.text_B_L_18 {
-  font-family: "Pretendard-Bold";
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 26px;
-  letter-spacing: -0.54px;
-}
-
-.text_B_M_16 {
-  font-family: "Pretendard-Bold";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 24px;
-  letter-spacing: -0.48px;
-}
-
-.text_B_S_14 {
-  font-family: "Pretendard-Bold";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 22px;
-  letter-spacing: -0.42px;
-}
-
-.text_B_XS_12 {
-  font-family: "Pretendard-Bold";
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 18px;
-  letter-spacing: -0.36px;
-}
-
 html,
 body,
 div,
@@ -312,24 +155,14 @@ table {
 }
 
 /* VARIABLES */
-.width_full {
-  width: 100%;
-}
-
-.width_inner, .product-lists {
-  width: 1384px;
-  padding: 0px 15px 0px 15px;
-  margin: 0 auto;
-}
-
-.background_cover, .product-lists .product-list .product-list__reviews .product-list__star, .product-lists .product-list .product-list__counters .product-list__cart-ico {
+.background_cover {
   display: inline-block;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.object_cover, .product-lists .product-list .product-list__thumb-box .product-list__thumb {
+.object_cover {
   object-fit: cover;
   object-position: center;
 }
@@ -338,6 +171,9 @@ table {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  width: 1384px;
+  padding: 0px 15px 0px 15px;
+  margin: 0 auto;
 }
 .product-lists .product-list {
   width: 255px;
@@ -357,6 +193,8 @@ table {
 .product-lists .product-list .product-list__thumb-box .product-list__thumb {
   width: 255px;
   height: 255px;
+  object-fit: cover;
+  object-position: center;
   transition: all 0.3s;
 }
 .product-lists .product-list .product-list__title {
@@ -366,6 +204,11 @@ table {
   text-overflow: ellipsis;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  font-family: "Pretendard-Regular";
+  font-size: 14px;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: -0.42px;
   margin-bottom: 10px;
 }
 .product-lists .product-list .product-list__counters {
@@ -379,16 +222,32 @@ table {
   align-items: center;
 }
 .product-lists .product-list .product-list__counters > div .product-list__discount {
+  font-family: "Pretendard-Bold";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: -0.66px;
   display: flex;
   color: #ff6d00;
 }
 .product-lists .product-list .product-list__counters > div .product-list__price {
+  font-family: "Pretendard-Bold";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: -0.66px;
   color: #292828;
 }
 .product-lists .product-list .product-list__counters .product-list__cart-ico {
   width: 45px;
   height: 35px;
   background-image: url("../../../assets/images/products/cart-ico.svg");
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   transition: all 0.3s;
 }
 .product-lists .product-list .product-list__counters .product-list__cart-ico:hover {
@@ -397,12 +256,21 @@ table {
 .product-lists .product-list .product-list__reviews {
   display: flex;
   align-items: center;
+  font-family: "Pretendard-Regular";
+  font-size: 14px;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: -0.42px;
   margin-bottom: 5px;
 }
 .product-lists .product-list .product-list__reviews .product-list__star {
   width: 20px;
   height: 20px;
   background-image: url("../../../assets/images/products/product-list__star.svg");
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .product-lists .product-list .product-list__reviews .product-list__rating {
   margin-right: 5px;
@@ -416,6 +284,11 @@ table {
   color: #6a6a6a;
 }
 .product-lists .product-list .product-list__solds {
+  font-family: "Pretendard-Regular";
+  font-size: 12px;
+  font-style: normal;
+  line-height: 18px;
+  letter-spacing: -0.36px;
   display: flex;
   align-items: center;
 }

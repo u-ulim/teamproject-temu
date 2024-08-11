@@ -104,7 +104,7 @@
   letter-spacing: -0.42px;
 }
 
-.text_XS_12, #footer .footer-inner .footer-privacy-wrapper div .footer-privacy__menus, #footer .footer-inner .footer-notice-wrapper .footer-notice__desc, #footer .footer-inner .footer-menus-wrapper .footer-apps li div span, #footer .footer-inner .footer-menus-wrapper .footer-menus > li ul {
+.text_XS_12 {
   font-family: "Pretendard-Regular";
   font-size: 12px;
   font-style: normal;
@@ -133,7 +133,7 @@
   letter-spacing: -0.66px;
 }
 
-.text_B_L_18, #footer .footer-inner .footer-menus-wrapper .footer-apps li div h4 {
+.text_B_L_18 {
   font-family: "Pretendard-Bold";
   font-size: 18px;
   font-style: normal;
@@ -151,7 +151,7 @@
   letter-spacing: -0.48px;
 }
 
-.text_B_S_14, #footer .footer-inner .footer-card-wrapper .footer-card__payment h3, #footer .footer-inner .footer-card-wrapper .footer-card__security h3, #footer .footer-inner .footer-notice-wrapper h3, #footer .footer-inner .footer-menus-wrapper .footer-menus > li h3 {
+.text_B_S_14 {
   font-family: "Pretendard-Bold";
   font-size: 14px;
   font-style: normal;
@@ -316,23 +316,33 @@ table {
   width: 100%;
 }
 
-.width_inner, #footer .footer-inner {
+.width_inner {
   width: 1384px;
   padding: 0px 15px 0px 15px;
   margin: 0 auto;
 }
 
-.background_cover, #footer .footer-inner .footer-privacy-wrapper div .footer-privacy__menus li i, #footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li, #footer .footer-inner .footer-card-wrapper .footer-card__security .footer-card__security__menus li > i, #footer .footer-inner .footer-menus-wrapper .footer-apps .footer-apps__google-play i, #footer .footer-inner .footer-menus-wrapper .footer-apps .footer-apps__app-store i {
+.background_cover {
   display: inline-block;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+.object_cover {
+  object-fit: cover;
+  object-position: center;
+}
+
 #footer {
   padding-top: 47px;
   background-color: #101010;
   color: #fff;
+}
+#footer .footer-inner {
+  width: 1384px;
+  padding: 0px 15px 0px 15px;
+  margin: 0 auto;
 }
 #footer .footer-inner .footer-menus-wrapper {
   position: relative;
@@ -347,7 +357,20 @@ table {
   gap: 12px;
   flex-direction: column;
 }
+#footer .footer-inner .footer-menus-wrapper .footer-menus > li h3 {
+  font-family: "Pretendard-Bold";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: -0.42px;
+}
 #footer .footer-inner .footer-menus-wrapper .footer-menus > li ul {
+  font-family: "Pretendard-Regular";
+  font-size: 12px;
+  font-style: normal;
+  line-height: 18px;
+  letter-spacing: -0.36px;
   display: flex;
   gap: 12px;
   flex-direction: column;
@@ -372,9 +395,20 @@ table {
   width: 99px;
 }
 #footer .footer-inner .footer-menus-wrapper .footer-apps li div span {
+  font-family: "Pretendard-Regular";
+  font-size: 12px;
+  font-style: normal;
+  line-height: 18px;
+  letter-spacing: -0.36px;
   color: #d4d4d4;
 }
 #footer .footer-inner .footer-menus-wrapper .footer-apps li div h4 {
+  font-family: "Pretendard-Bold";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: -0.54px;
   line-height: 18px;
 }
 #footer .footer-inner .footer-menus-wrapper .footer-apps .footer-apps__app-store {
@@ -382,12 +416,20 @@ table {
 }
 #footer .footer-inner .footer-menus-wrapper .footer-apps .footer-apps__app-store i {
   display: inline-block;
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 27px;
   height: 32px;
   background-image: url("../../../assets/images/footer/app-store.svg");
 }
 #footer .footer-inner .footer-menus-wrapper .footer-apps .footer-apps__google-play i {
   display: inline-block;
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 27px;
   height: 27px;
   background-image: url("../../../assets/images/footer/google-play.svg");
@@ -397,10 +439,21 @@ table {
 }
 #footer .footer-inner .footer-notice-wrapper h3 {
   margin-bottom: 10px;
+  font-family: "Pretendard-Bold";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: -0.42px;
 }
 #footer .footer-inner .footer-notice-wrapper .footer-notice__desc {
   display: flex;
   gap: 188px;
+  font-family: "Pretendard-Regular";
+  font-size: 12px;
+  font-style: normal;
+  line-height: 18px;
+  letter-spacing: -0.36px;
 }
 #footer .footer-inner .footer-notice-wrapper .footer-notice__desc .footer-notice__desc-info {
   display: flex;
@@ -418,6 +471,12 @@ table {
   margin-bottom: 82px;
 }
 #footer .footer-inner .footer-card-wrapper .footer-card__security h3 {
+  font-family: "Pretendard-Bold";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: -0.42px;
   margin-bottom: 10px;
 }
 #footer .footer-inner .footer-card-wrapper .footer-card__security .footer-card__security__menus {
@@ -428,6 +487,10 @@ table {
 #footer .footer-inner .footer-card-wrapper .footer-card__security .footer-card__security__menus li > i {
   display: inline-block;
   height: 27px;
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 #footer .footer-inner .footer-card-wrapper .footer-card__security .footer-card__security__menus li > i.security__menus__dss-img {
   width: 43px;
@@ -458,6 +521,12 @@ table {
   background-image: url("../../../assets/images/footer/Thrusted.png");
 }
 #footer .footer-inner .footer-card-wrapper .footer-card__payment h3 {
+  font-family: "Pretendard-Bold";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: -0.42px;
   margin-bottom: 10px;
 }
 #footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus {
@@ -469,6 +538,10 @@ table {
   display: inline-block;
   width: 40px;
   height: 27px;
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 #footer .footer-inner .footer-card-wrapper .footer-card__payment .footer-card__payment__menus li:nth-child(1) {
   background-image: url("../../../assets/images/footer/pay_01.png");
@@ -547,6 +620,11 @@ table {
   width: 550px;
   margin: 0 auto;
   justify-content: space-between;
+  font-family: "Pretendard-Regular";
+  font-size: 12px;
+  font-style: normal;
+  line-height: 18px;
+  letter-spacing: -0.36px;
   color: #9a9a9a;
 }
 #footer .footer-inner .footer-privacy-wrapper div .footer-privacy__menus li {
@@ -557,6 +635,10 @@ table {
   display: inline-block;
   width: 22px;
   height: 10px;
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   background-image: url("../../..//assets/images/footer/check.png");
   margin-left: 4px;
 }

@@ -5,20 +5,20 @@
 @import "../config/image.scss";
 
 #header {
-  @extend .width_full;
+  @include width_full;
   border-bottom: 1px solid map-get($color, color-Neutrals-Grey-200);
   height: 130px;
   .header-top-wrapper {
-    @extend .width_full;
+    @include width_full;
     height: 48px;
     background-color: map-get($color, primary-color);
     color: map-get($color, color-White);
     .header-top {
-      @extend .width_inner;
+      @include width_inner;
     }
   }
   nav {
-    @extend .width_inner;
+    @include width_inner;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -27,6 +27,8 @@
       display: flex;
       gap: 20px;
       justify-content: space-between;
+      height: 82px;
+      align-items: center;
       .nav-left__logo {
         display: inline-block;
         width: 45px;
@@ -38,18 +40,29 @@
         display: flex;
         gap: 20px;
         align-items: center;
-        @extend .text_S_14;
-        li {
+        width: 400px;
+
+        @include text_S_14;
+        > li {
           display: flex;
           gap: 2px;
           align-items: center;
+          justify-content: center;
           cursor: pointer;
+          height: 82px;
+          position: relative;
           i {
             display: flex;
             align-items: center;
             width: 24px;
             height: 24px;
-            @extend .background_cover;
+            line-height: 18px;
+            text-align: center;
+            @include background_cover;
+            z-index: 2;
+          }
+          a {
+            z-index: 2;
           }
           .menu__bestseller-ico {
             background-image: url("../../../assets/images/header/menu_bestseller.svg");
@@ -61,14 +74,117 @@
             background-image: url("../../../assets/images/header/menu_shop.svg");
           }
           .fa-chevron-down {
-            color: map-get($color, color-Black);
+            width: 18px;
+            height: 18px;
             font-size: 9px;
+            color: map-get($color, color-Black);
+          }
+          &li:last-child {
+            display: flex;
+            justify-content: space-between;
+            width: 67px;
+          }
+          &:hover::before {
+            content: "";
+            width: 130%;
+            height: 53%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: map-get($color, color-Neutrals-Grey-100);
+            border-radius: 50px;
           }
         }
-        li:last-child {
-          width: 80px;
-          display: flex;
-          justify-content: space-between;
+        .nav-menu__category {
+          position: relative;
+          transition: all 0.5s;
+
+          &:hover .submenu {
+            display: flex;
+          }
+          .submenu {
+            width: 800px;
+            position: absolute;
+            padding-top: 15px;
+            top: 68px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            background: map-get($color, color-Neutrals-Grey-100);
+            display: none;
+            .submenu-tabs {
+              text-align: center;
+              ul {
+                > li {
+                  width: 200px;
+                  height: 40px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  transition: all 0.5s;
+                  padding: 0px 5px 0px 5px;
+                  // span {
+                  // }
+                  i {
+                    font-size: 7px;
+                    line-height: 22px;
+                  }
+                  &:hover {
+                    background-color: map-get($color, color-Neutrals-Grey-100);
+                  }
+                }
+              }
+            }
+            .submenu-content {
+              max-height: 800px; /* 서브 메뉴 높이 */
+              overflow-x: auto; /* 서브 메뉴 스크롤 */
+              .content {
+                display: none;
+                ul {
+                  display: flex;
+                  width: 600px;
+                  flex-wrap: wrap;
+                  gap: 30px;
+                  padding: 0px 15px 0px 15px;
+                  li {
+                    a {
+                      display: flex;
+                      flex-direction: column;
+                      align-items: center;
+                      gap: 5px;
+                      div {
+                        width: 70px;
+                        height: 70px;
+                        overflow: hidden;
+                        border-radius: 50%;
+                        img {
+                          width: 70px;
+                          height: 70px;
+                          border-radius: 50%;
+                          transition: 0.3s;
+
+                          @include object_cover;
+                          // &:hover {
+                          // }
+                        }
+                      }
+                    }
+                    &:hover {
+                      a {
+                        img {
+                          transform: scale(1.2);
+                        }
+                      }
+                    }
+                  }
+                }
+                &.active {
+                  display: block;
+                }
+              }
+            }
+          }
         }
       }
       .nav__input-wrapper {
@@ -99,28 +215,28 @@
           width: 41px;
           height: 31px;
           background: url("../../../assets/images/header/menu_search-ico.svg");
-          @extend .background_cover;
+          @include background_cover;
         }
       }
     }
     .nav-right {
       .nav-right__menus {
         display: flex;
+        gap: 20px;
         align-items: center;
         justify-content: space-between;
-        @extend .text_S_14;
-        gap: 20px;
+        @include text_S_14;
         li {
           display: flex;
-          align-items: center;
           gap: 2px;
+          align-items: center;
           cursor: pointer;
           i {
             display: flex;
             align-items: center;
             width: 24px;
             height: 24px;
-            @extend .background_cover;
+            @include background_cover;
           }
           .menu__login-ico {
             background-image: url("../../../assets/images/header/menu_user.svg");
@@ -135,7 +251,7 @@
             background-image: url("../../../assets/images/header/menu_cart.svg");
           }
           .menu__language-text {
-            @extend .text_B_S_14;
+            @include text_B_S_14;
           }
         }
       }
@@ -144,4 +260,28 @@
 }
 
 @media (max-width: 1384px) {
+  #header {
+    nav {
+      @include width_full;
+      .nav-left {
+        width: 100%;
+        .nav-left__logo {
+          width: 45px;
+          height: 45px;
+        }
+        .nav__input-wrapper {
+          flex-grow: 1;
+          input {
+            width: 100%;
+          }
+        }
+      }
+
+      .nav-right {
+        display: none;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
 }
