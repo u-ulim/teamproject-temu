@@ -1,0 +1,149 @@
+{
+  "categories": [
+    {
+      "name": "추천",
+      "subcategories": [
+        {
+          "name": "인형",
+          "image": "http://example.com/images/dolls.jpg"
+        },
+        {
+          "name": "액세서리",
+          "image": "http://example.com/images/accessories.jpg"
+        },
+        {
+          "name": "여성원피스",
+          "image": "http://example.com/images/dresses.jpg"
+        },
+        {
+          "name": "장식",
+          "image": "http://example.com/images/decorations.jpg"
+        },
+        {
+          "name": "침구",
+          "image": "http://example.com/images/bedding.jpg"
+        },
+        {
+          "name": "가구",
+          "image": "http://example.com/images/furniture.jpg"
+        }
+      ]
+    },
+    {
+      "name": "홈 & 주방",
+      "subcategories": [
+        {
+          "name": "홈 데코 제품",
+          "image": "http://example.com/images/home_decor.jpg"
+        },
+        {
+          "name": "침구",
+          "image": "http://example.com/images/bedding.jpg"
+        },
+        {
+          "name": "가구",
+          "image": "http://example.com/images/furniture.jpg"
+        },
+        {
+          "name": "주방용품",
+          "image": "http://example.com/images/kitchenware.jpg"
+        },
+        {
+          "name": "조리 도구",
+          "image": "http://example.com/images/cooking_tools.jpg"
+        },
+        {
+          "name": "조명",
+          "image": "http://example.com/images/lighting.jpg"
+        }
+      ]
+    },
+    {
+      "name": "여성의류",
+      "subcategories": [
+        {
+          "name": "드레스",
+          "image": "http://example.com/images/dresses.jpg"
+        },
+        {
+          "name": "블라우스",
+          "image": "http://example.com/images/blouses.jpg"
+        },
+        {
+          "name": "스커트",
+          "image": "http://example.com/images/skirts.jpg"
+        },
+        {
+          "name": "팬츠",
+          "image": "http://example.com/images/pants.jpg"
+        },
+        {
+          "name": "재킷",
+          "image": "http://example.com/images/jackets.jpg"
+        },
+        {
+          "name": "코트",
+          "image": "http://example.com/images/coats.jpg"
+        }
+      ]
+    },
+    {
+      "name": "여성화",
+      "subcategories": [
+        {
+          "name": "힐",
+          "image": "http://example.com/images/heels.jpg"
+        },
+        {
+          "name": "플랫 슈즈",
+          "image": "http://example.com/images/flat_shoes.jpg"
+        },
+        {
+          "name": "스니커즈",
+          "image": "http://example.com/images/sneakers.jpg"
+        },
+        {
+          "name": "부츠",
+          "image": "http://example.com/images/boots.jpg"
+        },
+        {
+          "name": "샌들",
+          "image": "http://example.com/images/sandals.jpg"
+        },
+        {
+          "name": "슬리퍼",
+          "image": "http://example.com/images/slippers.jpg"
+        }
+      ]
+    },
+    {
+      "name": "남성 의류",
+      "subcategories": [
+        {
+          "name": "셔츠",
+          "image": "http://example.com/images/shirts.jpg"
+        },
+        {
+          "name": "티셔츠",
+          "image": "http://example.com/images/tshirts.jpg"
+        },
+        {
+          "name": "팬츠",
+          "image": "http://example.com/images/pants.jpg"
+        },
+        {
+          "name": "재킷",
+          "image": "http://example.com/images/jackets.jpg"
+        },
+        {
+          "name": "코트",
+          "image": "http://example.com/images/coats.jpg"
+        },
+        {
+          "name": "정장",
+          "image": "http://example.com/images/suits.jpg"
+        }
+      ]
+    }
+  ]
+}

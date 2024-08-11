@@ -1,0 +1,117 @@
+@import "../config/fonts.scss";
+@import "../config/reset.scss";
+@import "../config/colors.scss";
+@import "../layout/layout.scss";
+@import "../config/image.scss";
+
+.product-lists {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @include width_inner;
+
+  .product-list {
+    width: 255px;
+    cursor: pointer;
+    margin-bottom: 60px;
+    &:hover {
+      .product-list__thumb-box {
+        .product-list__thumb {
+          transform: scale(1.1);
+        }
+      }
+    }
+    .product-list__thumb-box {
+      width: 255px;
+      height: 255px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+
+      overflow: hidden;
+      .product-list__thumb {
+        width: 255px;
+        height: 255px;
+        @include object_cover;
+        transition: all 0.3s;
+      }
+    }
+
+    .product-list__title {
+      display: -webkit-box;
+      width: 255px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      @include text_S_14;
+      margin-bottom: 10px;
+    }
+    .product-list__counters {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      > div {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        .product-list__discount {
+          @include text_B_XL_22;
+          display: flex;
+          color: map-get($color, primary-color);
+        }
+        .product-list__price {
+          @include text_B_XL_22;
+          color: map-get($color, color-Neutrals-Grey-800);
+        }
+      }
+      .product-list__cart-ico {
+        width: 45px;
+        height: 35px;
+        background-image: url("../../../assets/images/products/cart-ico.svg");
+        @include background_cover;
+        transition: all 0.3s;
+        &:hover {
+          background-image: url("../../../assets/images/products/cart-fill-ico.svg");
+        }
+      }
+    }
+    .product-list__reviews {
+      display: flex;
+      align-items: center;
+      @include text_S_14;
+      margin-bottom: 5px;
+      .product-list__star {
+        width: 20px;
+        height: 20px;
+        background-image: url("../../../assets/images/products/product-list__star.svg");
+        @include background_cover;
+      }
+      .product-list__rating {
+        margin-right: 5px;
+        color: map-get($color, secondary-color);
+      }
+      .product-list__review-text {
+        margin-right: 5px;
+        color: map-get($color, color-Neutrals-Grey-600);
+      }
+      .product-list__review-count {
+        color: map-get($color, color-Neutrals-Grey-600);
+      }
+    }
+    .product-list__solds {
+      @include text_XS_12;
+      display: flex;
+      align-items: center;
+      .product-list__solds-out {
+        margin-right: 5px;
+        padding: 2px 6px 0px 6px;
+        background-color: map-get($color, primary-color);
+        color: map-get($color, color-White);
+        border-radius: 8px;
+      }
+      .product-list__quantity {
+        color: map-get($color, primary-color);
+      }
+    }
+  }
+}
