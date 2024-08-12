@@ -6,8 +6,6 @@
 }
 
 .object_cover {
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-}/*# sourceMappingURL=image.css.map */
+  object-fit: cover;
+  object-position: center;
+}
