@@ -11,12 +11,14 @@
 
   <!-- CUSTOM CSS, JS-->
   <link rel="stylesheet" href="../src/scss/Payment.css" />
-  <script src="../src/javascript/Payment.js"></script>
+  <script defer src="../src/javascript/Payment.js"></script>
 </head>
 <body>
+
+  <!---header start-->
   <header>
-    <nav></nav>
   </header>
+ <!---header end-->
 
   <div class="container">
     <!--MAIN START-->
@@ -35,7 +37,7 @@
           </div>
           <div class="banner">
             <span>테무는 언제나 무료 배송</span>
-            <div class="close">
+            <div class="banner-close">
               <span></span>
               <span></span>
             </div>
@@ -48,7 +50,7 @@
         <article class="shopping__info">
           <div class="info__up">
             <span>배송정보</span>
-            <span>내용 변경 ></span>
+            <span class="addressbtn">주소 변경 ></span>
           </div>
           <div class="info__down">
             <ul>
@@ -108,26 +110,29 @@
                   <span>1/5/10쌍의 남성용 심플 슬리드 라이너</span>
                 </div>
                 <div class="product__text-down">
-                  <span>옵션변경</span>
+                  <input type="submit" value="옵션변경" class="option"></input>
                   <span>|</span>
-                  <span>바로구매</span>
+                  <input type="submit" value="바로구매"></input>
                 </div>
               </div>
             </li>
 
             <!-- number__input -->
-            <li class="number__input">
-              <div>
-                <button>+</button>
-                <span>1</span>
-                <button>-</button>
+            <li class="number__box">
+              <form class="jeneral__add-minus">
+                <input type ="hidden" class="jeneral__sell-price" id="jeneral__sell-price" value="11000">
+              <div class="number__input">
+                <input type="button" value="+" class="jeneral-add" id="jeneral-add"></input>
+                <input type="text" class="jeneral-amount" id="jeneral-amount" disabled size="2"></input>
+                <input type="button" value="-" class="jeneral-minus" id="jeneral-minus"></input>
               </div>
+            </form>
             </li>
 
             <!-- price__info -->
             <li class="price__info">
               <div>
-                <span class="price__text-up"> ￦1,189 </span>
+                <span class="jeneral-price" id="jeneral-price"></span>
                 <div class="price__text-down">
                   <span class="sale">-71%</span>
                   <span>￦4,219</span>
@@ -374,4 +379,210 @@
     </aside>
     <!--ASIDE END-->
   </div>
+
+    <!--option - MODAL BOX START-->
+      <div class="modal__box">
+        <div class="modal__inner">
+          <div class="modal__inner-box">
+            <div class="product">
+              <div class="product__img">
+                <img src="./img/product.png" alt="product">
+              </div>
+              <div class="product__info">
+                <p class="product__info-title">
+                  1/5/10 쌍의 남성용 심플 슬리드 라이너
+                </p>
+              </div>
+            </div>
+            <form>
+             <ul>
+                <li>
+                   <label for="color"></label>
+                   <select id="color">
+                     <option  selected disabled>색상</option>
+                     <option value="color01">빨강</option>
+                     <option value="color02">노랑</option>
+                     <option value="color03">초록</option>
+                   </select>
+                </li>
+                <li>
+                   <label for="size"></label>
+                   <select id="size">
+                     <option selected disabled>사이즈</option>
+                     <option value="size01">XS</option>
+                     <option value="size02">S</option>
+                     <option value="size03" >M</option>
+                     <option value="size04"> L</option>
+                     <option value="size05">XL</option>
+                   </select>
+                </li>
+             </ul>
+            </form>
+            <div class="product-info-origin">
+              <ul>
+                <li class="info-up">
+                <div>
+                  <span>색상 : </span>
+                  <span class="color">흰색</span>
+                </div>
+                <div>
+                  <span>사이즈 : </span>
+                  <span class="size">S</span>
+                </div>
+                  <div class="close-box">
+                    <div class="close">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    </div>
+                </li>
+                <li class="info-down">
+                  <form class="modal__add-minus">
+                    <!-- 숨김/ 판매가격-->
+                     <input type ="hidden" class="modal__sell-price" id="modal__sell-price" value="11000">
+                        <div class="number__input">
+                          <input type="button" value="+" class="modal-add" id="modal-add"></input>
+                          <input type="text" class="modal-amount" id="modal-amount" disabled size="2"></input>
+                          <input type="button" value="-" class="modal-minus" id="modal-minus"></input>
+                        </div>
+                      </form>
+                      <span class="modal-price" id="modal-price"></span>
+                </li>
+              </ul>
+            </div>
+            <div class="product-info-option">
+              <ul>
+                <li class="info-up">
+                <div>
+                  <span>색상 : </span>
+                  <span class="color">흰색</span>
+                </div>
+                <div>
+                  <span>사이즈 : </span>
+                  <span class="size">S</span>
+                </div>
+                  <div class="close-box">
+                    <div class="close">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    </div>
+                </li>
+                <li class="info-down">
+                  <form class="modal__add-minus">
+                    <!-- 숨김/ 판매가격-->
+                     <input type ="hidden" class="sell__price" id="sell__price" value="11000">
+                        <div class="number__input">
+                          <input type="button" value="+" class="add" id="addBtn"></input>
+                          <input type="text" class="amount" id="amount" disabled size="2"></input>
+                          <input type="button" value="-" class="minus" id="minusBtn"></input>
+                        </div>
+                      </form>
+                      <span class="price" id="option__price"></span>
+                </li>
+              </ul>
+            </div>
+            <hr>
+            <div class="final__price">
+              <span>결제금액</span>
+              <span>￦11,000</span>
+            </div>
+            <div class="button">
+              <input type="reset" value="취소"></input>
+              <input type="submit" value="확인"></input>
+            </div>
+          </div>
+          <div class="modal__close-box">
+           
+          <div class="close">
+              <span></span>
+              <span></span>
+           
+          </div>
+          </div>
+          </div>
+        </div>
+    <!--option-MODAL BOX END-->
+
+    <!--address- MODAL BOX START-->
+   <div class="address__modal__box">
+    <div class="address__modal__inner">
+      <div class="address__modal__inner-box">
+     <h2>주소</h2>
+     <button>+ 새 주소 추가</button>
+     <div class="info__password">
+      <i class="fa-solid fa-lock"></i>
+      <p>모든 데이터는 암호화 됩니다.</p>
+     </div>
+     <div class="user__info">
+      <ul>
+        <li>
+          <span class="username">홍길동</span>
+          <span class="usernumber"><span>+82</span>010.1234.5678</span>
+        </li>
+        <li>
+          <span class="zipcode">01234</span>
+          <span class="useraddress">대한민국 서울특별시 강남구</span>
+        </li>
+        <li>
+          <span class="useraddress-option">이젠 아파트 9동 901호</span>
+        </li>
+        <li>
+          <div>
+           <label for="useraddress__check"></label>
+           <input type="checkbox" name="useraddress__check" id="useraddress__check">
+            <span>기본주소</span>
+          </div>
+          <div>
+           <span><i class="fa-regular fa-pen-to-square"></i>편집</span>
+           <span><i class="fa-regular fa-trash-can"></i>삭제</span>
+          </div>       
+        </li>
+      </ul>
+     </div>
+     <div class="user__info-option">
+      <ul>
+        <li>
+          <span class="username">홍길동</span>
+          <span class="usernumber"><span>+82</span>010.1234.5678</span>
+        </li>
+        <li>
+          <span class="zipcode">01234</span>
+          <span class="useraddress">대한민국 서울특별시 강남구</span>
+        </li>
+        <li>
+          <span class="useraddress-option">이젠 아파트 9동 901호</span>
+        </li>
+        <li>
+          <div>
+           <label for="useraddress__check"></label>
+           <input type="checkbox" name="useraddress__check" id="useraddress__check">
+            <span>기본주소</span>
+          </div>
+          <div>
+           <span><i class="fa-regular fa-pen-to-square"></i>편집</span>
+           <span><i class="fa-regular fa-trash-can"></i>삭제</span>
+          </div>       
+        </li>
+      </ul>
+     </div>
+      <div class="address__close-box">
+      <div class="address__close">
+          <span></span>
+          <span></span>
+       
+      </div>
+      </div>
+      </div>
+    </div>
+    <!--address- MODAL BOX END-->
+    
+    <!--address+-MODAL BOX START-->
+
+
+
+    <!--address+-MODAL BOX END-->
+
+
+
 </body>

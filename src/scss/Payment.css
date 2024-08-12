@@ -89,7 +89,7 @@
   letter-spacing: -0.54px;
 }
 
-.text_M_16, aside .checkout__summary .summary__price .summary__item__total p, aside .checkout__summary .summary__item ul li, main .order__info .product__info .product .number__input div span, main .order__info .product__info .product .number__input div button, main .order__info .product__info .product .number__input div, main .section__up article .banner {
+.text_M_16, .modal__box .modal__inner .modal__inner-box .button input, .modal__box .modal__inner .modal__inner-box .product-info-option ul .info-down .number__input .price, .modal__box .modal__inner .modal__inner-box .product-info-option ul .info-down .number__input button, .modal__box .modal__inner .modal__inner-box .product-info-origin ul .info-down form .number__input input[type=text], .modal__box .modal__inner .modal__inner-box .product-info-origin ul .info-down form .number__input input[type=button], aside .checkout__summary .summary__price .summary__item__total p, aside .checkout__summary .summary__item ul li, main .order__info .product__info .product .number__box div input[type=text], main .order__info .product__info .product .number__box div input[type=button], main .order__info .product__info .product .number__box div, main .section__up article .banner {
   font-family: "Pretendard-Regular";
   font-size: 16px;
   font-style: normal;
@@ -97,7 +97,7 @@
   letter-spacing: -0.48px;
 }
 
-.text_S_14, aside .checkout__summary .info, aside .checkout__summary .consent .consent__list li, aside .checkout__summary .summary__price .summary__item__total p span, aside .checkout__summary .summary__item ul .additional__info, .credit .used__credit #used__credit__box, .credit .used__credit label span, .credit .used__credit label, .credit .total__credit #total__credit__box, .credit .total__credit label span, .credit .total__credit label, .coupon .coupon__select #coupon, .coupon .coupon__select label span, .coupon .coupon__select label, main .order__info .product__info .product .product__info .product__text-down, main .order__info .product__info .product .product__info .product__text-up, main .address .delivery__service .delivery__info .delivery__memo li:nth-child(1), main .address .shopping__info .info__down ul li span:nth-child(2), main .address .shopping__info .info__up span:nth-child(2), main .section__up article .section__title {
+.text_S_14, .address__modal__box .address__modal__inner .address__modal__inner-box .user__info-option ul li:nth-child(4) div, .address__modal__box .address__modal__inner .address__modal__inner-box .user__info-option ul li, .address__modal__box .address__modal__inner .address__modal__inner-box .user__info ul li:nth-child(4) div, .address__modal__box .address__modal__inner .address__modal__inner-box .user__info ul li, .address__modal__box .address__modal__inner .address__modal__inner-box .info__password, .modal__box .modal__inner .modal__inner-box .product-info-option ul .info-down .number__input, .modal__box .modal__inner .modal__inner-box .product-info-option ul .info-up, .modal__box .modal__inner .modal__inner-box .product-info-origin ul .info-down form .number__input, .modal__box .modal__inner .modal__inner-box .product-info-origin ul .info-up, aside .checkout__summary .info, aside .checkout__summary .consent .consent__list li, aside .checkout__summary .summary__price .summary__item__total p span, aside .checkout__summary .summary__item ul .additional__info, .credit .used__credit #used__credit__box, .credit .used__credit label span, .credit .used__credit label, .credit .total__credit #total__credit__box, .credit .total__credit label span, .credit .total__credit label, .coupon .coupon__select #coupon, .coupon .coupon__select label span, .coupon .coupon__select label, main .order__info .product__info .product .product__info .product__text-down input, main .order__info .product__info .product .product__info .product__text-down, main .order__info .product__info .product .product__info .product__text-up, main .address .delivery__service .delivery__info .delivery__memo li:nth-child(1), main .address .shopping__info .info__down ul li span:nth-child(2), main .address .shopping__info .info__up span:nth-child(2), main .section__up article .section__title {
   font-family: "Pretendard-Regular";
   font-size: 14px;
   font-style: normal;
@@ -134,7 +134,7 @@
   letter-spacing: -0.66px;
 }
 
-.text_B_L_18, aside .checkout__summary .summary__price .summary__item__total .price, main .order__info .product__info .product .price__info .price__text-up {
+.text_B_L_18, aside .checkout__summary .summary__price .summary__item__total .price, main .order__info .product__info .product .price__info .jeneral-price {
   font-family: "Pretendard-Bold";
   font-size: 18px;
   font-style: bold;
@@ -143,7 +143,7 @@
   letter-spacing: -0.54px;
 }
 
-.text_B_M_16, aside .checkout__summary .checkout__button, .payment__method h3, .credit h3, .coupon h2, main .order__info h3 span, main .order__info h3, main .address .delivery__service span, main .address .shopping__info .info__down ul li span:nth-child(1), main .address .shopping__info .info__up span:nth-child(1) {
+.text_B_M_16, .address__modal__box .address__modal__inner .address__modal__inner-box button, .address__modal__box .address__modal__inner .address__modal__inner-box h2, .modal__box .modal__inner .modal__inner-box .final__price, .modal__box .modal__inner .modal__inner-box .product-info-option ul .info-down .price, .modal__box .modal__inner .modal__inner-box .product-info-origin ul .info-down .modal-price, aside .checkout__summary .checkout__button, .payment__method h3, .credit h3, .coupon h2, main .order__info h3 span, main .order__info h3, main .address .delivery__service span, main .address .shopping__info .info__down ul li span:nth-child(1), main .address .shopping__info .info__up span:nth-child(1) {
   font-family: "Pretendard-Bold";
   font-size: 16px;
   font-style: bold;
@@ -152,7 +152,7 @@
   letter-spacing: -0.48px;
 }
 
-.text_B_S_14, aside .checkout__summary .summary__item ul .additional__info span, main .address .shopping__info .info__down ul li:nth-child(3), main .address .shopping__info .info__down ul li:nth-child(2) {
+.text_B_S_14, .address__modal__box .address__modal__inner .address__modal__inner-box .user__info-option ul li .username, .address__modal__box .address__modal__inner .address__modal__inner-box .user__info ul li .username, .modal__box .modal__inner .modal__inner-box form ul li select, .modal__box .modal__inner .modal__inner-box .product .product__info, aside .checkout__summary .summary__item ul .additional__info span, main .address .shopping__info .info__down ul li:nth-child(3), main .address .shopping__info .info__down ul li:nth-child(2) {
   font-family: "Pretendard-Bold";
   font-size: 14px;
   font-style: bold;
@@ -351,6 +351,9 @@ main {
 main .section__up {
   width: 100%;
 }
+main .section__up article {
+  /*banner*/
+}
 main .section__up article .section__title {
   display: flex;
   gap: 10px;
@@ -372,16 +375,17 @@ main .section__up article .banner {
   width: 100%;
   height: 48px;
   background-color: #e6f3e5;
+  transition: all 0.8s;
   border-radius: 8px;
 }
-main .section__up article .banner .close {
+main .section__up article .banner .banner-close {
   border: none;
   position: relative;
   width: 30px;
   height: 30px;
   background: transparent;
 }
-main .section__up article .banner .close span {
+main .section__up article .banner .banner-close span {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -390,11 +394,14 @@ main .section__up article .banner .close span {
   background-color: #000;
   cursor: pointer;
 }
-main .section__up article .banner .close span:nth-child(1) {
+main .section__up article .banner .banner-close span:nth-child(1) {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
-main .section__up article .banner .close span:nth-child(2) {
+main .section__up article .banner .banner-close span:nth-child(2) {
   transform: translate(-50%, -50%) rotate(45deg);
+}
+main .section__up article .banner.active {
+  display: none;
 }
 main .address {
   display: flex;
@@ -542,7 +549,15 @@ main .order__info .product__info .product .product__info {
 main .order__info .product__info .product .product__info .product__text-down {
   color: #4a4949;
 }
-main .order__info .product__info .product .number__input div {
+main .order__info .product__info .product .product__info .product__text-down input {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+main .order__info .product__info .product .product__info .product__text-down input:hover {
+  color: #9a9a9a;
+}
+main .order__info .product__info .product .number__box div {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -554,7 +569,7 @@ main .order__info .product__info .product .number__input div {
   height: 33px;
   border-radius: 8px;
 }
-main .order__info .product__info .product .number__input div button {
+main .order__info .product__info .product .number__box div input[type=button] {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -566,11 +581,14 @@ main .order__info .product__info .product .number__input div button {
   cursor: pointer;
   cursor: pointer;
 }
-main .order__info .product__info .product .number__input div button:hover {
-  background-color: #f0f0f0;
+main .order__info .product__info .product .number__box div input[type=button]:hover {
+  color: #818181;
 }
-main .order__info .product__info .product .number__input div span {
+main .order__info .product__info .product .number__box div input[type=text] {
+  border: none;
+  outline: none;
   width: 20px;
+  background-color: transparent;
   text-align: center;
 }
 main .order__info .product__info .product .price__info {
@@ -867,4 +885,498 @@ aside .checkout__summary .info ul li div {
 }
 aside .checkout__summary .info ul li div i {
   color: #0a8800;
+}
+
+/*option-modal*/
+.modal__box {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(19, 19, 19, 0.5);
+}
+.modal__box.active {
+  display: block;
+}
+.modal__box .modal__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 90px;
+  box-shadow: 2px 2px 4px #b5b5b5;
+  position: relative;
+  width: 100%;
+  width: 520px;
+  background: #fff;
+  border-radius: 8px;
+}
+.modal__box .modal__inner .modal__inner-box {
+  padding: 50px 70px;
+  width: 100%;
+  height: 100%;
+}
+.modal__box .modal__inner .modal__inner-box .product {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 17px;
+}
+.modal__box .modal__inner .modal__inner-box .product .product__img {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+}
+.modal__box .modal__inner .modal__inner-box .product .product__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.modal__box .modal__inner .modal__inner-box form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.modal__box .modal__inner .modal__inner-box form ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.modal__box .modal__inner .modal__inner-box form ul li {
+  margin-bottom: 17px;
+}
+.modal__box .modal__inner .modal__inner-box form ul li select {
+  padding-left: 10px;
+  border: 1px solid #b5b5b5;
+  width: 100%;
+  height: 40px;
+  color: #9a9a9a;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.modal__box .modal__inner .modal__inner-box form ul li select:hover {
+  border: 1px solid #ff7629;
+}
+.modal__box .modal__inner .modal__inner-box .product-info-origin {
+  margin-bottom: 17px;
+  width: 100%;
+  height: 100px;
+  background: #f6f6f6;
+  border-radius: 8px;
+}
+.modal__box .modal__inner .modal__inner-box .product-info-origin ul {
+  padding: 13px 20px;
+}
+.modal__box .modal__inner .modal__inner-box .product-info-origin ul .info-up {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+  position: relative;
+}
+.modal__box .modal__inner .modal__inner-box .product-info-origin ul .info-up .close-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
+.modal__box .modal__inner .modal__inner-box .product-info-origin ul .info-up .close-box .close {
+  position: relative;
+}
+.modal__box .modal__inner .modal__inner-box .product-info-origin ul .info-up .close-box .close span {
+  display: block;
+  border: 1px solid #101010;
+  position: absolute;
+  bottom: -10px;
+  width: 100%;
+  height: 1px;
+}
+.modal__box .modal__inner .modal__inner-box .product-info-origin ul .info-up .close-box .close span:nth-child(1) {
+  transform: rotate(45deg);
+}
+.modal__box .modal__inner .modal__inner-box .product-info-origin ul .info-up .close-box .close span:nth-child(2) {
+  transform: rotate(-45deg);
+}
+.modal__box .modal__inner .modal__inner-box .product-info-origin ul .info-down {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f6f6f6;
+}
+.modal__box .modal__inner .modal__inner-box .product-info-origin ul .info-down form {
+  display: flex;
+  justify-content: space-between;
+}
+.modal__box .modal__inner .modal__inner-box .product-info-origin ul .info-down form .number__input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 80px;
+  height: 27px;
+  background: #fff;
+  border-radius: 8px;
+}
+.modal__box .modal__inner .modal__inner-box .product-info-origin ul .info-down form .number__input input[type=button] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  width: 30px;
+  height: 34px;
+  background-color: white;
+  color: #b5b5b5;
+  text-align: center;
+  cursor: pointer;
+  cursor: pointer;
+}
+.modal__box .modal__inner .modal__inner-box .product-info-origin ul .info-down form .number__input input[type=button]:hover {
+  color: #818181;
+}
+.modal__box .modal__inner .modal__inner-box .product-info-origin ul .info-down form .number__input input[type=text] {
+  border: none;
+  outline: none;
+  width: 20px;
+  background: transparent;
+  text-align: center;
+  pointer-events: none;
+}
+.modal__box .modal__inner .modal__inner-box .product-info-origin ul .info-down .modal-price {
+  margin-bottom: 0;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  text-align: right;
+}
+.modal__box .modal__inner .modal__inner-box .product-info-option {
+  display: none;
+  margin-bottom: 17px;
+  width: 100%;
+  height: 100px;
+  background: #f6f6f6;
+  border-radius: 8px;
+}
+.modal__box .modal__inner .modal__inner-box .product-info-option ul {
+  padding: 13px 20px;
+}
+.modal__box .modal__inner .modal__inner-box .product-info-option ul .info-up {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+  position: relative;
+}
+.modal__box .modal__inner .modal__inner-box .product-info-option ul .info-up .close-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
+.modal__box .modal__inner .modal__inner-box .product-info-option ul .info-up .close-box .close {
+  position: relative;
+}
+.modal__box .modal__inner .modal__inner-box .product-info-option ul .info-up .close-box .close span {
+  display: block;
+  border: 1px solid #101010;
+  position: absolute;
+  bottom: -10px;
+  width: 100%;
+  height: 1px;
+}
+.modal__box .modal__inner .modal__inner-box .product-info-option ul .info-up .close-box .close span:nth-child(1) {
+  transform: rotate(45deg);
+}
+.modal__box .modal__inner .modal__inner-box .product-info-option ul .info-up .close-box .close span:nth-child(2) {
+  transform: rotate(-45deg);
+}
+.modal__box .modal__inner .modal__inner-box .product-info-option ul .info-down {
+  display: flex;
+  justify-content: space-between;
+  background: #f6f6f6;
+}
+.modal__box .modal__inner .modal__inner-box .product-info-option ul .info-down .number__input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 80px;
+  height: 27px;
+  background: #fff;
+  border-radius: 8px;
+}
+.modal__box .modal__inner .modal__inner-box .product-info-option ul .info-down .number__input button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  width: 30px;
+  height: 34px;
+  background-color: white;
+  color: #b5b5b5;
+  text-align: center;
+  cursor: pointer;
+  cursor: pointer;
+}
+.modal__box .modal__inner .modal__inner-box .product-info-option ul .info-down .number__input button:hover {
+  color: #818181;
+}
+.modal__box .modal__inner .modal__inner-box .product-info-option ul .info-down .number__input .price {
+  width: 20px;
+  text-align: center;
+}
+.modal__box .modal__inner .modal__inner-box .product-info-option.active {
+  display: block;
+}
+.modal__box .modal__inner .modal__inner-box hr {
+  margin-bottom: 13px;
+  border: 1px solid #d4d4d4;
+}
+.modal__box .modal__inner .modal__inner-box .final__price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 26px;
+  padding: 0 20px;
+}
+.modal__box .modal__inner .modal__inner-box .button {
+  display: flex;
+  justify-content: space-between;
+}
+.modal__box .modal__inner .modal__inner-box .button input {
+  border: none;
+  width: 180px;
+  height: 50px;
+  transition: all 0.3s;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.modal__box .modal__inner .modal__inner-box .button input:nth-child(1) {
+  border: 1px solid #b5b5b5;
+  background: #fff;
+}
+.modal__box .modal__inner .modal__inner-box .button input:nth-child(1):hover {
+  background-color: #f6f6f6;
+}
+.modal__box .modal__inner .modal__inner-box .button input:nth-child(2) {
+  background: #ff6d00;
+  color: #fff;
+}
+.modal__box .modal__inner .modal__inner-box .button input:nth-child(2):hover {
+  background: #ff7629;
+}
+.modal__box .modal__close-box {
+  position: absolute;
+  top: 19px;
+  right: 18px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.modal__box .modal__close-box .close {
+  position: relative;
+}
+.modal__box .modal__close-box .close span {
+  display: block;
+  border: 1px solid #101010;
+  position: absolute;
+  bottom: -10px;
+  width: 100%;
+  height: 1px;
+}
+.modal__box .modal__close-box .close span:nth-child(1) {
+  transform: rotate(45deg);
+}
+.modal__box .modal__close-box .close span:nth-child(2) {
+  transform: rotate(-45deg);
+}
+
+/*address-modal*/
+.address__modal__box {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(19, 19, 19, 0.5);
+}
+.address__modal__box.active {
+  display: block;
+}
+.address__modal__box .address__modal__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 90px;
+  box-shadow: 2px 2px 4px #b5b5b5;
+  position: relative;
+  width: 640px;
+  background: #fff;
+  border-radius: 8px;
+}
+.address__modal__box .address__modal__inner .address__modal__inner-box {
+  padding: 50px 70px;
+  width: 100%;
+  height: 100%;
+}
+.address__modal__box .address__modal__inner .address__modal__inner-box h2 {
+  margin-bottom: 26px;
+  text-align: center;
+}
+.address__modal__box .address__modal__inner .address__modal__inner-box button {
+  margin-bottom: 7px;
+  border: none;
+  background: transparent;
+  color: #ff6d00;
+  cursor: pointer;
+}
+.address__modal__box .address__modal__inner .address__modal__inner-box button:hover {
+  color: #ff7629;
+}
+.address__modal__box .address__modal__inner .address__modal__inner-box .info__password {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 24px;
+  color: #0a8800;
+}
+.address__modal__box .address__modal__inner .address__modal__inner-box .user__info {
+  border: 1px solid #d4d4d4;
+  width: 528px;
+  height: 132px;
+  border-radius: 8px;
+  padding: 14px 20px;
+  margin-bottom: 20px;
+}
+.address__modal__box .address__modal__inner .address__modal__inner-box .user__info.active {
+  display: none;
+}
+.address__modal__box .address__modal__inner .address__modal__inner-box .user__info ul {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.address__modal__box .address__modal__inner .address__modal__inner-box .user__info ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+  gap: 21px;
+}
+.address__modal__box .address__modal__inner .address__modal__inner-box .user__info ul li:nth-child(4) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.address__modal__box .address__modal__inner .address__modal__inner-box .user__info ul li:nth-child(4) div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #9a9a9a;
+}
+.address__modal__box .address__modal__inner .address__modal__inner-box .user__info ul li:nth-child(4) div:nth-child(1) {
+  display: flex;
+  gap: 3px;
+}
+.address__modal__box .address__modal__inner .address__modal__inner-box .user__info ul li:nth-child(4) div:nth-child(2) {
+  display: flex;
+  gap: 33px;
+}
+.address__modal__box .address__modal__inner .address__modal__inner-box .user__info ul li:nth-child(4) div:nth-child(2) span {
+  cursor: pointer;
+}
+.address__modal__box .address__modal__inner .address__modal__inner-box .user__info ul li:nth-child(4) div i {
+  margin-right: 8px;
+}
+.address__modal__box .address__modal__inner .address__modal__inner-box .user__info-option {
+  border: 1px solid #d4d4d4;
+  width: 528px;
+  height: 132px;
+  border-radius: 8px;
+  padding: 14px 20px;
+  margin-bottom: 20px;
+  display: none;
+}
+.address__modal__box .address__modal__inner .address__modal__inner-box .user__info-option.active {
+  display: block;
+}
+.address__modal__box .address__modal__inner .address__modal__inner-box .user__info-option ul {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.address__modal__box .address__modal__inner .address__modal__inner-box .user__info-option ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+  gap: 21px;
+}
+.address__modal__box .address__modal__inner .address__modal__inner-box .user__info-option ul li:nth-child(4) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.address__modal__box .address__modal__inner .address__modal__inner-box .user__info-option ul li:nth-child(4) div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #9a9a9a;
+}
+.address__modal__box .address__modal__inner .address__modal__inner-box .user__info-option ul li:nth-child(4) div:nth-child(1) {
+  display: flex;
+  gap: 3px;
+}
+.address__modal__box .address__modal__inner .address__modal__inner-box .user__info-option ul li:nth-child(4) div:nth-child(2) {
+  display: flex;
+  gap: 33px;
+}
+.address__modal__box .address__modal__inner .address__modal__inner-box .user__info-option ul li:nth-child(4) div:nth-child(2) span {
+  cursor: pointer;
+}
+.address__modal__box .address__modal__inner .address__modal__inner-box .user__info-option ul li:nth-child(4) div i {
+  margin-right: 8px;
+}
+.address__modal__box .address__modal__inner .address__modal__inner-box .address__close-box {
+  position: absolute;
+  top: 19px;
+  right: 18px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.address__modal__box .address__modal__inner .address__modal__inner-box .address__close-box .address__close {
+  position: relative;
+}
+.address__modal__box .address__modal__inner .address__modal__inner-box .address__close-box .address__close span {
+  display: block;
+  border: 1px solid #101010;
+  position: absolute;
+  bottom: -10px;
+  width: 100%;
+  height: 1px;
+}
+.address__modal__box .address__modal__inner .address__modal__inner-box .address__close-box .address__close span:nth-child(1) {
+  transform: rotate(45deg);
+}
+.address__modal__box .address__modal__inner .address__modal__inner-box .address__close-box .address__close span:nth-child(2) {
+  transform: rotate(-45deg);
 }

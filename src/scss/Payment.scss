@@ -48,6 +48,7 @@ main {
           gap: 10px;
         }
       }
+      /*banner*/
       .banner {
         display: flex;
         align-items: center;
@@ -57,9 +58,10 @@ main {
         width: 100%;
         height: 48px;
         background-color: map-get($color-background, info-color);
+        transition: all 0.8s;
         border-radius: 8px;
         @extend .text_M_16;
-        .close {
+        .banner-close {
           border: none;
           position: relative;
           width: 30px;
@@ -80,6 +82,9 @@ main {
               transform: translate(-50%, -50%) rotate(45deg);
             }
           }
+        }
+        &.active {
+          display: none;
         }
       }
     }
@@ -260,11 +265,20 @@ main {
           .product__text-down {
             @extend .text_S_14;
             color: map-get($color, color-Neutrals-Grey-700);
+            input {
+              border: none;
+              background-color: transparent;
+              cursor: pointer;
+              @extend .text_S_14;
+              &:hover {
+                color: map-get($color, color-Neutrals-Grey-400);
+              }
+            }
           }
         }
 
         /*number__input */
-        .number__input {
+        .number__box {
           div {
             display: flex;
             align-items: center;
@@ -277,7 +291,7 @@ main {
             height: 33px;
             border-radius: 8px;
             @extend .text_M_16;
-            button {
+            input[type="button"] {
               display: flex;
               align-items: center;
               justify-content: center;
@@ -290,11 +304,14 @@ main {
               cursor: pointer;
               @extend .text_M_16;
               &:hover {
-                background-color: #f0f0f0;
+                color: map-get($color, color-Neutrals-Grey-500);
               }
             }
-            span {
+            input[type="text"] {
+              border: none;
+              outline: none;
               width: 20px;
+              background-color: transparent;
               text-align: center;
               @extend .text_M_16;
             }
@@ -307,7 +324,7 @@ main {
           gap: 6px;
           flex-direction: column;
           text-align: center;
-          .price__text-up {
+          .jeneral-price {
             @extend .text_B_L_18;
           }
           .price__text-down {
@@ -658,6 +675,541 @@ aside {
             margin-bottom: 15px;
             i {
               color: map-get($color-system, info-color);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*option-modal*/
+
+.modal__box {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(19, 19, 19, 0.5);
+  &.active {
+    display: block;
+  }
+  .modal__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 90px;
+    box-shadow: 2px 2px 4px map-get($color, color-Neutrals-Grey-300);
+    position: relative;
+    width: 100%;
+    width: 520px;
+    background: map-get($color, color-White);
+    border-radius: 8px;
+    .modal__inner-box {
+      padding: 50px 70px;
+      width: 100%;
+      height: 100%;
+      .product {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 17px;
+        .product__img {
+          width: 100px;
+          height: 100px;
+          border-radius: 8px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .product__info {
+          @extend .text_B_S_14;
+        }
+      }
+
+      form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        ul {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+
+          li {
+            margin-bottom: 17px;
+            select {
+              padding-left: 10px;
+              border: 1px solid map-get($color, color-Neutrals-Grey-300);
+              width: 100%;
+              height: 40px;
+              color: map-get($color, color-Neutrals-Grey-400);
+              cursor: pointer;
+              border-radius: 8px;
+              &:hover {
+                border: 1px solid map-get($color-hover, primary-color);
+              }
+              @extend .text_B_S_14;
+            }
+          }
+        }
+      }
+
+      .product-info-origin {
+        margin-bottom: 17px;
+        width: 100%;
+        height: 100px;
+        background: map-get($color, color-Neutrals-Grey-100);
+        border-radius: 8px;
+
+        ul {
+          padding: 13px 20px;
+          .info-up {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 15px;
+            position: relative;
+            @extend .text_S_14;
+            .close-box {
+              position: absolute;
+              top: 0;
+              right: 0;
+              width: 14px;
+              height: 14px;
+              cursor: pointer;
+              .close {
+                position: relative;
+                span {
+                  display: block;
+                  border: 1px solid map-get($color, color-Black);
+                  position: absolute;
+                  bottom: -10px;
+                  width: 100%;
+                  height: 1px;
+                  &:nth-child(1) {
+                    transform: rotate(45deg);
+                  }
+                  &:nth-child(2) {
+                    transform: rotate(-45deg);
+                  }
+                }
+              }
+            }
+          }
+          .info-down {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: map-get($color, color-Neutrals-Grey-100);
+            form {
+              display: flex;
+              justify-content: space-between;
+              .number__input {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0;
+                border: 1px solid #ccc;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+                width: 80px;
+                height: 27px;
+                background: map-get($color, color-White);
+                border-radius: 8px;
+                @extend .text_S_14;
+                input[type="button"] {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border: none;
+                  width: 30px;
+                  height: 34px;
+                  background-color: white;
+                  color: map-get($color, color-Neutrals-Grey-300);
+                  text-align: center;
+                  cursor: pointer;
+                  cursor: pointer;
+                  @extend .text_M_16;
+                  &:hover {
+                    color: map-get($color, color-Neutrals-Grey-500);
+                  }
+                }
+                input[type="text"] {
+                  border: none;
+                  outline: none;
+                  width: 20px;
+                  background: transparent;
+                  text-align: center;
+                  pointer-events: none;
+                  @extend .text_M_16;
+                }
+              }
+            }
+            .modal-price {
+              margin-bottom: 0;
+              border: none;
+              outline: none;
+              background-color: transparent;
+              text-align: right;
+              @extend .text_B_M_16;
+            }
+          }
+        }
+      }
+
+      .product-info-option {
+        display: none;
+        margin-bottom: 17px;
+        width: 100%;
+        height: 100px;
+        background: map-get($color, color-Neutrals-Grey-100);
+        border-radius: 8px;
+        ul {
+          padding: 13px 20px;
+          .info-up {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 15px;
+            position: relative;
+            @extend .text_S_14;
+            .close-box {
+              position: absolute;
+              top: 0;
+              right: 0;
+              width: 14px;
+              height: 14px;
+              cursor: pointer;
+              .close {
+                position: relative;
+                span {
+                  display: block;
+                  border: 1px solid map-get($color, color-Black);
+                  position: absolute;
+                  bottom: -10px;
+                  width: 100%;
+                  height: 1px;
+                  &:nth-child(1) {
+                    transform: rotate(45deg);
+                  }
+                  &:nth-child(2) {
+                    transform: rotate(-45deg);
+                  }
+                }
+              }
+            }
+          }
+          .info-down {
+            display: flex;
+            justify-content: space-between;
+            background: map-get($color, color-Neutrals-Grey-100);
+            .number__input {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              padding: 0;
+              border: 1px solid #ccc;
+              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+              overflow: hidden;
+              width: 80px;
+              height: 27px;
+              background: map-get($color, color-White);
+              border-radius: 8px;
+              @extend .text_S_14;
+              button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: none;
+                width: 30px;
+                height: 34px;
+                background-color: white;
+                color: map-get($color, color-Neutrals-Grey-300);
+                text-align: center;
+                cursor: pointer;
+                cursor: pointer;
+                @extend .text_M_16;
+                &:hover {
+                  color: map-get($color, color-Neutrals-Grey-500);
+                }
+              }
+              .price {
+                width: 20px;
+                text-align: center;
+                @extend .text_M_16;
+              }
+            }
+            .price {
+              @extend .text_B_M_16;
+            }
+          }
+        }
+        &.active {
+          display: block;
+        }
+      }
+
+      hr {
+        margin-bottom: 13px;
+        border: 1px solid map-get($color, color-Neutrals-Grey-200);
+      }
+      .final__price {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 26px;
+        padding: 0 20px;
+        @extend .text_B_M_16;
+      }
+
+      .button {
+        display: flex;
+        justify-content: space-between;
+        input {
+          border: none;
+          width: 180px;
+          height: 50px;
+          transition: all 0.3s;
+          cursor: pointer;
+          border-radius: 8px;
+          @extend .text_M_16;
+          &:nth-child(1) {
+            border: 1px solid map-get($color, color-Neutrals-Grey-300);
+            background: map-get($color, color-White);
+            &:hover {
+              background-color: map-get($color, color-Neutrals-Grey-100);
+            }
+          }
+          &:nth-child(2) {
+            background: map-get($color, primary-color);
+            color: map-get($color, color-White);
+            &:hover {
+              background: map-get($color-hover, primary-color);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .modal__close-box {
+    position: absolute;
+    top: 19px;
+    right: 18px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    .close {
+      position: relative;
+      span {
+        display: block;
+        border: 1px solid map-get($color, color-Black);
+        position: absolute;
+        bottom: -10px;
+        width: 100%;
+        height: 1px;
+        &:nth-child(1) {
+          transform: rotate(45deg);
+        }
+        &:nth-child(2) {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+}
+
+/*address-modal*/
+.address__modal__box {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(19, 19, 19, 0.5);
+  &.active {
+    display: block;
+  }
+  .address__modal__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 90px;
+    box-shadow: 2px 2px 4px map-get($color, color-Neutrals-Grey-300);
+    position: relative;
+    width: 640px;
+    background: map-get($color, color-White);
+    border-radius: 8px;
+    .address__modal__inner-box {
+      padding: 50px 70px;
+      width: 100%;
+      height: 100%;
+      h2 {
+        margin-bottom: 26px;
+        text-align: center;
+        @extend .text_B_M_16;
+      }
+      button {
+        margin-bottom: 7px;
+        border: none;
+        background: transparent;
+        color: map-get($color, primary-color);
+        cursor: pointer;
+        @extend .text_B_M_16;
+        &:hover {
+          color: map-get($color-hover, primary-color);
+        }
+      }
+      .info__password {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        margin-bottom: 24px;
+        color: map-get($color-system, info-color);
+        @extend .text_S_14;
+      }
+      .user__info {
+        border: 1px solid map-get($color, color-Neutrals-Grey-200);
+        width: 528px;
+        height: 132px;
+        border-radius: 8px;
+        padding: 14px 20px;
+        margin-bottom: 20px;
+        &.active {
+          display: none;
+        }
+        ul {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 4px;
+            @extend .text_S_14;
+            gap: 21px;
+            .username {
+              @extend .text_B_S_14;
+            }
+            &:nth-child(4) {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              div {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                @extend .text_S_14;
+                color: map-get($color, color-Neutrals-Grey-400);
+                &:nth-child(1) {
+                  display: flex;
+                  gap: 3px;
+                }
+                &:nth-child(2) {
+                  display: flex;
+                  gap: 33px;
+                  span {
+                    cursor: pointer;
+                  }
+                }
+                i {
+                  margin-right: 8px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .user__info-option {
+        border: 1px solid map-get($color, color-Neutrals-Grey-200);
+        width: 528px;
+        height: 132px;
+        border-radius: 8px;
+        padding: 14px 20px;
+        margin-bottom: 20px;
+        display: none;
+        &.active {
+          display: block;
+        }
+        ul {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 4px;
+            @extend .text_S_14;
+            gap: 21px;
+            .username {
+              @extend .text_B_S_14;
+            }
+            &:nth-child(4) {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              div {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                @extend .text_S_14;
+                color: map-get($color, color-Neutrals-Grey-400);
+                &:nth-child(1) {
+                  display: flex;
+                  gap: 3px;
+                }
+                &:nth-child(2) {
+                  display: flex;
+                  gap: 33px;
+                  span {
+                    cursor: pointer;
+                  }
+                }
+                i {
+                  margin-right: 8px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .address__close-box {
+        position: absolute;
+        top: 19px;
+        right: 18px;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        .address__close {
+          position: relative;
+          span {
+            display: block;
+            border: 1px solid map-get($color, color-Black);
+            position: absolute;
+            bottom: -10px;
+            width: 100%;
+            height: 1px;
+            &:nth-child(1) {
+              transform: rotate(45deg);
+            }
+            &:nth-child(2) {
+              transform: rotate(-45deg);
             }
           }
         }

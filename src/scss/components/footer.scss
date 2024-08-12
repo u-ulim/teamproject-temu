@@ -1,0 +1,268 @@
+@import "../config/fonts.scss";
+@import "../config/reset.scss";
+@import "../config/colors.scss";
+@import "../layout/layout.scss";
+@import "../config/image.scss";
+
+#footer {
+  @extend .width_full;
+  padding-top: 47px;
+  background-color: map-get($color, color-Black);
+  color: map-get($color, color-White);
+  .footer-inner {
+    @include width_inner;
+    .footer-menus-wrapper {
+      position: relative;
+      .footer-menus {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 84px;
+        > li {
+          display: flex;
+          gap: 12px;
+          flex-direction: column;
+          h3 {
+            @include text_B_S_14;
+          }
+          ul {
+            @include text_XS_12;
+            display: flex;
+            gap: 12px;
+            flex-direction: column;
+            color: map-get($color, color-Neutrals-Grey-200);
+          }
+        }
+      }
+      .footer-apps {
+        position: absolute;
+        right: 330px;
+        top: 150px;
+        li {
+          display: flex;
+          width: 168px;
+          height: 52px;
+          justify-content: center;
+          gap: 7px;
+          align-items: center;
+          border: 1px solid map-get($color, color-Neutrals-Grey-300);
+          border-radius: 50px;
+          div {
+            width: 99px;
+            span {
+              @include text_XS_12;
+              color: map-get($color, color-Neutrals-Grey-200);
+            }
+            h4 {
+              @include text_B_L_18;
+              line-height: 18px;
+            }
+          }
+        }
+        .footer-apps__app-store {
+          margin-bottom: 10px;
+          i {
+            display: inline-block;
+            @include background_cover;
+            width: 27px;
+            height: 32px;
+            background-image: url("../../../assets/images/footer/app-store.svg");
+          }
+        }
+        .footer-apps__google-play {
+          i {
+            display: inline-block;
+            @include background_cover;
+            width: 27px;
+            height: 27px;
+            background-image: url("../../../assets/images/footer/google-play.svg");
+          }
+        }
+      }
+    }
+    .footer-notice-wrapper {
+      margin-bottom: 73px;
+      h3 {
+        margin-bottom: 10px;
+        @include text_B_S_14;
+      }
+      .footer-notice__desc {
+        display: flex;
+        gap: 188px;
+        @include text_XS_12;
+        .footer-notice__desc-info {
+          display: flex;
+          gap: 5px;
+          flex-direction: column;
+        }
+        .footer-notice__desc-contents {
+          display: flex;
+          gap: 5px;
+          flex-direction: column;
+        }
+      }
+    }
+    .footer-card-wrapper {
+      display: flex;
+      gap: 77px;
+      margin-bottom: 82px;
+      .footer-card__security {
+        h3 {
+          @include text_B_S_14;
+          margin-bottom: 10px;
+        }
+        .footer-card__security__menus {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 6px;
+          li > i {
+            display: inline-block;
+            height: 27px;
+            @include background_cover;
+            &.security__menus__dss-img {
+              width: 43px;
+              background-image: url("../../../assets/images/footer/DSS.png");
+            }
+            &.security__menus__visa-img {
+              width: 31px;
+              background-image: url("../../../assets/images/footer/visa.png");
+            }
+            &.security__menus__idcheck-img {
+              width: 66px;
+              background-image: url("../../../assets/images/footer/id_check.png");
+            }
+            &.security__menus__safekey-img {
+              width: 66px;
+              background-image: url("../../../assets/images/footer/safekey.png");
+            }
+            &.security__menus__protect-img {
+              width: 42px;
+              background-image: url("../../../assets/images/footer/protectBuy.png");
+            }
+            &.security__menus__jcb-img {
+              width: 42px;
+              background-image: url("../../../assets/images/footer/JCB.png");
+            }
+            &.security__menus__trusted-img {
+              width: 66px;
+              background-image: url("../../../assets/images/footer/Thrusted.png");
+            }
+          }
+        }
+      }
+      .footer-card__payment {
+        h3 {
+          @include text_B_S_14;
+          margin-bottom: 10px;
+        }
+        .footer-card__payment__menus {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 6px;
+          li {
+            display: inline-block;
+            width: 40px;
+            height: 27px;
+            @include background_cover;
+          }
+          li:nth-child(1) {
+            background-image: url("../../../assets/images/footer/pay_01.png");
+          }
+          li:nth-child(2) {
+            background-image: url("../../../assets/images/footer/pay_02.png");
+          }
+          li:nth-child(3) {
+            background-image: url("../../../assets/images/footer/pay_03.png");
+          }
+          li:nth-child(4) {
+            background-image: url("../../../assets/images/footer/pay_04.png");
+          }
+          li:nth-child(5) {
+            background-image: url("../../../assets/images/footer/pay_05.png");
+          }
+          li:nth-child(6) {
+            background-image: url("../../../assets/images/footer/pay_06.png");
+          }
+          li:nth-child(7) {
+            background-image: url("../../../assets/images/footer/pay_07.png");
+          }
+          li:nth-child(8) {
+            background-image: url("../../../assets/images/footer/pay_08.png");
+          }
+          li:nth-child(9) {
+            background-image: url("../../../assets/images/footer/pay_09.png");
+          }
+          li:nth-child(10) {
+            background-image: url("../../../assets/images/footer/pay_10.png");
+          }
+          li:nth-child(11) {
+            background-image: url("../../../assets/images/footer/pay_11.png");
+          }
+          li:nth-child(12) {
+            background-image: url("../../../assets/images/footer/pay_12.png");
+          }
+          li:nth-child(13) {
+            background-image: url("../../../assets/images/footer/pay_13.png");
+          }
+          li:nth-child(14) {
+            background-image: url("../../../assets/images/footer/pay_14.png");
+          }
+          li:nth-child(15) {
+            background-image: url("../../../assets/images/footer/pay_15.png");
+          }
+          li:nth-child(16) {
+            background-image: url("../../../assets/images/footer/pay_16.png");
+          }
+          li:nth-child(17) {
+            background-image: url("../../../assets/images/footer/pay_17.png");
+          }
+          li:nth-child(18) {
+            background-image: url("../../../assets/images/footer/pay_18.png");
+          }
+          li:nth-child(19) {
+            background-image: url("../../../assets/images/footer/pay_19.png");
+          }
+          li:nth-child(20) {
+            background-image: url("../../../assets/images/footer/pay_20.png");
+          }
+          li:nth-child(21) {
+            background-image: url("../../../assets/images/footer/pay_21.png");
+          }
+          li:nth-child(22) {
+            background-image: url("../../../assets/images/footer/pay_22.png");
+          }
+          li:nth-child(23) {
+            background-image: url("../../../assets/images/footer/pay_23.png");
+          }
+        }
+      }
+    }
+    .footer-privacy-wrapper {
+      height: 74px;
+      div {
+        .footer-privacy__menus {
+          display: flex;
+          width: 550px;
+          margin: 0 auto;
+          justify-content: space-between;
+          @include text_XS_12;
+          color: map-get($color, color-Neutrals-Grey-400);
+          li {
+            display: flex;
+            align-items: center;
+            i {
+              display: inline-block;
+              width: 22px;
+              height: 10px;
+              @include background_cover;
+              background-image: url("../../..//assets/images/footer/check.png");
+              margin-left: 4px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1384px) {
+}

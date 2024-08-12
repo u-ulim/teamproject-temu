@@ -4,22 +4,22 @@
 @import "./layout/layout.scss";
 
 .hi {
-  @extend .heading_XL_48;
-  @extend .width_full;
+  @include heading_XL_48;
+  @include width_full;
   color: map-get($color, secondary-color);
 }
 
 /*header*/
 
 header {
-  @extend .width_full;
+  @include width_full;
   margin-bottom: 23px;
   border-bottom: 1px solid map-get($color, color-Neutrals-Grey-300);
   height: 82px;
 }
 
 .container {
-  @extend .width_inner;
+  @include width_inner;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
@@ -41,7 +41,7 @@ main {
         gap: 10px;
         margin-bottom: 28px;
         padding-left: 6px;
-        @extend .text_S_14;
+        @include text_S_14;
         .category {
           color: map-get($color, color-Neutrals-Grey-500);
         }
@@ -60,9 +60,10 @@ main {
         width: 100%;
         height: 48px;
         background-color: map-get($color-background, info-color);
+        transition: all 0.8s;
         border-radius: 8px;
-        @extend .text_M_16;
-        .close {
+        @include text_M_16;
+        .banner-close {
           border: none;
           position: relative;
           width: 30px;
@@ -83,6 +84,9 @@ main {
               transform: translate(-50%, -50%) rotate(45deg);
             }
           }
+        }
+        &.active {
+          display: none;
         }
       }
 
@@ -138,7 +142,7 @@ main {
             }
           }
           span {
-            @extend .text_B_M_16;
+            @include text_B_M_16;
           }
         }
         button {
@@ -149,7 +153,7 @@ main {
           background-color: white;
           color: map-get($color, color-Neutrals-Grey-700);
           cursor: pointer;
-          @extend .text_M_16;
+          @include text_M_16;
         }
       }
     }
@@ -161,8 +165,8 @@ main {
       flex-direction: column;
       .empty__product-up {
         display: flex;
-        justify-content: center;
         gap: 20px;
+        justify-content: center;
         i.fa-cart-shopping {
           font-size: 50px;
           color: map-get($color, color-Neutrals-Grey-400);
@@ -173,11 +177,11 @@ main {
           flex-direction: column;
           margin-bottom: 20px;
           .product__text-up {
-            @extend .text_B_M_16;
+            @include text_B_M_16;
             color: map-get($color, color-Black);
           }
           .product__text-down {
-            @extend .text_S_14;
+            @include text_S_14;
             color: map-get($color, color-Neutrals-Grey-400);
           }
         }
@@ -193,7 +197,7 @@ main {
         transition: all 0.3s;
         cursor: pointer;
         border-radius: 8px;
-        @extend .text_B_M_16;
+        @include text_B_M_16;
         &:hover {
           background-color: map-get($color-hover, primary-color);
         }
@@ -216,164 +220,10 @@ main {
       left: 0;
       width: 100%;
       h2 {
-        @extend .text_B_L_18;
+        @include text_B_L_18;
       }
     }
     .section__down-product {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      /*product*/
-      .product-up {
-        display: flex;
-        gap: 54.99px;
-        margin-bottom: 36px;
-        .product {
-          li {
-            a {
-              img {
-                margin-bottom: 12.69px;
-                width: 199.31px;
-                height: 199.31px;
-                border-radius: 8px;
-              }
-            }
-            .first__text {
-              @extend .text_S_14;
-            }
-            .second__text {
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              .price {
-                display: flex;
-                gap: 5px;
-                align-items: center;
-                justify-content: center;
-                .sale {
-                  @extend .text_B_XS_12;
-                  color: map-get($color, primary-color);
-                }
-                span {
-                  @extend .text_B_L_18;
-                }
-              }
-              i {
-                padding: 5px 8px;
-                border: 1px solid map-get($color, secondary-color);
-                color: map-get($color, secondary-color);
-                cursor: pointer;
-                border-radius: 8px;
-              }
-            }
-            .third__text {
-              display: flex;
-              gap: 5px;
-              align-items: center;
-              @extend .text_B_S_14;
-              div {
-                color: map-get($color, secondary-color);
-              }
-              .review {
-                color: map-get($color, color-Neutrals-Grey-600);
-              }
-            }
-            .last__text {
-              display: flex;
-              gap: 9px;
-              align-items: center;
-              @extend .text_XS_12;
-              span {
-                &:nth-child(1) {
-                  padding: 1px 4px;
-                  background: map-get($color, primary-color);
-                  color: map-get($color, color-White);
-                  border-radius: 8px;
-                }
-                &:nth-child(2) {
-                  color: map-get($color, primary-color);
-                }
-              }
-            }
-          }
-        }
-      }
-      .product-down {
-        display: flex;
-        gap: 54.99px;
-        margin-bottom: 36px;
-        margin-bottom: 108px;
-        .product {
-          li {
-            a {
-              img {
-                margin-bottom: 12.69px;
-                width: 199.31px;
-                height: 199.31px;
-                border-radius: 8px;
-              }
-            }
-            .first__text {
-              @extend .text_S_14;
-            }
-            .second__text {
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              .price {
-                display: flex;
-                gap: 5px;
-                align-items: center;
-                justify-content: center;
-                .sale {
-                  @extend .text_B_XS_12;
-                  color: map-get($color, primary-color);
-                }
-                span {
-                  @extend .text_B_L_18;
-                }
-              }
-              i {
-                padding: 5px 8px;
-                border: 1px solid map-get($color, secondary-color);
-                color: map-get($color, secondary-color);
-                cursor: pointer;
-                border-radius: 8px;
-              }
-            }
-            .third__text {
-              display: flex;
-              gap: 5px;
-              align-items: center;
-              @extend .text_B_S_14;
-              div {
-                color: map-get($color, secondary-color);
-              }
-              .review {
-                color: map-get($color, color-Neutrals-Grey-600);
-              }
-            }
-            .last__text {
-              display: flex;
-              gap: 9px;
-              align-items: center;
-              @extend .text_XS_12;
-              span {
-                &:nth-child(1) {
-                  padding: 1px 4px;
-                  background: map-get($color, primary-color);
-                  color: map-get($color, color-White);
-                  border-radius: 8px;
-                }
-                &:nth-child(2) {
-                  color: map-get($color, primary-color);
-                }
-              }
-            }
-          }
-        }
-      }
       button {
         display: flex;
         align-items: center;
@@ -419,7 +269,7 @@ aside {
           align-items: center;
           justify-content: space-between;
           padding-bottom: 34.5px;
-          @extend .text_M_16;
+          @include text_M_16;
           .price {
             color: map-get($color, color-Neutrals-Grey-700);
           }
@@ -431,9 +281,9 @@ aside {
           display: flex;
           justify-content: flex-end;
           padding-bottom: 10px;
-          @extend .text_S_14;
+          @include text_S_14;
           span {
-            @extend .text_B_S_14;
+            @include text_B_S_14;
           }
         }
       }
@@ -449,13 +299,13 @@ aside {
           margin-bottom: 10px;
           padding-top: 20px;
           p {
-            @extend .text_M_16;
+            @include text_M_16;
             span {
-              @extend .text_S_14;
+              @include text_S_14;
             }
           }
           .price {
-            @extend .text_B_L_18;
+            @include text_B_L_18;
           }
         }
         .tax__info {
@@ -464,7 +314,7 @@ aside {
           align-items: center;
           justify-content: flex-end;
           margin-bottom: 23.5px;
-          @extend .text_XS_12;
+          @include text_XS_12;
           .tax__label {
             display: block;
             border: 1px solid map-get($color-system, info-color);
@@ -491,7 +341,7 @@ aside {
       color: map-get($color, color-White);
       text-align: center;
       border-radius: 8px;
-      @extend .text_B_M_16;
+      @include text_B_M_16;
       &:hover {
         background-color: map-get($color-hover, primary-color);
         cursor: pointer;
@@ -500,7 +350,7 @@ aside {
 
     /*info*/
     .info {
-      @extend .text_S_14;
+      @include text_S_14;
       ul {
         display: flex;
         align-items: center;
@@ -520,4 +370,83 @@ aside {
 footer {
   width: 1382px;
   height: 752px;
+}
+
+@media (max-width: 768px) {
+  header {
+    margin-bottom: 0;
+    border: none;
+    width: 100%;
+    height: 45px;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  main {
+    width: 100%;
+    .section__up {
+      article {
+        .section__title {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 41px;
+          width: 100%;
+          height: 48px;
+          text-align: center;
+          .category {
+            display: none;
+          }
+          .select__category {
+            width: 100%;
+            @include text_M_16;
+
+            span {
+              display: none;
+            }
+          }
+        }
+        .banner {
+          display: none;
+        }
+        .toolbar {
+          display: none;
+        }
+        .empty__product {
+          .empty__product-up {
+            margin-bottom: 20px;
+          }
+          .popular-btn {
+            height: 50px;
+            margin-bottom: 41px;
+          }
+        }
+      }
+    }
+
+    .section__down {
+      width: 100%;
+      padding: 0 12px;
+      .section__down-title {
+        h2 {
+          @include text_B_M_16;
+        }
+      }
+    }
+  }
+
+  aside {
+    display: none;
+  }
+
+  footer {
+    width: 100%;
+    height: 287px;
+  }
 }

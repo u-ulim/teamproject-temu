@@ -3,7 +3,8 @@
   font-family: "Pretendard-Regular";
   font-style: normal;
   font-weight: 400;
-  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
 }
 /* HEADING */
 /* -2% = 0.02 * 'n'px */ /* -3% = 0.03 * 'n'px */
@@ -91,7 +92,9 @@
   letter-spacing: -0.48px;
 }
 
-.text_S_14, #header nav .nav-right .nav-right__menus, #header nav .nav-left .nav-left__menus {
+.text_S_14,
+#header nav .nav-right .nav-right__menus,
+#header nav .nav-left .nav-left__menus {
   font-family: "Pretendard-Regular";
   font-size: 14px;
   font-style: normal;
@@ -142,7 +145,8 @@
   letter-spacing: -0.48px;
 }
 
-.text_B_S_14, #header nav .nav-right .nav-right__menus li .menu__language-text {
+.text_B_S_14,
+#header nav .nav-right .nav-right__menus li .menu__language-text {
   font-family: "Pretendard-Bold";
   font-size: 14px;
   font-style: bold;
@@ -301,17 +305,24 @@ table {
 }
 
 /* VARIABLES */
-.width_full, #header .header-top-wrapper, #header {
+.width_full,
+#header .header-top-wrapper,
+#header {
   width: 100%;
 }
 
-.width_inner, #header nav, #header .header-top-wrapper .header-top {
+.width_inner,
+#header nav,
+#header .header-top-wrapper .header-top {
   width: 1384px;
   padding: 0px 15px 0px 15px;
   margin: 0 auto;
 }
 
-.background_cover, #header nav .nav-right .nav-right__menus li i, #header nav .nav-left .nav__input-wrapper i, #header nav .nav-left .nav-left__menus li i {
+.background_cover,
+#header nav .nav-right .nav-right__menus li i,
+#header nav .nav-left .nav__input-wrapper i,
+#header nav .nav-left .nav-left__menus li i {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

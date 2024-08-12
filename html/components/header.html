@@ -3,7 +3,8 @@
     src="https://kit.fontawesome.com/ccc6dd49b3.js"
     crossorigin="anonymous"
   ></script>
-  <link rel="stylesheet" href="../../src/scss/header.css" />
+  <link rel="stylesheet" href="../../src/scss/components/header.css" />
+  <script defer src="../../src/json/category-list.js"></script>
 </head>
 <header id="header">
   <div class="header-top-wrapper">
@@ -14,23 +15,341 @@
       <a href="#" class="nav-left__logo"></a>
       <ul class="nav-left__menus">
         <li>
-          <i class="menu__bestseller-ico"></i>
-          <a href="#">베스트셀러</a>
+          <div class="nav-left__link-ico">
+            <i class="menu__bestseller-ico"></i>
+            <a href="#">베스트셀러</a>
+          </div>
         </li>
         <li>
-          <i class="menu__star-ico"></i>
-          <a href="#">별점 5점</a>
+          <div class="nav-left__link-ico">
+            <i class="menu__star-ico"></i>
+            <a href="#">별점 5점</a>
+          </div>
         </li>
         <li>
-          <i class="menu__shop-ico"></i>
-          <a href="#">일주년</a>
+          <div class="nav-left__link-ico">
+            <i class="menu__shop-ico"></i>
+            <a href="#">일주년</a>
+          </div>
         </li>
         <li>
-          <a href="#">신상품</a>
+          <div class="nav-left__link-ico">
+            <a href="#">신상품</a>
+          </div>
         </li>
-        <li>
-          <a href="#">카테고리</a>
-          <i class="fa-solid fa-chevron-down"></i>
+        <li class="nav-menu__category">
+          <div class="nav-left__link-ico">
+            <a href="#">카테고리</a>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="submenu-wrapper">
+            <div class="submenu">
+              <div class="submenu-tabs">
+                <ul>
+                  <li class="active" data-tab="tab1">
+                    <span>추천</span><i class="fa-solid fa-chevron-right"></i>
+                  </li>
+                  <li data-tab="tab2">
+                    <span>홈 & 주방</span
+                    ><i class="fa-solid fa-chevron-right"></i>
+                  </li>
+                  <li data-tab="tab3">
+                    <span>여성의류</span
+                    ><i class="fa-solid fa-chevron-right"></i>
+                  </li>
+                  <li data-tab="tab4">
+                    <span>여성화</span><i class="fa-solid fa-chevron-right"></i>
+                  </li>
+                </ul>
+              </div>
+              <div class="submenu-content">
+                <div id="tab1" class="content active">
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <div>
+                          <img
+                            src="../../assets/images/category/a-image-01.webp"
+                            alt="img"
+                          />
+                        </div>
+
+                        <span>인형</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>
+                          <img
+                            src="../../assets/images/category/a-image-02.webp"
+                            alt="img"
+                          />
+                        </div>
+
+                        <span>액세서리</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>
+                          <img
+                            src="../../assets/images/category/a-image-03.webp"
+                            alt="img"
+                          />
+                        </div>
+
+                        <span>여성원피스</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>
+                          <img
+                            src="../../assets/images/category/a-image-04.webp"
+                            alt="img"
+                          />
+                        </div>
+
+                        <span>장식</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>
+                          <img
+                            src="../../assets/images/category/b-image-01.webp"
+                            alt="img"
+                          />
+                        </div>
+
+                        <span>침구</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>
+                          <img
+                            src="../../assets/images/category/b-image-02.webp"
+                            alt="img"
+                          />
+                        </div>
+
+                        <span>가구</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>
+                          <img
+                            src="../../assets/images/category/b-image-02.webp"
+                            alt="img"
+                          />
+                        </div>
+
+                        <span>가구</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>
+                          <img
+                            src="../../assets/images/category/b-image-02.webp"
+                            alt="img"
+                          />
+                        </div>
+
+                        <span>가구</span>
+                      </a>
+                    </li>
+                    <!-- 추가 항목들 -->
+                  </ul>
+                </div>
+                <div id="tab2" class="content">
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <div>
+                          <img
+                            src="../../assets/images/category/b-image-03.webp"
+                            alt="img"
+                          />
+                        </div>
+
+                        <span>홈 데코 제품</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>
+                          <img
+                            src="../../assets/images/category/b-image-01.webp"
+                            alt="img"
+                          />
+                        </div>
+
+                        <span>침구</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>
+                          <img
+                            src="../../assets/images/category/b-image-01.webp"
+                            alt="img"
+                          />
+                        </div>
+
+                        <span>가구</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>
+                          <img
+                            src="../../assets/images/category/b-image-01.webp"
+                            alt="img"
+                          />
+                        </div>
+
+                        <span>주방용품</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>
+                          <img
+                            src="../../assets/images/category/b-image-01.webp"
+                            alt="img"
+                          />
+                        </div>
+
+                        <span>조리 도구</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>
+                          <img
+                            src="../../assets/images/category/b-image-01.webp"
+                            alt="img"
+                          />
+                        </div>
+
+                        <span>조명</span>
+                      </a>
+                    </li>
+                    <!-- 추가 항목들 -->
+                  </ul>
+                </div>
+                <div id="tab3" class="content">
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <div>
+                          <img
+                            src="../../assets/images/category/b-image-01.webp"
+                            alt="img"
+                          />
+                        </div>
+
+                        <span>드레스</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>
+                          <img
+                            src="../../assets/images/category/b-image-01.webp"
+                            alt="img"
+                          />
+                        </div>
+
+                        <span>블라우스</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>
+                          <img
+                            src="../../assets/images/category/b-image-01.webp"
+                            alt="img"
+                          />
+                        </div>
+
+                        <span>팬츠</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>
+                          <img
+                            src="../../assets/images/category/b-image-01.webp"
+                            alt="img"
+                          />
+                        </div>
+
+                        <span>재킷</span>
+                      </a>
+                    </li>
+                    <!-- 추가 항목들 -->
+                  </ul>
+                </div>
+                <div id="tab4" class="content">
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <div>
+                          <img
+                            src="../../assets/images/category/b-image-01.webp"
+                            alt="img"
+                          />
+                        </div>
+
+                        <span>힐</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>
+                          <img
+                            src="../../assets/images/category/b-image-01.webp"
+                            alt="img"
+                          />
+                        </div>
+
+                        <span>플랫 슈즈</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>
+                          <img
+                            src="../../assets/images/category/b-image-01.webp"
+                            alt="img"
+                          />
+                        </div>
+
+                        <span>스니커즈</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>
+                          <img
+                            src="../../assets/images/category/b-image-01.webp"
+                            alt="img"
+                          />
+                        </div>
+
+                        <span>부츠</span>
+                      </a>
+                    </li>
+                    <!-- 추가 항목들 -->
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </li>
       </ul>
       <div class="nav__input-wrapper">
@@ -58,4 +377,20 @@
       </ul>
     </div>
   </nav>
+  <div class="mobile-menu">
+    <ul class="mobile-menus">
+      <li><a href="#">추천</a></li>
+      <li><a href="#">여성 의류</a></li>
+      <li><a href="#">남성 의류</a></li>
+      <li><a href="#">유아</a></li>
+      <li><a href="#">가방</a></li>
+      <li><a href="#">전자기기</a></li>
+      <li><a href="#">홈&주방</a></li>
+      <li><a href="#">여성화</a></li>
+      <li><a href="#">남성화</a></li>
+      <li><a href="#">남성 플러스 사이즈</a></li>
+      <li><a href="#">스포츠&아웃도어</a></li>
+      <li><a href="#">주얼리&액세서리</a></li>
+    </ul>
+  </div>
 </header>
