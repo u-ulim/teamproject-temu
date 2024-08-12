@@ -1,204 +1,209 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- fontawesome -->
+    <script
+      defer
+      src="https://kit.fontawesome.com/fc51ef092a.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Material Symbols -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <title>TEMU</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- fontawesome -->
-  <script defer src="https://kit.fontawesome.com/fc51ef092a.js" crossorigin="anonymous"></script>
-  <!-- Material Symbols -->
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-  <title>TEMU</title>
+    <!-- CUSTOM CSS, JS-->
+    <link rel="stylesheet" href="./src/scss/style.css" />
+    <link rel="stylesheet" href="./src/scss/components/product-list.css" />
 
-  <!-- CUSTOM CSS, JS-->
-  <link rel="stylesheet" href="./src/scss/style.css" />
-  <link rel="stylesheet" href="./src/scss/components/product-list.css" />
+    <script defer src="./src/js/index.js"></script>
+    <script defer src="./src/json/product-list.js"></script>
 
-  <script defer src="./src/js/index.js"></script>
-  <script defer src="./src/json/product-list.js"></script>
+    <!-- <script defer type="module" src="/src/json/script.js"></script> -->
+  </head>
 
-  <!-- <script defer type="module" src="/src/json/script.js"></script> -->
-</head>
+  <body>
+    <!-- HEADER START -->
+    <header></header>
+    <!-- HEADER END -->
 
-<body>
-  <!-- HEADER START -->
-  <header></header>
-  <!-- HEADER END -->
-
-  <!-- MAIN START -->
-  <main id="main">
-    <div class="main__wrapper">
-      <div class="main__banner"></div>
-      <div class="main__slide__wrapper">
-        <div class="main__slide">
-          <div class="main__slide-pagination">
-            <p>1/5 +</p>
+    <!-- MAIN START -->
+    <main id="main">
+      <div class="main__wrapper">
+        <div class="main__banner"></div>
+        <div class="main__slide__wrapper">
+          <div class="main__slide">
+            <div class="main__slide-pagination">
+              <p>1/5 +</p>
+            </div>
+          </div>
+          <div class="main__slide-btn">
+            <div class="main__slide-btn-right">
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div class="main__slide-btn-left">
+              <i class="fa-solid fa-chevron-left"></i>
+            </div>
           </div>
         </div>
-        <div class="main__slide-btn-right">
-          <i class="fa-solid fa-chevron-right"></i>
-        </div>
-        <div class="main__slide-btn-left">
-          <i class="fa-solid fa-chevron-left"></i>
-        </div>
       </div>
-    </div>
-  </main>
-  <!-- MAIN END -->
+    </main>
+    <!-- MAIN END -->
 
-  <!-- PROMISE START -->
-  <section id="promise">
-    <div class="promise__wrapper">
-      <div class="promise-top">
-        <div class="promise-top-left">
-          <i class="promise__shield"></i>
-          <a href="#">Temu의 공약</a>
+    <!-- PROMISE START -->
+    <section id="promise">
+      <div class="promise__wrapper">
+        <div class="promise-top">
+          <div class="promise-top-left">
+            <i class="promise__shield"></i>
+            <a href="#">Temu의 공약</a>
+          </div>
+          <div class="promise-top-right">
+            <div>
+              <i class="promise__lock"></i>
+              <a href="#">개인 정보 보호</a>
+            </div>
+            <p>|</p>
+            <div>
+              <i class="promise__card"></i>
+              <a href="#">안전한 결제</a>
+            </div>
+            <p>|</p>
+            <div>
+              <i class="promise__truck"></i>
+              <a href="#">배송 보장</a>
+            </div>
+            <i class="fa-solid fa-angle-right"></i>
+          </div>
         </div>
-        <div class="promise-top-right">
-          <div>
-            <i class="promise__lock"></i>
-            <a href="#">개인 정보 보호</a>
+        <div class="promise-bottom">
+          <div class="promise__bottom__left">
+            <i class="fa-solid fa-bell"></i>
+            <a href="#">
+              보안 알림 : Temu는 SMS나 이메일을 통해 추가 비용을 요구하지 않으니
+              스팸 메세지와 링크에 주의하세요.</a
+            >
           </div>
-          <p>|</p>
-          <div>
-            <i class="promise__card"></i>
-            <a href="#">안전한 결제</a>
+          <div class="promise__bottom__right">
+            <a href="#">보기</a>
+            <i class="fa-solid fa-angle-right"></i>
           </div>
-          <p>|</p>
-          <div>
-            <i class="promise__truck"></i>
-            <a href="#">배송 보장</a>
-          </div>
-          <i class="fa-solid fa-angle-right"></i>
         </div>
       </div>
-      <div class="promise-bottom">
-        <div class="promise__bottom__left">
-          <i class="fa-solid fa-bell"></i>
-          <a href="#">
-            보안 알림 : Temu는 SMS나 이메일을 통해 추가 비용을 요구하지 않으니
-            스팸 메세지와 링크에 주의하세요.</a>
-        </div>
-        <div class="promise__bottom__right">
-          <a href="#">보기</a>
-          <i class="fa-solid fa-angle-right"></i>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- PROMISE END -->
+    </section>
+    <!-- PROMISE END -->
 
-  <!-- CART START -->
-  <section id="cart">
-    <div class="cart__wrapper">
-      <div class="cart__item-first">
-        <div class="cart__item-header">
-          <p>장바구니의 <span>7개</span> 상품 품절 임박!</p>
-          <i class="fa-solid fa-chevron-right"></i>
-        </div>
-        <ul class="cart__item-list">
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
-      <div class="cart__item-second">
-        <div class="cart__item-header">
-          <p>
-            장바구니의 상품 <span>3개</span>에 대한 혜택이 오늘 종료됩니다!
-          </p>
-          <i class="fa-solid fa-chevron-right"></i>
-        </div>
-        <ul class="cart__item-list">
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
-      <div class="cart__item-third">
-        <div class="cart__item-header">
-          <p>지금 결제하면 할인이 더!</p>
-          <i class="fa-solid fa-chevron-right"></i>
-        </div>
-        <ul class="cart__item-list">
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-  <!-- CART END -->
-
-  <!-- CATEGORY START -->
-  <section id="category">
-    <div class="category__wrapper">
-      <div class="category__title">
-        <div class="category__title-img"></div>
-        <p>카테고리</p>
-      </div>
-      <div class="category__list__container">
-        <div class="category__btn">
-          <div class="category__slide-btn-right">
+    <!-- CART START -->
+    <section id="cart">
+      <div class="cart__wrapper">
+        <div class="cart__item-first">
+          <div class="cart__item-header">
+            <p>장바구니의 <span>7개</span> 상품 품절 임박!</p>
             <i class="fa-solid fa-chevron-right"></i>
           </div>
-          <div class="category__slide-btn-left">
-            <i class="fa-solid fa-chevron-left"></i>
-          </div>
+          <ul class="cart__item-list">
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
         </div>
-        <ul class="category__list">
-          <li>
-            <div class="category__list-img"></div>
-            <span>전자기기</span>
-          </li>
-          <li>
-            <div class="category__list-img"></div>
-            <span>사무용품</span>
-          </li>
-          <li>
-            <div class="category__list-img"></div>
-            <span>여성의류</span>
-          </li>
-          <li>
-            <div class="category__list-img"></div>
-            <span>인형 & 액세서리</span>
-          </li>
-          <li>
-            <div class="category__list-img"></div>
-            <span>욕실 용품</span>
-          </li>
-          <li>
-            <div class="category__list-img"></div>
-            <span>주방 용품</span>
-          </li>
-          <li>
-            <div class="category__list-img"></div>
-            <span>홈 데코 용품</span>
-          </li>
-        </ul>
+        <div class="cart__item-second">
+          <div class="cart__item-header">
+            <p>
+              장바구니의 상품 <span>3개</span>에 대한 혜택이 오늘 종료됩니다!
+            </p>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <ul class="cart__item-list">
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+        <div class="cart__item-third">
+          <div class="cart__item-header">
+            <p>지금 결제하면 할인이 더!</p>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <ul class="cart__item-list">
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </section>
-  <!-- CATEGORY END -->
+    </section>
+    <!-- CART END -->
 
-  <!-- PRODUCT START -->
-  <section id="product">
-    <div class="product__wrapper">
-      <div class="product__title">
-        <div class="product__title-img"></div>
-        <p>상품 둘러보기</p>
+    <!-- CATEGORY START -->
+    <section id="category">
+      <div class="category__wrapper">
+        <div class="category__title">
+          <div class="category__title-img"></div>
+          <p>카테고리</p>
+        </div>
+        <div class="category__list__container">
+          <div class="category__btn">
+            <div class="category__slide-btn-right">
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div class="category__slide-btn-left">
+              <i class="fa-solid fa-chevron-left"></i>
+            </div>
+          </div>
+          <ul class="category__list">
+            <li>
+              <div class="category__list-img"></div>
+              <span>전자기기</span>
+            </li>
+            <li>
+              <div class="category__list-img"></div>
+              <span>사무용품</span>
+            </li>
+            <li>
+              <div class="category__list-img"></div>
+              <span>여성의류</span>
+            </li>
+            <li>
+              <div class="category__list-img"></div>
+              <span>인형 & 액세서리</span>
+            </li>
+            <li>
+              <div class="category__list-img"></div>
+              <span>욕실 용품</span>
+            </li>
+            <li>
+              <div class="category__list-img"></div>
+              <span>주방 용품</span>
+            </li>
+            <li>
+              <div class="category__list-img"></div>
+              <span>홈 데코 용품</span>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <div id="product-list">
+    </section>
+    <!-- CATEGORY END -->
 
-    </div>
-  </section>
-  <!-- PRODUCT END -->
+    <!-- PRODUCT START -->
+    <section id="product">
+      <div class="product__wrapper">
+        <div class="product__title">
+          <div class="product__title-img"></div>
+          <p>상품 둘러보기</p>
+        </div>
+      </div>
+      <div id="product-list"></div>
+    </section>
+    <!-- PRODUCT END -->
 
-  <!-- FOOTER START -->
-  <footer></footer>
-  <!-- FOOTER END -->
-</body>
-
+    <!-- FOOTER START -->
+    <footer></footer>
+    <!-- FOOTER END -->
+  </body>
 </html>
