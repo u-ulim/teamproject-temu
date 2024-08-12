@@ -4,10 +4,3 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-.object_cover {
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-}/*# sourceMappingURL=image.css.map */
