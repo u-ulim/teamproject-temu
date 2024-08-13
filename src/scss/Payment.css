@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: "Pretendard-Regular";
   font-style: normal;
@@ -406,64 +405,17 @@ main .order__info h3 span {
   letter-spacing: -0.48px;
   color: #ff6d00;
 }
-main .order__info .product__info {
-  /*close  */
-}
 main .order__info .product__info .product {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   margin-bottom: 40px;
   padding: 0 12px;
-  height: 176px;
-  /*checkbox*/
   /*img*/
   /*product__info */
-  /*number__input */
-  /*price__info */
-}
-main .order__info .product__info .product .custom__box {
-  padding-right: 6px;
-  position: relative;
-}
-main .order__info .product__info .product .custom__box input[type=checkbox].custom__checkbox {
-  display: none;
-}
-main .order__info .product__info .product .custom__box .select {
-  display: inline-block;
-  border: 1px solid #000;
-  position: relative;
-  width: 16px;
-  height: 16px;
-  background-color: white;
-  cursor: pointer;
-  border-radius: 50%;
-}
-main .order__info .product__info .product .custom__box .select::after {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 10px;
-  height: 10px;
-  content: "";
-  border-radius: 50%;
-  transform: translate(-50%, -50%) scale(0);
-}
-main .order__info .product__info .product .custom__box input[type=checkbox]:checked + .select {
-  background-color: black;
-}
-main .order__info .product__info .product .custom__box input[type=checkbox]:checked + .select::after {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgb(0, 0, 0);
-  color: rgb(255, 255, 255);
-  content: "✓";
-  transform: translate(-50%, -50%);
 }
 main .order__info .product__info .product .img {
-  width: 128px;
-  height: 128px;
+  width: 100px;
+  height: 100px;
   border-radius: 8px;
 }
 main .order__info .product__info .product .img img {
@@ -472,145 +424,48 @@ main .order__info .product__info .product .img img {
 }
 main .order__info .product__info .product .product__info {
   display: flex;
-  gap: 10px;
-  justify-content: start;
-  flex-direction: column;
-}
-main .order__info .product__info .product .product__info .product__text-up {
-  font-family: "Pretendard-Regular";
-  font-size: 14px;
-  font-style: normal;
-  line-height: 22px;
-  letter-spacing: -0.42px;
-}
-main .order__info .product__info .product .product__info .product__text-down {
-  font-family: "Pretendard-Regular";
-  font-size: 14px;
-  font-style: normal;
-  line-height: 22px;
-  letter-spacing: -0.42px;
-  color: #4a4949;
-}
-main .order__info .product__info .product .product__info .product__text-down input {
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  font-family: "Pretendard-Regular";
-  font-size: 14px;
-  font-style: normal;
-  line-height: 22px;
-  letter-spacing: -0.42px;
-}
-main .order__info .product__info .product .product__info .product__text-down input:hover {
-  color: #9a9a9a;
-}
-main .order__info .product__info .product .number__box div {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0;
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  width: 100px;
-  height: 33px;
-  border-radius: 8px;
-  font-family: "Pretendard-Regular";
-  font-size: 16px;
-  font-style: normal;
-  line-height: 24px;
-  letter-spacing: -0.48px;
-}
-main .order__info .product__info .product .number__box div input[type=button] {
-  display: flex;
-  align-items: center;
+  gap: 14px;
   justify-content: center;
-  border: none;
-  width: 37px;
-  height: 34px;
-  background-color: white;
-  text-align: center;
-  cursor: pointer;
-  cursor: pointer;
-  font-family: "Pretendard-Regular";
-  font-size: 16px;
-  font-style: normal;
-  line-height: 24px;
-  letter-spacing: -0.48px;
-}
-main .order__info .product__info .product .number__box div input[type=button]:hover {
-  color: #818181;
-}
-main .order__info .product__info .product .number__box div input[type=text] {
-  border: none;
-  outline: none;
-  width: 20px;
-  background-color: transparent;
-  text-align: center;
-  font-family: "Pretendard-Regular";
-  font-size: 16px;
-  font-style: normal;
-  line-height: 24px;
-  letter-spacing: -0.48px;
-}
-main .order__info .product__info .product .price__info {
-  display: flex;
-  gap: 6px;
   flex-direction: column;
-  text-align: center;
+  margin-left: 20px;
 }
-main .order__info .product__info .product .price__info .jeneral-price {
+main .order__info .product__info .product .product__info .product__title {
   font-family: "Pretendard-Bold";
-  font-size: 18px;
+  font-size: 16px;
   font-style: bold;
   font-weight: 700;
-  line-height: 26px;
-  letter-spacing: -0.54px;
+  line-height: 24px;
+  letter-spacing: -0.48px;
 }
-main .order__info .product__info .product .price__info .price__text-down {
-  display: flex;
-  gap: 3px;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+main .order__info .product__info .product .product__info .product__option {
   font-family: "Pretendard-Regular";
-  font-size: 12px;
+  font-size: 16px;
   font-style: normal;
-  line-height: 18px;
-  letter-spacing: -0.36px;
+  line-height: 24px;
+  letter-spacing: -0.48px;
+  color: #4a4949;
 }
-main .order__info .product__info .product .price__info .price__text-down .sale {
-  display: block;
-  border: 1px solid #ff6d00;
-  width: 33px;
-  height: 18px;
+main .order__info .product__info .product .product__info .price__info {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+main .order__info .product__info .product .product__info .price__info span:nth-child(1) {
+  font-family: "Pretendard-Regular";
+  font-size: 16px;
+  font-style: normal;
+  line-height: 24px;
+  letter-spacing: -0.48px;
   color: #ff6d00;
-  border-radius: 5px;
 }
-main .order__info .product__info .product .price__info .price__text-down span {
-  cursor: pointer;
-}
-main .order__info .product__info .close {
-  border: none;
-  position: relative;
-  width: 30px;
-  height: 30px;
-  background: transparent;
-  cursor: pointer;
-}
-main .order__info .product__info .close span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 1px;
-  height: 80%;
-  background-color: #000;
-}
-main .order__info .product__info .close span:nth-child(1) {
-  transform: translate(-50%, -50%) rotate(-45deg);
-}
-main .order__info .product__info .close span:nth-child(2) {
-  transform: translate(-50%, -50%) rotate(45deg);
+main .order__info .product__info .product .product__info .price__info span:nth-child(2) {
+  font-family: "Pretendard-Regular";
+  font-size: 14px;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: -0.42px;
+  color: #9a9a9a;
+  text-decoration: line-through;
 }
 
 /*coupon*/
@@ -934,7 +789,7 @@ aside .checkout__summary .summary__price .tax__info .tax__label {
 aside .checkout__summary .summary__price .tax__info .tex__text {
   color: #6a6a6a;
 }
-aside .checkout__summary .consent .consent__list li {
+aside .checkout__summary .consent .consent__list li .consent-title {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -947,16 +802,55 @@ aside .checkout__summary .consent .consent__list li {
   line-height: 22px;
   letter-spacing: -0.42px;
 }
-aside .checkout__summary .consent .consent__list li:last-child {
-  border-bottom: none;
-}
-aside .checkout__summary .consent .consent__list li div {
+aside .checkout__summary .consent .consent__list li .consent-title div {
   display: flex;
   gap: 6px;
   align-items: center;
 }
-aside .checkout__summary .consent .consent__list li i {
+aside .checkout__summary .consent .consent__list li .consent-title i {
   cursor: pointer;
+}
+aside .checkout__summary .consent .consent__list li .consent-content {
+  display: none;
+  padding: 10px 19px;
+  transition: all 0.3s;
+}
+aside .checkout__summary .consent .consent__list li .consent-content p {
+  font-family: "Pretendard-Regular";
+  font-size: 12px;
+  font-style: normal;
+  line-height: 18px;
+  letter-spacing: -0.36px;
+  display: block;
+  padding-bottom: 5px;
+}
+aside .checkout__summary .consent .consent__list li .consent-content p:first-child {
+  font-family: "Pretendard-Regular";
+  font-size: 14px;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: -0.42px;
+  padding-bottom: 5px;
+}
+aside .checkout__summary .consent .consent__list li .consent-content.active {
+  display: block;
+}
+aside .checkout__summary .consent .consent__list li:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 19px;
+  border-bottom: none;
+  border-bottom: 1px solid #9a9a9a;
+  height: 60px;
+  font-family: "Pretendard-Regular";
+  font-size: 14px;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: -0.42px;
+}
+aside .checkout__summary .consent .consent__list li:last-child .consent-title {
+  border-bottom: none;
 }
 aside .checkout__summary .checkout__button {
   margin-bottom: 20px;
@@ -1623,9 +1517,9 @@ aside .checkout__summary .info ul li div i {
 
 @media (max-width: 768px) {
   header {
+    border: none;
     width: 100%;
     height: 45px;
-    border: none;
   }
   .container {
     display: flex;
@@ -1666,6 +1560,14 @@ aside .checkout__summary .info ul li div i {
   main .address .shopping__info {
     width: 100%;
   }
+  main .address .shopping__info .info__up span:nth-child(1) {
+    font-family: "Pretendard-Bold";
+    font-size: 16px;
+    font-style: bold;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: -0.48px;
+  }
   main .address .shopping__info .info__down {
     padding: 3px 92px 2px 14px;
     height: 107px;
@@ -1680,74 +1582,64 @@ aside .checkout__summary .info ul li div i {
     width: 100%;
   }
   main .order__info h3 {
-    border: none;
     margin-bottom: 14px;
+    border: none;
   }
   main .order__info .product__info .product {
     margin-bottom: 0;
-    height: 70px;
-  }
-  main .order__info .product__info .product .custom__box {
-    display: none;
   }
   main .order__info .product__info .product .img {
-    width: 70px;
     height: 70px;
   }
-  main .order__info .product__info .product .product__info .product__text-down {
-    display: none;
-  }
-  main .order__info .product__info .product .number__box {
-    display: none;
-  }
-  main .order__info .product__info .product .price__info {
-    display: flex;
-  }
-  main .order__info .product__info .product .price__info .price__text-down .sale {
-    display: none;
-  }
-  main .order__info .product__info .product .close {
-    width: 12px;
-    height: 12px;
-  }
-  main .coupon {
+  main .order__info .product__info .product .product__info {
+    gap: 2px;
     width: 100%;
   }
-  main .coupon .coupon__select #coupon {
-    width: 240px;
+  main .order__info .product__info .product .product__info .product__title {
+    font-family: "Pretendard-Regular";
+    font-size: 14px;
+    font-style: normal;
+    line-height: 22px;
+    letter-spacing: -0.42px;
   }
-  main .credit {
+  .coupon {
     width: 100%;
   }
-  main .credit .total__credit #total__credit__box {
+  .coupon .coupon__select #coupon {
     width: 240px;
   }
-  main .credit .used__credit {
+  .credit {
+    width: 100%;
+  }
+  .credit .total__credit #total__credit__box {
+    width: 240px;
+  }
+  .credit .used__credit {
     flex-wrap: wrap;
   }
-  main .credit .used__credit #used__credit__box {
-    width: 240px;
+  .credit .used__credit #used__credit__box {
     margin-bottom: 16px;
+    width: 240px;
   }
-  main .credit .used__credit button {
+  .credit .used__credit button {
     width: 326px;
     height: 50px;
   }
-  main .payment__method {
+  .payment__method {
     width: 100%;
   }
-  main .payment__method ul {
+  .payment__method ul {
     flex-wrap: wrap;
   }
-  main .payment__method ul li {
+  .payment__method ul li {
     margin-bottom: 26px;
   }
   aside {
     padding-top: 0;
   }
   aside .checkout__summary {
-    width: 100%;
     padding: 0 20px;
+    width: 100%;
   }
   footer {
     width: 100%;

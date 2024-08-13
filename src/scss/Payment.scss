@@ -196,56 +196,12 @@ main {
       .product {
         display: flex;
         align-items: center;
-        justify-content: space-between;
         margin-bottom: 40px;
         padding: 0 12px;
-        height: 176px;
-
-        /*checkbox*/
-        .custom__box {
-          padding-right: 6px;
-          position: relative;
-          input[type="checkbox"].custom__checkbox {
-            display: none;
-          }
-          .select {
-            display: inline-block;
-            border: 1px solid #000;
-            position: relative;
-            width: 16px;
-            height: 16px;
-            background-color: white;
-            cursor: pointer;
-            border-radius: 50%;
-            &::after {
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              width: 10px;
-              height: 10px;
-              content: "";
-              border-radius: 50%;
-              transform: translate(-50%, -50%) scale(0);
-            }
-          }
-          input[type="checkbox"]:checked + .select {
-            background-color: black;
-            &::after {
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              background-color: rgb(0, 0, 0);
-              color: rgb(255, 255, 255);
-              content: "✓";
-              transform: translate(-50%, -50%);
-            }
-          }
-        }
-
         /*img*/
         .img {
-          width: 128px;
-          height: 128px;
+          width: 100px;
+          height: 100px;
           border-radius: 8px;
           img {
             width: 100%;
@@ -256,120 +212,32 @@ main {
         /*product__info */
         .product__info {
           display: flex;
-          gap: 10px;
-          justify-content: start;
+          gap: 14px;
+          justify-content: center;
           flex-direction: column;
-          .product__text-up {
-            @include text_S_14;
+          margin-left: 20px;
+          .product__title {
+            @include text_B_M_16;
           }
-          .product__text-down {
-            @include text_S_14;
-            color: map-get($color, color-Neutrals-Grey-700);
-            input {
-              border: none;
-              background-color: transparent;
-              cursor: pointer;
-              @include text_S_14;
-              &:hover {
-                color: map-get($color, color-Neutrals-Grey-400);
-              }
-            }
-          }
-        }
-
-        /*number__input */
-        .number__box {
-          div {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            width: 100px;
-            height: 33px;
-            border-radius: 8px;
+          .product__option {
             @include text_M_16;
-            input[type="button"] {
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              border: none;
-              width: 37px;
-              height: 34px;
-              background-color: white;
-              text-align: center;
-              cursor: pointer;
-              cursor: pointer;
-              @include text_M_16;
-              &:hover {
-                color: map-get($color, color-Neutrals-Grey-500);
+            color: map-get($color, color-Neutrals-Grey-700);
+          }
+          .price__info {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            span {
+              &:nth-child(1) {
+                @include text_M_16;
+                color: map-get($color, primary-color);
+              }
+              &:nth-child(2) {
+                @include text_S_14;
+                color: map-get($color, color-Neutrals-Grey-400);
+                text-decoration: line-through;
               }
             }
-            input[type="text"] {
-              border: none;
-              outline: none;
-              width: 20px;
-              background-color: transparent;
-              text-align: center;
-              @include text_M_16;
-            }
-          }
-        }
-
-        /*price__info */
-        .price__info {
-          display: flex;
-          gap: 6px;
-          flex-direction: column;
-          text-align: center;
-          .jeneral-price {
-            @include text_B_L_18;
-          }
-          .price__text-down {
-            display: flex;
-            gap: 3px;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            @include text_XS_12;
-            .sale {
-              display: block;
-              border: 1px solid map-get($color-system, success-color);
-              width: 33px;
-              height: 18px;
-              color: map-get($color-system, success-color);
-              border-radius: 5px;
-            }
-            span {
-              color: map-get($color-system, color-Neutrals-Grey-700);
-              cursor: pointer;
-            }
-          }
-        }
-      }
-
-      /*close  */
-      .close {
-        border: none;
-        position: relative;
-        width: 30px;
-        height: 30px;
-        background: transparent;
-        cursor: pointer;
-        span {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          width: 1px;
-          height: 80%;
-          background-color: #000;
-          &:nth-child(1) {
-            transform: translate(-50%, -50%) rotate(-45deg);
-          }
-          &:nth-child(2) {
-            transform: translate(-50%, -50%) rotate(45deg);
           }
         }
       }
@@ -624,23 +492,54 @@ aside {
     .consent {
       .consent__list {
         li {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          padding: 10px 19px;
-          border-bottom: 1px solid map-get($color, color-Neutrals-Grey-400);
-          height: 60px;
-          @include text_S_14;
-          &:last-child {
-            border-bottom: none;
-          }
-          div {
+          .consent-title {
             display: flex;
-            gap: 6px;
             align-items: center;
+            justify-content: space-between;
+            padding: 10px 19px;
+            border-bottom: 1px solid map-get($color, color-Neutrals-Grey-400);
+            height: 60px;
+            @include text_S_14;
+            div {
+              display: flex;
+              gap: 6px;
+              align-items: center;
+            }
+            i {
+              cursor: pointer;
+            }
           }
-          i {
-            cursor: pointer;
+          .consent-content {
+            display: none;
+            padding: 10px 19px;
+            transition: all 0.3s;
+            p {
+              @include text_XS_12;
+              display: block;
+              padding-bottom: 5px;
+              &:first-child {
+                @include text_S_14;
+                padding-bottom: 5px;
+              }
+            }
+            &.active {
+              display: block;
+            }
+          }
+          &:first-child {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 19px;
+            border-bottom: none;
+            border-bottom: 1px solid map-get($color, color-Neutrals-Grey-400);
+            height: 60px;
+            @include text_S_14;
+          }
+          &:last-child {
+            .consent-title {
+              border-bottom: none;
+            }
           }
         }
       }
@@ -1220,9 +1119,9 @@ aside {
 
 @media (max-width: 768px) {
   header {
+    border: none;
     width: 100%;
     height: 45px;
-    border: none;
   }
   .container {
     display: flex;
@@ -1263,6 +1162,13 @@ aside {
     .address {
       .shopping__info {
         width: 100%;
+        .info__up {
+          span {
+            &:nth-child(1) {
+              @include text_B_M_16;
+            }
+          }
+        }
         .info__down {
           padding: 3px 92px 2px 14px;
           height: 107px;
@@ -1280,81 +1186,63 @@ aside {
     .order__info {
       width: 100%;
       h3 {
-        border: none;
         margin-bottom: 14px;
+        border: none;
       }
       .product__info {
         .product {
           margin-bottom: 0;
-          height: 70px;
-          .custom__box {
-            display: none;
-          }
           .img {
-            width: 70px;
             height: 70px;
           }
           .product__info {
-            .product__text-down {
-              display: none;
+            gap: 2px;
+            width: 100%;
+            .product__title {
+              @include text_S_14;
             }
           }
-          .number__box {
-            display: none;
-          }
-          .price__info {
-            display: flex;
-            .price__text-down {
-              .sale {
-                display: none;
-              }
-            }
-          }
-          .close {
-            width: 12px;
-            height: 12px;
-          }
         }
       }
     }
+  }
 
-    .coupon {
-      width: 100%;
-      .coupon__select {
-        #coupon {
-          width: 240px;
-        }
+  .coupon {
+    width: 100%;
+    .coupon__select {
+      #coupon {
+        width: 240px;
       }
     }
+  }
 
-    .credit {
-      width: 100%;
+  .credit {
+    width: 100%;
 
-      .total__credit {
-        #total__credit__box {
-          width: 240px;
-        }
-      }
-      .used__credit {
-        flex-wrap: wrap;
-        #used__credit__box {
-          width: 240px;
-          margin-bottom: 16px;
-        }
-        button {
-          width: 326px;
-          height: 50px;
-        }
+    .total__credit {
+      #total__credit__box {
+        width: 240px;
       }
     }
+    .used__credit {
+      flex-wrap: wrap;
+      #used__credit__box {
+        margin-bottom: 16px;
+        width: 240px;
+      }
+      button {
+        width: 326px;
+        height: 50px;
+      }
+    }
+  }
 
-    .payment__method {
-      width: 100%;
-      ul {
-        flex-wrap: wrap;
-        li {
-          margin-bottom: 26px;
-        }
+  .payment__method {
+    width: 100%;
+    ul {
+      flex-wrap: wrap;
+      li {
+        margin-bottom: 26px;
       }
     }
   }
@@ -1362,8 +1250,8 @@ aside {
   aside {
     padding-top: 0;
     .checkout__summary {
-      width: 100%;
       padding: 0 20px;
+      width: 100%;
     }
   }
 

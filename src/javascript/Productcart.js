@@ -1,26 +1,3 @@
-//배너 삭제
-
-const banner = document.querySelector(".banner");
-const bannerClose = document.querySelector(".banner-close");
-
-bannerClose.addEventListener("click", () => {
-  banner.classList.toggle("active");
-});
-
-//옵션변경 시, 모달창 이벤트
-
-const optionSeclect = document.querySelector(".option");
-const optionModal = document.querySelector(".modal__box");
-const modalClose = document.querySelector(".modal__close-box");
-
-optionSeclect.addEventListener("click", () => {
-  optionModal.classList.add("active");
-});
-
-modalClose.addEventListener("click", () => {
-  optionModal.classList.remove("active");
-});
-
 // 모달 수량창 변경 -> 가격변경
 
 const addMinus = document.querySelector(".modal__add-minus");

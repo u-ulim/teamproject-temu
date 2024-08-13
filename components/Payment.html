@@ -11,7 +11,8 @@
 
   <!-- CUSTOM CSS, JS-->
   <link rel="stylesheet" href="../src/scss/Payment.css" />
-  <script defer src="../src/javascript/Payment.js"></script>
+  <script defer src="../src/javascript/modal.js"></script>
+  <script defer src="../src/javascript/payment-consent.js"></script>
 </head>
 <body>
 
@@ -83,18 +84,6 @@
         <div class="product__info">
           <!-- product -->
           <ul class="product">
-            <!-- checkbox -->
-            <li class="custom__box">
-              <div>
-                <input
-                  type="checkbox"
-                  name="checkbox"
-                  id="custom__checkbox"
-                  class="custom__checkbox"
-                />
-                <label for="custom__checkbox" class="select"></label>
-              </div>
-            </li>
 
             <!-- img -->
             <li class="img">
@@ -105,47 +94,18 @@
 
             <!-- product__info -->
             <li class="product__info">
-              <div>
-                <div class="product__text-up">
+                <div class="product__title">
                   <span>1/5/10쌍의 남성용 심플 슬리드 라이너</span>
                 </div>
-                <div class="product__text-down">
-                  <input type="submit" value="옵션변경" class="option"></input>
+                <div class="product__option">
+                  <span>5쌍</span>
                   <span>|</span>
-                  <input type="submit" value="바로구매"></input>
+                  <span>흰색</span>
                 </div>
-              </div>
-            </li>
-
-            <!-- number__input -->
-            <li class="number__box">
-              <form class="jeneral__add-minus">
-                <input type ="hidden" class="jeneral__sell-price" id="jeneral__sell-price" value="11000">
-              <div class="number__input">
-                <input type="button" value="+" class="jeneral-add" id="jeneral-add"></input>
-                <input type="text" class="jeneral-amount" id="jeneral-amount" disabled size="2"></input>
-                <input type="button" value="-" class="jeneral-minus" id="jeneral-minus"></input>
-              </div>
-            </form>
-            </li>
-
-            <!-- price__info -->
-            <li class="price__info">
-              <div>
-                <span class="jeneral-price" id="jeneral-price"></span>
-                <div class="price__text-down">
-                  <span class="sale">-71%</span>
+                <div class="price__info">
+                  <span class="general-price" id="general-price">￦4,219</span>
                   <span>￦4,219</span>
-                </div>
-              </div>
-            </li>
-
-            <!-- close-->
-            <li class="close">
-              <div>
-                <span></span>
-                <span></span>
-              </div>
+            </div>
             </li>
           </ul>
         </div>
@@ -284,58 +244,73 @@
               </div>
             </li>
             <li>
-              <div class="custom__box">
-                <input
-                  type="checkbox"
-                  name="terms"
-                  id="agreeAll"
-                  class="terms"
-                />
-                <label for="terms">테무 이용약관(필수)</label>
-              </div>
-              <i class="fa-solid fa-angle-down"></i>
+                  <div class="consent-title">
+                    <div class="custom__box">
+                      <input
+                        type="checkbox"
+                        name="terms"
+                        id="agreeAll"
+                        class="terms"
+                      />
+                      <label for="terms">테무 이용약관(필수)</label>
+                    </div>
+                    <i class="fa-solid fa-angle-down"></i>
+                  </div>
+                <div class="consent-content">
+                  <p>본 약관은 테무 서비스를 이용함에 있어 사용자와 테무 간의 권리, 의무 및 책임사항을 규정합니다. </p>
+                  <P>서비스 이용자는 약관에 명시된 모든 조항을 준수해야 하며, 서비스 이용 전에 반드시 이를 숙지하고 동의해야 합니다.</P>
+                  <p>이용약관은 사용자 보호 및 서비스의 원활한 운영을 위해 마련되었습니다. 본 약관에 동의하지 않을 경우, 서비스 이용이 제한될 수 있습니다.</p>
+                </div>
             </li>
             <li>
-              <div class="custom__box">
-                <input
-                  type="checkbox"
-                  name="personalInfo"
-                  id="agreeAll"
-                  class="personalInfo"
-                />
-                <label for="personalInfo">개인정보 수집 및 이용(필수)</label>
-              </div>
-              <i class="fa-solid fa-angle-down"></i>
+         <div class="consent-title">
+                <div class="custom__box">
+                  <input
+                    type="checkbox"
+                    name="personalInfo"
+                    id="agreeAll"
+                    class="personalInfo"
+                  />
+                  <label for="personalInfo">개인정보 수집 및 이용(필수)</label>
+                </div>
+                <i class="fa-solid fa-angle-down"></i>
+         </div>
+              <div class="consent-content"></div>
             </li>
             <li>
-              <div>
-                <input
-                  type="checkbox"
-                  name="transferInfo"
-                  id="agreeAll"
-                  class="transferInfo"
-                />
-                <label for="transferInfo"
-                  >개인정보의 국외 이전에 대한 동의(필수)</label
-                >
-              </div>
-              <i class="fa-solid fa-angle-down"></i>
+           <div class="consent-title">
+                <div>
+                  <input
+                    type="checkbox"
+                    name="transferInfo"
+                    id="agreeAll"
+                    class="transferInfo"
+                  />
+                  <label for="transferInfo"
+                    >개인정보의 국외 이전에 대한 동의(필수)</label
+                  >
+                </div>
+                <i class="fa-solid fa-angle-down"></i>
+           </div>
+              <div class="consent-content"></div>
             </li>
             <li>
-              <div>
-                <input
-                  type="checkbox"
-                  name="treePlanting"
-                  id="agreeAll"
-                  class="treePlanting"
-                />
-                <label for="treePlanting">Temu와 함께 나무 심기</label>
+             <div class="consent-title">
+                <div>
+                  <input
+                    type="checkbox"
+                    name="treePlanting"
+                    id="agreeAll"
+                    class="treePlanting"
+                  />
+                  <label for="treePlanting">Temu와 함께 나무 심기</label>
+                </div>
+                <i class="fa-solid fa-angle-down"></i>
               </div>
-              <i class="fa-solid fa-angle-down"></i>
+              <div class="consent-content"></div>
             </li>
           </ul>
         </div>
-
         <!--button-->
         <button type="submit" class="checkout__button">결제하기</button>
 
@@ -375,7 +350,7 @@
             </li>
           </ul>
         </div>
-      </div>
+      </div>`
     </aside>
     <!--ASIDE END-->
   </div>
@@ -505,7 +480,7 @@
     <!--option-MODAL BOX END-->
 
     <!--address- MODAL BOX START-->
-   <div class="address__modal__box">
+    <div class="address__modal__box">
     <div class="address__modal__inner">
       <div class="address__modal__inner-box">
      <h2>주소</h2>
@@ -574,6 +549,7 @@
       </div>
       </div>
       </div>
+    </div>
     </div>
     <!--address- MODAL BOX END-->
     
