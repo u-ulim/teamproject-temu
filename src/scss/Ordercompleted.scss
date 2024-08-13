@@ -4,17 +4,17 @@
 @import "./layout/layout.scss";
 
 .hi {
-  @extend .heading_XL_48;
-  @extend .width_full;
+  @include heading_XL_48;
+  @include width_full;
   color: map-get($color, secondary-color);
 }
 
 body {
-  @extend .width_full;
+  @include width_full;
 }
 
 .container {
-  @extend .width_inner;
+  @include width_inner;
   margin: 0 auto;
 }
 
@@ -43,7 +43,7 @@ main {
         gap: 16px;
         align-items: center;
         margin-bottom: 46px;
-        @extend .text_B_XL_22;
+        @include text_B_XL_22;
         i {
           color: map-get($color-system, info-color);
         }
@@ -61,11 +61,11 @@ main {
           margin-bottom: 30px;
           span {
             &:nth-child(1) {
-              @extend .text_B_M_16;
+              @include text_B_M_16;
             }
             &:nth-child(2) {
               cursor: pointer;
-              @extend .text_S_14;
+              @include text_S_14;
               color: map-get($color, color-Neutrals-Grey-600);
             }
           }
@@ -79,14 +79,14 @@ main {
             padding: 16px 8px;
             li {
               &:nth-child(1) {
-                @extend .text_B_M_16;
+                @include text_B_M_16;
               }
               &:nth-child(2) {
-                @extend .text_B_S_14;
+                @include text_B_S_14;
                 color: map-get($color, color-Neutrals-Grey-500);
               }
               &:nth-child(3) {
-                @extend .text_B_S_14;
+                @include text_B_S_14;
               }
             }
           }
@@ -122,7 +122,7 @@ main {
                 }
               }
               div {
-                @extend .text_B_L_18;
+                @include text_B_L_18;
                 display: flex;
                 gap: 12px;
                 flex-direction: column;
@@ -143,7 +143,7 @@ main {
               transition: all 0.3s;
               cursor: pointer;
               border-radius: 8px;
-              @extend .text_B_M_16;
+              @include text_B_M_16;
               &:hover {
                 background: map-get($color-hover, primary-color);
               }
@@ -167,8 +167,7 @@ main {
             gap: 5px;
             flex-direction: column;
             width: 100%;
-            @extend .text_S_14;
-
+            @include text_S_14;
             div {
               display: flex;
               gap: 6px;
@@ -193,7 +192,7 @@ main {
         left: 0;
         width: 100%;
         h2 {
-          @extend .text_B_L_18;
+          @include text_B_L_18;
         }
       }
       .section__down-product {
@@ -201,156 +200,6 @@ main {
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        /*product*/
-        .product-up {
-          display: flex;
-          gap: 54.99px;
-          margin-bottom: 36px;
-          .product {
-            li {
-              a {
-                img {
-                  margin-bottom: 12.69px;
-                  width: 199.31px;
-                  height: 199.31px;
-                  border-radius: 8px;
-                }
-              }
-              .first__text {
-                @extend .text_S_14;
-              }
-              .second__text {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                .price {
-                  display: flex;
-                  gap: 5px;
-                  align-items: center;
-                  justify-content: center;
-                  .sale {
-                    @extend .text_B_XS_12;
-                    color: map-get($color, primary-color);
-                  }
-                  span {
-                    @extend .text_B_L_18;
-                  }
-                }
-                i {
-                  padding: 5px 8px;
-                  border: 1px solid map-get($color, secondary-color);
-                  color: map-get($color, secondary-color);
-                  border-radius: 8px;
-                  cursor: pointer;
-                }
-              }
-              .third__text {
-                display: flex;
-                gap: 5px;
-                align-items: center;
-                @extend .text_B_S_14;
-                div {
-                  color: map-get($color, secondary-color);
-                }
-                .review {
-                  color: map-get($color, color-Neutrals-Grey-600);
-                }
-              }
-              .last__text {
-                display: flex;
-                gap: 9px;
-                align-items: center;
-                @extend .text_XS_12;
-                span {
-                  &:nth-child(1) {
-                    padding: 1px 4px;
-                    background: map-get($color, primary-color);
-                    color: map-get($color, color-White);
-                    border-radius: 8px;
-                  }
-                  &:nth-child(2) {
-                    color: map-get($color, primary-color);
-                  }
-                }
-              }
-            }
-          }
-        }
-        .product-down {
-          display: flex;
-          gap: 54.99px;
-          margin-bottom: 36px;
-          margin-bottom: 108px;
-          .product {
-            li {
-              a {
-                img {
-                  margin-bottom: 12.69px;
-                  width: 199.31px;
-                  height: 199.31px;
-                  border-radius: 8px;
-                }
-              }
-              .first__text {
-                @extend .text_S_14;
-              }
-              .second__text {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                .price {
-                  display: flex;
-                  gap: 5px;
-                  align-items: center;
-                  justify-content: center;
-                  .sale {
-                    @extend .text_B_XS_12;
-                    color: map-get($color, primary-color);
-                  }
-                  span {
-                    @extend .text_B_L_18;
-                  }
-                }
-                i {
-                  padding: 5px 8px;
-                  border: 1px solid map-get($color, secondary-color);
-                  color: map-get($color, secondary-color);
-                  border-radius: 8px;
-                  cursor: pointer;
-                }
-              }
-              .third__text {
-                display: flex;
-                gap: 5px;
-                align-items: center;
-                @extend .text_B_S_14;
-                div {
-                  color: map-get($color, secondary-color);
-                }
-                .review {
-                  color: map-get($color, color-Neutrals-Grey-600);
-                }
-              }
-              .last__text {
-                display: flex;
-                gap: 9px;
-                align-items: center;
-                @extend .text_XS_12;
-                span {
-                  &:nth-child(1) {
-                    padding: 1px 4px;
-                    background: map-get($color, primary-color);
-                    color: map-get($color, color-White);
-                    border-radius: 8px;
-                  }
-                  &:nth-child(2) {
-                    color: map-get($color, primary-color);
-                  }
-                }
-              }
-            }
-          }
-        }
         button {
           display: flex;
           align-items: center;
@@ -379,4 +228,74 @@ main {
 footer {
   width: 1382px;
   height: 752px;
+}
+
+@media (max-width: 768px) {
+  header {
+    width: 100%;
+    height: 45px;
+    border: none;
+  }
+  .container {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  main {
+    .container {
+      width: 100%;
+      .section__up {
+        .address__info {
+          width: 100%;
+          .info__down {
+            ul {
+              li {
+                margin-bottom: 3px;
+                &:nth-child(2) {
+                  @include text_B_S_14;
+                }
+                &:nth-child(3) {
+                  @include text_XS_12;
+                }
+              }
+            }
+          }
+        }
+        .shopping__info {
+          width: 100%;
+          ul {
+            width: 100%;
+            li {
+              &:nth-child(1) {
+                a {
+                  img {
+                    width: 70px;
+                    height: 70px;
+                  }
+                }
+                div {
+                  @include text_B_M_16;
+                }
+              }
+              button {
+                width: 300px;
+                height: 50px;
+              }
+            }
+          }
+        }
+        .info {
+          width: 100%;
+          .info-text {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    width: 100%;
+    height: 287px;
+  }
 }
