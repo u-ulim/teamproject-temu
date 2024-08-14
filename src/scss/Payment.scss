@@ -492,21 +492,34 @@ aside {
     .consent {
       .consent__list {
         li {
+          &:first-child {
+            display: flex;
+            align-items: center;
+
+            padding: 10px 19px;
+            border-bottom: none;
+            border-bottom: 1px solid map-get($color, color-Neutrals-Grey-400);
+            height: 60px;
+            @include text_S_14;
+          }
+          &:last-child {
+            .consent-title {
+              border-bottom: none;
+            }
+          }
           .consent-title {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            cursor: pointer;
             padding: 10px 19px;
             border-bottom: 1px solid map-get($color, color-Neutrals-Grey-400);
             height: 60px;
             @include text_S_14;
+            transition: all 0.3s;
             div {
               display: flex;
               gap: 6px;
               align-items: center;
-            }
-            i {
-              cursor: pointer;
             }
           }
           .consent-content {
@@ -521,24 +534,6 @@ aside {
                 @include text_S_14;
                 padding-bottom: 5px;
               }
-            }
-            &.active {
-              display: block;
-            }
-          }
-          &:first-child {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px 19px;
-            border-bottom: none;
-            border-bottom: 1px solid map-get($color, color-Neutrals-Grey-400);
-            height: 60px;
-            @include text_S_14;
-          }
-          &:last-child {
-            .consent-title {
-              border-bottom: none;
             }
           }
         }

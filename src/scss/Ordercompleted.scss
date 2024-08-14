@@ -64,9 +64,9 @@ main {
               @include text_B_M_16;
             }
             &:nth-child(2) {
+              color: map-get($color, color-Neutrals-Grey-600);
               cursor: pointer;
               @include text_S_14;
-              color: map-get($color, color-Neutrals-Grey-600);
             }
           }
         }
@@ -189,8 +189,8 @@ main {
       /*section_down-title*/
       .section__down-title {
         margin-bottom: 35px;
-        left: 0;
         width: 100%;
+        padding-left: 17px;
         h2 {
           @include text_B_L_18;
         }
@@ -199,7 +199,9 @@ main {
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+
         button {
           display: flex;
           align-items: center;
@@ -232,13 +234,13 @@ footer {
 
 @media (max-width: 768px) {
   header {
+    border: none;
     width: 100%;
     height: 45px;
-    border: none;
   }
   .container {
-    width: 100%;
     padding: 0 20px;
+    width: 100%;
   }
 
   main {
@@ -289,6 +291,12 @@ footer {
           .info-text {
             width: 100%;
           }
+        }
+      }
+      .section__down {
+        width: 100%;
+        .section__down-product {
+          display: flex;
         }
       }
     }

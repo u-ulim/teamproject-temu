@@ -789,11 +789,11 @@ aside .checkout__summary .summary__price .tax__info .tax__label {
 aside .checkout__summary .summary__price .tax__info .tex__text {
   color: #6a6a6a;
 }
-aside .checkout__summary .consent .consent__list li .consent-title {
+aside .checkout__summary .consent .consent__list li:first-child {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 10px 19px;
+  border-bottom: none;
   border-bottom: 1px solid #9a9a9a;
   height: 60px;
   font-family: "Pretendard-Regular";
@@ -802,13 +802,27 @@ aside .checkout__summary .consent .consent__list li .consent-title {
   line-height: 22px;
   letter-spacing: -0.42px;
 }
+aside .checkout__summary .consent .consent__list li:last-child .consent-title {
+  border-bottom: none;
+}
+aside .checkout__summary .consent .consent__list li .consent-title {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px 19px;
+  border-bottom: 1px solid #9a9a9a;
+  height: 60px;
+  font-family: "Pretendard-Regular";
+  font-size: 14px;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: -0.42px;
+  transition: all 0.3s;
+}
 aside .checkout__summary .consent .consent__list li .consent-title div {
   display: flex;
   gap: 6px;
   align-items: center;
-}
-aside .checkout__summary .consent .consent__list li .consent-title i {
-  cursor: pointer;
 }
 aside .checkout__summary .consent .consent__list li .consent-content {
   display: none;
@@ -831,26 +845,6 @@ aside .checkout__summary .consent .consent__list li .consent-content p:first-chi
   line-height: 22px;
   letter-spacing: -0.42px;
   padding-bottom: 5px;
-}
-aside .checkout__summary .consent .consent__list li .consent-content.active {
-  display: block;
-}
-aside .checkout__summary .consent .consent__list li:first-child {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 19px;
-  border-bottom: none;
-  border-bottom: 1px solid #9a9a9a;
-  height: 60px;
-  font-family: "Pretendard-Regular";
-  font-size: 14px;
-  font-style: normal;
-  line-height: 22px;
-  letter-spacing: -0.42px;
-}
-aside .checkout__summary .consent .consent__list li:last-child .consent-title {
-  border-bottom: none;
 }
 aside .checkout__summary .checkout__button {
   margin-bottom: 20px;
