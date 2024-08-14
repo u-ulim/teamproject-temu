@@ -186,6 +186,8 @@ table {
   height: 300px;
   background: url(../../assets/images/index/main-banner.png);
   cursor: pointer;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #main .main__wrapper .main__slide__wrapper {
   display: flex;
@@ -198,7 +200,7 @@ table {
 #main .main__wrapper .main__slide__wrapper .main__slide {
   width: 100%;
   height: 300px;
-  background: url(../../assets/images/index/main-slide.png);
+  background: url(../../assets/images/index/main-slide1.png);
   cursor: pointer;
 }
 #main .main__wrapper .main__slide__wrapper .main__slide .main__slide-pagination {
@@ -373,6 +375,9 @@ table {
 }
 #promise .promise__wrapper .promise-bottom .promise__bottom__right i {
   line-height: 24px;
+}
+#promise .mobile__promise {
+  display: none;
 }
 
 /* cart */
@@ -642,22 +647,38 @@ table {
 }
 @media (max-width: 768px) {
   /* main */
-  #main {
-    border: 1px solid red;
-  }
   #main .main__wrapper {
     width: 100%;
   }
   #main .main__wrapper .main__banner {
+    margin-bottom: 10px;
     width: 100%;
   }
   #main .main__wrapper .main__slide__wrapper {
     display: none;
   }
-  /* promise */
-  #promise {
+  #main .mobile__main .m-main__wrapper {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
     border: 1px solid red;
+    width: 100%;
+    height: 55px;
   }
+  #main .mobile__main .m-main__wrapper .m__banner-first {
+    border: 1px solid red;
+    width: 100%;
+    height: 55px;
+    background: url(../../assets/images/index/m-slide1.webp) center/cover;
+  }
+  #main .mobile__main .m-main__wrapper .m__banner-second {
+    border: 1px solid red;
+    width: 100%;
+    height: 55px;
+    background: url(../../assets/images/index/m-slide2.gif) center/cover;
+  }
+  /* promise */
   #promise .promise__wrapper {
     display: none;
     width: 100%;
@@ -667,6 +688,7 @@ table {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-bottom: 10px;
   }
   #promise .mobile__promise .m__promise-top {
     display: flex;
@@ -678,10 +700,15 @@ table {
     background: #009e95;
     color: #fff;
     border-radius: 8px 8px 0 0;
+    font-family: "Pretendard-Regular";
+    font-size: 14px;
+    font-style: normal;
+    line-height: 22px;
+    letter-spacing: -0.42px;
   }
   #promise .mobile__promise .m__promise-top i {
-    width: 24px;
-    height: 24px;
+    width: 18px;
+    height: 18px;
     display: inline-block;
     background-position: center;
     background-repeat: no-repeat;
@@ -690,26 +717,40 @@ table {
   #promise .mobile__promise .m__promise-top .promise__shield {
     background-image: url(../../assets/images/index/promise__shield.svg);
   }
+  #promise .mobile__promise .m__promise-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    border: 1px solid #009e95;
+    width: 100%;
+    height: 30px;
+    border-radius: 0 0 8px 8px;
+  }
   #promise .mobile__promise .m__promise-bottom .m__promise-bottom-list {
     display: flex;
     gap: 20px;
     align-items: center;
     justify-content: center;
-    padding: 0 20px;
-    width: 100%;
-    height: 30px;
     background: #fff;
     color: #009e95;
-    border-radius: 0 0 8px 8px;
   }
   #promise .mobile__promise .m__promise-bottom .m__promise-bottom-list div {
     display: flex;
     gap: 10px;
+    justify-content: center;
     align-items: center;
   }
+  #promise .mobile__promise .m__promise-bottom .m__promise-bottom-list a {
+    font-family: "Pretendard-Regular";
+    font-size: 12px;
+    font-style: normal;
+    line-height: 18px;
+    letter-spacing: -0.36px;
+  }
   #promise .mobile__promise .m__promise-bottom .m__promise-bottom-list i {
-    width: 24px;
-    height: 24px;
+    width: 18px;
+    height: 18px;
     color: #009e95;
     display: inline-block;
     background-position: center;

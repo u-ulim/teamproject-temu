@@ -21,6 +21,7 @@
       height: 300px;
       background: url(../../assets/images/index/main-banner.png);
       cursor: pointer;
+      object-fit: cover;
     }
 
     .main__slide__wrapper {
@@ -35,7 +36,7 @@
         // border: 1px solid #f00;
         width: 100%;
         height: 300px;
-        background: url(../../assets/images/index/main-slide.png);
+        background: url(../../assets/images/index/main-slide1.png);
         cursor: pointer;
         .main__slide-pagination {
           @include heading_XXS_16;
@@ -214,6 +215,9 @@
         }
       }
     }
+  }
+  .mobile__promise {
+    display: none;
   }
 }
 
@@ -512,23 +516,44 @@
 @media (max-width: 768px) {
   /* main */
   #main {
-    border: 1px solid red;
-
     .main__wrapper {
       width: 100%;
-
       .main__banner {
+        margin-bottom: 10px;
         width: 100%;
       }
       .main__slide__wrapper {
         display: none;
       }
     }
+    .mobile__main {
+      .m-main__wrapper {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid red;
+        width: 100%;
+        height: 55px;
+        .m__banner-first {
+          border: 1px solid red;
+          width: 100%;
+          height: 55px;
+          background: url(../../assets/images/index/m-slide1.webp) center/cover;
+        }
+        .m__banner-second {
+          border: 1px solid red;
+          width: 100%;
+          height: 55px;
+          background: url(../../assets/images/index/m-slide2.gif) center/cover;
+        }
+      }
+    }
   }
 
   /* promise */
   #promise {
-    border: 1px solid red;
+    // border: 1px solid red;
     .promise__wrapper {
       display: none;
       width: 100%;
@@ -538,6 +563,7 @@
       align-items: center;
       justify-content: center;
       flex-direction: column;
+      margin-bottom: 10px;
       .m__promise-top {
         display: flex;
         align-items: center;
@@ -548,10 +574,11 @@
         background: map-get($color, secondary-color);
         color: map-get($color, color-White);
         border-radius: 8px 8px 0 0;
+        @include text_S_14;
         i {
           // border: 1px solid #f00;
-          width: 24px;
-          height: 24px;
+          width: 18px;
+          height: 18px;
           @include background_cover;
         }
         .promise__shield {
@@ -559,28 +586,36 @@
         }
       }
       .m__promise-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 20px;
+        border: 1px solid map-get($color, secondary-color);
+        width: 100%;
+        height: 30px;
+        border-radius: 0 0 8px 8px;
         .m__promise-bottom-list {
           display: flex;
           gap: 20px;
           align-items: center;
           justify-content: center;
-          padding: 0 20px;
-          width: 100%;
-          height: 30px;
           background: map-get($color, color-White);
           color: map-get($color, secondary-color);
           // border: 1px solid #f00;
-          border-radius: 0 0 8px 8px;
           div {
             display: flex;
             gap: 10px;
+            justify-content: center;
             align-items: center;
             // border: 1px solid red;
           }
+          a {
+            @include text_XS_12;
+          }
           i {
             // border: 1px solid #f00;
-            width: 24px;
-            height: 24px;
+            width: 18px;
+            height: 18px;
             color: map-get($color, secondary-color);
             @include background_cover;
           }
