@@ -1,0 +1,386 @@
+@import "../config/fonts.scss";
+@import "../config/reset.scss";
+@import "../config/colors.scss";
+@import "../layout/layout.scss";
+@import "../config/image.scss";
+
+body {
+  #main {
+    @include width_full;
+    #detail__bradcrumb-container {
+      @include width_inner;
+      margin-bottom: 33px;
+      .detail-bradcrumbs {
+        display: flex;
+        li {
+          display: flex;
+          gap: 5px;
+          align-items: center;
+          margin-right: 12px;
+          color: map-get($color, color-Neutrals-Grey-600);
+          @include text_S_14;
+          i {
+            padding-top: 2px;
+            font-size: 10px;
+          }
+        }
+      }
+    }
+    #detail__main-container {
+      @include width_inner;
+      display: flex;
+      justify-content: space-between;
+      .detail__main-imgbox {
+        display: flex;
+        justify-content: space-between;
+        width: 705px;
+        .detail__main-imgs {
+          width: 60px;
+          li {
+            margin-bottom: 12px;
+            cursor: pointer;
+            > div {
+              overflow: hidden;
+              width: 60px;
+              height: 60px;
+              border-radius: 3px;
+              > img {
+                width: 100%;
+                height: 100%;
+              }
+            }
+          }
+        }
+        > div {
+          overflow: hidden;
+          width: 634;
+          height: 705px;
+          border-radius: 8px;
+          img {
+            width: 100%;
+            height: 100%;
+
+            @include object_cover;
+          }
+        }
+        > div {
+          width: 634px;
+        }
+      }
+      .detail__main-contentsbox {
+        width: 597px;
+        .detail__main-contentsbox-provider {
+          @include text_B_S_14;
+          margin-bottom: 4px;
+          color: map-get($color, color-Neutrals-Grey-600);
+        }
+        .detail__main-contentsbox-title {
+          display: flex;
+          margin-bottom: 10px;
+          h1 {
+            @include text_XL_22;
+            width: 469px;
+            color: map-get($color, color-Neutrals-Grey-800);
+          }
+          > div {
+            display: flex;
+            width: 83px;
+
+            > i {
+              margin-top: 5px;
+              width: 34px;
+              height: 34px;
+              background-image: url("../../../assets/images/product-detail/share-ico.svg");
+              cursor: pointer;
+              @include object_cover;
+            }
+            > div {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-direction: column;
+              i {
+                width: 45px;
+                height: 45px;
+                background-image: url("../../../assets/images/product-detail/bookmark-ico.svg");
+                cursor: pointer;
+                @include object_cover;
+              }
+            }
+          }
+        }
+        .detail__main-contentsbox-reviews {
+          display: flex;
+          align-items: center;
+          margin-bottom: 2px;
+          ul {
+            display: flex;
+            margin-right: 12px;
+            li {
+              width: 16px;
+              height: 16px;
+              background-image: url("../../../assets/images/product-detail/main-star-ico.svg");
+              @include object_cover;
+            }
+          }
+          span {
+            @include text_S_14;
+            color: map-get($color, primary-color);
+          }
+        }
+        .detail__main-contentsbox-counters {
+          display: flex;
+          align-items: center;
+          > span {
+            @include text_L_18;
+            margin-right: 7px;
+            color: map-get($color, color-Neutrals-Grey-700);
+          }
+          > strike {
+            @include text_L_18;
+            margin-right: 10px;
+            color: map-get($color, color-Neutrals-Grey-400);
+          }
+          > div {
+            @include text_S_14;
+            color: map-get($color, primary-color);
+          }
+        }
+        .detail__main-contentsbox-price {
+          display: flex;
+          gap: 12px;
+          align-items: center;
+          margin-bottom: 20px;
+          h2 {
+            display: flex;
+            align-items: center;
+
+            @include text_XXL_26;
+            span {
+              @include heading_M_32;
+              margin-right: 2px;
+            }
+          }
+          i {
+            @include object_cover;
+            width: 90px;
+            height: 26px;
+            background-image: url("../../../assets/images/product-detail/free-ico.svg");
+          }
+        }
+        .detail__main-contentsbox-infotxt {
+          @include text_M_16;
+          margin-bottom: 26px;
+          color: map-get($color, color-Neutrals-Grey-600);
+        }
+        .detail__main-contentsbox-delivery-infos {
+          display: flex;
+          gap: 12px;
+          margin-bottom: 32px;
+          h4 {
+            color: map-get($color, color-Neutrals-Grey-400);
+            @include text_M_16;
+          }
+          ul {
+            li:first-child {
+              @include text_B_M_16;
+              color: map-get($color, color-Neutrals-Grey-800);
+            }
+            li {
+              @include text_M_16;
+              display: flex;
+              gap: 3px;
+              margin-bottom: 7px;
+              color: map-get($color, color-Neutrals-Grey-600);
+              > i {
+                display: inline-block;
+                width: 24px;
+                height: 24px;
+                background-image: url("../../../assets/images/product-detail/delivery-check-ico.svg");
+                @include object_cover;
+              }
+              .delivery-date {
+                color: map-get($color, primary-color);
+              }
+            }
+          }
+        }
+        .detail__main-contentsbox-brand {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 25px;
+          border-top: 2px solid map-get($color, color-Neutrals-Grey-200);
+          height: 72px;
+          > div {
+            display: flex;
+            gap: 2px;
+            align-items: center;
+            color: map-get($color, color-Neutrals-Grey-600);
+            cursor: pointer;
+            @include text_B_S_14;
+
+            i {
+              display: inline-block;
+              width: 24px;
+              height: 24px;
+              background-image: url("../../../assets/images/product-detail/shop-ico.svg");
+              @include object_cover;
+            }
+          }
+          button {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            outline: none;
+            width: 83px;
+            height: 32px;
+            background-color: map-get($color, color-Neutrals-Grey-100);
+            color: map-get($color, color-Neutrals-Grey-400);
+            cursor: pointer;
+            border-radius: 50px;
+            @include text_B_S_14;
+            > i {
+              padding-top: 2px;
+              font-size: 12px;
+            }
+          }
+        }
+        .detail__main-contentsbox-select {
+          .detail__mian-contentsbox-selects {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 42px;
+
+            select {
+              display: inline-block;
+              margin-bottom: 13px;
+              padding-left: 15px;
+              border: 1px solid map-get($color, color-Neutrals-Grey-200);
+              height: 40px;
+              background: url("../../../assets/images/product-detail/select-arrow.svg")
+                no-repeat right 15px center;
+              cursor: pointer;
+              appearance: none;
+              border-radius: 8px;
+              option {
+                cursor: pointer;
+              }
+            }
+          }
+          h3 {
+            @include text_B_S_14;
+            margin-bottom: 17px;
+            color: map-get($color, color-Black);
+          }
+          > div {
+            display: flex;
+            justify-content: space-between;
+            button {
+              padding-top: 5px;
+              border: 2px solid map-get($color, primary-color);
+              outline: none;
+              width: 294px;
+              height: 54px;
+              background-color: map-get($color, color-White);
+              cursor: pointer;
+              border-radius: 8px;
+              @include text_B_L_18;
+            }
+            .select-cart-btn {
+              color: map-get($color, primary-color);
+            }
+            .select-buy-btn {
+              background-color: map-get($color, primary-color);
+
+              color: map-get($color, color-White);
+            }
+          }
+        }
+      }
+    }
+  }
+  #product-detail__container {
+    @include width_inner;
+    .product-detail__header {
+      width: 705px;
+      height: 48px;
+      border-bottom: 2px solid map-get($color, color-Neutrals-Grey-200);
+      margin-bottom: 29px;
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        li {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 162px;
+          height: 48px;
+          @include text_B_M_16;
+          gap: 3px;
+          color: map-get($color, color-Neutrals-Grey-800);
+          cursor: pointer;
+          &.active {
+            color: map-get($color, primary-color);
+            border-bottom: 2px solid map-get($color, primary-color);
+          }
+          > span {
+            color: map-get($color, color-Neutrals-Grey-500);
+          }
+        }
+      }
+    }
+    .product-detail__clearance {
+      width: 705px;
+      height: 259px;
+      margin-bottom: 10px;
+      background-image: url("../../../assets/images/product-detail/detail__clearance-img.png");
+      @include background_cover;
+    }
+    .product-detail__imgs {
+      width: 705px;
+      height: 100%;
+      .product-detail__imgs-main {
+        width: 705px;
+        height: 943px;
+        margin-bottom: 10px;
+        img {
+          width: 100%;
+          height: 100%;
+          @include background_cover;
+        }
+      }
+      .product-detail__imgs-secon {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        div {
+          width: 348px;
+          height: 483px;
+          img {
+            width: 100%;
+            height: 100%;
+            @include background_cover;
+          }
+        }
+      }
+      .product-detail__imgs-third {
+        display: flex;
+        justify-content: space-between;
+        div {
+          width: 229px;
+          height: 353px;
+          img {
+            width: 100%;
+            height: 100%;
+            @include background_cover;
+          }
+        }
+      }
+    }
+  }
+}
