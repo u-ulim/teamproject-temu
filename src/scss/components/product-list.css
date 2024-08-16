@@ -188,8 +188,10 @@ table {
 .product-lists .product-list .product-list__thumb-box .product-list__thumb {
   width: 255px;
   height: 255px;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   transition: all 0.3s;
 }
 .product-lists .product-list .product-list__title {
