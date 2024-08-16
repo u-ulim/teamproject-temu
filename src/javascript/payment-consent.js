@@ -23,3 +23,13 @@ consentBtns.forEach((consentBtn) => {
     }
   });
 });
+
+//주문상품
+
+let orderinfoBtn = document.querySelector(".order__title");
+const product = document.querySelector(".product__info");
+
+orderinfoBtn.addEventListener("click", () => {
+  product.classList.toggle("active");
+  orderinfoBtn.classList.toggle("active");
+});
