@@ -385,102 +385,142 @@ body {
     }
     .product-detail__reviews {
       width: 705px;
-      margin-bottom: 41px;
-      .reviews__header {
-        margin-bottom: 20px;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        .reviews__header__left {
+      .reviews__counters {
+        margin-bottom: 41px;
+        .counters__header {
+          margin-bottom: 20px;
+          width: 100%;
           display: flex;
+          justify-content: space-between;
           align-items: center;
-          @include text_B_L_18;
-
-          span {
-            margin-right: 16px;
-          }
-          p {
-            color: map-get($color, primary-color);
-          }
-        }
-        .reviews__header__right {
-          display: flex;
-          align-items: center;
-          > div {
+          .counters__header__left {
             display: flex;
             align-items: center;
-            color: map-get($color-system, info-color);
-            background-color: map-get($color-background, info-color);
-            margin-right: 30px;
-            padding: 2px 5px 0px 5px;
-            i {
-              width: 24px;
-              height: 24px;
-              background-image: url("../../../assets/images/product-detail/verified-ico.svg");
-              @include background_cover;
+            @include text_B_L_18;
+
+            span {
+              margin-right: 16px;
+            }
+            p {
+              color: map-get($color, primary-color);
             }
           }
-          > span {
-            @include text_B_L_18;
-            color: map-get($color, primary-color);
+          .counters__header__right {
+            display: flex;
+            align-items: center;
+            > div {
+              display: flex;
+              align-items: center;
+              color: map-get($color-system, info-color);
+              background-color: map-get($color-background, info-color);
+              margin-right: 30px;
+              padding: 2px 5px 0px 5px;
+              i {
+                width: 24px;
+                height: 24px;
+                background-image: url("../../../assets/images/product-detail/verified-ico.svg");
+                @include background_cover;
+              }
+            }
+            > span {
+              @include text_B_L_18;
+              color: map-get($color, primary-color);
+            }
+          }
+        }
+        .reviews__counter {
+          width: 100%;
+          height: 201px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: map-get($color, color-Neutrals-Grey-100);
+          .reviews__counter-leftBox {
+            display: flex;
+            margin-right: 103px;
+            > ul {
+              display: flex;
+              margin-right: 19px;
+              > li {
+                @include object_cover;
+                width: 28px;
+                height: 28px;
+                background-image: url("../../../assets/images/product-detail/review-star-ico.svg");
+              }
+            }
+            span {
+              @include heading_M_32;
+              line-height: 28px;
+            }
+          }
+          .reviews__counter-rightBox {
+            width: 293px;
+            height: 134px;
+            padding: 10px;
+            ul {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              gap: 6px;
+              @include text_XS_12;
+              color: map-get($color, secondary-color);
+              li {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 18px;
+                .counter-progressbar {
+                  width: 199px;
+                  height: 4px;
+                  background-color: map-get($color, color-Neutrals-Grey-200);
+                }
+              }
+              li span:first-of-type {
+                width: 18px;
+                text-align: right;
+              }
+              li span:last-of-type {
+                width: 36px;
+                text-align: left;
+              }
+            }
           }
         }
       }
-      .reviews__counter {
-        width: 100%;
-        height: 201px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: map-get($color, color-Neutrals-Grey-100);
-        .reviews__counter-leftBox {
+      .reviews__comments {
+        .comments__header {
           display: flex;
-          margin-right: 103px;
-          > ul {
-            display: flex;
-            margin-right: 19px;
-            > li {
-              @include object_cover;
-              width: 28px;
-              height: 28px;
-              background-image: url("../../../assets/images/product-detail/review-star-ico.svg");
-            }
-          }
-          span {
-            @include heading_M_32;
-            line-height: 28px;
-          }
-        }
-        .reviews__counter-rightBox {
-          width: 293px;
-          height: 134px;
-          padding: 10px;
+          justify-content: space-between;
+          align-items: center;
           ul {
             display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            gap: 6px;
-            @include text_XS_12;
-            color: map-get($color, secondary-color);
+            align-items: center;
             li {
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
+              @include text_L_18;
+              color: map-get($color, color-Neutrals-Grey-800);
               height: 18px;
-              .counter-progressbar {
-                width: 199px;
-                height: 4px;
-                background-color: map-get($color, color-Neutrals-Grey-200);
+              display: flex;
+              cursor: pointer;
+              align-items: center;
+              &:first-child {
+                border-right: 1px solid map-get($color, color-Neutrals-Grey-800);
+                padding-right: 10px;
+                margin-right: 10px;
+              }
+              &:last-child {
+                color: map-get($color, color-Neutrals-Grey-400);
               }
             }
-            li span:first-of-type {
-              width: 18px;
-              text-align: right;
-            }
-            li span:last-of-type {
-              width: 36px;
-              text-align: left;
+          }
+          div {
+            display: flex;
+            gap: 10px;
+            select {
+              display: inline-block;
+              width: 88px;
+              height: 41px;
+              border: 1px solid map-get($color, color-Neutrals-Grey-300);
+              border-radius: 8px;
             }
           }
         }

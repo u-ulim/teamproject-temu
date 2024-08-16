@@ -307,7 +307,7 @@ table {
   transform: translateX(-50%);
   z-index: 3;
   background-color: #fff;
-  display: block;
+  display: none;
 }
 #header nav .nav-left .nav-left__menus .nav-menu__category .submenu-wrapper .submenu .submenu-tabs {
   text-align: center;
