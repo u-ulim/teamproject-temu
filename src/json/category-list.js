@@ -1,4 +1,5 @@
 // JSON 데이터 변수
+console.log("hi");
 const categoryURL =
   "https://my-json-server.typicode.com/u-ulim/temu-category/db";
 

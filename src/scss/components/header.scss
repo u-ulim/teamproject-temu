@@ -8,6 +8,7 @@
   @include width_full;
   border-bottom: 1px solid map-get($color, color-Neutrals-Grey-200);
   height: 130px;
+  margin-bottom: 30px;
   .header-top-wrapper {
     @include width_full;
     height: 48px;
@@ -140,7 +141,7 @@
               z-index: 3;
               background-color: map-get($color, color-White);
               // background: map-get($color, color-Neutrals-Grey-100);
-              display: none;
+              display: block;
               .submenu-tabs {
                 text-align: center;
                 ul {
