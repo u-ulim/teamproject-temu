@@ -186,8 +186,7 @@ table {
   height: 300px;
   background: url(../../assets/images/index/main-banner.png);
   cursor: pointer;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 #main .main__wrapper .main__slide__wrapper {
   display: flex;
@@ -651,6 +650,7 @@ table {
     width: 100%;
   }
   #main .main__wrapper .main__banner {
+    margin-bottom: 10px;
     width: 100%;
   }
   #main .main__wrapper .main__slide__wrapper {
