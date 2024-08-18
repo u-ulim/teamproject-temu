@@ -195,13 +195,8 @@ table {
   display: flex;
   gap: 5px;
   align-items: center;
-  margin-bottom: 20px;
+  height: 40px;
   cursor: pointer;
-}
-.wrapper .mark__inner .leftmenu ul li > div {
-  display: flex;
-  justify-content: space-between;
-  width: 149px;
 }
 .wrapper .mark__inner .leftmenu ul li .document {
   width: 24px;
@@ -254,6 +249,34 @@ table {
   font-style: normal;
   line-height: 22px;
   letter-spacing: -0.42px;
+}
+.wrapper .mark__inner .leftmenu ul .my-order {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrapper .mark__inner .leftmenu ul .my-order > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .mark__inner .leftmenu ul .my-order .fa-chevron-down {
+  margin-right: 20px;
+}
+.wrapper .mark__inner .leftmenu ul .inner {
+  display: none;
+  border: 1px solid red;
+  gap: 10px;
+  width: 200px;
+  font-family: "Pretendard-Regular";
+  font-size: 14px;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: -0.42px;
+  height: 200px;
+}
+.wrapper .mark__inner .leftmenu ul .inner.active {
+  display: flex;
 }
 .wrapper .mark__inner .container .contents .text {
   display: flex;
