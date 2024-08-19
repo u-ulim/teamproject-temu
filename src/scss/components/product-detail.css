@@ -228,8 +228,10 @@ body #main #detail__main-container .detail__main-imgbox > div {
 body #main #detail__main-container .detail__main-imgbox > div img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 body #main #detail__main-container .detail__main-imgbox > div {
   width: 634px;
@@ -270,8 +272,10 @@ body #main #detail__main-container .detail__main-contentsbox .detail__main-conte
   height: 34px;
   background-image: url("../../../assets/images/product-detail/share-ico.svg");
   cursor: pointer;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 body #main #detail__main-container .detail__main-contentsbox .detail__main-contentsbox-title > div > div {
   display: flex;
@@ -284,8 +288,10 @@ body #main #detail__main-container .detail__main-contentsbox .detail__main-conte
   height: 45px;
   background-image: url("../../../assets/images/product-detail/bookmark-ico.svg");
   cursor: pointer;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 body #main #detail__main-container .detail__main-contentsbox .detail__main-contentsbox-reviews {
   display: flex;
@@ -300,8 +306,10 @@ body #main #detail__main-container .detail__main-contentsbox .detail__main-conte
   width: 16px;
   height: 16px;
   background-image: url("../../../assets/images/product-detail/main-star-ico.svg");
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 body #main #detail__main-container .detail__main-contentsbox .detail__main-contentsbox-reviews span {
   font-family: "Pretendard-Regular";
@@ -365,8 +373,10 @@ body #main #detail__main-container .detail__main-contentsbox .detail__main-conte
   margin-right: 2px;
 }
 body #main #detail__main-container .detail__main-contentsbox .detail__main-contentsbox-price i {
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   width: 90px;
   height: 26px;
   background-image: url("../../../assets/images/product-detail/free-ico.svg");
@@ -418,8 +428,10 @@ body #main #detail__main-container .detail__main-contentsbox .detail__main-conte
   width: 24px;
   height: 24px;
   background-image: url("../../../assets/images/product-detail/delivery-check-ico.svg");
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 body #main #detail__main-container .detail__main-contentsbox .detail__main-contentsbox-delivery-infos ul li .delivery-date {
   color: #ff6d00;
@@ -450,8 +462,10 @@ body #main #detail__main-container .detail__main-contentsbox .detail__main-conte
   width: 24px;
   height: 24px;
   background-image: url("../../../assets/images/product-detail/shop-ico.svg");
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 body #main #detail__main-container .detail__main-contentsbox .detail__main-contentsbox-brand button {
   display: flex;
@@ -490,7 +504,9 @@ body #main #detail__main-container .detail__main-contentsbox .detail__main-conte
   height: 40px;
   background: url("../../../assets/images/product-detail/select-arrow.svg") no-repeat right 15px center;
   cursor: pointer;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   border-radius: 8px;
 }
 body #main #detail__main-container .detail__main-contentsbox .detail__main-contentsbox-select .detail__mian-contentsbox-selects select option {
@@ -709,8 +725,10 @@ body #product-detail__container .product-detail__reviews .reviews__counters .rev
   margin-right: 19px;
 }
 body #product-detail__container .product-detail__reviews .reviews__counters .reviews__counter .reviews__counter-leftBox > ul > li {
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   width: 28px;
   height: 28px;
   background-image: url("../../../assets/images/product-detail/review-star-ico.svg");
