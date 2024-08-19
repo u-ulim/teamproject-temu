@@ -29,11 +29,9 @@ header {
 
 main {
   padding: 0 12px;
-  width: 961px;
-
+  width: 70%;
   /* section__up*/
   .section__up {
-    width: 100%;
     article {
       .section__title {
         display: flex;
@@ -405,6 +403,7 @@ main {
       display: flex;
       align-items: center;
       justify-content: space-around;
+
       padding-bottom: 22px;
       width: 100%;
       li {
@@ -443,13 +442,11 @@ aside {
   padding-top: 32px;
   position: sticky;
   top: 20px;
+  width: 26%;
   height: fit-content;
-
   .checkout__summary {
     padding: 10px 0;
-    width: 338.32px;
-
-    /*summary__item*/
+    width: 100%; /*summary__item*/
     .summary__item {
       ul {
         li {
@@ -1104,6 +1101,40 @@ aside {
   }
 }
 
+/*미디어쿼리*/
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    width: 100%;
+  }
+  main {
+    width: 100%;
+    .section__up {
+      width: 100%;
+      article {
+        width: 100%;
+      }
+    }
+    .address {
+      width: 100%;
+      .shopping__info {
+        width: 100%;
+        .info__down {
+          padding: 15px 100px 15px 14px;
+        }
+      }
+    }
+  }
+  aside {
+    width: 100%;
+
+    .checkout__summary {
+      padding: 0 22px;
+      width: 100%;
+    }
+  }
+}
+
 @media (max-width: 768px) {
   header {
     border: none;
@@ -1135,14 +1166,14 @@ aside {
           }
           .back-box {
             display: block;
-            @include text_M_16;
             position: absolute;
             left: 8%;
+            @include text_M_16;
           }
           .select__category {
             width: 100%;
-            @include text_M_16;
             text-align: center;
+            @include text_M_16;
             span {
               display: none;
             }
@@ -1311,19 +1342,19 @@ aside {
           }
           .customs-number-box {
             .korea-select {
-              width: 100%;
               padding-right: 10px;
+              width: 100%;
             }
             p {
               display: none;
             }
             #mobile-user {
               display: block;
-              @include text_XS_12;
-              text-align: right;
-              padding-bottom: 10px;
               padding-right: 5px;
+              padding-bottom: 10px;
               color: map-get($color, primary-color);
+              text-align: right;
+              @include text_XS_12;
             }
             input[type="text"] {
               width: 100%;

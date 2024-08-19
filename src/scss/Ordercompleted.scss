@@ -232,6 +232,13 @@ footer {
   height: 752px;
 }
 
+/*미디어쿼리*/
+@media (max-width: 1024px) {
+  .container {
+    width: 100%;
+  }
+}
+
 @media (max-width: 768px) {
   header {
     border: none;

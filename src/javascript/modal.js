@@ -1,19 +1,29 @@
-// 배너 삭제
 const banner = document.querySelector(".banner");
 const bannerClose = document.querySelector(".banner-close");
 
-bannerClose.addEventListener("click", () => {
-  banner.classList.toggle("active");
-});
-
-// 옵션 변경 시 모달 창
-
-const optionSeclect = document.querySelector(".option");
+const optionSelect = document.querySelector(".option");
 const optionModal = document.querySelector(".modal__box");
 const modalClose = document.querySelector(".modal__close-box");
 
-if (optionSeclect && optionModal && modalClose) {
-  optionSeclect.addEventListener("click", () => {
+const addressBtn = document.querySelector(".addressbtn");
+const addressModal = document.querySelector(".address__modal__box");
+const addressClose = document.querySelector(".address__close-box");
+
+const addressPlusBtn = document.querySelector("#plus-address");
+const addressPlusModal = document.querySelector(".address__modal__box-plus");
+const addressPlusClose = document.querySelector(".address__close-box-plus");
+const addressBackBtn = document.querySelector(".address__back-box");
+
+// 배너 삭제
+if (bannerClose) {
+  bannerClose.addEventListener("click", () => {
+    banner.classList.toggle("active");
+  });
+}
+
+// 옵션 변경 시 모달 창
+if (optionSelect && optionModal && modalClose) {
+  optionSelect.addEventListener("click", () => {
     optionModal.classList.add("active");
   });
 
@@ -23,10 +33,6 @@ if (optionSeclect && optionModal && modalClose) {
 }
 
 // 주소 변경 모달 창
-const addressBtn = document.querySelector(".addressbtn");
-const addressModal = document.querySelector(".address__modal__box");
-const addressClose = document.querySelector(".address__close-box");
-
 if (addressBtn && addressModal && addressClose) {
   addressBtn.addEventListener("click", () => {
     addressModal.classList.add("active");
@@ -38,21 +44,21 @@ if (addressBtn && addressModal && addressClose) {
 }
 
 // 주소 추가 모달 창
-const addressPlusBtn = document.querySelector("#plus-address");
-const addressPlusModal = document.querySelector(".address__modal__box-plus");
-const addressPlusClose = document.querySelector(".address__close-box-plus");
-const addressBackBtn = document.querySelector(".address__back-box");
+if (addressPlusBtn && addressPlusModal && addressPlusClose) {
+  addressPlusBtn.addEventListener("click", () => {
+    addressPlusModal.classList.add("active");
+  });
 
-addressPlusBtn.addEventListener("click", () => {
-  addressPlusModal.classList.add("active");
-});
+  addressPlusClose.addEventListener("click", () => {
+    addressPlusModal.classList.remove("active");
+    addressModal.classList.remove("active");
+  });
+}
 
-addressPlusClose.addEventListener("click", () => {
-  addressPlusModal.classList.remove("active");
-  addressModal.classList.remove("active");
-});
-
-addressBackBtn.addEventListener("click", () => {
-  addressPlusModal.classList.remove("active");
-  addressModal.classList.add("active");
-});
+// 주소 추가 모달 창에서 뒤로 가기 버튼
+if (addressBackBtn && addressPlusModal && addressModal) {
+  addressBackBtn.addEventListener("click", () => {
+    addressPlusModal.classList.remove("active");
+    addressModal.classList.add("active");
+  });
+}

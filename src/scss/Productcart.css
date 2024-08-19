@@ -156,13 +156,6 @@ table {
 }
 
 /* VARIABLES */
-.background_cover {
-  display: inline-block;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 /*header*/
 body {
   position: relative;
@@ -188,10 +181,9 @@ header {
 
 /*main*/
 main {
+  padding: 0 12px;
+  width: 70%;
   /*section__up*/
-}
-main .section__up {
-  width: 961px;
 }
 main .section__up article {
   /*section__title */
@@ -546,9 +538,6 @@ main .section__up article .product__info .product .close span:nth-child(2) {
 main .mobile-aside {
   display: none;
 }
-main .section__down {
-  width: 961px;
-}
 main .section__down .section__down-title {
   margin-bottom: 35px;
   left: 0;
@@ -593,11 +582,12 @@ aside {
   padding-top: 32px;
   position: sticky;
   top: 20px;
+  width: 26%;
   height: fit-content;
 }
 aside .checkout__summary {
-  padding: 10px 0;
-  width: 338.32px;
+  padding: 10px, 0;
+  width: 100%;
   /*summary_item*/
   /*summary__price*/
   /*checkout__button*/
@@ -1137,6 +1127,168 @@ footer {
   transform: rotate(-45deg);
 }
 
+/*미디어쿼리*/
+@media (max-width: 1384px) {
+  .container {
+    flex-direction: column;
+    width: 100%;
+  }
+  .container aside {
+    display: none;
+  }
+  main {
+    width: 100%;
+  }
+  main .section__up {
+    width: 100%;
+  }
+  main .mobile-aside {
+    display: block;
+    margin-bottom: 32px;
+  }
+  main .mobile-aside .checkout__summary {
+    margin: 0 auto;
+    padding: 0 22px;
+    width: 100%;
+    /*summary_item*/
+    /*summary__price*/
+    /*checkout__button*/
+    /*info*/
+  }
+  main .mobile-aside .checkout__summary .summary__item ul {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  main .mobile-aside .checkout__summary .summary__item ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 34.5px;
+    font-family: "Pretendard-Regular";
+    font-size: 16px;
+    font-style: normal;
+    line-height: 24px;
+    letter-spacing: -0.48px;
+  }
+  main .mobile-aside .checkout__summary .summary__item ul li .price {
+    color: #4a4949;
+  }
+  main .mobile-aside .checkout__summary .summary__item ul li .discount {
+    color: #ff6d00;
+  }
+  main .mobile-aside .checkout__summary .summary__item ul .additional__info {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 10px;
+    font-family: "Pretendard-Regular";
+    font-size: 14px;
+    font-style: normal;
+    line-height: 22px;
+    letter-spacing: -0.42px;
+  }
+  main .mobile-aside .checkout__summary .summary__item ul .additional__info span {
+    font-family: "Pretendard-Bold";
+    font-size: 14px;
+    font-style: bold;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: -0.42px;
+  }
+  main .mobile-aside .checkout__summary .summary__Price ul .summary__item__total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding-top: 20px;
+  }
+  main .mobile-aside .checkout__summary .summary__Price ul .summary__item__total p {
+    font-family: "Pretendard-Regular";
+    font-size: 16px;
+    font-style: normal;
+    line-height: 24px;
+    letter-spacing: -0.48px;
+  }
+  main .mobile-aside .checkout__summary .summary__Price ul .summary__item__total p span {
+    font-family: "Pretendard-Regular";
+    font-size: 14px;
+    font-style: normal;
+    line-height: 22px;
+    letter-spacing: -0.42px;
+  }
+  main .mobile-aside .checkout__summary .summary__Price ul .summary__item__total .price {
+    font-family: "Pretendard-Bold";
+    font-size: 18px;
+    font-style: bold;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: -0.54px;
+  }
+  main .mobile-aside .checkout__summary .summary__Price ul .tax__info {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 23.5px;
+    font-family: "Pretendard-Regular";
+    font-size: 12px;
+    font-style: normal;
+    line-height: 18px;
+    letter-spacing: -0.36px;
+  }
+  main .mobile-aside .checkout__summary .summary__Price ul .tax__info .tax__label {
+    display: block;
+    border: 1px solid #0a8800;
+    width: 28px;
+    color: #0a8800;
+    text-align: center;
+    border-radius: 8px;
+  }
+  main .mobile-aside .checkout__summary .summary__Price ul .tax__info .tex__text {
+    color: #6a6a6a;
+  }
+  main .mobile-aside .checkout__summary .checkout__button {
+    margin-bottom: 20px;
+    border: none;
+    width: 100%;
+    height: 60px;
+    background-color: #ff6d00;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    font-family: "Pretendard-Bold";
+    font-size: 16px;
+    font-style: bold;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: -0.48px;
+  }
+  main .mobile-aside .checkout__summary .checkout__button:hover {
+    background-color: #ff7629;
+    cursor: pointer;
+  }
+  main .mobile-aside .checkout__summary .info {
+    font-family: "Pretendard-Regular";
+    font-size: 14px;
+    font-style: normal;
+    line-height: 22px;
+    letter-spacing: -0.42px;
+  }
+  main .mobile-aside .checkout__summary .info ul {
+    display: flex;
+    flex-direction: column;
+  }
+  main .mobile-aside .checkout__summary .info ul .info__text {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-left: 10px;
+  }
+  main .section__down {
+    width: 100%;
+  }
+}
 @media (max-width: 768px) {
   header {
     width: 100%;
@@ -1156,8 +1308,8 @@ footer {
     width: 100%;
   }
   main .section__up {
-    width: 100%;
     margin-bottom: 10px;
+    width: 100%;
   }
   main .section__up article .section__title {
     display: flex;
@@ -1237,12 +1389,11 @@ footer {
     width: 100%;
   }
   main .section__up article .product__info .product .product__info div .prodouct__text-up span {
-    border: 1px solid #f00;
     overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
     width: 30px;
     height: 15px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     font-family: "Pretendard-Regular";
     font-size: 14px;
     font-style: normal;
@@ -1309,7 +1460,7 @@ footer {
   }
   main .mobile-aside .checkout__summary {
     margin: 0 auto;
-    padding: 10px 0;
+    padding: 0 10px;
     width: 338.32px;
     /*summary_item*/
     /*summary__price*/

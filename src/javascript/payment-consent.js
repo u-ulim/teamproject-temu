@@ -22,6 +22,7 @@ consentBtns.forEach((consentBtn) => {
       content.style.display = "block";
     }
   });
+  ``;
 });
 
 //주문상품

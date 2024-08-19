@@ -1,7 +1,6 @@
 @import "./config/fonts.scss";
 @import "./config/reset.scss";
 @import "./config/colors.scss";
-@import "./config/image.scss";
 @import "./layout/layout.scss";
 
 /*header*/
@@ -27,9 +26,10 @@ header {
 
 /*main*/
 main {
+  padding: 0 12px;
+  width: 70%;
   /*section__up*/
   .section__up {
-    width: 961px;
     article {
       /*section__title */
       .section__title {
@@ -345,8 +345,6 @@ main {
     display: none;
   }
   .section__down {
-    width: 961px;
-
     .section__down-title {
       margin-bottom: 35px;
       left: 0;
@@ -388,12 +386,11 @@ aside {
   padding-top: 32px;
   position: sticky;
   top: 20px;
+  width: 26%;
   height: fit-content;
-
   .checkout__summary {
-    padding: 10px 0;
-    width: 338.32px;
-
+    padding: 10px, 0;
+    width: 100%;
     /*summary_item*/
     .summary__item {
       ul {
@@ -852,6 +849,142 @@ footer {
   }
 }
 
+/*미디어쿼리*/
+@media (max-width: 1384px) {
+  .container {
+    flex-direction: column;
+    width: 100%;
+    aside {
+      display: none;
+    }
+  }
+  main {
+    width: 100%;
+    .section__up {
+      width: 100%;
+    }
+    .mobile-aside {
+      display: block;
+      margin-bottom: 32px;
+      .checkout__summary {
+        margin: 0 auto;
+        padding: 0 22px;
+        width: 100%;
+
+        /*summary_item*/
+        .summary__item {
+          ul {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            li {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              padding-bottom: 34.5px;
+              @include text_M_16;
+              .price {
+                color: map-get($color, color-Neutrals-Grey-700);
+              }
+              .discount {
+                color: map-get($color, primary-color);
+              }
+            }
+            .additional__info {
+              display: flex;
+              justify-content: flex-end;
+              padding-bottom: 10px;
+              @include text_S_14;
+              span {
+                @include text_B_S_14;
+              }
+            }
+          }
+        }
+
+        /*summary__price*/
+        .summary__Price {
+          ul {
+            .summary__item__total {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              margin-bottom: 10px;
+              padding-top: 20px;
+              p {
+                @include text_M_16;
+                span {
+                  @include text_S_14;
+                }
+              }
+              .price {
+                @include text_B_L_18;
+              }
+            }
+            .tax__info {
+              display: flex;
+              gap: 4px;
+              align-items: center;
+              justify-content: flex-end;
+              margin-bottom: 23.5px;
+              @include text_XS_12;
+              .tax__label {
+                display: block;
+                border: 1px solid map-get($color-system, info-color);
+                width: 28px;
+                color: map-get($color-system, info-color);
+                text-align: center;
+                border-radius: 8px;
+              }
+              .tex__text {
+                color: map-get($color, color-Neutrals-Grey-600);
+              }
+            }
+          }
+        }
+
+        /*checkout__button*/
+
+        .checkout__button {
+          margin-bottom: 20px;
+          border: none;
+          width: 100%;
+          height: 60px;
+          background-color: map-get($color, primary-color);
+          color: map-get($color, color-White);
+          text-align: center;
+          border-radius: 8px;
+          @include text_B_M_16;
+          &:hover {
+            background-color: map-get($color-hover, primary-color);
+            cursor: pointer;
+          }
+        }
+
+        /*info*/
+        .info {
+          @include text_S_14;
+          ul {
+            display: flex;
+
+            flex-direction: column;
+            .info__text {
+              display: flex;
+              gap: 5px;
+              align-items: center;
+              margin-bottom: 20px;
+              padding-left: 10px;
+            }
+          }
+        }
+      }
+    }
+    .section__down {
+      width: 100%;
+    }
+  }
+}
+
 @media (max-width: 768px) {
   header {
     width: 100%;
@@ -872,8 +1005,8 @@ footer {
   main {
     width: 100%;
     .section__up {
-      width: 100%;
       margin-bottom: 10px;
+      width: 100%;
       article {
         .section__title {
           display: flex;
@@ -941,12 +1074,11 @@ footer {
               div {
                 .prodouct__text-up {
                   span {
-                    border: 1px solid #f00;
                     overflow: hidden;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
                     width: 30px;
                     height: 15px;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
 
                     @include text_S_14;
                   }
@@ -1004,7 +1136,7 @@ footer {
       margin-bottom: 32px;
       .checkout__summary {
         margin: 0 auto;
-        padding: 10px 0;
+        padding: 0 10px;
         width: 338.32px;
 
         /*summary_item*/
