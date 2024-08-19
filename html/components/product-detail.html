@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,13 +8,19 @@
       rel="stylesheet"
       href="../../src/scss/components/product-detail.css"
     />
-    <script
-      src="https://kit.fontawesome.com/ccc6dd49b3.js"
-      crossorigin="anonymous"
-    ></script>
-    <script defer src="../../src/js/product-detail.js"></script>
+    <link rel="stylesheet" href="../../src/scss/components/product-list.css" />
+
+    <script type="module" defer src="../../src/js/product-detail.js"></script>
+    <script type="module" defer src="../../src/json/category-list.js"></script>
+    <script type="module" defer src="../../src/json/product-list.js"></script>
+    <script defer src="../../src/js/product-list.js"></script>
   </head>
   <body>
+    <!-- HEADER START -->
+    <header id="header"></header>
+    <!-- HEADER END -->
+
+    <!-- MAIN START -->
     <main id="main">
       <section id="detail__bradcrumb-container">
         <ul class="detail-bradcrumbs">
@@ -160,6 +166,8 @@
         </div>
       </section>
     </main>
+    <!-- MAIN END -->
+
     <section id="product-detail__container">
       <div class="product-detail__header">
         <ul>
@@ -205,7 +213,7 @@
               <p>13,293</p>
             </div>
             <div class="counters__header__right">
-              <div><i></i>모든 리뷰는 구매 인증 후 작성 되었습니다</div>
+              <div><i></i>모든 리뷰는 구매 인증 후 작성 되었습니다.</div>
               <span>리뷰쓰기</span>
             </div>
           </div>
@@ -277,75 +285,113 @@
           <ul class="comments__contents">
             <li>
               <div class="comment__profile">
-                <i>profile-img</i>
+                <div>
+                  <img
+                    src="../../assets/images/product-detail/comment_profile.png"
+                  />
+                </div>
                 <p>LoveSun</p>
                 <span>KR</span>
               </div>
-              <div class="comment__star">
+              <div class="comment__stars">
                 <ul>
-                  <li><i>stra-ico</i></li>
-                  <li><i>stra-ico</i></li>
-                  <li><i>stra-ico</i></li>
-                  <li><i>stra-ico</i></li>
-                  <li><i>stra-ico</i></li>
+                  <li><i></i></li>
+                  <li><i></i></li>
+                  <li><i></i></li>
+                  <li><i></i></li>
+                  <li><i></i></li>
                 </ul>
                 <div>2024년 07월 25일</div>
               </div>
-              <div class="comment__content">디자인 화면 색감 그대로입니다.</div>
+              <div class="comment__text">디자인 화면 색감 그대로입니다.</div>
             </li>
             <li>
               <div class="comment__profile">
-                <i>profile-img</i>
+                <div>
+                  <img
+                    src="../../assets/images/product-detail/comment_profile.png"
+                  />
+                </div>
                 <p>LoveSun</p>
                 <span>KR</span>
               </div>
-              <div class="comment__star">
+              <div class="comment__stars">
                 <ul>
-                  <li><i>stra-ico</i></li>
-                  <li><i>stra-ico</i></li>
-                  <li><i>stra-ico</i></li>
-                  <li><i>stra-ico</i></li>
-                  <li><i>stra-ico</i></li>
+                  <li><i></i></li>
+                  <li><i></i></li>
+                  <li><i></i></li>
+                  <li><i></i></li>
+                  <li><i></i></li>
                 </ul>
                 <div>2024년 07월 25일</div>
               </div>
-              <div class="comment__content">디자인 화면 색감 그대로입니다.</div>
+              <div class="comment__text">디자인 화면 색감 그대로입니다.</div>
             </li>
             <li>
               <div class="comment__profile">
-                <i>profile-img</i>
+                <div>
+                  <img
+                    src="../../assets/images/product-detail/comment_profile.png"
+                  />
+                </div>
                 <p>LoveSun</p>
                 <span>KR</span>
               </div>
-              <div class="comment__star">
+              <div class="comment__stars">
                 <ul>
-                  <li><i>stra-ico</i></li>
-                  <li><i>stra-ico</i></li>
-                  <li><i>stra-ico</i></li>
-                  <li><i>stra-ico</i></li>
-                  <li><i>stra-ico</i></li>
+                  <li><i></i></li>
+                  <li><i></i></li>
+                  <li><i></i></li>
+                  <li><i></i></li>
+                  <li><i></i></li>
                 </ul>
                 <div>2024년 07월 25일</div>
               </div>
-              <div class="comment__content">디자인 화면 색감 그대로입니다.</div>
+              <div class="comment__text">디자인 화면 색감 그대로입니다.</div>
             </li>
             <li>
               <div class="comment__profile">
-                <i>profile-img</i>
+                <div>
+                  <img
+                    src="../../assets/images/product-detail/comment_profile.png"
+                  />
+                </div>
                 <p>LoveSun</p>
                 <span>KR</span>
               </div>
-              <div class="comment__star">
+              <div class="comment__stars">
                 <ul>
-                  <li><i>stra-ico</i></li>
-                  <li><i>stra-ico</i></li>
-                  <li><i>stra-ico</i></li>
-                  <li><i>stra-ico</i></li>
-                  <li><i>stra-ico</i></li>
+                  <li><i></i></li>
+                  <li><i></i></li>
+                  <li><i></i></li>
+                  <li><i></i></li>
+                  <li><i></i></li>
                 </ul>
                 <div>2024년 07월 25일</div>
               </div>
-              <div class="comment__content">디자인 화면 색감 그대로입니다.</div>
+              <div class="comment__text">디자인 화면 색감 그대로입니다.</div>
+            </li>
+            <li>
+              <div class="comment__profile">
+                <div>
+                  <img
+                    src="../../assets/images/product-detail/comment_profile.png"
+                  />
+                </div>
+                <p>LoveSun</p>
+                <span>KR</span>
+              </div>
+              <div class="comment__stars">
+                <ul>
+                  <li><i></i></li>
+                  <li><i></i></li>
+                  <li><i></i></li>
+                  <li><i></i></li>
+                  <li><i></i></li>
+                </ul>
+                <div>2024년 07월 25일</div>
+              </div>
+              <div class="comment__text">디자인 화면 색감 그대로입니다.</div>
             </li>
           </ul>
         </div>
@@ -354,10 +400,10 @@
         <div class="contacts__header">
           <div class="contacts__header__left">
             <span>문의사항</span>
-            <span>501</span>
+            <p>501</p>
           </div>
           <div class="contacts__header__right">
-            <p><i>icon</i>부적절한 단어들을 실시간 모니터링하고 있습니다</p>
+            <div><i></i>부적절한 단어들을 실시간 모니터링하고 있습니다</div>
             <span>문의하기</span>
           </div>
         </div>
@@ -370,15 +416,16 @@
                 <span>답변완료</span>
               </div>
               <div class="contacts__contents__info">
-                <span>김도경</span> <span>2024년 07월 26일 08시 02분</span>
+                <span>김도*</span> <span>2024년 07월 26일 08시 02분</span>
               </div>
               <div class="contacts__contents__question">
                 <span>Q</span>
-                <i>icon</i>
-                <span>언제 재입고 되나요?</span>
+                <i></i>
+                <p>언제 재입고 되나요?</p>
               </div>
               <div class="contacts__contents__answer">
-                <div><span>A</span></div>
+                <span>A</span>
+                <i></i>
                 <div>
                   <span>YYDance</span>
                   <p>
@@ -396,15 +443,16 @@
                 <span>답변완료</span>
               </div>
               <div class="contacts__contents__info">
-                <span>김도경</span> <span>2024년 07월 26일 08시 02분</span>
+                <span>김도*</span> <span>2024년 07월 26일 08시 02분</span>
               </div>
               <div class="contacts__contents__question">
                 <span>Q</span>
-                <i>icon</i>
-                <span>언제 재입고 되나요?</span>
+                <i></i>
+                <p>언제 재입고 되나요?</p>
               </div>
               <div class="contacts__contents__answer">
-                <div><span>A</span></div>
+                <span>A</span>
+                <i></i>
                 <div>
                   <span>YYDance</span>
                   <p>
@@ -422,15 +470,16 @@
                 <span>답변완료</span>
               </div>
               <div class="contacts__contents__info">
-                <span>김도경</span> <span>2024년 07월 26일 08시 02분</span>
+                <span>김도*</span> <span>2024년 07월 26일 08시 02분</span>
               </div>
               <div class="contacts__contents__question">
                 <span>Q</span>
-                <i>icon</i>
-                <span>언제 재입고 되나요?</span>
+                <i></i>
+                <p>언제 재입고 되나요?</p>
               </div>
               <div class="contacts__contents__answer">
-                <div><span>A</span></div>
+                <span>A</span>
+                <i></i>
                 <div>
                   <span>YYDance</span>
                   <p>
@@ -450,7 +499,9 @@
             <span>배송정보</span>
           </div>
           <div class="delivery__header__right">
-            <p><i>icon</i>모든 주문에 무료배송을 포함하고 있습니다</p>
+            <div class="delivery__header__right-title">
+              <i></i>모든 주문에 무료배송을 포함하고 있습니다
+            </div>
             <span>서비스 보증</span>
             <div class="delivery__modal-container">
               <div>
@@ -526,7 +577,7 @@
             </div>
           </div>
         </div>
-        <div class="delivery__delivery_table">
+        <div class="delivery__table">
           <ul>
             <li>
               <h5>배송 방식</h5>
@@ -572,16 +623,21 @@
                 배송 시간과 배송 비용이 표시됩니다. 또한 주문에 대한 예상 처리
                 시간을 간략하게 설명하는 주문 확인 메시지를 받게 됩니다.
               </p>
+              <br />
+
               <p>
                 2) 창고에서 주문을 처리하는 데 1~3일이 소요될 수 있습니다.
                 주문이 발송되면 메시지를 받게 됩니다.
               </p>
+              <br />
               <p>
                 3) 발송이 완료되면 택배의 예상 배송 시간을 알려주는 배송 알림
                 메시지를 받게 됩니다. 배송이 준비되면 추적 번호도 전달드립니다.
                 주문 내역의 택배 항목 아래에서 예상 배송 시간을 동시에 확인할 수
                 있습니다.
               </p>
+              <br />
+
               <p>
                 4) 대부분의 경우 주문은 예상 배송 시간 내에 배송됩니다. 그러나
                 실제 배송 날짜는 항공편 일정, 기상 조건 및 기타 외부 요인에 의해
@@ -606,13 +662,11 @@
             <span>추천</span>
           </div>
           <div class="product-lists__header__right">
-            <p><i>icon</i>이 제품을 둘러봤던 고객들이 자주 봤던 상품입니다.</p>
+            <div><i></i>이 제품을 둘러봤던 고객들이 자주 봤던 상품입니다.</div>
             <span>문의하기</span>
           </div>
         </div>
-        <ul>
-          product-list
-        </ul>
+        <div id="product-list"></div>
       </div>
     </section>
   </body>

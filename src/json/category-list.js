@@ -2,7 +2,6 @@
 const categoryURL =
   "https://my-json-server.typicode.com/u-ulim/temu-category/db";
 
-console.log("Hi");
 // JSON 데이터 패치하기
 fetch(categoryURL)
   .then((response) => response.json())
@@ -19,12 +18,9 @@ fetch(categoryURL)
     importData();
     // 마우스 오버 시 카테고리 리스트 출력
     const tabs = document.querySelector(".submenu-tabs");
-    console.log(tabs);
 
     document.querySelectorAll(".submenu-tabs li").forEach((tab) => {
       tab.addEventListener("mouseover", function () {
-        console.log("hi");
-
         // 모든 탭에서 활성화 클래스 제거
         document
           .querySelectorAll(".submenu-tabs li")
