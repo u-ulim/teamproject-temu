@@ -431,12 +431,12 @@ footer {
     width: 100%;
     height: 45px;
   }
-  .container {
-    padding: 0 20px;
+  main {
     width: 100%;
   }
   main .container {
     width: 100%;
+    padding: 0 20px;
   }
   main .container .section__up .address__info {
     width: 100%;

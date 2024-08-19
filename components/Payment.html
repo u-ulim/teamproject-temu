@@ -15,11 +15,9 @@
   <script defer src="../src/javascript/payment-consent.js"></script>
 </head>
 <body>
-
   <!---header start-->
-  <header>
-  </header>
- <!---header end-->
+  <header></header>
+  <!---header end-->
 
   <div class="container">
     <!--MAIN START-->
@@ -30,6 +28,10 @@
           <div class="section__title">
             <div class="category">
               <span><a href="#">홈</a></span>
+            </div>
+            <div class="back-box">
+              <i class="fa-solid fa-angle-left"></i>
+              <span>뒤로</span>
             </div>
             <span class="select__category">
               <span>></span>
@@ -80,36 +82,35 @@
 
       <!-- order__info-->
       <section class="order__info">
-      <div class="order__title">  
-        <h3>주문 상품(<span>2</span>)</h3>
-      </div>
-      <hr/>
+        <div class="order__title">
+          <h3>주문 상품(<span>2</span>)</h3>
+        </div>
+        <hr />
         <div class="product__info">
           <!-- product -->
           <ul>
             <li class="product">
-     
-                <!-- img -->
-                <div class="img">
-                  <div>
-                    <img src="./img/product.png" alt="product01" />
-                  </div>
+              <!-- img -->
+              <div class="img">
+                <div>
+                  <img src="./img/product.png" alt="product01" />
                 </div>
-                <!-- product__info -->
-                 <div class="product__info">
-                      <div class="product__title">
-                        <span>1/5/10쌍의 남성용 심플 슬리드 라이너</span>
-                      </div>
-                      <div class="product__option">
-                        <span>5쌍</span>
-                        <span>|</span>
-                        <span>흰색</span>
-                      </div>
-                      <div class="price__info">
-                        <span class="general-price" id="general-price">￦4,219</span>
-                        <span>￦4,219</span>
-                  </div>
-                 </div>
+              </div>
+              <!-- product__info -->
+              <div class="product__info">
+                <div class="product__title">
+                  <span>1/5/10쌍의 남성용 심플 슬리드 라이너</span>
+                </div>
+                <div class="product__option">
+                  <span>5쌍</span>
+                  <span>|</span>
+                  <span>흰색</span>
+                </div>
+                <div class="price__info">
+                  <span class="general-price" id="general-price">￦4,219</span>
+                  <span>￦4,219</span>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
@@ -248,25 +249,35 @@
               </div>
             </li>
             <li>
-                  <div class="consent-title">
-                    <div class="custom__box">
-                      <input
-                        type="checkbox"
-                        name="terms"
-                        id="agreeAll"
-                        class="terms"
-                      />
-                      <label for="terms">테무 이용약관(필수)</label>
-                    </div>
-                  </div>
-                <div class="consent-content">
-                  <p>본 약관은 테무 서비스를 이용함에 있어 사용자와 테무 간의 권리, 의무 및 책임사항을 규정합니다. </p>
-                  <P>서비스 이용자는 약관에 명시된 모든 조항을 준수해야 하며, 서비스 이용 전에 반드시 이를 숙지하고 동의해야 합니다.</P>
-                  <p>이용약관은 사용자 보호 및 서비스의 원활한 운영을 위해 마련되었습니다. 본 약관에 동의하지 않을 경우, 서비스 이용이 제한될 수 있습니다.</p>
+              <div class="consent-title">
+                <div class="custom__box">
+                  <input
+                    type="checkbox"
+                    name="terms"
+                    id="agreeAll"
+                    class="terms"
+                  />
+                  <label for="terms">테무 이용약관(필수)</label>
                 </div>
+              </div>
+              <div class="consent-content">
+                <p>
+                  본 약관은 테무 서비스를 이용함에 있어 사용자와 테무 간의 권리,
+                  의무 및 책임사항을 규정합니다.
+                </p>
+                <p>
+                  서비스 이용자는 약관에 명시된 모든 조항을 준수해야 하며,
+                  서비스 이용 전에 반드시 이를 숙지하고 동의해야 합니다.
+                </p>
+                <p>
+                  이용약관은 사용자 보호 및 서비스의 원활한 운영을 위해
+                  마련되었습니다. 본 약관에 동의하지 않을 경우, 서비스 이용이
+                  제한될 수 있습니다.
+                </p>
+              </div>
             </li>
             <li>
-         <div class="consent-title">
+              <div class="consent-title">
                 <div class="custom__box">
                   <input
                     type="checkbox"
@@ -276,15 +287,25 @@
                   />
                   <label for="personalInfo">개인정보 수집 및 이용(필수)</label>
                 </div>
-         </div>
-         <div class="consent-content">
-          <p>본 약관은 테무 서비스를 이용함에 있어 사용자와 테무 간의 권리, 의무 및 책임사항을 규정합니다. </p>
-          <P>서비스 이용자는 약관에 명시된 모든 조항을 준수해야 하며, 서비스 이용 전에 반드시 이를 숙지하고 동의해야 합니다.</P>
-          <p>이용약관은 사용자 보호 및 서비스의 원활한 운영을 위해 마련되었습니다. 본 약관에 동의하지 않을 경우, 서비스 이용이 제한될 수 있습니다.</p>
-        </div>
+              </div>
+              <div class="consent-content">
+                <p>
+                  본 약관은 테무 서비스를 이용함에 있어 사용자와 테무 간의 권리,
+                  의무 및 책임사항을 규정합니다.
+                </p>
+                <p>
+                  서비스 이용자는 약관에 명시된 모든 조항을 준수해야 하며,
+                  서비스 이용 전에 반드시 이를 숙지하고 동의해야 합니다.
+                </p>
+                <p>
+                  이용약관은 사용자 보호 및 서비스의 원활한 운영을 위해
+                  마련되었습니다. 본 약관에 동의하지 않을 경우, 서비스 이용이
+                  제한될 수 있습니다.
+                </p>
+              </div>
             </li>
             <li>
-           <div class="consent-title">
+              <div class="consent-title">
                 <div>
                   <input
                     type="checkbox"
@@ -296,15 +317,25 @@
                     >개인정보의 국외 이전에 대한 동의(필수)</label
                   >
                 </div>
-           </div>
-           <div class="consent-content">
-            <p>본 약관은 테무 서비스를 이용함에 있어 사용자와 테무 간의 권리, 의무 및 책임사항을 규정합니다. </p>
-            <P>서비스 이용자는 약관에 명시된 모든 조항을 준수해야 하며, 서비스 이용 전에 반드시 이를 숙지하고 동의해야 합니다.</P>
-            <p>이용약관은 사용자 보호 및 서비스의 원활한 운영을 위해 마련되었습니다. 본 약관에 동의하지 않을 경우, 서비스 이용이 제한될 수 있습니다.</p>
-          </div>
+              </div>
+              <div class="consent-content">
+                <p>
+                  본 약관은 테무 서비스를 이용함에 있어 사용자와 테무 간의 권리,
+                  의무 및 책임사항을 규정합니다.
+                </p>
+                <p>
+                  서비스 이용자는 약관에 명시된 모든 조항을 준수해야 하며,
+                  서비스 이용 전에 반드시 이를 숙지하고 동의해야 합니다.
+                </p>
+                <p>
+                  이용약관은 사용자 보호 및 서비스의 원활한 운영을 위해
+                  마련되었습니다. 본 약관에 동의하지 않을 경우, 서비스 이용이
+                  제한될 수 있습니다.
+                </p>
+              </div>
             </li>
             <li>
-             <div class="consent-title">
+              <div class="consent-title">
                 <div>
                   <input
                     type="checkbox"
@@ -316,15 +347,27 @@
                 </div>
               </div>
               <div class="consent-content">
-                <p>본 약관은 테무 서비스를 이용함에 있어 사용자와 테무 간의 권리, 의무 및 책임사항을 규정합니다. </p>
-                <P>서비스 이용자는 약관에 명시된 모든 조항을 준수해야 하며, 서비스 이용 전에 반드시 이를 숙지하고 동의해야 합니다.</P>
-                <p>이용약관은 사용자 보호 및 서비스의 원활한 운영을 위해 마련되었습니다. 본 약관에 동의하지 않을 경우, 서비스 이용이 제한될 수 있습니다.</p>
+                <p>
+                  본 약관은 테무 서비스를 이용함에 있어 사용자와 테무 간의 권리,
+                  의무 및 책임사항을 규정합니다.
+                </p>
+                <p>
+                  서비스 이용자는 약관에 명시된 모든 조항을 준수해야 하며,
+                  서비스 이용 전에 반드시 이를 숙지하고 동의해야 합니다.
+                </p>
+                <p>
+                  이용약관은 사용자 보호 및 서비스의 원활한 운영을 위해
+                  마련되었습니다. 본 약관에 동의하지 않을 경우, 서비스 이용이
+                  제한될 수 있습니다.
+                </p>
               </div>
             </li>
           </ul>
         </div>
         <!--button-->
-        <button type="submit" class="checkout__button" value="결제하기">결제하기</button>
+        <button type="submit" class="checkout__button" value="결제하기">
+          결제하기
+        </button>
 
         <!--info-->
         <div class="info">
@@ -362,302 +405,216 @@
             </li>
           </ul>
         </div>
-      </div>`
+      </div>
+      `
     </aside>
     <!--ASIDE END-->
   </div>
 
-    <!--option - MODAL BOX START-->
-      <div class="modal__box">
-        <div class="modal__inner">
-          <div class="modal__inner-box">
-            <div class="product">
-              <div class="product__img">
-                <img src="./img/product.png" alt="product">
-              </div>
-              <div class="product__info">
-                <p class="product__info-title">
-                  1/5/10 쌍의 남성용 심플 슬리드 라이너
-                </p>
-              </div>
-            </div>
-            <form>
-             <ul>
-                <li>
-                   <label for="color"></label>
-                   <select id="color">
-                     <option  selected disabled>색상</option>
-                     <option value="color01">빨강</option>
-                     <option value="color02">노랑</option>
-                     <option value="color03">초록</option>
-                   </select>
-                </li>
-                <li>
-                   <label for="size"></label>
-                   <select id="size">
-                     <option selected disabled>사이즈</option>
-                     <option value="size01">XS</option>
-                     <option value="size02">S</option>
-                     <option value="size03" >M</option>
-                     <option value="size04"> L</option>
-                     <option value="size05">XL</option>
-                   </select>
-                </li>
-             </ul>
-            </form>
-            <div class="product-info-origin">
-              <ul>
-                <li class="info-up">
-                <div>
-                  <span>색상 : </span>
-                  <span class="color">흰색</span>
-                </div>
-                <div>
-                  <span>사이즈 : </span>
-                  <span class="size">S</span>
-                </div>
-                  <div class="close-box">
-                    <div class="close">
-                        <span></span>
-                        <span></span>
-                    </div>
-                    </div>
-                </li>
-                <li class="info-down">
-                  <form class="modal__add-minus">
-                    <!-- 숨김/ 판매가격-->
-                     <input type ="hidden" class="modal__sell-price" id="modal__sell-price" value="11000">
-                        <div class="number__input">
-                          <input type="button" value="+" class="modal-add" id="modal-add"></input>
-                          <input type="text" class="modal-amount" id="modal-amount" disabled size="2"></input>
-                          <input type="button" value="-" class="modal-minus" id="modal-minus"></input>
-                        </div>
-                      </form>
-                      <span class="modal-price" id="modal-price"></span>
-                </li>
-              </ul>
-            </div>
-            <div class="product-info-option">
-              <ul>
-                <li class="info-up">
-                <div>
-                  <span>색상 : </span>
-                  <span class="color">흰색</span>
-                </div>
-                <div>
-                  <span>사이즈 : </span>
-                  <span class="size">S</span>
-                </div>
-                  <div class="close-box">
-                    <div class="close">
-                        <span></span>
-                        <span></span>
-                    </div>
-                    </div>
-                </li>
-                <li class="info-down">
-                  <form class="modal__add-minus">
-                    <!-- 숨김/ 판매가격-->
-                     <input type ="hidden" class="sell__price" id="sell__price" value="11000">
-                        <div class="number__input">
-                          <input type="button" value="+" class="add" id="addBtn"></input>
-                          <input type="text" class="amount" id="amount" disabled size="2"></input>
-                          <input type="button" value="-" class="minus" id="minusBtn"></input>
-                        </div>
-                      </form>
-                      <span class="price" id="option__price"></span>
-                </li>
-              </ul>
-            </div>
-            <hr>
-            <div class="final__price">
-              <span>결제금액</span>
-              <span>￦11,000</span>
-            </div>
-            <div class="button">
-              <input type="reset" value="취소"></input>
-              <input type="submit" value="확인"></input>
-            </div>
-          </div>
-          <div class="modal__close-box">
-           
-          <div class="close">
-              <span></span>
-              <span></span>
-           
-          </div>
-          </div>
-          </div>
-        </div>
-    <!--option-MODAL BOX END-->
-
-    <!--address- MODAL BOX START-->
-    <div id="box" class="address__modal__box">
+  <!--address- MODAL BOX START-->
+  <div id="box" class="address__modal__box">
     <div class="address__modal__inner">
       <div class="address__modal__inner-box">
-     <h2>주소</h2>
-     <button>+ 새 주소 추가</button>
-     <div class="info__password">
-      <i class="fa-solid fa-lock"></i>
-      <p>모든 데이터는 암호화 됩니다.</p>
-     </div>
-     <div class="user__info">
-      <ul>
-        <li>
-          <span class="username">홍길동</span>
-          <span class="usernumber"><span>+82</span>010.1234.5678</span>
-        </li>
-        <li>
-          <span class="zipcode">01234</span>
-          <span class="useraddress">대한민국 서울특별시 강남구</span>
-        </li>
-        <li>
-          <span class="useraddress-option">이젠 아파트 9동 901호</span>
-        </li>
-        <li>
-          <div>
-           <label for="useraddress__check"></label>
-           <input type="checkbox" name="useraddress__check" id="useraddress__check">
-            <span>기본주소</span>
-          </div>
-          <div>
-           <span><i class="fa-regular fa-pen-to-square"></i>편집</span>
-           <span><i class="fa-regular fa-trash-can"></i>삭제</span>
-          </div>       
-        </li>
-      </ul>
-     </div>
-     <div class="user__info-option">
-      <ul>
-        <li>
-          <span class="username">홍길동</span>
-          <span class="usernumber"><span>+82</span>010.1234.5678</span>
-        </li>
-        <li>
-          <span class="zipcode">01234</span>
-          <span class="useraddress">대한민국 서울특별시 강남구</span>
-        </li>
-        <li>
-          <span class="useraddress-option">이젠 아파트 9동 901호</span>
-        </li>
-        <li>
-          <div>
-           <label for="useraddress__check"></label>
-           <input type="checkbox" name="useraddress__check" id="useraddress__check">
-            <span>기본주소</span>
-          </div>
-          <div>
-           <span><i class="fa-regular fa-pen-to-square"></i>편집</span>
-           <span><i class="fa-regular fa-trash-can"></i>삭제</span>
-          </div>       
-        </li>
-      </ul>
-     </div>
-      <div class="address__close-box">
-      <div class="address__close">
-          <span></span>
-          <span></span>
-       
-      </div>
-      </div>
-      </div>
-    </div>
-    </div>
-    <!--address- MODAL BOX END-->
-    
-    <!--address+-MODAL BOX START-->
-    <div class="address__modal__box-plus">
-      <div class="plus__modal__inner">
-        <div class="plus__modal__inner-box">
-     <div class="new__address">
-         <h2>새 주소 추가</h2>
-         <div class="info__password">
+        <h2>주소</h2>
+        <button id="plus-address">+ 새 주소 추가</button>
+        <div class="info__password">
           <i class="fa-solid fa-lock"></i>
           <p>모든 데이터는 암호화 됩니다.</p>
-         </div>
-     </div>
-    <form action="http://127.0.0.1:5501/" method="get">
-  <div class="address-box">
-     <label for="address">주소지 <span>*</span></label>
-   <div class="address_select">
-       <select name="national" id="address" >
-        <option value="" >국가/지역</option>
-       </select>
-       <select name="trial" id="address" >
-        <option value="">시/도</option>
-       </select>
-       <select name="City" id="address" >
-        <option value="" >시/군/구</option>
-       </select>
-   </div>
-  </div>
-  <div class="detailed-address-box">
-     <label for="detailed-address">상세주소 <span>*</span></label>
-     <input type="text" name="detailed-address" id="detailed-address" placeholder="선택">
-  </div>
-  <div class="zipcode-box">
-     <label for="zipcode">우편번호<span>*</span></label>
-     <input type="text" name="zipcode" id="zipcode" placeholder="예)597685">
-  </div>
-  <div class="customs-number-box">
-     <label for="customs-number">통관번호<span>*</span></label>
-     <div class="korea-select">
-      <span>저는 한국인 입니다</span>
-   <div class="answer">
-  <div>
-      <input type="checkbox" name="yes" id="yes">
-      <label for="yes">네</label>
-  </div>
-<div>
-      <input type="checkbox" name="no" id="no">
-      <label for="yes">아니요</label>
-</div>
-   </div>
-      </div>
-     <p>
-      <i class="fa-solid fa-circle-info"></i>
-      원활한 통관을 위해 개인통관고유번호를 신청할때 사용한 이름과 전화번호를
-      기재해주시기 바랍니다. 
-      <a href="https://unipass.customs.go.kr/csp/persIndex.do">개인통관고유번호의 발급 및 조회를 원하시는 분들은 여기를 클릭해주시기 바랍니다.</a>
-    </p>
-    <input type="text" name="customs-number" id="customs-number" placeholder="개인통관고유부호(P+12자리)">
-  
-  </div>
-  <div class="customs-name-box">
-    <label for="name">이름(실명을 한글로 입력하세요)<span>*</span></label>
-    <input type="text" name="name" id="name" placeholder="예)홍길동">
-  </div>
-  <div class="customs-phone-number-box">
-    <label for=phone-number>전화번호<span>*</span></label>
-    <input type="text" name="phone-number" id="phone-number" placeholder="01012345678">
-  </div>
-  <div class="info">
-    <div>
-      <i class="fa-solid fa-shield"></i>
-      모든 데이터는 암호화됩니다
-    </div>
-    <p>Temu는 주소 정보를 보호하고 안전하게 보관합니다. 모든 주소 데이터는 암호화되어 보관됩니다</p>
-  </div>
-  <input type="submit" value="저장">
-    </form>
- <div class="box">
-      <div class="address__back-box">
-        <i class="fa-solid fa-angle-left"></i>
-        <span><a href="#box">뒤로</a></span>
-      </div>
-          <div class="address__close-box">
+        </div>
+        <div class="user__info">
+          <ul>
+            <li>
+              <span class="username">홍길동</span>
+              <span class="usernumber"><span>+82</span>010.1234.5678</span>
+            </li>
+            <li>
+              <span class="zipcode">01234</span>
+              <span class="useraddress">대한민국 서울특별시 강남구</span>
+            </li>
+            <li>
+              <span class="useraddress-option">이젠 아파트 9동 901호</span>
+            </li>
+            <li>
+              <div>
+                <label for="useraddress__check"></label>
+                <input
+                  type="checkbox"
+                  name="useraddress__check"
+                  id="useraddress__check"
+                />
+                <span>기본주소</span>
+              </div>
+              <div>
+                <span><i class="fa-regular fa-pen-to-square"></i>편집</span>
+                <span><i class="fa-regular fa-trash-can"></i>삭제</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="user__info-option">
+          <ul>
+            <li>
+              <span class="username">홍길동</span>
+              <span class="usernumber"><span>+82</span>010.1234.5678</span>
+            </li>
+            <li>
+              <span class="zipcode">01234</span>
+              <span class="useraddress">대한민국 서울특별시 강남구</span>
+            </li>
+            <li>
+              <span class="useraddress-option">이젠 아파트 9동 901호</span>
+            </li>
+            <li>
+              <div>
+                <label for="useraddress__check"></label>
+                <input
+                  type="checkbox"
+                  name="useraddress__check"
+                  id="useraddress__check"
+                />
+                <span>기본주소</span>
+              </div>
+              <div>
+                <span><i class="fa-regular fa-pen-to-square"></i>편집</span>
+                <span><i class="fa-regular fa-trash-can"></i>삭제</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="address__close-box">
           <div class="address__close">
-              <span></span>
-              <span></span>
-           
+            <span></span>
+            <span></span>
           </div>
-          </div>
- </div>
         </div>
       </div>
+    </div>
+  </div>
+  <!--address- MODAL BOX END-->
+
+  <!--address+-MODAL BOX START-->
+  <div class="address__modal__box-plus">
+    <div class="plus__modal__inner">
+      <div class="plus__modal__inner-box">
+        <div class="new__address">
+          <h2>새 주소 추가</h2>
+          <div class="info__password">
+            <i class="fa-solid fa-lock"></i>
+            <p>모든 데이터는 암호화 됩니다.</p>
+          </div>
+        </div>
+        <form action="http://127.0.0.1:5501/" method="get">
+          <div class="address-box">
+            <label for="address">주소지 <span>*</span></label>
+            <div class="address_select">
+              <select name="national" id="address">
+                <option value="">국가/지역</option>
+              </select>
+              <select name="trial" id="address">
+                <option value="">시/도</option>
+              </select>
+              <select name="City" id="address">
+                <option value="">시/군/구</option>
+              </select>
+            </div>
+          </div>
+          <div class="detailed-address-box">
+            <label for="detailed-address">상세주소 <span>*</span></label>
+            <input
+              type="text"
+              name="detailed-address"
+              id="detailed-address"
+              placeholder="선택"
+            />
+          </div>
+          <div class="zipcode-box">
+            <label for="zipcode">우편번호<span>*</span></label>
+            <input
+              type="text"
+              name="zipcode"
+              id="zipcode"
+              placeholder="예)597685"
+            />
+          </div>
+          <div class="customs-number-box">
+            <label for="customs-number">통관번호<span>*</span></label>
+            <div class="korea-select">
+              <span>저는 한국인 입니다</span>
+              <div class="answer">
+                <div>
+                  <input type="checkbox" name="yes" id="yes" />
+                  <label for="yes">네</label>
+                </div>
+                <div>
+                  <input type="checkbox" name="no" id="no" />
+                  <label for="yes">아니요</label>
+                </div>
+              </div>
+            </div>
+            <p>
+              <i class="fa-solid fa-circle-info"></i>
+              원활한 통관을 위해 개인통관고유번호를 신청할때 사용한 이름과
+              전화번호를 기재해주시기 바랍니다.
+              <a href="https://unipass.customs.go.kr/csp/persIndex.do"
+                >개인통관고유번호의 발급 및 조회를 원하시는 분들은 여기를
+                클릭해주시기 바랍니다.</a
+              >
+            </p>
+            <span id="mobile-user">
+              <a href="https://unipass.customs.go.kr/csp/persIndex.do"
+                >개인통관번호 찾기</a
+              >
+            </span>
+            <input
+              type="text"
+              name="customs-number"
+              id="customs-number"
+              placeholder="개인통관고유부호(P+12자리)"
+            />
+          </div>
+          <div class="customs-name-box">
+            <label for="name"
+              >이름(실명을 한글로 입력하세요)<span>*</span></label
+            >
+            <input type="text" name="name" id="name" placeholder="예)홍길동" />
+          </div>
+          <div class="customs-phone-number-box">
+            <label for="phone-number">전화번호<span>*</span></label>
+            <input
+              type="text"
+              name="phone-number"
+              id="phone-number"
+              placeholder="예)01012345678"
+            />
+          </div>
+          <div class="info">
+            <div>
+              <i class="fa-solid fa-shield"></i>
+              모든 데이터는 암호화됩니다
+            </div>
+            <p>
+              Temu는 주소 정보를 보호하고 안전하게 보관합니다. 모든 주소
+              데이터는 암호화되어 보관됩니다
+            </p>
+          </div>
+          <div class="submit__box">
+            <input type="submit" value="저장" />
+          </div>
+        </form>
+        <div class="box">
+          <div class="address__back-box">
+            <i class="fa-solid fa-angle-left"></i>
+            <span>뒤로</span>
+          </div>
+          <div class="address__close-box-plus">
+            <div class="address__close">
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
       </div>
-    <!--address+-MODAL BOX END-->
-
-
-
+    </div>
+  </div>
+  <!--address+-MODAL BOX END-->
 </body>

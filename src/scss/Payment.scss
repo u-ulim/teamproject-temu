@@ -44,6 +44,9 @@ main {
         .category {
           color: map-get($color, color-Neutrals-Grey-500);
         }
+        .back-box {
+          display: none;
+        }
         .select__category {
           gap: 10px;
         }
@@ -182,11 +185,12 @@ main {
   .order__info {
     margin-bottom: 38px;
     .order__title {
+      position: relative;
       cursor: pointer;
       &::after {
         position: absolute;
-        top: 58%;
-        right: 34%;
+        top: 50%;
+        right: 2%;
         font-family: "fontawesome";
         content: "\f107";
       }
@@ -612,351 +616,6 @@ aside {
   }
 }
 
-/*option-modal*/
-
-.modal__box {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(19, 19, 19, 0.5);
-  &.active {
-    display: block;
-  }
-  .modal__inner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    margin-top: 90px;
-    box-shadow: 2px 2px 4px map-get($color, color-Neutrals-Grey-300);
-    position: relative;
-    width: 100%;
-    width: 520px;
-    background: map-get($color, color-White);
-    border-radius: 8px;
-    .modal__inner-box {
-      padding: 50px 70px;
-      width: 100%;
-      height: 100%;
-      .product {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 17px;
-        .product__img {
-          width: 100px;
-          height: 100px;
-          border-radius: 8px;
-          img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-          }
-        }
-        .product__info {
-          @include text_B_S_14;
-        }
-      }
-
-      form {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        ul {
-          display: flex;
-          flex-direction: column;
-          width: 100%;
-
-          li {
-            margin-bottom: 17px;
-            select {
-              padding-left: 10px;
-              border: 1px solid map-get($color, color-Neutrals-Grey-300);
-              width: 100%;
-              height: 40px;
-              color: map-get($color, color-Neutrals-Grey-400);
-              cursor: pointer;
-              border-radius: 8px;
-              &:hover {
-                border: 1px solid map-get($color-hover, primary-color);
-              }
-              @include text_B_S_14;
-            }
-          }
-        }
-      }
-
-      .product-info-origin {
-        margin-bottom: 17px;
-        width: 100%;
-        height: 100px;
-        background: map-get($color, color-Neutrals-Grey-100);
-        border-radius: 8px;
-
-        ul {
-          padding: 13px 20px;
-          .info-up {
-            display: flex;
-            gap: 20px;
-            margin-bottom: 15px;
-            position: relative;
-            @include text_S_14;
-            .close-box {
-              position: absolute;
-              top: 0;
-              right: 0;
-              width: 14px;
-              height: 14px;
-              cursor: pointer;
-              .close {
-                position: relative;
-                span {
-                  display: block;
-                  border: 1px solid map-get($color, color-Black);
-                  position: absolute;
-                  bottom: -10px;
-                  width: 100%;
-                  height: 1px;
-                  &:nth-child(1) {
-                    transform: rotate(45deg);
-                  }
-                  &:nth-child(2) {
-                    transform: rotate(-45deg);
-                  }
-                }
-              }
-            }
-          }
-          .info-down {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: map-get($color, color-Neutrals-Grey-100);
-            form {
-              display: flex;
-              justify-content: space-between;
-              .number__input {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                padding: 0;
-                border: 1px solid #ccc;
-                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-                overflow: hidden;
-                width: 80px;
-                height: 27px;
-                background: map-get($color, color-White);
-                border-radius: 8px;
-                @include text_S_14;
-                input[type="button"] {
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  border: none;
-                  width: 30px;
-                  height: 34px;
-                  background-color: white;
-                  color: map-get($color, color-Neutrals-Grey-300);
-                  text-align: center;
-                  cursor: pointer;
-                  cursor: pointer;
-                  @include text_M_16;
-                  &:hover {
-                    color: map-get($color, color-Neutrals-Grey-500);
-                  }
-                }
-                input[type="text"] {
-                  border: none;
-                  outline: none;
-                  width: 20px;
-                  background: transparent;
-                  text-align: center;
-                  pointer-events: none;
-                  @include text_M_16;
-                }
-              }
-            }
-            .modal-price {
-              margin-bottom: 0;
-              border: none;
-              outline: none;
-              background-color: transparent;
-              text-align: right;
-              @include text_B_M_16;
-            }
-          }
-        }
-      }
-
-      .product-info-option {
-        display: none;
-        margin-bottom: 17px;
-        width: 100%;
-        height: 100px;
-        background: map-get($color, color-Neutrals-Grey-100);
-        border-radius: 8px;
-        ul {
-          padding: 13px 20px;
-          .info-up {
-            display: flex;
-            gap: 20px;
-            margin-bottom: 15px;
-            position: relative;
-            @include text_S_14;
-            .close-box {
-              position: absolute;
-              top: 0;
-              right: 0;
-              width: 14px;
-              height: 14px;
-              cursor: pointer;
-              .close {
-                position: relative;
-                span {
-                  display: block;
-                  border: 1px solid map-get($color, color-Black);
-                  position: absolute;
-                  bottom: -10px;
-                  width: 100%;
-                  height: 1px;
-                  &:nth-child(1) {
-                    transform: rotate(45deg);
-                  }
-                  &:nth-child(2) {
-                    transform: rotate(-45deg);
-                  }
-                }
-              }
-            }
-          }
-          .info-down {
-            display: flex;
-            justify-content: space-between;
-            background: map-get($color, color-Neutrals-Grey-100);
-            .number__input {
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              padding: 0;
-              border: 1px solid #ccc;
-              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-              overflow: hidden;
-              width: 80px;
-              height: 27px;
-              background: map-get($color, color-White);
-              border-radius: 8px;
-              @include text_S_14;
-              button {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border: none;
-                width: 30px;
-                height: 34px;
-                background-color: white;
-                color: map-get($color, color-Neutrals-Grey-300);
-                text-align: center;
-                cursor: pointer;
-                cursor: pointer;
-                @include text_M_16;
-                &:hover {
-                  color: map-get($color, color-Neutrals-Grey-500);
-                }
-              }
-              .price {
-                width: 20px;
-                text-align: center;
-                @include text_M_16;
-              }
-            }
-            .price {
-              @include text_B_M_16;
-            }
-          }
-        }
-        &.active {
-          display: block;
-        }
-      }
-
-      hr {
-        margin-bottom: 13px;
-        border: 1px solid map-get($color, color-Neutrals-Grey-200);
-      }
-      .final__price {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 26px;
-        padding: 0 20px;
-        @include text_B_M_16;
-      }
-
-      .button {
-        display: flex;
-        justify-content: space-between;
-        input {
-          border: none;
-          width: 180px;
-          height: 50px;
-          transition: all 0.3s;
-          cursor: pointer;
-          border-radius: 8px;
-          @include text_M_16;
-          &:nth-child(1) {
-            border: 1px solid map-get($color, color-Neutrals-Grey-300);
-            background: map-get($color, color-White);
-            &:hover {
-              background-color: map-get($color, color-Neutrals-Grey-100);
-            }
-          }
-          &:nth-child(2) {
-            background: map-get($color, primary-color);
-            color: map-get($color, color-White);
-            &:hover {
-              background: map-get($color-hover, primary-color);
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .modal__close-box {
-    position: absolute;
-    top: 19px;
-    right: 18px;
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    .close {
-      position: relative;
-      span {
-        display: block;
-        border: 1px solid map-get($color, color-Black);
-        position: absolute;
-        bottom: -10px;
-        width: 100%;
-        height: 1px;
-        &:nth-child(1) {
-          transform: rotate(45deg);
-        }
-        &:nth-child(2) {
-          transform: rotate(-45deg);
-        }
-      }
-    }
-  }
-}
-
 /*address-modal*/
 .address__modal__box {
   display: none;
@@ -1117,13 +776,12 @@ aside {
           }
         }
       }
-
       .address__close-box {
         position: absolute;
         top: 19px;
         right: 18px;
-        width: 20px;
-        height: 20px;
+        width: 16px;
+        height: 16px;
         cursor: pointer;
         .address__close {
           position: relative;
@@ -1149,7 +807,7 @@ aside {
 
 /*address+-MODAL BOX*/
 .address__modal__box-plus {
-  // display: none;
+  display: none;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
@@ -1164,6 +822,7 @@ aside {
     display: block;
   }
   .plus__modal__inner {
+    display: block;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1176,8 +835,12 @@ aside {
     border-radius: 8px;
     .plus__modal__inner-box {
       padding: 50px 70px;
+      overflow-y: auto;
       width: 100%;
-      height: 100%;
+      height: 80vh;
+      &::-webkit-scrollbar {
+        display: none;
+      }
       .new__address {
         display: flex;
         align-items: center;
@@ -1223,6 +886,9 @@ aside {
               color: map-get($color, color-Neutrals-Grey-400);
               border-radius: 6px;
               @include text_S_14;
+              &:focus {
+                outline: none;
+              }
             }
           }
         }
@@ -1234,8 +900,15 @@ aside {
             width: 502px;
             height: 40px;
             color: map-get($color, color-Neutrals-Grey-400);
+            transition: all 0.3s;
             border-radius: 6px;
             @include text_S_14;
+            &:focus {
+              outline: none;
+              &::placeholder {
+                opacity: 0;
+              }
+            }
           }
         }
         .zipcode-box {
@@ -1246,8 +919,15 @@ aside {
             width: 502px;
             height: 40px;
             color: map-get($color, color-Neutrals-Grey-400);
+            transition: all 0.3s;
             border-radius: 6px;
             @include text_S_14;
+            &:focus {
+              outline: none;
+              &::placeholder {
+                opacity: 0;
+              }
+            }
           }
         }
         .customs-number-box {
@@ -1256,40 +936,166 @@ aside {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            @include text_S_14;
+
             .answer {
               display: flex;
               gap: 26px;
               align-items: center;
               justify-content: center;
+              @include text_S_14;
               div {
                 display: flex;
+                gap: 10px;
+              }
+            }
+          }
+          p {
+            @include text_XS_12;
+            margin-bottom: 9px;
+            padding: 20px 10px;
+            border: 1px solid map-get($color, primary-color);
+            border-left: 6px solid map-get($color, primary-color);
+            width: 100%;
+            border-radius: 8px;
+
+            i {
+              color: map-get($color, primary-color);
+            }
+            a {
+              padding-top: 6.5px;
+              padding-left: 12px;
+              color: map-get($color, primary-color);
+            }
+          }
+          #mobile-user {
+            display: none;
+          }
+          input[type="text"] {
+            padding-left: 12px;
+            border: 1px solid map-get($color, color-Neutrals-Grey-200);
+            width: 502px;
+            height: 40px;
+            transition: all 0.3s;
+            border-radius: 6px;
+            @include text_S_14;
+            &:focus {
+              outline: none;
+              &::placeholder {
+                opacity: 0;
               }
             }
           }
         }
-      }
-
-      .address__close-box {
-        position: absolute;
-        top: 19px;
-        right: 18px;
-        width: 20px;
-        height: 20px;
-        cursor: pointer;
-        .address__close {
-          position: relative;
-          span {
-            display: block;
-            border: 1px solid map-get($color, color-Black);
-            position: absolute;
-            bottom: -10px;
-            width: 100%;
-            height: 1px;
-            &:nth-child(1) {
-              transform: rotate(45deg);
+        .customs-name-box {
+          margin-bottom: 20px;
+          input[type="text"] {
+            padding-left: 12px;
+            border: 1px solid map-get($color, color-Neutrals-Grey-200);
+            width: 502px;
+            height: 40px;
+            transition: all 0.3s;
+            border-radius: 6px;
+            @include text_S_14;
+            &:focus {
+              outline: none;
+              &::placeholder {
+                opacity: 0;
+              }
             }
-            &:nth-child(2) {
-              transform: rotate(-45deg);
+          }
+        }
+        .customs-phone-number-box {
+          margin-bottom: 20px;
+          input[type="text"] {
+            padding-left: 12px;
+            border: 1px solid map-get($color, color-Neutrals-Grey-200);
+            width: 502px;
+            height: 40px;
+            transition: all 0.3s;
+            border-radius: 6px;
+            @include text_S_14;
+            &:focus {
+              outline: none;
+              &::placeholder {
+                opacity: 0;
+              }
+            }
+          }
+        }
+        .info {
+          margin-bottom: 35px;
+          @include text_S_14;
+          div {
+            color: map-get($color-system, info-color);
+          }
+          p {
+            @include text_XS_12;
+            color: map-get($color, color-Neutrals-Grey-700);
+          }
+        }
+        .submit__box {
+          width: 100%;
+          text-align: center;
+          input[type="submit"] {
+            border: none;
+            width: 300px;
+            height: 48px;
+            background: map-get($color, primary-color);
+            color: map-get($color, color-White);
+            transition: all 0.3s;
+            cursor: pointer;
+            border-radius: 8px;
+            &:hover {
+              background-color: map-get($color-hover, primary-color);
+            }
+          }
+        }
+      }
+      .box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 19px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        width: 100%;
+        height: 40px;
+        background: map-get($color, color-White);
+        border-radius: 8px;
+
+        .address__back-box {
+          display: flex;
+          gap: 5px;
+          align-items: center;
+          justify-content: center;
+          padding-left: 18px;
+          span {
+            @include text_B_S_14;
+          }
+        }
+        .address__close-box-plus {
+          margin-right: 18px;
+          width: 16px;
+          height: 16px;
+          cursor: pointer;
+          .address__close {
+            position: relative;
+            span {
+              display: block;
+              border: 1px solid map-get($color, color-Black);
+              position: absolute;
+              bottom: -10px;
+              width: 100%;
+              height: 1px;
+              &:nth-child(1) {
+                transform: rotate(45deg);
+              }
+              &:nth-child(2) {
+                transform: rotate(-45deg);
+              }
             }
           }
         }
@@ -1297,6 +1103,7 @@ aside {
     }
   }
 }
+
 @media (max-width: 768px) {
   header {
     border: none;
@@ -1313,6 +1120,7 @@ aside {
   main {
     width: 100%;
     .section__up {
+      margin-bottom: 10px;
       article {
         .section__title {
           display: flex;
@@ -1325,10 +1133,16 @@ aside {
           .category {
             display: none;
           }
+          .back-box {
+            display: block;
+            @include text_M_16;
+            position: absolute;
+            left: 8%;
+          }
           .select__category {
             width: 100%;
             @include text_M_16;
-
+            text-align: center;
             span {
               display: none;
             }
@@ -1368,14 +1182,7 @@ aside {
 
       .order__title {
         &::after {
-          top: 46%;
-          right: 10%;
-          &.active {
-            &::after {
-              top: -46%;
-              transform: rotate(180deg);
-            }
-          }
+          right: 5%;
         }
         h3 {
           margin-bottom: 14px;
@@ -1411,7 +1218,6 @@ aside {
 
   .credit {
     width: 100%;
-
     .total__credit {
       #total__credit__box {
         width: 240px;
@@ -1420,6 +1226,7 @@ aside {
     .used__credit {
       flex-wrap: wrap;
       #used__credit__box {
+        margin-top: 10px;
         margin-bottom: 16px;
         width: 240px;
       }
@@ -1475,6 +1282,72 @@ aside {
         width: 100%;
         .user__info {
           width: 100%;
+        }
+      }
+    }
+  }
+
+  .address__modal__box-plus {
+    width: 100%;
+    .plus__modal__inner {
+      width: 100%;
+      .plus__modal__inner-box {
+        width: 100%;
+        form {
+          .address-box {
+            .address_select {
+              width: 100%;
+            }
+          }
+          .detailed-address-box {
+            #detailed-address {
+              width: 100%;
+            }
+          }
+          .zipcode-box {
+            #zipcode {
+              width: 100%;
+            }
+          }
+          .customs-number-box {
+            .korea-select {
+              width: 100%;
+              padding-right: 10px;
+            }
+            p {
+              display: none;
+            }
+            #mobile-user {
+              display: block;
+              @include text_XS_12;
+              text-align: right;
+              padding-bottom: 10px;
+              padding-right: 5px;
+              color: map-get($color, primary-color);
+            }
+            input[type="text"] {
+              width: 100%;
+            }
+          }
+          .customs-name-box {
+            input[type="text"] {
+              width: 100%;
+            }
+          }
+          .customs-phone-number-box {
+            input[type="text"] {
+              width: 100%;
+            }
+          }
+          .info {
+            width: 100%;
+          }
+          .submit__box {
+            width: 100%;
+            input[type="submit"] {
+              width: 100%;
+            }
+          }
         }
       }
     }
