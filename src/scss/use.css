@@ -163,20 +163,19 @@ table {
 }
 
 .object_cover {
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
 }
 
 .wrapper {
   width: 100%;
   height: 100vh;
-}
-.wrapper .mark__inner {
   width: 1384px;
   padding: 0px 15px 0px 15px;
   margin: 0 auto;
+}
+.wrapper .mark__inner {
+  height: 100%;
   display: flex;
 }
 .wrapper .mark__inner .leftmenu {
@@ -201,7 +200,7 @@ table {
 .wrapper .mark__inner .leftmenu ul li > div {
   display: flex;
   justify-content: space-between;
-  width: 149px;
+  width: 14;
 }
 .wrapper .mark__inner .leftmenu ul li .document {
   width: 24px;
@@ -254,6 +253,33 @@ table {
   font-style: normal;
   line-height: 22px;
   letter-spacing: -0.42px;
+}
+.wrapper .mark__inner .leftmenu ul .my-order {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrapper .mark__inner .leftmenu ul .my-order > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper .mark__inner .leftmenu ul .my-order .fa-chevron-down {
+  margin-right: 20px;
+}
+.wrapper .mark__inner .leftmenu ul .inner {
+  display: none;
+  gap: 10px;
+  width: 200px;
+  height: 200px;
+  font-family: "Pretendard-Regular";
+  font-size: 14px;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: -0.42px;
+}
+.wrapper .mark__inner .leftmenu ul .inner.active {
+  display: flex;
 }
 .wrapper .mark__inner .contents .text {
   display: flex;
@@ -333,4 +359,4 @@ table {
   font-style: normal;
   line-height: 22px;
   letter-spacing: -0.42px;
-}/*# sourceMappingURL=use.css.map */
+}

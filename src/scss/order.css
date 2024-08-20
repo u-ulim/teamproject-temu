@@ -163,20 +163,18 @@ table {
 }
 
 .object_cover {
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
 }
 
 .wrapper {
   width: 100%;
   height: 100vh;
-}
-.wrapper .mark__inner {
   width: 1384px;
   padding: 0px 15px 0px 15px;
   margin: 0 auto;
+}
+.wrapper .mark__inner {
   display: flex;
 }
 .wrapper .mark__inner .leftmenu {
@@ -514,4 +512,4 @@ table {
   width: 12px;
   height: 12px;
   color: #b5b5b5;
-}/*# sourceMappingURL=order.css.map */
+}

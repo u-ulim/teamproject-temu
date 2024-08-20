@@ -163,10 +163,8 @@ table {
 }
 
 .object_cover {
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
 }
 
 #footer {
@@ -274,4 +272,4 @@ table {
 #footer .footer-inner .footer-card-wrapper .footer-card__security .footer-card__security__menus li > i.security__menus__idcheck-img {
   width: 66px;
   background-image: url("../../assets/images/footer/id_check.png");
-}/*# sourceMappingURL=footer.css.map */
+}

@@ -163,12 +163,10 @@ table {
 }
 
 .object_cover {
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
 }
 
 body {
   font-family: "Pretendard-Regular";
-}/*# sourceMappingURL=style.css.map */
+}

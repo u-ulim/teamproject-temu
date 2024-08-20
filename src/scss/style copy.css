@@ -163,10 +163,8 @@ table {
 }
 
 .object_cover {
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
 }
 
 body {
@@ -295,4 +293,4 @@ body {
 }
 .test-lists li .product-list__solds .product-list__quantity {
   color: #ff6d00;
-}/*# sourceMappingURL=style copy.css.map */
+}

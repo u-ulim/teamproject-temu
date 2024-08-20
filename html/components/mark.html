@@ -8,7 +8,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="../../src/scss/mark.css" />
-
+    <script defer src="../../src/js/mypage.js"></script>
     <title>Document</title>
   </head>
   <body>
@@ -20,14 +20,26 @@
         <div class="leftmenu">
           <ul>
             <li class="home">
-              홈 <i class="fa-solid fa-chevron-right"></i> 즐겨찾기
+              홈 <i class="fa-solid fa-chevron-right"></i> 내 리뷰
             </li>
-            <li>
-              <i class="document"></i>
+            <li class="my-order">
               <div>
-                <span>내 주문</span><i class="fa-solid fa-chevron-down"></i>
+                <i class="document"></i>
+                <span>내 주문</span>
               </div>
+              <i class="fa-solid fa-chevron-down"></i>
             </li>
+            <div class="accordion">
+              <li class="inner">
+                <ul>
+                  <li class="title"><a href="#">내 주문</a></li>
+                  <li class="title"><a href="#">처리 중</a></li>
+                  <li class="title"><a href="#">발송됨</a></li>
+                  <li class="title"><a href="#">배송됨</a></li>
+                  <li class="title"><a href="#">반품</a></li>
+                </ul>
+              </li>
+            </div>
             <li>
               <i class="review"></i>
               <span>내 리뷰</span>
@@ -47,17 +59,15 @@
           </ul>
         </div>
         <!-- LEFTMENU END -->
-        <!-- RIGHTMENU START -->
-        <div class="rightmenu">
-          <div class="contents">
-            <span>즐겨찾기</span>
-          </div>
-          <div class="icon">
-            <i class="starmark"></i>
-            <span>제품이 없습니다</span>
+        <!-- CONTAINER START -->
+        <div class="box">
+          <span>즐겨찾기</span>
+          <div class="container">
+            <img src="../../assets/images/mypage/starmark.svg" alt="" />
+            <div>제품을 찾을 수 없습니다</div>
           </div>
         </div>
-        <!-- RIGHT END -->
+        <!-- BOX END -->
       </div>
       <!-- MARK__INNER END -->
     </div>

@@ -163,20 +163,19 @@ table {
 }
 
 .object_cover {
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
 }
 
 .wrapper {
   width: 100%;
   height: 100vh;
-}
-.wrapper .mark__inner {
   width: 1384px;
   padding: 0px 15px 0px 15px;
   margin: 0 auto;
+}
+.wrapper .mark__inner {
+  height: 100%;
   display: flex;
 }
 .wrapper .mark__inner .leftmenu {
@@ -195,8 +194,13 @@ table {
   display: flex;
   gap: 5px;
   align-items: center;
-  height: 40px;
+  margin-bottom: 20px;
   cursor: pointer;
+}
+.wrapper .mark__inner .leftmenu ul li > div {
+  display: flex;
+  justify-content: space-between;
+  width: 14;
 }
 .wrapper .mark__inner .leftmenu ul li .document {
   width: 24px;
@@ -252,28 +256,27 @@ table {
 }
 .wrapper .mark__inner .leftmenu ul .my-order {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 .wrapper .mark__inner .leftmenu ul .my-order > div {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 .wrapper .mark__inner .leftmenu ul .my-order .fa-chevron-down {
   margin-right: 20px;
 }
 .wrapper .mark__inner .leftmenu ul .inner {
   display: none;
-  border: 1px solid red;
   gap: 10px;
   width: 200px;
+  height: 200px;
   font-family: "Pretendard-Regular";
   font-size: 14px;
   font-style: normal;
   line-height: 22px;
   letter-spacing: -0.42px;
-  height: 200px;
 }
 .wrapper .mark__inner .leftmenu ul .inner.active {
   display: flex;
@@ -281,7 +284,6 @@ table {
 .wrapper .mark__inner .container .contents .text {
   display: flex;
   gap: 60px;
-  margin-bottom: 13px;
   margin-bottom: 20px;
   padding-top: 50px;
   width: 100%;
@@ -298,12 +300,15 @@ table {
 .wrapper .mark__inner .container .contents .text span:nth-child(1):hover {
   color: #292828;
 }
+.wrapper .mark__inner .container .box {
+  width: 953px;
+}
 .wrapper .mark__inner .container .box .item {
   display: flex;
   align-items: center;
   margin-bottom: 15px;
-  width: 953px;
-  height: 73px;
+  width: 100%;
+  height: 100%;
 }
 .wrapper .mark__inner .container .box .item .productImg {
   width: 71px;
@@ -316,7 +321,7 @@ table {
 }
 .wrapper .mark__inner .container .box .item .text__box {
   padding: 14px 11px;
-  width: 953px;
+  width: 100%;
   background: #f6f6f6;
 }
 .wrapper .mark__inner .container .box .item .text__box p {
@@ -365,8 +370,8 @@ table {
 .wrapper .mark__inner .container .box .reveiw .starBox .date {
   display: flex;
   justify-content: flex-end;
-  padding-top: 8px;
-  width: 200px;
+  align-items: center;
+  width: 180px;
 }
 .wrapper .mark__inner .container .box .reveiw .starBox .date span {
   color: #818181;
@@ -389,6 +394,11 @@ table {
 .wrapper .mark__inner .container .box .reveiw .end__box .other {
   display: flex;
   align-items: center;
+}
+.wrapper .mark__inner .container .box .reveiw .end__box .other .item__box {
+  display: flex;
+  align-items: center;
+  gap: 3px;
 }
 .wrapper .mark__inner .container .box .reveiw .end__box .other span:first-child {
   display: inline-block;
@@ -421,4 +431,242 @@ table {
 .wrapper .mark__inner .container .box .reveiw .end__box .share:hover {
   background: #f6f6f6;
   cursor: pointer;
-}/*# sourceMappingURL=completion.css.map */
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    width: 100%;
+    height: 100vh;
+  }
+  .wrapper .mark__inner {
+    width: 1384px;
+    padding: 0px 15px 0px 15px;
+    margin: 0 auto;
+    display: flex;
+  }
+  .wrapper .mark__inner .leftmenu {
+    width: 200px;
+    height: 100%;
+  }
+  .wrapper .mark__inner .leftmenu .container .contents .text {
+    display: flex;
+    gap: 60px;
+    margin-bottom: 20px;
+    padding-top: 50px;
+    width: 100%;
+    font-size: 14px;
+    color: #292828;
+    cursor: pointer;
+  }
+  .wrapper .mark__inner .leftmenu .container .box .item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    width: 953px;
+    height: 73px;
+  }
+  .wrapper .mark__inner .leftmenu .container .box .item .productImg {
+    width: 71px;
+    height: 71px;
+  }
+  .wrapper .mark__inner .leftmenu .container .box .item .text__box {
+    padding: 14px 11px;
+    width: 953px;
+    background: #f6f6f6;
+  }
+  .wrapper .mark__inner .leftmenu .container .box .reveiw .starBox {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 768px) {
+  .wrapper .mark__inner .leftmenu .container .box .reveiw .starBox {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .wrapper .mark__inner .leftmenu .container .box .reveiw .end__box {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 390px) {
+  .wrapper {
+    width: 390px;
+    height: 100vh;
+    width: 100%;
+  }
+  .wrapper .mark__inner {
+    width: 100%;
+    display: flex;
+  }
+  .wrapper .mark__inner .leftmenu {
+    display: none;
+  }
+  .wrapper .mark__inner .container .contents .text {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+    padding-top: 50px;
+    width: 100%;
+    font-size: 14px;
+    color: #292828;
+    cursor: pointer;
+  }
+  .wrapper .mark__inner .container .contents .text span:hover {
+    cursor: pointer;
+  }
+  .wrapper .mark__inner .container .contents .text span:nth-child(1) {
+    color: #818181;
+  }
+  .wrapper .mark__inner .container .contents .text span:nth-child(1):hover {
+    color: #292828;
+  }
+  .wrapper .mark__inner .container .box {
+    width: 100%;
+  }
+  .wrapper .mark__inner .container .box .item {
+    margin-bottom: 15px;
+    width: 100%;
+    height: 100%;
+  }
+  .wrapper .mark__inner .container .box .item .productImg {
+    width: 71px;
+    height: 87px;
+    background-image: url(../../assets/images/mypage/productImg.svg);
+    display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .wrapper .mark__inner .container .box .item .text__box {
+    padding: 14px 11px;
+    width: 100%;
+    height: 100%;
+    background: #f6f6f6;
+  }
+  .wrapper .mark__inner .container .box .item .text__box p {
+    margin-bottom: 5px;
+    font-family: "Pretendard-Regular";
+    font-size: 12px;
+    font-style: normal;
+    line-height: 18px;
+    letter-spacing: -0.36px;
+  }
+  .wrapper .mark__inner .container .box .item .text__box span {
+    font-family: "Pretendard-Regular";
+    font-size: 12px;
+    font-style: normal;
+    line-height: 18px;
+    letter-spacing: -0.36px;
+    color: #818181;
+  }
+  .wrapper .mark__inner .container .box .reveiw .starBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .wrapper .mark__inner .container .box .reveiw .starBox .starImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0px;
+    width: 150px;
+  }
+  .wrapper .mark__inner .container .box .reveiw .starBox .starImg .img {
+    margin-right: 3px;
+    width: 20px;
+    height: 20px;
+    background-image: url(../../assets/images/mypage/reviewstar.svg);
+    display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .wrapper .mark__inner .container .box .reveiw .starBox .starImg span {
+    width: 70%;
+  }
+  .wrapper .mark__inner .container .box .reveiw .starBox .date {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 180px;
+  }
+  .wrapper .mark__inner .container .box .reveiw .starBox .date span {
+    color: #818181;
+    font-family: "Pretendard-Regular";
+    font-size: 14px;
+    font-style: normal;
+    line-height: 22px;
+    letter-spacing: -0.42px;
+  }
+  .wrapper .mark__inner .container .box .reveiw .text {
+    margin-bottom: 15px;
+    padding-top: 5px;
+  }
+  .wrapper .mark__inner .container .box .reveiw .text span {
+    display: flex;
+    font-family: "Pretendard-Regular";
+    font-size: 14px;
+    font-style: normal;
+    line-height: 22px;
+    letter-spacing: -0.42px;
+    color: #292828;
+  }
+  .wrapper .mark__inner .container .box .reveiw .end__box {
+    display: flex;
+    justify-content: space-between;
+  }
+  .wrapper .mark__inner .container .box .reveiw .end__box .other {
+    display: flex;
+    align-items: center;
+    font-family: "Pretendard-Regular";
+    font-size: 14px;
+    font-style: normal;
+    line-height: 22px;
+    letter-spacing: -0.42px;
+  }
+  .wrapper .mark__inner .container .box .reveiw .end__box .other .item__box {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+  }
+  .wrapper .mark__inner .container .box .reveiw .end__box .other span:first-child {
+    display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 18px;
+    height: 18px;
+    background-image: url(../../assets/images/mypage/good.svg);
+  }
+  .wrapper .mark__inner .container .box .reveiw .end__box .other span:not(:first-child) {
+    margin-right: 10px;
+    color: #292828;
+  }
+  .wrapper .mark__inner .container .box .reveiw .end__box .other span:not(:first-child):hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .wrapper .mark__inner .container .box .reveiw .end__box .share {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #9a9a9a;
+    width: 90px;
+    height: 30px;
+    color: #9a9a9a;
+    border-radius: 8px;
+    font-family: "Pretendard-Regular";
+    font-size: 12px;
+    font-style: normal;
+    line-height: 18px;
+    letter-spacing: -0.36px;
+  }
+  .wrapper .mark__inner .container .box .reveiw .end__box .share:hover {
+    background: #f6f6f6;
+    cursor: pointer;
+  }
+}

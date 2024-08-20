@@ -7,8 +7,8 @@
 .wrapper {
   width: 100%;
   height: 100vh;
+  @include width_inner;
   .mark__inner {
-    @include width_inner;
     display: flex;
     .leftmenu {
       width: 200px;
