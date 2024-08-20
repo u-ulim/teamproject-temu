@@ -16,31 +16,32 @@ fetch(categoryURL)
       });
     };
     importData();
+    // 마우스 오버 시 카테고리 리스트 출력
+    const tabs = document.querySelector(".submenu-tabs");
+
+    document.querySelectorAll(".submenu-tabs li").forEach((tab) => {
+      tab.addEventListener("mouseover", function () {
+        // 모든 탭에서 활성화 클래스 제거
+        document
+          .querySelectorAll(".submenu-tabs li")
+          .forEach((t) => t.classList.remove("active"));
+
+        // 현재 탭에 활성화 클래스 추가
+        this.classList.add("active");
+
+        // 모든 콘텐츠에서 활성화 클래스 제거
+        document
+          .querySelectorAll(".submenu-content .content")
+          .forEach((content) => {
+            content.classList.remove("active");
+          });
+
+        // 현재 탭과 연결된 콘텐츠를 활성화
+        const tabContentId = this.getAttribute("data-tab");
+        document.getElementById(tabContentId).classList.add("active");
+      });
+    });
   })
   .catch((error) => {
     console.log(error);
   });
-
-// 마우스 오버 시 카테고리 리스트 출력
-document.querySelectorAll(".submenu-tabs li").forEach((tab) => {
-  tab.addEventListener("mouseover", function () {
-    // 모든 탭에서 활성화 클래스 제거
-    document
-      .querySelectorAll(".submenu-tabs li")
-      .forEach((t) => t.classList.remove("active"));
-
-    // 현재 탭에 활성화 클래스 추가
-    this.classList.add("active");
-
-    // 모든 콘텐츠에서 활성화 클래스 제거
-    document
-      .querySelectorAll(".submenu-content .content")
-      .forEach((content) => {
-        content.classList.remove("active");
-      });
-
-    // 현재 탭과 연결된 콘텐츠를 활성화
-    const tabContentId = this.getAttribute("data-tab");
-    document.getElementById(tabContentId).classList.add("active");
-  });
-});

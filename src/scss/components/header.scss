@@ -8,6 +8,7 @@
   @include width_full;
   border-bottom: 1px solid map-get($color, color-Neutrals-Grey-200);
   height: 130px;
+  margin-bottom: 30px;
   .header-top-wrapper {
     @include width_full;
     height: 48px;
