@@ -101,7 +101,8 @@ fetch(productsURL)
       // div.append(productListTitle, productListPrice);
       // productList.append(productListThumb, div);
       productList.addEventListener("click", () => {
-        const url = `./html/components/product-detail.html?category=${
+        // 절대경로 이용하기
+        const url = `/html/components/product-detail.html?category=${
           product.category
         }&name=${encodeURIComponent(product.title)}`;
         window.location.href = url;

@@ -27,8 +27,9 @@
       margin-bottom: 10px;
       overflow: hidden;
       .product-list__thumb {
-        width: 230px;
-        height: 230px;
+        border-radius: 8px;
+        width: 100%;
+        height: 100%;
         @include object_cover;
         transition: all 0.3s;
       }
