@@ -496,6 +496,9 @@ table {
   }
 }
 @media (max-width: 768px) {
+  #header {
+    margin-bottom: 80px;
+  }
   #header nav .nav-left .nav-left__logo {
     background: url("../../../assets/images/header/LOGO_M.svg");
     width: 56px;
