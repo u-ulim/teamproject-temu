@@ -194,6 +194,7 @@ table {
   align-items: center;
   justify-content: center;
   position: relative;
+  z-index: -1;
   width: 447px;
   height: 300px;
 }
@@ -418,17 +419,17 @@ table {
 #cart .cart__wrapper .cart__item-first .cart__item-list :nth-child(1) {
   width: 143px;
   height: 143px;
-  background: url(../../assets/images/index/cart-01-01.png);
+  background: center/cover;
 }
 #cart .cart__wrapper .cart__item-first .cart__item-list :nth-child(2) {
   width: 143px;
   height: 143px;
-  background: url(../../assets/images/index/cart-01-02.png);
+  background: center/cover;
 }
 #cart .cart__wrapper .cart__item-first .cart__item-list :nth-child(3) {
   width: 143px;
   height: 143px;
-  background: url(../../assets/images/index/cart-01-03.png);
+  background: url(../../assets/images/index/cart-01-03.webp) center/cover;
 }
 #cart .cart__wrapper .cart__item-second .cart__item-list {
   display: flex;
@@ -478,6 +479,7 @@ table {
   justify-content: center;
   flex-direction: column;
   margin-bottom: 60px;
+  z-index: -1;
 }
 #category .category__wrapper .category__title {
   width: 1384px;
@@ -561,7 +563,7 @@ table {
   align-items: center;
   justify-content: space-between;
   width: 1213px;
-  height: 141px;
+  height: auto;
   text-align: center;
 }
 #category .category__wrapper .category__list__container .category__list li .category__list-img {
@@ -778,8 +780,8 @@ table {
   }
   #cart .mobile__cart {
     display: flex;
-    width: 100%;
     height: 148px;
+    width: 100%;
     font-family: "Pretendard-Regular";
     font-size: 14px;
     font-style: normal;
@@ -791,8 +793,8 @@ table {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 100%;
     height: 148px;
+    width: 100%;
   }
   #cart .mobile__cart .m-cart__item-first .m-cart__item-header {
     width: 100%;
@@ -818,7 +820,7 @@ table {
   #cart .mobile__cart .m-cart__item-first .m-cart__item-list :nth-child(1) {
     width: 100%;
     height: 100%;
-    background: url(../../assets/images/index/cart-01-01.png);
+    background: url(../../assets/images/index/cart-01-01.webp) center/cover;
     -o-object-fit: cover;
        object-fit: cover;
     -o-object-position: center;
@@ -883,21 +885,23 @@ table {
   #category .category__wrapper .category__list__container {
     width: 100%;
     width: 100%;
-    height: 100px;
+    height: auto;
   }
   #category .category__wrapper .category__list__container .category__list {
     display: flex;
+    gap: 25px;
     align-items: center;
     justify-content: space-between;
-    gap: 25px;
+    flex-wrap: wrap;
+    border: 1px solid red;
+    overflow: hidden;
   }
   #category .category__wrapper .category__list__container .category__list li {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    height: 100px;
+    flex-basis: 20%;
   }
   #category .category__wrapper .category__list__container .category__list li .category__list-img {
+    margin: 0 auto;
     width: 55px;
     height: 55px;
     -o-object-fit: cover;
