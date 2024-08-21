@@ -3,15 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <!DOCTYPE html>
-<html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TEMU</title>
     
     <!-- FONTAWESOME -->
@@ -23,16 +14,15 @@
     <!-- CUSTOM CSS, JS-->
     <link rel="stylesheet" href="../src/scss/Productcart.css" />
     <link rel="stylesheet" href="../src/scss/components/product-list.css" />
-    <script defer src="../src/javascript/Productcart.js"></script>
+    <script defer src="../src/javascript/productcontrol.js"></script>
     <script defer src="../src/json/product-list.js"></script>
     <script defer src="../src/javascript/modal.js"></script>
+    <script defer src="../src/javascript/checkbox.js"></script>
+    <script defer src="../src/javascript/productbox.js"></script>
  
   </head>
   <body>
 
-    <!--header-->
-    <header></header>
-       <!--header-->
 
     <div class="container "> 
 
@@ -136,13 +126,25 @@
                 </div>
               </li>
               <!-- close-->
-              <li class="close">
+              <li class="product__close">
                 <div>
                   <span></span>
                   <span></span>
                 </div>
               </li>
             </ul>
+          </div>
+          <div class="empty__product" style="display: none;">
+            <div class="empty__product-up">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <div class="product-text">
+                <p class="product__text-up">장바구니가 비어있습니다</p>
+                <p class="product__text-down">
+                  마음에 드는 상품을 추가하세요
+                </p>
+              </div>
+            </div>
+            <button class="popular-btn">인기상품보기</button>
           </div>
         </article>
       </section>
@@ -205,14 +207,12 @@
                      <h2 >다른 고객이 함께 구매한 상품</h2>
                   </article>
                   <article class="section__down-product">
-                   <!-- <ul class="product-lists"></ul> -->
+                   <ul class="product-lists"></ul>
                         <!-- button -->
                       <button>더보기<i class="fa-solid fa-chevron-down"></i></button>
                   </article>
       </section>
-        </main>
-
-
+    </main>
         <!--ASIDE START-->
         <aside>
           <div class="checkout__summary">
@@ -269,8 +269,6 @@
         </aside>
         <!--ASIDE END-->
     </div>
-
-
 
     <!--MODAL BOX START-->
       <div class="modal__box">
@@ -395,8 +393,5 @@
     </div>
   <!--MODAL BOX END-->
 
-
-  <!--footer-->
-    <footer></footer>
   </body>
 </html>

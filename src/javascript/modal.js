@@ -25,10 +25,12 @@ if (bannerClose) {
 if (optionSelect && optionModal && modalClose) {
   optionSelect.addEventListener("click", () => {
     optionModal.classList.add("active");
+    document.body.style.overflow = "hidden";
   });
 
   modalClose.addEventListener("click", () => {
     optionModal.classList.remove("active");
+    document.body.style.overflow = "auto";
   });
 }
 
@@ -36,10 +38,12 @@ if (optionSelect && optionModal && modalClose) {
 if (addressBtn && addressModal && addressClose) {
   addressBtn.addEventListener("click", () => {
     addressModal.classList.add("active");
+    document.body.style.overflow = "hidden";
   });
 
   addressClose.addEventListener("click", () => {
     addressModal.classList.remove("active");
+    document.body.style.overflow = "auto";
   });
 }
 
@@ -47,11 +51,13 @@ if (addressBtn && addressModal && addressClose) {
 if (addressPlusBtn && addressPlusModal && addressPlusClose) {
   addressPlusBtn.addEventListener("click", () => {
     addressPlusModal.classList.add("active");
+    document.body.style.overflow = "hidden";
   });
 
   addressPlusClose.addEventListener("click", () => {
     addressPlusModal.classList.remove("active");
     addressModal.classList.remove("active");
+    document.body.style.overflow = "auto";
   });
 }
 
@@ -60,5 +66,6 @@ if (addressBackBtn && addressPlusModal && addressModal) {
   addressBackBtn.addEventListener("click", () => {
     addressPlusModal.classList.remove("active");
     addressModal.classList.add("active");
+    document.body.style.overflow = "hidden";
   });
 }
