@@ -182,12 +182,13 @@ table {
   margin: 0 auto;
 }
 #main .main__wrapper .main__banner {
+  overflow: hidden;
+  position: relative;
   width: 875px;
   height: 300px;
-  background: url(../../assets/images/index/main-banner.png);
+  background: no-repeat;
   cursor: pointer;
-  -o-object-fit: cover;
-     object-fit: cover;
+  border-radius: 8px;
 }
 #main .main__wrapper .main__slide__wrapper {
   display: flex;
@@ -201,7 +202,6 @@ table {
 #main .main__wrapper .main__slide__wrapper .main__slide {
   width: 100%;
   height: 300px;
-  background: url(../../assets/images/index/main-slide1.png);
   cursor: pointer;
 }
 #main .main__wrapper .main__slide__wrapper .main__slide .main__slide-pagination {
@@ -897,8 +897,8 @@ table {
     overflow: hidden;
   }
   #category .category__wrapper .category__list__container .category__list li {
-    height: 100px;
     flex-basis: 20%;
+    height: 100px;
   }
   #category .category__wrapper .category__list__container .category__list li .category__list-img {
     margin: 0 auto;

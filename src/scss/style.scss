@@ -16,12 +16,14 @@
     @include width_inner;
 
     .main__banner {
-      // border: 1px solid #f00;
+      overflow: hidden;
+      position: relative;
       width: 875px;
       height: 300px;
-      background: url(../../assets/images/index/main-banner.png);
+      background: no-repeat;
       cursor: pointer;
-      object-fit: cover;
+      border-radius: 8px;
+      // border: 1px solid red;
     }
 
     .main__slide__wrapper {
@@ -30,14 +32,11 @@
       justify-content: center;
       position: relative;
       z-index: -1;
-      // border: 1px solid #f00;
       width: 447px;
       height: 300px;
       .main__slide {
-        // border: 1px solid #f00;
         width: 100%;
         height: 300px;
-        background: url(../../assets/images/index/main-slide1.png);
         cursor: pointer;
         .main__slide-pagination {
           @include heading_XXS_16;
@@ -770,12 +769,12 @@
           border: 1px solid red;
           overflow: hidden;
           li {
-            // width: 1200px;
-            height: 100px;
             // align-items: center;
             // justify-content: center;
             // display: flex;
             flex-basis: 20%;
+            // width: 1200px;
+            height: 100px;
             // flex-direction: column;
             .category__list-img {
               margin: 0 auto;
