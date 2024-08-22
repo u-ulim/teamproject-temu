@@ -3,9 +3,15 @@
 // 모든 ul 체크 -> 전체 체크 표시
 // ul 하나라도 체크 안됨 -> 전체 체크 표시 해제
 
+// 개별 체크 박스 표시에 따라 전체체크박스 갯수 변경
+// 개별 체크 박스 표시 갯수
+// 갯수에 따라 innertext 변경
+
 // 장바구니리스트
 let selectAllCheckbox = document.querySelector("#custom__box");
 let productCheckboxes = document.querySelectorAll(".product .custom__checkbox");
+const checkboxNum = productCheckboxes.length;
+const productNum = document.querySelector("#item__count");
 
 // 전체 체크 변경
 if (selectAllCheckbox) {
@@ -13,6 +19,12 @@ if (selectAllCheckbox) {
     let isChecked = selectAllCheckbox.checked;
     productCheckboxes.forEach(function (checkbox) {
       checkbox.checked = isChecked;
+
+      if (selectAllCheckbox.checked) {
+        productNum.innerText = `(${checkboxNum})`;
+      } else {
+        productNum.innerText = "";
+      }
     });
   });
 }
@@ -26,11 +38,18 @@ productCheckboxes.forEach(function (checkbox) {
       if (!checkbox.checked) {
         allChecked = false;
       }
+      if (checkbox.checked) {
+        productNum.innerText = `(${checkboxNum})`;
+      } else {
+        productNum.innerText = "";
+      }
     });
 
     selectAllCheckbox.checked = allChecked;
   });
 });
+
+// 테무의 나무 심기는 필수가 아님 구분해서 체크하기
 
 // 동의서
 let agreeAll = document.querySelector("#agreeAll");
@@ -78,8 +97,9 @@ let deleteSelectedBtn = document.querySelector("button");
 let emptyCartMessage = document.querySelector(".empty__product");
 let productInfo = document.querySelector(".product__info");
 let productClose = document.querySelector(".product__close");
+const itemCount = document.querySelector(".item__count");
 
-// 선택삭제 버튼
+// 툴바에 존재하는 선택삭제 버튼
 deleteSelectedBtn.addEventListener("click", function () {
   productCheckboxes.forEach(function (checkbox) {
     if (checkbox.checked) {

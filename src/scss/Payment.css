@@ -1230,7 +1230,7 @@ aside .checkout__summary .info ul li div i {
   display: flex;
   gap: 5px;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
 }
 .address__modal__box-plus .plus__modal__inner .plus__modal__inner-box form .address-box .address_select #address {
   padding-left: 12px;
@@ -1244,6 +1244,7 @@ aside .checkout__summary .info ul li div i {
   font-style: normal;
   line-height: 22px;
   letter-spacing: -0.42px;
+  flex: 1;
 }
 .address__modal__box-plus .plus__modal__inner .plus__modal__inner-box form .address-box .address_select #address:focus {
   outline: none;

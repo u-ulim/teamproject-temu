@@ -873,8 +873,7 @@ aside {
             display: flex;
             gap: 5px;
             align-items: center;
-            justify-content: center;
-
+            justify-content: start;
             #address {
               padding-left: 12px;
               border: 1px solid map-get($color, color-Neutrals-Grey-200);
@@ -883,6 +882,7 @@ aside {
               color: map-get($color, color-Neutrals-Grey-400);
               border-radius: 6px;
               @include text_S_14;
+              flex: 1;
               &:focus {
                 outline: none;
               }
