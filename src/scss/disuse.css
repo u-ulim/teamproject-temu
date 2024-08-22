@@ -168,6 +168,7 @@ table {
 }
 
 .wrapper {
+  position: relative;
   width: 100%;
   height: 100vh;
   width: 1384px;
@@ -175,8 +176,8 @@ table {
   margin: 0 auto;
 }
 .wrapper .mark__inner {
-  height: 100%;
   display: flex;
+  height: 100%;
 }
 .wrapper .mark__inner .leftmenu {
   width: 200px;
@@ -324,17 +325,22 @@ table {
 .wrapper .mark__inner .contents .coupon__code button:hover {
   background: #f6f6f6;
 }
+.wrapper .mark__inner .box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .wrapper .mark__inner .box .icon {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding-top: 222px;
 }
 .wrapper .mark__inner .box .icon .coupon__icon {
   display: inline-block;
   margin-bottom: 10px;
-  width: 120px;
+  width: 150px;
   height: 120px;
   background-image: url(../../assets/images/mypage/coupon__icon.svg);
   display: inline-block;
@@ -342,7 +348,7 @@ table {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.wrapper .mark__inner .box .icon .text__box span {
+.wrapper .mark__inner .box .icon span {
   font-family: "Pretendard-Regular";
   font-size: 16px;
   font-style: normal;
@@ -353,10 +359,73 @@ table {
   justify-content: center;
   margin-bottom: 7px;
 }
-.wrapper .mark__inner .box .icon .text__box p {
-  font-family: "Pretendard-Regular";
-  font-size: 14px;
-  font-style: normal;
-  line-height: 22px;
-  letter-spacing: -0.42px;
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    width: 100%;
+    width: 100%;
+    height: 100vh;
+  }
+  .wrapper .mark__inner {
+    display: flex;
+    height: 100%;
+  }
+  .wrapper .mark__inner .leftmenu {
+    display: flex;
+  }
+  .wrapper .mark__inner .contents .text {
+    gap: 30px;
+  }
+  .wrapper .mark__inner .contents .coupon__code {
+    gap: 10px;
+  }
+  .wrapper .mark__inner .contents .coupon__code .code {
+    width: 290px;
+  }
+  .wrapper .mark__inner .contents .coupon__code button {
+    width: 60px;
+    height: 40px;
+  }
+  .wrapper .mark__inner .box .icon span {
+    font-family: "Pretendard-Regular";
+    font-size: 14px;
+    font-style: normal;
+    line-height: 22px;
+    letter-spacing: -0.42px;
+    width: 210px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .wrapper {
+    width: 100%;
+    width: 390px;
+    height: 100vh;
+  }
+  .wrapper .mark__inner {
+    display: flex;
+  }
+  .wrapper .mark__inner .leftmenu {
+    display: none;
+  }
+  .wrapper .mark__inner .contents .text {
+    gap: 30px;
+  }
+  .wrapper .mark__inner .contents .coupon__code {
+    gap: 10px;
+  }
+  .wrapper .mark__inner .contents .coupon__code .code {
+    width: 290px;
+  }
+  .wrapper .mark__inner .contents .coupon__code button {
+    width: 60px;
+    height: 40px;
+  }
+  .wrapper .mark__inner .box .icon span {
+    font-family: "Pretendard-Regular";
+    font-size: 14px;
+    font-style: normal;
+    line-height: 22px;
+    letter-spacing: -0.42px;
+    width: 210px;
+  }
 }

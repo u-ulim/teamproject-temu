@@ -5,12 +5,13 @@
 @import "./layout/layout.scss";
 
 .wrapper {
+  position: relative;
   width: 100%;
   height: 100vh;
   @include width_inner;
   .mark__inner {
-    height: 100%;
     display: flex;
+    height: 100%;
     .leftmenu {
       width: 200px;
       height: 100%;
@@ -141,32 +142,107 @@
       }
     }
     .box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       .icon {
-        // border: 1px solid #f00;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        padding-top: 222px;
         .coupon__icon {
           display: inline-block;
           //   border: 1px solid #f00;
           margin-bottom: 10px;
-          width: 120px;
+          width: 150px;
           height: 120px;
           background-image: url(../../assets/images/mypage/coupon__icon.svg);
           @include background_cover;
         }
-        .text__box {
-          span {
-            @include text_M_16;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 7px;
+        span {
+          @include text_M_16;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 7px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    @include width_full;
+    width: 100%;
+    height: 100vh;
+    .mark__inner {
+      display: flex;
+      height: 100%;
+      .leftmenu {
+        display: flex;
+      }
+      .contents {
+        .text {
+          gap: 30px;
+        }
+        .coupon__code {
+          gap: 10px;
+          .code {
+            // border: 1px solid red;
+            width: 290px;
           }
-          p {
+          button {
+            width: 60px;
+            height: 40px;
+          }
+        }
+      }
+      .box {
+        .icon {
+          // border: 1px solid red;
+          span {
             @include text_S_14;
+            width: 210px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 390px) {
+  .wrapper {
+    @include width_full;
+    width: 390px;
+    height: 100vh;
+    .mark__inner {
+      display: flex;
+      .leftmenu {
+        display: none;
+      }
+      .contents {
+        .text {
+          gap: 30px;
+        }
+        .coupon__code {
+          gap: 10px;
+          .code {
+            // border: 1px solid red;
+            width: 290px;
+          }
+          button {
+            width: 60px;
+            height: 40px;
+          }
+        }
+      }
+      .box {
+        .icon {
+          // border: 1px solid red;
+          span {
+            @include text_S_14;
+            width: 210px;
           }
         }
       }

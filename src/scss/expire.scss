@@ -8,6 +8,7 @@
   width: 100%;
   height: 100vh;
   @include width_inner;
+  position: relative;
   .mark__inner {
     height: 100%;
     display: flex;
@@ -141,13 +142,16 @@
       }
     }
     .box {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
       .icon {
         // border: 1px solid #f00;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        padding-top: 222px;
         .coupon__icon {
           display: inline-block;
           //   border: 1px solid #f00;
@@ -164,6 +168,90 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 7px;
+          }
+          p {
+            @include text_S_14;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    @include width_full;
+    width: 100%;
+    height: 100vh;
+    .mark__inner {
+      display: flex;
+      height: 100%;
+      .leftmenu {
+        display: flex;
+      }
+      .contents {
+        .text {
+          gap: 30px;
+        }
+        .coupon__code {
+          gap: 10px;
+          .code {
+            // border: 1px solid red;
+            width: 290px;
+          }
+          button {
+            width: 60px;
+            height: 40px;
+          }
+        }
+      }
+      .box {
+        .icon {
+          border: 1px solid red;
+          width: 320px;
+          span {
+            @include text_S_14;
+          }
+          p {
+            @include text_S_14;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 390px) {
+  .wrapper {
+    @include width_full;
+    width: 390px;
+    height: 100vh;
+    .mark__inner {
+      display: flex;
+      .leftmenu {
+        display: none;
+      }
+      .contents {
+        .text {
+          gap: 30px;
+        }
+        .coupon__code {
+          gap: 10px;
+          .code {
+            // border: 1px solid red;
+            width: 290px;
+          }
+          button {
+            width: 60px;
+            height: 40px;
+          }
+        }
+      }
+      .box {
+        .icon {
+          border: 1px solid red;
+          width: 320px;
+          span {
+            @include text_S_14;
           }
           p {
             @include text_S_14;

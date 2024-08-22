@@ -142,7 +142,7 @@
         .item {
           display: flex;
           margin-bottom: 15px;
-          height: 100px;
+          height: 100%;
           .productImg {
             margin-right: 11px;
             width: 96px;
@@ -152,6 +152,7 @@
           }
           .text__box {
             width: 730px;
+            padding-top: 10px;
             p {
               margin-bottom: 5px;
               @include text_S_14;
@@ -181,6 +182,107 @@
             &:hover {
               background: map-get($color, primary-color);
               cursor: pointer;
+            }
+          }
+        }
+      }
+      .userreview {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .wrapper {
+    width: 100%;
+    height: 100vh;
+    @include width_full;
+    .mark__inner {
+      height: 100%;
+      display: flex;
+      .leftmenu {
+        display: none;
+      }
+      .container {
+        .contents {
+          .text {
+            gap: 30px;
+          }
+          .examine {
+            width: 360px;
+            // border: 1px solid red;
+            margin-bottom: 20px;
+          }
+        }
+        .box {
+          display: flex;
+          justify-content: space-between;
+          // border: 1px solid red;
+          .item {
+            display: flex;
+            // border: 1px solid red;
+            align-items: center;
+            .productImg {
+              max-width: 50px;
+              height: 50px;
+            }
+            .text__box {
+              // border: 1px solid red;
+              max-width: 150px;
+              height: 70%;
+              @include text_XS_12;
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              padding-top: 0;
+            }
+          }
+          .end__box {
+            // border: 1px solid black;
+            display: flex;
+            padding-top: 10px;
+            .share {
+              width: 130px;
+              height: 36px;
+            }
+          }
+        }
+        .userreview {
+          // border: 1px solid red;
+          background: map-get($color, color-Neutrals-Grey-100);
+          width: 360px;
+          height: 57px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .item {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            .fire__icon {
+              background-image: url(../../assets/images/mypage/fire.svg);
+              @include background_cover;
+              width: 8px;
+              height: 11px;
+              margin-left: 6px;
+            }
+            span {
+              color: map-get($color, primary-color);
+              @include text_XS_12;
+              margin-right: 5px;
+            }
+            p {
+              @include text_XS_12;
+            }
+          }
+          .icon {
+            padding-right: 10px;
+            .staricon {
+              background-image: url(../../assets/images/mypage/staricon.svg);
+              @include background_cover;
+              width: 16px;
+              height: 16px;
             }
           }
         }
