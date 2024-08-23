@@ -804,7 +804,7 @@ aside {
 
 /*address+-MODAL BOX*/
 .address__modal__box-plus {
-  display: none;
+  // display: none;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
@@ -874,7 +874,8 @@ aside {
             gap: 5px;
             align-items: center;
             justify-content: start;
-            #address {
+            #trial,
+            #city {
               padding-left: 12px;
               border: 1px solid map-get($color, color-Neutrals-Grey-200);
               width: 164px;

@@ -1145,7 +1145,6 @@ aside .checkout__summary .info ul li div i {
 
 /*address+-MODAL BOX*/
 .address__modal__box-plus {
-  display: none;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
@@ -1232,7 +1231,8 @@ aside .checkout__summary .info ul li div i {
   align-items: center;
   justify-content: start;
 }
-.address__modal__box-plus .plus__modal__inner .plus__modal__inner-box form .address-box .address_select #address {
+.address__modal__box-plus .plus__modal__inner .plus__modal__inner-box form .address-box .address_select #trial,
+.address__modal__box-plus .plus__modal__inner .plus__modal__inner-box form .address-box .address_select #city {
   padding-left: 12px;
   border: 1px solid #d4d4d4;
   width: 164px;
@@ -1246,7 +1246,8 @@ aside .checkout__summary .info ul li div i {
   letter-spacing: -0.42px;
   flex: 1;
 }
-.address__modal__box-plus .plus__modal__inner .plus__modal__inner-box form .address-box .address_select #address:focus {
+.address__modal__box-plus .plus__modal__inner .plus__modal__inner-box form .address-box .address_select #trial:focus,
+.address__modal__box-plus .plus__modal__inner .plus__modal__inner-box form .address-box .address_select #city:focus {
   outline: none;
 }
 .address__modal__box-plus .plus__modal__inner .plus__modal__inner-box form .detailed-address-box {
