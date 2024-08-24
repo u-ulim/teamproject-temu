@@ -373,6 +373,9 @@ table {
   .wrapper .mark__inner .leftmenu {
     display: flex;
   }
+  .wrapper .mark__inner .leftmenu .fa-chevron-down {
+    margin-left: 30px;
+  }
   .wrapper .mark__inner .contents .text {
     gap: 30px;
   }

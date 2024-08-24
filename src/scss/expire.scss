@@ -5,13 +5,13 @@
 @import "./layout/layout.scss";
 
 .wrapper {
+  position: relative;
   width: 100%;
   height: 100vh;
   @include width_inner;
-  position: relative;
   .mark__inner {
-    height: 100%;
     display: flex;
+    height: 100%;
     .leftmenu {
       width: 200px;
       height: 100%;
@@ -143,8 +143,8 @@
     }
     .box {
       position: absolute;
-      left: 50%;
       top: 50%;
+      left: 50%;
       transform: translate(-50%, -50%);
       .icon {
         // border: 1px solid #f00;
@@ -188,6 +188,9 @@
       height: 100%;
       .leftmenu {
         display: flex;
+        .fa-chevron-down {
+          margin-left: 30px;
+        }
       }
       .contents {
         .text {
@@ -207,7 +210,6 @@
       }
       .box {
         .icon {
-          border: 1px solid red;
           width: 320px;
           span {
             @include text_S_14;
@@ -248,7 +250,6 @@
       }
       .box {
         .icon {
-          border: 1px solid red;
           width: 320px;
           span {
             @include text_S_14;

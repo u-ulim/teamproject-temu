@@ -155,28 +155,28 @@ table {
 }
 
 /* VARIABLES */
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.wrapper {
   width: 100%;
   height: 100vh;
-}
-
-.wrapper {
-  padding: 36px 40px 36px 40px;
-  width: 494px;
-  height: 575px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
-.wrapper .container {
+.wrapper .modal__box {
+  width: 493px;
+  height: 575px;
+}
+.wrapper .modal__box .container {
   margin-bottom: 70px;
 }
-.wrapper .container .inner {
+.wrapper .modal__box .container .inner {
   display: flex;
   justify-content: space-between;
+  padding: 10px 10px;
 }
-.wrapper .container .inner span {
+.wrapper .modal__box .container .inner span {
   font-family: "Pretendard-Regular";
   font-size: 16px;
   font-style: normal;
@@ -184,27 +184,29 @@ body {
   letter-spacing: -0.48px;
   color: #292828;
 }
-.wrapper .container .inner span:hover {
+.wrapper .modal__box .container .inner span:hover {
   text-decoration: underline;
   cursor: pointer;
 }
-.wrapper .container .inner span .fa-chevron-left {
+.wrapper .modal__box .container .inner span .fa-chevron-left {
   width: 17px;
   height: 17px;
   font-size: 17px;
 }
-.wrapper .container .inner .fa-xmark {
+.wrapper .modal__box .container .inner .fa-xmark {
   width: 17px;
   height: 17px;
   font-size: 17px;
   transition: all 0.5s;
   border-radius: 50%;
 }
-.wrapper .container .inner .fa-xmark:hover {
+.wrapper .modal__box .container .inner .fa-xmark:hover {
   background-color: #d4d4d4;
 }
-.wrapper .container .login {
+.wrapper .modal__box .container .login {
   margin-bottom: 15px;
+}
+.wrapper .modal__box .container .login span {
   color: #101010;
   font-family: "Pretendard-Bold";
   font-size: 20px;
@@ -212,10 +214,12 @@ body {
   font-weight: 700;
   letter-spacing: -0.6px;
 }
-.wrapper .container .data {
+.wrapper .modal__box .container .data {
   display: inline-block;
   margin-right: 6px;
   font-size: 13px;
+}
+.wrapper .modal__box .container .data span {
   color: #009e95;
   font-family: "Pretendard-Regular";
   font-size: 12px;
@@ -223,11 +227,11 @@ body {
   line-height: 18px;
   letter-spacing: -0.36px;
 }
-
-.email .text {
+.wrapper .email .text {
   margin-bottom: 8px;
 }
-.email .text span {
+.wrapper .email .text span {
+  color: #101010;
   display: inline-block;
   width: 413px;
   text-align: left;
@@ -237,7 +241,7 @@ body {
   line-height: 18px;
   letter-spacing: -0.36px;
 }
-.email .email__box input[type=text] {
+.wrapper .email .email__box input[type=text] {
   margin-bottom: 20px;
   padding-left: 20px;
   border: 1px solid #b5b5b5;
@@ -245,7 +249,7 @@ body {
   height: 45px;
   border-radius: 8px;
 }
-.email button {
+.wrapper .email button {
   margin-bottom: 14px;
   border: none;
   width: 413px;
@@ -255,13 +259,13 @@ body {
   transition: all 0.3s;
   border-radius: 8px;
 }
-.email button:hover {
+.wrapper .email button:hover {
   background: #ff6d00;
   color: #fff;
   cursor: pointer;
   touch-action: manipulation;
 }
-.email .text__box span {
+.wrapper .email .text__box span {
   display: inline-block;
   margin-bottom: 24px;
   color: #818181;
@@ -271,12 +275,11 @@ body {
   line-height: 18px;
   letter-spacing: -0.36px;
 }
-.email .text__box span:hover {
+.wrapper .email .text__box span:hover {
   text-decoration: underline;
   cursor: pointer;
 }
-
-.box .other .line {
+.wrapper .box .other .line {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -290,7 +293,7 @@ body {
   line-height: 18px;
   letter-spacing: -0.36px;
 }
-.box .other .line::before {
+.wrapper .box .other .line::before {
   flex-grow: 1;
   margin: 0 12px;
   height: 1px;
@@ -298,7 +301,7 @@ body {
   line-height: 0;
   content: "";
 }
-.box .other .line::after {
+.wrapper .box .other .line::after {
   flex-grow: 1;
   margin: 0 12px;
   height: 1px;
@@ -306,40 +309,38 @@ body {
   line-height: 0;
   content: "";
 }
-
-.icon {
+.wrapper .icon {
   display: flex;
   gap: 40px;
   align-items: center;
   justify-content: center;
 }
-.icon span {
+.wrapper .icon span {
   display: inline-block;
   margin-bottom: 96px;
 }
-.icon span:hover {
+.wrapper .icon span:hover {
   cursor: pointer;
 }
-.icon span .google-icon {
+.wrapper .icon span .google-icon {
   display: inline-block;
   width: 40px;
   height: 40px;
   background: url("../../assets/images/mypage/google-icon.svg") center/cover no-repeat;
 }
-.icon span .naver-icon {
+.wrapper .icon span .naver-icon {
   display: inline-block;
   width: 40px;
   height: 40px;
   background: url("../../assets/images/mypage/naver.svg") center/cover no-repeat;
 }
-.icon span .apple-icon {
+.wrapper .icon span .apple-icon {
   display: inline-block;
   width: 40px;
   height: 40px;
   background: url("../../assets/images/mypage/apple.svg") center/cover no-repeat;
 }
-
-.agree {
+.wrapper .agree {
   margin-bottom: 36px;
   color: #292828;
   font-family: "Pretendard-Regular";
@@ -348,18 +349,39 @@ body {
   line-height: 18px;
   letter-spacing: -0.36px;
 }
-.agree span {
+.wrapper .agree span {
   color: #0065be;
 }
-.agree span:hover {
+.wrapper .agree span:hover {
   text-decoration: underline;
   cursor: pointer;
 }
 
-@media screen and (max-width: 575px) {
-  body {
-    padding: 32px 0;
-    width: 555px;
-    height: 595px;
+@media screen and (max-width: 768px) {
+  .wrapper {
+    width: 100%;
+    height: 100vh;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 390px) {
+  .wrapper {
+    width: 390px;
+    height: 100vh;
+    width: 100%;
+  }
+  .wrapper .modal__box {
+    width: 390px;
+    height: 100vh;
+  }
+  .wrapper .modal__box .email {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  .wrapper .modal__box .email .email__box input[type=text] {
+    width: 380px;
+  }
+  .wrapper .modal__box .email button {
+    width: 380px;
   }
 }

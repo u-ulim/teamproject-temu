@@ -9,8 +9,8 @@
   height: 100vh;
   @include width_inner;
   .mark__inner {
-    height: 100%;
     display: flex;
+    height: 100%;
     .leftmenu {
       width: 200px;
       height: 100%;
@@ -130,10 +130,10 @@
           }
           span {
             @include text_S_14;
-            color: map-get($color, color-Neutrals-Grey-600);
             display: flex;
-            align-items: center;
             gap: 5px;
+            align-items: center;
+            color: map-get($color, color-Neutrals-Grey-600);
           }
         }
       }
@@ -151,8 +151,8 @@
             @include background_cover;
           }
           .text__box {
-            width: 730px;
             padding-top: 10px;
+            width: 730px;
             p {
               margin-bottom: 5px;
               @include text_S_14;
@@ -193,16 +193,19 @@
   }
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 768px) {
   .wrapper {
     width: 100%;
     height: 100vh;
     @include width_full;
     .mark__inner {
-      height: 100%;
       display: flex;
+      height: 100%;
       .leftmenu {
-        display: none;
+        display: flex;
+        .fa-chevron-down {
+          margin-left: 30px;
+        }
       }
       .container {
         .contents {
@@ -210,9 +213,8 @@
             gap: 30px;
           }
           .examine {
-            width: 360px;
-            // border: 1px solid red;
-            margin-bottom: 20px;
+            border: 1px solid red;
+            width: 100%;
           }
         }
         .box {
@@ -228,14 +230,73 @@
               height: 50px;
             }
             .text__box {
+              padding-top: 0;
+              overflow: hidden;
+              // border: 1px solid red;
+              width: 100%;
+              height: 70%;
+              // white-space: nowrap;
+              text-overflow: ellipsis;
+              @include text_XS_12;
+            }
+          }
+          .end__box {
+            // border: 1px solid black;
+            display: flex;
+            padding-top: 10px;
+            .share {
+              width: 130px;
+              height: 36px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 390px) {
+  .wrapper {
+    width: 100%;
+    height: 100vh;
+    @include width_full;
+    .mark__inner {
+      display: flex;
+      height: 100%;
+      .leftmenu {
+        display: none;
+      }
+      .container {
+        .contents {
+          .text {
+            gap: 30px;
+          }
+          .examine {
+            // border: 1px solid red;
+            margin-bottom: 20px;
+            width: 360px;
+          }
+        }
+        .box {
+          display: flex;
+          justify-content: space-between;
+          // border: 1px solid red;
+          .item {
+            display: flex;
+            // border: 1px solid red;
+            align-items: center;
+            .productImg {
+              max-width: 50px;
+              height: 50px;
+            }
+            .text__box {
+              padding-top: 0;
+              overflow: hidden;
               // border: 1px solid red;
               max-width: 150px;
               height: 70%;
-              @include text_XS_12;
-              overflow: hidden;
               white-space: nowrap;
               text-overflow: ellipsis;
-              padding-top: 0;
+              @include text_XS_12;
             }
           }
           .end__box {
@@ -249,28 +310,28 @@
           }
         }
         .userreview {
-          // border: 1px solid red;
-          background: map-get($color, color-Neutrals-Grey-100);
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
           width: 360px;
           height: 57px;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
+          // border: 1px solid red;
+          background: map-get($color, color-Neutrals-Grey-100);
           .item {
             display: flex;
-            align-items: center;
             gap: 2px;
+            align-items: center;
             .fire__icon {
-              background-image: url(../../assets/images/mypage/fire.svg);
-              @include background_cover;
+              margin-left: 6px;
               width: 8px;
               height: 11px;
-              margin-left: 6px;
+              background-image: url(../../assets/images/mypage/fire.svg);
+              @include background_cover;
             }
             span {
+              margin-right: 5px;
               color: map-get($color, primary-color);
               @include text_XS_12;
-              margin-right: 5px;
             }
             p {
               @include text_XS_12;
@@ -279,10 +340,10 @@
           .icon {
             padding-right: 10px;
             .staricon {
-              background-image: url(../../assets/images/mypage/staricon.svg);
-              @include background_cover;
               width: 16px;
               height: 16px;
+              background-image: url(../../assets/images/mypage/staricon.svg);
+              @include background_cover;
             }
           }
         }

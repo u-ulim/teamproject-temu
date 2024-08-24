@@ -175,8 +175,8 @@ table {
   margin: 0 auto;
 }
 .wrapper .mark__inner {
-  height: 100%;
   display: flex;
+  height: 100%;
 }
 .wrapper .mark__inner .leftmenu {
   width: 200px;
@@ -324,10 +324,10 @@ table {
   font-style: normal;
   line-height: 22px;
   letter-spacing: -0.42px;
-  color: #6a6a6a;
   display: flex;
-  align-items: center;
   gap: 5px;
+  align-items: center;
+  color: #6a6a6a;
 }
 .wrapper .mark__inner .container .box {
   display: flex;
@@ -348,8 +348,8 @@ table {
   background-size: cover;
 }
 .wrapper .mark__inner .container .box .item .text__box {
-  width: 730px;
   padding-top: 10px;
+  width: 730px;
 }
 .wrapper .mark__inner .container .box .item .text__box p {
   margin-bottom: 5px;
@@ -396,25 +396,28 @@ table {
   display: none;
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 768px) {
   .wrapper {
     width: 100%;
     height: 100vh;
     width: 100%;
   }
   .wrapper .mark__inner {
-    height: 100%;
     display: flex;
+    height: 100%;
   }
   .wrapper .mark__inner .leftmenu {
-    display: none;
+    display: flex;
+  }
+  .wrapper .mark__inner .leftmenu .fa-chevron-down {
+    margin-left: 30px;
   }
   .wrapper .mark__inner .container .contents .text {
     gap: 30px;
   }
   .wrapper .mark__inner .container .contents .examine {
-    width: 360px;
-    margin-bottom: 20px;
+    border: 1px solid red;
+    width: 100%;
   }
   .wrapper .mark__inner .container .box {
     display: flex;
@@ -429,17 +432,70 @@ table {
     height: 50px;
   }
   .wrapper .mark__inner .container .box .item .text__box {
-    max-width: 150px;
+    padding-top: 0;
+    overflow: hidden;
+    width: 100%;
     height: 70%;
+    text-overflow: ellipsis;
     font-family: "Pretendard-Regular";
     font-size: 12px;
     font-style: normal;
     line-height: 18px;
     letter-spacing: -0.36px;
+  }
+  .wrapper .mark__inner .container .box .end__box {
+    display: flex;
+    padding-top: 10px;
+  }
+  .wrapper .mark__inner .container .box .end__box .share {
+    width: 130px;
+    height: 36px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .wrapper {
+    width: 100%;
+    height: 100vh;
+    width: 100%;
+  }
+  .wrapper .mark__inner {
+    display: flex;
+    height: 100%;
+  }
+  .wrapper .mark__inner .leftmenu {
+    display: none;
+  }
+  .wrapper .mark__inner .container .contents .text {
+    gap: 30px;
+  }
+  .wrapper .mark__inner .container .contents .examine {
+    margin-bottom: 20px;
+    width: 360px;
+  }
+  .wrapper .mark__inner .container .box {
+    display: flex;
+    justify-content: space-between;
+  }
+  .wrapper .mark__inner .container .box .item {
+    display: flex;
+    align-items: center;
+  }
+  .wrapper .mark__inner .container .box .item .productImg {
+    max-width: 50px;
+    height: 50px;
+  }
+  .wrapper .mark__inner .container .box .item .text__box {
+    padding-top: 0;
     overflow: hidden;
+    max-width: 150px;
+    height: 70%;
     white-space: nowrap;
     text-overflow: ellipsis;
-    padding-top: 0;
+    font-family: "Pretendard-Regular";
+    font-size: 12px;
+    font-style: normal;
+    line-height: 18px;
+    letter-spacing: -0.36px;
   }
   .wrapper .mark__inner .container .box .end__box {
     display: flex;
@@ -450,36 +506,36 @@ table {
     height: 36px;
   }
   .wrapper .mark__inner .container .userreview {
-    background: #f6f6f6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 360px;
     height: 57px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background: #f6f6f6;
   }
   .wrapper .mark__inner .container .userreview .item {
     display: flex;
-    align-items: center;
     gap: 2px;
+    align-items: center;
   }
   .wrapper .mark__inner .container .userreview .item .fire__icon {
+    margin-left: 6px;
+    width: 8px;
+    height: 11px;
     background-image: url(../../assets/images/mypage/fire.svg);
     display: inline-block;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 8px;
-    height: 11px;
-    margin-left: 6px;
   }
   .wrapper .mark__inner .container .userreview .item span {
+    margin-right: 5px;
     color: #ff6d00;
     font-family: "Pretendard-Regular";
     font-size: 12px;
     font-style: normal;
     line-height: 18px;
     letter-spacing: -0.36px;
-    margin-right: 5px;
   }
   .wrapper .mark__inner .container .userreview .item p {
     font-family: "Pretendard-Regular";
@@ -492,12 +548,12 @@ table {
     padding-right: 10px;
   }
   .wrapper .mark__inner .container .userreview .icon .staricon {
+    width: 16px;
+    height: 16px;
     background-image: url(../../assets/images/mypage/staricon.svg);
     display: inline-block;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 16px;
-    height: 16px;
   }
 }
