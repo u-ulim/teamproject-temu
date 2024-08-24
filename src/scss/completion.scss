@@ -80,13 +80,34 @@
           }
         }
         .inner {
-          display: none;
+          display: flex;
+          flex-direction: column;
+          padding-left: 20px;
           gap: 10px;
-          width: 200px;
-          height: 200px;
+          position: relative;
           @include text_S_14;
-          &.active {
+          &.active .inner {
             display: flex;
+          }
+          &::after {
+            content: "\f077";
+            font-family: "fontawesome";
+            position: absolute;
+            top: -28%;
+            left: 79%;
+            transform: translate(50%, 50%);
+            // border: 1px solid red;
+            transition: all 0.3s;
+            &.active {
+              display: none;
+            }
+          }
+          .title {
+            &:hover {
+              width: 150px;
+              padding: 5px;
+              background: map-get($color-hover, primary-hover-color);
+            }
           }
         }
       }

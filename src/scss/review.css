@@ -268,18 +268,36 @@ table {
   margin-right: 20px;
 }
 .wrapper .mark__inner .leftmenu ul .inner {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
   gap: 10px;
-  width: 200px;
-  height: 200px;
+  position: relative;
   font-family: "Pretendard-Regular";
   font-size: 14px;
   font-style: normal;
   line-height: 22px;
   letter-spacing: -0.42px;
 }
-.wrapper .mark__inner .leftmenu ul .inner.active {
+.wrapper .mark__inner .leftmenu ul .inner.active .inner {
   display: flex;
+}
+.wrapper .mark__inner .leftmenu ul .inner::after {
+  content: "\f077";
+  font-family: "fontawesome";
+  position: absolute;
+  top: -28%;
+  left: 79%;
+  transform: translate(50%, 50%);
+  transition: all 0.3s;
+}
+.wrapper .mark__inner .leftmenu ul .inner::after.active {
+  display: none;
+}
+.wrapper .mark__inner .leftmenu ul .inner .title:hover {
+  width: 150px;
+  padding: 5px;
+  background: #fff7f0;
 }
 .wrapper .mark__inner .container .contents .text {
   display: flex;
