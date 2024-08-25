@@ -424,47 +424,17 @@
           <p>모든 데이터는 암호화 됩니다.</p>
         </div>
         <div class="user__info">
-          <ul>
+          <!-- <ul>
             <li>
-              <span class="username">홍길동</span>
-              <span class="usernumber"><span>+82</span>010.1234.5678</span>
+              <span class="username"></span>
+              <span class="usernumber"><span></span></span>
             </li>
             <li>
-              <span class="zipcode">01234</span>
-              <span class="useraddress">대한민국 서울특별시 강남구</span>
+              <span class="zipcode"></span>
+              <span class="useraddress"></span>
             </li>
             <li>
-              <span class="useraddress-option">이젠 아파트 9동 901호</span>
-            </li>
-            <li>
-              <div>
-                <label for="useraddress__check"></label>
-                <input
-                  type="checkbox"
-                  name="useraddress__check"
-                  id="useraddress__check"
-                />
-                <span>기본주소</span>
-              </div>
-              <div>
-                <span><i class="fa-regular fa-pen-to-square"></i>편집</span>
-                <span><i class="fa-regular fa-trash-can"></i>삭제</span>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="user__info-option">
-          <ul>
-            <li>
-              <span class="username">홍길동</span>
-              <span class="usernumber"><span>+82</span>010.1234.5678</span>
-            </li>
-            <li>
-              <span class="zipcode">01234</span>
-              <span class="useraddress">대한민국 서울특별시 강남구</span>
-            </li>
-            <li>
-              <span class="useraddress-option">이젠 아파트 9동 901호</span>
+              <span class="useraddress-option"></span>
             </li>
             <li>
               <div>
@@ -481,7 +451,7 @@
                 <span><i class="fa-regular fa-trash-can"></i>삭제</span>
               </div>
             </li>
-          </ul>
+          </ul> -->
         </div>
         <div class="address__close-box">
           <div class="address__close">
@@ -505,15 +475,15 @@
             <p>모든 데이터는 암호화 됩니다.</p>
           </div>
         </div>
-        <form action="http://127.0.0.1:5501/" method="get">
+        <form id="address-form" action="http://127.0.0.1:5501/" method="get">
           <div class="address-box">
             <label for="address">주소지 <span>*</span></label>
             <div class="address_select">
               <select name="trial" id="trial">
-                <option value="">시/도</option>
+                <option selected disabled>시/도</option>
               </select>
               <select name="city" id="city">
-                <option value="">시/군/구</option>
+                <option selected disabled>시/군/구</option>
               </select>
             </div>
           </div>
@@ -541,12 +511,12 @@
               <span>저는 한국인 입니다</span>
               <div class="answer">
                 <div>
-                  <input type="radio" name="yes" id="yes" />
+                  <input type="radio" name="answer" id="yes" />
                   <label for="yes">네</label>
                 </div>
                 <div>
-                  <input type="radio" name="no" id="no" />
-                  <label for="yes">아니요</label>
+                  <input type="radio" name="answer" id="no" />
+                  <label for="no">아니요</label>
                 </div>
               </div>
             </div>

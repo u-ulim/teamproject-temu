@@ -948,6 +948,9 @@ aside .checkout__summary .info ul li div i {
   width: 100%;
   height: 100%;
 }
+.address__modal__box .address__modal__inner .address__modal__inner-box::-webkit-scrollbar {
+  display: none;
+}
 .address__modal__box .address__modal__inner .address__modal__inner-box h2 {
   margin-bottom: 26px;
   text-align: center;
@@ -987,17 +990,18 @@ aside .checkout__summary .info ul li div i {
   letter-spacing: -0.42px;
 }
 .address__modal__box .address__modal__inner .address__modal__inner-box .user__info {
+  display: none;
+}
+.address__modal__box .address__modal__inner .address__modal__inner-box .user__info.active {
+  display: none;
+}
+.address__modal__box .address__modal__inner .address__modal__inner-box .user__info ul {
   margin-bottom: 20px;
   padding: 14px 20px;
   border: 1px solid #d4d4d4;
   width: 528px;
   height: 132px;
   border-radius: 8px;
-}
-.address__modal__box .address__modal__inner .address__modal__inner-box .user__info.active {
-  display: none;
-}
-.address__modal__box .address__modal__inner .address__modal__inner-box .user__info ul {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -1051,72 +1055,6 @@ aside .checkout__summary .info ul li div i {
 .address__modal__box .address__modal__inner .address__modal__inner-box .user__info ul li:nth-child(4) div i {
   margin-right: 8px;
 }
-.address__modal__box .address__modal__inner .address__modal__inner-box .user__info-option {
-  display: none;
-  margin-bottom: 20px;
-  padding: 14px 20px;
-  border: 1px solid #d4d4d4;
-  width: 528px;
-  height: 132px;
-  border-radius: 8px;
-}
-.address__modal__box .address__modal__inner .address__modal__inner-box .user__info-option.active {
-  display: block;
-}
-.address__modal__box .address__modal__inner .address__modal__inner-box .user__info-option ul {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-.address__modal__box .address__modal__inner .address__modal__inner-box .user__info-option ul li {
-  display: flex;
-  gap: 21px;
-  align-items: center;
-  margin-bottom: 4px;
-  font-family: "Pretendard-Regular";
-  font-size: 14px;
-  font-style: normal;
-  line-height: 22px;
-  letter-spacing: -0.42px;
-}
-.address__modal__box .address__modal__inner .address__modal__inner-box .user__info-option ul li .username {
-  font-family: "Pretendard-Bold";
-  font-size: 14px;
-  font-style: bold;
-  font-weight: 700;
-  line-height: 22px;
-  letter-spacing: -0.42px;
-}
-.address__modal__box .address__modal__inner .address__modal__inner-box .user__info-option ul li:nth-child(4) {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.address__modal__box .address__modal__inner .address__modal__inner-box .user__info-option ul li:nth-child(4) div {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: #9a9a9a;
-  font-family: "Pretendard-Regular";
-  font-size: 14px;
-  font-style: normal;
-  line-height: 22px;
-  letter-spacing: -0.42px;
-}
-.address__modal__box .address__modal__inner .address__modal__inner-box .user__info-option ul li:nth-child(4) div:nth-child(1) {
-  display: flex;
-  gap: 3px;
-}
-.address__modal__box .address__modal__inner .address__modal__inner-box .user__info-option ul li:nth-child(4) div:nth-child(2) {
-  display: flex;
-  gap: 33px;
-}
-.address__modal__box .address__modal__inner .address__modal__inner-box .user__info-option ul li:nth-child(4) div:nth-child(2) span {
-  cursor: pointer;
-}
-.address__modal__box .address__modal__inner .address__modal__inner-box .user__info-option ul li:nth-child(4) div i {
-  margin-right: 8px;
-}
 .address__modal__box .address__modal__inner .address__modal__inner-box .address__close-box {
   position: absolute;
   top: 19px;
@@ -1145,6 +1083,7 @@ aside .checkout__summary .info ul li div i {
 
 /*address+-MODAL BOX*/
 .address__modal__box-plus {
+  display: none;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
