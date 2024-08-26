@@ -193,9 +193,9 @@ table {
 }
 #main .main__wrapper .main__slide-container {
   position: relative;
+  z-index: -1;
 }
 #main .main__wrapper .main__slide-container .main__slide__wrapper {
-  border: 1px solid red;
   overflow: hidden;
   position: relative;
   width: 447px;
@@ -241,21 +241,20 @@ table {
   opacity: 0.8;
   border-radius: 8px;
 }
-#main .main__wrapper .main__slide-container .main__slide-btn {
-  z-index: 10px;
-}
 #main .main__wrapper .main__slide-container .main__slide-btn .main__slide-btn-right {
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid red;
   position: absolute;
   top: 50%;
-  transform: translate(50%, -50%);
   right: 0px;
   width: 40px;
   height: 40px;
   background: #f6f6f6;
   cursor: pointer;
+  cursor: pointer;
+  transform: translate(50%, -50%);
   transform: translate(50%, -50%);
   border-radius: 50%;
 }
@@ -273,12 +272,13 @@ table {
   justify-content: center;
   position: absolute;
   top: 50%;
-  transform: translate(-50%, -50%);
   left: 0px;
   width: 40px;
   height: 40px;
   background: #f6f6f6;
   cursor: pointer;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
   border-radius: 50%;
 }
 #main .main__wrapper .main__slide-container .main__slide-btn .main__slide-btn-left .fa-chevron-left {
@@ -511,7 +511,7 @@ table {
   justify-content: center;
   flex-direction: column;
   margin-bottom: 60px;
-  z-index: -1;
+  z-index: -2;
 }
 #category .category__wrapper .category__title {
   width: 1384px;
@@ -679,6 +679,11 @@ table {
   cursor: pointer;
 }
 
+@media (max-width: 1384px) {
+  #main {
+    border: 1px solid blue;
+  }
+}
 @media (max-width: 768px) {
   /* main */
   #main .main__wrapper {

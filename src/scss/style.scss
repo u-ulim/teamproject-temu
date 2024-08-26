@@ -29,8 +29,9 @@
 
     .main__slide-container {
       position: relative;
+      z-index: -1;
       .main__slide__wrapper {
-        border: 1px solid red;
+        // border: 1px solid red;
         overflow: hidden;
         position: relative;
         width: 447px;
@@ -74,19 +75,20 @@
         }
       }
       .main__slide-btn {
-        z-index: 10px;
         .main__slide-btn-right {
           display: flex;
           align-items: center;
           justify-content: center;
+          border: 1px solid red;
           position: absolute;
           top: 50%;
-          transform: translate(50%, -50%);
           right: 0px;
           width: 40px;
           height: 40px;
           background: map-get($color, color-Neutrals-Grey-100);
           cursor: pointer;
+          cursor: pointer;
+          transform: translate(50%, -50%);
           transform: translate(50%, -50%);
           border-radius: 50%;
           .fa-chevron-right {
@@ -104,12 +106,13 @@
           justify-content: center;
           position: absolute;
           top: 50%;
-          transform: translate(-50%, -50%);
           left: 0px;
           width: 40px;
           height: 40px;
           background: map-get($color, color-Neutrals-Grey-100);
           cursor: pointer;
+          cursor: pointer;
+          transform: translate(-50%, -50%);
           border-radius: 50%;
           .fa-chevron-left {
             display: inline-block;
@@ -377,8 +380,7 @@
   justify-content: center;
   flex-direction: column;
   margin-bottom: 60px;
-  z-index: -1;
-
+  z-index: -2;
   .category__wrapper {
     .category__title {
       @include width_inner;
@@ -388,7 +390,6 @@
       justify-content: center;
       flex-direction: column;
       margin-bottom: 30px;
-
       .category__title-img {
         width: 203px;
         height: 33px;
@@ -554,7 +555,7 @@
 // (max-width: 1384px)
 @media (max-width: 1384px) {
   #main {
-    // border: 1px solid blue;
+    border: 1px solid blue;
   }
 }
 
