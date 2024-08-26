@@ -1,7 +1,16 @@
+const banner = document.querySelector(".banner");
+const bannerClose = document.querySelector(".banner-close");
+
+// 배너 삭제
+if (bannerClose) {
+  bannerClose.addEventListener("click", () => {
+    banner.classList.toggle("active");
+  });
+}
+
 const addressBtn = document.querySelector(".addressbtn");
 const addressModal = document.querySelector(".address__modal__box");
 const addressClose = document.querySelector(".address__close-box");
-
 const addressPlusBtn = document.querySelector("#plus-address");
 const addressPlusModal = document.querySelector(".address__modal__box-plus");
 const addressPlusClose = document.querySelector(".address__close-box-plus");
@@ -266,10 +275,12 @@ let phoneNumber = document.querySelector("#phone-number");
 let form = document.querySelector("#address-form");
 let userInfo = document.querySelector(".user__info");
 let optionAddress = document.querySelector("#detailed-address");
+let editingItem = null;
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
+  // 입력 검증
   if (
     zipcode.value === "" ||
     customsNumber.value === "" ||
@@ -309,20 +320,23 @@ form.addEventListener("submit", (e) => {
             <span class="delete"><i class="fa-regular fa-trash-can"></i>삭제</span>
           </div>
         </li>
-
     `;
 
-  const newListItem = document.createElement("ul");
-
-  newListItem.innerHTML = newListItemHTML;
-  userInfo.appendChild(newListItem);
+  if (editingItem) {
+    editingItem.innerHTML = newListItemHTML;
+    editingItem = null;
+  } else {
+    const newListItem = document.createElement("ul");
+    newListItem.innerHTML = newListItemHTML;
+    userInfo.appendChild(newListItem);
+  }
 
   userInfo.style.display = "block";
   addressPlusModal.style.display = "none";
   addressModal.style.display = "block";
-});
 
-// user__ info 삭제
+  form.reset();
+});
 
 userInfo.addEventListener("click", (e) => {
   if (e.target.closest(".delete")) {
@@ -333,10 +347,6 @@ userInfo.addEventListener("click", (e) => {
     }
   }
 });
-
-// user__info 편집
-
-let editingItem = null;
 
 userInfo.addEventListener("click", (e) => {
   if (e.target.closest(".edit")) {
@@ -357,13 +367,11 @@ userInfo.addEventListener("click", (e) => {
     optionAddress.value = optionAddressValue;
 
     addressPlusModal.style.display = "block";
-
     editingItem = listItem;
   }
 });
 
 // 숫자만, 한국어만
-
 function onlyNumber(e) {
   const key = e.key;
   if (
@@ -429,3 +437,69 @@ phoneNumber.addEventListener("keydown", onlyNumber);
 zipcode.addEventListener("keydown", onlyNumber);
 name.addEventListener("keydown", onlyKorean);
 customsNumber.addEventListener("keydown", allowCustomer);
+
+//주문상품
+
+let orderinfoBtn = document.querySelector(".order__title");
+const product = document.querySelector(".product__info");
+
+orderinfoBtn.addEventListener("click", () => {
+  product.classList.toggle("active");
+  orderinfoBtn.classList.toggle("active");
+});
+
+//결제창 동의서
+const consentBtns = document.querySelectorAll(".consent-title");
+consentBtns.forEach((consentBtn) => {
+  consentBtn.addEventListener("click", () => {
+    document.querySelectorAll(".consent-content").forEach((content) => {
+      content.style.display = "none";
+    });
+
+    consentBtns.forEach((otherBtn) => {
+      if (otherBtn !== consentBtn) {
+        otherBtn.classList.remove("active");
+      }
+    });
+
+    let content = consentBtn.nextElementSibling;
+
+    if (consentBtn.classList.contains("active")) {
+      consentBtn.classList.remove("active");
+    } else {
+      consentBtn.classList.add("active");
+      content.style.display = "block";
+    }
+  });
+  ``;
+});
+
+let agreeAll = document.querySelector("#agreeAll");
+let checkboxes = document.querySelectorAll(
+  '.consent__list input[type="checkbox"]:not(#agreeAll)'
+);
+
+// 전체 동의가 변경되었을 때
+if (agreeAll) {
+  agreeAll.addEventListener("change", function () {
+    let isChecked = agreeAll.checked;
+    checkboxes.forEach(function (checkbox) {
+      checkbox.checked = isChecked;
+    });
+  });
+}
+
+// 개별 체크박스가 변경되었을 때
+checkboxes.forEach(function (checkbox) {
+  checkbox.addEventListener("change", function () {
+    let allChecked = true;
+
+    checkboxes.forEach(function (checkbox) {
+      if (!checkbox.checked) {
+        allChecked = false;
+      }
+    });
+
+    agreeAll.checked = allChecked;
+  });
+});
