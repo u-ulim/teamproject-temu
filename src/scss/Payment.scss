@@ -403,7 +403,6 @@ main {
       display: flex;
       align-items: center;
       justify-content: space-around;
-
       padding-bottom: 22px;
       width: 100%;
       li {
@@ -643,7 +642,8 @@ aside {
     .address__modal__inner-box {
       padding: 50px 70px;
       width: 100%;
-      height: 100%;
+      height: 80vh;
+      overflow-y: auto;
       &::-webkit-scrollbar {
         display: none;
       }
@@ -652,7 +652,7 @@ aside {
         text-align: center;
         @include text_B_M_16;
       }
-      button {
+      #plus-address {
         margin-bottom: 7px;
         border: none;
         background: transparent;

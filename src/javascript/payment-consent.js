@@ -1,4 +1,4 @@
-//consent
+//결제창 동의서
 
 const consentBtns = document.querySelectorAll(".consent-title");
 consentBtns.forEach((consentBtn) => {

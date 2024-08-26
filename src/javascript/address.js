@@ -1,13 +1,47 @@
-// 하나라도 값이 들어가있지 않으면 => Alert 창 0
-// 우편번호 통관번호 전화번호  -> 숫자 0
-// 이름 -> 한글 0
-// 제출 시, 페이지 넘어가지 않도록!! 0
-// 개인통관번호 no 선택시 비활성화-> 폼제출 가능 x
-// 개인통관번호는 P가 존재해야한다. 0
-// user-info가 저장된 후에도 address창 colse를 눌러도 모달이 삭제되어야한다.
-// user-info의 기본주소가 설정되면 배송정보 내용이 변경되어야한다.
-// 삭제를 누를때는 user-info가 없어져야한다.
-// 편집을 누를때는 기본 정보들이 address-plust에 그대로 저장되어있어야한다.
+const addressBtn = document.querySelector(".addressbtn");
+const addressModal = document.querySelector(".address__modal__box");
+const addressClose = document.querySelector(".address__close-box");
+
+const addressPlusBtn = document.querySelector("#plus-address");
+const addressPlusModal = document.querySelector(".address__modal__box-plus");
+const addressPlusClose = document.querySelector(".address__close-box-plus");
+const addressBackBtn = document.querySelector(".address__back-box");
+
+// 주소 변경 모달 창
+if (addressBtn && addressModal && addressClose) {
+  addressBtn.addEventListener("click", () => {
+    addressModal.classList.add("active");
+    document.body.style.overflow = "hidden";
+  });
+
+  addressClose.addEventListener("click", () => {
+    addressModal.classList.remove("active");
+    document.body.style.overflow = "auto";
+  });
+}
+
+// 주소 추가 모달 창
+if (addressPlusBtn && addressPlusModal && addressPlusClose) {
+  addressPlusBtn.addEventListener("click", () => {
+    addressPlusModal.classList.add("active");
+    document.body.style.overflow = "hidden";
+  });
+
+  addressPlusClose.addEventListener("click", () => {
+    addressPlusModal.classList.remove("active");
+    addressModal.classList.remove("active");
+    document.body.style.overflow = "auto";
+  });
+}
+
+// 주소 추가 모달 창에서 뒤로 가기 버튼
+if (addressBackBtn && addressPlusModal && addressModal) {
+  addressBackBtn.addEventListener("click", () => {
+    addressPlusModal.classList.remove("active");
+    addressModal.classList.add("active");
+    document.body.style.overflow = "hidden";
+  });
+}
 
 // 국가/ 시도/ 시군구
 
@@ -223,6 +257,8 @@ siSelect.addEventListener("change", function () {
   }
 });
 
+// 주소 변경 내용
+
 let zipcode = document.querySelector("#zipcode");
 let customsNumber = document.querySelector("#customs-number");
 let name = document.querySelector("#name");
@@ -230,7 +266,6 @@ let phoneNumber = document.querySelector("#phone-number");
 let form = document.querySelector("#address-form");
 let userInfo = document.querySelector(".user__info");
 let optionAddress = document.querySelector("#detailed-address");
-let editingItem = null;
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -252,51 +287,39 @@ form.addEventListener("submit", (e) => {
     guKunselect.querySelector("option:checked").innerText;
 
   const newListItemHTML = `
-    <ul>
-      <li>
-        <span class="username">${name.value}</span>
-        <span class="usernumber"><span>+82</span> ${phoneNumber.value}</span>
-      </li>
-      <li>
-        <span class="zipcode">${zipcode.value}</span>
-        <span class="useraddress">대한민국 ${selectedSiText} ${selectedGuKunText}</span>
-      </li>
-      <li>
-        <span class="useraddress-option">${optionAddress.value}</span>
-      </li>
-      <li>
-        <div>
-          <label for="useraddress__radio"></label>
-          <input type="radio" name="useraddress__radio" id="useraddress__radio"/>
-          <span>기본주소</span>
-        </div>
-        <div>
-          <span class="edit"><i class="fa-regular fa-pen-to-square"></i>편집</span>
-          <span class="delete"><i class="fa-regular fa-trash-can"></i>삭제</span>
-        </div>
-      </li>
-    </ul>
-  `;
+        <li>
+          <span class="username">${name.value}</span>
+          <span class="usernumber"><span>+82</span> ${phoneNumber.value}</span>
+        </li>
+        <li>
+          <span class="zipcode">${zipcode.value}</span>
+          <span class="useraddress">대한민국 ${selectedSiText} ${selectedGuKunText}</span>
+        </li>
+        <li>
+          <span class="useraddress-option">${optionAddress.value}</span>
+        </li>
+        <li>
+          <div>
+            <label for="useraddress__radio"></label>
+            <input type="radio" name="useraddress__radio" id="useraddress__radio"/>
+            <span>기본주소</span>
+          </div>
+          <div>
+            <span class="edit"><i class="fa-regular fa-pen-to-square"></i>편집</span>
+            <span class="delete"><i class="fa-regular fa-trash-can"></i>삭제</span>
+          </div>
+        </li>
 
-  if (editingItem) {
-    editingItem.innerHTML = newListItemHTML;
-    editingItem = null; // 편집 모드 해제
-  } else {
-    const newListItem = document.createElement("ul"); // ul로 변경
-    newListItem.classList.add("address-item");
-    newListItem.innerHTML = newListItemHTML;
-    userInfo.appendChild(newListItem);
-  }
+    `;
+
+  const newListItem = document.createElement("ul");
+
+  newListItem.innerHTML = newListItemHTML;
+  userInfo.appendChild(newListItem);
 
   userInfo.style.display = "block";
-
-  const addressPlusModal = document.querySelector(".address__modal__box-plus");
-  const addressModal = document.querySelector(".address__modal__box");
-
   addressPlusModal.style.display = "none";
   addressModal.style.display = "block";
-
-  form.reset(); // 폼 초기화
 });
 
 // user__ info 삭제
@@ -313,20 +336,17 @@ userInfo.addEventListener("click", (e) => {
 
 // user__info 편집
 
+let editingItem = null;
+
 userInfo.addEventListener("click", (e) => {
   if (e.target.closest(".edit")) {
     const listItem = e.target.closest("ul");
-
     const nameValue = listItem.querySelector(".username").innerText;
     const phoneNumberValue = listItem
       .querySelector(".usernumber")
       .innerText.replace("+82", "")
       .trim();
     const zipcodeValue = listItem.querySelector(".zipcode").innerText;
-    const addressValue = listItem
-      .querySelector(".useraddress")
-      .innerText.replace("대한민국", "")
-      .trim();
     const optionAddressValue = listItem.querySelector(
       ".useraddress-option"
     ).innerText;
@@ -336,15 +356,7 @@ userInfo.addEventListener("click", (e) => {
     zipcode.value = zipcodeValue;
     optionAddress.value = optionAddressValue;
 
-    const addressParts = addressValue.split(" ");
-    siSelect.value = addressParts[0].toLowerCase();
-    siSelect.dispatchEvent(new Event("change"));
-
-    setTimeout(() => {
-      guKunselect.value = addressParts[1];
-    }, 300);
-
-    document.querySelector(".address__modal__box-plus").style.display = "block";
+    addressPlusModal.style.display = "block";
 
     editingItem = listItem;
   }
