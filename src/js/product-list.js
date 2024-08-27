@@ -11,3 +11,5 @@ const productListLoad = () => {
 };
 
 productListLoad();
+
+console.log(createDetail)

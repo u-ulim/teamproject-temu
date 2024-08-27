@@ -18,7 +18,26 @@ fetch(categoryURL)
     importData();
     // 마우스 오버 시 카테고리 리스트 출력
     const tabs = document.querySelector(".submenu-tabs");
+    const navMenuCategory = document.querySelector(".nav-menu__category");
+    const categoryOverlay = document.querySelector(".category-overlay");
 
+
+    // 카테고리 마우스 이벤트 시, 오버레이가 생기고 사라지며 스크롤 제어 
+    navMenuCategory.addEventListener("mouseenter", () => {
+      navMenuCategory.classList.add("active");
+      document.body.style.overflow = "hidden";
+    });
+    categoryOverlay.addEventListener("mouseenter", () => {
+      navMenuCategory.classList.remove("active");
+      document.body.style.overflow = "";
+    });
+
+    navMenuCategory.addEventListener("mouseleave", () => {
+      navMenuCategory.classList.remove("active");
+      document.body.style.overflow = "";
+    });
+
+    // 마우스 오버시 카테고리에 맞게끔 서브 카테고리가 나오게끔 설정
     document.querySelectorAll(".submenu-tabs li").forEach((tab) => {
       tab.addEventListener("mouseover", function () {
         // 모든 탭에서 활성화 클래스 제거

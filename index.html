@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="./src/scss/components/footer.css" />
 
     <script defer src="./src/js/header.js"></script>
-    <script defer src="./src/js/index.js"></script>
+    <!-- <script defer src="./src/js/index.js"></script> -->
     <script defer src="./src/js/footer.js"></script>
     <script defer src="./src/json/category-list.js"></script>
     <script defer src="./src/json/product-list.js"></script>
@@ -51,6 +51,7 @@
             <div class="main__slide-btn-left">
               <i class="fa-solid fa-chevron-left"></i>
             </div>
+            `
           </div>
         </div>
       </div>
@@ -250,7 +251,9 @@
           <p>상품 둘러보기</p>
         </div>
       </div>
-      <div id="product-list"></div>
+      <div class="list-wrapper">
+        <div id="product-list"></div>
+      </div>
       <div id="product__btn">
         <div class="product__btn-more">
           <p>더보기</p>

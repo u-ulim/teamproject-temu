@@ -624,6 +624,11 @@ table {
   letter-spacing: -0.48px;
   text-align: center;
 }
+#product .list-wrapper {
+  width: 1384px;
+  padding: 0px 15px 0px 15px;
+  margin: 0 auto;
+}
 #product #product__btn {
   display: flex;
   align-items: center;
@@ -643,6 +648,11 @@ table {
   cursor: pointer;
 }
 
+@media (max-width: 1384px) {
+  #product .list-wrapper {
+    width: 100%;
+  }
+}
 @media (max-width: 768px) {
   /* main */
   #main .main__wrapper {
