@@ -7,7 +7,7 @@ const modalClose = document.querySelector(".modal__close-box");
 // 배너 삭제
 if (bannerClose) {
   bannerClose.addEventListener("click", () => {
-    banner.classList.toggle("active");
+    banner.classList.remove("active");
   });
 }
 
