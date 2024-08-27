@@ -1,56 +1,21 @@
+// 배너삭제
 const banner = document.querySelector(".banner");
 const bannerClose = document.querySelector(".banner-close");
 
-// 배너 삭제
-if (bannerClose) {
-  bannerClose.addEventListener("click", () => {
-    banner.classList.toggle("active");
-  });
-}
+bannerClose.addEventListener("click", () => {
+  banner.classList.toggle("active");
+});
 
-const addressBtn = document.querySelector(".addressbtn");
-const addressModal = document.querySelector(".address__modal__box");
-const addressClose = document.querySelector(".address__close-box");
-const addressPlusBtn = document.querySelector("#plus-address");
-const addressPlusModal = document.querySelector(".address__modal__box-plus");
-const addressPlusClose = document.querySelector(".address__close-box-plus");
-const addressBackBtn = document.querySelector(".address__back-box");
+//주소추가 모달창 시, 주소내용추가
 
-// 주소 변경 모달 창
-if (addressBtn && addressModal && addressClose) {
-  addressBtn.addEventListener("click", () => {
-    addressModal.classList.add("active");
-    document.body.style.overflow = "hidden";
-  });
-
-  addressClose.addEventListener("click", () => {
-    addressModal.classList.remove("active");
-    document.body.style.overflow = "auto";
-  });
-}
-
-// 주소 추가 모달 창
-if (addressPlusBtn && addressPlusModal && addressPlusClose) {
-  addressPlusBtn.addEventListener("click", () => {
-    addressPlusModal.classList.add("active");
-    document.body.style.overflow = "hidden";
-  });
-
-  addressPlusClose.addEventListener("click", () => {
-    addressPlusModal.classList.remove("active");
-    addressModal.classList.remove("active");
-    document.body.style.overflow = "auto";
-  });
-}
-
-// 주소 추가 모달 창에서 뒤로 가기 버튼
-if (addressBackBtn && addressPlusModal && addressModal) {
-  addressBackBtn.addEventListener("click", () => {
-    addressPlusModal.classList.remove("active");
-    addressModal.classList.add("active");
-    document.body.style.overflow = "hidden";
-  });
-}
+let zipcode = document.querySelector("#zipcode");
+let customsNumber = document.querySelector("#customs-number");
+let name = document.querySelector("#name");
+let phoneNumber = document.querySelector("#phone-number");
+let form = document.querySelector("#address-form");
+let userInfo = document.querySelector(".user__info");
+let optionAddress = document.querySelector("#detailed-address");
+let editingItem = null;
 
 // 국가/ 시도/ 시군구
 
@@ -266,18 +231,9 @@ siSelect.addEventListener("change", function () {
   }
 });
 
-// 주소 변경 내용
+// 주소추가모달 시, 주소내역 추가
 
-let zipcode = document.querySelector("#zipcode");
-let customsNumber = document.querySelector("#customs-number");
-let name = document.querySelector("#name");
-let phoneNumber = document.querySelector("#phone-number");
-let form = document.querySelector("#address-form");
-let userInfo = document.querySelector(".user__info");
-let optionAddress = document.querySelector("#detailed-address");
-let editingItem = null;
-
-form.addEventListener("submit", (e) => {
+form.addEventListener("submit", function (e) {
   e.preventDefault();
 
   // 입력 검증
@@ -322,6 +278,7 @@ form.addEventListener("submit", (e) => {
         </li>
     `;
 
+  //편집 정보 확인 : 편집시 내용추가 x, 편집 아니면, 새로운 정보 추가
   if (editingItem) {
     editingItem.innerHTML = newListItemHTML;
     editingItem = null;
@@ -338,7 +295,7 @@ form.addEventListener("submit", (e) => {
   form.reset();
 });
 
-userInfo.addEventListener("click", (e) => {
+userInfo.addEventListener("click", function (e) {
   if (e.target.closest(".delete")) {
     const listItem = e.target.closest("ul");
     listItem.remove();
@@ -348,7 +305,7 @@ userInfo.addEventListener("click", (e) => {
   }
 });
 
-userInfo.addEventListener("click", (e) => {
+userInfo.addEventListener("click", function (e) {
   if (e.target.closest(".edit")) {
     const listItem = e.target.closest("ul");
     const nameValue = listItem.querySelector(".username").innerText;
@@ -433,73 +390,52 @@ function allowCustomer(e) {
   }
 }
 
+// 주소변경 모달창
+let addressBtn = document.querySelector(".addressbtn");
+let addressModal = document.querySelector(".address__modal__box");
+let addressClose = document.querySelector(".address__close-box");
+
+function address(e) {
+  if (e.target === addressBtn) {
+    addressModal.classList.add("active");
+    document.body.style.overflow = "hidden";
+  }
+
+  if (e.target == addressClose) {
+    addressModal.classList.remove("active");
+    document.body.style.overflow = "auto";
+  }
+}
+//주소추가 모달창
+
+let addressPlusBtn = document.querySelector("#plus-address");
+let addressPlusModal = document.querySelector(".address__modal__box-plus");
+let addressPlusClose = document.querySelector(".address__close-box-plus");
+let addressBackBtn = document.querySelector(".address__back-box");
+
+function addressPlus(e) {
+  if (e.target === addressPlusBtn) {
+    addressPlusModal.classList.add("active");
+    document.body.style.overflow = "hidden";
+  }
+  if (e.target === addressPlusClose) {
+    addressPlusModal.classList.remove("active");
+    addressModal.classList.remove("active");
+    document.body.style.overflow = "auto";
+  }
+  if (e.target === addressBackBtn) {
+    addressPlusModal.classList.remove("active");
+    addressModal.classList.add("active");
+    document.body.style.overflow = "hidden";
+  }
+}
+
 phoneNumber.addEventListener("keydown", onlyNumber);
 zipcode.addEventListener("keydown", onlyNumber);
 name.addEventListener("keydown", onlyKorean);
 customsNumber.addEventListener("keydown", allowCustomer);
-
-//주문상품
-
-let orderinfoBtn = document.querySelector(".order__title");
-const product = document.querySelector(".product__info");
-
-orderinfoBtn.addEventListener("click", () => {
-  product.classList.toggle("active");
-  orderinfoBtn.classList.toggle("active");
-});
-
-//결제창 동의서
-const consentBtns = document.querySelectorAll(".consent-title");
-consentBtns.forEach((consentBtn) => {
-  consentBtn.addEventListener("click", () => {
-    document.querySelectorAll(".consent-content").forEach((content) => {
-      content.style.display = "none";
-    });
-
-    consentBtns.forEach((otherBtn) => {
-      if (otherBtn !== consentBtn) {
-        otherBtn.classList.remove("active");
-      }
-    });
-
-    let content = consentBtn.nextElementSibling;
-
-    if (consentBtn.classList.contains("active")) {
-      consentBtn.classList.remove("active");
-    } else {
-      consentBtn.classList.add("active");
-      content.style.display = "block";
-    }
-  });
-  ``;
-});
-
-let agreeAll = document.querySelector("#agreeAll");
-let checkboxes = document.querySelectorAll(
-  '.consent__list input[type="checkbox"]:not(#agreeAll)'
-);
-
-// 전체 동의가 변경되었을 때
-if (agreeAll) {
-  agreeAll.addEventListener("change", function () {
-    let isChecked = agreeAll.checked;
-    checkboxes.forEach(function (checkbox) {
-      checkbox.checked = isChecked;
-    });
-  });
-}
-
-// 개별 체크박스가 변경되었을 때
-checkboxes.forEach(function (checkbox) {
-  checkbox.addEventListener("change", function () {
-    let allChecked = true;
-
-    checkboxes.forEach(function (checkbox) {
-      if (!checkbox.checked) {
-        allChecked = false;
-      }
-    });
-
-    agreeAll.checked = allChecked;
-  });
-});
+addressBtn.addEventListener("click", address);
+addressClose.addEventListener("click", address);
+addressPlusBtn.addEventListener("click", addressPlus);
+addressPlusClose.addEventListener("click", addressPlus);
+addressBackBtn.addEventListener("click", addressPlus);
