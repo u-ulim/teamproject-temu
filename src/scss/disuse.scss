@@ -4,116 +4,131 @@
 @import "./config/./image.scss";
 @import "./layout/layout.scss";
 
+// WRAPPER
 .wrapper {
   position: relative;
   width: 100%;
   height: 100vh;
   @include width_inner;
+  // MARK__INNER
   .mark__inner {
     display: flex;
     height: 100%;
+    // LEFTMENU
     .leftmenu {
       width: 200px;
       height: 100%;
-      ul {
+      // UL
+      > ul {
         .home {
           padding: 20px 18px;
           @include text_XS_12;
         }
-        li {
+        // LI
+        > li {
           display: flex;
           gap: 5px;
           align-items: center;
           margin-bottom: 20px;
           cursor: pointer;
+          // DIV
           & > div {
             display: flex;
             justify-content: space-between;
             width: 14;
           }
+          // DOCUMENT
           .document {
             width: 24px;
             height: 24px;
             background-image: url(../../assets/images/mypage/document.svg);
             @include background_cover;
           }
-
+          // REVIEW
           .review {
             width: 24px;
             height: 24px;
             background-image: url(../../assets/images/mypage/review.svg);
             @include background_cover;
           }
+          // DELIVERY
           .delivery {
             width: 24px;
             height: 24px;
             background-image: url(../../assets/images/mypage/delivery.svg);
             @include background_cover;
           }
+          // STAR
           .star {
             width: 24px;
             height: 24px;
             background-image: url(../../assets/images/mypage/star.svg);
             @include background_cover;
           }
+          //EVENT
           .event {
             width: 24px;
             height: 24px;
             background-image: url(../../assets/images/mypage/event.svg);
             @include background_cover;
           }
+          // SPAN
           span {
             @include text_S_14;
           }
         }
+        // MY-ORDER
         .my-order {
           display: flex;
           align-items: center;
           justify-content: space-between;
-
+          // border: 1px solid red;
+          width: 170px;
+          // DIV
           > div {
             display: flex;
             align-items: center;
             justify-content: center;
           }
+          // FA-CHEVRON-DOWN
           .fa-chevron-down {
-            margin-right: 20px;
+            // margin-right: 20px;
+            transition: transform 0.5s;
+            &.active {
+              transform: rotate(180deg);
+            }
           }
         }
+        // INNER
         .inner {
           display: flex;
           flex-direction: column;
-          padding-left: 20px;
-          gap: 10px;
           position: relative;
           @include text_S_14;
-          &.active .inner {
-            display: flex;
-          }
-          &::after {
-            content: "\f077";
-            font-family: "fontawesome";
-            position: absolute;
-            top: -28%;
-            left: 79%;
-            transform: translate(50%, 50%);
-            // border: 1px solid red;
-            transition: all 0.3s;
+          // UL
+          ul {
+            display: none;
             &.active {
-              display: none;
+              display: block;
             }
           }
+          // TITLE
           .title {
+            display: flex;
+            @include text_S_14;
+            // border: 1px solid red;
+            padding: 10px 10px;
             &:hover {
-              width: 150px;
-              padding: 5px;
+              padding: 5px 5px;
               background: map-get($color-hover, primary-hover-color);
             }
           }
         }
       }
     }
+    // CONTENTS
     .contents {
+      // TEXT
       .text {
         display: flex;
         gap: 60px;
@@ -123,6 +138,7 @@
         width: 100%;
         font-size: 14px;
         cursor: pointer;
+        // SPAN
         span {
           //   border: 1px solid #f00;
           &:nth-child(2) {
@@ -139,9 +155,11 @@
           }
         }
       }
+      // COUPON__CODE
       .coupon__code {
         display: flex;
         gap: 22px;
+        // CODE 
         .code {
           padding-left: 14px;
           border: 1px solid map-get($color, color-Neutrals-Grey-400);
@@ -149,6 +167,7 @@
           height: 40px;
           border-radius: 8px;
         }
+        // BUTTON
         button {
           border: 1px solid map-get($color, color-Neutrals-Grey-800);
           width: 82px;
@@ -162,16 +181,19 @@
         }
       }
     }
+    // BOX
     .box {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      // ICON
       .icon {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        // COUPON__ICON
         .coupon__icon {
           display: inline-block;
           //   border: 1px solid #f00;
@@ -181,6 +203,7 @@
           background-image: url(../../assets/images/mypage/coupon__icon.svg);
           @include background_cover;
         }
+        // SPAN
         span {
           @include text_M_16;
           display: flex;
@@ -193,37 +216,49 @@
   }
 }
 
+// MOBILE
 @media screen and (max-width: 768px) {
+  // WRAPPER
   .wrapper {
     @include width_full;
     width: 100%;
     height: 100vh;
+    // MARK__INNER
     .mark__inner {
       display: flex;
       height: 100%;
+      // LEFTMENU
       .leftmenu {
         display: flex;
+        //FA-CHEVRON-DOWN
         .fa-chevron-down {
           margin-left: 30px;
         }
       }
+      // //CONTENTS
       .contents {
+        // TEXT
         .text {
           gap: 30px;
         }
+        // COUPON__CODE
         .coupon__code {
           gap: 10px;
+          // CODE
           .code {
             // border: 1px solid red;
             width: 290px;
           }
+          // BUTTON
           button {
             width: 60px;
             height: 40px;
           }
         }
       }
+      // BOX
       .box {
+        // ICON
         .icon {
           // border: 1px solid red;
           span {
@@ -235,35 +270,45 @@
     }
   }
 }
+
+// MOBILE
 @media screen and (max-width: 390px) {
+  // WRAPPER
   .wrapper {
     @include width_full;
     width: 390px;
     height: 100vh;
+    // MARK__INNER
     .mark__inner {
       display: flex;
+      // LEFTMENU
       .leftmenu {
         display: none;
       }
+      // CONTENTS
       .contents {
         .text {
           gap: 30px;
         }
+        // COUPON__CODE
         .coupon__code {
           gap: 10px;
+          //CODE
           .code {
             // border: 1px solid red;
             width: 290px;
           }
+          // BUTTON
           button {
             width: 60px;
             height: 40px;
           }
         }
       }
+      // BOX
       .box {
+        // ICON
         .icon {
-          // border: 1px solid red;
           span {
             @include text_S_14;
             width: 210px;

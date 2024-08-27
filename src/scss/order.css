@@ -183,7 +183,7 @@ table {
   width: 200px;
   height: 100%;
 }
-.wrapper .mark__inner .leftmenu ul .home {
+.wrapper .mark__inner .leftmenu > ul .home {
   padding: 20px 18px;
   font-family: "Pretendard-Regular";
   font-size: 12px;
@@ -191,19 +191,19 @@ table {
   line-height: 18px;
   letter-spacing: -0.36px;
 }
-.wrapper .mark__inner .leftmenu ul li {
+.wrapper .mark__inner .leftmenu > ul > li {
   display: flex;
   gap: 5px;
   align-items: center;
   margin-bottom: 20px;
   cursor: pointer;
 }
-.wrapper .mark__inner .leftmenu ul li > div {
+.wrapper .mark__inner .leftmenu > ul > li > div {
   display: flex;
   justify-content: space-between;
   width: 14;
 }
-.wrapper .mark__inner .leftmenu ul li .document {
+.wrapper .mark__inner .leftmenu > ul > li .document {
   width: 24px;
   height: 24px;
   background-image: url(../../assets/images/mypage/document.svg);
@@ -212,7 +212,7 @@ table {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.wrapper .mark__inner .leftmenu ul li .review {
+.wrapper .mark__inner .leftmenu > ul > li .review {
   width: 24px;
   height: 24px;
   background-image: url(../../assets/images/mypage/review.svg);
@@ -221,7 +221,7 @@ table {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.wrapper .mark__inner .leftmenu ul li .delivery {
+.wrapper .mark__inner .leftmenu > ul > li .delivery {
   width: 24px;
   height: 24px;
   background-image: url(../../assets/images/mypage/delivery.svg);
@@ -230,7 +230,7 @@ table {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.wrapper .mark__inner .leftmenu ul li .star {
+.wrapper .mark__inner .leftmenu > ul > li .star {
   width: 24px;
   height: 24px;
   background-image: url(../../assets/images/mypage/star.svg);
@@ -239,7 +239,7 @@ table {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.wrapper .mark__inner .leftmenu ul li .event {
+.wrapper .mark__inner .leftmenu > ul > li .event {
   width: 24px;
   height: 24px;
   background-image: url(../../assets/images/mypage/event.svg);
@@ -248,31 +248,33 @@ table {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.wrapper .mark__inner .leftmenu ul li span {
+.wrapper .mark__inner .leftmenu > ul > li span {
   font-family: "Pretendard-Regular";
   font-size: 14px;
   font-style: normal;
   line-height: 22px;
   letter-spacing: -0.42px;
 }
-.wrapper .mark__inner .leftmenu ul .my-order {
+.wrapper .mark__inner .leftmenu > ul .my-order {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 170px;
 }
-.wrapper .mark__inner .leftmenu ul .my-order > div {
+.wrapper .mark__inner .leftmenu > ul .my-order > div {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.wrapper .mark__inner .leftmenu ul .my-order .fa-chevron-down {
-  margin-right: 20px;
+.wrapper .mark__inner .leftmenu > ul .my-order .fa-chevron-down {
+  transition: transform 0.5s;
 }
-.wrapper .mark__inner .leftmenu ul .inner {
+.wrapper .mark__inner .leftmenu > ul .my-order .fa-chevron-down.active {
+  transform: rotate(180deg);
+}
+.wrapper .mark__inner .leftmenu > ul .inner {
   display: flex;
   flex-direction: column;
-  padding-left: 20px;
-  gap: 10px;
   position: relative;
   font-family: "Pretendard-Regular";
   font-size: 14px;
@@ -280,24 +282,23 @@ table {
   line-height: 22px;
   letter-spacing: -0.42px;
 }
-.wrapper .mark__inner .leftmenu ul .inner.active .inner {
-  display: flex;
-}
-.wrapper .mark__inner .leftmenu ul .inner::after {
-  content: "\f077";
-  font-family: "fontawesome";
-  position: absolute;
-  top: -28%;
-  left: 79%;
-  transform: translate(50%, 50%);
-  transition: all 0.3s;
-}
-.wrapper .mark__inner .leftmenu ul .inner::after.active {
+.wrapper .mark__inner .leftmenu > ul .inner ul {
   display: none;
 }
-.wrapper .mark__inner .leftmenu ul .inner .title:hover {
-  width: 150px;
-  padding: 5px;
+.wrapper .mark__inner .leftmenu > ul .inner ul.active {
+  display: block;
+}
+.wrapper .mark__inner .leftmenu > ul .inner .title {
+  display: flex;
+  font-family: "Pretendard-Regular";
+  font-size: 14px;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: -0.42px;
+  padding: 10px 10px;
+}
+.wrapper .mark__inner .leftmenu > ul .inner .title:hover {
+  padding: 5px 5px;
   background: #fff7f0;
 }
 .wrapper .mark__inner .rightmenu {
