@@ -1,22 +1,29 @@
 const btns = document.querySelector(".main__slide-btn");
-const prevBtn = document.querySelector(".main__slide-btn-right");
-const nextBtn = document.querySelector(".main__slide-btn-left");
-console.log(btns, prevBtn, nextBtn);
+const rightBtn = document.querySelector(".main__slide-btn-right");
+const leftBtn = document.querySelector(".main__slide-btn-left");
+// console.log(btns, rightBtn, leftBtn);
 
 const slides = document.querySelector(".main__slides");
 const slide = slides.querySelectorAll("li");
-
-console.log(slides, slide);
+// console.log(slides, slide);
 
 const slideCount = slide.length;
 const slideWidth = 447;
 const slideMargin = 30;
 
 const mainSlidePg = document.querySelector(".number");
-
-console.log(slideCount, slideWidth, slideMargin);
+// console.log(slideCount, slideWidth, slideMargin);
 
 let currentIdx = 0;
+
+// 슬라이드의 총 페이지 수
+const totalPages = slideCount;
+
+// 페이지네이션 업데이트 함수
+const updatePagination = () => {
+  const currentPage = (currentIdx % slideCount) + 1;
+  mainSlidePg.innerText = `${currentPage} / ${totalPages}`;
+};
 
 // 복제한 5개의 li노드를 왼쪽으로 이동시키기 위한 함수(1)
 const updateWidth = () => {
@@ -58,7 +65,7 @@ makeClone();
 
 // 버튼 클릭을 통해서 실제 슬라이드를 출력시켜주는 함수
 const moveSlide = (num) => {
-  console.log(num);
+  // console.log(num);
 
   slides.style.left = `${-num * (slideWidth + slideMargin)}px`;
   currentIdx = num;
@@ -72,17 +79,24 @@ const moveSlide = (num) => {
       slides.classList.add("animated");
     }, 600);
   }
+  updatePagination(); // 페이지네이션 업데이트
 };
 
+// 초기 페이지네이션 상태 업데이트
+updatePagination();
+
 // 버튼 클릭 이벤트 함수
-nextBtn.addEventListener("click", () => {
+// moveSlide(currentIdx + 1);
+
+rightBtn.addEventListener("click", () => {
+  // console.log("click");
   moveSlide(currentIdx + 1);
 });
 
-prevBtn.addEventListener("click", () => {
+leftBtn.addEventListener("click", () => {
   console.log("click");
   moveSlide(currentIdx - 1);
-  mainSlidePg.innerText = `${currentIdx + 1} / 4`;
+  // mainSlidePg.innerText = `${currentIdx + 1} / 4`;
 });
 
 // 자동슬라이드 및 정지기능 함수

@@ -193,7 +193,6 @@ table {
 }
 #main .main__wrapper .main__slide-container {
   position: relative;
-  z-index: -1;
 }
 #main .main__wrapper .main__slide-container .main__slide__wrapper {
   overflow: hidden;
@@ -243,16 +242,15 @@ table {
 }
 #main .main__wrapper .main__slide-container .main__slide-btn .main__slide-btn-right {
   display: flex;
+  z-index: 100;
   align-items: center;
   justify-content: center;
-  border: 1px solid red;
   position: absolute;
   top: 50%;
   right: 0px;
   width: 40px;
   height: 40px;
   background: #f6f6f6;
-  cursor: pointer;
   cursor: pointer;
   transform: translate(50%, -50%);
   transform: translate(50%, -50%);
