@@ -1,3 +1,5 @@
+// 주소 변경 모달 창 관련 이벤트 내역
+
 document.addEventListener("DOMContentLoaded", function () {
   //변수선언
   const bannerClose = document.querySelector(".banner-close");
@@ -493,17 +495,27 @@ document.addEventListener("DOMContentLoaded", function () {
   addModalEventListeners();
 });
 
-//주문상품
-
-let orderinfoBtn = document.querySelector(".order__title");
+//주문상품내역 , 갯수표기
+const orderinfoBtn = document.querySelector(".order__title");
 const product = document.querySelector(".product__info");
+const productInfo = document.querySelectorAll(".product__info ul");
+const result = document.querySelector(".order__title h3 span");
+const resultAll = document.querySelector(".order__Title h3");
+const productInfoLength = productInfo.length;
 
 orderinfoBtn.addEventListener("click", () => {
   product.classList.toggle("active");
   orderinfoBtn.classList.toggle("active");
 });
 
-//결제창 동의서
+if (productInfoLength !== 0) {
+  result.innerText = `${productInfoLength}`;
+} else {
+  resultAll.style.display.none;
+  result.style.display.none;
+}
+
+//결제창 동의서 - 아코디언
 const consentBtns = document.querySelectorAll(".consent-title");
 consentBtns.forEach((consentBtn) => {
   consentBtn.addEventListener("click", () => {
@@ -528,6 +540,8 @@ consentBtns.forEach((consentBtn) => {
   });
 });
 
+// 체크박스
+
 let agreeAll = document.querySelector("#agreeAll");
 let checkboxes = document.querySelectorAll(
   '.consent__list input[type="checkbox"]:not(#agreeAll)'
@@ -541,10 +555,6 @@ if (agreeAll) {
       checkbox.checked = isChecked;
     });
   });
-  if (e.target == addressClose) {
-    addressModal.classList.remove("active");
-    document.body.style.overflow = "auto";
-  }
 }
 
 // 개별 체크박스가 변경되었을 때
