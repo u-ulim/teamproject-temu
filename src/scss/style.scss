@@ -458,13 +458,16 @@
         // border: 1px solid #f00;
         width: 1213px;
         height: auto;
+        border: 1px solid orangered;
         text-align: center;
+        gap: 68px;
         li {
           // width: 115px;
           // height: 141px;
           .category__list-img {
             width: 115px;
             height: 115px;
+            border-radius: 50%;
           }
 
           span {
@@ -473,31 +476,39 @@
         }
 
         li:nth-child(1) .category__list-img {
-          background: url(../../assets/images/index/cate-01.png) center/cover;
+          background: url(../../assets/images/index/cate-01.webp) center/cover;
         }
 
         li:nth-child(2) .category__list-img {
-          background: url(../../assets/images/index/cate-02.png) center/cover;
+          background: url(../../assets/images/index/cate-02.webp) center/cover;
         }
 
         li:nth-child(3) .category__list-img {
-          background: url(../../assets/images/index/cate-03.png) center/cover;
+          background: url(../../assets/images/index/cate-03.webp) center/cover;
         }
 
         li:nth-child(4) .category__list-img {
-          background: url(../../assets/images/index/cate-04.png) center/cover;
+          background: url(../../assets/images/index/cate-04.webp) center/cover;
         }
 
         li:nth-child(5) .category__list-img {
-          background: url(../../assets/images/index/cate-05.png) center/cover;
+          background: url(../../assets/images/index/cate-05.webp) center/cover;
         }
 
         li:nth-child(6) .category__list-img {
-          background: url(../../assets/images/index/cate-06.png) center/cover;
+          background: url(../../assets/images/index/cate-06.webp) center/cover;
         }
 
         li:nth-child(7) .category__list-img {
-          background: url(../../assets/images/index/cate-07.png) center/cover;
+          background: url(../../assets/images/index/cate-07.webp) center/cover;
+        }
+
+        li:nth-child(8) .category__list-img {
+          background: url(../../assets/images/index/cate-08.webp) center/cover;
+        }
+
+        li:nth-child(9) .category__list-img {
+          background: url(../../assets/images/index/cate-09.webp) center/cover;
         }
       }
     }
