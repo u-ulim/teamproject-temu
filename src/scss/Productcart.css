@@ -174,7 +174,6 @@ body {
   /*aside*/
 }
 .container main {
-  padding: 0 12px;
   width: 70%;
   /*section__up*/
 }
@@ -788,12 +787,6 @@ body {
   margin-bottom: 20px;
 }
 
-/*footer*/
-footer {
-  width: 1382px;
-  height: 752px;
-}
-
 /*option-modal box*/
 .modal__box {
   display: none;
@@ -803,7 +796,7 @@ footer {
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 1;
+  z-index: 100000;
   width: 100%;
   height: 100vh;
   background-color: rgba(19, 19, 19, 0.5);

@@ -9,15 +9,6 @@
   color: map-get($color, secondary-color);
 }
 
-/*header*/
-
-header {
-  @include width_full;
-  margin-bottom: 23px;
-  border-bottom: 1px solid map-get($color, color-Neutrals-Grey-300);
-  height: 82px;
-}
-
 .container {
   @include width_inner;
   display: flex;
@@ -28,7 +19,6 @@ header {
 /*main*/
 
 main {
-  padding: 0 12px;
   width: 70%;
   /* section__up*/
   .section__up {
@@ -621,7 +611,7 @@ aside {
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 1;
+  z-index: 100000000;
   width: 100%;
   height: 100vh;
   background-color: rgba(19, 19, 19, 0.5);
@@ -762,7 +752,7 @@ aside {
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 1;
+  z-index: 100000000;
   width: 100%;
   height: 100vh;
   background-color: rgba(19, 19, 19, 0.5);

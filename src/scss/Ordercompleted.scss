@@ -18,15 +18,6 @@ body {
   margin: 0 auto;
 }
 
-/*header*/
-
-header {
-  margin-bottom: 23px;
-  margin-bottom: 23px;
-  border-bottom: 1px solid map-get($color, color-Neutrals-Grey-300);
-  height: 82px;
-}
-
 /*main*/
 
 main {
@@ -224,12 +215,6 @@ main {
       }
     }
   }
-}
-
-/*footer*/
-footer {
-  width: 1382px;
-  height: 752px;
 }
 
 /*미디어쿼리*/

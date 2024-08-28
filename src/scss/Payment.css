@@ -166,14 +166,6 @@ table {
   color: #009e95;
 }
 
-/*header*/
-header {
-  width: 100%;
-  margin-bottom: 23px;
-  border-bottom: 1px solid #b5b5b5;
-  height: 82px;
-}
-
 .container {
   width: 1384px;
   padding: 0px 15px 0px 15px;
@@ -185,7 +177,6 @@ header {
 
 /*main*/
 main {
-  padding: 0 12px;
   width: 70%;
   /* section__up*/
   /*address*/
@@ -923,7 +914,7 @@ aside .checkout__summary .info ul li div i {
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 1;
+  z-index: 100000000;
   width: 100%;
   height: 100vh;
   background-color: rgba(19, 19, 19, 0.5);
@@ -1091,7 +1082,7 @@ aside .checkout__summary .info ul li div i {
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 1;
+  z-index: 100000000;
   width: 100%;
   height: 100vh;
   background-color: rgba(19, 19, 19, 0.5);

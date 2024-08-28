@@ -177,14 +177,6 @@ body {
   margin: 0 auto;
 }
 
-/*header*/
-header {
-  margin-bottom: 23px;
-  margin-bottom: 23px;
-  border-bottom: 1px solid #b5b5b5;
-  height: 82px;
-}
-
 /*main*/
 main .container {
   /*section__up*/
@@ -418,12 +410,6 @@ main .container .section__down .section__down-product button i {
 main .container .section__down .section__down-product button:hover {
   background-color: #ff7629;
   cursor: pointer;
-}
-
-/*footer*/
-footer {
-  width: 1382px;
-  height: 752px;
 }
 
 /*미디어쿼리*/

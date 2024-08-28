@@ -1,4 +1,5 @@
 // JSON 데이터 변수
+console.log("hi");
 const categoryURL =
   "https://my-json-server.typicode.com/u-ulim/temu-category/db";
 
@@ -21,8 +22,7 @@ fetch(categoryURL)
     const navMenuCategory = document.querySelector(".nav-menu__category");
     const categoryOverlay = document.querySelector(".category-overlay");
 
-
-    // 카테고리 마우스 이벤트 시, 오버레이가 생기고 사라지며 스크롤 제어 
+    // 카테고리 마우스 이벤트 시, 오버레이가 생기고 사라지며 스크롤 제어
     navMenuCategory.addEventListener("mouseenter", () => {
       navMenuCategory.classList.add("active");
       document.body.style.overflow = "hidden";
