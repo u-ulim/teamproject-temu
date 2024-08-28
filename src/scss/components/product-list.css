@@ -2,7 +2,8 @@
   font-family: "Pretendard-Regular";
   font-style: normal;
   font-weight: 400;
-  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
 }
 /* HEADING */
 /* -2% = 0.02 * 'n'px */ /* -3% = 0.03 * 'n'px */
@@ -170,17 +171,22 @@ table {
 }
 .product-lists .product-list {
   margin-bottom: 60px;
-  width: 225px;
+  width: 227px;
   cursor: pointer;
 }
-.product-lists .product-list:hover .product-list__thumb-box .product-list__thumb {
+.product-lists
+  .product-list:hover
+  .product-list__thumb-box
+  .product-list__thumb {
   transform: scale(1.1);
+  z-index: -10;
+  position: relative;
 }
 .product-lists .product-list .product-list__thumb-box {
   margin-bottom: 10px;
   overflow: hidden;
-  width: 225px;
-  height: 225px;
+  width: 227px;
+  height: 227px;
   border-radius: 8px;
 }
 .product-lists .product-list .product-list__thumb-box .product-list__thumb {
@@ -195,7 +201,7 @@ table {
   display: -webkit-box;
   margin-bottom: 10px;
   overflow: hidden;
-  width: 225px;
+  width: 227px;
   text-overflow: ellipsis;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -215,7 +221,11 @@ table {
   gap: 5px;
   align-items: center;
 }
-.product-lists .product-list .product-list__counters > div .product-list__discount {
+.product-lists
+  .product-list
+  .product-list__counters
+  > div
+  .product-list__discount {
   font-family: "Pretendard-Bold";
   font-size: 22px;
   font-style: bold;
@@ -225,7 +235,11 @@ table {
   display: flex;
   color: #ff6d00;
 }
-.product-lists .product-list .product-list__counters > div .product-list__price {
+.product-lists
+  .product-list
+  .product-list__counters
+  > div
+  .product-list__price {
   font-family: "Pretendard-Bold";
   font-size: 22px;
   font-style: bold;
@@ -244,7 +258,10 @@ table {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.product-lists .product-list .product-list__counters .product-list__cart-ico:hover {
+.product-lists
+  .product-list
+  .product-list__counters
+  .product-list__cart-ico:hover {
   background-image: url("../../../assets/images/products/cart-fill-ico.svg");
 }
 .product-lists .product-list .product-list__reviews {
@@ -274,7 +291,10 @@ table {
   margin-right: 5px;
   color: #6a6a6a;
 }
-.product-lists .product-list .product-list__reviews .product-list__review-count {
+.product-lists
+  .product-list
+  .product-list__reviews
+  .product-list__review-count {
   color: #6a6a6a;
 }
 .product-lists .product-list .product-list__solds {
@@ -317,12 +337,14 @@ table {
     width: 100%;
   }
   .product-lists .product-list {
-    margin-bottom: 20px;
-    width: 31%;
+    margin-bottom: 0px;
+    width: 49%;
+    height: 50vw;
     overflow: hidden;
   }
   .product-lists .product-list .product-list__thumb-box {
     width: 100%;
+    height: 50%;
   }
   .product-lists .product-list .product-list__title {
     width: 100%;
@@ -333,10 +355,10 @@ table {
     width: 100%;
   }
   .product-lists .product-list {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     overflow: hidden;
-    width: 32%;
-    height: 50vw;
+    width: 48%;
+    height: 80vw;
   }
   .product-lists .product-list .product-list__thumb-box {
     width: 100%;

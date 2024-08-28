@@ -489,6 +489,9 @@
       text-align: center;
     }
   }
+  .list-wrapper {
+    @include width_inner;
+  }
   #product__btn {
     display: flex;
     align-items: center;
@@ -513,6 +516,11 @@
 @media (max-width: 1384px) {
   #main {
     // border: 1px solid blue;
+  }
+  #product {
+    .list-wrapper {
+      @include width_full;
+    }
   }
 }
 

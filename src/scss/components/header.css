@@ -164,10 +164,12 @@ table {
 }
 
 #header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
   width: 100%;
-  border-bottom: 1px solid #d4d4d4;
-  height: 130px;
   margin-bottom: 30px;
+  background-color: #fff;
 }
 #header .header-top-wrapper {
   width: 100%;
@@ -187,7 +189,15 @@ table {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
   height: 82px;
+  top: 0px;
+  transition: height 0.5s;
+  z-index: -1;
+}
+#header nav.active {
+  height: 0px;
+  top: -170px;
 }
 #header nav .nav-left {
   display: flex;
@@ -278,18 +288,18 @@ table {
 #header nav .nav-left .nav-left__menus .nav-menu__category {
   transition: all 0.5s;
 }
-#header nav .nav-left .nav-left__menus .nav-menu__category::before {
+#header nav .nav-left .nav-left__menus .nav-menu__category .category-overlay {
   display: none;
-  position: absolute;
+  position: fixed;
   left: 0px;
   top: 130px;
   content: "";
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: #101010;
   opacity: 0.5;
 }
-#header nav .nav-left .nav-left__menus .nav-menu__category:hover::before {
+#header nav .nav-left .nav-left__menus .nav-menu__category.active .category-overlay {
   display: block;
 }
 #header nav .nav-left .nav-left__menus .nav-menu__category:hover .submenu-wrapper .submenu {
@@ -304,6 +314,7 @@ table {
   padding-top: 15px;
   top: 0px;
   left: 50%;
+  border-top: 1px solid #ff6d00;
   transform: translateX(-50%);
   z-index: 3;
   background-color: #fff;
@@ -496,6 +507,9 @@ table {
   }
 }
 @media (max-width: 768px) {
+  #header {
+    margin-bottom: 80px;
+  }
   #header nav .nav-left .nav-left__logo {
     background: url("../../../assets/images/header/LOGO_M.svg");
     width: 56px;
