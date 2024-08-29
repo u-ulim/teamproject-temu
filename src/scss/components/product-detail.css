@@ -521,11 +521,11 @@ body #createDetail .detail__left-box #main #detail__main-container .detail__main
   margin-bottom: 17px;
   color: #101010;
 }
-body #createDetail .detail__left-box #main #detail__main-container .detail__main-contentsbox .detail__main-contentsbox-select > div {
+body #createDetail .detail__left-box #main #detail__main-container .detail__main-contentsbox .detail__main-contentsbox-select div {
   display: flex;
   justify-content: space-between;
 }
-body #createDetail .detail__left-box #main #detail__main-container .detail__main-contentsbox .detail__main-contentsbox-select > div button {
+body #createDetail .detail__left-box #main #detail__main-container .detail__main-contentsbox .detail__main-contentsbox-select div button {
   padding-top: 2px;
   border: 2px solid #ff6d00;
   outline: none;
@@ -541,10 +541,10 @@ body #createDetail .detail__left-box #main #detail__main-container .detail__main
   line-height: 26px;
   letter-spacing: -0.54px;
 }
-body #createDetail .detail__left-box #main #detail__main-container .detail__main-contentsbox .detail__main-contentsbox-select > div .select-cart-btn {
+body #createDetail .detail__left-box #main #detail__main-container .detail__main-contentsbox .detail__main-contentsbox-select div .select-cart-btn {
   color: #ff6d00;
 }
-body #createDetail .detail__left-box #main #detail__main-container .detail__main-contentsbox .detail__main-contentsbox-select > div .select-buy-btn {
+body #createDetail .detail__left-box #main #detail__main-container .detail__main-contentsbox .detail__main-contentsbox-select div .select-buy-btn {
   background-color: #ff6d00;
   color: #fff;
 }
@@ -1458,12 +1458,12 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
 body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select {
   padding-bottom: 30px;
 }
-body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select .detail__main-contentsbox-selects {
+body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form .detail__main-contentsbox-selects {
   display: flex;
   flex-direction: column;
   margin-bottom: 12px;
 }
-body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select .detail__main-contentsbox-selects select {
+body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form .detail__main-contentsbox-selects select {
   display: inline-block;
   margin-bottom: 0px;
   padding-left: 15px;
@@ -1474,10 +1474,10 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
   appearance: none;
   border-radius: 8px;
 }
-body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select .detail__main-contentsbox-selects select option {
+body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form .detail__main-contentsbox-selects select option {
   cursor: pointer;
 }
-body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select h3 {
+body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form h3 {
   font-family: "Pretendard-Bold";
   font-size: 14px;
   font-style: normal;
@@ -1489,7 +1489,7 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
   margin-bottom: 17px;
   color: #101010;
 }
-body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select h3 > span {
+body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form h3 > span {
   font-family: "Pretendard-Bold";
   font-size: 18px;
   font-style: normal;
@@ -1497,11 +1497,11 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
   line-height: 26px;
   letter-spacing: -0.54px;
 }
-body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select > div {
+body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form > div {
   display: flex;
   justify-content: space-between;
 }
-body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select > div button {
+body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form > div button {
   padding-top: 2px;
   border: 2px solid #ff6d00;
   outline: none;
@@ -1517,10 +1517,10 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
   line-height: 26px;
   letter-spacing: -0.54px;
 }
-body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select > div .select-cart-btn {
+body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form > div .select-cart-btn {
   color: #ff6d00;
 }
-body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select > div .select-buy-btn {
+body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form > div .select-buy-btn {
   background-color: #ff6d00;
   color: #fff;
 }
