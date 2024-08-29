@@ -655,7 +655,7 @@ fetch(productsURL)
         // sumPrice.innerText = price * quan;
         sumPrice.innerText = `${multiplePrice}원`;
       });
-      multiplePrice = sumPrice.innerText.replace(/원/g, "");
+      multiplePrice = Number(sumPrice.innerText.replace(/원|,/g, ""));
       console.log(multiplePrice);
 
       // scroll evt
@@ -735,7 +735,6 @@ fetch(productsURL)
       let setCartProducts = [];
       const setCartHandler = (e) => {
         e.preventDefault();
-        console.log(multiplePrice);
         const discountingPrice = product.details.beforePrice - product.price;
         const cartProduct = {
           id: product.id,
