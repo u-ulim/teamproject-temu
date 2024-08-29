@@ -140,7 +140,6 @@
   // border: 1px solid red;
   .promise__wrapper {
     @include width_inner;
-
     .promise-top {
       display: flex;
       align-items: center;
@@ -208,10 +207,10 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 20px;
+      padding: 6px 20px;
       border: 1px solid map-get($color, secondary-color);
       width: 100%;
-      height: 38px;
+
       background: map-get($color, color-White);
       color: map-get($color, secondary-color);
       text-align: center;
@@ -261,7 +260,6 @@
     @include width_inner;
     display: flex;
     gap: 32px;
-
     .cart__item-header {
       display: flex;
       align-items: center;
@@ -281,6 +279,7 @@
         }
       }
     }
+
 
     .cart__item-first {
       // border: 1px solid red;
@@ -569,9 +568,23 @@
     .main__wrapper {
       @include width_full;
       width: 100%;
+      padding: 0px;
       // border: 1px solid red;
     }
     // border: 1px solid blue;
+  }
+  #promise {
+    @include width_full;
+    padding: 0px 15px 0px 15px;
+    .promise__wrapper {
+      @include width_full;
+    }
+  }
+  #cart {
+    .cart__wrapper {
+      overflow: hidden;
+
+    }
   }
 }
 
@@ -581,11 +594,15 @@
       .main__banner {
         width: 100%;
         height: 30vw;
+        padding: 0px 15px 0px 15px;
+        border-radius: 8px;
         // border: 1px solid red;
         img {
           width: 100%;
           height: 100%;
           @include object_cover;
+          border-radius: 8px;
+
         }
       }
       .main__slide-container {
@@ -593,16 +610,43 @@
       }
     }
   }
+  #promise {
+    .promise__wrapper {
+      .promise-bottom {
+        height: auto;
+        padding: 6px 20px;
+
+        .promise__bottom__left {
+          a {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 1; /* 표시할 줄 수 */
+            line-height: 1.5; /* 줄 높이 */
+            max-height: 3em; /* 최대 높이 (줄 높이 * 줄 수) */
+          }
+        }
+        .promise__bottom__right {
+          a {
+            width: 36px;
+            text-align: right;
+          }
+        }
+      }
+    }
+    
+  }
 }
 
 // (max-width: 768px)
 @media (max-width: 768px) {
   /* main */
   #main {
+    
     @include width_full;
     padding-top: 20px;
     .main__wrapper {
-      margin-bottom: 10px;
       width: 100%;
       .main__banner {
         margin-bottom: 10px;
@@ -622,16 +666,14 @@
         gap: 10px;
         align-items: center;
         justify-content: center;
-        // border: 1px solid red;
         width: 100%;
-        height: 10vw;
+        height: 16vw;
         .m__banner-first {
           // border: 1px solid red;
-          // max-width: 350px;
           // flex: 1;
-          // height: 55px;
+          height: 100%;
           width: 50%;
-          border-radius: 8px;
+          // border-radius: 8px;
           img {
             width: 100%;
             height: 100%;
@@ -640,8 +682,12 @@
           }
         }
         .m__banner-second {
+          // width: 50%;
+          // border-radius: 8px;
+          height: 100%;
           width: 50%;
-          border-radius: 8px;
+
+
           img {
             width: 100%;
             height: 100%;
@@ -672,6 +718,7 @@
       justify-content: center;
       flex-direction: column;
       margin-bottom: 10px;
+
       .m__promise-top {
         display: flex;
         align-items: center;
@@ -696,27 +743,48 @@
       .m__promise-bottom {
         display: flex;
         align-items: center;
-        justify-content: center;
+        // justify-content: center;
         padding: 0 20px;
         border: 1px solid map-get($color, secondary-color);
         width: 100%;
-        height: 30px;
+        height: auto;
         border-radius: 0 0 8px 8px;
+
         .m__promise-bottom-list {
+          width: 100%;
+          height: 28px;
           display: flex;
-          gap: 20px;
+          // gap: 20px;
           align-items: center;
-          justify-content: center;
+          justify-content: space-between;
           background: map-get($color, color-White);
           color: map-get($color, secondary-color);
           // border: 1px solid #f00;
+          .bottom-list-item:nth-child(1) {
+            display: flex;
+            justify-content: center;
+            border-right: 1px solid #ccc;
+          }
+          .bottom-list-item:nth-child(2) {
+            display: flex;
+            justify-content: center;
+            border-right: 1px solid #ccc;
+
+          }
+          .bottom-list-item:nth-child(3) {
+            display: flex;
+            justify-content: center;
+          }
           div {
             display: flex;
+            width: 33.3%;
             gap: 10px;
             align-items: center;
-            justify-content: center;
-            // border: 1px solid red;
+            
           }
+          
+
+       
           a {
             @include text_XS_12;
           }

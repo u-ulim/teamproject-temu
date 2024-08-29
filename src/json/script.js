@@ -8,6 +8,11 @@ const slide = slides.querySelectorAll("li");
 // console.log(slides, slide);
 
 const slideCount = slide.length;
+
+window.addEventListener("resize", () => {
+  let width = function();
+  
+})
 const slideWidth = 447;
 const slideMargin = 30;
 
