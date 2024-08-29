@@ -395,13 +395,16 @@ main {
       justify-content: space-around;
       padding-bottom: 22px;
       width: 100%;
-      li {
+      label {
+        width: 100%;
+        display: block;
         padding: 34px 22px;
         border: 1px solid map-get($color, color-Neutrals-Grey-300);
         text-align: center;
         transition: all 0.3s;
         border-radius: 8px;
         @include text_XS_12;
+        cursor: pointer;
         span {
           display: block;
           padding-bottom: 5px;
@@ -416,9 +419,16 @@ main {
           }
         }
         &:hover {
+          cursor: pointer;
           border: 1px solid map-get($color-hover, primary-color);
           box-shadow: 0 0 4px map-get($color-hover, primary-color);
-          cursor: pointer;
+        }
+      }
+      [type="radio"] {
+        // display: none;
+        &:checked + label {
+          border: 1px solid map-get($color-hover, primary-color);
+          box-shadow: 0 0 4px map-get($color-hover, primary-color);
         }
       }
     }

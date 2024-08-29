@@ -132,6 +132,7 @@ body {
             }
             span {
               @include text_B_M_16;
+              padding-right: 6px;
             }
           }
           button {
