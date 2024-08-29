@@ -173,6 +173,7 @@ table {
 #main {
   width: 100%;
   margin-bottom: 30px;
+  overflow: hidden;
 }
 #main .main__wrapper {
   display: flex;
@@ -596,6 +597,7 @@ table {
   height: auto;
   border: 1px solid orangered;
   text-align: center;
+  overflow: hidden;
   gap: 68px;
 }
 #category .category__wrapper .category__list__container .category__list li .category__list-img {
@@ -687,12 +689,34 @@ table {
 }
 
 @media (max-width: 1384px) {
-  #main {
-    border: 1px solid blue;
+  #main .main__wrapper {
+    width: 100%;
+    width: 100%;
+  }
+}
+@media (max-width: 1160px) {
+  #main .main__wrapper .main__banner {
+    width: 100%;
+    height: 30vw;
+  }
+  #main .main__wrapper .main__banner img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+  }
+  #main .main__wrapper .main__slide-container {
+    display: none;
   }
 }
 @media (max-width: 768px) {
   /* main */
+  #main {
+    width: 100%;
+    padding-top: 20px;
+  }
   #main .main__wrapper {
     margin-bottom: 10px;
     width: 100%;
@@ -705,26 +729,39 @@ table {
     display: none;
   }
   #main .mobile__main {
+    padding: 0 15px 0 15px;
     display: flex;
     margin-bottom: 10px;
-    border: 1px solid red;
   }
   #main .mobile__main .m-main__wrapper {
     display: flex;
     gap: 10px;
     align-items: center;
     justify-content: center;
-    border: 1px solid red;
     width: 100%;
-    height: 55px;
+    height: 10vw;
   }
   #main .mobile__main .m-main__wrapper .m__banner-first {
+    width: 50%;
+    border-radius: 8px;
+  }
+  #main .mobile__main .m-main__wrapper .m__banner-first img {
     width: 100%;
-    height: 55px;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+    border-radius: 8px;
   }
   #main .mobile__main .m-main__wrapper .m__banner-second {
+    width: 50%;
+    border-radius: 8px;
+  }
+  #main .mobile__main .m-main__wrapper .m__banner-second img {
     width: 100%;
-    height: 55px;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+    border-radius: 8px;
   }
   /* promise */
   #promise .promise__wrapper {

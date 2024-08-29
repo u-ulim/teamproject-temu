@@ -133,3 +133,37 @@ btns.addEventListener("mouseenter", () => {
 btns.addEventListener("mouseleave", () => {
   autoSlide();
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const categoryList = document.querySelector(".category__list");
+  const slideBtnRight = document.querySelector(".category__slide-btn-right");
+  const slideBtnLeft = document.querySelector(".category__slide-btn-left");
+
+  let currentIndex = 0;
+  const showCategories = 7; // 한 번에 보여줄 카테고리 수
+  const categoryItemWidth = 115 + 68; // 카테고리 이미지 너비 + 간격(gap)
+
+  // 카테고리 목록의 너비를 설정
+  categoryList.style.width = `${categoryItemWidth * showCategories}px`;
+
+  // 오른쪽 슬라이드 버튼 클릭 이벤트
+  slideBtnRight.addEventListener("click", () => {
+    const maxIndex = categoryList.children.length - showCategories;
+    if (currentIndex < maxIndex) {
+      currentIndex++;
+      categoryList.style.transform = `translateX(-${
+        currentIndex * categoryItemWidth
+      }px)`;
+    }
+  });
+
+  // 왼쪽 슬라이드 버튼 클릭 이벤트
+  slideBtnLeft.addEventListener("click", () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      categoryList.style.transform = `translateX(-${
+        currentIndex * categoryItemWidth
+      }px)`;
+    }
+  });
+});

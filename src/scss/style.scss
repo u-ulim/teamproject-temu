@@ -9,12 +9,11 @@
 #main {
   @include width_full;
   margin-bottom: 30px;
-
+  overflow: hidden;
   .main__wrapper {
     display: flex;
     gap: 30px;
     @include width_inner;
-
     .main__banner {
       overflow: hidden;
       position: relative;
@@ -460,6 +459,7 @@
         height: auto;
         border: 1px solid orangered;
         text-align: center;
+        overflow: hidden;
         gap: 68px;
         li {
           // width: 115px;
@@ -566,7 +566,32 @@
 // (max-width: 1384px)
 @media (max-width: 1384px) {
   #main {
-    border: 1px solid blue;
+    .main__wrapper {
+      @include width_full;
+      width: 100%;
+      // border: 1px solid red;
+    }
+    // border: 1px solid blue;
+  }
+}
+
+@media (max-width: 1160px) {
+  #main {
+    .main__wrapper {
+      .main__banner {
+        width: 100%;
+        height: 30vw;
+        // border: 1px solid red;
+        img {
+          width: 100%;
+          height: 100%;
+          @include object_cover;
+        }
+      }
+      .main__slide-container {
+        display: none;
+      }
+    }
   }
 }
 
@@ -574,6 +599,8 @@
 @media (max-width: 768px) {
   /* main */
   #main {
+    @include width_full;
+    padding-top: 20px;
     .main__wrapper {
       margin-bottom: 10px;
       width: 100%;
@@ -586,26 +613,47 @@
       }
     }
     .mobile__main {
+      padding: 0 15px 0 15px;
       display: flex;
       margin-bottom: 10px;
-      border: 1px solid red;
+      // border: 1px solid red;
       .m-main__wrapper {
         display: flex;
         gap: 10px;
         align-items: center;
         justify-content: center;
-        border: 1px solid red;
+        // border: 1px solid red;
         width: 100%;
-        height: 55px;
+        height: 10vw;
         .m__banner-first {
           // border: 1px solid red;
-          width: 100%;
-          height: 55px;
+          // max-width: 350px;
+          // flex: 1;
+          // height: 55px;
+          width: 50%;
+          border-radius: 8px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 8px;
+          }
         }
         .m__banner-second {
+          width: 50%;
+          border-radius: 8px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 8px;
+          }
+
           // border: 1px solid red;
-          width: 100%;
-          height: 55px;
+          // flex: 1;
+          // max-width: 350px;
+          // width: 50%;
+          // height: 55px;
         }
       }
     }
