@@ -1636,7 +1636,21 @@ body {
         }
       }
       .detail__right-box {
-        display: none;
+        position: fixed;
+        z-index: 10;
+        bottom: 0px;
+        width: 100%;
+        padding-right: 30px;
+        padding-bottom: 0px;
+        background-color: map-get($color, color-White);
+        .detail__main-contentsbox {
+          margin-bottom: 0px;
+          padding-top: 15px;
+          padding-bottom: 5px;
+          .detail__main-contentsbox-select {
+            padding-bottom: 0px;
+          }
+        }
       }
     }
   }

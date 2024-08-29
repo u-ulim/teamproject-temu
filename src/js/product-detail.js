@@ -568,8 +568,8 @@ fetch(productsURL)
         
         <h3>주문금액 <span>${price}원</span></h3>
         <div>
-          <button class="select-cart-btn">장바구니</button>
-          <button class="select-buy-btn">바로구매</button>
+          <button type="submit" class="select-cart-btn">장바구니</button>
+          <button type="button" class="select-buy-btn">바로구매</button>
         </div>
       </form>
     </div>
@@ -656,7 +656,6 @@ fetch(productsURL)
         sumPrice.innerText = `${multiplePrice}원`;
       });
       multiplePrice = Number(sumPrice.innerText.replace(/원|,/g, ""));
-      console.log(multiplePrice);
 
       // scroll evt
       const rightBoxScrollEvt = () => {
@@ -732,22 +731,37 @@ fetch(productsURL)
       });
 
       // cartLocalStorage
-      let setCartProducts = [];
+      let setCartProducts =
+        JSON.parse(localStorage.getItem("setCartProducts")) || [];
+
+      const localStorageSave = () => {
+        localStorage.setItem(
+          "setCartProducts",
+          JSON.stringify(setCartProducts)
+        );
+      };
       const setCartHandler = (e) => {
         e.preventDefault();
+        const selectColor = document.querySelector("#colors");
+        const selectSize = document.querySelector("#sizes");
         const discountingPrice = product.details.beforePrice - product.price;
         const cartProduct = {
           id: product.id,
           title: product.title,
           price: product.price,
+          quan: quan,
           sumPrice: multiplePrice,
           img: product.thumbnail,
           discountRate: product.discountRate,
           beforePrice: product.details.beforePrice,
           discountingPrice: discountingPrice,
           discountedPrice: discountingPrice * quan,
+          selectColor: selectColor.value,
+          selectSize: selectSize.value,
         };
-        console.log(cartProduct);
+        setCartProducts.push(cartProduct);
+        console.log(setCartProducts);
+        localStorageSave();
       };
       const form = document.querySelector(
         ".detail__right-box .detail__main-contentsbox-select > form"

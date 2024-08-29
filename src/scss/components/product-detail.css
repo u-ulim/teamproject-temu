@@ -2063,6 +2063,20 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
     letter-spacing: -0.42px;
   }
   body #createDetail .detail__right-box {
-    display: none;
+    position: fixed;
+    z-index: 10;
+    bottom: 0px;
+    width: 100%;
+    padding-right: 30px;
+    padding-bottom: 0px;
+    background-color: #fff;
+  }
+  body #createDetail .detail__right-box .detail__main-contentsbox {
+    margin-bottom: 0px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+  }
+  body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select {
+    padding-bottom: 0px;
   }
 }
