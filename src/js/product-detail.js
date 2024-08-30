@@ -11,6 +11,7 @@ fetch(productsURL)
     };
 
     const createItem = (product) => {
+      // 다음부터는 구조분해 할당을 쓸 것.
       // star 카운팅
       let mainReivewStars = "";
       for (let i = 0; i < 5; i++) {
@@ -576,6 +577,10 @@ fetch(productsURL)
   </div>
   </div>
     `;
+  
+
+      // 마우스 오버시 이미지 체인지
+      
 
       // reviews안에 내용 넣기
       const commentContents = document.querySelector(".comments__contents");
@@ -733,13 +738,23 @@ fetch(productsURL)
       // cartLocalStorage
       let setCartProducts =
         JSON.parse(localStorage.getItem("setCartProducts")) || [];
-
       const localStorageSave = () => {
         localStorage.setItem(
           "setCartProducts",
           JSON.stringify(setCartProducts)
         );
       };
+
+      const getCartProducts = JSON.parse(
+        localStorage.getItem("setCartProducts")
+      );
+      console.log(getCartProducts);
+
+      // test
+      getCartProducts.forEach((product) => {
+        console.log(product);
+      });
+
       const setCartHandler = (e) => {
         e.preventDefault();
         const selectColor = document.querySelector("#colors");
@@ -767,6 +782,7 @@ fetch(productsURL)
         ".detail__right-box .detail__main-contentsbox-select > form"
       );
       form.addEventListener("submit", setCartHandler);
+
     };
 
     // 페이지 이동

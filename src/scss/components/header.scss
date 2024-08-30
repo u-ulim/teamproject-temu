@@ -17,11 +17,64 @@
 
   .header-top-wrapper {
     @include width_full;
+    overflow-y: hidden;
     height: 48px;
+    position: relative;
     background-color: map-get($color, primary-color);
     color: map-get($color, color-White);
     .header-top {
-      @include width_inner;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      ul {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 7px;
+        position: relative;
+        width: 100%;
+        li {
+          width: 100%;
+          position: absolute;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
+          gap: 10px;
+
+          span {
+            @include text_B_S_14;
+          }
+          .top__delivery-text {
+            color: #adffa2;
+          }
+          .top__exchange-text {
+            color: #fff7a7;
+          }
+          .top__return-text {
+            color: #fff7a7;
+          }
+          > i {
+            width: 34px;
+            height: 34px;
+            display: inline-block;
+            @include object_cover;
+          }
+        }
+        .header-top__prev {
+          top: -48px;
+          transition: top 0.4s;
+        }
+        .header-top__current {
+          top: 0px;
+          transition: top 0.4s;
+        }
+        .header-top__next {
+          top: 48px;
+        }
+      }
     }
   }
 

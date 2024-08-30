@@ -6,6 +6,7 @@ const headerLoad = () => {
     .then((data) => {
       header.innerHTML = data;
 
+      // header scroll evt
       const headerScrollEvt = () => {
         let lastScrollY = window.scrollY;
         const nav = document.querySelector("nav");
@@ -41,8 +42,46 @@ const headerLoad = () => {
           window.requestAnimationFrame(handleScroll);
         });
       };
-
       headerScrollEvt();
+
+      // header top rolling banner
+      const headerRollingEvt = () => {
+        const rollingBanner = () => {
+          console.log("hi");
+          const prev = document.querySelector(".header-top__prev");
+          prev.classList.remove("header-top__prev");
+
+          const current = document.querySelector(".header-top__current");
+          current.classList.remove("header-top__current");
+          current.classList.add("header-top__prev");
+
+          const nextItem = document.querySelector(".header-top__next");
+
+          if (nextItem.nextElementSibling == null) {
+            const firstItem = document.querySelector(
+              ".header-top ul li:first-child"
+            );
+            firstItem.classList.add("header-top__next");
+          } else {
+            nextItem.nextElementSibling.classList.add("header-top__next");
+          }
+          nextItem.classList.remove("header-top__next");
+          nextItem.classList.add("header-top__current");
+        };
+
+        let interval = setInterval(rollingBanner, 5000);
+
+        const items = document.querySelectorAll(".header-top ul li");
+        items.forEach((item) => {
+          item.addEventListener("mouseover", () => {
+            clearInterval(interval);
+          });
+          item.addEventListener("mouseout", () => {
+            interval = setInterval(rollingBanner, 5000);
+          });
+        });
+      };
+      headerRollingEvt();
     })
     .catch((error) => console.error("Error loading header:", error));
 };
