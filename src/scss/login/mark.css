@@ -1,3 +1,4 @@
+/* VARIABLES */
 @font-face {
   font-family: "Pretendard-Regular";
   font-style: normal;
@@ -12,6 +13,18 @@
 /* TEXT BOLD */
 /* -2% = 0.02 * 'n'px */
 /* -3% = 0.03 * 'n'px */
+.background_cover {
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.object_cover {
+  object-fit: cover;
+  object-position: center;
+}
+
 html,
 body,
 div,
@@ -154,21 +167,7 @@ table {
   border-spacing: 0;
 }
 
-/* VARIABLES */
-.background_cover {
-  display: inline-block;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.object_cover {
-  object-fit: cover;
-  object-position: center;
-}
-
 .wrapper {
-  position: relative;
   width: 100%;
   height: 100vh;
   width: 1384px;
@@ -177,6 +176,7 @@ table {
 }
 .wrapper .mark__inner {
   display: flex;
+  position: relative;
   height: 100%;
 }
 .wrapper .mark__inner .leftmenu {
@@ -206,7 +206,7 @@ table {
 .wrapper .mark__inner .leftmenu > ul > li .document {
   width: 24px;
   height: 24px;
-  background-image: url(../../assets/images/mypage/document.svg);
+  background-image: url(../../../assets/images/mypage/document.svg);
   display: inline-block;
   background-position: center;
   background-repeat: no-repeat;
@@ -215,7 +215,7 @@ table {
 .wrapper .mark__inner .leftmenu > ul > li .review {
   width: 24px;
   height: 24px;
-  background-image: url(../../assets/images/mypage/review.svg);
+  background-image: url(../../../assets/images/mypage/review.svg);
   display: inline-block;
   background-position: center;
   background-repeat: no-repeat;
@@ -224,7 +224,7 @@ table {
 .wrapper .mark__inner .leftmenu > ul > li .delivery {
   width: 24px;
   height: 24px;
-  background-image: url(../../assets/images/mypage/delivery.svg);
+  background-image: url(../../../assets/images/mypage/delivery.svg);
   display: inline-block;
   background-position: center;
   background-repeat: no-repeat;
@@ -233,7 +233,7 @@ table {
 .wrapper .mark__inner .leftmenu > ul > li .star {
   width: 24px;
   height: 24px;
-  background-image: url(../../assets/images/mypage/star.svg);
+  background-image: url(../../../assets/images/mypage/star.svg);
   display: inline-block;
   background-position: center;
   background-repeat: no-repeat;
@@ -242,7 +242,7 @@ table {
 .wrapper .mark__inner .leftmenu > ul > li .event {
   width: 24px;
   height: 24px;
-  background-image: url(../../assets/images/mypage/event.svg);
+  background-image: url(../../../assets/images/mypage/event.svg);
   display: inline-block;
   background-position: center;
   background-repeat: no-repeat;
@@ -301,178 +301,203 @@ table {
   padding: 5px 5px;
   background: #fff7f0;
 }
-.wrapper .mark__inner .contents .text {
-  display: flex;
-  gap: 60px;
-  margin-bottom: 13px;
-  padding-top: 50px;
-  width: 100%;
-  font-size: 14px;
-  cursor: pointer;
+.wrapper .mark__inner .box span {
+  font-family: "Pretendard-Regular";
+  font-size: 18px;
+  font-style: normal;
+  line-height: 26px;
+  letter-spacing: -0.54px;
+  display: inline-block;
+  margin-top: 10px;
 }
-.wrapper .mark__inner .contents .text span:nth-child(1) {
-  color: #818181;
-}
-.wrapper .mark__inner .contents .text span:nth-child(1):hover {
-  color: #292828;
-}
-.wrapper .mark__inner .contents .text span:nth-child(2) {
-  color: #818181;
-}
-.wrapper .mark__inner .contents .text span:nth-child(2):hover {
-  color: #292828;
-}
-.wrapper .mark__inner .contents .coupon__code {
-  display: flex;
-  gap: 22px;
-}
-.wrapper .mark__inner .contents .coupon__code .code {
-  padding-left: 14px;
-  border: 1px solid #9a9a9a;
-  width: 308px;
-  height: 40px;
-  border-radius: 8px;
-}
-.wrapper .mark__inner .contents .coupon__code button {
-  border: 1px solid #292828;
-  width: 82px;
-  height: 40px;
-  background: #fff;
-  cursor: pointer;
-  border-radius: 8px;
-}
-.wrapper .mark__inner .contents .coupon__code button:hover {
-  background: #f6f6f6;
-}
-.wrapper .mark__inner .box {
+.wrapper .mark__inner .box .container {
+  display: inline-block;
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 160px;
+  height: 160px;
   transform: translate(-50%, -50%);
-}
-.wrapper .mark__inner .box .icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-.wrapper .mark__inner .box .icon .coupon__icon {
-  display: inline-block;
-  margin-bottom: 10px;
-  width: 120px;
-  height: 120px;
-  background-image: url(../../assets/images/mypage/coupon__icon.svg);
-  display: inline-block;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.wrapper .mark__inner .box .icon .text__box span {
-  font-family: "Pretendard-Regular";
-  font-size: 16px;
-  font-style: normal;
-  line-height: 24px;
-  letter-spacing: -0.48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 7px;
-}
-.wrapper .mark__inner .box .icon .text__box p {
-  font-family: "Pretendard-Regular";
-  font-size: 14px;
-  font-style: normal;
-  line-height: 22px;
-  letter-spacing: -0.42px;
 }
 
 @media screen and (max-width: 768px) {
   .wrapper {
     width: 100%;
+    height: 100%;
     width: 100%;
-    height: 100vh;
   }
   .wrapper .mark__inner {
     display: flex;
+    position: relative;
+    width: 100%;
     height: 100%;
   }
   .wrapper .mark__inner .leftmenu {
+    width: 200px;
+    height: 100%;
+  }
+  .wrapper .mark__inner .leftmenu ul .home {
+    padding: 20px 18px;
+    font-family: "Pretendard-Regular";
+    font-size: 12px;
+    font-style: normal;
+    line-height: 18px;
+    letter-spacing: -0.36px;
+  }
+  .wrapper .mark__inner .leftmenu ul li {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  .wrapper .mark__inner .leftmenu ul li > div {
+    display: flex;
+    justify-content: space-between;
+    width: 14;
+  }
+  .wrapper .mark__inner .leftmenu ul li .document {
+    width: 24px;
+    height: 24px;
+    background-image: url(../../assets/images/mypage/document.svg);
+    display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .wrapper .mark__inner .leftmenu ul li .review {
+    width: 24px;
+    height: 24px;
+    background-image: url(../../assets/images/mypage/review.svg);
+    display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .wrapper .mark__inner .leftmenu ul li .delivery {
+    width: 24px;
+    height: 24px;
+    background-image: url(../../assets/images/mypage/delivery.svg);
+    display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .wrapper .mark__inner .leftmenu ul li .star {
+    width: 24px;
+    height: 24px;
+    background-image: url(../../assets/images/mypage/star.svg);
+    display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .wrapper .mark__inner .leftmenu ul li .event {
+    width: 24px;
+    height: 24px;
+    background-image: url(../../assets/images/mypage/event.svg);
+    display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .wrapper .mark__inner .leftmenu ul li span {
+    font-family: "Pretendard-Regular";
+    font-size: 14px;
+    font-style: normal;
+    line-height: 22px;
+    letter-spacing: -0.42px;
+  }
+  .wrapper .mark__inner .leftmenu ul .my-order {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .wrapper .mark__inner .leftmenu ul .my-order > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .wrapper .mark__inner .leftmenu ul .my-order .fa-chevron-down {
+    margin-right: 20px;
+  }
+  .wrapper .mark__inner .leftmenu ul .inner {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    gap: 10px;
+    position: relative;
+    font-family: "Pretendard-Regular";
+    font-size: 14px;
+    font-style: normal;
+    line-height: 22px;
+    letter-spacing: -0.42px;
+  }
+  .wrapper .mark__inner .leftmenu ul .inner.active .inner {
     display: flex;
   }
-  .wrapper .mark__inner .leftmenu .fa-chevron-down {
-    margin-left: 30px;
+  .wrapper .mark__inner .leftmenu ul .inner::after {
+    content: "\f077";
+    font-family: "fontawesome";
+    position: absolute;
+    top: -28%;
+    left: 79%;
+    transform: translate(50%, 50%);
+    transition: all 0.3s;
   }
-  .wrapper .mark__inner .contents .text {
-    gap: 30px;
+  .wrapper .mark__inner .leftmenu ul .inner::after.active {
+    display: none;
   }
-  .wrapper .mark__inner .contents .coupon__code {
-    gap: 10px;
+  .wrapper .mark__inner .leftmenu ul .inner .title:hover {
+    width: 150px;
+    padding: 5px;
+    background: #fff7f0;
   }
-  .wrapper .mark__inner .contents .coupon__code .code {
-    width: 290px;
-  }
-  .wrapper .mark__inner .contents .coupon__code button {
-    width: 60px;
-    height: 40px;
-  }
-  .wrapper .mark__inner .box .icon {
-    width: 320px;
-  }
-  .wrapper .mark__inner .box .icon span {
+  .wrapper .mark__inner .box span {
     font-family: "Pretendard-Regular";
-    font-size: 14px;
+    font-size: 18px;
     font-style: normal;
-    line-height: 22px;
-    letter-spacing: -0.42px;
+    line-height: 26px;
+    letter-spacing: -0.54px;
+    display: inline-block;
   }
-  .wrapper .mark__inner .box .icon p {
-    font-family: "Pretendard-Regular";
-    font-size: 14px;
-    font-style: normal;
-    line-height: 22px;
-    letter-spacing: -0.42px;
+  .wrapper .mark__inner .box .container {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    width: 30%;
+    height: 100%;
+    transform: translate(50%, 50%);
   }
 }
 @media screen and (max-width: 390px) {
   .wrapper {
     width: 100%;
-    width: 390px;
-    height: 100vh;
+    height: 100%;
+    width: 100%;
   }
   .wrapper .mark__inner {
     display: flex;
+    position: relative;
   }
   .wrapper .mark__inner .leftmenu {
     display: none;
   }
-  .wrapper .mark__inner .contents .text {
-    gap: 30px;
-  }
-  .wrapper .mark__inner .contents .coupon__code {
-    gap: 10px;
-  }
-  .wrapper .mark__inner .contents .coupon__code .code {
-    width: 290px;
-  }
-  .wrapper .mark__inner .contents .coupon__code button {
-    width: 60px;
-    height: 40px;
-  }
-  .wrapper .mark__inner .box .icon {
-    width: 320px;
-  }
-  .wrapper .mark__inner .box .icon span {
+  .wrapper .mark__inner .box span {
     font-family: "Pretendard-Regular";
-    font-size: 14px;
+    font-size: 18px;
     font-style: normal;
-    line-height: 22px;
-    letter-spacing: -0.42px;
+    line-height: 26px;
+    letter-spacing: -0.54px;
+    display: inline-block;
+    margin-top: 10px;
   }
-  .wrapper .mark__inner .box .icon p {
-    font-family: "Pretendard-Regular";
-    font-size: 14px;
-    font-style: normal;
-    line-height: 22px;
-    letter-spacing: -0.42px;
+  .wrapper .mark__inner .box .container {
+    position: absolute;
+    top: 200px;
+    left: 22px;
+    width: 50%;
+    height: 100%;
+    transform: translate(50%, 50%);
   }
 }

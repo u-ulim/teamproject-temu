@@ -3,82 +3,125 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../src/scss/signup.css" />
+    <link rel="stylesheet" href="../../src/scss/login/signup.css" />
+    <script defer src="../../src/js/login.js"></script>
     <title>Document</title>
   </head>
   <body>
     <div id="wrapper">
       <div class="container">
         <form action="http://127.0.0.1:5502" method="get"></form>
-        <article class="inner__contents title">회원가입</article>
+        <article class="inner__contents">회원가입</article>
         <div id="info">
-          <article class="inner__contents id">아이디</article>
-          <div class="user__id">
+          <div class="info__id">
+            <article class="id">아이디</article>
+            <div class="user__id">
+              <input
+                type="text"
+                name="userid"
+                class="userid"
+                placeholder="아이디"
+              />
+            </div>
+          </div>
+          <div class="info__password">
+            <article class="user__password">비밀번호</article>
+            <div class="password__txt">
+              영문, 숫자를 포함한 8자 이상의 비밀번호를 입력해주세요.
+            </div>
             <input
               type="text"
-              name="userid"
-              class="userid"
-              placeholder="아이디"
+              name="password"
+              class="password"
+              placeholder="비밀번호"
             />
           </div>
-          <article class="user__password">비밀번호</article>
-          <div class="password__txt">
-            영문, 숫자를 포함한 8자 이상의 비밀번호를 입력해주세요.
-          </div>
-          <input
-            type="text"
-            name="password"
-            class="password"
-            placeholder="비밀번호"
-          />
-          <article class="password__check">비밀번호 확인</article>
-          <input
-            type="text"
-            name="confrim__password"
-            class="confrim__password"
-            placeholder="비밀번호 확인"
-          />
-          <article class="inner__contents birthday">생년월일</article>
-          <div id="calender">
+          <div class="info__password__check">
+            <article class="password__check">비밀번호 확인</article>
             <input
               type="text"
-              name="calender"
-              class="calender"
-              placeholder="이메일"
+              name="confrim__password"
+              class="confrim__password"
+              placeholder="비밀번호 확인"
             />
-            <span>@</span>
-            <select name="control" id="control">
-              <option value="none" selected disabled>선택해주세요</option>
-              <option value="naver.com">naver.com</option>
-              <option value="hanmail.net">hanmail.net</option>
-              <option value="daum.net">daum.net</option>
-              <option value="gmail.com">gmail.com</option>
-              <option value="nate.com">nate.com</option>
-              <option value="hotmail.com">hotmail.com</option>
-              <option value="outlook.com">outlook.com</option>
-              <option value="icloud.com">icloud.com</option>
-              <option value="manual">직접입력</option>
-            </select>
+          </div>
+          <div class="info__email">
+            <article class="user__email">이메일</article>
+            <div id="email__item">
+              <input
+                type="text"
+                name="email"
+                class="email"
+                placeholder="이메일"
+              />
+              <span>@</span>
+              <select name="control" class="control">
+                <option value="none" selected disabled>선택해주세요</option>
+                <option value="naver.com">naver.com</option>
+                <option value="hanmail.net">hanmail.net</option>
+                <option value="daum.net">daum.net</option>
+                <option value="gmail.com">gmail.com</option>
+                <option value="nate.com">nate.com</option>
+                <option value="hotmail.com">hotmail.com</option>
+                <option value="outlook.com">outlook.com</option>
+                <option value="icloud.com">icloud.com</option>
+                <option value="manual">직접입력</option>
+              </select>
+            </div>
           </div>
         </div>
-        <div id="agree">
-          <label class="agree__title">약관동의</label>
-          <div class="agree__box">
-            <div class="all__agree">
-              <div class="agree__txt">
+        <div id="agreement">
+          <div id="agree">
+            <div class="agree__title">약관동의</div>
+            <div id="items">
+              <div id="agree__box">
                 <div class="agree__checkbox">
-                  <input
-                    type="checkbox"
-                    name="agree__checkbox"
-                    class="agree__checkbox"
-                  />
+                  <input type="checkbox" name="checkbox" class="checkbox" />
                   <span class="txt">전체동의</span>
                   <span class="txt__box">선택항목에 대한 동의 포함</span>
                 </div>
               </div>
+              <div id="age__box">
+                <div class="age__checkbox">
+                  <input type="checkbox" name="checkbox" class="checkbox" />
+                  <span class="txt">만 14세 이상입니다</span>
+                  <span class="txt__box">(필수)</span>
+                </div>
+              </div>
+              <div id="use__box">
+                <div class="use__checkbox">
+                  <input type="checkbox" name="checkbox" class="checkbox" />
+                  <span class="txt">이용약관</span>
+                  <span class="txt__box">(필수)</span>
+                </div>
+              </div>
+              <div id="userinfo__box">
+                <div class="userinfo__checkbox">
+                  <input type="checkbox" name="checkbox" class="checkbox" />
+                  <span class="txt">개인정보수집 및 이용동의</span>
+                  <span class="txt__box">(필수)</span>
+                </div>
+              </div>
+              <div id="marketing__box">
+                <div class="marketing__checkbox">
+                  <input type="checkbox" name="checkbox" class="checkbox" />
+                  <span class="txt">개인정보 마케팅 활용 동의</span>
+                  <span class="txt__box">(선택)</span>
+                </div>
+              </div>
+              <div id="event__box">
+                <div class="event__checkbox">
+                  <input type="checkbox" name="checkbox" class="checkbox" />
+
+                  <span class="txt">이벤트, 쿠폰 알림 메일 및 SMS 등 수신</span>
+                  <span class="txt__box">(선택)</span>
+                </div>
+              </div>
             </div>
-            
           </div>
+        </div>
+        <div id="signup__btn">
+          <button>회원가입</button>
         </div>
       </div>
     </div>

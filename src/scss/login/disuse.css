@@ -1,3 +1,4 @@
+/* VARIABLES */
 @font-face {
   font-family: "Pretendard-Regular";
   font-style: normal;
@@ -12,6 +13,18 @@
 /* TEXT BOLD */
 /* -2% = 0.02 * 'n'px */
 /* -3% = 0.03 * 'n'px */
+.background_cover {
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.object_cover {
+  object-fit: cover;
+  object-position: center;
+}
+
 html,
 body,
 div,
@@ -154,19 +167,6 @@ table {
   border-spacing: 0;
 }
 
-/* VARIABLES */
-.background_cover {
-  display: inline-block;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.object_cover {
-  object-fit: cover;
-  object-position: center;
-}
-
 .wrapper {
   position: relative;
   width: 100%;
@@ -206,7 +206,7 @@ table {
 .wrapper .mark__inner .leftmenu > ul > li .document {
   width: 24px;
   height: 24px;
-  background-image: url(../../assets/images/mypage/document.svg);
+  background-image: url(../../../assets/images/mypage/document.svg);
   display: inline-block;
   background-position: center;
   background-repeat: no-repeat;
@@ -215,7 +215,7 @@ table {
 .wrapper .mark__inner .leftmenu > ul > li .review {
   width: 24px;
   height: 24px;
-  background-image: url(../../assets/images/mypage/review.svg);
+  background-image: url(../../../assets/images/mypage/review.svg);
   display: inline-block;
   background-position: center;
   background-repeat: no-repeat;
@@ -224,7 +224,7 @@ table {
 .wrapper .mark__inner .leftmenu > ul > li .delivery {
   width: 24px;
   height: 24px;
-  background-image: url(../../assets/images/mypage/delivery.svg);
+  background-image: url(../../../assets/images/mypage/delivery.svg);
   display: inline-block;
   background-position: center;
   background-repeat: no-repeat;
@@ -233,7 +233,7 @@ table {
 .wrapper .mark__inner .leftmenu > ul > li .star {
   width: 24px;
   height: 24px;
-  background-image: url(../../assets/images/mypage/star.svg);
+  background-image: url(../../../assets/images/mypage/star.svg);
   display: inline-block;
   background-position: center;
   background-repeat: no-repeat;
@@ -242,7 +242,7 @@ table {
 .wrapper .mark__inner .leftmenu > ul > li .event {
   width: 24px;
   height: 24px;
-  background-image: url(../../assets/images/mypage/event.svg);
+  background-image: url(../../../assets/images/mypage/event.svg);
   display: inline-block;
   background-position: center;
   background-repeat: no-repeat;
@@ -361,7 +361,7 @@ table {
   margin-bottom: 10px;
   width: 150px;
   height: 120px;
-  background-image: url(../../assets/images/mypage/coupon__icon.svg);
+  background-image: url(../../../assets/images/mypage/coupon__icon.svg);
   display: inline-block;
   background-position: center;
   background-repeat: no-repeat;

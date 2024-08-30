@@ -1,0 +1,542 @@
+/* VARIABLES */
+@font-face {
+  font-family: "Pretendard-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+}
+/* HEADING */
+/* -2% = 0.02 * 'n'px */ /* -3% = 0.03 * 'n'px */
+/* TEXT */
+/* -2% = 0.02 * 'n'px */
+/* -3% = 0.03 * 'n'px */
+/* TEXT BOLD */
+/* -2% = 0.02 * 'n'px */
+/* -3% = 0.03 * 'n'px */
+.background_cover {
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.object_cover {
+  object-fit: cover;
+  object-position: center;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+#wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: #292828;
+}
+#wrapper .container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  height: 90%;
+}
+#wrapper .container .inner__contents {
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: "Pretendard-Bold";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: -0.48px;
+  color: #4a4949;
+}
+#wrapper .container #info {
+  color: #4a4949;
+}
+#wrapper .container #info .info__id .id {
+  font-family: "Pretendard-Bold";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.48px;
+  margin-bottom: 5px;
+}
+#wrapper .container #info .info__id .user__id {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+#wrapper .container #info .info__id .user__id .userid {
+  border: 1px solid #b5b5b5;
+  border-radius: 5px;
+  width: 360px;
+  height: 40px;
+  padding: 10px;
+  font-family: "Pretendard-Regular";
+  font-size: 16px;
+  font-style: normal;
+  line-height: 24px;
+  letter-spacing: -0.48px;
+}
+#wrapper .container #info .info__password .user__password {
+  font-family: "Pretendard-Bold";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.48px;
+  margin-bottom: 2px;
+}
+#wrapper .container #info .info__password .password__txt {
+  font-family: "Pretendard-Regular";
+  font-size: 14px;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: -0.42px;
+  color: #6a6a6a;
+  margin-bottom: 2px;
+}
+#wrapper .container #info .info__password .password {
+  width: 360px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #b5b5b5;
+  margin-bottom: 10px;
+  font-family: "Pretendard-Regular";
+  font-size: 16px;
+  font-style: normal;
+  line-height: 24px;
+  letter-spacing: -0.48px;
+}
+#wrapper .container #info .info__password__check .password__check {
+  font-family: "Pretendard-Bold";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.48px;
+  margin-bottom: 2px;
+}
+#wrapper .container #info .info__password__check .confrim__password {
+  border: 1px solid #b5b5b5;
+  border-radius: 5px;
+  width: 360px;
+  height: 40px;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-family: "Pretendard-Regular";
+  font-size: 16px;
+  font-style: normal;
+  line-height: 24px;
+  letter-spacing: -0.48px;
+}
+#wrapper .container #info .info__email .user__email {
+  font-family: "Pretendard-Bold";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.48px;
+  margin-bottom: 2px;
+}
+#wrapper .container #info .info__email #email__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+#wrapper .container #info .info__email #email__item .email {
+  border: 1px solid #b5b5b5;
+  padding: 10px;
+  font-family: "Pretendard-Regular";
+  font-size: 16px;
+  font-style: normal;
+  line-height: 24px;
+  letter-spacing: -0.48px;
+  width: 170px;
+  height: 40px;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+#wrapper .container #info .info__email #email__item span {
+  color: #9a9a9a;
+}
+#wrapper .container #info .info__email #email__item .control {
+  width: 170px;
+  height: 40px;
+  display: flex;
+  padding-left: 10px;
+  font-family: "Pretendard-Regular";
+  font-size: 16px;
+  font-style: normal;
+  line-height: 24px;
+  letter-spacing: -0.48px;
+  border: 1px solid #b5b5b5;
+  border-radius: 5px;
+  margin-left: 5px;
+  color: #6a6a6a;
+}
+#wrapper .container #agreement #agree .agree__title {
+  color: #292828;
+  font-family: "Pretendard-Bold";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.48px;
+  margin-bottom: 2px;
+}
+#wrapper .container #agreement #agree #items {
+  width: 100%;
+  padding: 5px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  border: 1px solid red;
+  border: 1px solid #b5b5b5;
+  margin-bottom: 10px;
+  border-radius: 3px;
+}
+#wrapper .container #agreement #agree #items > div {
+  height: 28px;
+}
+#wrapper .container #agreement #agree #items #agree__box {
+  border-bottom: 1px solid #b5b5b5;
+  display: flex;
+  margin-bottom: 2px;
+}
+#wrapper .container #agreement #agree #items #agree__box .agree__checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3px;
+}
+#wrapper .container #agreement #agree #items #agree__box .agree__checkbox .checkbox {
+  width: 18px;
+  height: 18px;
+}
+#wrapper .container #agreement #agree #items #agree__box .agree__checkbox .txt {
+  font-family: "Pretendard-Bold";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.48px;
+  margin-left: 5px;
+}
+#wrapper .container #agreement #agree #items #agree__box .agree__checkbox .txt__box {
+  font-family: "Pretendard-Regular";
+  font-size: 12px;
+  font-style: normal;
+  line-height: 18px;
+  letter-spacing: -0.36px;
+  margin-left: 5px;
+  color: #6a6a6a;
+}
+#wrapper .container #agreement #agree #items #age__box {
+  display: flex;
+  margin-bottom: 2px;
+}
+#wrapper .container #agreement #agree #items #age__box .age__checkbox {
+  display: flex;
+  align-items: center;
+  margin: 3px;
+}
+#wrapper .container #agreement #agree #items #age__box .age__checkbox .checkbox {
+  width: 18px;
+  height: 18px;
+}
+#wrapper .container #agreement #agree #items #age__box .age__checkbox .txt {
+  font-family: "Pretendard-Regular";
+  font-size: 14px;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: -0.42px;
+  margin-left: 5px;
+}
+#wrapper .container #agreement #agree #items #age__box .age__checkbox .txt__box {
+  font-family: "Pretendard-Regular";
+  font-size: 12px;
+  font-style: normal;
+  line-height: 18px;
+  letter-spacing: -0.36px;
+  margin-left: 5px;
+  color: #009fce;
+}
+#wrapper .container #agreement #agree #items #use__box {
+  display: flex;
+  margin-bottom: 2px;
+}
+#wrapper .container #agreement #agree #items #use__box .use__checkbox {
+  display: flex;
+  align-items: center;
+  margin: 3px;
+}
+#wrapper .container #agreement #agree #items #use__box .use__checkbox .checkbox {
+  width: 18px;
+  height: 18px;
+}
+#wrapper .container #agreement #agree #items #use__box .use__checkbox .txt {
+  font-family: "Pretendard-Regular";
+  font-size: 14px;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: -0.42px;
+  margin-left: 5px;
+}
+#wrapper .container #agreement #agree #items #use__box .use__checkbox .txt__box {
+  font-family: "Pretendard-Regular";
+  font-size: 12px;
+  font-style: normal;
+  line-height: 18px;
+  letter-spacing: -0.36px;
+  margin-left: 5px;
+  color: #009fce;
+}
+#wrapper .container #agreement #agree #items #userinfo__box {
+  display: flex;
+  margin-bottom: 2px;
+}
+#wrapper .container #agreement #agree #items #userinfo__box .userinfo__checkbox {
+  display: flex;
+  align-items: center;
+  margin: 3px;
+}
+#wrapper .container #agreement #agree #items #userinfo__box .userinfo__checkbox .checkbox {
+  width: 18px;
+  height: 18px;
+}
+#wrapper .container #agreement #agree #items #userinfo__box .userinfo__checkbox .txt {
+  font-family: "Pretendard-Regular";
+  font-size: 14px;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: -0.42px;
+  margin-left: 5px;
+}
+#wrapper .container #agreement #agree #items #userinfo__box .userinfo__checkbox .txt__box {
+  font-family: "Pretendard-Regular";
+  font-size: 12px;
+  font-style: normal;
+  line-height: 18px;
+  letter-spacing: -0.36px;
+  margin-left: 5px;
+  color: #009fce;
+}
+#wrapper .container #agreement #agree #items #marketing__box {
+  display: flex;
+  margin-bottom: 2px;
+}
+#wrapper .container #agreement #agree #items #marketing__box .marketing__checkbox {
+  display: flex;
+  align-items: center;
+  margin: 3px;
+}
+#wrapper .container #agreement #agree #items #marketing__box .marketing__checkbox .checkbox {
+  width: 18px;
+  height: 18px;
+}
+#wrapper .container #agreement #agree #items #marketing__box .marketing__checkbox .txt {
+  font-family: "Pretendard-Regular";
+  font-size: 14px;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: -0.42px;
+  margin-left: 5px;
+}
+#wrapper .container #agreement #agree #items #marketing__box .marketing__checkbox .txt__box {
+  font-family: "Pretendard-Regular";
+  font-size: 12px;
+  font-style: normal;
+  line-height: 18px;
+  letter-spacing: -0.36px;
+  margin-left: 5px;
+  color: #6a6a6a;
+}
+#wrapper .container #agreement #agree #items #event__box {
+  display: flex;
+}
+#wrapper .container #agreement #agree #items #event__box .event__checkbox {
+  display: flex;
+  align-items: center;
+  margin: 3px;
+}
+#wrapper .container #agreement #agree #items #event__box .event__checkbox .checkbox {
+  width: 18px;
+  height: 18px;
+}
+#wrapper .container #agreement #agree #items #event__box .event__checkbox .txt {
+  font-family: "Pretendard-Regular";
+  font-size: 14px;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: -0.42px;
+  margin-left: 5px;
+}
+#wrapper .container #agreement #agree #items #event__box .event__checkbox .txt__box {
+  font-family: "Pretendard-Regular";
+  font-size: 12px;
+  font-style: normal;
+  line-height: 18px;
+  letter-spacing: -0.36px;
+  margin-left: 5px;
+  color: #6a6a6a;
+}
+#wrapper .container #signup__btn button {
+  border: none;
+  width: 100%;
+  height: 45px;
+  background: #ff6d00;
+  color: #fff;
+  border-radius: 3px;
+  font-family: "Pretendard-Regular";
+  font-size: 16px;
+  font-style: normal;
+  line-height: 24px;
+  letter-spacing: -0.48px;
+}
+#wrapper .container #signup__btn button.hover {
+  background: #ff6d00;
+}

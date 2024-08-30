@@ -1,8 +1,9 @@
-@import "./config/fonts.scss";
-@import "./config/reset.scss";
-@import "./config/colors.scss";
-@import "./layout/layout.scss";
-@import "./config/image.scss";
+@import "../config/colors.scss";
+@import "../config/fonts.scss";
+@import "../config/image.scss";
+@import "../config/reset.scss";
+@import "../layout/layout.scss";
+
 
 #header {
   @include width_full;

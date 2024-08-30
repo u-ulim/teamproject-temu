@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* VARIABLES */
 @font-face {
   font-family: "Pretendard-Regular";
   font-style: normal;
@@ -13,6 +14,18 @@
 /* TEXT BOLD */
 /* -2% = 0.02 * 'n'px */
 /* -3% = 0.03 * 'n'px */
+.background_cover {
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.object_cover {
+  object-fit: cover;
+  object-position: center;
+}
+
 html,
 body,
 div,
@@ -153,19 +166,6 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-}
-
-/* VARIABLES */
-.background_cover {
-  display: inline-block;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.object_cover {
-  object-fit: cover;
-  object-position: center;
 }
 
 #header {

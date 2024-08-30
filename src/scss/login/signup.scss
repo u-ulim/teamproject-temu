@@ -1,0 +1,301 @@
+@import "../config/colors.scss";
+@import "../config/fonts.scss";
+@import "../config/image.scss";
+@import "../config/reset.scss";
+@import "../layout/layout.scss";
+
+#wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include width_full;
+  color: map-get($color, color-Neutrals-Grey-800);
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    // width: 100%;
+    height: 90%;
+    .inner__contents {
+      margin-bottom: 10px;
+      text-align: center;
+      @include heading_S_24;
+      color: map-get($color, color-Neutrals-Grey-700);
+    }
+    #info {
+      color: map-get($color, color-Neutrals-Grey-700);
+      .info__id {
+        .id {
+          //   border: 1px solid red;
+          @include text_B_M_16;
+          margin-bottom: 5px;
+        }
+        .user__id {
+          display: flex;
+          align-items: center;
+          margin-bottom: 10px;
+          .userid {
+            border: 1px solid map-get($color, color-Neutrals-Grey-300);
+            border-radius: 5px;
+            width: 360px;
+            height: 40px;
+            padding: 10px;
+            @include text_M_16;
+          }
+        }
+      }
+      .info__password {
+        .user__password {
+          //   border: 1px solid red;
+          @include text_B_M_16;
+          margin-bottom: 2px;
+        }
+        .password__txt {
+          @include text_S_14;
+          color: map-get($color, color-Neutrals-Grey-600);
+          margin-bottom: 2px;
+        }
+        .password {
+          width: 360px;
+          height: 40px;
+          padding: 10px;
+          border-radius: 5px;
+          border: 1px solid map-get($color, color-Neutrals-Grey-300);
+          margin-bottom: 10px;
+          @include text_M_16;
+        }
+      }
+      .info__password__check {
+        .password__check {
+          //   border: 1px solid red;
+          @include text_B_M_16;
+          margin-bottom: 2px;
+        }
+        .confrim__password {
+          border: 1px solid map-get($color, color-Neutrals-Grey-300);
+          border-radius: 5px;
+          width: 360px;
+          height: 40px;
+          padding: 10px;
+          margin-bottom: 10px;
+          @include text_M_16;
+        }
+      }
+      .info__email {
+        .user__email {
+          @include text_B_M_16;
+          margin-bottom: 2px;
+        }
+        #email__item {
+          display: flex;
+          align-items: center;
+          margin-bottom: 15px;
+          .email {
+            border: 1px solid map-get($color, color-Neutrals-Grey-300);
+            padding: 10px;
+            @include text_M_16;
+            width: 170px;
+            height: 40px;
+            border-radius: 5px;
+            margin-right: 5px;
+          }
+          span {
+            color: map-get($color, color-Neutrals-Grey-400);
+          }
+          .control {
+            // border: 1px solid red;
+            width: 170px;
+            height: 40px;
+            display: flex;
+            padding-left: 10px;
+            @include text_M_16;
+            border: 1px solid map-get($color, color-Neutrals-Grey-300);
+            border-radius: 5px;
+            margin-left: 5px;
+            color: map-get($color, color-Neutrals-Grey-600);
+          }
+        }
+      }
+    }
+    #agreement {
+      #agree {
+        .agree__title {
+          color: map-get($color, color-Neutrals-Grey-800);
+          @include text_B_M_16;
+          margin-bottom: 2px;
+        }
+        #items {
+          width: 100%;
+          padding: 5px 20px;
+          display: flex;
+          flex-direction: column;
+          // justify-content: center;
+          justify-content: start;
+          border: 1px solid red;
+          border: 1px solid map-get($color, color-Neutrals-Grey-300);
+          margin-bottom: 10px;
+          border-radius: 3px;
+          > div {
+            height: 28px;
+          }
+          #agree__box {
+            border-bottom: 1px solid map-get($color, color-Neutrals-Grey-300);
+            display: flex;
+            margin-bottom: 2px;
+            .agree__checkbox {
+              display: flex;
+              align-items: center;
+              margin-bottom: 3px;
+              .checkbox {
+                width: 18px;
+                height: 18px;
+              }
+              .txt {
+                // border: 1px solid red;
+                @include text_B_M_16;
+                margin-left: 5px;
+              }
+              .txt__box {
+                @include text_XS_12;
+                margin-left: 5px;
+                color: map-get($color, color-Neutrals-Grey-600);
+              }
+            }
+          }
+          #age__box {
+            display: flex;
+            margin-bottom: 2px;
+            .age__checkbox {
+              display: flex;
+              align-items: center;
+              margin: 3px;
+              .checkbox {
+                width: 18px;
+                height: 18px;
+              }
+              .txt {
+                // border: 1px solid red;
+                @include text_S_14;
+                margin-left: 5px;
+              }
+              .txt__box {
+                @include text_XS_12;
+                margin-left: 5px;
+                color: map-get($color-system, font-color);
+              }
+            }
+          }
+          #use__box {
+            display: flex;
+            margin-bottom: 2px;
+            .use__checkbox {
+              display: flex;
+              align-items: center;
+              margin: 3px;
+              .checkbox {
+                width: 18px;
+                height: 18px;
+              }
+              .txt {
+                // border: 1px solid red;
+                @include text_S_14;
+                margin-left: 5px;
+              }
+              .txt__box {
+                @include text_XS_12;
+                margin-left: 5px;
+                color: map-get($color-system, font-color);
+              }
+            }
+          }
+          #userinfo__box {
+            display: flex;
+            margin-bottom: 2px;
+            .userinfo__checkbox {
+              display: flex;
+              align-items: center;
+              margin: 3px;
+              .checkbox {
+                width: 18px;
+                height: 18px;
+              }
+              .txt {
+                // border: 1px solid red;
+                @include text_S_14;
+                margin-left: 5px;
+              }
+              .txt__box {
+                @include text_XS_12;
+                margin-left: 5px;
+                color: map-get($color-system, font-color);
+              }
+            }
+          }
+          #marketing__box {
+            display: flex;
+            margin-bottom: 2px;
+            .marketing__checkbox {
+              display: flex;
+              align-items: center;
+              margin: 3px;
+              .checkbox {
+                width: 18px;
+                height: 18px;
+              }
+              .txt {
+                // border: 1px solid red;
+                @include text_S_14;
+                margin-left: 5px;
+              }
+              .txt__box {
+                @include text_XS_12;
+                margin-left: 5px;
+                color: map-get($color, color-Neutrals-Grey-600);
+              }
+            }
+          }
+          #event__box {
+            display: flex;
+            // margin-bottom: 2px;
+            .event__checkbox {
+              display: flex;
+              align-items: center;
+              margin: 3px;
+              .checkbox {
+                width: 18px;
+                height: 18px;
+              }
+
+              .txt {
+                // border: 1px solid red;
+                @include text_S_14;
+                margin-left: 5px;
+              }
+              .txt__box {
+                @include text_XS_12;
+                margin-left: 5px;
+                color: map-get($color, color-Neutrals-Grey-600);
+              }
+            }
+          }
+        }
+      }
+    }
+    #signup__btn {
+      button {
+        border: none;
+        width: 100%;
+        height: 45px;
+        background: map-get($color, primary-color);
+        color: map-get($color, color-White);
+        border-radius: 3px;
+        @include text_M_16;
+        &.hover {
+          background: map-get($color, primary-color);
+        }
+      }
+    }
+  }
+}

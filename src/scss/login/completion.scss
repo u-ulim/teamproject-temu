@@ -1,15 +1,14 @@
-@import "./config/fonts.scss";
-@import "./config/reset.scss";
-@import "./config/colors.scss";
-@import "./config/./image.scss";
-@import "./layout/layout.scss";
+@import "../config/colors.scss";
+@import "../config/fonts.scss";
+@import "../config/image.scss";
+@import "../config/reset.scss";
+@import "../layout/layout.scss";
 
 // WRAPPER
 .wrapper {
   width: 100%;
   height: 100vh;
   @include width_inner;
-  // MARK__INNER
   .mark__inner {
     display: flex;
     height: 100%;
@@ -17,6 +16,7 @@
     .leftmenu {
       width: 200px;
       height: 100%;
+
       // UL
       > ul {
         .home {
@@ -37,32 +37,32 @@
           .document {
             width: 24px;
             height: 24px;
-            background-image: url(../../assets/images/mypage/document.svg);
+            background-image: url(../../../assets/images/mypage/document.svg);
             @include background_cover;
           }
 
           .review {
             width: 24px;
             height: 24px;
-            background-image: url(../../assets/images/mypage/review.svg);
+            background-image: url(../../../assets/images/mypage/review.svg);
             @include background_cover;
           }
           .delivery {
             width: 24px;
             height: 24px;
-            background-image: url(../../assets/images/mypage/delivery.svg);
+            background-image: url(../../../assets/images/mypage/delivery.svg);
             @include background_cover;
           }
           .star {
             width: 24px;
             height: 24px;
-            background-image: url(../../assets/images/mypage/star.svg);
+            background-image: url(../../../assets/images/mypage/star.svg);
             @include background_cover;
           }
           .event {
             width: 24px;
             height: 24px;
-            background-image: url(../../assets/images/mypage/event.svg);
+            background-image: url(../../../assets/images/mypage/event.svg);
             @include background_cover;
           }
           span {
@@ -73,7 +73,6 @@
           display: flex;
           align-items: center;
           justify-content: space-between;
-          // border: 1px solid red;
           width: 170px;
 
           > div {
@@ -116,8 +115,9 @@
     // CONTAINER
     .container {
       // CONTENTS
+      width: 100%;
       .contents {
-        // TEXT 
+        // TEXT
         .text {
           display: flex;
           gap: 60px;
@@ -140,7 +140,7 @@
           }
         }
       }
-      // BOX 
+      // BOX
       .box {
         width: 953px;
         // ITEM
@@ -154,7 +154,7 @@
           .productImg {
             width: 71px;
             height: 71px;
-            background-image: url(../../assets/images/mypage/productImg.svg);
+            background-image: url(../../../assets/images/mypage/productImg.svg);
             @include background_cover;
           }
           // TEXT__BOX
@@ -189,7 +189,7 @@
               .img {
                 width: 20px;
                 height: 20px;
-                background-image: url(../../assets/images/mypage/reviewstar.svg);
+                background-image: url(../../../assets/images/mypage/reviewstar.svg);
                 @include background_cover;
               }
               span {
@@ -236,7 +236,7 @@
                   @include background_cover;
                   width: 18px;
                   height: 18px;
-                  background-image: url(../../assets/images/mypage/good.svg);
+                  background-image: url(../../../assets/images/mypage/good.svg);
                 }
                 &:not(:first-child) {
                   margin-right: 10px;
@@ -271,6 +271,10 @@
   }
 }
 
+@media screen and (max-width: 1384px) {
+  .wrapper {
+  }
+}
 // MOBILE
 @media screen and (max-width: 768px) {
   // WRAPPER
@@ -286,7 +290,7 @@
       .leftmenu {
         display: flex;
       }
-      // CONTAINER 
+      // CONTAINER
       .container {
         // CONTENTS
         .contents {
@@ -297,19 +301,18 @@
         }
         // BOX
         .box {
-          width: 100%;
           // REVEIW
+          width: 100%;
+
           .reveiw {
             // STARBOX
+
             .starBox {
               display: flex;
               // STARIMG
               .starImg {
                 width: 100%;
                 // IMG
-                .img {
-                  margin-right: 3px;
-                }
                 // SPAN
                 span {
                   width: 70%;
@@ -331,6 +334,7 @@
               }
             }
             // END__BOX
+
             .end__box {
               .other {
                 @include text_S_14;
@@ -372,12 +376,10 @@
           .productImg {
             width: 97px;
             height: 97px;
-            border: 1px solid blue;
           }
           // TEXT__BOX
           .text__box {
-            border: 1px solid #000;
-            width: 40px;
+            width: 0px;
           }
         }
       }

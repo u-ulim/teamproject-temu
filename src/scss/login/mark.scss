@@ -1,8 +1,9 @@
-@import "./config/fonts.scss";
-@import "./config/reset.scss";
-@import "./config/colors.scss";
-@import "./config/./image.scss";
-@import "./layout/layout.scss";
+@import "../config/colors.scss";
+@import "../config/fonts.scss";
+@import "../config/image.scss";
+@import "../config/reset.scss";
+@import "../layout/layout.scss";
+
 
 .wrapper {
   width: 100%;
@@ -15,6 +16,7 @@
     .leftmenu {
       width: 200px;
       height: 100%;
+      // UL
       > ul {
         .home {
           padding: 20px 18px;
@@ -34,32 +36,32 @@
           .document {
             width: 24px;
             height: 24px;
-            background-image: url(../../assets/images/mypage/document.svg);
+            background-image: url(../../../assets/images/mypage/document.svg);
             @include background_cover;
           }
 
           .review {
             width: 24px;
             height: 24px;
-            background-image: url(../../assets/images/mypage/review.svg);
+            background-image: url(../../../assets/images/mypage/review.svg);
             @include background_cover;
           }
           .delivery {
             width: 24px;
             height: 24px;
-            background-image: url(../../assets/images/mypage/delivery.svg);
+            background-image: url(../../../assets/images/mypage/delivery.svg);
             @include background_cover;
           }
           .star {
             width: 24px;
             height: 24px;
-            background-image: url(../../assets/images/mypage/star.svg);
+            background-image: url(../../../assets/images/mypage/star.svg);
             @include background_cover;
           }
           .event {
             width: 24px;
             height: 24px;
-            background-image: url(../../assets/images/mypage/event.svg);
+            background-image: url(../../../assets/images/mypage/event.svg);
             @include background_cover;
           }
           span {

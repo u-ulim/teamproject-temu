@@ -1,3 +1,4 @@
+/* VARIABLES */
 @font-face {
   font-family: "Pretendard-Regular";
   font-style: normal;
@@ -12,6 +13,18 @@
 /* TEXT BOLD */
 /* -2% = 0.02 * 'n'px */
 /* -3% = 0.03 * 'n'px */
+.background_cover {
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.object_cover {
+  object-fit: cover;
+  object-position: center;
+}
+
 html,
 body,
 div,
@@ -154,20 +167,8 @@ table {
   border-spacing: 0;
 }
 
-/* VARIABLES */
-.background_cover {
-  display: inline-block;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.object_cover {
-  object-fit: cover;
-  object-position: center;
-}
-
 .wrapper {
+  position: relative;
   width: 100%;
   height: 100vh;
   width: 1384px;
@@ -205,7 +206,7 @@ table {
 .wrapper .mark__inner .leftmenu > ul > li .document {
   width: 24px;
   height: 24px;
-  background-image: url(../../assets/images/mypage/document.svg);
+  background-image: url(../../../assets/images/mypage/document.svg);
   display: inline-block;
   background-position: center;
   background-repeat: no-repeat;
@@ -214,7 +215,7 @@ table {
 .wrapper .mark__inner .leftmenu > ul > li .review {
   width: 24px;
   height: 24px;
-  background-image: url(../../assets/images/mypage/review.svg);
+  background-image: url(../../../assets/images/mypage/review.svg);
   display: inline-block;
   background-position: center;
   background-repeat: no-repeat;
@@ -223,7 +224,7 @@ table {
 .wrapper .mark__inner .leftmenu > ul > li .delivery {
   width: 24px;
   height: 24px;
-  background-image: url(../../assets/images/mypage/delivery.svg);
+  background-image: url(../../../assets/images/mypage/delivery.svg);
   display: inline-block;
   background-position: center;
   background-repeat: no-repeat;
@@ -232,7 +233,7 @@ table {
 .wrapper .mark__inner .leftmenu > ul > li .star {
   width: 24px;
   height: 24px;
-  background-image: url(../../assets/images/mypage/star.svg);
+  background-image: url(../../../assets/images/mypage/star.svg);
   display: inline-block;
   background-position: center;
   background-repeat: no-repeat;
@@ -241,7 +242,7 @@ table {
 .wrapper .mark__inner .leftmenu > ul > li .event {
   width: 24px;
   height: 24px;
-  background-image: url(../../assets/images/mypage/event.svg);
+  background-image: url(../../../assets/images/mypage/event.svg);
   display: inline-block;
   background-position: center;
   background-repeat: no-repeat;
@@ -300,157 +301,90 @@ table {
   padding: 5px 5px;
   background: #fff7f0;
 }
-.wrapper .mark__inner .container .contents .text {
+.wrapper .mark__inner .contents .text {
   display: flex;
   gap: 60px;
-  margin-bottom: 20px;
+  margin-bottom: 13px;
   padding-top: 50px;
   width: 100%;
   font-size: 14px;
-  color: #292828;
   cursor: pointer;
 }
-.wrapper .mark__inner .container .contents .text span:hover {
-  cursor: pointer;
-}
-.wrapper .mark__inner .container .contents .text span:nth-child(1) {
+.wrapper .mark__inner .contents .text span:nth-child(1) {
   color: #818181;
 }
-.wrapper .mark__inner .container .contents .text span:nth-child(1):hover {
+.wrapper .mark__inner .contents .text span:nth-child(1):hover {
   color: #292828;
 }
-.wrapper .mark__inner .container .box {
-  width: 953px;
-}
-.wrapper .mark__inner .container .box .item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
-  width: 100%;
-  height: 100%;
-}
-.wrapper .mark__inner .container .box .item .productImg {
-  width: 71px;
-  height: 71px;
-  background-image: url(../../assets/images/mypage/productImg.svg);
-  display: inline-block;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.wrapper .mark__inner .container .box .item .text__box {
-  padding: 14px 11px;
-  width: 100%;
-  height: 100%;
-  background: #f6f6f6;
-}
-.wrapper .mark__inner .container .box .item .text__box p {
-  margin-bottom: 5px;
-  font-family: "Pretendard-Regular";
-  font-size: 14px;
-  font-style: normal;
-  line-height: 22px;
-  letter-spacing: -0.42px;
-}
-.wrapper .mark__inner .container .box .item .text__box span {
-  font-family: "Pretendard-Regular";
-  font-size: 12px;
-  font-style: normal;
-  line-height: 18px;
-  letter-spacing: -0.36px;
+.wrapper .mark__inner .contents .text span:nth-child(3) {
   color: #818181;
 }
-.wrapper .mark__inner .container .box .reveiw .starBox {
-  display: flex;
-  justify-content: space-between;
-}
-.wrapper .mark__inner .container .box .reveiw .starBox .starImg {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 15px;
-}
-.wrapper .mark__inner .container .box .reveiw .starBox .starImg .img {
-  width: 20px;
-  height: 20px;
-  background-image: url(../../assets/images/mypage/reviewstar.svg);
-  display: inline-block;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.wrapper .mark__inner .container .box .reveiw .starBox .starImg span {
-  padding: 5px;
-  font-family: "Pretendard-Regular";
-  font-size: 14px;
-  font-style: normal;
-  line-height: 22px;
-  letter-spacing: -0.42px;
-}
-.wrapper .mark__inner .container .box .reveiw .starBox .date {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  width: 180px;
-}
-.wrapper .mark__inner .container .box .reveiw .starBox .date span {
-  color: #818181;
-}
-.wrapper .mark__inner .container .box .reveiw .text {
-  margin-bottom: 15px;
-}
-.wrapper .mark__inner .container .box .reveiw .text span {
-  font-family: "Pretendard-Regular";
-  font-size: 14px;
-  font-style: normal;
-  line-height: 22px;
-  letter-spacing: -0.42px;
+.wrapper .mark__inner .contents .text span:nth-child(3):hover {
   color: #292828;
 }
-.wrapper .mark__inner .container .box .reveiw .end__box {
+.wrapper .mark__inner .contents .coupon__code {
   display: flex;
-  justify-content: space-between;
+  gap: 22px;
 }
-.wrapper .mark__inner .container .box .reveiw .end__box .other {
-  display: flex;
-  align-items: center;
-}
-.wrapper .mark__inner .container .box .reveiw .end__box .other .item__box {
-  display: flex;
-  gap: 3px;
-  align-items: center;
-}
-.wrapper .mark__inner .container .box .reveiw .end__box .other span:first-child {
-  display: inline-block;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 18px;
-  height: 18px;
-  background-image: url(../../assets/images/mypage/good.svg);
-}
-.wrapper .mark__inner .container .box .reveiw .end__box .other span:not(:first-child) {
-  margin-right: 10px;
-  color: #292828;
-}
-.wrapper .mark__inner .container .box .reveiw .end__box .other span:not(:first-child):hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-.wrapper .mark__inner .container .box .reveiw .end__box .share {
-  display: flex;
-  gap: 5px;
-  align-items: center;
-  justify-content: center;
+.wrapper .mark__inner .contents .coupon__code .code {
+  padding-left: 14px;
   border: 1px solid #9a9a9a;
-  width: 130px;
+  width: 308px;
   height: 40px;
-  color: #9a9a9a;
   border-radius: 8px;
 }
-.wrapper .mark__inner .container .box .reveiw .end__box .share:hover {
-  background: #f6f6f6;
+.wrapper .mark__inner .contents .coupon__code button {
+  border: 1px solid #292828;
+  width: 82px;
+  height: 40px;
+  background: #fff;
   cursor: pointer;
+  border-radius: 8px;
+}
+.wrapper .mark__inner .contents .coupon__code button:hover {
+  background: #f6f6f6;
+}
+.wrapper .mark__inner .box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.wrapper .mark__inner .box .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 350px;
+}
+.wrapper .mark__inner .box .icon .coupon__icon {
+  display: inline-block;
+  margin-bottom: 10px;
+  width: 120px;
+  height: 120px;
+  background-image: url(../../../assets/images/mypage/coupon__icon.svg);
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.wrapper .mark__inner .box .icon .text__box span {
+  font-family: "Pretendard-Regular";
+  font-size: 16px;
+  font-style: normal;
+  line-height: 24px;
+  letter-spacing: -0.48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 7px;
+}
+.wrapper .mark__inner .box .icon .text__box p {
+  font-family: "Pretendard-Regular";
+  font-size: 14px;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: -0.42px;
 }
 
 @media screen and (max-width: 768px) {
@@ -461,85 +395,86 @@ table {
   }
   .wrapper .mark__inner {
     display: flex;
-    width: 100%;
+    height: 100%;
   }
   .wrapper .mark__inner .leftmenu {
     display: flex;
   }
-  .wrapper .mark__inner .container .contents .text {
+  .wrapper .mark__inner .leftmenu .fa-chevron-down {
+    margin-left: 30px;
+  }
+  .wrapper .mark__inner .contents .text {
     gap: 30px;
   }
-  .wrapper .mark__inner .container .box {
-    width: 100%;
+  .wrapper .mark__inner .contents .coupon__code {
+    gap: 10px;
   }
-  .wrapper .mark__inner .container .box .reveiw .starBox {
-    display: flex;
+  .wrapper .mark__inner .contents .coupon__code .code {
+    width: 290px;
   }
-  .wrapper .mark__inner .container .box .reveiw .starBox .starImg {
-    width: 100%;
+  .wrapper .mark__inner .contents .coupon__code button {
+    width: 60px;
+    height: 40px;
   }
-  .wrapper .mark__inner .container .box .reveiw .starBox .starImg .img {
-    margin-right: 3px;
-  }
-  .wrapper .mark__inner .container .box .reveiw .starBox .starImg span {
-    width: 70%;
-  }
-  .wrapper .mark__inner .container .box .reveiw .starBox .date {
-    width: 100%;
-  }
-  .wrapper .mark__inner .container .box .reveiw .starBox .date span {
+  .wrapper .mark__inner .box .icon span {
     font-family: "Pretendard-Regular";
     font-size: 14px;
     font-style: normal;
     line-height: 22px;
     letter-spacing: -0.42px;
+    width: 100%;
   }
-  .wrapper .mark__inner .container .box .reveiw .text {
-    padding-top: 5px;
-  }
-  .wrapper .mark__inner .container .box .reveiw .text span {
-    display: flex;
-  }
-  .wrapper .mark__inner .container .box .reveiw .end__box .other {
+  .wrapper .mark__inner .box .icon p {
     font-family: "Pretendard-Regular";
-    font-size: 14px;
+    font-size: 12px;
     font-style: normal;
-    line-height: 22px;
-    letter-spacing: -0.42px;
-  }
-  .wrapper .mark__inner .container .box .reveiw .share {
-    width: 90px;
-    height: 30px;
-    font-family: "Pretendard-Regular";
-    font-size: 14px;
-    font-style: normal;
-    line-height: 22px;
-    letter-spacing: -0.42px;
+    line-height: 18px;
+    letter-spacing: -0.36px;
   }
 }
 @media screen and (max-width: 390px) {
   .wrapper {
     width: 100%;
+    width: 390px;
     height: 100vh;
-    width: 100%;
   }
   .wrapper .mark__inner {
     display: flex;
-    width: 100%;
   }
   .wrapper .mark__inner .leftmenu {
     display: none;
   }
-  .wrapper .mark__inner .box {
+  .wrapper .mark__inner .contents .text {
+    gap: 30px;
+  }
+  .wrapper .mark__inner .contents .coupon__code {
+    gap: 10px;
+  }
+  .wrapper .mark__inner .contents .coupon__code .code {
+    width: 290px;
+  }
+  .wrapper .mark__inner .contents .coupon__code button {
+    width: 60px;
+    height: 40px;
+  }
+  .wrapper .mark__inner .box .icon .text__box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     width: 100%;
   }
-  .wrapper .mark__inner .box .item .productImg {
-    width: 97px;
-    height: 97px;
-    border: 1px solid blue;
+  .wrapper .mark__inner .box .icon .text__box span {
+    font-family: "Pretendard-Regular";
+    font-size: 12px;
+    font-style: normal;
+    line-height: 18px;
+    letter-spacing: -0.36px;
   }
-  .wrapper .mark__inner .box .item .text__box {
-    border: 1px solid #000;
-    width: 40px;
+  .wrapper .mark__inner .box .icon .text__box p {
+    font-family: "Pretendard-Regular";
+    font-size: 12px;
+    font-style: normal;
+    line-height: 18px;
+    letter-spacing: -0.36px;
   }
 }
