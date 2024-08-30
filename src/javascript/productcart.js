@@ -1,3 +1,109 @@
+let productInfoCart = document.querySelector(".product__info");
+const getCartProducts = JSON.parse(localStorage.getItem("setCartProducts"));
+
+getCartProducts.forEach((product) => {
+  console.log(product);
+  const newListItem = document.createElement("ul");
+  newListItem.classList.add("product");
+
+  const {
+    img,
+    title,
+    selectColor,
+    selectSize,
+    quan,
+    discountRate,
+    sumPrice,
+    discountingPrice,
+  } = product;
+
+  const cartProductHTML = `<li class="custom__box">
+<div>
+  <input
+    type="checkbox"
+    name="checkbox"
+    id="custom__checkbox"
+    class="custom__checkbox"
+  />
+  <label for="custom__checkbox" class="select"></label>
+</div>
+</li>
+<li class="img">
+<div>
+  <img src="${img}" alt="${title}"/>
+</div>
+</li>
+<li class="product__info">
+<div>
+  <div class="product__text-up">
+    <span>${title}</span>
+  </div>
+  <div class="product__text-middle">
+    <span>${selectColor}</span>
+    <span>|</span>
+    <span>${selectSize}</span>
+  </div>
+  <div class="product__text-down">
+    <input type="submit" value="옵션변경" class="option" />
+    <span>|</span>
+    <input type="submit" value="바로구매" />
+  </div>
+</div>
+</li>
+<!-- number__input -->
+<li class="number__box">
+<form class="original__add-minus">
+  <input
+    type="hidden"
+    class="original__sell-price"
+    id="original__sell-price"
+  />
+  <div class="number__input">
+    <input
+      type="button"
+      value="+"
+      class="original-add"
+      id="original-add"
+    />
+    <input
+      type="text"
+      class="original-amount"
+      id="original-amount"
+      disabled
+      size="2"
+      value = "${quan}"
+    /> 
+    <input
+      type="button"
+      value="-"
+      class="original-minus"
+      id="original-minus"
+    />
+  </div>
+</form>
+</li>
+<li class="price__info">
+<div>
+  <span class="original-price" id="original-price">￦${sumPrice}</span>
+  <div class="price__text-down">
+    <span class="sale">-${discountRate}%</span>
+    <span>￦${discountingPrice}</span>
+  </div>
+</div>
+</li>
+<li class="product__close">
+<div>
+  <span></span>
+  <span></span>
+</div>
+</li>`;
+
+  newListItem.innerHTML = cartProductHTML;
+  productInfoCart.appendChild(newListItem);
+});
+
+//배너
+
 const banner = document.querySelector(".banner");
 const bannerClose = document.querySelector(".banner-close");
 const optionSelect = document.querySelector(".option");
@@ -162,46 +268,46 @@ productCheckboxes.forEach(function (checkbox) {
   });
 });
 
-// 상품 삭제 후 빈 카트 이미지
-let deleteSelectedBtn = document.querySelector("button");
-let emptyCartMessage = document.querySelector(".empty__product");
-let productInfo = document.querySelector(".product__info");
-let productClose = document.querySelector(".product__close");
-const itemCount = document.querySelector(".item__count");
+// // 상품 삭제 후 빈 카트 이미지
+// let deleteSelectedBtn = document.querySelector("button");
+// let emptyCartMessage = document.querySelector(".empty__product");
+// let productInfo = document.querySelector(".product__info");
+// let productClose = document.querySelector(".product__close");
+// const itemCount = document.querySelector(".item__count");
 
-// 툴바에 존재하는 선택삭제 버튼
-deleteSelectedBtn.addEventListener("click", function () {
-  productCheckboxes.forEach(function (checkbox) {
-    if (checkbox.checked) {
-      let product = checkbox.closest(".product");
-      product.remove();
-    }
-  });
-  checkIfCartIsEmpty();
-});
+// // 툴바에 존재하는 선택삭제 버튼
+// deleteSelectedBtn.addEventListener("click", function () {
+//   productCheckboxes.forEach(function (checkbox) {
+//     if (checkbox.checked) {
+//       let cart = checkbox.closest(".product");
+//       cart.remove();
+//     }
+//   });
+//   checkIfCartIsEmpty();
+// });
 
-// 삭제 표시
-if (productClose) {
-  productClose.addEventListener("click", function () {
-    let product = productClose.closest(".product");
-    if (product) {
-      product.remove();
-    }
-    checkIfCartIsEmpty();
-  });
-}
+// // 삭제 표시
+// if (productClose) {
+//   productClose.addEventListener("click", function () {
+//     let cart2 = productClose.closest(".product");
+//     if (cart2) {
+//       cart2.remove();
+//     }
+//     checkIfCartIsEmpty();
+//   });
+// }
 
-// 장바구니가 비어있는지
-function checkIfCartIsEmpty() {
-  let productItems = productInfo.querySelectorAll("ul.product");
-  if (productItems.length === 0) {
-    emptyCartMessage.style.display = "block";
-    productInfo.style.display = "none";
-    selectAllCheckbox.checked = false;
-  } else {
-    emptyCartMessage.style.display = "none";
-    productInfo.style.display = "block";
-  }
-}
+// // 장바구니가 비어있는지
+// function checkIfCartIsEmpty() {
+//   let productItems = productInfo.querySelectorAll("ul.product");
+//   if (productItems.length === 0) {
+//     emptyCartMessage.style.display = "block";
+//     productInfo.style.display = "none";
+//     selectAllCheckbox.checked = false;
+//   } else {
+//     emptyCartMessage.style.display = "none";
+//     productInfo.style.display = "block";
+//   }
+// }
 
-checkIfCartIsEmpty();
+// checkIfCartIsEmpty();

@@ -561,16 +561,17 @@ fetch(productsURL)
       </button>
     </div>
     <div class="detail__main-contentsbox-select">
-
-      <div class="detail__main-contentsbox-selects">
-        ${createSelectOptions(product.details.selectOptions)}
-      </div>
-      
-      <h3>주문금액 <span>${price}원</span></h3>
-      <div>
-        <button class="select-cart-btn">장바구니</button>
-        <button class="select-buy-btn">바로구매</button>
-      </div>
+      <form>
+        <div class="detail__main-contentsbox-selects">
+          ${createSelectOptions(product.details.selectOptions)}
+        </div>
+        
+        <h3>주문금액 <span>${price}원</span></h3>
+        <div>
+          <button type="submit" class="select-cart-btn">장바구니</button>
+          <button type="button" class="select-buy-btn">바로구매</button>
+        </div>
+      </form>
     </div>
   </div>
   </div>
@@ -636,22 +637,25 @@ fetch(productsURL)
       });
 
       // 상품 추가 시 가격 합산
+      let multiplePrice;
+      let sumPrice = document.querySelector(
+        ".detail__right-box .detail__main-contentsbox-select > form >  h3 > span"
+      );
+      let quan = 1;
       const selectQuantityElement = document.querySelector(
-        ".detail__main-contentsbox-selects > #selectQuantity"
+        ".detail__right-box .detail__main-contentsbox-selects >  #selectQuantity"
       );
       selectQuantityElement.addEventListener("change", (e) => {
-        const quan = e.target.value;
-        const sumPrice = document.querySelector(
-          ".detail__main-contentsbox-select > h3 > span"
-        );
+        quan = e.target.value;
 
         const priceNoComma = price.replace(/,/g, "");
-        const multiplePrice = new Intl.NumberFormat("ko-kr", {}).format(
+        multiplePrice = new Intl.NumberFormat("ko-kr", {}).format(
           priceNoComma * quan
         );
         // sumPrice.innerText = price * quan;
         sumPrice.innerText = `${multiplePrice}원`;
       });
+      multiplePrice = Number(sumPrice.innerText.replace(/원|,/g, ""));
 
       // scroll evt
       const rightBoxScrollEvt = () => {
@@ -725,6 +729,44 @@ fetch(productsURL)
           }
         });
       });
+
+      // cartLocalStorage
+      let setCartProducts =
+        JSON.parse(localStorage.getItem("setCartProducts")) || [];
+
+      const localStorageSave = () => {
+        localStorage.setItem(
+          "setCartProducts",
+          JSON.stringify(setCartProducts)
+        );
+      };
+      const setCartHandler = (e) => {
+        e.preventDefault();
+        const selectColor = document.querySelector("#colors");
+        const selectSize = document.querySelector("#sizes");
+        const discountingPrice = product.details.beforePrice - product.price;
+        const cartProduct = {
+          id: product.id,
+          title: product.title,
+          price: product.price, // 판매가격
+          quan: quan, // 수량
+          sumPrice: multiplePrice, // 총주문금액 (수량 * price)
+          img: product.thumbnail, // 이미지
+          discountRate: product.discountRate, //할인율
+          beforePrice: product.details.beforePrice, //할인되기전가격
+          discountingPrice: discountingPrice, //할인이 얼마나 되는지
+          discountedPrice: discountingPrice * quan, // 할인이 된 가격(*수량)
+          selectColor: selectColor.value,
+          selectSize: selectSize.value,
+        };
+        setCartProducts.push(cartProduct);
+        console.log(setCartProducts);
+        localStorageSave();
+      };
+      const form = document.querySelector(
+        ".detail__right-box .detail__main-contentsbox-select > form"
+      );
+      form.addEventListener("submit", setCartHandler);
     };
 
     // 페이지 이동

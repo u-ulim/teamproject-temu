@@ -291,7 +291,7 @@ body {
                 margin-bottom: 17px;
                 color: map-get($color, color-Black);
               }
-              > div {
+              div {
                 display: flex;
                 justify-content: space-between;
                 button {
@@ -1061,57 +1061,59 @@ body {
         }
         .detail__main-contentsbox-select {
           padding-bottom: 30px;
-          .detail__main-contentsbox-selects {
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 12px;
-            select {
-              display: inline-block;
-              margin-bottom: 0px;
-              padding-left: 15px;
-              border: 1px solid map-get($color, color-Neutrals-Grey-200);
-              height: 32px;
-              background: url("../../../assets/images/product-detail/select-arrow.svg")
-                no-repeat right 15px center;
-              cursor: pointer;
-              appearance: none;
-              border-radius: 8px;
-              option {
+          form {
+            .detail__main-contentsbox-selects {
+              display: flex;
+              flex-direction: column;
+              margin-bottom: 12px;
+              select {
+                display: inline-block;
+                margin-bottom: 0px;
+                padding-left: 15px;
+                border: 1px solid map-get($color, color-Neutrals-Grey-200);
+                height: 32px;
+                background: url("../../../assets/images/product-detail/select-arrow.svg")
+                  no-repeat right 15px center;
                 cursor: pointer;
+                appearance: none;
+                border-radius: 8px;
+                option {
+                  cursor: pointer;
+                }
               }
             }
-          }
-          h3 {
-            @include text_B_S_14;
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 17px;
-            color: map-get($color, color-Black);
-            > span {
-              @include text_B_L_18;
+            h3 {
+              @include text_B_S_14;
+              display: flex;
+              justify-content: space-between;
+              margin-bottom: 17px;
+              color: map-get($color, color-Black);
+              > span {
+                @include text_B_L_18;
+              }
             }
-          }
-          > div {
-            display: flex;
-            justify-content: space-between;
-            button {
-              padding-top: 2px;
-              border: 2px solid map-get($color, primary-color);
-              outline: none;
-              width: 49%;
-              height: 46px;
-              background-color: map-get($color, color-White);
-              cursor: pointer;
-              border-radius: 5px;
-              @include text_B_L_18;
-            }
-            .select-cart-btn {
-              color: map-get($color, primary-color);
-            }
-            .select-buy-btn {
-              background-color: map-get($color, primary-color);
+            > div {
+              display: flex;
+              justify-content: space-between;
+              button {
+                padding-top: 2px;
+                border: 2px solid map-get($color, primary-color);
+                outline: none;
+                width: 49%;
+                height: 46px;
+                background-color: map-get($color, color-White);
+                cursor: pointer;
+                border-radius: 5px;
+                @include text_B_L_18;
+              }
+              .select-cart-btn {
+                color: map-get($color, primary-color);
+              }
+              .select-buy-btn {
+                background-color: map-get($color, primary-color);
 
-              color: map-get($color, color-White);
+                color: map-get($color, color-White);
+              }
             }
           }
         }
@@ -1634,7 +1636,21 @@ body {
         }
       }
       .detail__right-box {
-        display: none;
+        position: fixed;
+        z-index: 10;
+        bottom: 0px;
+        width: 100%;
+        padding-right: 30px;
+        padding-bottom: 0px;
+        background-color: map-get($color, color-White);
+        .detail__main-contentsbox {
+          margin-bottom: 0px;
+          padding-top: 15px;
+          padding-bottom: 5px;
+          .detail__main-contentsbox-select {
+            padding-bottom: 0px;
+          }
+        }
       }
     }
   }
