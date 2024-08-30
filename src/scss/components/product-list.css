@@ -303,11 +303,13 @@ table {
 @media (max-width: 1384px) {
   .product-lists {
     width: 100%;
+    padding: 0px;
   }
 }
 @media (max-width: 500px) {
   .product-lists {
     width: 100%;
+    padding: 0px;
   }
   .product-lists .product-list {
     width: 45%;
@@ -325,6 +327,7 @@ table {
 @media (max-width: 390px) {
   .product-lists {
     width: 100%;
+    padding: 0px;
   }
   .product-lists .product-list {
     width: 45%;
@@ -342,4 +345,4 @@ table {
   .product-lists .product-list .product-list__title {
     width: 100%;
   }
-}/*# sourceMappingURL=product-list.css.map */
+}
