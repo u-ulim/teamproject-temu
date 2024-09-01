@@ -734,24 +734,6 @@ aside .checkout__summary .summary__item ul li {
   line-height: 24px;
   letter-spacing: -0.48px;
 }
-aside .checkout__summary .summary__item ul .additional__info {
-  display: flex;
-  justify-content: flex-end;
-  padding-bottom: 10px;
-  font-family: "Pretendard-Regular";
-  font-size: 14px;
-  font-style: normal;
-  line-height: 22px;
-  letter-spacing: -0.42px;
-}
-aside .checkout__summary .summary__item ul .additional__info span {
-  font-family: "Pretendard-Bold";
-  font-size: 14px;
-  font-style: bold;
-  font-weight: 700;
-  line-height: 22px;
-  letter-spacing: -0.42px;
-}
 aside .checkout__summary .summary__price .summary__item__total {
   display: flex;
   align-items: center;

@@ -306,7 +306,7 @@ body {
   line-height: 24px;
   letter-spacing: -0.48px;
 }
-.container main .section__up article .product__info .product {
+.container main .section__up article .product__info-All .product {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -320,14 +320,14 @@ body {
   /*price__info */
   /*close  */
 }
-.container main .section__up article .product__info .product .custom__box {
+.container main .section__up article .product__info-All .product .custom__box {
   padding-right: 6px;
   position: relative;
 }
-.container main .section__up article .product__info .product .custom__box input[type=checkbox].custom__checkbox {
+.container main .section__up article .product__info-All .product .custom__box input[type=checkbox].custom__checkbox {
   display: none;
 }
-.container main .section__up article .product__info .product .custom__box .select {
+.container main .section__up article .product__info-All .product .custom__box .select {
   display: inline-block;
   border: 1px solid #000;
   position: relative;
@@ -337,7 +337,7 @@ body {
   cursor: pointer;
   border-radius: 50%;
 }
-.container main .section__up article .product__info .product .custom__box .select::after {
+.container main .section__up article .product__info-All .product .custom__box .select::after {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -347,10 +347,10 @@ body {
   border-radius: 50%;
   transform: translate(-50%, -50%) scale(0);
 }
-.container main .section__up article .product__info .product .custom__box input[type=checkbox]:checked + .select {
+.container main .section__up article .product__info-All .product .custom__box input[type=checkbox]:checked + .select {
   background-color: black;
 }
-.container main .section__up article .product__info .product .custom__box input[type=checkbox]:checked + .select::after {
+.container main .section__up article .product__info-All .product .custom__box input[type=checkbox]:checked + .select::after {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -359,17 +359,17 @@ body {
   content: "✓";
   transform: translate(-50%, -50%);
 }
-.container main .section__up article .product__info .product .img {
+.container main .section__up article .product__info-All .product .img {
   width: 128px;
   height: 128px;
 }
-.container main .section__up article .product__info .product .img img {
+.container main .section__up article .product__info-All .product .img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 8px;
 }
-.container main .section__up article .product__info .product .product__info .product__text-up {
+.container main .section__up article .product__info-All .product .product__info .product__text-up {
   font-family: "Pretendard-Bold";
   font-size: 14px;
   font-style: bold;
@@ -377,7 +377,7 @@ body {
   line-height: 22px;
   letter-spacing: -0.42px;
 }
-.container main .section__up article .product__info .product .product__info .product__text-middle {
+.container main .section__up article .product__info-All .product .product__info .product__text-middle {
   font-family: "Pretendard-Regular";
   font-size: 14px;
   font-style: normal;
@@ -385,7 +385,7 @@ body {
   letter-spacing: -0.42px;
   color: #4a4949;
 }
-.container main .section__up article .product__info .product .product__info .product__text-down {
+.container main .section__up article .product__info-All .product .product__info .product__text-down {
   font-family: "Pretendard-Regular";
   font-size: 14px;
   font-style: normal;
@@ -393,7 +393,7 @@ body {
   letter-spacing: -0.42px;
   color: #4a4949;
 }
-.container main .section__up article .product__info .product .product__info .product__text-down input {
+.container main .section__up article .product__info-All .product .product__info .product__text-down input {
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -403,10 +403,10 @@ body {
   line-height: 22px;
   letter-spacing: -0.42px;
 }
-.container main .section__up article .product__info .product .product__info .product__text-down input:hover {
+.container main .section__up article .product__info-All .product .product__info .product__text-down input:hover {
   color: #9a9a9a;
 }
-.container main .section__up article .product__info .product .number__box div {
+.container main .section__up article .product__info-All .product .number__box div {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -423,7 +423,7 @@ body {
   line-height: 24px;
   letter-spacing: -0.48px;
 }
-.container main .section__up article .product__info .product .number__box div input[type=button] {
+.container main .section__up article .product__info-All .product .number__box div input[type=button] {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -440,10 +440,10 @@ body {
   line-height: 24px;
   letter-spacing: -0.48px;
 }
-.container main .section__up article .product__info .product .number__box div input[type=button]:hover {
+.container main .section__up article .product__info-All .product .number__box div input[type=button]:hover {
   color: #818181;
 }
-.container main .section__up article .product__info .product .number__box div input[type=text] {
+.container main .section__up article .product__info-All .product .number__box div input[type=text] {
   border: none;
   outline: none;
   width: 20px;
@@ -455,13 +455,13 @@ body {
   line-height: 24px;
   letter-spacing: -0.48px;
 }
-.container main .section__up article .product__info .product .price__info {
+.container main .section__up article .product__info-All .product .price__info {
   display: flex;
   gap: 6px;
   flex-direction: column;
   text-align: center;
 }
-.container main .section__up article .product__info .product .price__info .original-price {
+.container main .section__up article .product__info-All .product .price__info .original-price {
   font-family: "Pretendard-Bold";
   font-size: 18px;
   font-style: bold;
@@ -469,7 +469,7 @@ body {
   line-height: 26px;
   letter-spacing: -0.54px;
 }
-.container main .section__up article .product__info .product .price__info .price__text-down {
+.container main .section__up article .product__info-All .product .price__info .price__text-down {
   display: flex;
   gap: 3px;
   align-items: center;
@@ -481,18 +481,17 @@ body {
   line-height: 18px;
   letter-spacing: -0.36px;
 }
-.container main .section__up article .product__info .product .price__info .price__text-down .sale {
-  display: block;
+.container main .section__up article .product__info-All .product .price__info .price__text-down .sale {
   border: 1px solid #ff6d00;
   width: 33px;
   height: 18px;
   color: #ff6d00;
   border-radius: 5px;
 }
-.container main .section__up article .product__info .product .price__info .price__text-down span {
+.container main .section__up article .product__info-All .product .price__info .price__text-down span {
   cursor: pointer;
 }
-.container main .section__up article .product__info .product .product__close {
+.container main .section__up article .product__info-All .product .product__close {
   border: none;
   position: relative;
   width: 30px;
@@ -650,7 +649,9 @@ body {
 }
 .container aside .checkout__summary .summary__item ul .additional__info {
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
+  padding-left: 170px;
+  gap: 5px;
   padding-bottom: 10px;
   font-family: "Pretendard-Regular";
   font-size: 14px;
@@ -687,7 +688,7 @@ body {
   line-height: 22px;
   letter-spacing: -0.42px;
 }
-.container aside .checkout__summary .summary__Price ul .summary__item__total .price {
+.container aside .checkout__summary .summary__Price ul .summary__item__total .total-price {
   font-family: "Pretendard-Bold";
   font-size: 18px;
   font-style: bold;
@@ -1171,18 +1172,18 @@ body {
     background-color: #ff7629;
     cursor: pointer;
   }
-  .container main .mobile-aside .checkout__summary git .info {
+  .container main .mobile-aside .checkout__summary .info {
     font-family: "Pretendard-Regular";
     font-size: 14px;
     font-style: normal;
     line-height: 22px;
     letter-spacing: -0.42px;
   }
-  .container main .mobile-aside .checkout__summary git .info ul {
+  .container main .mobile-aside .checkout__summary .info ul {
     display: flex;
     flex-direction: column;
   }
-  .container main .mobile-aside .checkout__summary git .info ul .info__text {
+  .container main .mobile-aside .checkout__summary .info ul .info__text {
     display: flex;
     gap: 5px;
     align-items: center;
@@ -1269,94 +1270,63 @@ body {
     line-height: 22px;
     letter-spacing: -0.42px;
   }
-  .container main .section__up article .product__info {
+  .container main .section__up article .product__info-All {
     width: 100%;
   }
-  .container main .section__up article .product__info .product {
+  .container main .section__up article .product__info-All .product {
+    width: 100%;
     padding: 16px;
     height: auto;
   }
-  .container main .section__up article .product__info .product .custom__box {
+  .container main .section__up article .product__info-All .product .custom__box {
     margin-bottom: 16px;
   }
-  .container main .section__up article .product__info .product .img {
+  .container main .section__up article .product__info-All .product .img {
     margin-bottom: 16px;
-    width: 70px;
     height: auto;
   }
-  .container main .section__up article .product__info .product .img img {
-    width: 100%;
-    height: auto;
-  }
-  .container main .section__up article .product__info .product .product__info {
+  .container main .section__up article .product__info-All .product .product__info {
     margin-bottom: 16px;
     width: 100%;
+    padding-left: 10px;
   }
-  .container main .section__up article .product__info .product .product__info div .prodouct__text-up span {
+  .container main .section__up article .product__info-All .product .product__info div .product__text-up span {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
     overflow: hidden;
-    width: 30px;
-    height: 15px;
-    white-space: nowrap;
     text-overflow: ellipsis;
+    width: 140px;
     font-family: "Pretendard-Regular";
     font-size: 14px;
     font-style: normal;
     line-height: 22px;
     letter-spacing: -0.42px;
   }
-  .container main .section__up article .product__info .product .product__info div .product__text-up,
-  .container main .section__up article .product__info .product .product__info div .product__text-down {
+  .container main .section__up article .product__info-All .product .product__info div .product__text-up,
+  .container main .section__up article .product__info-All .product .product__info div .product__text-down {
     text-align: left;
   }
-  .container main .section__up article .product__info .product .product__info div .product__text-middle {
+  .container main .section__up article .product__info-All .product .number__box {
     display: none;
   }
-  .container main .section__up article .product__info .product .number__box {
-    margin-bottom: 16px;
-    width: 50px;
-    height: 20px;
-  }
-  .container main .section__up article .product__info .product .number__box div {
-    width: 100%;
-  }
-  .container main .section__up article .product__info .product .number__box div input[type=button] {
+  .container main .section__up article .product__info-All .price__info .original-price {
+    padding-right: 10px;
     font-family: "Pretendard-Regular";
     font-size: 12px;
     font-style: normal;
     line-height: 18px;
     letter-spacing: -0.36px;
-  }
-  .container main .section__up article .product__info .product .number__box div input[type=text] {
-    font-family: "Pretendard-Regular";
-    font-size: 12px;
-    font-style: normal;
-    line-height: 18px;
-    letter-spacing: -0.36px;
-  }
-  .container main .section__up article .product__info .product .price__info {
-    top: 20px;
-  }
-  .container main .section__up article .product__info .product .price__info .original-price {
-    font-family: "Pretendard-Regular";
-    font-size: 16px;
-    font-style: normal;
-    line-height: 24px;
-    letter-spacing: -0.48px;
     color: #ff6d00;
   }
-  .container main .section__up article .product__info .product .price__info .price__text-down .sale {
+  .container main .section__up article .product__info-All .price__info .price__text-down {
     display: none;
   }
-  .container main .section__up article .product__info .product .price__info .price__text-down span {
-    font-family: "Pretendard-Regular";
-    font-size: 12px;
-    font-style: normal;
-    line-height: 18px;
-    letter-spacing: -0.36px;
+  .container main .section__up article .product__info-All .price__info .price__text-down .sale {
+    display: none;
   }
-  .container main .section__up article .product__info .product .close {
-    width: 16px;
-    height: 16px;
+  .container main .section__up article .product__info-All .price__info .price__text-down span {
+    display: none;
   }
   .container main .section__up article .empty__product {
     padding: 20px 0;
@@ -1364,11 +1334,11 @@ body {
   .container main .section__up article .empty__product .popular-btn {
     margin-bottom: 30px;
   }
-  .container main .mobile-aside {
+  .mobile-aside {
     display: block;
     margin-bottom: 32px;
   }
-  .container main .mobile-aside .checkout__summary {
+  .mobile-aside .checkout__summary {
     margin: 0 auto;
     padding: 0 10px;
     width: 338.32px;
@@ -1377,12 +1347,12 @@ body {
     /*checkout__button*/
     /*info*/
   }
-  .container main .mobile-aside .checkout__summary .summary__item ul {
+  .mobile-aside .checkout__summary .summary__item ul {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
   }
-  .container main .mobile-aside .checkout__summary .summary__item ul li {
+  .mobile-aside .checkout__summary .summary__item ul li {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1393,13 +1363,13 @@ body {
     line-height: 24px;
     letter-spacing: -0.48px;
   }
-  .container main .mobile-aside .checkout__summary .summary__item ul li .price {
+  .mobile-aside .checkout__summary .summary__item ul li .price {
     color: #4a4949;
   }
-  .container main .mobile-aside .checkout__summary .summary__item ul li .discount {
+  .mobile-aside .checkout__summary .summary__item ul li .discount {
     color: #ff6d00;
   }
-  .container main .mobile-aside .checkout__summary .summary__item ul .additional__info {
+  .mobile-aside .checkout__summary .summary__item ul .additional__info {
     display: flex;
     justify-content: flex-end;
     padding-bottom: 10px;
@@ -1409,7 +1379,7 @@ body {
     line-height: 22px;
     letter-spacing: -0.42px;
   }
-  .container main .mobile-aside .checkout__summary .summary__item ul .additional__info span {
+  .mobile-aside .checkout__summary .summary__item ul .additional__info span {
     font-family: "Pretendard-Bold";
     font-size: 14px;
     font-style: bold;
@@ -1417,28 +1387,28 @@ body {
     line-height: 22px;
     letter-spacing: -0.42px;
   }
-  .container main .mobile-aside .checkout__summary .summary__Price ul .summary__item__total {
+  .mobile-aside .checkout__summary .summary__Price ul .summary__item__total {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 10px;
     padding-top: 20px;
   }
-  .container main .mobile-aside .checkout__summary .summary__Price ul .summary__item__total p {
+  .mobile-aside .checkout__summary .summary__Price ul .summary__item__total p {
     font-family: "Pretendard-Regular";
     font-size: 16px;
     font-style: normal;
     line-height: 24px;
     letter-spacing: -0.48px;
   }
-  .container main .mobile-aside .checkout__summary .summary__Price ul .summary__item__total p span {
+  .mobile-aside .checkout__summary .summary__Price ul .summary__item__total p span {
     font-family: "Pretendard-Regular";
     font-size: 14px;
     font-style: normal;
     line-height: 22px;
     letter-spacing: -0.42px;
   }
-  .container main .mobile-aside .checkout__summary .summary__Price ul .summary__item__total .price {
+  .mobile-aside .checkout__summary .summary__Price ul .summary__item__total .price {
     font-family: "Pretendard-Bold";
     font-size: 18px;
     font-style: bold;
@@ -1446,7 +1416,7 @@ body {
     line-height: 26px;
     letter-spacing: -0.54px;
   }
-  .container main .mobile-aside .checkout__summary .summary__Price ul .tax__info {
+  .mobile-aside .checkout__summary .summary__Price ul .tax__info {
     display: flex;
     gap: 4px;
     align-items: center;
@@ -1458,7 +1428,7 @@ body {
     line-height: 18px;
     letter-spacing: -0.36px;
   }
-  .container main .mobile-aside .checkout__summary .summary__Price ul .tax__info .tax__label {
+  .mobile-aside .checkout__summary .summary__Price ul .tax__info .tax__label {
     display: block;
     border: 1px solid #0a8800;
     width: 28px;
@@ -1466,10 +1436,10 @@ body {
     text-align: center;
     border-radius: 8px;
   }
-  .container main .mobile-aside .checkout__summary .summary__Price ul .tax__info .tex__text {
+  .mobile-aside .checkout__summary .summary__Price ul .tax__info .tex__text {
     color: #6a6a6a;
   }
-  .container main .mobile-aside .checkout__summary .checkout__button {
+  .mobile-aside .checkout__summary .checkout__button {
     margin-bottom: 20px;
     border: none;
     width: 100%;
@@ -1485,32 +1455,32 @@ body {
     line-height: 24px;
     letter-spacing: -0.48px;
   }
-  .container main .mobile-aside .checkout__summary .checkout__button:hover {
+  .mobile-aside .checkout__summary .checkout__button:hover {
     background-color: #ff7629;
     cursor: pointer;
   }
-  .container main .mobile-aside .checkout__summary .info {
+  .mobile-aside .checkout__summary .info {
     font-family: "Pretendard-Regular";
     font-size: 14px;
     font-style: normal;
     line-height: 22px;
     letter-spacing: -0.42px;
   }
-  .container main .mobile-aside .checkout__summary .info ul {
+  .mobile-aside .checkout__summary .info ul {
     display: flex;
     align-items: center;
     flex-direction: column;
   }
-  .container main .mobile-aside .checkout__summary .info ul .info__text {
+  .mobile-aside .checkout__summary .info ul .info__text {
     display: flex;
     gap: 5px;
     align-items: center;
     margin-bottom: 20px;
   }
-  .container main .section__down {
+  .section__down {
     width: 100%;
   }
-  .container main .section__down .section__down-title h2 {
+  .section__down .section__down-title h2 {
     font-family: "Pretendard-Bold";
     font-size: 16px;
     font-style: bold;
@@ -1518,35 +1488,35 @@ body {
     line-height: 24px;
     letter-spacing: -0.48px;
   }
-  .modal__box {
-    width: 100%;
-  }
-  .modal__box .modal__inner {
-    width: 100%;
-  }
-  .modal__box .modal__inner .modal__inner-box {
-    padding: 50px;
-    width: 100%;
-  }
-  .modal__box .modal__inner .modal__inner-box .product {
-    gap: 10px;
-  }
-  .modal__box .modal__inner .modal__inner-box .product .product__img {
-    width: 60px;
-    height: 60px;
-  }
-  .modal__box .modal__inner .modal__inner-box .product .product__info {
-    font-family: "Pretendard-Bold";
-    font-size: 14px;
-    font-style: bold;
-    font-weight: 700;
-    line-height: 22px;
-    letter-spacing: -0.42px;
-  }
-  .modal__box .modal__inner .modal__inner-box .button {
-    gap: 10px;
-  }
-  .modal__box .modal__inner .modal__inner-box .button input {
-    height: 40px;
-  }
+}
+.modal__box {
+  width: 100%;
+}
+.modal__box .modal__inner {
+  width: 100%;
+}
+.modal__box .modal__inner .modal__inner-box {
+  padding: 50px;
+  width: 100%;
+}
+.modal__box .modal__inner .modal__inner-box .product {
+  gap: 10px;
+}
+.modal__box .modal__inner .modal__inner-box .product .product__img {
+  width: 60px;
+  height: 60px;
+}
+.modal__box .modal__inner .modal__inner-box .product .product__info {
+  font-family: "Pretendard-Bold";
+  font-size: 14px;
+  font-style: bold;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: -0.42px;
+}
+.modal__box .modal__inner .modal__inner-box .button {
+  gap: 10px;
+}
+.modal__box .modal__inner .modal__inner-box .button input {
+  height: 40px;
 }

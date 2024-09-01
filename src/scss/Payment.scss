@@ -455,15 +455,6 @@ aside {
           padding-bottom: 34.5px;
           @include text_M_16;
         }
-        .additional__info {
-          display: flex;
-          justify-content: flex-end;
-          padding-bottom: 10px;
-          @include text_S_14;
-          span {
-            @include text_B_S_14;
-          }
-        }
       }
     }
 

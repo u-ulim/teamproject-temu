@@ -1,66 +1,48 @@
-// 배너 삭제 기능
+// 요소 선택
 const banner = document.querySelector(".banner");
 const bannerClose = document.querySelector(".banner-close");
+const productInfoCart = document.querySelector(".product__info-All");
+const selectAllCheckbox = document.querySelector("#custom__box");
+const itemCountElement = document.querySelector("#item__count");
+let productCheckboxes;
+let getCartProducts = JSON.parse(localStorage.getItem("setCartProducts")) || [];
+const productsURL =
+  "https://raw.githubusercontent.com/u-ulim/temu-products/main/test.json";
+let productsData = [];
 
-// 배너 닫기 버튼 클릭 시 배너 숨기기
+// 배너 닫기 기능
 if (bannerClose) {
   bannerClose.addEventListener("click", () => {
     banner.style.display = "none";
   });
 }
 
-const productInfoCart = document.querySelector(".product__info");
-const selectAllCheckbox = document.querySelector("#custom__box");
-const productNum = document.querySelector("#item__count");
-
-let productCheckboxes;
-let getCartProducts = JSON.parse(localStorage.getItem("setCartProducts")) || [];
-const productsURL =
-  "https://raw.githubusercontent.com/u-ulim/temu-products/main/test.json";
-
 // 제품 데이터 가져오기
 fetch(productsURL)
   .then((response) => response.json())
   .then((data) => {
     productsData = data.products;
-    renderCartItems(); // 장바구니 항목을 렌더링
+    renderCartItems();
   });
 
-// 장바구니에 제품 추가 함수
-function addToCart(newProduct) {
-  const existingProductIndex = getCartProducts.findIndex(
-    (product) =>
-      product.id === newProduct.id &&
-      product.selectColor.toLowerCase().trim() ===
-        newProduct.selectColor.toLowerCase().trim() &&
-      product.selectSize.toLowerCase().trim() ===
-        newProduct.selectSize.toLowerCase().trim()
-  );
-
-  if (existingProductIndex !== -1) {
-    // 기존 제품의 수량을 업데이트
-    getCartProducts[existingProductIndex].quan += newProduct.quan;
-  } else {
-    // 새로운 제품 추가
-    getCartProducts.push(newProduct);
-  }
-
-  updateLocalStorage();
-  renderCartItems();
-}
-
-// 장바구니 항목을 화면에 표시
+// 장바구니 렌더링
 function renderCartItems() {
   productInfoCart.innerHTML = "";
 
   if (getCartProducts.length === 0) {
     document.querySelector(".empty__product").style.display = "block";
     productInfoCart.style.display = "none";
-    return;
+    resetAsideValues();
+    selectAllCheckbox.disabled = true;
   } else {
     document.querySelector(".empty__product").style.display = "none";
     productInfoCart.style.display = "block";
+    selectAllCheckbox.disabled = false;
   }
+
+  let totalOriginalPrice = 0;
+  let totalDiscountedPrice = 0;
+  let totalDiscountAmount = 0;
 
   getCartProducts.forEach((product, index) => {
     const {
@@ -73,15 +55,17 @@ function renderCartItems() {
       sumPrice,
       discountingPrice,
     } = product;
+
     const originalTotalPrice = sumPrice * quan;
     const discountedTotalPrice = discountingPrice * quan;
+    const discountAmount = (sumPrice - discountingPrice) * quan;
 
-    // 장바구니
+    // 장바구니 항목 HTML 생성
     const cartProductHTML = `
       <ul class="product">
         <li class="custom__box">
           <div>
-            <input type="checkbox" name="checkbox" id="custom__checkbox_${index}" class="custom__checkbox" data-index="${index}" />
+            <input type="checkbox" id="custom__checkbox_${index}" class="custom__checkbox" data-index="${index}" />
             <label for="custom__checkbox_${index}" class="select"></label>
           </div>
         </li>
@@ -123,95 +107,307 @@ function renderCartItems() {
       </ul>`;
 
     productInfoCart.insertAdjacentHTML("beforeend", cartProductHTML);
+
+    totalOriginalPrice += originalTotalPrice;
+    totalDiscountedPrice += discountedTotalPrice;
+    totalDiscountAmount += discountAmount;
   });
 
+  // aside 정보 업데이트
+  updateAsideValues(
+    totalOriginalPrice,
+    totalDiscountedPrice,
+    totalDiscountAmount
+  );
   addEventListeners();
+  addCheckboxListeners();
+  updateSelectAllCheckbox();
+  updateSelectedCount(); // 선택된 항목 개수 업데이트
+}
+
+function updateSelectedCount() {
+  const selectedCheckboxes = document.querySelectorAll(
+    ".custom__checkbox:checked"
+  ).length;
+  const displayCount = Math.max(0, selectedCheckboxes - 1);
+  if (itemCountElement) {
+    itemCountElement.innerText = `(${displayCount})`;
+  }
+}
+
+// aside 초기화 함수 (장바구니가 비었을 때 0원으로 설정)
+function resetAsideValues() {
+  const asideContainer = document.querySelector("aside");
+  if (asideContainer) {
+    asideContainer.innerHTML = `
+      <div class="checkout__summary">
+        <div class="summary__item">
+          <ul>
+            <li class="product__fee">
+              <span>상품금액</span>
+              <span class="product__fee__price price">￦0</span>
+            </li>
+            <li class="product__sale">
+              <span>상품할인금액</span>
+              <span class="discount"> - ￦0</span>
+            </li>
+            <li class="additional__info" id="additional__info" style="display: none;">
+              ￦0 추가주문 시,<span>구매가능</span>
+            </li>
+          </ul>
+        </div>
+        <hr />
+        <div class="summary__Price">
+          <ul>
+            <li class="summary__item__total">
+              <p>결제금액</p>
+              <span class="total-price">￦0</span>
+            </li>
+            <li class="tax__info">
+              <span class="tax__label">TAX</span>
+              <span class="tax__text">Temu의 가격은 관세가격을 포함합니다.</span>
+            </li>
+          </ul>
+        </div>
+        <button type="submit" class="checkout__button disabled" id="checkout__button" disabled>결제하기</button>
+        <div class="info">
+          <ul>
+            <li class="info__text">
+              <i class="fa-solid fa-circle-exclamation"></i>
+              <p>결제가 완료될때까지 제품의 가격 및 구매 여부가 보장되지 않습니다.</p>
+            </li>
+            <li class="info__text">
+              <i class="fa-solid fa-circle-exclamation"></i>
+              <p>다음페이지에서 주문서를 확인하기 전까지 결제가 되지 않습니다.</p>
+            </li>
+            <li class="info__text">
+              <i class="fa-solid fa-circle-exclamation"></i>
+              <p>마이페이지>주문내역 상세페이지에서 직접 취소 할 수 있습니다.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    `;
+  }
+}
+
+// aside 값 업데이트
+function updateAsideValues(
+  totalOriginalPrice,
+  totalDiscountedPrice,
+  totalDiscountAmount
+) {
+  const asideContainer = document.querySelector("aside");
+  if (asideContainer) {
+    const finalAmount = totalDiscountedPrice;
+    const discountSum = totalDiscountAmount;
+    const targetAmount = 20000;
+    const shortage = targetAmount - finalAmount;
+
+    asideContainer.innerHTML = `
+      <div class="checkout__summary">
+        <div class="summary__item">
+          <ul>
+            <li class="product__fee">
+              <span>상품금액</span>
+              <span class="product__fee__price price">￦${totalOriginalPrice.toLocaleString()}</span>
+            </li>
+            <li class="product__sale">
+              <span>상품할인금액</span>
+              <span class="discount"> - ￦${discountSum.toLocaleString()}</span>
+            </li>
+            <li class="additional__info" id="additional__info" ${
+              shortage > 0
+                ? 'style="display: block;"'
+                : 'style="display: none;"'
+            }>
+              ￦${shortage.toLocaleString()} 추가주문 시,<span>구매가능</span>
+            </li>
+          </ul>
+        </div>
+        <hr />
+        <div class="summary__Price">
+          <ul>
+            <li class="summary__item__total">
+              <p>결제금액</p>
+              <span class="total-price">￦${finalAmount.toLocaleString()}</span>
+            </li>
+            <li class="tax__info">
+              <span class="tax__label">TAX</span>
+              <span class="tax__text">Temu의 가격은 관세가격을 포함합니다.</span>
+            </li>
+          </ul>
+        </div>
+        <button type="submit" class="checkout__button ${
+          shortage > 0 ? "disabled" : "enabled"
+        }" id="checkout__button" ${
+      shortage > 0 ? "disabled" : ""
+    }>결제하기</button>
+        <div class="info">
+          <ul>
+            <li class="info__text">
+              <i class="fa-solid fa-circle-exclamation"></i>
+              <p>결제가 완료될때까지 제품의 가격 및 구매 여부가 보장되지 않습니다.</p>
+            </li>
+            <li class="info__text">
+              <i class="fa-solid fa-circle-exclamation"></i>
+              <p>다음페이지에서 주문서를 확인하기 전까지 결제가 되지 않습니다.</p>
+            </li>
+            <li class="info__text">
+              <i class="fa-solid fa-circle-exclamation"></i>
+              <p>마이페이지>주문내역 상세페이지에서 직접 취소 할 수 있습니다.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    `;
+
+    const checkoutButton = document.querySelector("#checkout__button");
+    if (checkoutButton) {
+      checkoutButton.style.cursor = shortage > 0 ? "not-allowed" : "pointer";
+      checkoutButton.addEventListener("click", () => {
+        if (shortage <= 0) {
+          window.location.href =
+            "http://127.0.0.1:5501/html/components/Payment.html";
+        }
+      });
+    }
+  }
+}
+
+// 개별 체크박스 리스너 추가
+function addCheckboxListeners() {
+  productCheckboxes = document.querySelectorAll(".custom__checkbox");
+  productCheckboxes.forEach((checkbox) => {
+    checkbox.addEventListener("change", () => {
+      handleCheckboxChange();
+      updateSelectedCount();
+      updateSelectAllCheckbox();
+    });
+  });
+}
+
+// 체크박스 상태 변경 처리
+function handleCheckboxChange() {
+  const selectedCheckboxes = document.querySelectorAll(
+    ".custom__checkbox:checked"
+  );
+  const productIndexes = Array.from(selectedCheckboxes).map((checkbox) =>
+    parseInt(checkbox.getAttribute("data-index"))
+  );
+
+  getCartProducts.forEach((product, index) => {
+    product.checked = productIndexes.includes(index);
+  });
+
+  localStorage.setItem("setCartProducts", JSON.stringify(getCartProducts));
   updateSelectAllCheckbox();
 }
 
+// 전체 선택 체크박스 상태 업데이트
+function updateSelectAllCheckbox() {
+  const allChecked =
+    productCheckboxes.length > 0 &&
+    Array.from(productCheckboxes).every((checkbox) => checkbox.checked);
+  if (selectAllCheckbox) {
+    selectAllCheckbox.checked = allChecked;
+  }
+}
+
+// 전체 선택 체크박스 클릭 처리
+if (selectAllCheckbox) {
+  selectAllCheckbox.addEventListener("change", () => {
+    const isChecked = selectAllCheckbox.checked;
+    productCheckboxes.forEach((checkbox) => {
+      checkbox.checked = isChecked;
+    });
+    getCartProducts.forEach((product) => {
+      product.checked = isChecked;
+    });
+    localStorage.setItem("setCartProducts", JSON.stringify(getCartProducts));
+    updateSelectedCount();
+  });
+}
+
+// 수량 증가/감소 및 삭제 이벤트 처리
 function addEventListeners() {
   document.querySelectorAll(".original-add").forEach((button) => {
-    button.addEventListener("click", () => {
-      const index = button.getAttribute("data-index");
-      updateQuantity(index, 1);
+    button.addEventListener("click", (event) => {
+      const index = parseInt(event.target.getAttribute("data-index"));
+      if (index >= 0) {
+        getCartProducts[index].quan++;
+        localStorage.setItem(
+          "setCartProducts",
+          JSON.stringify(getCartProducts)
+        );
+        renderCartItems();
+      }
     });
   });
 
   document.querySelectorAll(".original-minus").forEach((button) => {
-    button.addEventListener("click", () => {
-      const index = button.getAttribute("data-index");
-      updateQuantity(index, -1);
+    button.addEventListener("click", (event) => {
+      const index = parseInt(event.target.getAttribute("data-index"));
+      if (index >= 0 && getCartProducts[index].quan > 1) {
+        getCartProducts[index].quan--;
+        localStorage.setItem(
+          "setCartProducts",
+          JSON.stringify(getCartProducts)
+        );
+        renderCartItems();
+      }
     });
   });
 
-  document.querySelectorAll(".product__close i").forEach((button) => {
-    button.addEventListener("click", () => {
-      const index = button.getAttribute("data-index");
-      removeCartItem(index);
+  // 개별 제품 삭제 이벤트 처리
+  document.querySelectorAll(".product__close i").forEach((icon) => {
+    icon.addEventListener("click", (event) => {
+      const index = parseInt(event.target.getAttribute("data-index"));
+      if (index >= 0) {
+        getCartProducts.splice(index, 1);
+        if (getCartProducts.length === 0) {
+          localStorage.removeItem("setCartProducts");
+        } else {
+          localStorage.setItem(
+            "setCartProducts",
+            JSON.stringify(getCartProducts)
+          );
+        }
+        renderCartItems();
+      }
     });
   });
 
+  // 선택된 항목 삭제 버튼 추가 및 이벤트 처리
+  const deleteSelectedButton = document.querySelector(".delete-select");
+  if (deleteSelectedButton) {
+    deleteSelectedButton.addEventListener("click", () => {
+      getCartProducts = getCartProducts.filter(
+        (product, index) =>
+          !document.querySelector(`#custom__checkbox_${index}`).checked
+      );
+      if (getCartProducts.length === 0) {
+        localStorage.removeItem("setCartProducts");
+      } else {
+        localStorage.setItem(
+          "setCartProducts",
+          JSON.stringify(getCartProducts)
+        );
+      }
+      renderCartItems();
+    });
+  }
+
+  // 옵션 변경 모달 관련 이벤트 추가
   document.querySelectorAll(".option").forEach((button) => {
-    button.addEventListener("click", () => {
-      const index = button.getAttribute("data-index");
+    button.addEventListener("click", (event) => {
+      const index = parseInt(event.target.getAttribute("data-index"));
       openModal(index);
     });
   });
-
-  const deleteSelectedBtn = document.querySelector("button");
-  deleteSelectedBtn.addEventListener("click", () => {
-    const selectedIndexes = [];
-    document
-      .querySelectorAll(".custom__checkbox:checked")
-      .forEach((checkbox) => {
-        selectedIndexes.push(checkbox.getAttribute("data-index"));
-      });
-    deleteSelectedItems(selectedIndexes);
-  });
 }
 
-// 수량 업데이트 함수
-function updateQuantity(index, delta) {
-  let product = getCartProducts[index];
-  let newQuantity = product.quan + delta;
-
-  if (newQuantity < 1) {
-    newQuantity = 1;
-  }
-
-  product.quan = newQuantity;
-  updateLocalStorage();
-  renderCartItems();
-}
-
-// 상품 삭제
-function removeCartItem(index) {
-  getCartProducts.splice(index, 1);
-  updateLocalStorage();
-  renderCartItems();
-  checkIfCartIsEmpty();
-}
-
-// 선택 삭제
-function deleteSelectedItems(indexes) {
-  getCartProducts = getCartProducts.filter(
-    (_, index) => !indexes.includes(index.toString())
-  );
-  updateLocalStorage();
-  renderCartItems();
-  checkIfCartIsEmpty();
-}
-
-// 로컬스토리지 업데이트 함수
-function updateLocalStorage() {
-  if (getCartProducts.length > 0) {
-    localStorage.setItem("setCartProducts", JSON.stringify(getCartProducts));
-  } else {
-    localStorage.removeItem("setCartProducts");
-  }
-}
-
-// 옵션 변경 모달창 열기
+// 모달창 열기 함수
 function openModal(index) {
   const optionModal = document.querySelector(".modal__box");
   const modalClose = optionModal.querySelector(".modal__close-box .close");
@@ -369,63 +565,25 @@ function updateModalQuantity(delta, index) {
   renderCartItems();
 }
 
-// 전체 선택 체크박스 상태 업데이트 함수
-function updateSelectAllCheckbox() {
-  productCheckboxes = document.querySelectorAll(".product .custom__checkbox");
-
-  if (productCheckboxes.length === 0) {
-    selectAllCheckbox.checked = false;
-    selectAllCheckbox.disabled = true;
-    productNum.innerText = "";
+// 로컬스토리지 업데이트 함수
+function updateLocalStorage() {
+  if (getCartProducts.length > 0) {
+    localStorage.setItem("setCartProducts", JSON.stringify(getCartProducts));
   } else {
-    selectAllCheckbox.disabled = false;
-
-    const checkedCheckboxes = Array.from(productCheckboxes).filter(
-      (checkbox) => checkbox.checked
-    );
-
-    selectAllCheckbox.checked =
-      checkedCheckboxes.length === productCheckboxes.length;
-    productNum.innerText =
-      checkedCheckboxes.length > 0 ? `(${checkedCheckboxes.length})` : "";
+    localStorage.removeItem("setCartProducts");
   }
 }
 
-// 전체 선택 체크박스 이벤트
-if (selectAllCheckbox) {
-  selectAllCheckbox.addEventListener("change", () => {
-    let isChecked = selectAllCheckbox.checked;
-    productCheckboxes.forEach((checkbox) => {
-      checkbox.checked = isChecked;
-    });
-
-    updateSelectAllCheckbox();
-  });
-}
-
-// 개별 체크박스 변경 이벤트
-function addCheckboxListeners() {
-  productCheckboxes = document.querySelectorAll(".product .custom__checkbox");
-
-  productCheckboxes.forEach((checkbox) => {
-    checkbox.addEventListener("change", () => {
-      updateSelectAllCheckbox();
-    });
-  });
+// 장바구니가 비어 있을 때 초기 처리
+function checkIfCartIsEmpty() {
+  if (getCartProducts.length === 0) {
+    resetAsideValues(); // 장바구니가 비어 있을 때 aside를 초기화
+    selectAllCheckbox.disabled = true; // 장바구니가 비어 있을 때 전체선택 체크박스 비활성화
+  } else {
+    renderCartItems(); // 장바구니가 비어있지 않다면 항목을 렌더링
+    selectAllCheckbox.disabled = false; // 장바구니에 항목이 있으면 전체선택 체크박스 활성화
+  }
 }
 
 addCheckboxListeners();
-
-// 장바구니가 비었을 때 처리
-function checkIfCartIsEmpty() {
-  const emptyCartMessage = document.querySelector(".empty__product");
-  if (getCartProducts.length === 0) {
-    emptyCartMessage.style.display = "block";
-    productInfoCart.style.display = "none";
-  } else {
-    emptyCartMessage.style.display = "none";
-    productInfoCart.style.display = "block";
-  }
-}
-
-checkIfCartIsEmpty();
+checkIfCartIsEmpty(); // 장바구니가 비었을 때 처리
