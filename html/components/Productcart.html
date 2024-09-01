@@ -44,8 +44,7 @@
             <div class="banner">
               <span>테무는 언제나 무료 배송</span>
               <div class="banner-close">
-                <span></span>
-                <span></span>
+                <i class="fa-solid fa-xmark"></i>
               </div>
             </div>
             <div class="toolbar">
@@ -295,13 +294,13 @@
                 </p>
               </li>
               <li class="info__text">
-                <i class="fa-solid fa-circle-exclamation"></i>
+                <i class="fa-solid fa-circle-exclamation"> </i>
                 <p>
                   다음페이지에서 주문서를 확인하기 전까지 결제가 되지 않습니다.
                 </p>
               </li>
               <li class="info__text">
-                <i class="fa-solid fa-circle-exclamation"></i>
+                <i class="fa-solid fa-circle-exclamation"> </i>
                 <p>
                   마이페이지>주문내역 상세페이지에서 직접 취소 할 수 있습니다.
                 </p>
@@ -322,32 +321,16 @@
               <img src="./img/product.png" alt="product" />
             </div>
             <div class="product__info">
-              <p class="product__info-title">
-                1/5/10 쌍의 남성용 심플 슬리드 라이너
-              </p>
+              <p class="product__info-title"></p>
             </div>
           </div>
           <form>
             <ul>
               <li>
-                <label for="color"></label>
-                <select id="color">
-                  <option selected disabled>색상</option>
-                  <option value="color01">빨강</option>
-                  <option value="color02">노랑</option>
-                  <option value="color03">초록</option>
-                </select>
+                <select id="color"></select>
               </li>
               <li>
-                <label for="size"></label>
-                <select id="size">
-                  <option selected disabled>사이즈</option>
-                  <option value="size01">XS</option>
-                  <option value="size02">S</option>
-                  <option value="size03">M</option>
-                  <option value="size04">L</option>
-                  <option value="size05">XL</option>
-                </select>
+                <select id="size"></select>
               </li>
             </ul>
           </form>
@@ -356,28 +339,22 @@
               <li class="info-up">
                 <div>
                   <span>색상 : </span>
-                  <span class="color">흰색</span>
+                  <span class="color"></span>
                 </div>
                 <div>
                   <span>사이즈 : </span>
-                  <span class="size">S</span>
-                </div>
-                <div class="close-box">
-                  <div class="close">
-                    <span></span>
-                    <span></span>
-                  </div>
+                  <span class="size"></span>
                 </div>
               </li>
               <li class="info-down">
                 <form class="modal__add-minus">
                   <!-- 숨김/ 판매가격-->
-                  <input
+                  <!-- <input
                     type="hidden"
                     class="modal__sell-price"
                     id="modal__sell-price"
                     value="11000"
-                  />
+                  /> -->
                   <div class="number__input">
                     <input
                       type="button"
@@ -404,58 +381,10 @@
               </li>
             </ul>
           </div>
-          <div class="product-info-option">
-            <ul>
-              <li class="info-up">
-                <div>
-                  <span>색상 : </span>
-                  <span class="color">흰색</span>
-                </div>
-                <div>
-                  <span>사이즈 : </span>
-                  <span class="size">S</span>
-                </div>
-                <div class="close-box">
-                  <div class="close">
-                    <span></span>
-                    <span></span>
-                  </div>
-                </div>
-              </li>
-              <li class="info-down">
-                <form class="modal__add-minus">
-                  <!-- 숨김/ 판매가격-->
-                  <input
-                    type="hidden"
-                    class="sell__price"
-                    id="sell__price"
-                    value="11000"
-                  />
-                  <div class="number__input">
-                    <input type="button" value="+" class="add" id="addBtn" />
-                    <input
-                      type="text"
-                      class="amount"
-                      id="amount"
-                      disabled
-                      size="2"
-                    />
-                    <input
-                      type="button"
-                      value="-"
-                      class="minus"
-                      id="minusBtn"
-                    />
-                  </div>
-                </form>
-                <span class="price" id="option__price"></span>
-              </li>
-            </ul>
-          </div>
           <hr />
           <div class="final__price">
-            <span>결제금액</span>
-            <span>￦11,000</span>
+            <!-- <span>결제금액</span>
+            <span>￦11,000</span> -->
           </div>
           <div class="button">
             <input type="reset" value="취소" />
