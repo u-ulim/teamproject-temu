@@ -21,20 +21,41 @@ fetch(categoryURL)
     const navMenuCategory = document.querySelector(".nav-menu__category");
     const categoryOverlay = document.querySelector(".category-overlay");
 
-
-    // 카테고리 마우스 이벤트 시, 오버레이가 생기고 사라지며 스크롤 제어 
+    // 카테고리 마우스 이벤트 시, 오버레이가 생기고 사라지며 스크롤 제어
+    let scrollPosition = 0;
     navMenuCategory.addEventListener("mouseenter", () => {
+      // 현재 스크롤 위치를 저장합니다.
+      scrollPosition = window.pageYOffset;
+
+      // body를 고정하고 현재 스크롤 위치에 유지합니다.
+      document.body.style.position = "fixed";
+      document.body.style.top = `-${scrollPosition}px`;
+      document.body.style.width = "100%";
+      document.body.style.overflowY = "scroll"; // 스크롤바 유지
+
       navMenuCategory.classList.add("active");
-      document.body.style.overflow = "hidden";
     });
+
     categoryOverlay.addEventListener("mouseenter", () => {
       navMenuCategory.classList.remove("active");
-      document.body.style.overflow = "";
+
+      // body의 고정된 위치를 해제하고 스크롤 위치로 이동합니다.
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.overflowY = ""; // 원래 상태로 되돌림
+
+      window.scrollTo(0, scrollPosition);
     });
 
     navMenuCategory.addEventListener("mouseleave", () => {
       navMenuCategory.classList.remove("active");
-      document.body.style.overflow = "";
+
+      // body의 고정된 위치를 해제하고 스크롤 위치로 이동합니다.
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.overflowY = ""; // 원래 상태로 되돌림
+
+      window.scrollTo(0, scrollPosition);
     });
 
     // 마우스 오버시 카테고리에 맞게끔 서브 카테고리가 나오게끔 설정

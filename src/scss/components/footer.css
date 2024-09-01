@@ -164,7 +164,6 @@ table {
 
 #footer {
   width: 100%;
-  padding: 0px;
   padding-top: 47px;
   background-color: #101010;
   color: #fff;
@@ -536,7 +535,6 @@ table {
 @media (max-width: 1384px) {
   #footer .footer-inner {
     width: 100%;
-    padding: 0px;
   }
   #footer .footer-inner .footer-menus-wrapper .footer-menus {
     flex-wrap: wrap;
@@ -550,6 +548,12 @@ table {
     right: 0px;
     top: -40px;
     margin-bottom: 40px;
+  }
+  #footer .footer-inner .footer-notice-wrapper .footer-notice__desc {
+    gap: 20px;
+  }
+  #footer .footer-inner .footer-notice-wrapper .footer-notice__desc .footer-notice__desc-info {
+    width: 600px;
   }
   #footer .footer-inner .footer-privacy-wrapper div .footer-privacy__menus {
     width: 100%;

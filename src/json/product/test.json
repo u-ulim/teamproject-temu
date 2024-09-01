@@ -147,7 +147,7 @@
         "reviews": {
           "users": [
             {
-              "profileImage": "h/assets/images/product-detail/review-profile-15.jpg",
+              "profileImage": "/assets/images/product-detail/review-profile-15.jpg",
               "profileName": "안젤라 박",
               "country": "KR",
               "starRating": 5,

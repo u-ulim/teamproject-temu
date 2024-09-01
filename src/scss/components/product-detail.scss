@@ -12,7 +12,6 @@ body {
     position: relative;
     .detail__left-box {
       width: 60%;
-
       #main {
         @include width_full;
         margin-bottom: 40px;
@@ -73,6 +72,11 @@ body {
                 height: 105%;
                 border-radius: 8px;
                 @include object_cover;
+                opacity: 1;
+                transition: opacity 0.1s ease;
+                &.fade-out {
+                  opacity: 0;
+                }
               }
             }
           }
@@ -867,6 +871,7 @@ body {
         top: 65px;
         // top: 160px;
         width: 100%;
+
         transition: top 0.4s;
         &.active {
           top: 130px;
@@ -1062,6 +1067,9 @@ body {
         .detail__main-contentsbox-select {
           padding-bottom: 30px;
           form {
+            position: relative;
+            height: 100%;
+            width: 100%;
             .detail__main-contentsbox-selects {
               display: flex;
               flex-direction: column;
@@ -1082,37 +1090,47 @@ body {
                 }
               }
             }
-            h3 {
-              @include text_B_S_14;
-              display: flex;
-              justify-content: space-between;
-              margin-bottom: 17px;
-              color: map-get($color, color-Black);
-              > span {
-                @include text_B_L_18;
-              }
-            }
-            > div {
-              display: flex;
-              justify-content: space-between;
-              button {
-                padding-top: 2px;
-                border: 2px solid map-get($color, primary-color);
-                outline: none;
-                width: 49%;
-                height: 46px;
-                background-color: map-get($color, color-White);
-                cursor: pointer;
-                border-radius: 5px;
-                @include text_B_L_18;
-              }
-              .select-cart-btn {
-                color: map-get($color, primary-color);
-              }
-              .select-buy-btn {
-                background-color: map-get($color, primary-color);
+            .detail__main-contentsbox-btns {
+              width: 100%;
+              // max-width: 514px;
+              // min-width: 514px;
+              background-color: map-get($color, color-White);
+              // position: static;
 
-                color: map-get($color, color-White);
+              bottom: 20px;
+              padding: 10px 0px 10px 0px;
+              h3 {
+                @include text_B_S_14;
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 17px;
+                color: map-get($color, color-Black);
+                > span {
+                  @include text_B_L_18;
+                }
+              }
+              div {
+                display: flex;
+                justify-content: space-between;
+                button {
+                  padding-top: 2px;
+                  border: 2px solid map-get($color, primary-color);
+                  outline: none;
+                  width: 49%;
+                  height: 46px;
+                  background-color: map-get($color, color-White);
+                  cursor: pointer;
+                  border-radius: 5px;
+                  @include text_B_L_18;
+                }
+                .select-cart-btn {
+                  color: map-get($color, primary-color);
+                }
+                .select-buy-btn {
+                  background-color: map-get($color, primary-color);
+
+                  color: map-get($color, color-White);
+                }
               }
             }
           }
@@ -1316,13 +1334,22 @@ body {
       }
       .detail__right-box {
         .detail__main-contentsbox {
-          margin-bottom: 60px;
+          // margin-bottom: 60px;
           width: 100%;
           .detail__main-contentsbox-select {
-            > div {
-              button {
-                width: 48%;
-                height: 45px;
+            form {
+              // .detail__main-contentsbox-selects {
+              // }
+              .detail__main-contentsbox-btns {
+                width: 100%;
+                // max-width: auto;
+                // min-width: auto;
+                // width: 100%;
+                // position: static;
+                button {
+                  width: 48%;
+                  height: 45px;
+                }
               }
             }
           }
@@ -1362,7 +1389,6 @@ body {
       }
       .detail__right-box {
         .detail__main-contentsbox {
-          margin-bottom: 60px;
           width: 100%;
           .detail__main-contentsbox-provider {
             display: none;
@@ -1384,6 +1410,24 @@ body {
           }
           .detail__main-contentsbox-delivery-infos {
             display: none;
+          }
+          .detail__main-contentsbox-select {
+            form {
+              position: relative;
+              height: calc(100vh - 220px);
+              width: 100%;
+              .detail__main-contentsbox-selects {
+              }
+              .detail__main-contentsbox-btns {
+                // width: 36.6%;
+                // bottom: 20px;
+                // position: fixed;
+
+                width: 100%;
+                bottom: 0px;
+                position: absolute;
+              }
+            }
           }
         }
       }
@@ -1638,9 +1682,11 @@ body {
       .detail__right-box {
         position: fixed;
         z-index: 10;
+        left: 0px;
         bottom: 0px;
         width: 100%;
-        padding-right: 30px;
+        padding-left: 15px;
+        padding-right: 15px;
         padding-bottom: 0px;
         background-color: map-get($color, color-White);
         .detail__main-contentsbox {
@@ -1649,6 +1695,18 @@ body {
           padding-bottom: 5px;
           .detail__main-contentsbox-select {
             padding-bottom: 0px;
+            form {
+              position: static;
+              height: auto;
+              width: 100%;
+              .detail__main-contentsbox-btns {
+                width: 100%;
+                max-width: 100%;
+                min-width: 100%;
+                position: static;
+                bottom: 0px;
+              }
+            }
           }
         }
       }

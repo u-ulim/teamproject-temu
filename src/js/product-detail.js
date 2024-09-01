@@ -188,15 +188,15 @@ fetch(productsURL)
       <section id="product-detail__container">
       <div class="product-detail__header">
           <ul>
-            <li><a class="active" href="#detail-headers">상품정보</a></li>
-            <li ><a href="#reviews__counters">리뷰<span>${
+            <li><a class="active" href="#detail-headers " data-target="detail-headers">상품정보</a></li>
+            <li><a href="#reviews__counters" data-target="reviews__counters">리뷰<span>${
               product.reviewCount
             }</span></a></li>
-            <li><a href="#reviews__contacts">문의<span>${
+            <li><a href="#reviews__contacts" data-target="reviews__contacts">문의<span>${
               product.details.contactCount
             }</span></a></li>
-            <li><a href="#detail__delivery">배송/환불</a></li>
-            <li><a href="#detail__product-list">추천</a></li>
+            <li><a href="#detail__delivery" data-target="detail__delivery">배송/환불</a></li>
+            <li><a href="#detail__product-list" data-target="detail__product-list">추천</a></li>
           </ul>
         </div>
         <div class="product-detail__clearance" id="detail-headers">
@@ -566,21 +566,48 @@ fetch(productsURL)
         <div class="detail__main-contentsbox-selects">
           ${createSelectOptions(product.details.selectOptions)}
         </div>
-        
-        <h3>주문금액 <span>${price}원</span></h3>
-        <div>
-          <button type="submit" class="select-cart-btn">장바구니</button>
-          <button type="button" class="select-buy-btn">바로구매</button>
+        <div class="detail__main-contentsbox-btns">
+          <h3>주문금액 <span>${price}원</span></h3>
+          <div>
+           <button type="submit" class="select-cart-btn">장바구니</button>
+            <button type="button" class="select-buy-btn">바로구매</button>
+          </div>
         </div>
       </form>
     </div>
   </div>
   </div>
     `;
-  
 
       // 마우스 오버시 이미지 체인지
-      
+      const detailMainImgs = document.querySelectorAll(
+        ".detail__main-imgs > li > div > img"
+      );
+      const imgChangeHandler = (img) => {
+        return (e) => {
+          const detailMainImg = document.querySelector(
+            ".detail__main-imgbox > div > img"
+          );
+          detailMainImgs.forEach((img) => {
+            img.style.border = "";
+          });
+
+          // 페이드 아웃 효과
+          detailMainImg.classList.add("fade-out");
+          img.style.border = "2px solid #222";
+
+          // 이미지가 페이드 아웃된 후 src를 변경하고 페이드 인 효과를 적용
+          setTimeout(() => {
+            detailMainImg.src = img.src;
+            detailMainImg.classList.remove("fade-out");
+          }, 100); // transition 시간과 일치하게 설정
+        };
+      };
+
+      detailMainImgs.forEach((img) => {
+        // img.addEventListener("mouseover", imgChangeHandler(img));
+        img.addEventListener("click", imgChangeHandler(img));
+      });
 
       // reviews안에 내용 넣기
       const commentContents = document.querySelector(".comments__contents");
@@ -644,7 +671,7 @@ fetch(productsURL)
       // 상품 추가 시 가격 합산
       let multiplePrice;
       let sumPrice = document.querySelector(
-        ".detail__right-box .detail__main-contentsbox-select > form >  h3 > span"
+        ".detail__right-box .detail__main-contentsbox-select > form > .detail__main-contentsbox-btns > h3 > span"
       );
       let quan = 1;
       const selectQuantityElement = document.querySelector(
@@ -706,7 +733,7 @@ fetch(productsURL)
       };
       rightBoxScrollEvt();
 
-      // detail menu 클릭 시, active 및 페이지 내 이동
+      // detail menu 클릭, 스크롤시, active 및 페이지 내 이동
       const productDetailHeaderMenus = document.querySelectorAll(
         ".product-detail__header > ul > li > a"
       );
@@ -735,6 +762,29 @@ fetch(productsURL)
         });
       });
 
+      //scroll
+      const detailMenuSections = document.querySelectorAll(
+        "#detail-headers, #reviews__counters, #reviews__contacts, #detail__delivery, #detail__product-list"
+      );
+      const detailMenuScroll = () => {
+        detailMenuSections.forEach((section) => {
+          const rect = section.getBoundingClientRect();
+
+          if (rect.top + 200 < window.innerHeight && rect.bottom > 150) {
+            // 해당 섹션이 보이면, 메뉴 아이템에 acitve 추가
+            productDetailHeaderMenus.forEach((menuItem) => {
+              if (menuItem.dataset.target === section.id) {
+                menuItem.classList.add("active");
+              } else {
+                menuItem.classList.remove("active");
+              }
+            });
+          }
+        });
+      };
+
+      window.addEventListener("scroll", detailMenuScroll);
+
       // cartLocalStorage
       let setCartProducts =
         JSON.parse(localStorage.getItem("setCartProducts")) || [];
@@ -744,16 +794,6 @@ fetch(productsURL)
           JSON.stringify(setCartProducts)
         );
       };
-
-      const getCartProducts = JSON.parse(
-        localStorage.getItem("setCartProducts")
-      );
-      console.log(getCartProducts);
-
-      // test
-      getCartProducts.forEach((product) => {
-        console.log(product);
-      });
 
       const setCartHandler = (e) => {
         e.preventDefault();
@@ -782,7 +822,6 @@ fetch(productsURL)
         ".detail__right-box .detail__main-contentsbox-select > form"
       );
       form.addEventListener("submit", setCartHandler);
-
     };
 
     // 페이지 이동

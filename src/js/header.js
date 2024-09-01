@@ -47,7 +47,6 @@ const headerLoad = () => {
       // header top rolling banner
       const headerRollingEvt = () => {
         const rollingBanner = () => {
-          console.log("hi");
           const prev = document.querySelector(".header-top__prev");
           prev.classList.remove("header-top__prev");
 

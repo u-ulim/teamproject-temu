@@ -167,7 +167,6 @@ table {
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
-  padding: 0px;
 }
 .product-lists .product-list {
   margin-bottom: 60px;
@@ -303,7 +302,6 @@ table {
 @media (max-width: 1384px) {
   .product-lists {
     width: 100%;
-    padding: 0px;
   }
   .product-lists .product-list {
     margin-bottom: 20px;
@@ -319,7 +317,6 @@ table {
 @media (max-width: 1000px) {
   .product-lists {
     width: 100%;
-    padding: 0px;
   }
   .product-lists .product-list {
     margin-bottom: 0px;
@@ -338,7 +335,6 @@ table {
 @media (max-width: 768px) {
   .product-lists {
     width: 100%;
-    padding: 0px;
   }
   .product-lists .product-list {
     margin-bottom: 0px;
@@ -357,7 +353,6 @@ table {
 @media (max-width: 390px) {
   .product-lists {
     width: 100%;
-    padding: 0px;
   }
   .product-lists .product-list {
     margin-bottom: 40px;
