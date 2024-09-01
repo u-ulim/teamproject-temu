@@ -5,8 +5,6 @@
 @import "../layout/layout.scss";
 
 #wrapper {
-  width: 100%;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,7 +14,6 @@
     display: flex;
     flex-direction: column;
     padding: 10px 20px;
-    // width: 100%;
     height: 90%;
     .inner__contents {
       margin-bottom: 10px;
@@ -34,8 +31,9 @@
         }
         .user__id {
           display: flex;
-          align-items: center;
+          // align-items: center;
           margin-bottom: 10px;
+          flex-direction: column;
           .userid {
             border: 1px solid map-get($color, color-Neutrals-Grey-300);
             border-radius: 5px;
@@ -43,6 +41,25 @@
             height: 40px;
             padding: 10px;
             @include text_M_16;
+          }
+          .success {
+            @include text_S_14;
+            color: map-get($color-system, info-color);
+            display: none;
+            span {
+              margin-left: 3px;
+            }
+          }
+          .failure {
+            @include text_S_14;
+            color: map-get($color-system, error-color);
+            display: none;
+          }
+          .failure__message {
+            @include text_S_14;
+            color: map-get($color-system, error-color);
+            margin-bottom: 8px;
+            display: none;
           }
         }
       }
@@ -57,14 +74,41 @@
           color: map-get($color, color-Neutrals-Grey-600);
           margin-bottom: 2px;
         }
-        .password {
-          width: 360px;
-          height: 40px;
-          padding: 10px;
-          border-radius: 5px;
-          border: 1px solid map-get($color, color-Neutrals-Grey-300);
-          margin-bottom: 10px;
-          @include text_M_16;
+        fieldset {
+          display: flex;
+          align-items: center;
+          .password {
+            position: relative;
+            width: 360px;
+            height: 40px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid map-get($color, color-Neutrals-Grey-300);
+            @include text_M_16;
+            // border: 1px solid red;
+            display: flex;
+            margin-bottom: 5px;
+          }
+          .fa-eye-slash {
+            color: map-get($color, color-Neutrals-Grey-500);
+            position: absolute;
+            // border: 1px solid red;
+            bottom: 80;
+            left: 50;
+            transform: translate(-150%, -60%);
+          }
+        }
+        .password__message {
+          @include text_S_14;
+          color: map-get($color-system, error-color);
+          margin-bottom: 8px;
+          display: none;
+        }
+        .success__password {
+          @include text_S_14;
+          color: map-get($color-system, info-color);
+          margin-bottom: 8px;
+          display: none;
         }
       }
       .info__password__check {
@@ -79,8 +123,21 @@
           width: 360px;
           height: 40px;
           padding: 10px;
-          margin-bottom: 10px;
+          display: flex;
+          margin-bottom: 5px;
           @include text_M_16;
+        }
+        .mismatch__message {
+          @include text_S_14;
+          color: map-get($color-system, error-color);
+          margin-bottom: 8px;
+          display: none;
+        }
+        .password__success {
+          @include text_S_14;
+          color: map-get($color-system, info-color);
+          margin-bottom: 8px;
+          display: none;
         }
       }
       .info__email {
@@ -88,10 +145,11 @@
           @include text_B_M_16;
           margin-bottom: 2px;
         }
+
         #email__item {
           display: flex;
           align-items: center;
-          margin-bottom: 15px;
+          margin-bottom: 5px;
           .email {
             border: 1px solid map-get($color, color-Neutrals-Grey-300);
             padding: 10px;
@@ -116,6 +174,24 @@
             margin-left: 5px;
             color: map-get($color, color-Neutrals-Grey-600);
           }
+        }
+        .email__success {
+          @include text_S_14;
+          color: map-get($color-system, info-color);
+          margin-bottom: 8px;
+          display: none;
+        }
+        .email__fail {
+          @include text_S_14;
+          color: map-get($color-system, error-color);
+          margin-bottom: 8px;
+          display: none;
+        }
+        .email__error {
+          @include text_S_14;
+          color: map-get($color-system, error-color);
+          margin-bottom: 8px;
+          display: none;
         }
       }
     }
@@ -152,12 +228,12 @@
                 width: 18px;
                 height: 18px;
               }
-              .txt {
+              .All__checkbox {
                 // border: 1px solid red;
                 @include text_B_M_16;
                 margin-left: 5px;
               }
-              .txt__box {
+              .box__txt {
                 @include text_XS_12;
                 margin-left: 5px;
                 color: map-get($color, color-Neutrals-Grey-600);

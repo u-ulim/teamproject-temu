@@ -168,8 +168,6 @@ table {
 }
 
 #wrapper {
-  width: 100%;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -206,8 +204,8 @@ table {
 }
 #wrapper .container #info .info__id .user__id {
   display: flex;
-  align-items: center;
   margin-bottom: 10px;
+  flex-direction: column;
 }
 #wrapper .container #info .info__id .user__id .userid {
   border: 1px solid #b5b5b5;
@@ -220,6 +218,37 @@ table {
   font-style: normal;
   line-height: 24px;
   letter-spacing: -0.48px;
+}
+#wrapper .container #info .info__id .user__id .success {
+  font-family: "Pretendard-Regular";
+  font-size: 14px;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: -0.42px;
+  color: #0a8800;
+  display: none;
+}
+#wrapper .container #info .info__id .user__id .success span {
+  margin-left: 3px;
+}
+#wrapper .container #info .info__id .user__id .failure {
+  font-family: "Pretendard-Regular";
+  font-size: 14px;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: -0.42px;
+  color: #fc3310;
+  display: none;
+}
+#wrapper .container #info .info__id .user__id .failure__message {
+  font-family: "Pretendard-Regular";
+  font-size: 14px;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: -0.42px;
+  color: #fc3310;
+  margin-bottom: 8px;
+  display: none;
 }
 #wrapper .container #info .info__password .user__password {
   font-family: "Pretendard-Bold";
@@ -239,18 +268,51 @@ table {
   color: #6a6a6a;
   margin-bottom: 2px;
 }
-#wrapper .container #info .info__password .password {
+#wrapper .container #info .info__password fieldset {
+  display: flex;
+  align-items: center;
+}
+#wrapper .container #info .info__password fieldset .password {
+  position: relative;
   width: 360px;
   height: 40px;
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #b5b5b5;
-  margin-bottom: 10px;
   font-family: "Pretendard-Regular";
   font-size: 16px;
   font-style: normal;
   line-height: 24px;
   letter-spacing: -0.48px;
+  display: flex;
+  margin-bottom: 5px;
+}
+#wrapper .container #info .info__password fieldset .fa-eye-slash {
+  color: #818181;
+  position: absolute;
+  bottom: 80;
+  left: 50;
+  transform: translate(-150%, -60%);
+}
+#wrapper .container #info .info__password .password__message {
+  font-family: "Pretendard-Regular";
+  font-size: 14px;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: -0.42px;
+  color: #fc3310;
+  margin-bottom: 8px;
+  display: none;
+}
+#wrapper .container #info .info__password .success__password {
+  font-family: "Pretendard-Regular";
+  font-size: 14px;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: -0.42px;
+  color: #0a8800;
+  margin-bottom: 8px;
+  display: none;
 }
 #wrapper .container #info .info__password__check .password__check {
   font-family: "Pretendard-Bold";
@@ -267,12 +329,33 @@ table {
   width: 360px;
   height: 40px;
   padding: 10px;
-  margin-bottom: 10px;
+  display: flex;
+  margin-bottom: 5px;
   font-family: "Pretendard-Regular";
   font-size: 16px;
   font-style: normal;
   line-height: 24px;
   letter-spacing: -0.48px;
+}
+#wrapper .container #info .info__password__check .mismatch__message {
+  font-family: "Pretendard-Regular";
+  font-size: 14px;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: -0.42px;
+  color: #fc3310;
+  margin-bottom: 8px;
+  display: none;
+}
+#wrapper .container #info .info__password__check .password__success {
+  font-family: "Pretendard-Regular";
+  font-size: 14px;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: -0.42px;
+  color: #0a8800;
+  margin-bottom: 8px;
+  display: none;
 }
 #wrapper .container #info .info__email .user__email {
   font-family: "Pretendard-Bold";
@@ -286,7 +369,7 @@ table {
 #wrapper .container #info .info__email #email__item {
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 #wrapper .container #info .info__email #email__item .email {
   border: 1px solid #b5b5b5;
@@ -318,6 +401,36 @@ table {
   border-radius: 5px;
   margin-left: 5px;
   color: #6a6a6a;
+}
+#wrapper .container #info .info__email .email__success {
+  font-family: "Pretendard-Regular";
+  font-size: 14px;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: -0.42px;
+  color: #0a8800;
+  margin-bottom: 8px;
+  display: none;
+}
+#wrapper .container #info .info__email .email__fail {
+  font-family: "Pretendard-Regular";
+  font-size: 14px;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: -0.42px;
+  color: #fc3310;
+  margin-bottom: 8px;
+  display: none;
+}
+#wrapper .container #info .info__email .email__error {
+  font-family: "Pretendard-Regular";
+  font-size: 14px;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: -0.42px;
+  color: #fc3310;
+  margin-bottom: 8px;
+  display: none;
 }
 #wrapper .container #agreement #agree .agree__title {
   color: #292828;
@@ -357,7 +470,7 @@ table {
   width: 18px;
   height: 18px;
 }
-#wrapper .container #agreement #agree #items #agree__box .agree__checkbox .txt {
+#wrapper .container #agreement #agree #items #agree__box .agree__checkbox .All__checkbox {
   font-family: "Pretendard-Bold";
   font-size: 16px;
   font-style: normal;
@@ -366,7 +479,7 @@ table {
   letter-spacing: -0.48px;
   margin-left: 5px;
 }
-#wrapper .container #agreement #agree #items #agree__box .agree__checkbox .txt__box {
+#wrapper .container #agreement #agree #items #agree__box .agree__checkbox .box__txt {
   font-family: "Pretendard-Regular";
   font-size: 12px;
   font-style: normal;
