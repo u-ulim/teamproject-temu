@@ -6,8 +6,6 @@
 
 // WRAPPER
 .wrapper {
-  width: 100%;
-  height: 100vh;
   @include width_inner;
   .mark__inner {
     display: flex;
