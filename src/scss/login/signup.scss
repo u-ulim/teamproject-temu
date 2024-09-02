@@ -6,10 +6,10 @@
 
 #wrapper {
   display: flex;
-  justify-content: center;
   align-items: center;
-  @include width_full;
+  justify-content: center;
   color: map-get($color, color-Neutrals-Grey-800);
+  @include width_full;
   .container {
     display: flex;
     flex-direction: column;
@@ -17,9 +17,9 @@
     height: 90%;
     .inner__contents {
       margin-bottom: 10px;
+      color: map-get($color, color-Neutrals-Grey-700);
       text-align: center;
       @include heading_S_24;
-      color: map-get($color, color-Neutrals-Grey-700);
     }
     #info {
       color: map-get($color, color-Neutrals-Grey-700);
@@ -31,35 +31,35 @@
         }
         .user__id {
           display: flex;
+          flex-direction: column;
           // align-items: center;
           margin-bottom: 10px;
-          flex-direction: column;
           .userid {
+            padding: 10px;
             border: 1px solid map-get($color, color-Neutrals-Grey-300);
-            border-radius: 5px;
             width: 360px;
             height: 40px;
-            padding: 10px;
+            border-radius: 5px;
             @include text_M_16;
           }
           .success {
             @include text_S_14;
-            color: map-get($color-system, info-color);
             display: none;
+            color: map-get($color-system, info-color);
             span {
               margin-left: 3px;
             }
           }
           .failure {
             @include text_S_14;
-            color: map-get($color-system, error-color);
             display: none;
+            color: map-get($color-system, error-color);
           }
           .failure__message {
             @include text_S_14;
-            color: map-get($color-system, error-color);
-            margin-bottom: 8px;
             display: none;
+            margin-bottom: 8px;
+            color: map-get($color-system, error-color);
           }
         }
       }
@@ -71,44 +71,45 @@
         }
         .password__txt {
           @include text_S_14;
-          color: map-get($color, color-Neutrals-Grey-600);
           margin-bottom: 2px;
+          color: map-get($color, color-Neutrals-Grey-600);
         }
         fieldset {
           display: flex;
           align-items: center;
           .password {
-            position: relative;
-            width: 360px;
-            height: 40px;
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid map-get($color, color-Neutrals-Grey-300);
-            @include text_M_16;
             // border: 1px solid red;
             display: flex;
             margin-bottom: 5px;
+            padding: 10px;
+            border: 1px solid map-get($color, color-Neutrals-Grey-300);
+            position: relative;
+            width: 360px;
+            height: 40px;
+            border-radius: 5px;
+            @include text_M_16;
           }
-          .fa-eye-slash {
-            color: map-get($color, color-Neutrals-Grey-500);
+          .fa-eye-slash,
+          .fa-eye {
             position: absolute;
             // border: 1px solid red;
             bottom: 80;
             left: 50;
+            color: map-get($color, color-Neutrals-Grey-500);
             transform: translate(-150%, -60%);
           }
         }
         .password__message {
           @include text_S_14;
-          color: map-get($color-system, error-color);
-          margin-bottom: 8px;
           display: none;
+          margin-bottom: 8px;
+          color: map-get($color-system, error-color);
         }
         .success__password {
           @include text_S_14;
-          color: map-get($color-system, info-color);
-          margin-bottom: 8px;
           display: none;
+          margin-bottom: 8px;
+          color: map-get($color-system, info-color);
         }
       }
       .info__password__check {
@@ -117,27 +118,41 @@
           @include text_B_M_16;
           margin-bottom: 2px;
         }
-        .confrim__password {
-          border: 1px solid map-get($color, color-Neutrals-Grey-300);
-          border-radius: 5px;
-          width: 360px;
-          height: 40px;
-          padding: 10px;
+        fieldset {
           display: flex;
-          margin-bottom: 5px;
-          @include text_M_16;
+          align-items: center;
+          .confrim__password {
+            display: flex;
+            margin-bottom: 5px;
+            padding: 10px;
+            border: 1px solid map-get($color, color-Neutrals-Grey-300);
+            position: relative;
+            width: 360px;
+            height: 40px;
+            border-radius: 5px;
+            @include text_M_16;
+          }
+          .fa-eye-slash,
+          .fa-eye {
+            position: absolute;
+            bottom: 80;
+            left: 50;
+            color: map-get($color, color-Neutrals-Grey-500);
+            transform: translate(-150%, -60%);
+          }
         }
+
         .mismatch__message {
           @include text_S_14;
-          color: map-get($color-system, error-color);
-          margin-bottom: 8px;
           display: none;
+          margin-bottom: 8px;
+          color: map-get($color-system, error-color);
         }
         .password__success {
           @include text_S_14;
-          color: map-get($color-system, info-color);
-          margin-bottom: 8px;
           display: none;
+          margin-bottom: 8px;
+          color: map-get($color-system, info-color);
         }
       }
       .info__email {
@@ -151,75 +166,75 @@
           align-items: center;
           margin-bottom: 5px;
           .email {
-            border: 1px solid map-get($color, color-Neutrals-Grey-300);
+            margin-right: 5px;
             padding: 10px;
-            @include text_M_16;
+            border: 1px solid map-get($color, color-Neutrals-Grey-300);
             width: 170px;
             height: 40px;
             border-radius: 5px;
-            margin-right: 5px;
+            @include text_M_16;
           }
           span {
             color: map-get($color, color-Neutrals-Grey-400);
           }
           .control {
+            display: flex;
+            margin-left: 5px;
+            padding-left: 10px;
+            border: 1px solid map-get($color, color-Neutrals-Grey-300);
             // border: 1px solid red;
             width: 170px;
             height: 40px;
-            display: flex;
-            padding-left: 10px;
-            @include text_M_16;
-            border: 1px solid map-get($color, color-Neutrals-Grey-300);
-            border-radius: 5px;
-            margin-left: 5px;
             color: map-get($color, color-Neutrals-Grey-600);
+            border-radius: 5px;
+            @include text_M_16;
           }
         }
         .email__success {
           @include text_S_14;
-          color: map-get($color-system, info-color);
-          margin-bottom: 8px;
           display: none;
+          margin-bottom: 8px;
+          color: map-get($color-system, info-color);
         }
         .email__fail {
           @include text_S_14;
-          color: map-get($color-system, error-color);
-          margin-bottom: 8px;
           display: none;
+          margin-bottom: 8px;
+          color: map-get($color-system, error-color);
         }
         .email__error {
           @include text_S_14;
-          color: map-get($color-system, error-color);
-          margin-bottom: 8px;
           display: none;
+          margin-bottom: 8px;
+          color: map-get($color-system, error-color);
         }
       }
     }
     #agreement {
       #agree {
         .agree__title {
+          margin-bottom: 2px;
           color: map-get($color, color-Neutrals-Grey-800);
           @include text_B_M_16;
-          margin-bottom: 2px;
         }
         #items {
-          width: 100%;
-          padding: 5px 20px;
           display: flex;
-          flex-direction: column;
           // justify-content: center;
           justify-content: start;
+          flex-direction: column;
+          margin-bottom: 10px;
+          padding: 5px 20px;
           border: 1px solid red;
           border: 1px solid map-get($color, color-Neutrals-Grey-300);
-          margin-bottom: 10px;
+          width: 100%;
           border-radius: 3px;
           > div {
             height: 28px;
           }
           #agree__box {
-            border-bottom: 1px solid map-get($color, color-Neutrals-Grey-300);
             display: flex;
             margin-bottom: 2px;
+            border-bottom: 1px solid map-get($color, color-Neutrals-Grey-300);
             .agree__checkbox {
               display: flex;
               align-items: center;

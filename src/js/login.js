@@ -8,8 +8,9 @@ const failureMessage = document.querySelector(".failure__message"); // 영어 �
 const password = document.querySelector(".password"); // 비밀번호
 const confrimPassword = document.querySelector(".confrim__password"); //비밀번호 확인
 const passwordMessage = document.querySelector(".password__message"); // 영문, 숫자, 특수분자 미사용
+const passwordFields = document.querySelectorAll("input[type='password']");
+const toggleIcons = document.querySelectorAll(".fa-eye-slash"); // 비밀번호 숨기는 아이콘
 const mismatchMessage = document.querySelector(".mismatch__message"); //비밀번호 불일치
-const togglePassword = document.querySelector(".fa-eye-slash"); //비밀번호 숨기는 아이콘
 const successPassword = document.querySelector(".success__password"); // 비밀번호 성공
 const passwordSuccess = document.querySelector(".password__success"); //비밀번호 확인 성공
 
@@ -20,7 +21,7 @@ const emailSuccess = document.querySelector(".email__success");
 const emailFail = document.querySelector(".email__fail");
 const emailError = document.querySelector(".email__error");
 
-// 4. 체크박스 
+// 4. 체크박스
 const selectAllCheckbox = document.querySelector("#agree__box .checkbox");
 const ageCheckbox = document.querySelector("#age__box .checkbox");
 const useCheckbox = document.querySelector("#use__box .checkbox");
@@ -36,30 +37,39 @@ userid.addEventListener("input", function () {
 
   if (userIdValue.length >= 5 && idRegex.test(userIdValue)) {
     // 유효한 아이디
-    success.style.display = "block"; // 성공 메세지 보이기
-    failure.style.display = "none"; // 글자 수 실패 메세지 숨기기
-    failureMessage.style.display = "none"; // 영어 또는 숫자 실패 메세지 숨기기
+    success.style.display = "block"; // 성공 메시지 보이기
+    failure.style.display = "none"; // 글자 수 실패 메시지 숨기기
+    failureMessage.style.display = "none"; // 영어 또는 숫자 실패 메시지 숨기기
+    userid.style.borderColor = "green"; // 테두리 색상을 녹색으로 변경 (성공)
   } else {
-    success.style.display = "none"; // 성공 메세지 숨기기
-    failure.style.display = userIdValue.length < 8 ? "block" : "none"; // 글자 수 실패 메세지 보이기
+    success.style.display = "none"; // 성공 메시지 숨기기
+    failure.style.display = userIdValue.length < 5 ? "block" : "none"; // 글자 수 실패 메시지 보이기
     failureMessage.style.display = !idRegex.test(userIdValue)
       ? "block"
-      : "none"; // 영어 또는 숫자 실패 메세지 보이기
+      : "none"; // 영어 또는 숫자 실패 메시지 보이기
+    userid.style.borderColor = "red"; // 테두리 색상을 빨간색으로 변경 (실패)
   }
 });
 
 // 2. 비밀번호 유효성 검사
 // 비밀번호 보이기/숨기기 기능
-togglePassword.addEventListener("click", function () {
-  // 현재 비밀번호 필드의 타입 확인
-  const type =
-    password.getAttribute("type") === "password" ? "text" : "password";
-  password.setAttribute("type", type);
-  confrimPassword.setAttribute("type", type);
+// 각 아이콘에 클릭 이벤트를 추가
+toggleIcons.forEach((icon, index) => {
+  icon.addEventListener("click", function () {
+    // 현재 클릭된 아이콘과 연결된 비밀번호 필드 가져오기
+    const currentPasswordField = passwordFields[index];
 
-  // 아이콘 전환
-  this.classList.toggle("fa-eye");
-  this.classList.toggle("fa-eye-slash");
+    // 비밀번호 필드 타입을 password <-> text로 토글
+    const type =
+      currentPasswordField.getAttribute("type") === "password"
+        ? "text"
+        : "password";
+    currentPasswordField.setAttribute("type", type);
+
+    // 아이콘 전환 (fa-eye-slash <-> fa-eye)
+    this.classList.toggle("fa-eye");
+    this.classList.toggle("fa-eye-slash");
+  });
 });
 
 // 비밀번호 확인 검사
@@ -150,9 +160,8 @@ function validateEmail() {
 document.querySelector(".email").addEventListener("input", validateEmail);
 document.querySelector(".control").addEventListener("change", validateEmail);
 
-// 4. 체크박스
+// 4.체크박스
 document.addEventListener("DOMContentLoaded", function () {
-
   const checkboxes = [
     ageCheckbox,
     useCheckbox,

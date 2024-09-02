@@ -169,10 +169,10 @@ table {
 
 #wrapper {
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 100%;
+  justify-content: center;
   color: #292828;
+  width: 100%;
 }
 #wrapper .container {
   display: flex;
@@ -182,13 +182,13 @@ table {
 }
 #wrapper .container .inner__contents {
   margin-bottom: 10px;
+  color: #4a4949;
   text-align: center;
   font-family: "Pretendard-Bold";
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
   letter-spacing: -0.48px;
-  color: #4a4949;
 }
 #wrapper .container #info {
   color: #4a4949;
@@ -204,15 +204,15 @@ table {
 }
 #wrapper .container #info .info__id .user__id {
   display: flex;
-  margin-bottom: 10px;
   flex-direction: column;
+  margin-bottom: 10px;
 }
 #wrapper .container #info .info__id .user__id .userid {
+  padding: 10px;
   border: 1px solid #b5b5b5;
-  border-radius: 5px;
   width: 360px;
   height: 40px;
-  padding: 10px;
+  border-radius: 5px;
   font-family: "Pretendard-Regular";
   font-size: 16px;
   font-style: normal;
@@ -225,8 +225,8 @@ table {
   font-style: normal;
   line-height: 22px;
   letter-spacing: -0.42px;
-  color: #0a8800;
   display: none;
+  color: #0a8800;
 }
 #wrapper .container #info .info__id .user__id .success span {
   margin-left: 3px;
@@ -237,8 +237,8 @@ table {
   font-style: normal;
   line-height: 22px;
   letter-spacing: -0.42px;
-  color: #fc3310;
   display: none;
+  color: #fc3310;
 }
 #wrapper .container #info .info__id .user__id .failure__message {
   font-family: "Pretendard-Regular";
@@ -246,9 +246,9 @@ table {
   font-style: normal;
   line-height: 22px;
   letter-spacing: -0.42px;
-  color: #fc3310;
-  margin-bottom: 8px;
   display: none;
+  margin-bottom: 8px;
+  color: #fc3310;
 }
 #wrapper .container #info .info__password .user__password {
   font-family: "Pretendard-Bold";
@@ -265,33 +265,34 @@ table {
   font-style: normal;
   line-height: 22px;
   letter-spacing: -0.42px;
-  color: #6a6a6a;
   margin-bottom: 2px;
+  color: #6a6a6a;
 }
 #wrapper .container #info .info__password fieldset {
   display: flex;
   align-items: center;
 }
 #wrapper .container #info .info__password fieldset .password {
+  display: flex;
+  margin-bottom: 5px;
+  padding: 10px;
+  border: 1px solid #b5b5b5;
   position: relative;
   width: 360px;
   height: 40px;
-  padding: 10px;
   border-radius: 5px;
-  border: 1px solid #b5b5b5;
   font-family: "Pretendard-Regular";
   font-size: 16px;
   font-style: normal;
   line-height: 24px;
   letter-spacing: -0.48px;
-  display: flex;
-  margin-bottom: 5px;
 }
-#wrapper .container #info .info__password fieldset .fa-eye-slash {
-  color: #818181;
+#wrapper .container #info .info__password fieldset .fa-eye-slash,
+#wrapper .container #info .info__password fieldset .fa-eye {
   position: absolute;
   bottom: 80;
   left: 50;
+  color: #818181;
   transform: translate(-150%, -60%);
 }
 #wrapper .container #info .info__password .password__message {
@@ -300,9 +301,9 @@ table {
   font-style: normal;
   line-height: 22px;
   letter-spacing: -0.42px;
-  color: #fc3310;
-  margin-bottom: 8px;
   display: none;
+  margin-bottom: 8px;
+  color: #fc3310;
 }
 #wrapper .container #info .info__password .success__password {
   font-family: "Pretendard-Regular";
@@ -310,9 +311,9 @@ table {
   font-style: normal;
   line-height: 22px;
   letter-spacing: -0.42px;
-  color: #0a8800;
-  margin-bottom: 8px;
   display: none;
+  margin-bottom: 8px;
+  color: #0a8800;
 }
 #wrapper .container #info .info__password__check .password__check {
   font-family: "Pretendard-Bold";
@@ -323,19 +324,32 @@ table {
   letter-spacing: -0.48px;
   margin-bottom: 2px;
 }
-#wrapper .container #info .info__password__check .confrim__password {
-  border: 1px solid #b5b5b5;
-  border-radius: 5px;
-  width: 360px;
-  height: 40px;
-  padding: 10px;
+#wrapper .container #info .info__password__check fieldset {
+  display: flex;
+  align-items: center;
+}
+#wrapper .container #info .info__password__check fieldset .confrim__password {
   display: flex;
   margin-bottom: 5px;
+  padding: 10px;
+  border: 1px solid #b5b5b5;
+  position: relative;
+  width: 360px;
+  height: 40px;
+  border-radius: 5px;
   font-family: "Pretendard-Regular";
   font-size: 16px;
   font-style: normal;
   line-height: 24px;
   letter-spacing: -0.48px;
+}
+#wrapper .container #info .info__password__check fieldset .fa-eye-slash,
+#wrapper .container #info .info__password__check fieldset .fa-eye {
+  position: absolute;
+  bottom: 80;
+  left: 50;
+  color: #818181;
+  transform: translate(-150%, -60%);
 }
 #wrapper .container #info .info__password__check .mismatch__message {
   font-family: "Pretendard-Regular";
@@ -343,9 +357,9 @@ table {
   font-style: normal;
   line-height: 22px;
   letter-spacing: -0.42px;
-  color: #fc3310;
-  margin-bottom: 8px;
   display: none;
+  margin-bottom: 8px;
+  color: #fc3310;
 }
 #wrapper .container #info .info__password__check .password__success {
   font-family: "Pretendard-Regular";
@@ -353,9 +367,9 @@ table {
   font-style: normal;
   line-height: 22px;
   letter-spacing: -0.42px;
-  color: #0a8800;
-  margin-bottom: 8px;
   display: none;
+  margin-bottom: 8px;
+  color: #0a8800;
 }
 #wrapper .container #info .info__email .user__email {
   font-family: "Pretendard-Bold";
@@ -372,35 +386,35 @@ table {
   margin-bottom: 5px;
 }
 #wrapper .container #info .info__email #email__item .email {
-  border: 1px solid #b5b5b5;
+  margin-right: 5px;
   padding: 10px;
+  border: 1px solid #b5b5b5;
+  width: 170px;
+  height: 40px;
+  border-radius: 5px;
   font-family: "Pretendard-Regular";
   font-size: 16px;
   font-style: normal;
   line-height: 24px;
   letter-spacing: -0.48px;
-  width: 170px;
-  height: 40px;
-  border-radius: 5px;
-  margin-right: 5px;
 }
 #wrapper .container #info .info__email #email__item span {
   color: #9a9a9a;
 }
 #wrapper .container #info .info__email #email__item .control {
+  display: flex;
+  margin-left: 5px;
+  padding-left: 10px;
+  border: 1px solid #b5b5b5;
   width: 170px;
   height: 40px;
-  display: flex;
-  padding-left: 10px;
+  color: #6a6a6a;
+  border-radius: 5px;
   font-family: "Pretendard-Regular";
   font-size: 16px;
   font-style: normal;
   line-height: 24px;
   letter-spacing: -0.48px;
-  border: 1px solid #b5b5b5;
-  border-radius: 5px;
-  margin-left: 5px;
-  color: #6a6a6a;
 }
 #wrapper .container #info .info__email .email__success {
   font-family: "Pretendard-Regular";
@@ -408,9 +422,9 @@ table {
   font-style: normal;
   line-height: 22px;
   letter-spacing: -0.42px;
-  color: #0a8800;
-  margin-bottom: 8px;
   display: none;
+  margin-bottom: 8px;
+  color: #0a8800;
 }
 #wrapper .container #info .info__email .email__fail {
   font-family: "Pretendard-Regular";
@@ -418,9 +432,9 @@ table {
   font-style: normal;
   line-height: 22px;
   letter-spacing: -0.42px;
-  color: #fc3310;
-  margin-bottom: 8px;
   display: none;
+  margin-bottom: 8px;
+  color: #fc3310;
 }
 #wrapper .container #info .info__email .email__error {
   font-family: "Pretendard-Regular";
@@ -428,11 +442,12 @@ table {
   font-style: normal;
   line-height: 22px;
   letter-spacing: -0.42px;
-  color: #fc3310;
-  margin-bottom: 8px;
   display: none;
+  margin-bottom: 8px;
+  color: #fc3310;
 }
 #wrapper .container #agreement #agree .agree__title {
+  margin-bottom: 2px;
   color: #292828;
   font-family: "Pretendard-Bold";
   font-size: 16px;
@@ -440,26 +455,25 @@ table {
   font-weight: 700;
   line-height: 24px;
   letter-spacing: -0.48px;
-  margin-bottom: 2px;
 }
 #wrapper .container #agreement #agree #items {
-  width: 100%;
-  padding: 5px 20px;
   display: flex;
-  flex-direction: column;
   justify-content: start;
+  flex-direction: column;
+  margin-bottom: 10px;
+  padding: 5px 20px;
   border: 1px solid red;
   border: 1px solid #b5b5b5;
-  margin-bottom: 10px;
+  width: 100%;
   border-radius: 3px;
 }
 #wrapper .container #agreement #agree #items > div {
   height: 28px;
 }
 #wrapper .container #agreement #agree #items #agree__box {
-  border-bottom: 1px solid #b5b5b5;
   display: flex;
   margin-bottom: 2px;
+  border-bottom: 1px solid #b5b5b5;
 }
 #wrapper .container #agreement #agree #items #agree__box .agree__checkbox {
   display: flex;
