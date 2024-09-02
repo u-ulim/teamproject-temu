@@ -183,7 +183,7 @@ main {
   /*order__info*/
 }
 main .section__up article {
-  /*banner*/
+  /*banner */
 }
 main .section__up article .section__title {
   display: flex;
@@ -211,6 +211,7 @@ main .section__up article .banner {
   justify-content: space-between;
   margin-bottom: 26px;
   padding: 10px;
+  padding-right: 20px;
   width: 100%;
   height: 48px;
   background-color: #e6f3e5;
@@ -223,26 +224,7 @@ main .section__up article .banner {
   letter-spacing: -0.48px;
 }
 main .section__up article .banner .banner-close {
-  border: none;
-  position: relative;
-  width: 30px;
-  height: 30px;
-  background: transparent;
-}
-main .section__up article .banner .banner-close span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 1px;
-  height: 80%;
-  background-color: #000;
   cursor: pointer;
-}
-main .section__up article .banner .banner-close span:nth-child(1) {
-  transform: translate(-50%, -50%) rotate(-45deg);
-}
-main .section__up article .banner .banner-close span:nth-child(2) {
-  transform: translate(-50%, -50%) rotate(45deg);
 }
 main .section__up article .banner.active {
   display: none;
@@ -286,6 +268,7 @@ main .address .shopping__info .info__down {
   border: 1px solid #9a9a9a;
   border-left: 4px solid #9a9a9a;
   border-radius: 8px;
+  display: none;
 }
 main .address .shopping__info .info__down ul li {
   margin-bottom: 7px;
@@ -324,6 +307,55 @@ main .address .shopping__info .info__down ul li span:nth-child(2) {
   font-style: normal;
   line-height: 22px;
   letter-spacing: -0.42px;
+}
+main .address .shopping__info .info__down-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #9a9a9a;
+  border-left: 4px solid #9a9a9a;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  width: 446.41px;
+  height: 121px;
+  gap: 5px;
+}
+main .address .shopping__info .info__down-empty ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 5px;
+}
+main .address .shopping__info .info__down-empty ul li {
+  margin-bottom: 7px;
+}
+main .address .shopping__info .info__down-empty ul li:nth-child(2) {
+  font-family: "Pretendard-Bold";
+  font-size: 14px;
+  font-style: bold;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: -0.42px;
+}
+main .address .shopping__info .info__down-empty button {
+  border: none;
+  width: 170px;
+  height: 36px;
+  border-radius: 8px;
+  font-family: "Pretendard-Regular";
+  font-size: 14px;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: -0.42px;
+  color: #fff;
+  background: #ff6d00;
+  cursor: pointer;
+  transition: backgroud 0.3s;
+}
+main .address .shopping__info .info__down-empty button:hover {
+  background: #ff7629;
 }
 main .address .delivery__service {
   flex: 2;
@@ -635,6 +667,11 @@ main .order__info .product__info ul .product .product__info .price__info span:nt
   color: #fff;
   transition: all 0.3s;
   border-radius: 8px;
+  font-family: "Pretendard-Regular";
+  font-size: 14px;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: -0.42px;
 }
 .credit .used__credit button:hover {
   background-color: #ff7629;

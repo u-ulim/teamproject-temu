@@ -1,4 +1,15 @@
 // 주소 변경 모달 창 관련 이벤트 내역
+// 주소등록 버튼을 누른 후 작성하고 그 값을 로컬스토리지에 저장되어야함
+
+let setAddresstProducts =
+  JSON.parse(localStorage.getItem("setAddresstProducts")) || [];
+
+const localStorageSave = () => {
+  localStorage.setItem(
+    "setAddresstProducts",
+    JSON.stringify(setAddresstProducts)
+  );
+};
 
 //변수선언
 const bannerClose = document.querySelector(".banner-close");
@@ -17,6 +28,8 @@ const nameInput = document.querySelector("#name");
 const phoneNumberInput = document.querySelector("#phone-number");
 const detailedAddressInput = document.querySelector("#detailed-address");
 const infoDown = document.querySelector(".info__down");
+const addressFirstBtn = document.querySelector(".address-plus");
+
 let editingItem = null;
 
 // 배너 삭제
@@ -479,6 +492,12 @@ function addModalEventListeners() {
       toggleAddressModal("main", true);
     });
   }
+
+  if (addressFirstBtn) {
+    addressFirstBtn.addEventListener("click", () => {
+      toggleAddressModal("plus", true);
+    });
+  }
 }
 
 // 모달 이벤트 다시 시작
@@ -558,3 +577,30 @@ checkboxes.forEach(function (checkbox) {
     agreeAll.checked = allChecked;
   });
 });
+
+// getAddressProduct 빈 화면
+function renderCartItems() {
+  userInfo.innerHTML = "";
+
+  if (getCartProducts.length === 0) {
+    document.querySelector(".empty__product").style.display = "block";
+    userInfo.style.display = "none";
+    renderAddressItems();
+  } else {
+    document.querySelector(".empty__product").style.display = "none";
+    userInfo.style.display = "block";
+  }
+}
+
+// getAddressProduct 빈 화면
+function checkIfAddressIsEmpty() {
+  if (getAddressProduct.length === 0) {
+    addressBtn.style.display = none;
+    console.log(addressBtn);
+  } else {
+    renderAddressItems();
+    addressBtn.style.display = block;
+  }
+}
+
+checkIfAddressIsEmpty();

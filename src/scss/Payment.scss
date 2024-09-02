@@ -39,13 +39,14 @@ main {
           gap: 10px;
         }
       }
-      /*banner*/
+      /*banner */
       .banner {
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin-bottom: 26px;
         padding: 10px;
+        padding-right: 20px;
         width: 100%;
         height: 48px;
         background-color: map-get($color-background, info-color);
@@ -53,26 +54,7 @@ main {
         border-radius: 8px;
         @include text_M_16;
         .banner-close {
-          border: none;
-          position: relative;
-          width: 30px;
-          height: 30px;
-          background: transparent;
-          span {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 1px;
-            height: 80%;
-            background-color: #000;
-            cursor: pointer;
-            &:nth-child(1) {
-              transform: translate(-50%, -50%) rotate(-45deg);
-            }
-            &:nth-child(2) {
-              transform: translate(-50%, -50%) rotate(45deg);
-            }
-          }
+          cursor: pointer;
         }
         &.active {
           display: none;
@@ -113,6 +95,8 @@ main {
         border: 1px solid map-get($color, color-Neutrals-Grey-400);
         border-left: 4px solid map-get($color, color-Neutrals-Grey-400);
         border-radius: 8px;
+        display: none;
+
         ul {
           li {
             margin-bottom: 7px;
@@ -132,6 +116,47 @@ main {
                 @include text_S_14;
               }
             }
+          }
+        }
+      }
+      .info__down-empty {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid map-get($color, color-Neutrals-Grey-400);
+        border-left: 4px solid map-get($color, color-Neutrals-Grey-400);
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        width: 446.41px;
+        height: 121px;
+        gap: 5px;
+        ul {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          gap: 5px;
+
+          li {
+            margin-bottom: 7px;
+            &:nth-child(2) {
+              @include text_B_S_14;
+            }
+          }
+        }
+        button {
+          border: none;
+          width: 170px;
+          height: 36px;
+          border-radius: 8px;
+          @include text_S_14;
+          color: map-get($color, color-White);
+          background: map-get($color, primary-color);
+          cursor: pointer;
+          transition: backgroud 0.3s;
+          &:hover {
+            background: map-get($color-hover, primary-color);
           }
         }
       }
@@ -367,6 +392,7 @@ main {
       color: map-get($color, color-White);
       transition: all 0.3s;
       border-radius: 8px;
+      @include text_S_14;
       &:hover {
         background-color: map-get($color-hover, primary-color);
         cursor: pointer;

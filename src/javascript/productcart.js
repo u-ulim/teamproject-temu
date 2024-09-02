@@ -4,6 +4,7 @@ const bannerClose = document.querySelector(".banner-close");
 const productInfoCart = document.querySelector(".product__info-All");
 const selectAllCheckbox = document.querySelector("#custom__box");
 const itemCountElement = document.querySelector("#item__count");
+
 let productCheckboxes;
 let getCartProducts = JSON.parse(localStorage.getItem("setCartProducts")) || [];
 const productsURL =
@@ -30,12 +31,12 @@ function renderCartItems() {
   productInfoCart.innerHTML = "";
 
   if (getCartProducts.length === 0) {
-    document.querySelector(".empty__product").style.display = "block";
+    document.querySelector(".info__down-empty").style.display = "block";
     productInfoCart.style.display = "none";
     resetAsideValues();
     selectAllCheckbox.disabled = true;
   } else {
-    document.querySelector(".empty__product").style.display = "none";
+    document.querySelector(".info__down-empty").style.display = "none";
     productInfoCart.style.display = "block";
     selectAllCheckbox.disabled = false;
   }
