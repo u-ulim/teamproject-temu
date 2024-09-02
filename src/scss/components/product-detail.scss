@@ -1025,9 +1025,27 @@ body {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          margin-bottom: 25px;
+          margin-bottom: 15px;
           // border-top: 2px solid map-get($color, color-Neutrals-Grey-200);
-          padding: 0px 0px 0px 0px;
+          padding: 10px 0px 0px 0px;
+          position: relative;
+          // border-top: 2px solid #efefef;
+          > span {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            height: 32px;
+            text-align: center;
+            left: 50%;
+            transform: translate(-50%, -95%);
+            @include text_XS_12;
+            cursor: pointer;
+            display: none;
+            i {
+              font-size: 10px;
+            }
+          }
           > div {
             display: flex;
             gap: 2px;
@@ -1414,10 +1432,9 @@ body {
           .detail__main-contentsbox-select {
             form {
               position: relative;
-              height: calc(100vh - 220px);
+              height: calc(100vh - 215px);
               width: 100%;
-              .detail__main-contentsbox-selects {
-              }
+
               .detail__main-contentsbox-btns {
                 // width: 36.6%;
                 // bottom: 20px;
@@ -1512,6 +1529,7 @@ body {
           @include width_full;
           .product-detail__header {
             @include width_full;
+            position: static;
             ul {
               li {
                 @include text_B_S_14;
@@ -1683,16 +1701,38 @@ body {
         position: fixed;
         z-index: 10;
         left: 0px;
-        bottom: 0px;
+        // top: 74px;
+        bottom: 64px;
         width: 100%;
         padding-left: 15px;
         padding-right: 15px;
         padding-bottom: 0px;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        max-height: 32px;
+        overflow: hidden;
+        transition: 0.4s;
+        cursor: pointer;
+        &.open {
+          max-height: 344px;
+        }
+
         background-color: map-get($color, color-White);
         .detail__main-contentsbox {
           margin-bottom: 0px;
           padding-top: 15px;
           padding-bottom: 5px;
+
+          .detail__main-contentsbox-brand {
+            // border-top: 2px solid #efefef;
+            > span {
+              display: block;
+              z-index: 20;
+              i {
+                font-size: 10px;
+              }
+            }
+          }
           .detail__main-contentsbox-select {
             padding-bottom: 0px;
             form {
