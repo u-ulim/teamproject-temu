@@ -81,8 +81,6 @@ function renderCartItems() {
             }</span><span>|</span><span>${selectSize || "사이즈"}</span></div>
             <div class="product__text-down">
               <input type="button" value="옵션변경" class="option" data-index="${index}" />
-              <span>|</span>
-              <input type="button" value="바로구매" />
             </div>
           </div>
         </li>

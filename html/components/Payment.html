@@ -1,62 +1,64 @@
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TEMU</title>
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TEMU</title>
 
-  <!-- FONTAWESOME -->
-  <script
-    src="https://kit.fontawesome.com/6336e5c545.js"
-    crossorigin="anonymous"
-  ></script>
+    <!-- FONTAWESOME -->
+    <script
+      src="https://kit.fontawesome.com/6336e5c545.js"
+      crossorigin="anonymous"
+    ></script>
 
-  <!-- CUSTOM CSS, JS-->
-  <link rel="stylesheet" href="../../src/scss/Payment.css" />
-  <link rel="stylesheet" href="../../src/scss/components/header.css" />
-  <link rel="stylesheet" href="../../src/scss/components/footer.css" />
-  <script defer src="../../src/javascript/payment.js"></script>
-  <script defer src="../../src/js/header.js"></script>
-  <script defer src="../../src/js/footer.js"></script>
-  <script defer src="../../src/json/category-list.js"></script>
-</head>
-<body>
-  <header id="header"></header>
-  <div class="container">
-    <!--MAIN START-->
-    <main>
-      <!-- section__up -->
-      <section class="section__up">
-        <article>
-          <div class="section__title">
-            <div class="category">
-              <span><a href="#">홈</a></span>
+    <!-- CUSTOM CSS, JS-->
+    <link rel="stylesheet" href="../../src/scss/Payment.css" />
+    <link rel="stylesheet" href="../../src/scss/components/header.css" />
+    <link rel="stylesheet" href="../../src/scss/components/footer.css" />
+    <script defer src="../../src/javascript/payment.js"></script>
+    <script defer src="../../src/js/header.js"></script>
+    <script defer src="../../src/js/footer.js"></script>
+    <script defer src="../../src/json/category-list.js"></script>
+  </head>
+  <body>
+    <header id="header"></header>
+    <div class="container">
+      <!--MAIN START-->
+      <main>
+        <!-- section__up -->
+        <section class="section__up">
+          <article>
+            <div class="section__title">
+              <div class="category">
+                <span><a href="#">홈</a></span>
+              </div>
+              <div class="back-box">
+                <i class="fa-solid fa-angle-left"></i>
+                <span>뒤로</span>
+              </div>
+              <span class="select__category">
+                <span>></span>
+                <a href="#none">결제</a>
+              </span>
             </div>
-            <div class="back-box">
-              <i class="fa-solid fa-angle-left"></i>
-              <span>뒤로</span>
+            <div class="banner">
+              <span>테무는 언제나 무료 배송</span>
+              <div class="banner-close">
+                <i class="fa-solid fa-xmark"></i>
+              </div>
             </div>
-            <span class="select__category">
-              <span>></span>
-              <a href="#none">결제</a>
-            </span>
-          </div>
-          <div class="banner">
-            <span>테무는 언제나 무료 배송</span>
-            <div class="banner-close">
-              <i class="fa-solid fa-xmark"></i>
-            </div>
-          </div>
-        </article>
-      </section>
+          </article>
+        </section>
 
-      <!-- address-->
-      <section class="address">
-        <article class="shopping__info">
-          <div class="info__up">
-            <span>배송정보</span>
-            <span class="addressbtn">주소 변경 ></span>
-          </div>
-          <div class="info__down">
-            <!-- <ul>
+        <!-- address-->
+        <section class="address">
+          <article class="shopping__info">
+            <div class="info__up">
+              <span>배송정보</span>
+              <button class="addressbtn">주소 변경 ></button>
+            </div>
+            <div class="info__down">
+              <!-- <ul>
               <li>
                 <span>홍길동</span>
                 <span>82+ 123-4567-8910</span>
@@ -64,49 +66,49 @@
               <li>01234 대한민국 서울특별시 삼각구</li>
               <li>이젠 아파트 9동 901호</li>
             </ul> -->
-          </div>
-          <div class="info__down-empty">
-            <ul>
-              <li>
-                <span><i class="fa-regular fa-address-card"></i></span>
-              </li>
-              <li>주소를 등록해주세요</li>
-            </ul>
-            <button class="address-plus">주소 등록</button>
-          </div>
-        </article>
-        <article class="delivery__service">
-          <span>배송 :무료</span>
-          <div class="delivery__info">
-            <ul class="delivery__memo">
-              <li>도착 예정: 7월 29일-8월 2일, 80.1% 확률로 7일 이내 도착</li>
-              <li>배송지연에 대해 ￦ 5,300 크레딧 받기</li>
-              <li>
-                배송업체: Lotte Global Logistics, Logistics, Daejang, CJ 등.
-              </li>
-            </ul>
-          </div>
-        </article>
-      </section>
+            </div>
+            <div class="info__down-empty" style="display: none">
+              <ul>
+                <li>
+                  <span><i class="fa-regular fa-address-card"></i></span>
+                </li>
+                <li>주소를 등록해주세요</li>
+              </ul>
+              <button class="address-plus">주소 등록</button>
+            </div>
+          </article>
+          <article class="delivery__service">
+            <span>배송 :무료</span>
+            <div class="delivery__info">
+              <ul class="delivery__memo">
+                <li>도착 예정: 7월 29일-8월 2일, 80.1% 확률로 7일 이내 도착</li>
+                <li>배송지연에 대해 ￦ 5,300 크레딧 받기</li>
+                <li>
+                  배송업체: Lotte Global Logistics, Logistics, Daejang, CJ 등.
+                </li>
+              </ul>
+            </div>
+          </article>
+        </section>
 
-      <!-- order__info-->
-      <section class="order__info">
-        <div class="order__title">
-          <h3>주문상품(<span></span>)</h3>
-        </div>
-        <hr />
-        <div class="product__info">
-          <!-- product -->
-          <ul>
-            <!-- <li class="product"> -->
-            <!-- img -->
-            <!-- <div class="img">
+        <!-- order__info-->
+        <section class="order__info">
+          <div class="order__title">
+            <h3>주문상품(<span></span>)</h3>
+          </div>
+          <hr />
+          <div id="product__info-All" class="product__info">
+            <!-- product -->
+            <ul>
+              <!-- <li class="product"> -->
+              <!-- img -->
+              <!-- <div class="img">
                 <div>
                   <img src="./img/product.png" alt="product01" />
                 </div>
               </div> -->
-            <!-- product__info -->
-            <!-- <div class="product__info">
+              <!-- product__info -->
+              <!-- <div class="product__info">
                 <div class="product__title">
                   <span>1/5/10쌍의 남성용 심플 슬리드 라이너</span>
                   <span>(2)</span>
@@ -121,348 +123,352 @@
                   <span>￦4,219</span>
                 </div>
               </div> -->
-            <!-- </li> -->
-          </ul>
-        </div>
-      </section>
+              <!-- </li> -->
+            </ul>
+          </div>
+        </section>
 
-      <!-- coupon-->
-      <section class="coupon">
-        <h2>쿠폰</h2>
-        <form class="coupon__select">
-          <label for="coupon">쿠폰적용<span>*</span></label>
-          <select id="coupon">
-            <option>사용 가능한 쿠폰 1장 / 전체 1장</option>
-          </select>
-        </form>
-      </section>
+        <!-- coupon-->
+        <section class="coupon">
+          <h2>쿠폰</h2>
+          <form class="coupon__select">
+            <label for="coupon">쿠폰적용<span>*</span></label>
+            <select id="coupon"></select>
+          </form>
+        </section>
 
-      <!-- credit-->
-      <section class="credit">
-        <h3>크레딧</h3>
-        <form class="total__credit">
-          <label for="total__credit">보유 잔액<span>*</span></label>
-          <input type="text" id="total__credit__box" placeholder="₩200,000" />
-        </form>
-        <form class="used__credit">
-          <label for="used__credit">사용 잔액<span>*</span></label>
-          <input type="text" id="used__credit__box" placeholder="₩100,000" />
-          <button>전액 사용</button>
-        </form>
-      </section>
+        <!-- credit-->
+        <section class="credit">
+          <h3>크레딧</h3>
+          <form class="total__credit">
+            <label for="total__credit">보유 잔액<span>*</span></label>
+            <input
+              type="text"
+              id="total__credit__box"
+              readonly
+              placeholder="₩20,000"
+            />
+          </form>
+          <form class="used__credit">
+            <label for="used__credit">사용 잔액<span>*</span></label>
+            <input type="text" id="used__credit__box" />
+            <button>전액사용</button>
+          </form>
+        </section>
 
-      <!-- payment__method-->
-      <section class="payment__method">
-        <h3>결제수단</h3>
-        <div class="methods">
-          <ul>
-            <li>
-              <label for="card">
-                <span>Card</span>
-                <div class="img">
-                  <img src="../../assets/images/payment/card.png" alt="card" />
-                </div>
-                <input type="radio" name="radio" id="card" />
-              </label>
-            </li>
-            <li>
-              <label for="KakaoPay">
-                <span>KakaoPay</span>
-                <div class="img">
-                  <img
-                    src="../../assets/images/payment/kakaopay.png "
-                    alt="kakaopay"
-                  />
-                </div>
-                <input type="radio" name="radio" id="KakaoPay" />
-              </label>
-            </li>
-            <li>
-              <label for="TossPay">
-                <span>TossPay</span>
-                <div class="img">
-                  <img
-                    src="../../assets/images/payment/toss.png "
-                    alt="tosspay"
-                  />
-                </div>
-                <input type="radio" name="radio" id="TossPay" />
-              </label>
-            </li>
-            <li>
-              <label for="NaverPay">
-                <span>NaverPay</span>
-                <div class="img">
-                  <img
-                    src="../../assets/images/payment/naverpay.png "
-                    alt="naverpay"
-                  />
-                </div>
-                <input type="radio" name="radio" id="NaverPay" />
-              </label>
-            </li>
-            <li>
-              <label for="PayPal">
-                <span>PayPal</span>
-                <div class="img">
-                  <img
-                    src="../../assets/images/payment/paypal.png "
-                    alt="paypal"
-                  />
-                </div>
-                <input type="radio" name="radio" id="PayPal" />
-              </label>
-            </li>
-            <li>
-              <label for="GogglePay">
-                <span>GogglePay</span>
-                <div class="img">
-                  <img
-                    src="../../assets/images/payment/gogglepay.png "
-                    alt="gogglpay"
-                  />
-                </div>
-                <input type="radio" name="radio" id="GogglePay" />
-              </label>
-            </li>
-          </ul>
-        </div>
-      </section>
-    </main>
-    <!--MAIN END-->
+        <!-- payment__method-->
+        <section class="payment__method">
+          <h3>결제수단</h3>
+          <div class="methods">
+            <ul>
+              <li>
+                <label for="card">
+                  <span>Card</span>
+                  <div class="img">
+                    <img
+                      src="../../assets/images/payment/card.png"
+                      alt="card"
+                    />
+                  </div>
+                  <input type="radio" name="radio" id="card" />
+                </label>
+              </li>
+              <li>
+                <label for="KakaoPay">
+                  <span>KakaoPay</span>
+                  <div class="img">
+                    <img
+                      src="../../assets/images/payment/kakaopay.png "
+                      alt="kakaopay"
+                    />
+                  </div>
+                  <input type="radio" name="radio" id="KakaoPay" />
+                </label>
+              </li>
+              <li>
+                <label for="TossPay">
+                  <span>TossPay</span>
+                  <div class="img">
+                    <img
+                      src="../../assets/images/payment/toss.png "
+                      alt="tosspay"
+                    />
+                  </div>
+                  <input type="radio" name="radio" id="TossPay" />
+                </label>
+              </li>
+              <li>
+                <label for="NaverPay">
+                  <span>NaverPay</span>
+                  <div class="img">
+                    <img
+                      src="../../assets/images/payment/naverpay.png "
+                      alt="naverpay"
+                    />
+                  </div>
+                  <input type="radio" name="radio" id="NaverPay" />
+                </label>
+              </li>
+              <li>
+                <label for="PayPal">
+                  <span>PayPal</span>
+                  <div class="img">
+                    <img
+                      src="../../assets/images/payment/paypal.png "
+                      alt="paypal"
+                    />
+                  </div>
+                  <input type="radio" name="radio" id="PayPal" />
+                </label>
+              </li>
+              <li>
+                <label for="GogglePay">
+                  <span>GogglePay</span>
+                  <div class="img">
+                    <img
+                      src="../../assets/images/payment/gogglepay.png "
+                      alt="gogglpay"
+                    />
+                  </div>
+                  <input type="radio" name="radio" id="GogglePay" />
+                </label>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+      <!--MAIN END-->
 
-    <!--ASIDE START-->
-    <aside>
-      <div class="checkout__summary">
-        <!-- summary__item -->
-        <div class="summary__item">
-          <ul>
-            <li class="total__fee">
-              <span>총 상품금액</span>
-              <span class="price">₩11,000</span>
-            </li>
-            <li class="delivery__fee">
-              <span>배송비</span>
-              <span class="delivery__fee">-₩4,200</span>
-            </li>
-            <li class="coupon__fee">
-              <span>쿠폰사용</span>
-              <span class="coupon__fee">-₩4,200</span>
-            </li>
-            <li class="credit__fee">
-              <span>크레딧사용</span>
-              <span class="credit__fee">-₩4,200</span>
-            </li>
-          </ul>
-        </div>
-        <hr />
+      <!--ASIDE START-->
+      <aside>
+        <div class="checkout__summary">
+          <!-- summary__item -->
+          <div class="summary__item">
+            <ul>
+              <li class="total__fee">
+                <span>총 상품금액</span>
+                <span class="price"></span>
+              </li>
+              <li class="coupon__fee">
+                <span>쿠폰사용</span>
+                <span class="coupon__fee-last"></span>
+              </li>
+              <li class="credit__fee">
+                <span>크레딧사용</span>
+                <span class="credit__fee-last"></span>
+              </li>
+            </ul>
+          </div>
+          <hr />
 
-        <!--summary__price-->
-        <div class="summary__price">
-          <ul>
-            <li class="summary__item__total">
-              <p>최종결제금액<span>(2개상품)</span></p>
-              <span class="price">₩11,000</span>
-            </li>
-            <li class="tax__info">
-              <span class="tax__label">TAX</span>
-              <span class="tax__text"
-                >Temu의 가격은 관세가격을 포함합니다.</span
-              >
-            </li>
-          </ul>
-        </div>
-        <hr />
+          <!--summary__price-->
+          <div class="summary__price">
+            <ul>
+              <li class="summary__item__total">
+                <p>최종결제금액</p>
+                <span class="summary__price-total"></span>
+              </li>
+              <li class="tax__info">
+                <span class="tax__label">TAX</span>
+                <span class="tax__text"
+                  >Temu의 가격은 관세가격을 포함합니다.</span
+                >
+              </li>
+            </ul>
+          </div>
+          <hr />
 
-        <!--consent-->
-        <div class="consent">
-          <ul class="consent__list">
-            <li>
-              <div class="custom__box">
-                <input
-                  type="checkbox"
-                  name="agreeAll"
-                  id="agreeAll"
-                  class="agreeAll"
-                />
-                <label for="agreeAll">전체 동의</label>
-              </div>
-            </li>
-            <li>
-              <div class="consent-title">
+          <!--consent-->
+          <div class="consent">
+            <ul class="consent__list">
+              <li>
                 <div class="custom__box">
                   <input
                     type="checkbox"
-                    name="terms"
-                    id="terms"
-                    class="terms"
+                    name="agreeAll"
+                    id="agreeAll"
+                    class="agreeAll"
                   />
-                  <label for="terms">테무 이용약관(필수)</label>
+                  <label for="agreeAll">전체 동의</label>
                 </div>
-              </div>
-              <div class="consent-content">
-                <p>
-                  본 약관은 테무 서비스를 이용함에 있어 사용자와 테무 간의 권리,
-                  의무 및 책임사항을 규정합니다.
-                </p>
-                <p>
-                  서비스 이용자는 약관에 명시된 모든 조항을 준수해야 하며,
-                  서비스 이용 전에 반드시 이를 숙지하고 동의해야 합니다.
-                </p>
-                <p>
-                  이용약관은 사용자 보호 및 서비스의 원활한 운영을 위해
-                  마련되었습니다. 본 약관에 동의하지 않을 경우, 서비스 이용이
-                  제한될 수 있습니다.
-                </p>
-              </div>
-            </li>
-            <li>
-              <div class="consent-title">
-                <div class="custom__box">
-                  <input
-                    type="checkbox"
-                    name="personalInfo"
-                    id="personalInfo"
-                    class="personalInfo"
-                  />
-                  <label for="personalInfo">개인정보 수집 및 이용(필수)</label>
+              </li>
+              <li>
+                <div class="consent-title">
+                  <div class="custom__box">
+                    <input
+                      type="checkbox"
+                      name="terms"
+                      id="terms"
+                      class="terms"
+                    />
+                    <label for="terms">테무 이용약관(필수)</label>
+                  </div>
                 </div>
-              </div>
-              <div class="consent-content">
-                <p>
-                  개인정보 수집 및 이용은 테무 서비스 제공을 위한 필수적인
-                  절차입니다.
-                </p>
-                <p>
-                  수집된 정보는 서비스 개선, 고객 지원, 마케팅 목적 등으로
-                  사용되며, 법적 요구 사항에 따라 보호됩니다. 사용자의
-                  개인정보는 외부로 유출되지 않으며, 철저한 보안 절차에 따라
-                  관리됩니다.
-                </p>
-                <p>
-                  사용자는 언제든지 개인정보 처리에 대해 문의하거나, 제공된
-                  정보의 수정 및 삭제를 요청할 수 있습니다.
-                </p>
-              </div>
-            </li>
-            <li>
-              <div class="consent-title">
-                <div>
-                  <input
-                    type="checkbox"
-                    name="transferInfo"
-                    id="ransferInfo"
-                    class="transferInfo"
-                  />
-                  <label for="transferInfo"
-                    >개인정보의 국외 이전에 대한 동의(필수)</label
-                  >
+                <div class="consent-content">
+                  <p>
+                    본 약관은 테무 서비스를 이용함에 있어 사용자와 테무 간의
+                    권리, 의무 및 책임사항을 규정합니다.
+                  </p>
+                  <p>
+                    서비스 이용자는 약관에 명시된 모든 조항을 준수해야 하며,
+                    서비스 이용 전에 반드시 이를 숙지하고 동의해야 합니다.
+                  </p>
+                  <p>
+                    이용약관은 사용자 보호 및 서비스의 원활한 운영을 위해
+                    마련되었습니다. 본 약관에 동의하지 않을 경우, 서비스 이용이
+                    제한될 수 있습니다.
+                  </p>
                 </div>
-              </div>
-              <div class="consent-content">
-                <p>
-                  테무는 글로벌 서비스 운영을 위해 사용자의 개인정보를 국외로
-                  이전할 수 있습니다.
-                </p>
-                <p>
-                  인정보는 안전한 서버에 저장되며, 법적 요구 사항을 준수하는
-                  방식으로 처리됩니다. 국외 이전에 따른 위험은 최소화되며,
-                  사용자의 동의 없이 타 국가로 이전되지 않습니다.
-                </p>
-                <p>
-                  국외 이전과 관련된 세부 사항은 개인정보 처리방침에서 확인할 수
-                  있습니다.
-                </p>
-              </div>
-            </li>
-            <li>
-              <div class="consent-title">
-                <div>
-                  <input
-                    type="checkbox"
-                    name="treePlanting"
-                    id="treePlanting"
-                    class="treePlanting"
-                  />
-                  <label for="treePlanting">Temu와 함께 나무 심기</label>
+              </li>
+              <li>
+                <div class="consent-title">
+                  <div class="custom__box">
+                    <input
+                      type="checkbox"
+                      name="personalInfo"
+                      id="personalInfo"
+                      class="personalInfo"
+                    />
+                    <label for="personalInfo"
+                      >개인정보 수집 및 이용(필수)</label
+                    >
+                  </div>
                 </div>
-              </div>
-              <div class="consent-content">
-                <p>
-                  Temu와 함께 나무 심기 캠페인에 참여해 지구 환경 보호에
-                  동참하세요.
-                </p>
-                <p>
-                  사용자의 참여로 모인 기금은 전 세계에서 나무를 심는 프로젝트에
-                  사용됩니다. 작은 실천이 모여 큰 변화를 만듭니다.
-                </p>
-                <p>
-                  캠페인 참여자는 특별한 혜택과 함께, 지속 가능한 미래를 위한
-                  활동에 기여할 수 있습니다. Temu와 함께 더 나은 내일을
-                  만들어가요.
-                </p>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <!--button-->
-        <button type="submit" class="checkout__button" value="결제하기">
-          결제하기
-        </button>
+                <div class="consent-content">
+                  <p>
+                    개인정보 수집 및 이용은 테무 서비스 제공을 위한 필수적인
+                    절차입니다.
+                  </p>
+                  <p>
+                    수집된 정보는 서비스 개선, 고객 지원, 마케팅 목적 등으로
+                    사용되며, 법적 요구 사항에 따라 보호됩니다. 사용자의
+                    개인정보는 외부로 유출되지 않으며, 철저한 보안 절차에 따라
+                    관리됩니다.
+                  </p>
+                  <p>
+                    사용자는 언제든지 개인정보 처리에 대해 문의하거나, 제공된
+                    정보의 수정 및 삭제를 요청할 수 있습니다.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="consent-title">
+                  <div>
+                    <input
+                      type="checkbox"
+                      name="transferInfo"
+                      id="ransferInfo"
+                      class="transferInfo"
+                    />
+                    <label for="transferInfo"
+                      >개인정보의 국외 이전에 대한 동의(필수)</label
+                    >
+                  </div>
+                </div>
+                <div class="consent-content">
+                  <p>
+                    테무는 글로벌 서비스 운영을 위해 사용자의 개인정보를 국외로
+                    이전할 수 있습니다.
+                  </p>
+                  <p>
+                    인정보는 안전한 서버에 저장되며, 법적 요구 사항을 준수하는
+                    방식으로 처리됩니다. 국외 이전에 따른 위험은 최소화되며,
+                    사용자의 동의 없이 타 국가로 이전되지 않습니다.
+                  </p>
+                  <p>
+                    국외 이전과 관련된 세부 사항은 개인정보 처리방침에서 확인할
+                    수 있습니다.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="consent-title">
+                  <div>
+                    <input
+                      type="checkbox"
+                      name="treePlanting"
+                      id="treePlanting"
+                      class="treePlanting"
+                    />
+                    <label for="treePlanting">Temu와 함께 나무 심기</label>
+                  </div>
+                </div>
+                <div class="consent-content">
+                  <p>
+                    Temu와 함께 나무 심기 캠페인에 참여해 지구 환경 보호에
+                    동참하세요.
+                  </p>
+                  <p>
+                    사용자의 참여로 모인 기금은 전 세계에서 나무를 심는
+                    프로젝트에 사용됩니다. 작은 실천이 모여 큰 변화를 만듭니다.
+                  </p>
+                  <p>
+                    캠페인 참여자는 특별한 혜택과 함께, 지속 가능한 미래를 위한
+                    활동에 기여할 수 있습니다. Temu와 함께 더 나은 내일을
+                    만들어가요.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!--button-->
+          <button type="submit" class="checkout__button" value="결제하기">
+            결제하기
+          </button>
 
-        <!--info-->
-        <div class="info">
-          <ul>
-            <li>
-              <div>
-                <i class="fa-solid fa-shield"></i>
-                <p>Temu는 사용자의 카드 정보를 보호합니다.</p>
-              </div>
-            </li>
-            <li>
-              <div>
-                <i class="fa-solid fa-check"></i>
-                Temu는 카드 정보를 처리할 때 지불 카드 보안 표준(PCI DSS)을
-                따릅니다.
-              </div>
-            </li>
-            <li>
-              <div>
-                <i class="fa-solid fa-check"></i>
-                Temu는 카드 정보를 안전하게 보호하여 유출을 방지합니다.
-              </div>
-            </li>
-            <li>
-              <div>
-                <i class="fa-solid fa-check"></i>
-                모든 데이터는 암호화됩니다.
-              </div>
-            </li>
-            <li>
-              <div>
-                <i class="fa-solid fa-check"></i>
-                Temu는 귀하의 카드 정보를 절대 판매하지 않습니다.
-              </div>
-            </li>
-          </ul>
+          <!--info-->
+          <div class="info">
+            <ul>
+              <li>
+                <div>
+                  <i class="fa-solid fa-shield"></i>
+                  <p>Temu는 사용자의 카드 정보를 보호합니다.</p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <i class="fa-solid fa-check"></i>
+                  Temu는 카드 정보를 처리할 때 지불 카드 보안 표준(PCI DSS)을
+                  따릅니다.
+                </div>
+              </li>
+              <li>
+                <div>
+                  <i class="fa-solid fa-check"></i>
+                  Temu는 카드 정보를 안전하게 보호하여 유출을 방지합니다.
+                </div>
+              </li>
+              <li>
+                <div>
+                  <i class="fa-solid fa-check"></i>
+                  모든 데이터는 암호화됩니다.
+                </div>
+              </li>
+              <li>
+                <div>
+                  <i class="fa-solid fa-check"></i>
+                  Temu는 귀하의 카드 정보를 절대 판매하지 않습니다.
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </aside>
-    <!--ASIDE END-->
-  </div>
-  <footer id="footer"></footer>
-  <!--address- MODAL BOX START-->
-  <div id="box" class="address__modal__box">
-    <div class="address__modal__inner">
-      <div class="address__modal__inner-box">
-        <h2>주소</h2>
-        <button id="plus-address">+ 새 주소 추가</button>
-        <div class="info__password">
-          <i class="fa-solid fa-lock"></i>
-          <p>모든 데이터는 암호화 됩니다.</p>
-        </div>
-        <div class="user__info">
-          <!-- <ul>
+      </aside>
+      <!--ASIDE END-->
+    </div>
+    <footer id="footer"></footer>
+    <!--address- MODAL BOX START-->
+    <div id="box" class="address__modal__box">
+      <div class="address__modal__inner">
+        <div class="address__modal__inner-box">
+          <h2>주소</h2>
+          <button id="plus-address">+ 새 주소 추가</button>
+          <div class="info__password">
+            <i class="fa-solid fa-lock"></i>
+            <p>모든 데이터는 암호화 됩니다.</p>
+          </div>
+          <div class="user__info">
+            <!-- <ul>
             <li>
               <span class="username"></span>
               <span class="usernumber"><span></span></span>
@@ -490,130 +496,8 @@
               </div>
             </li>
           </ul> -->
-        </div>
-        <div class="address__close-box">
-          <div class="address__close">
-            <span></span>
-            <span></span>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--address- MODAL BOX END-->
-
-  <!--address+-MODAL BOX START-->
-  <div class="address__modal__box-plus">
-    <div class="plus__modal__inner">
-      <div class="plus__modal__inner-box">
-        <div class="new__address">
-          <h2>새 주소 추가</h2>
-          <div class="info__password">
-            <i class="fa-solid fa-lock"></i>
-            <p>모든 데이터는 암호화 됩니다.</p>
-          </div>
-        </div>
-        <form id="address-form" action="http://127.0.0.1:5501/" method="get">
-          <div class="address-box">
-            <label for="address">주소지 <span>*</span></label>
-            <div class="address_select">
-              <select name="trial" id="trial">
-                <option selected disabled>시/도</option>
-              </select>
-              <select name="city" id="city">
-                <option selected disabled>시/군/구</option>
-              </select>
-            </div>
-          </div>
-          <div class="detailed-address-box">
-            <label for="detailed-address">상세주소</label>
-            <input
-              type="text"
-              name="detailed-address"
-              id="detailed-address"
-              placeholder="선택"
-            />
-          </div>
-          <div class="zipcode-box">
-            <label for="zipcode">우편번호<span>*</span></label>
-            <input
-              type="text"
-              name="zipcode"
-              id="zipcode"
-              placeholder="예)597685"
-            />
-          </div>
-          <div class="customs-number-box">
-            <label for="customs-number">통관번호<span>*</span></label>
-            <div class="korea-select">
-              <span>저는 한국인 입니다</span>
-              <div class="answer">
-                <div>
-                  <input type="radio" name="answer" id="yes" />
-                  <label for="yes">네</label>
-                </div>
-                <div>
-                  <input type="radio" name="answer" id="no" />
-                  <label for="no">아니요</label>
-                </div>
-              </div>
-            </div>
-            <p>
-              <i class="fa-solid fa-circle-info"></i>
-              원활한 통관을 위해 개인통관고유번호를 신청할때 사용한 이름과
-              전화번호를 기재해주시기 바랍니다.
-              <a href="https://unipass.customs.go.kr/csp/persIndex.do"
-                >개인통관고유번호의 발급 및 조회를 원하시는 분들은 여기를
-                클릭해주시기 바랍니다.</a
-              >
-            </p>
-            <span id="mobile-user">
-              <a href="https://unipass.customs.go.kr/csp/persIndex.do"
-                >개인통관번호 찾기</a
-              >
-            </span>
-            <input
-              type="text"
-              name="customs-number"
-              id="customs-number"
-              placeholder="개인통관고유부호(P+12자리)"
-            />
-          </div>
-          <div class="customs-name-box">
-            <label for="name"
-              >이름(실명을 한글로 입력하세요)<span>*</span></label
-            >
-            <input type="text" name="name" id="name" placeholder="예)홍길동" />
-          </div>
-          <div class="customs-phone-number-box">
-            <label for="phone-number">전화번호<span>*</span></label>
-            <input
-              type="text"
-              name="phone-number"
-              id="phone-number"
-              placeholder="예)01012345678"
-            />
-          </div>
-          <div class="info">
-            <div>
-              <i class="fa-solid fa-shield"></i>
-              모든 데이터는 암호화됩니다
-            </div>
-            <p>
-              Temu는 주소 정보를 보호하고 안전하게 보관합니다. 모든 주소
-              데이터는 암호화되어 보관됩니다
-            </p>
-          </div>
-          <div class="submit__box">
-            <input type="submit" value="저장" />
-          </div>
-        </form>
-        <div class="box">
-          <div class="address__back-box">
-            <i class="fa-solid fa-angle-left"></i>
-            <span>뒤로</span>
-          </div>
-          <div class="address__close-box-plus">
+          <div class="address__close-box">
             <div class="address__close">
               <span></span>
               <span></span>
@@ -622,6 +506,134 @@
         </div>
       </div>
     </div>
-  </div>
-  <!--address+-MODAL BOX END-->
-</body>
+    <!--address- MODAL BOX END-->
+
+    <!--address+-MODAL BOX START-->
+    <div class="address__modal__box-plus">
+      <div class="plus__modal__inner">
+        <div class="plus__modal__inner-box">
+          <div class="new__address">
+            <h2>새 주소 추가</h2>
+            <div class="info__password">
+              <i class="fa-solid fa-lock"></i>
+              <p>모든 데이터는 암호화 됩니다.</p>
+            </div>
+          </div>
+          <form id="address-form" action="http://127.0.0.1:5501/" method="get">
+            <div class="address-box">
+              <label for="address">주소지 <span>*</span></label>
+              <div class="address_select">
+                <select name="trial" id="trial">
+                  <option selected disabled>시/도</option>
+                </select>
+                <select name="city" id="city">
+                  <option selected disabled>시/군/구</option>
+                </select>
+              </div>
+            </div>
+            <div class="detailed-address-box">
+              <label for="detailed-address">상세주소</label>
+              <input
+                type="text"
+                name="detailed-address"
+                id="detailed-address"
+                placeholder="선택"
+              />
+            </div>
+            <div class="zipcode-box">
+              <label for="zipcode">우편번호<span>*</span></label>
+              <input
+                type="text"
+                name="zipcode"
+                id="zipcode"
+                placeholder="예)597685"
+              />
+            </div>
+            <div class="customs-number-box">
+              <label for="customs-number">통관번호<span>*</span></label>
+              <div class="korea-select">
+                <span>저는 한국인 입니다</span>
+                <div class="answer">
+                  <div>
+                    <input type="radio" name="answer" id="yes" />
+                    <label for="yes">네</label>
+                  </div>
+                  <div>
+                    <input type="radio" name="answer" id="no" />
+                    <label for="no">아니요</label>
+                  </div>
+                </div>
+              </div>
+              <p>
+                <i class="fa-solid fa-circle-info"></i>
+                원활한 통관을 위해 개인통관고유번호를 신청할때 사용한 이름과
+                전화번호를 기재해주시기 바랍니다.
+                <a href="https://unipass.customs.go.kr/csp/persIndex.do"
+                  >개인통관고유번호의 발급 및 조회를 원하시는 분들은 여기를
+                  클릭해주시기 바랍니다.</a
+                >
+              </p>
+              <span id="mobile-user">
+                <a href="https://unipass.customs.go.kr/csp/persIndex.do"
+                  >개인통관번호 찾기</a
+                >
+              </span>
+              <input
+                type="text"
+                name="customs-number"
+                id="customs-number"
+                placeholder="개인통관고유부호(P+12자리)"
+              />
+            </div>
+            <div class="customs-name-box">
+              <label for="name"
+                >이름(실명을 한글로 입력하세요)<span>*</span></label
+              >
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="예)홍길동"
+              />
+            </div>
+            <div class="customs-phone-number-box">
+              <label for="phone-number">전화번호<span>*</span></label>
+              <input
+                type="text"
+                name="phone-number"
+                id="phone-number"
+                placeholder="예)01012345678"
+              />
+            </div>
+            <div class="info">
+              <div>
+                <i class="fa-solid fa-shield"></i>
+                모든 데이터는 암호화됩니다
+              </div>
+              <p>
+                Temu는 주소 정보를 보호하고 안전하게 보관합니다. 모든 주소
+                데이터는 암호화되어 보관됩니다
+              </p>
+            </div>
+            <div class="submit__box">
+              <input type="submit" value="저장" />
+            </div>
+          </form>
+          <div class="box">
+            <div class="address__back-box">
+              <i class="fa-solid fa-angle-left"></i>
+              <span>뒤로</span>
+            </div>
+            <div class="address__close-box-plus">
+              <div class="address__close">
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--address+-MODAL BOX END-->
+  </body>
+</html>

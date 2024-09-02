@@ -54,11 +54,6 @@ main {
             &:nth-child(1) {
               @include text_B_M_16;
             }
-            &:nth-child(2) {
-              color: map-get($color, color-Neutrals-Grey-600);
-              cursor: pointer;
-              @include text_S_14;
-            }
           }
         }
         .info__down {

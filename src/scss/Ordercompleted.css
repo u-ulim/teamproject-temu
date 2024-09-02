@@ -227,15 +227,6 @@ main .container .section__up .address__info .info__up span:nth-child(1) {
   line-height: 24px;
   letter-spacing: -0.48px;
 }
-main .container .section__up .address__info .info__up span:nth-child(2) {
-  color: #6a6a6a;
-  cursor: pointer;
-  font-family: "Pretendard-Regular";
-  font-size: 14px;
-  font-style: normal;
-  line-height: 22px;
-  letter-spacing: -0.42px;
-}
 main .container .section__up .address__info .info__down {
   display: flex;
   flex-direction: column;

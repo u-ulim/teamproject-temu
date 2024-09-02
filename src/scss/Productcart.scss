@@ -986,7 +986,7 @@ body {
                   .product__text-up {
                     span {
                       display: -webkit-box;
-                      -webkit-line-clamp: 2;
+                      -webkit-line-clamp: 1;
                       -webkit-box-orient: vertical;
                       overflow: hidden;
                       text-overflow: ellipsis;
@@ -1169,14 +1169,14 @@ body {
     .modal__inner-box {
       padding: 50px;
       width: 100%;
+
       .product {
         gap: 10px;
         .product__img {
-          width: 60px;
-          height: 60px;
+          display: none;
         }
         .product__info {
-          @include text_B_S_14;
+          @include text__XS_12;
         }
       }
       .button {

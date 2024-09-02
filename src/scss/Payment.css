@@ -180,7 +180,6 @@ main {
   width: 70%;
   /* section__up*/
   /*address*/
-  /*order__info*/
 }
 main .section__up article {
   /*banner */
@@ -252,13 +251,15 @@ main .address .shopping__info .info__up span:nth-child(1) {
   line-height: 24px;
   letter-spacing: -0.48px;
 }
-main .address .shopping__info .info__up span:nth-child(2) {
+main .address .shopping__info .info__up button {
   font-family: "Pretendard-Regular";
   font-size: 14px;
   font-style: normal;
   line-height: 22px;
   letter-spacing: -0.42px;
   cursor: pointer;
+  border: none;
+  background: transparent;
 }
 main .address .shopping__info .info__down {
   display: flex;
@@ -308,18 +309,13 @@ main .address .shopping__info .info__down ul li span:nth-child(2) {
   letter-spacing: -0.42px;
 }
 main .address .shopping__info .info__down-empty {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border: 1px solid #9a9a9a;
   border-left: 4px solid #9a9a9a;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
   width: 446.41px;
   height: 121px;
-  gap: 5px;
-  display: none;
+  padding-top: 30px;
+  border-radius: 8px;
+  text-align: center;
 }
 main .address .shopping__info .info__down-empty ul {
   display: flex;
@@ -340,9 +336,9 @@ main .address .shopping__info .info__down-empty ul li:nth-child(2) {
   letter-spacing: -0.42px;
 }
 main .address .shopping__info .info__down-empty button {
-  border: none;
   width: 170px;
-  height: 36px;
+  height: 30px;
+  border: none;
   border-radius: 8px;
   font-family: "Pretendard-Regular";
   font-size: 14px;
@@ -352,15 +348,15 @@ main .address .shopping__info .info__down-empty button {
   color: #fff;
   background: #ff6d00;
   cursor: pointer;
-  transition: backgroud 0.3s;
+  transition: background 0.3s;
 }
 main .address .shopping__info .info__down-empty button:hover {
   background: #ff7629;
 }
-main .address .delivery__service {
+main .delivery__service {
   flex: 2;
 }
-main .address .delivery__service span {
+main .delivery__service span {
   display: flex;
   display: block;
   margin-bottom: 20px;
@@ -372,24 +368,24 @@ main .address .delivery__service span {
   line-height: 24px;
   letter-spacing: -0.48px;
 }
-main .address .delivery__service .delivery__info {
+main .delivery__service .delivery__info {
   display: flex;
   flex-direction: column;
 }
-main .address .delivery__service .delivery__info .delivery__memo {
+main .delivery__service .delivery__info .delivery__memo {
   padding: 18px 0;
 }
-main .address .delivery__service .delivery__info .delivery__memo li {
+main .delivery__service .delivery__info .delivery__memo li {
   margin-bottom: 7px;
 }
-main .address .delivery__service .delivery__info .delivery__memo li:nth-child(1) {
+main .delivery__service .delivery__info .delivery__memo li:nth-child(1) {
   font-family: "Pretendard-Regular";
   font-size: 14px;
   font-style: normal;
   line-height: 22px;
   letter-spacing: -0.42px;
 }
-main .address .delivery__service .delivery__info .delivery__memo li:nth-child(2) {
+main .delivery__service .delivery__info .delivery__memo li:nth-child(2) {
   font-family: "Pretendard-Regular";
   font-size: 12px;
   font-style: normal;
@@ -397,7 +393,7 @@ main .address .delivery__service .delivery__info .delivery__memo li:nth-child(2)
   letter-spacing: -0.36px;
   color: #6a6a6a;
 }
-main .address .delivery__service .delivery__info .delivery__memo li:nth-child(3) {
+main .delivery__service .delivery__info .delivery__memo li:nth-child(3) {
   font-family: "Pretendard-Regular";
   font-size: 12px;
   font-style: normal;
@@ -405,24 +401,26 @@ main .address .delivery__service .delivery__info .delivery__memo li:nth-child(3)
   letter-spacing: -0.36px;
   color: #6a6a6a;
 }
-main .order__info {
+
+/*order__info*/
+.order__info {
   margin-bottom: 38px;
 }
-main .order__info .order__title {
+.order__info .order__title {
   position: relative;
   cursor: pointer;
 }
-main .order__info .order__title::after {
+.order__info .order__title::after {
   position: absolute;
   top: 50%;
   right: 2%;
   font-family: "fontawesome";
   content: "\f107";
 }
-main .order__info .order__title.active::after {
+.order__info .order__title.active::after {
   transform: rotate(180deg);
 }
-main .order__info .order__title h3 {
+.order__info .order__title h3 {
   margin-bottom: 12px;
   padding-top: 14px;
   width: 100%;
@@ -433,7 +431,7 @@ main .order__info .order__title h3 {
   line-height: 24px;
   letter-spacing: -0.48px;
 }
-main .order__info .order__title h3 span {
+.order__info .order__title h3 span {
   font-family: "Pretendard-Bold";
   font-size: 16px;
   font-style: bold;
@@ -442,44 +440,39 @@ main .order__info .order__title h3 span {
   letter-spacing: -0.48px;
   color: #ff6d00;
 }
-main .order__info .product__info {
-  display: none;
-}
-main .order__info .product__info.active {
-  display: block;
-}
-main .order__info .product__info ul .product {
+.order__info #product__info-All ul .product {
   display: flex;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 5px;
   padding: 22px 12px;
-  padding-bottom: 12px;
+  padding-bottom: 5px;
   /*img*/
 }
-main .order__info .product__info ul .product .img {
+.order__info #product__info-All ul .product .img {
   width: 100px;
   height: 100px;
   border-radius: 8px;
 }
-main .order__info .product__info ul .product .img img {
+.order__info #product__info-All ul .product .img img {
   width: 100%;
   height: 100%;
+  border-radius: 8px;
 }
-main .order__info .product__info ul .product .product__info {
+.order__info #product__info-All ul .product .product__info {
   display: flex;
   gap: 10px;
   justify-content: center;
   flex-direction: column;
   margin-left: 20px;
 }
-main .order__info .product__info ul .product .product__info .product__title {
+.order__info #product__info-All ul .product .product__info .product__title {
   font-family: "Pretendard-Regular";
   font-size: 16px;
   font-style: normal;
   line-height: 24px;
   letter-spacing: -0.48px;
 }
-main .order__info .product__info ul .product .product__info .product__option {
+.order__info #product__info-All ul .product .product__info .product__option {
   font-family: "Pretendard-Regular";
   font-size: 16px;
   font-style: normal;
@@ -487,12 +480,12 @@ main .order__info .product__info ul .product .product__info .product__option {
   letter-spacing: -0.48px;
   color: #4a4949;
 }
-main .order__info .product__info ul .product .product__info .price__info {
+.order__info #product__info-All ul .product .product__info .price__info {
   display: flex;
   gap: 10px;
   align-items: center;
 }
-main .order__info .product__info ul .product .product__info .price__info span:nth-child(1) {
+.order__info #product__info-All ul .product .product__info .price__info span:nth-child(1) {
   font-family: "Pretendard-Regular";
   font-size: 16px;
   font-style: normal;
@@ -500,7 +493,7 @@ main .order__info .product__info ul .product .product__info .price__info span:nt
   letter-spacing: -0.48px;
   color: #ff6d00;
 }
-main .order__info .product__info ul .product .product__info .price__info span:nth-child(2) {
+.order__info #product__info-All ul .product .product__info .price__info span:nth-child(2) {
   font-family: "Pretendard-Regular";
   font-size: 14px;
   font-style: normal;
@@ -793,7 +786,7 @@ aside .checkout__summary .summary__price .summary__item__total p span {
   line-height: 22px;
   letter-spacing: -0.42px;
 }
-aside .checkout__summary .summary__price .summary__item__total .price {
+aside .checkout__summary .summary__price .summary__item__total .summary__price-total {
   font-family: "Pretendard-Bold";
   font-size: 18px;
   font-style: bold;
@@ -1481,6 +1474,10 @@ aside .checkout__summary .info ul li div i {
   main .address .shopping__info .info__down {
     padding: 15px 100px 15px 14px;
   }
+  main .address .shopping__info .info__down-empty {
+    width: 100%;
+    text-align: center;
+  }
   aside {
     width: 100%;
   }
@@ -1562,6 +1559,10 @@ aside .checkout__summary .info ul li div i {
   }
   main .address .shopping__info .info__down ul li {
     margin-bottom: 4px;
+  }
+  main .address .shopping__info .info__down-empty {
+    width: 100%;
+    text-align: center;
   }
   main .address .delivery__service {
     display: none;

@@ -1,6 +1,12 @@
 let getCartProducts = JSON.parse(localStorage.getItem("setCartProducts")) || [];
+let addressList = JSON.parse(localStorage.getItem("userAddresses")) || [];
 
-//변수선언
+// 쿠폰 및 크레딧 변수 선언
+let totalCouponValue = 0; // 쿠폰 사용 금액
+let usedCreditValue = 0; // 사용된 크레딧 금액
+const totalCredit = 20000; // 보유 크레딧 양을 20,000원으로 설정
+
+// 변수 선언
 const bannerClose = document.querySelector(".banner-close");
 const form = document.querySelector("#address-form");
 const userInfo = document.querySelector(".user__info");
@@ -18,6 +24,7 @@ const phoneNumberInput = document.querySelector("#phone-number");
 const detailedAddressInput = document.querySelector("#detailed-address");
 const infoDown = document.querySelector(".info__down");
 const addressFirstBtn = document.querySelector(".address-plus");
+const productInfo = document.querySelector("#product__info-All ul");
 
 let editingItem = null;
 
@@ -25,7 +32,7 @@ let editingItem = null;
 if (bannerClose) {
   bannerClose.addEventListener("click", () => {
     const banner = document.querySelector(".banner");
-    banner.classList.add("active");
+    if (banner) banner.classList.add("active");
   });
 }
 
@@ -268,6 +275,8 @@ form.addEventListener("submit", function (e) {
   const selectedGuKunText =
     guKunselect.options[guKunselect.selectedIndex].innerText;
 
+  const newIndex = addressList.length;
+
   const newListItemHTML = `
     <li>
       <span class="username">${name}</span>
@@ -283,7 +292,7 @@ form.addEventListener("submit", function (e) {
     <li>
       <div>
         <label for="useraddress__radio"></label>
-        <input type="radio" name="useraddress__radio" id="useraddress__radio"/>
+        <input type="radio" name="useraddress__radio" id="useraddress__radio" data-index="${newIndex}" />
         <span>기본주소</span>
       </div>
       <div>
@@ -300,6 +309,15 @@ form.addEventListener("submit", function (e) {
     const newListItem = document.createElement("ul");
     newListItem.innerHTML = newListItemHTML;
     userInfo.appendChild(newListItem);
+    addressList.push({
+      name,
+      phoneNumber,
+      zipcode,
+      siSelected,
+      guKunSelected,
+      optionAddress,
+    });
+    localStorage.setItem("userAddresses", JSON.stringify(addressList));
   }
 
   userInfo.style.display = "block";
@@ -307,62 +325,89 @@ form.addEventListener("submit", function (e) {
   toggleAddressModal("main", true);
 
   form.reset(); // 폼 리셋
+
+  // 주소 업데이트 후, 주소가 없을 때 빈 메시지 표시
+  updateAddressInfoDisplay();
 });
 
 // 주소 항목 삭제 및 편집
 userInfo.addEventListener("click", function (e) {
   if (e.target.closest(".delete")) {
     const listItem = e.target.closest("ul");
+    const index = parseInt(
+      listItem.querySelector('input[type="radio"]').dataset.index
+    );
+    addressList.splice(index, 1);
+    localStorage.setItem("userAddresses", JSON.stringify(addressList));
     listItem.remove();
+
     if (userInfo.children.length === 0) {
       userInfo.style.display = "none";
     }
+
+    // 주소 업데이트 후, 주소가 없을 때 빈 메시지 표시
+    updateAddressInfoDisplay();
   }
 
   if (e.target.closest(".edit")) {
     const listItem = e.target.closest("ul");
-    nameInput.value = listItem.querySelector(".username").innerText;
-    phoneNumberInput.value = listItem
-      .querySelector(".usernumber")
-      .innerText.replace("+82", "")
-      .trim();
-    zipcodeInput.value = listItem.querySelector(".zipcode").innerText;
-    detailedAddressInput.value = listItem.querySelector(
-      ".useraddress-option"
-    ).innerText;
+    const index = parseInt(
+      listItem.querySelector('input[type="radio"]').dataset.index
+    );
+    const address = addressList[index];
+
+    nameInput.value = address.name;
+    phoneNumberInput.value = address.phoneNumber;
+    zipcodeInput.value = address.zipcode;
+    detailedAddressInput.value = address.optionAddress;
+    siSelect.value = address.siSelected;
+    guKunselect.value = address.guKunSelected;
 
     toggleAddressModal("plus", true);
     editingItem = listItem;
   }
 });
 
-// 'main' 클릭 시 info__down 업데이트
-
+// 기본 주소로 설정한 항목 로컬 스토리지에 저장
 userInfo.addEventListener("change", function (e) {
   if (e.target.id === "useraddress__radio") {
-    updateInfoDown(e.target.closest("ul"));
+    const index = parseInt(e.target.dataset.index);
+    localStorage.setItem("defaultAddressIndex", index);
+    updateInfoDown(addressList[index]);
   }
 });
 
-function updateInfoDown(selectedItem) {
-  if (!selectedItem) return;
+// 주소 업데이트 상태 확인 및 빈 메시지 표시
+function updateAddressInfoDisplay() {
+  const addressEmptyMessage = document.querySelector(".info__down-empty");
 
-  const name = selectedItem.querySelector(".username").innerText;
-  const phoneNumber = selectedItem.querySelector(".usernumber").innerText;
-  const zipcode = selectedItem.querySelector(".zipcode").innerText;
-  const address = selectedItem.querySelector(".useraddress").innerText;
-  const detailedAddress = selectedItem.querySelector(
-    ".useraddress-option"
-  ).innerText;
+  if (addressList.length === 0) {
+    addressEmptyMessage.style.display = "block"; // 주소가 없을 때만 메시지 표시
+    infoDown.style.display = "none";
+    if (addressBtn) {
+      addressBtn.disabled = true; // 주소 변경 버튼 비활성화
+    }
+  } else {
+    addressEmptyMessage.style.display = "none"; // 주소가 있으면 메시지 숨김
+    infoDown.style.display = "block";
+    if (addressBtn) {
+      addressBtn.disabled = false; // 주소 변경 버튼 활성화
+    }
+  }
+}
+
+// 기본 주소를 info__down에 업데이트
+function updateInfoDown(address) {
+  if (!address) return;
 
   const infoDownHTML = `
     <ul>
       <li>
-        <span>${name}</span>
-        <span>${phoneNumber}</span>
+        <span>${address.name}</span>
+        <span>+82 ${address.phoneNumber}</span>
       </li>
-      <li>${zipcode}  ${address}</li>
-      <li>${detailedAddress}</li>
+      <li>${address.zipcode}  대한민국 ${address.siSelected} ${address.guKunSelected}</li>
+      <li>${address.optionAddress}</li>
     </ul>
   `;
 
@@ -372,7 +417,192 @@ function updateInfoDown(selectedItem) {
   toggleAddressModal("main", false);
 }
 
-// 숫자만, 한국어만
+//  주소 정보 표시
+function loadAddresses() {
+  if (addressList.length > 0) {
+    addressList.forEach((address, index) => {
+      const selectedSiText = si.find(
+        (s) => s.name === address.siSelected
+      ).Kname;
+      const selectedGuKunText = address.guKunSelected;
+
+      const newListItemHTML = `
+        <li>
+          <span class="username">${address.name}</span>
+          <span class="usernumber"><span>+82</span> ${address.phoneNumber}</span>
+        </li>
+        <li>
+          <span class="zipcode">${address.zipcode}</span>
+          <span class="useraddress">대한민국 ${selectedSiText} ${selectedGuKunText}</span>
+        </li>
+        <li>
+          <span class="useraddress-option">${address.optionAddress}</span>
+        </li>
+        <li>
+          <div>
+            <label for="useraddress__radio"></label>
+            <input type="radio" name="useraddress__radio" id="useraddress__radio" data-index="${index}"/>
+            <span>기본주소</span>
+          </div>
+          <div>
+            <span class="edit"><i class="fa-regular fa-pen-to-square"></i>편집</span>
+            <span class="delete"><i class="fa-regular fa-trash-can"></i>삭제</span>
+          </div>
+        </li>
+      `;
+      const newListItem = document.createElement("ul");
+      newListItem.innerHTML = newListItemHTML;
+      userInfo.appendChild(newListItem);
+    });
+
+    const defaultIndex = localStorage.getItem("defaultAddressIndex");
+    if (defaultIndex !== null && addressList[defaultIndex]) {
+      updateInfoDown(addressList[defaultIndex]);
+      userInfo.querySelector(
+        `input[data-index="${defaultIndex}"]`
+      ).checked = true;
+    }
+    userInfo.style.display = "block";
+  } else {
+    updateAddressInfoDisplay();
+  }
+}
+
+// 주문상품내역, 갯수표기 및 장바구니 렌더링
+function renderCartItems() {
+  productInfo.innerHTML = "";
+
+  let totalAmount = 0;
+
+  getCartProducts.forEach((product) => {
+    const {
+      img,
+      title,
+      selectColor,
+      selectSize,
+      quan,
+      sumPrice,
+      discountingPrice,
+    } = product;
+
+    const discountedTotalPrice = discountingPrice * quan;
+    const discountAmount = (sumPrice - discountingPrice) * quan;
+
+    totalAmount = discountAmount - discountedTotalPrice;
+
+    const productInfoHTML = `
+      <li class="product">
+        <div class="img">
+          <div>
+            <img src="${img}" alt="${title}" />
+          </div>
+        </div>
+        <div class="product__info">
+          <div class="product__title">
+            <span>${title}</span>
+            <span>(${quan})</span>
+          </div>
+          <div class="product__option">
+            <span>${selectColor}</span>
+            <span>|</span>
+            <span>${selectSize}</span>
+          </div>
+          <div class="price__info">
+            <span class="general-price">￦${discountAmount.toLocaleString()}</span>
+            <span>￦${discountedTotalPrice.toLocaleString()}</span>
+          </div>
+        </div>
+      </li>
+    `;
+
+    productInfo.insertAdjacentHTML("beforeend", productInfoHTML);
+  });
+
+  // 총 상품 금액
+  const totalFeePrice = document.querySelector(".total__fee .price");
+  if (totalFeePrice) {
+    totalFeePrice.innerText = `￦${totalAmount.toLocaleString()}`;
+  }
+
+  // 최종 결제 금액 업데이트
+  updateFinalPrice();
+}
+
+const productInfoLength = getCartProducts.length;
+const result = document.querySelector(".order__title h3 span");
+const resultAll = document.querySelector(".order__title h3");
+
+if (productInfoLength !== 0) {
+  result.innerText = `${productInfoLength}`;
+} else {
+  resultAll.style.display = "none";
+  result.style.display = "none";
+}
+
+const orderTitle = document.querySelector(".order__title");
+
+productInfo.classList.remove("active");
+productInfo.style.display = "none";
+
+orderTitle.addEventListener("click", () => {
+  const isActive = productInfo.classList.toggle("active");
+  productInfo.style.display = isActive ? "block" : "none";
+  orderTitle.classList.toggle("active", isActive);
+});
+
+// 모달 이벤트
+function toggleAddressModal(type, show) {
+  const modalType =
+    type === "plus" ? ".address__modal__box-plus" : ".address__modal__box";
+  const modal = document.querySelector(modalType);
+
+  if (modal) {
+    modal.classList.toggle("active", show);
+    document.body.style.overflow = show ? "hidden" : "auto";
+  }
+}
+
+function addModalEventListeners() {
+  if (addressBtn) {
+    addressBtn.addEventListener("click", () =>
+      toggleAddressModal("main", true)
+    );
+  }
+
+  if (addressClose) {
+    addressClose.addEventListener("click", () =>
+      toggleAddressModal("main", false)
+    );
+  }
+
+  if (addressPlusBtn) {
+    addressPlusBtn.addEventListener("click", () =>
+      toggleAddressModal("plus", true)
+    );
+  }
+
+  if (addressPlusClose) {
+    addressPlusClose.addEventListener("click", () => {
+      toggleAddressModal("plus", false);
+      toggleAddressModal("main", false);
+    });
+  }
+
+  if (addressBackBtn) {
+    addressBackBtn.addEventListener("click", () => {
+      toggleAddressModal("plus", false);
+      toggleAddressModal("main", true);
+    });
+  }
+
+  if (addressFirstBtn) {
+    addressFirstBtn.addEventListener("click", () => {
+      toggleAddressModal("plus", true);
+    });
+  }
+}
+
+// 숫자만, 한국어만 입력 가능하도록 제어
 phoneNumberInput.addEventListener("keydown", onlyNumber);
 zipcodeInput.addEventListener("keydown", onlyNumber);
 nameInput.addEventListener("keydown", onlyKorean);
@@ -437,134 +667,116 @@ function allowCustomer(e) {
   }
 }
 
-//모달 이벤트
+// 쿠폰
+function setupCouponOptions() {
+  const couponSelect = document.querySelector("#coupon");
 
-function toggleAddressModal(type, show) {
-  const modalType =
-    type === "plus" ? ".address__modal__box-plus" : ".address__modal__box";
-  const modal = document.querySelector(modalType);
+  // 기존 쿠폰 옵션 제거
+  couponSelect.innerHTML = "";
 
-  if (modal) {
-    modal.classList.toggle("active", show);
-    document.body.style.overflow = show ? "hidden" : "auto";
-  }
+  // 기본 옵션 추가
+  const defaultOption = document.createElement("option");
+  defaultOption.innerText = "쿠폰을 선택하세요";
+  defaultOption.disabled = true;
+  defaultOption.selected = true;
+  couponSelect.appendChild(defaultOption);
+
+  // 새로운 쿠폰 목록
+  const coupons = [
+    { name: "가을 맞이 5% 할인 쿠폰", discount: 0.05 },
+    { name: "추석 특별 7% 할인 쿠폰", discount: 0.07 },
+    { name: "환절기 준비 10% 할인 쿠폰", discount: 0.1 },
+  ];
+
+  // 쿠폰 옵션 생성
+  coupons.forEach((coupon) => {
+    const option = document.createElement("option");
+    option.value = coupon.discount;
+    option.innerText = coupon.name;
+    couponSelect.appendChild(option);
+  });
+
+  // 쿠폰 선택 시 할인 금액 계산 및 표시
+  couponSelect.addEventListener("change", function () {
+    const discountRate = parseFloat(couponSelect.value);
+    const totalProductPriceText =
+      document.querySelector(".total__fee .price").innerText;
+    const totalProductPrice = parseInt(
+      totalProductPriceText.replace(/[^0-9]/g, ""),
+      10
+    );
+
+    let discountAmount = 0;
+    if (!isNaN(discountRate) && !isNaN(totalProductPrice)) {
+      discountAmount = totalProductPrice * discountRate;
+    }
+
+    // 쿠폰 할인 금액 표시
+    document.querySelector(
+      ".coupon__fee-last"
+    ).innerText = `- ₩${discountAmount.toLocaleString()}`;
+
+    // 최종 결제 금액 업데이트
+    updateFinalPrice();
+  });
+
+  // 초기 쿠폰 할인 금액을 0으로 설정
+  document.querySelector(".coupon__fee-last").innerText = `₩ 0`;
 }
 
-function addModalEventListeners() {
-  if (addressBtn) {
-    addressBtn.addEventListener("click", () =>
-      toggleAddressModal("main", true)
-    );
-  }
+// 크레딧
 
-  if (addressClose) {
-    addressClose.addEventListener("click", () =>
-      toggleAddressModal("main", false)
-    );
-  }
+function setupCreditListener() {
+  const creditInput = document.querySelector("#used__credit__box");
+  const creditFeeElement = document.querySelector(".credit__fee-last");
 
-  if (addressPlusBtn) {
-    addressPlusBtn.addEventListener("click", () =>
-      toggleAddressModal("plus", true)
-    );
-  }
+  creditInput.readOnly = true;
 
-  if (addressPlusClose) {
-    addressPlusClose.addEventListener("click", () => {
-      toggleAddressModal("plus", false);
-      toggleAddressModal("main", false);
-    });
-  }
+  creditInput.value = "₩ 0";
+  creditFeeElement.innerText = "₩ 0";
 
-  if (addressBackBtn) {
-    addressBackBtn.addEventListener("click", () => {
-      toggleAddressModal("plus", false);
-      toggleAddressModal("main", true);
-    });
-  }
+  const fullCreditButton = document.querySelector(".used__credit button");
 
-  if (addressFirstBtn) {
-    addressFirstBtn.addEventListener("click", () => {
-      toggleAddressModal("plus", true);
-    });
-  }
-}
+  fullCreditButton.addEventListener("click", function (event) {
+    event.preventDefault();
+    const formattedCredit = `- ₩${totalCredit.toLocaleString()}`;
+    creditInput.value = formattedCredit;
+    creditFeeElement.innerText = formattedCredit;
+    updateFinalPrice();
+  });
 
-// 모달 이벤트 다시 시작
-addModalEventListeners();
-
-const product = document.querySelector(".product__info");
-const productInfo = document.querySelectorAll(".product__info ul");
-
-//주문상품내역 , 갯수표기
-// 장바구니 렌더링
-function renderCartItems() {
-  productInfo.innerHTML = "";
-
-  if (getCartProducts.length === 0) {
-    document.querySelector(".info__down-empty").style.display = "block";
-    productInfo.style.display = "none";
-  } else {
-    document.querySelector(".info__down-empty").style.display = "none";
-    productInfo.style.display = "block";
-  }
-  productInfo.forEach((product) => {
-    const {
-      img,
-      title,
-      selectColor,
-      selectSize,
-      quan,
-
-      sumPrice,
-      discountingPrice,
-    } = product;
-
-    const discountedTotalPrice = discountingPrice * quan;
-    const discountAmount = (sumPrice - discountingPrice) * quan;
-
-    // 장바구니 항목 HTML 생성
-
-    const productInfoHTML = `<li class="product">
-    <div class= "img">
-    <div>
-    <img src="${img}" alt="${title}"/>
-    </div>
-    </div>
-    img<div class="product__title">
-      <span>${title}</span>
-      <span>(${quan})</span>
-    </div>
-    <div class="product__option">
-      <span>${selectColor}</span>
-      <span>|</span>
-      <span>${selectSize}</span>
-    </div>
-    <div class="price__info">
-      <span class="general-price" id="general-price">￦${discountAmount}</span>
-      <span>￦${discountedTotalPrice}</span>
-    </div>
-    </li>`;
-
-    productInfoHTML.insertAdjacentHTML("beforeend", productInfoHTML);
+  creditInput.addEventListener("focusout", function () {
+    creditInput.value = creditInput.value || `₩ 0`;
   });
 }
 
-const orderinfoBtn = document.querySelector(".order__title");
-const result = document.querySelector(".order__title h3 span");
-const resultAll = document.querySelector(".order__Title h3");
-const productInfoLength = productInfo.length;
+// 최종 결제 금액 업데이트 함수
+function updateFinalPrice() {
+  const totalFeePriceElement = document.querySelector(".total__fee .price");
+  const couponFeeElement = document.querySelector(".coupon__fee-last");
+  const creditFeeElement = document.querySelector(".credit__fee-last");
+  const summaryPriceElement = document.querySelector(".summary__price-total");
 
-orderinfoBtn.addEventListener("click", () => {
-  product.classList.toggle("active");
-  orderinfoBtn.classList.toggle("active");
-});
+  const totalProductPrice = parseInt(
+    totalFeePriceElement.innerText.replace(/[^0-9]/g, ""),
+    10
+  );
 
-if (productInfoLength !== 0) {
-  result.innerText = `${productInfoLength}`;
-} else {
-  resultAll.style.display.none;
-  result.style.display.none;
+  let lastPriceAll = totalProductPrice;
+
+  if (couponFeeElement) {
+    const couponFee =
+      parseInt(couponFeeElement.innerText.replace(/[^0-9]/g, ""), 10) || 0;
+    lastPriceAll -= couponFee;
+  }
+
+  if (creditFeeElement) {
+    const creditFee =
+      parseInt(creditFeeElement.innerText.replace(/[^0-9]/g, ""), 10) || 0;
+    lastPriceAll -= creditFee;
+  }
+
+  summaryPriceElement.innerText = `₩${lastPriceAll.toLocaleString()}`;
 }
 
 //결제창 동의서 - 아코디언
@@ -592,32 +804,58 @@ consentBtns.forEach((consentBtn) => {
   });
 });
 
-// 체크박스
+// 체크박스 동의 및 결제 버튼 활성화
+function setupCheckboxListeners() {
+  const agreeAll = document.querySelector("#agreeAll");
+  const checkboxes = document.querySelectorAll(
+    '.consent__list input[type="checkbox"]:not(#agreeAll, #treePlanting)'
+  );
+  const radioButtons = document.querySelectorAll('input[name="radio"]');
+  const checkoutButton = document.querySelector(".checkout__button");
 
-let agreeAll = document.querySelector("#agreeAll");
-let checkboxes = document.querySelectorAll(
-  '.consent__list input[type="checkbox"]:not(#agreeAll)'
-);
+  function toggleCheckoutButton() {
+    const allCheckboxChecked = Array.from(checkboxes).every(
+      (checkbox) => checkbox.checked
+    );
+    const radioChecked = Array.from(radioButtons).some(
+      (radio) => radio.checked
+    );
 
-// 전체 동의가 변경되었을 때
-if (agreeAll) {
-  agreeAll.addEventListener("change", function () {
-    let isChecked = agreeAll.checked;
-    checkboxes.forEach(function (checkbox) {
-      checkbox.checked = isChecked;
+    checkoutButton.disabled = !(allCheckboxChecked && radioChecked);
+  }
+
+  if (agreeAll) {
+    agreeAll.addEventListener("change", function () {
+      const isChecked = agreeAll.checked;
+      checkboxes.forEach(function (checkbox) {
+        checkbox.checked = isChecked;
+      });
+      toggleCheckoutButton();
     });
+  }
+
+  checkboxes.forEach(function (checkbox) {
+    checkbox.addEventListener("change", toggleCheckoutButton);
   });
+
+  radioButtons.forEach(function (radio) {
+    radio.addEventListener("change", toggleCheckoutButton);
+  });
+
+  checkoutButton.addEventListener("click", function () {
+    if (!checkoutButton.disabled) {
+      window.location.href =
+        "http://127.0.0.1:5501/html/components/Ordercompleted.html";
+    }
+  });
+
+  toggleCheckoutButton();
 }
 
-// 개별 체크박스가 변경되었을 때
-checkboxes.forEach(function (checkbox) {
-  checkbox.addEventListener("change", function () {
-    let allChecked = true;
-    checkboxes.forEach(function (checkbox) {
-      if (!checkbox.checked) {
-        allChecked = false;
-      }
-    });
-    agreeAll.checked = allChecked;
-  });
-});
+addModalEventListeners();
+renderCartItems();
+loadAddresses();
+setupCouponOptions();
+setupCreditListener();
+setupCheckboxListeners();
+updateFinalPrice();
