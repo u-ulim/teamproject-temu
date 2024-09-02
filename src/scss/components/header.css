@@ -224,10 +224,8 @@ table {
   width: 34px;
   height: 34px;
   display: inline-block;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
 }
 #header .header-top-wrapper .header-top ul .header-top__prev {
   top: -48px;
@@ -429,10 +427,8 @@ table {
   height: 70px;
   border-radius: 50%;
   transition: 0.3s;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
 }
 #header nav .nav-left .nav-left__menus .nav-menu__category .submenu-wrapper .submenu .submenu-content .content ul li:hover a img {
   transform: scale(1.2);
@@ -454,17 +450,9 @@ table {
   transition: all 0.5s;
   border-radius: 50px;
 }
-#header nav .nav-left .nav__input-wrapper input::-moz-placeholder {
-  color: #ccc; /* 기본 placeholder 색상 */
-  -moz-transition: color 0.5s;
-  transition: color 0.5s; /* placeholder 색상 전환에 대한 트랜지션 */
-}
 #header nav .nav-left .nav__input-wrapper input::placeholder {
   color: #ccc; /* 기본 placeholder 색상 */
   transition: color 0.5s; /* placeholder 색상 전환에 대한 트랜지션 */
-}
-#header nav .nav-left .nav__input-wrapper input:focus::-moz-placeholder {
-  color: transparent; /* 포커스 시 placeholder 색상 투명화 */
 }
 #header nav .nav-left .nav__input-wrapper input:focus::placeholder {
   color: transparent; /* 포커스 시 placeholder 색상 투명화 */
@@ -576,6 +564,7 @@ table {
 }
 @media (max-width: 768px) {
   #header {
+    overflow: hidden;
     margin-bottom: 80px;
   }
   #header nav .nav-left .nav-left__logo {
@@ -598,25 +587,15 @@ table {
   }
   #header .mobile-menu {
     display: block;
-    padding: 0px 15px 0px 15px;
     font-family: "Pretendard-Regular";
     font-size: 16px;
     font-style: normal;
     line-height: 24px;
     letter-spacing: -0.48px;
-    width: 100%;
+    padding: 0px 15px 0px 15px;
+    width: 768px;
     overflow: hidden;
     position: relative;
-  }
-  #header .mobile-menu ::before {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2));
-    pointer-events: none;
   }
   #header .mobile-menu .mobile-menus {
     display: flex;

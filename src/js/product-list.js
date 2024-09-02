@@ -5,8 +5,11 @@ const productListLoad = () => {
     .then((response) => response.text())
     .then((data) => {
       productList.innerHTML = data;
+      console.log(data);
     })
     .catch((error) => console.error("Error loading header:", error));
 };
 
 productListLoad();
+
+console.log(createDetail)

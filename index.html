@@ -7,7 +7,7 @@
     <script
       defer
       src="https://kit.fontawesome.com/fc51ef092a.js"
-      crossorigin="anonymous"
+      crossorigin="anonymougs"
     ></script>
     <!-- Material Symbols -->
     <link
@@ -19,19 +19,17 @@
     <!-- CUSTOM CSS, JS-->
     <link rel="stylesheet" href="./src/scss/style.css" />
     <link rel="stylesheet" href="./src/scss/components/header.css" />
-
     <link rel="stylesheet" href="./src/scss/components/product-list.css" />
     <link rel="stylesheet" href="./src/scss/components/footer.css" />
 
     <script defer src="./src/js/header.js"></script>
-    <script defer src="./src/js/index.js"></script>
+    <!-- <script defer src="./src/js/index.js"></script> -->
     <script defer src="./src/js/footer.js"></script>
+    <script defer src="./src/json/category-list.js"></script>
     <script defer src="./src/json/category-list.js"></script>
     <script defer src="./src/json/product-list.js"></script>
     <script defer src="./src/js/script.js"></script>
     <script defer src="./src/js/main-category.js"></script>
-
-    <!-- <script defer type="module" src="/src/json/script.js"></script> -->
   </head>
 
   <body>
@@ -84,6 +82,7 @@
             <div class="main__slide-btn-left">
               <i class="fa-solid fa-chevron-left"></i>
             </div>
+            `
           </div>
         </div>
       </div>
@@ -278,6 +277,63 @@
           </div>
           <ul class="category__list">
             <li>
+              <div class="category__list-img"></div>
+              <span>전자기기</span>
+            </li>
+            <li>
+              <div class="category__list-img"></div>
+              <span>사무용품</span>
+            </li>
+            <li>
+              <div class="category__list-img"></div>
+              <span>여성의류</span>
+            </li>
+            <li>
+              <div class="category__list-img"></div>
+              <span>인형 & 액세서리</span>
+            </li>
+            <li>
+              <div class="category__list-img"></div>
+              <span>욕실 용품</span>
+            </li>
+            <li>
+              <div class="category__list-img"></div>
+              <span>주방 용품</span>
+            </li>
+            <li>
+              <div class="category__list-img"></div>
+              <span>홈 데코 용품</span>
+            </li>
+            <li>
+              <div class="category__list-img"></div>
+              <span>전자기기</span>
+            </li>
+            <li>
+              <div class="category__list-img"></div>
+              <span>사무용품</span>
+            </li>
+            <li>
+              <div class="category__list-img"></div>
+              <span>여성의류</span>
+            </li>
+            <li>
+              <div class="category__list-img"></div>
+              <span>인형 & 액세서리</span>
+            </li>
+            <li>
+              <div class="category__list-img"></div>
+              <span>욕실 용품</span>
+            </li>
+            <li>
+              <div class="category__list-img"></div>
+              <span>주방 용품</span>
+            </li>
+            <li>
+              <div class="category__list-img"></div>
+              <span>홈 데코 용품</span>
+            </li>
+
+            <li>
               <div class="category__list-img">
                 <img src="" alt="" />
               </div>
@@ -364,7 +420,10 @@
           </div>
         </div>
       </div>
-      <div id="product-list"></div>
+      <div class="list-wrapper">
+        <div id="product-list"></div>
+      </div>
+
       <div id="product__btn">
         <div class="product__btn-more">
           <p>더보기</p>

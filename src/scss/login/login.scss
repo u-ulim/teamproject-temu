@@ -1,0 +1,232 @@
+@import "../config/colors.scss";
+@import "../config/fonts.scss";
+@import "../config/image.scss";
+@import "../config/reset.scss";
+@import "../layout/layout.scss";
+
+// body {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   width: 100%;
+//   height: 100vh;
+// }
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include width_full;
+  .modal__box {
+    // border: 1px solid red;
+    width: 493px;
+    height: 575px;
+    .container {
+      margin-bottom: 70px;
+      .inner {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 10px;
+        span {
+          @include text_M_16;
+          color: map-get($color, color-Neutrals-Grey-800);
+          &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+          }
+          .fa-chevron-left {
+            width: 17px;
+            height: 17px;
+            font-size: 17px;
+          }
+        }
+        .fa-xmark {
+          width: 17px;
+          height: 17px;
+          font-size: 17px;
+          transition: all 0.5s;
+          border-radius: 50%;
+          &:hover {
+            background-color: map-get($color, color-Neutrals-Grey-200);
+          }
+        }
+      }
+      .login {
+        margin-bottom: 15px;
+        span {
+          color: map-get($color, color-Black);
+          @include heading_XS_20;
+        }
+      }
+      .data {
+        display: inline-block;
+        margin-right: 6px;
+        font-size: 13px;
+        span {
+          color: map-get($color, secondary-color);
+          @include text_XS_12;
+        }
+      }
+    }
+  }
+  .email {
+    // border: 1px solid #f00;
+    .text {
+      margin-bottom: 8px;
+      span {
+        color: map-get($color, color-Black);
+        display: inline-block;
+        width: 413px;
+        text-align: left;
+        @include text_XS_12;
+      }
+    }
+    .email__box input[type="text"] {
+      margin-bottom: 20px;
+      padding-left: 20px;
+      border: 1px solid map-get($color, color-Neutrals-Grey-300);
+      width: 413px;
+      height: 45px;
+      border-radius: 8px;
+    }
+    button {
+      margin-bottom: 14px;
+      border: none;
+      width: 413px;
+      height: 47px;
+      background: map-get($color, primary-color);
+      color: map-get($color, color-White);
+      transition: all 0.3s;
+      border-radius: 8px;
+      &:hover {
+        background: map-get($color, primary-color);
+        color: map-get($color, color-White);
+        cursor: pointer;
+        touch-action: manipulation;
+      }
+    }
+    .text__box {
+      span {
+        display: inline-block;
+        margin-bottom: 24px;
+        // border: 1px solid #f00;
+        color: map-get($color, color-Neutrals-Grey-500);
+        @include text_XS_12;
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .box {
+    .other {
+      .line {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-basis: 100%;
+        margin: 8px;
+        margin-bottom: 25px;
+        color: map-get($color, color-Neutrals-Grey-700);
+        @include text_XS_12;
+      }
+      .line::before {
+        flex-grow: 1;
+        margin: 0 12px;
+        height: 1px;
+        background: map-get($color, color-Neutrals-Grey-400);
+        line-height: 0;
+        content: "";
+      }
+      .line::after {
+        flex-grow: 1;
+        margin: 0 12px;
+        height: 1px;
+        background: map-get($color, color-Neutrals-Grey-400);
+        line-height: 0;
+        content: "";
+      }
+    }
+  }
+  .icon {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    span {
+      display: inline-block;
+      margin-bottom: 96px;
+      &:hover {
+        cursor: pointer;
+      }
+      .google-icon {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: url("../../../assets/images/mypage/google-icon.svg")
+          center/cover no-repeat;
+      }
+      .naver-icon {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: url("../../../assets/images/mypage/naver.svg") center/cover
+          no-repeat;
+      }
+      .apple-icon {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: url("../../../assets/images/mypage/apple.svg") center/cover
+          no-repeat;
+      }
+    }
+  }
+  .agree {
+    margin-bottom: 36px;
+    color: map-get($color, color-Neutrals-Grey-800);
+    @include text_XS_12;
+    span {
+      color: #0065be;
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    width: 100%;
+    height: 100vh;
+    @include width_full;
+  }
+}
+@media screen and (max-width: 390px) {
+  .wrapper {
+    width: 390px;
+    height: 100vh;
+    @include width_full;
+    .modal__box {
+      // border: 1px solid red;
+      width: 390px;
+      height: 100vh;
+      .email {
+        // border: 1px solid red;
+        margin-left: 8px;
+        margin-right: 8px;
+        .email__box input[type="text"] {
+          width: 380px;
+        }
+        button {
+          width: 380px;
+        }
+      }
+    }
+  }
+}

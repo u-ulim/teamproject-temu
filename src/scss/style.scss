@@ -528,7 +528,6 @@
   justify-content: center;
   flex-direction: column;
   margin-bottom: 30px;
-
   // border: 1px solid red;
   .product__wrapper {
     display: flex;
@@ -536,7 +535,6 @@
     justify-content: center;
     flex-direction: column;
     margin-bottom: 32px;
-
     .product__title-img {
       width: 203px;
       height: 33px;
@@ -551,6 +549,10 @@
   #mobile__product {
     display: none;
   }
+  .list-wrapper {
+    @include width_inner;
+  }
+
   #product__btn {
     display: flex;
     align-items: center;
