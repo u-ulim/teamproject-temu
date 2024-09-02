@@ -10,6 +10,10 @@ $font: (
   primary-font-r: "Pretendard-Regular",
   primary-font-b: "Pretendard-Bold",
 );
+$font-weight: (
+  bold: 700,
+  regular: 400,
+);
 
 /* HEADING */
 /* -2% = 0.02 * 'n'px */ /* -3% = 0.03 * 'n'px */
@@ -90,6 +94,7 @@ $font: (
 
 @mixin text_L_18 {
   font-family: map-get($font, primary-font-r);
+
   font-size: 18px;
   font-style: normal;
   line-height: 26px;

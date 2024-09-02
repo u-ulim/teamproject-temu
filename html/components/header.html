@@ -1,37 +1,68 @@
-<head>
-  <script
-    src="https://kit.fontawesome.com/ccc6dd49b3.js"
-    crossorigin="anonymous"
-  ></script>
-  <link rel="stylesheet" href="../../src/scss/components/header.css" />
-  <script defer src="../../src/json/category-list.js"></script>
-</head>
-<header id="header">
-  <div class="header-top-wrapper">
-    <div class="header-top"></div>
+<div class="header-top-wrapper">
+  <div class="header-top">
+    <ul>
+      <li class="header-top__current">
+        <i>
+          <img
+            src="../../../assets/images/header/top-delivery-ico.svg"
+            alt=""
+          />
+        </i>
+        <span class="top__delivery-text">모든 주문 무료 배송</span>
+      </li>
+      <li class="header-top__next">
+        <i>
+          <img
+            src="../../../assets/images/header/top-exchange-ico.svg"
+            alt=""
+          />
+        </i>
+        <span class="top__exchange-text">무료 반품 90일 이내</span>
+      </li>
+
+      <li class="header-top__prev">
+        <i>
+          <img src="../../../assets/images/header/top-return-ico.svg" alt="" />
+        </i>
+        <span class="top__return-text">가격조정 30일 이내</span>
+      </li>
+    </ul>
   </div>
-  <nav>
-    <div class="nav-left">
-      <a href="#" class="nav-left__logo"></a>
-      <ul class="nav-left__menus">
-        <li>
+</div>
+<nav>
+  <div class="nav-left">
+    <a href="http://127.0.0.1:5501/" class="nav-left__logo"></a>
+    <ul class="nav-left__menus">
+      <li>
+        <div class="nav-left__link-ico">
           <i class="menu__bestseller-ico"></i>
           <a href="#">베스트셀러</a>
-        </li>
-        <li>
+        </div>
+      </li>
+      <li>
+        <div class="nav-left__link-ico">
           <i class="menu__star-ico"></i>
           <a href="#">별점 5점</a>
-        </li>
-        <li>
+        </div>
+      </li>
+      <li>
+        <div class="nav-left__link-ico">
           <i class="menu__shop-ico"></i>
           <a href="#">일주년</a>
-        </li>
-        <li>
+        </div>
+      </li>
+      <li>
+        <div class="nav-left__link-ico">
           <a href="#">신상품</a>
-        </li>
-        <li class="nav-menu__category">
+        </div>
+      </li>
+      <li class="nav-menu__category">
+        <div class="nav-left__link-ico">
           <a href="#">카테고리</a>
           <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="category-overlay"></div>
+        <div class="submenu-wrapper">
           <div class="submenu">
             <div class="submenu-tabs">
               <ul>
@@ -337,31 +368,47 @@
               </div>
             </div>
           </div>
-        </li>
-      </ul>
-      <div class="nav__input-wrapper">
-        <input type="text" placeholder="노트북 스탠드" />
-        <i></i>
-      </div>
+        </div>
+      </li>
+    </ul>
+    <div class="nav__input-wrapper">
+      <input type="text" placeholder="노트북 스탠드" />
+      <i></i>
     </div>
-    <div class="nav-right">
-      <ul class="nav-right__menus">
-        <li>
-          <i class="menu__login-ico"></i>
-          <a href="#">로그인/회원가입 <br />주문&계정</a>
-        </li>
-        <li>
-          <i class="menu__service-ico"></i>
-          <a href="#">지원 센터</a>
-        </li>
-        <li>
-          <i class="menu__language-ico"></i>
-          <a class="menu__language-text" href="#">KO</a>
-        </li>
-        <li>
-          <i class="menu__cart-ico"></i>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</header>
+  </div>
+  <div class="nav-right">
+    <ul class="nav-right__menus">
+      <li>
+        <i class="menu__login-ico"></i>
+        <a href="#">로그인/회원가입 <br />주문&계정</a>
+      </li>
+      <li>
+        <i class="menu__service-ico"></i>
+        <a href="#">지원 센터</a>
+      </li>
+      <li>
+        <i class="menu__language-ico"></i>
+        <a class="menu__language-text" href="#">KO</a>
+      </li>
+      <li>
+        <i class="menu__cart-ico"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <ul class="mobile-menus">
+    <li><a href="#">추천</a></li>
+    <li><a href="#">여성 의류</a></li>
+    <li><a href="#">남성 의류</a></li>
+    <li><a href="#">유아</a></li>
+    <li><a href="#">가방</a></li>
+    <li><a href="#">전자기기</a></li>
+    <li><a href="#">홈&주방</a></li>
+    <li><a href="#">여성화</a></li>
+    <li><a href="#">남성화</a></li>
+    <li><a href="#">남성 플러스 사이즈</a></li>
+    <li><a href="#">스포츠&아웃도어</a></li>
+    <li><a href="#">주얼리&액세서리</a></li>
+  </ul>
+</div>

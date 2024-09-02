@@ -5,7 +5,7 @@
 @import "../config/image.scss";
 
 #footer {
-  @extend .width_full;
+  @include width_full;
   padding-top: 47px;
   background-color: map-get($color, color-Black);
   color: map-get($color, color-White);
@@ -13,6 +13,7 @@
     @include width_inner;
     .footer-menus-wrapper {
       position: relative;
+
       .footer-menus {
         display: flex;
         justify-content: space-between;
@@ -30,6 +31,64 @@
             gap: 12px;
             flex-direction: column;
             color: map-get($color, color-Neutrals-Grey-200);
+          }
+          .footer-menus__app {
+            > li {
+              display: flex;
+              align-items: center;
+              gap: 3px;
+            }
+            i {
+              width: 16px;
+              height: 16px;
+              @include background_cover;
+            }
+            li:nth-child(1) > i {
+              background-image: url("../../../assets/images/footer/realtime-ico.svg");
+            }
+            li:nth-child(2) > i {
+              background-image: url("../../../assets/images/footer/quan-ico.svg");
+            }
+            li:nth-child(3) > i {
+              background-image: url("../../../assets/images/footer/coupon-ico.svg");
+            }
+          }
+          .footer-menus__contact {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            width: 137px;
+            justify-content: space-between;
+            > li {
+              display: flex;
+              width: 32px;
+              height: 32px;
+
+              i {
+                width: 32px;
+                height: 32px;
+                @include background_cover;
+              }
+            }
+
+            li:nth-child(1) > a > i {
+              background-image: url("../../../assets/images/footer/insta-ico.svg");
+            }
+            li:nth-child(2) > a > i {
+              background-image: url("../../../assets/images/footer/facebook-ico.svg");
+            }
+            li:nth-child(3) > a > i {
+              background-image: url("../../../assets/images/footer/x-ico.svg");
+            }
+            li:nth-child(4) > a > i {
+              background-image: url("../../../assets/images/footer/tiktok-ico.svg");
+            }
+            li:nth-child(5) > a > i {
+              background-image: url("../../../assets/images/footer/youtube-ico.svg");
+            }
+            li:nth-child(6) > a > i {
+              background-image: url("../../../assets/images/footer/pinterest-ico.svg");
+            }
           }
         }
       }
@@ -81,12 +140,15 @@
     }
     .footer-notice-wrapper {
       margin-bottom: 73px;
+
       h3 {
         margin-bottom: 10px;
         @include text_B_S_14;
       }
       .footer-notice__desc {
         display: flex;
+        // border: 1px solid red;
+
         gap: 188px;
         @include text_XS_12;
         .footer-notice__desc-info {
@@ -265,4 +327,43 @@
 }
 
 @media (max-width: 1384px) {
+  #footer {
+    .footer-inner {
+      @include width_full;
+      .footer-menus-wrapper {
+        .footer-menus {
+          flex-wrap: wrap;
+          margin-bottom: 40px;
+          li:last-child {
+            margin-bottom: 40px;
+          }
+        }
+        .footer-apps {
+          position: relative;
+          right: 0px;
+          top: -40px;
+          margin-bottom: 40px;
+        }
+      }
+      .footer-notice-wrapper {
+        .footer-notice__desc {
+          gap: 20px;
+          .footer-notice__desc-info {
+            width: 600px;
+          }
+        }
+      }
+      .footer-privacy-wrapper {
+        div {
+          .footer-privacy__menus {
+            width: 100%;
+            flex-wrap: wrap;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 390px) {
 }
