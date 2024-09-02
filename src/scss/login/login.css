@@ -20,11 +20,6 @@
   background-size: cover;
 }
 
-.object_cover {
-  object-fit: cover;
-  object-position: center;
-}
-
 html,
 body,
 div,

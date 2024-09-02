@@ -20,11 +20,6 @@
   background-size: cover;
 }
 
-.object_cover {
-  object-fit: cover;
-  object-position: center;
-}
-
 html,
 body,
 div,
@@ -172,7 +167,7 @@ table {
   width: 100%;
   height: 100vh;
   width: 1384px;
-  padding: 0px 15px 0px 15px;
+  padding: 0px 15px;
   margin: 0 auto;
 }
 .wrapper .mark__inner {

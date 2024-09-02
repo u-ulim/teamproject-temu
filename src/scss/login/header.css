@@ -21,11 +21,6 @@
   background-size: cover;
 }
 
-.object_cover {
-  object-fit: cover;
-  object-position: center;
-}
-
 html,
 body,
 div,
@@ -181,12 +176,12 @@ table {
 }
 #header .header-top-wrapper .header-top {
   width: 1384px;
-  padding: 0px 15px 0px 15px;
+  padding: 0px 15px;
   margin: 0 auto;
 }
 #header nav {
   width: 1384px;
-  padding: 0px 15px 0px 15px;
+  padding: 0px 15px;
   margin: 0 auto;
   display: flex;
   align-items: center;
