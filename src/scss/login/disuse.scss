@@ -7,8 +7,7 @@
 // WRAPPER
 .wrapper {
   position: relative;
-  width: 100%;
-  height: 100vh;
+
   @include width_inner;
   // MARK__INNER
   .mark__inner {
