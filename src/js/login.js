@@ -29,31 +29,36 @@ const userinfoCheckbox = document.querySelector("#userinfo__box .checkbox");
 const marketingCheckbox = document.querySelector("#marketing__box .checkbox");
 const eventCheckbox = document.querySelector("#event__box .checkbox");
 
+// 5. 회원가입 버튼
+const signupButton = document.querySelector(".signup__button");
+
 // 1. 아이디 유효성 검사
 // 아이디는 5자 이상이어야 하고, 영어 소문자 및 숫자만 포함해야 합니다.
+let idValidation = false;
 userid.addEventListener("input", function () {
   const userIdValue = userid.value;
   const idRegex = /^[a-z0-9]+$/; // 영어 소문자와 숫자만 허용하는 정규식
-
   if (userIdValue.length >= 5 && idRegex.test(userIdValue)) {
     // 유효한 아이디
     success.style.display = "block"; // 성공 메시지 보이기
     failure.style.display = "none"; // 글자 수 실패 메시지 숨기기
     failureMessage.style.display = "none"; // 영어 또는 숫자 실패 메시지 숨기기
-    userid.style.borderColor = "green"; // 테두리 색상을 녹색으로 변경 (성공)
+    idValidation = true;
+    console.log(idValidation);
+    validationFnc();
   } else {
     success.style.display = "none"; // 성공 메시지 숨기기
     failure.style.display = userIdValue.length < 5 ? "block" : "none"; // 글자 수 실패 메시지 보이기
     failureMessage.style.display = !idRegex.test(userIdValue)
       ? "block"
       : "none"; // 영어 또는 숫자 실패 메시지 보이기
-    userid.style.borderColor = "red"; // 테두리 색상을 빨간색으로 변경 (실패)
   }
 });
 
 // 2. 비밀번호 유효성 검사
 // 비밀번호 보이기/숨기기 기능
 // 각 아이콘에 클릭 이벤트를 추가
+let passwordValidation = false;
 toggleIcons.forEach((icon, index) => {
   icon.addEventListener("click", function () {
     // 현재 클릭된 아이콘과 연결된 비밀번호 필드 가져오기
@@ -77,6 +82,8 @@ confrimPassword.addEventListener("input", function () {
   if (password.value !== confrimPassword.value) {
     passwordSuccess.style.display = "none";
     mismatchMessage.style.display = "block";
+    passwordValidation = true;
+    validationFnc();
   } else {
     passwordSuccess.style.display = "block";
     mismatchMessage.style.display = "none";
@@ -93,6 +100,7 @@ password.addEventListener("input", function () {
     passwordMessage.textContent = "비밀번호를 입력해 주세요."; // 비밀번호를 입력하지 않은 경우
     passwordMessage.style.display = "block";
     successPassword.style.display = "none";
+    passwordValidation = true;
   } else if (!passwordCriteria.test(passwordValue)) {
     passwordMessage.textContent =
       "비밀번호는 영문, 숫자, 특수문자를 포함해야 합니다."; // 조건에 맞지 않은 경우
@@ -117,10 +125,12 @@ confrimPassword.addEventListener("input", function () {
   } else {
     mismatchMessage.style.display = "none";
     passwordSuccess.style.display = "block";
+    passwordValidation = true;
   }
 });
 
 // 3. 이메일 유효성 검사
+let emailValidation = false;
 function validateEmail() {
   // 요소 선택
 
@@ -151,6 +161,8 @@ function validateEmail() {
   // 이메일 유효성 검사 및 메시지 표시
   if (isValidEmail && isValidLength && hasLetters && hasNumbers) {
     emailSuccess.style.display = "block";
+    emailValidation = true;
+    validationFnc();
   } else {
     emailFail.style.display = "block";
   }
@@ -160,7 +172,9 @@ function validateEmail() {
 document.querySelector(".email").addEventListener("input", validateEmail);
 document.querySelector(".control").addEventListener("change", validateEmail);
 
-// 4.체크박스
+// 4. 체크박스
+let checkboxValidation = false;
+
 document.addEventListener("DOMContentLoaded", function () {
   const checkboxes = [
     ageCheckbox,
@@ -175,13 +189,73 @@ document.addEventListener("DOMContentLoaded", function () {
     checkboxes.forEach(
       (checkbox) => (checkbox.checked = selectAllCheckbox.checked)
     );
+
+    // 모든 체크박스가 체크되어 있는지 확인
+    const allChecked = checkboxes.every((checkbox) => checkbox.checked);
+
+    // checkboxValidation 변수를 true로 설정
+    checkboxValidation = allChecked ? true : false;
+
+    // 유효성 검사 함수 호출 (추가적인 로직이 필요할 때 사용)
+    validationFnc();
   });
 
-  // 다른 체크박스 클릭 시 전체 동의 체크박스 상태 업데이트
+  // 각 체크박스 클릭 시 전체 동의 체크박스 및 checkboxValidation 상태 업데이트
   checkboxes.forEach((checkbox) => {
     checkbox.addEventListener("change", function () {
       const allChecked = checkboxes.every((cb) => cb.checked);
       selectAllCheckbox.checked = allChecked;
+      checkboxValidation = allChecked ? true : false;
+      validationFnc();
     });
   });
 });
+
+// selectAllCheckbox.addEventListener("change", function () {
+//   checkboxes.forEach(
+//     (checkbox) => (checkbox.checked = selectAllCheckbox.checked)
+//   );
+// });
+
+// checkboxes.forEach((checkbox) => {
+//   checkbox.addEventListener("change", function () {
+//     const allChecked = checkboxes.every((cb) => cb.checked);
+//     selectAllCheckbox.checked = allChecked;
+//     checkSignupConditions(); // 유효성 검사 함수 호출
+//   });
+// });
+
+// button adbeld, disabeld Evt
+console.log(
+  idValidation,
+  passwordValidation,
+  emailValidation,
+  checkboxValidation
+);
+
+const validationFnc = () => {
+  if (
+    idValidation &&
+    passwordValidation &&
+    emailValidation &&
+    checkboxValidation
+  ) {
+    console.log("hi");
+    const signUpBtn = document.querySelector("#signup__btn > button");
+    signUpBtn.disabled = false;
+    signUpBtn.classList.add("active");
+    
+  } else {
+    console.log(
+      idValidation,
+      "id",
+      passwordValidation,
+      "password",
+      emailValidation,
+      "email",
+      checkboxValidation,
+      "checkbox"
+    );
+    console.log("nope");
+  }
+};

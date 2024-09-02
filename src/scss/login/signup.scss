@@ -379,11 +379,12 @@
         border: none;
         width: 100%;
         height: 45px;
-        background: map-get($color, primary-color);
+        background: map-get($color, color-Neutrals-Grey-500);
         color: map-get($color, color-White);
         border-radius: 3px;
         @include text_M_16;
-        &.hover {
+        transition: background 0.4s;
+        &.active {
           background: map-get($color, primary-color);
         }
       }
