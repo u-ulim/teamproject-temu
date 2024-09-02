@@ -1,15 +1,4 @@
-// 주소 변경 모달 창 관련 이벤트 내역
-// 주소등록 버튼을 누른 후 작성하고 그 값을 로컬스토리지에 저장되어야함
-
-let setAddresstProducts =
-  JSON.parse(localStorage.getItem("setAddresstProducts")) || [];
-
-const localStorageSave = () => {
-  localStorage.setItem(
-    "setAddresstProducts",
-    JSON.stringify(setAddresstProducts)
-  );
-};
+let getCartProducts = JSON.parse(localStorage.getItem("setCartProducts")) || [];
 
 //변수선언
 const bannerClose = document.querySelector(".banner-close");
@@ -347,7 +336,8 @@ userInfo.addEventListener("click", function (e) {
   }
 });
 
-// 체크박스 클릭 시 info__down 업데이트
+// 'main' 클릭 시 info__down 업데이트
+
 userInfo.addEventListener("change", function (e) {
   if (e.target.id === "useraddress__radio") {
     updateInfoDown(e.target.closest("ul"));
@@ -503,10 +493,64 @@ function addModalEventListeners() {
 // 모달 이벤트 다시 시작
 addModalEventListeners();
 
-//주문상품내역 , 갯수표기
-const orderinfoBtn = document.querySelector(".order__title");
 const product = document.querySelector(".product__info");
 const productInfo = document.querySelectorAll(".product__info ul");
+
+//주문상품내역 , 갯수표기
+// 장바구니 렌더링
+function renderCartItems() {
+  productInfo.innerHTML = "";
+
+  if (getCartProducts.length === 0) {
+    document.querySelector(".info__down-empty").style.display = "block";
+    productInfo.style.display = "none";
+  } else {
+    document.querySelector(".info__down-empty").style.display = "none";
+    productInfo.style.display = "block";
+  }
+  productInfo.forEach((product) => {
+    const {
+      img,
+      title,
+      selectColor,
+      selectSize,
+      quan,
+
+      sumPrice,
+      discountingPrice,
+    } = product;
+
+    const discountedTotalPrice = discountingPrice * quan;
+    const discountAmount = (sumPrice - discountingPrice) * quan;
+
+    // 장바구니 항목 HTML 생성
+
+    const productInfoHTML = `<li class="product">
+    <div class= "img">
+    <div>
+    <img src="${img}" alt="${title}"/>
+    </div>
+    </div>
+    img<div class="product__title">
+      <span>${title}</span>
+      <span>(${quan})</span>
+    </div>
+    <div class="product__option">
+      <span>${selectColor}</span>
+      <span>|</span>
+      <span>${selectSize}</span>
+    </div>
+    <div class="price__info">
+      <span class="general-price" id="general-price">￦${discountAmount}</span>
+      <span>￦${discountedTotalPrice}</span>
+    </div>
+    </li>`;
+
+    productInfoHTML.insertAdjacentHTML("beforeend", productInfoHTML);
+  });
+}
+
+const orderinfoBtn = document.querySelector(".order__title");
 const result = document.querySelector(".order__title h3 span");
 const resultAll = document.querySelector(".order__Title h3");
 const productInfoLength = productInfo.length;
@@ -577,30 +621,3 @@ checkboxes.forEach(function (checkbox) {
     agreeAll.checked = allChecked;
   });
 });
-
-// getAddressProduct 빈 화면
-function renderCartItems() {
-  userInfo.innerHTML = "";
-
-  if (getCartProducts.length === 0) {
-    document.querySelector(".empty__product").style.display = "block";
-    userInfo.style.display = "none";
-    renderAddressItems();
-  } else {
-    document.querySelector(".empty__product").style.display = "none";
-    userInfo.style.display = "block";
-  }
-}
-
-// getAddressProduct 빈 화면
-function checkIfAddressIsEmpty() {
-  if (getAddressProduct.length === 0) {
-    addressBtn.style.display = none;
-    console.log(addressBtn);
-  } else {
-    renderAddressItems();
-    addressBtn.style.display = block;
-  }
-}
-
-checkIfAddressIsEmpty();

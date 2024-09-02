@@ -268,7 +268,6 @@ main .address .shopping__info .info__down {
   border: 1px solid #9a9a9a;
   border-left: 4px solid #9a9a9a;
   border-radius: 8px;
-  display: none;
 }
 main .address .shopping__info .info__down ul li {
   margin-bottom: 7px;
@@ -320,6 +319,7 @@ main .address .shopping__info .info__down-empty {
   width: 446.41px;
   height: 121px;
   gap: 5px;
+  display: none;
 }
 main .address .shopping__info .info__down-empty ul {
   display: flex;

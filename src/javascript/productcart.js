@@ -31,12 +31,12 @@ function renderCartItems() {
   productInfoCart.innerHTML = "";
 
   if (getCartProducts.length === 0) {
-    document.querySelector(".info__down-empty").style.display = "block";
+    document.querySelector(".empty__product").style.display = "block";
     productInfoCart.style.display = "none";
     resetAsideValues();
     selectAllCheckbox.disabled = true;
   } else {
-    document.querySelector(".info__down-empty").style.display = "none";
+    document.querySelector(".empty__product").style.display = "none";
     productInfoCart.style.display = "block";
     selectAllCheckbox.disabled = false;
   }

@@ -95,8 +95,6 @@ main {
         border: 1px solid map-get($color, color-Neutrals-Grey-400);
         border-left: 4px solid map-get($color, color-Neutrals-Grey-400);
         border-radius: 8px;
-        display: none;
-
         ul {
           li {
             margin-bottom: 7px;
@@ -131,6 +129,7 @@ main {
         width: 446.41px;
         height: 121px;
         gap: 5px;
+        display: none;
         ul {
           display: flex;
           justify-content: center;
