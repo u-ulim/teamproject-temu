@@ -238,11 +238,11 @@ body #createDetail .detail__left-box #main #detail__main-container .detail__main
 body #createDetail .detail__left-box #main #detail__main-container .detail__main-imgbox > div img {
   width: 100%;
   height: 105%;
+  transition: opacity 0.1s ease;
   border-radius: 8px;
+  opacity: 1;
   object-fit: cover;
   object-position: center;
-  opacity: 1;
-  transition: opacity 0.1s ease;
 }
 body #createDetail .detail__left-box #main #detail__main-container .detail__main-imgbox > div img.fade-out {
   opacity: 0;
@@ -585,6 +585,8 @@ body #createDetail .detail__left-box #product-detail__container .product-detail_
   align-items: center;
   justify-content: center;
   border-bottom: 2px solid transparent;
+  width: 100%;
+  height: 100%;
   color: #292828;
   transition: all 0.4s;
   cursor: pointer;
@@ -594,8 +596,6 @@ body #createDetail .detail__left-box #product-detail__container .product-detail_
   font-weight: 700;
   line-height: 24px;
   letter-spacing: -0.48px;
-  width: 100%;
-  height: 100%;
 }
 body #createDetail .detail__left-box #product-detail__container .product-detail__header ul li > a.active {
   border-bottom: 2px solid #ff6d00;
@@ -1417,21 +1417,21 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
   position: relative;
 }
 body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-brand > span {
+  display: flex;
+  display: none;
   position: absolute;
   top: 50%;
+  left: 50%;
   width: 100%;
-  display: flex;
   height: 32px;
   text-align: center;
-  left: 50%;
+  cursor: pointer;
   transform: translate(-50%, -95%);
   font-family: "Pretendard-Regular";
   font-size: 12px;
   font-style: normal;
   line-height: 18px;
   letter-spacing: -0.36px;
-  cursor: pointer;
-  display: none;
 }
 body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-brand > span i {
   font-size: 10px;
@@ -1486,8 +1486,8 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
 }
 body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form {
   position: relative;
-  height: 100%;
   width: 100%;
+  height: 100%;
 }
 body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form .detail__main-contentsbox-selects {
   display: flex;
@@ -1509,10 +1509,10 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
   cursor: pointer;
 }
 body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form .detail__main-contentsbox-btns {
+  padding: 10px 0px 10px 0px;
+  bottom: 20px;
   width: 100%;
   background-color: #fff;
-  bottom: 20px;
-  padding: 10px 0px 10px 0px;
 }
 body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form .detail__main-contentsbox-btns h3 {
   font-family: "Pretendard-Bold";
@@ -1794,13 +1794,13 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
   }
   body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form {
     position: relative;
-    height: calc(100vh - 215px);
     width: 100%;
+    height: calc(100vh - 215px);
   }
   body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form .detail__main-contentsbox-btns {
-    width: 100%;
-    bottom: 0px;
     position: absolute;
+    bottom: 0px;
+    width: 100%;
   }
 }
 @media (max-width: 768px) {
@@ -2112,21 +2112,21 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
     letter-spacing: -0.42px;
   }
   body #createDetail .detail__right-box {
-    position: fixed;
-    z-index: 10;
-    left: 0px;
-    bottom: 64px;
-    width: 100%;
-    padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 0px;
+    padding-left: 15px;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
-    max-height: 32px;
     overflow: hidden;
+    position: fixed;
+    bottom: 64px;
+    left: 0px;
+    z-index: 10;
+    width: 100%;
+    max-height: 32px;
+    background-color: #fff;
     transition: 0.4s;
     cursor: pointer;
-    background-color: #fff;
   }
   body #createDetail .detail__right-box.open {
     max-height: 344px;
@@ -2148,14 +2148,14 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
   }
   body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form {
     position: static;
-    height: auto;
     width: 100%;
+    height: auto;
   }
   body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form .detail__main-contentsbox-btns {
-    width: 100%;
-    max-width: 100%;
-    min-width: 100%;
     position: static;
     bottom: 0px;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
   }
 }
