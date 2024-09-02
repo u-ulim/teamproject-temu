@@ -541,6 +541,9 @@
       text-align: center;
     }
   }
+  #mobile__product {
+    display: none;
+  }
   #product__btn {
     display: flex;
     align-items: center;
@@ -557,6 +560,9 @@
       justify-content: center;
       color: map-get($color, color-White);
       cursor: pointer;
+      p {
+        @include text_B_L_18;
+      }
     }
   }
 }
@@ -850,7 +856,6 @@
     // height: 130px;
     .category__wrapper {
       @include width_full;
-      padding: 0px 15px 0px 15px;
       .category__title {
         @include width_full;
         display: flex;
@@ -879,23 +884,16 @@
         width: 100%;
         height: auto;
         .category__list {
-          width: 100%;
-          height: 100px;
           display: flex;
           gap: 30px;
           align-items: center;
-          // justify-content: space-between;
-          // flex-wrap: wrap;
-          border: 1px solid red;
+          // border: 1px solid red;
           overflow: hidden;
+          width: 100%;
+          height: 100px;
           li {
-            // align-items: center;
-            // justify-content: center;
-            // display: flex;
             flex-basis: 20%;
-            // width: 1200px;
             height: 100px;
-            // flex-direction: column;
             .category__list-img {
               margin: 0 auto;
               width: 55px;
@@ -918,6 +916,37 @@
     .product__wrapper {
       .product__title {
         display: none;
+      }
+    }
+    #mobile__product {
+      display: flex;
+      margin-bottom: 10px;
+      .m__product__title {
+        display: flex;
+        align-content: center;
+        gap: 30px;
+        justify-content: space-between;
+        // border: 1px solid;
+        width: 100%;
+        height: 30px;
+        color: map-get($color, color-Neutrals-Grey-600);
+      }
+      div {
+        display: flex;
+        gap: 5px;
+        div:nth-child(1) {
+          border: none;
+          border-bottom: 3px solid map-get($color, secondary-color);
+        }
+      }
+    }
+    #product__btn {
+      width: 150px;
+      height: 30px;
+      .product__btn-more {
+        p {
+          @include text_XS_12;
+        }
       }
     }
   }

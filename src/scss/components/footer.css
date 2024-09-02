@@ -164,14 +164,13 @@ table {
 
 #footer {
   width: 100%;
-  padding: 0px;
   padding-top: 47px;
   background-color: #101010;
   color: #fff;
 }
 #footer .footer-inner {
   width: 1384px;
-  padding: 0px 15px 0px 15px;
+  padding: 0px 15px;
   margin: 0 auto;
 }
 #footer .footer-inner .footer-menus-wrapper {
@@ -536,7 +535,6 @@ table {
 @media (max-width: 1384px) {
   #footer .footer-inner {
     width: 100%;
-    padding: 0px;
   }
   #footer .footer-inner .footer-menus-wrapper .footer-menus {
     flex-wrap: wrap;

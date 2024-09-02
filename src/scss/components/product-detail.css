@@ -164,11 +164,10 @@ table {
 
 body #main {
   width: 100%;
-  padding: 0px;
 }
 body #main #detail__bradcrumb-container {
   width: 1384px;
-  padding: 0px 15px 0px 15px;
+  padding: 0px 15px;
   margin: 0 auto;
   margin-bottom: 33px;
 }
@@ -193,7 +192,7 @@ body #main #detail__bradcrumb-container .detail-bradcrumbs li i {
 }
 body #main #detail__main-container {
   width: 1384px;
-  padding: 0px 15px 0px 15px;
+  padding: 0px 15px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -552,7 +551,7 @@ body #main #detail__main-container .detail__main-contentsbox .detail__main-conte
 }
 body #product-detail__container {
   width: 1384px;
-  padding: 0px 15px 0px 15px;
+  padding: 0px 15px;
   margin: 0 auto;
 }
 body #product-detail__container .product-detail__header {

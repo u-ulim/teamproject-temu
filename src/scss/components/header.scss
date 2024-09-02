@@ -5,25 +5,98 @@
 @import "../config/image.scss";
 
 #header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
   @include width_full;
-  border-bottom: 1px solid map-get($color, color-Neutrals-Grey-200);
-  height: 130px;
+  // border-bottom: 1px solid map-get($color, color-Neutrals-Grey-200);
+  // height: 130px;
+  // padding: 65px 0px 65px 0px;
   margin-bottom: 30px;
+  background-color: map-get($color, color-White);
+
   .header-top-wrapper {
     @include width_full;
+    overflow-y: hidden;
     height: 48px;
+    position: relative;
     background-color: map-get($color, primary-color);
     color: map-get($color, color-White);
     .header-top {
-      @include width_inner;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      ul {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 7px;
+        position: relative;
+        width: 100%;
+        li {
+          width: 100%;
+          position: absolute;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
+          gap: 10px;
+
+          span {
+            @include text_B_S_14;
+          }
+          .top__delivery-text {
+            color: #adffa2;
+          }
+          .top__exchange-text {
+            color: #fff7a7;
+          }
+          .top__return-text {
+            color: #fff7a7;
+          }
+          > i {
+            width: 34px;
+            height: 34px;
+            display: inline-block;
+            @include object_cover;
+          }
+        }
+        .header-top__prev {
+          top: -48px;
+          transition: top 0.4s;
+        }
+        .header-top__current {
+          top: 0px;
+          transition: top 0.4s;
+        }
+        .header-top__next {
+          top: 48px;
+        }
+      }
     }
   }
+
   nav {
     @include width_inner;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
     height: 82px;
+    // top: -280px;
+    top: 0px;
+    // height: 0px;
+    // height: 0px;
+    // top: -200px;
+    // height: 0px;
+    transition: height 0.5s;
+    z-index: -1;
+    &.active {
+      height: 0px;
+      top: -170px;
+    }
     .nav-left {
       display: flex;
       gap: 20px;
@@ -107,19 +180,19 @@
         }
         .nav-menu__category {
           transition: all 0.5s;
-
-          &::before {
+          .category-overlay {
             display: none;
-            position: absolute;
+            position: fixed;
             left: 0px;
             top: 130px;
             content: "";
-            width: 100%;
-            height: 100%;
+            width: 100vw;
+            height: 100vh;
             background-color: map-get($color, color-Black);
             opacity: 0.5;
           }
-          &:hover::before {
+
+          &.active .category-overlay {
             display: block;
           }
 
@@ -137,6 +210,7 @@
               padding-top: 15px;
               top: 0px;
               left: 50%;
+              border-top: 1px solid map-get($color, primary-color);
               transform: translateX(-50%);
               z-index: 3;
               background-color: map-get($color, color-White);
@@ -341,8 +415,10 @@
     }
   }
 }
+
 @media (max-width: 768px) {
   #header {
+    margin-bottom: 80px;
     nav {
       .nav-left {
         .nav-left__logo {

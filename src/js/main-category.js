@@ -8,9 +8,6 @@ const categoryLeftBtn = mainCategoryBtns.querySelector(
 );
 console.log(categoryRightBtn, categoryLeftBtn);
 
-d
-
-
 // const slides = document.querySelector(".main__slides");
 // const slide = slides.querySelectorAll("li");
 // // console.log(slides, slide);
