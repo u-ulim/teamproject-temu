@@ -70,10 +70,10 @@ body {
               img {
                 width: 100%;
                 height: 105%;
-                border-radius: 8px;
-                @include object_cover;
-                opacity: 1;
                 transition: opacity 0.1s ease;
+                border-radius: 8px;
+                opacity: 1;
+                @include object_cover;
                 &.fade-out {
                   opacity: 0;
                 }
@@ -352,12 +352,12 @@ body {
                 align-items: center;
                 justify-content: center;
                 border-bottom: 2px solid transparent;
+                width: 100%;
+                height: 100%;
                 color: map-get($color, color-Neutrals-Grey-800);
                 transition: all 0.4s;
                 cursor: pointer;
                 @include text_B_M_16;
-                width: 100%;
-                height: 100%;
                 &.active {
                   border-bottom: 2px solid map-get($color, primary-color);
                   color: map-get($color, primary-color);
@@ -1025,9 +1025,27 @@ body {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          margin-bottom: 25px;
+          margin-bottom: 15px;
           // border-top: 2px solid map-get($color, color-Neutrals-Grey-200);
-          padding: 0px 0px 0px 0px;
+          padding: 10px 0px 0px 0px;
+          position: relative;
+          // border-top: 2px solid #efefef;
+          > span {
+            display: flex;
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 32px;
+            text-align: center;
+            cursor: pointer;
+            transform: translate(-50%, -95%);
+            @include text_XS_12;
+            i {
+              font-size: 10px;
+            }
+          }
           > div {
             display: flex;
             gap: 2px;
@@ -1068,8 +1086,8 @@ body {
           padding-bottom: 30px;
           form {
             position: relative;
-            height: 100%;
             width: 100%;
+            height: 100%;
             .detail__main-contentsbox-selects {
               display: flex;
               flex-direction: column;
@@ -1091,14 +1109,14 @@ body {
               }
             }
             .detail__main-contentsbox-btns {
+              padding: 10px 0px 10px 0px;
+              // position: static;
+
+              bottom: 20px;
               width: 100%;
               // max-width: 514px;
               // min-width: 514px;
               background-color: map-get($color, color-White);
-              // position: static;
-
-              bottom: 20px;
-              padding: 10px 0px 10px 0px;
               h3 {
                 @include text_B_S_14;
                 display: flex;
@@ -1414,18 +1432,17 @@ body {
           .detail__main-contentsbox-select {
             form {
               position: relative;
-              height: calc(100vh - 220px);
               width: 100%;
-              .detail__main-contentsbox-selects {
-              }
+              height: calc(100vh - 215px);
+
               .detail__main-contentsbox-btns {
+                position: absolute;
+                bottom: 0px;
                 // width: 36.6%;
                 // bottom: 20px;
                 // position: fixed;
 
                 width: 100%;
-                bottom: 0px;
-                position: absolute;
               }
             }
           }
@@ -1512,6 +1529,7 @@ body {
           @include width_full;
           .product-detail__header {
             @include width_full;
+            position: static;
             ul {
               li {
                 @include text_B_S_14;
@@ -1680,31 +1698,53 @@ body {
         }
       }
       .detail__right-box {
-        position: fixed;
-        z-index: 10;
-        left: 0px;
-        bottom: 0px;
-        width: 100%;
-        padding-left: 15px;
         padding-right: 15px;
         padding-bottom: 0px;
+        padding-left: 15px;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        overflow: hidden;
+        position: fixed;
+        // top: 74px;
+        bottom: 64px;
+        left: 0px;
+        z-index: 10;
+        width: 100%;
+        max-height: 32px;
+
         background-color: map-get($color, color-White);
+        transition: 0.4s;
+        cursor: pointer;
+        &.open {
+          max-height: 344px;
+        }
         .detail__main-contentsbox {
           margin-bottom: 0px;
           padding-top: 15px;
           padding-bottom: 5px;
+
+          .detail__main-contentsbox-brand {
+            // border-top: 2px solid #efefef;
+            > span {
+              display: block;
+              z-index: 20;
+              i {
+                font-size: 10px;
+              }
+            }
+          }
           .detail__main-contentsbox-select {
             padding-bottom: 0px;
             form {
               position: static;
-              height: auto;
               width: 100%;
+              height: auto;
               .detail__main-contentsbox-btns {
-                width: 100%;
-                max-width: 100%;
-                min-width: 100%;
                 position: static;
                 bottom: 0px;
+                width: 100%;
+                min-width: 100%;
+                max-width: 100%;
               }
             }
           }

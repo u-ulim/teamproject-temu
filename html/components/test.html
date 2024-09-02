@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Expandable Select Box with Cart and Buy Buttons</title>
+    <style>
+      .select-container {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        width: 200px;
+        padding: 10px;
+        background-color: #f1f1f1;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        overflow: hidden;
+        transition: max-height 0.5s ease, opacity 0.5s ease;
+        max-height: 50px; /* 초기 상태 (select들이 숨겨진 상태) */
+        opacity: 1;
+      }
+
+      .select-container.open {
+        max-height: 300px; /* select들이 펼쳐졌을 때의 높이 */
+        opacity: 1;
+      }
+
+      .select-container .controls {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin-top: 10px;
+      }
+
+      select {
+        width: 100%;
+      }
+
+      button {
+        padding: 10px;
+        cursor: pointer;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #fff;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: #e0e0e0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="select-container" id="selectContainer">
+      <button id="toggleButton">Toggle Selects</button>
+
+      <div class="controls">
+        <select>
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+        </select>
+        <select>
+          <option>Option A</option>
+          <option>Option B</option>
+          <option>Option C</option>
+        </select>
+        <select>
+          <option>Choice X</option>
+          <option>Choice Y</option>
+          <option>Choice Z</option>
+        </select>
+      </div>
+
+      <div class="controls">
+        <button class="cart-button">장바구니</button>
+        <button class="buy-button">구매하기</button>
+      </div>
+    </div>
+
+    <script>
+      const toggleButton = document.getElementById("toggleButton");
+      const selectContainer = document.getElementById("selectContainer");
+      const controls = document.querySelectorAll(".controls")[0]; // 첫 번째 컨트롤 섹션 (selects)
+
+      toggleButton.addEventListener("click", () => {
+        // selectContainer의 open 클래스를 토글하여 열리고 닫히는 동작을 제어
+        selectContainer.classList.toggle("open");
+
+        // select들이 보이지 않을 때 완전히 감추기 위해 height와 opacity를 조정
+        if (selectContainer.classList.contains("open")) {
+          controls.style.maxHeight = "200px"; // 적당한 높이로 조정
+          controls.style.opacity = "1";
+        } else {
+          controls.style.maxHeight = "0";
+          controls.style.opacity = "0";
+        }
+      });
+    </script>
+  </body>
+</html>

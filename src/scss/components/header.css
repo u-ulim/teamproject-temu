@@ -564,6 +564,7 @@ table {
 }
 @media (max-width: 768px) {
   #header {
+    overflow: hidden;
     margin-bottom: 80px;
   }
   #header nav .nav-left .nav-left__logo {
@@ -586,25 +587,15 @@ table {
   }
   #header .mobile-menu {
     display: block;
-    padding: 0px 15px 0px 15px;
     font-family: "Pretendard-Regular";
     font-size: 16px;
     font-style: normal;
     line-height: 24px;
     letter-spacing: -0.48px;
-    width: 100%;
+    padding: 0px 15px 0px 15px;
+    width: 768px;
     overflow: hidden;
     position: relative;
-  }
-  #header .mobile-menu ::before {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2));
-    pointer-events: none;
   }
   #header .mobile-menu .mobile-menus {
     display: flex;

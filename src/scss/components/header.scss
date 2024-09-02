@@ -419,6 +419,7 @@
 
 @media (max-width: 768px) {
   #header {
+    overflow: hidden;
     margin-bottom: 80px;
     nav {
       .nav-left {
@@ -446,26 +447,26 @@
     }
     .mobile-menu {
       display: block;
-      padding: 0px 15px 0px 15px;
       @include text_M_16;
-      width: 100%;
+      padding: 0px 15px 0px 15px;
+      width: 768px;
       overflow: hidden;
       position: relative;
-      ::before {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        content: "";
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          to right,
-          rgba(255, 255, 255, 0),
-          // 왼쪽은 투명
-          rgba(255, 255, 255, 0.2) // 오른쪽은 검은색 70% 투명도
-        );
-        pointer-events: none; // ::before 요소가 클릭 등의 이벤트에 영향을 주지 않도록 설정
-      }
+      // ::before {
+      //   position: absolute;
+      //   top: 0px;
+      //   left: 0px;
+      //   content: "";
+      //   width: 100%;
+      //   height: 100%;
+      //   background: linear-gradient(
+      //     to right,
+      //     rgba(255, 255, 255, 0),
+      //     // 왼쪽은 투명
+      //     rgba(255, 255, 255, 0.2) // 오른쪽은 검은색 70% 투명도
+      //   );
+      //   pointer-events: none; // ::before 요소가 클릭 등의 이벤트에 영향을 주지 않도록 설정
+      // }
       .mobile-menus {
         display: flex;
         gap: 20px;
