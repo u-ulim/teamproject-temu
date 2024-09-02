@@ -21,9 +21,16 @@
       z-index: -1;
       width: 875px;
       height: 300px;
-      background: no-repeat;
+      background: center/cover no-repeat;
       cursor: pointer;
       border-radius: 8px;
+      img {
+        width: 875px;
+        height: 300px;
+        background: center;
+        cursor: pointer;
+        border-radius: 8px;
+      }
     }
 
     .main__slide-container {
