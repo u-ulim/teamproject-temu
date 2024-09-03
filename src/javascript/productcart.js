@@ -65,10 +65,10 @@ function renderCartItems() {
     const cartProductHTML = `
       <ul class="product">
         <li class="custom__box">
-          <div>
+         
             <input type="checkbox" id="custom__checkbox_${index}" class="custom__checkbox" data-index="${index}" />
             <label for="custom__checkbox_${index}" class="select"></label>
-          </div>
+        
         </li>
         <li class="img">
           <div><img src="${img}" alt="${title}"/></div>
@@ -196,14 +196,17 @@ function updateAsideValues(
   totalDiscountedPrice,
   totalDiscountAmount
 ) {
-  const asideContainer = document.querySelector("aside");
+  const asideContainer = document.querySelector(".mobile-aside");
+  const pcAsideContainer = document.querySelector(".pc-aside");
+  console.log(asideContainer, pcAsideContainer);
+
   if (asideContainer) {
     const finalAmount = totalDiscountedPrice;
     const discountSum = totalDiscountAmount;
     const targetAmount = 20000;
     const shortage = targetAmount - finalAmount;
 
-    asideContainer.innerHTML = `
+    const asideHTML = `
       <div class="checkout__summary">
         <div class="summary__item">
           <ul>
@@ -260,6 +263,11 @@ function updateAsideValues(
         </div>
       </div>
     `;
+
+    if (pcAsideContainer) {
+      pcAsideContainer.innerHTML = asideHTML;
+    }
+    asideContainer.innerHTML = asideHTML;
 
     const checkoutButton = document.querySelector("#checkout__button");
     if (checkoutButton) {
