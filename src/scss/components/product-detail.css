@@ -255,7 +255,7 @@ body #createDetail .detail__left-box #main #detail__main-container .detail__main
 body #createDetail .detail__left-box #main #detail__main-container .detail__main-contentsbox .detail__main-contentsbox-provider {
   font-family: "Pretendard-Bold";
   font-size: 14px;
-  font-style: normal;
+  font-style: bold;
   font-weight: 700;
   line-height: 22px;
   letter-spacing: -0.42px;
@@ -416,7 +416,7 @@ body #createDetail .detail__left-box #main #detail__main-container .detail__main
 body #createDetail .detail__left-box #main #detail__main-container .detail__main-contentsbox .detail__main-contentsbox-delivery-infos ul li:first-child {
   font-family: "Pretendard-Bold";
   font-size: 14px;
-  font-style: normal;
+  font-style: bold;
   font-weight: 700;
   line-height: 22px;
   letter-spacing: -0.42px;
@@ -460,7 +460,7 @@ body #createDetail .detail__left-box #main #detail__main-container .detail__main
   cursor: pointer;
   font-family: "Pretendard-Bold";
   font-size: 14px;
-  font-style: normal;
+  font-style: bold;
   font-weight: 700;
   line-height: 22px;
   letter-spacing: -0.42px;
@@ -488,7 +488,7 @@ body #createDetail .detail__left-box #main #detail__main-container .detail__main
   border-radius: 50px;
   font-family: "Pretendard-Bold";
   font-size: 14px;
-  font-style: normal;
+  font-style: bold;
   font-weight: 700;
   line-height: 22px;
   letter-spacing: -0.42px;
@@ -519,7 +519,7 @@ body #createDetail .detail__left-box #main #detail__main-container .detail__main
 body #createDetail .detail__left-box #main #detail__main-container .detail__main-contentsbox .detail__main-contentsbox-select h3 {
   font-family: "Pretendard-Bold";
   font-size: 14px;
-  font-style: normal;
+  font-style: bold;
   font-weight: 700;
   line-height: 22px;
   letter-spacing: -0.42px;
@@ -541,7 +541,7 @@ body #createDetail .detail__left-box #main #detail__main-container .detail__main
   border-radius: 8px;
   font-family: "Pretendard-Bold";
   font-size: 18px;
-  font-style: normal;
+  font-style: bold;
   font-weight: 700;
   line-height: 26px;
   letter-spacing: -0.54px;
@@ -592,7 +592,7 @@ body #createDetail .detail__left-box #product-detail__container .product-detail_
   cursor: pointer;
   font-family: "Pretendard-Bold";
   font-size: 16px;
-  font-style: normal;
+  font-style: bold;
   font-weight: 700;
   line-height: 24px;
   letter-spacing: -0.48px;
@@ -681,7 +681,7 @@ body #createDetail .detail__left-box #product-detail__container .product-detail_
   align-items: center;
   font-family: "Pretendard-Bold";
   font-size: 18px;
-  font-style: normal;
+  font-style: bold;
   font-weight: 700;
   line-height: 26px;
   letter-spacing: -0.54px;
@@ -716,7 +716,7 @@ body #createDetail .detail__left-box #product-detail__container .product-detail_
 body #createDetail .detail__left-box #product-detail__container .product-detail__reviews .reviews__counters .counters__header .counters__header__right > span {
   font-family: "Pretendard-Bold";
   font-size: 18px;
-  font-style: normal;
+  font-style: bold;
   font-weight: 700;
   line-height: 26px;
   letter-spacing: -0.54px;
@@ -847,7 +847,7 @@ body #createDetail .detail__left-box #product-detail__container .product-detail_
   margin-bottom: 10px;
   font-family: "Pretendard-Bold";
   font-size: 16px;
-  font-style: normal;
+  font-style: bold;
   font-weight: 700;
   line-height: 24px;
   letter-spacing: -0.48px;
@@ -922,7 +922,7 @@ body #createDetail .detail__left-box #product-detail__container .product-detail_
   align-items: center;
   font-family: "Pretendard-Bold";
   font-size: 18px;
-  font-style: normal;
+  font-style: bold;
   font-weight: 700;
   line-height: 26px;
   letter-spacing: -0.54px;
@@ -957,7 +957,7 @@ body #createDetail .detail__left-box #product-detail__container .product-detail_
 body #createDetail .detail__left-box #product-detail__container .product-detail__contacts .contacts__header .contacts__header__right > span {
   font-family: "Pretendard-Bold";
   font-size: 18px;
-  font-style: normal;
+  font-style: bold;
   font-weight: 700;
   line-height: 26px;
   letter-spacing: -0.54px;
@@ -1001,7 +1001,7 @@ body #createDetail .detail__left-box #product-detail__container .product-detail_
 body #createDetail .detail__left-box #product-detail__container .product-detail__contacts .contacts__contents ul > li .contacts__contents__question span {
   font-family: "Pretendard-Bold";
   font-size: 16px;
-  font-style: normal;
+  font-style: bold;
   font-weight: 700;
   line-height: 24px;
   letter-spacing: -0.48px;
@@ -1010,7 +1010,7 @@ body #createDetail .detail__left-box #product-detail__container .product-detail_
 body #createDetail .detail__left-box #product-detail__container .product-detail__contacts .contacts__contents ul > li .contacts__contents__question p {
   font-family: "Pretendard-Bold";
   font-size: 14px;
-  font-style: normal;
+  font-style: bold;
   font-weight: 700;
   line-height: 22px;
   letter-spacing: -0.42px;
@@ -1023,7 +1023,7 @@ body #createDetail .detail__left-box #product-detail__container .product-detail_
 body #createDetail .detail__left-box #product-detail__container .product-detail__contacts .contacts__contents ul > li .contacts__contents__answer > span {
   font-family: "Pretendard-Bold";
   font-size: 16px;
-  font-style: normal;
+  font-style: bold;
   font-weight: 700;
   line-height: 24px;
   letter-spacing: -0.48px;
@@ -1032,7 +1032,7 @@ body #createDetail .detail__left-box #product-detail__container .product-detail_
 body #createDetail .detail__left-box #product-detail__container .product-detail__contacts .contacts__contents ul > li .contacts__contents__answer > div > span {
   font-family: "Pretendard-Bold";
   font-size: 14px;
-  font-style: normal;
+  font-style: bold;
   font-weight: 700;
   line-height: 22px;
   letter-spacing: -0.42px;
@@ -1063,7 +1063,7 @@ body #createDetail .detail__left-box #product-detail__container .product-detail_
   align-items: center;
   font-family: "Pretendard-Bold";
   font-size: 18px;
-  font-style: normal;
+  font-style: bold;
   font-weight: 700;
   line-height: 26px;
   letter-spacing: -0.54px;
@@ -1092,7 +1092,7 @@ body #createDetail .detail__left-box #product-detail__container .product-detail_
 body #createDetail .detail__left-box #product-detail__container .product-detail__delivery .delivery__header .delivery__header__right > span {
   font-family: "Pretendard-Bold";
   font-size: 18px;
-  font-style: normal;
+  font-style: bold;
   font-weight: 700;
   line-height: 26px;
   letter-spacing: -0.54px;
@@ -1135,7 +1135,7 @@ body #createDetail .detail__left-box #product-detail__container .product-detail_
 body #createDetail .detail__left-box #product-detail__container .product-detail__delivery .delivery__info ul li h4 {
   font-family: "Pretendard-Bold";
   font-size: 18px;
-  font-style: normal;
+  font-style: bold;
   font-weight: 700;
   line-height: 26px;
   letter-spacing: -0.54px;
@@ -1165,7 +1165,7 @@ body #createDetail .detail__left-box #product-detail__container .product-detail_
   align-items: center;
   font-family: "Pretendard-Bold";
   font-size: 18px;
-  font-style: normal;
+  font-style: bold;
   font-weight: 700;
   line-height: 26px;
   letter-spacing: -0.54px;
@@ -1194,7 +1194,7 @@ body #createDetail .detail__left-box #product-detail__container .product-detail_
 body #createDetail .detail__left-box #product-detail__container .product-detail__product-lists .product-lists__header .product-lists__header__right > span {
   font-family: "Pretendard-Bold";
   font-size: 18px;
-  font-style: normal;
+  font-style: bold;
   font-weight: 700;
   line-height: 26px;
   letter-spacing: -0.54px;
@@ -1216,7 +1216,7 @@ body #createDetail .detail__right-box .detail__main-contentsbox.active {
 body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-provider {
   font-family: "Pretendard-Bold";
   font-size: 14px;
-  font-style: normal;
+  font-style: bold;
   font-weight: 700;
   line-height: 22px;
   letter-spacing: -0.42px;
@@ -1380,7 +1380,7 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
 body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-delivery-infos ul li:first-child {
   font-family: "Pretendard-Bold";
   font-size: 14px;
-  font-style: normal;
+  font-style: bold;
   font-weight: 700;
   line-height: 22px;
   letter-spacing: -0.42px;
@@ -1444,7 +1444,7 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
   cursor: pointer;
   font-family: "Pretendard-Bold";
   font-size: 14px;
-  font-style: normal;
+  font-style: bold;
   font-weight: 700;
   line-height: 22px;
   letter-spacing: -0.42px;
@@ -1472,7 +1472,7 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
   border-radius: 50px;
   font-family: "Pretendard-Bold";
   font-size: 14px;
-  font-style: normal;
+  font-style: bold;
   font-weight: 700;
   line-height: 22px;
   letter-spacing: -0.42px;
@@ -1484,11 +1484,14 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
 body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select {
   padding-bottom: 30px;
 }
+<<<<<<< HEAD
 body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form {
   position: relative;
   width: 100%;
   height: 100%;
 }
+=======
+>>>>>>> origin/feature-js
 body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form .detail__main-contentsbox-selects {
   display: flex;
   flex-direction: column;
@@ -1508,6 +1511,7 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
 body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form .detail__main-contentsbox-selects select option {
   cursor: pointer;
 }
+<<<<<<< HEAD
 body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form .detail__main-contentsbox-btns {
   padding: 10px 0px 10px 0px;
   bottom: 20px;
@@ -1515,9 +1519,12 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
   background-color: #fff;
 }
 body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form .detail__main-contentsbox-btns h3 {
+=======
+body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form h3 {
+>>>>>>> origin/feature-js
   font-family: "Pretendard-Bold";
   font-size: 14px;
-  font-style: normal;
+  font-style: bold;
   font-weight: 700;
   line-height: 22px;
   letter-spacing: -0.42px;
@@ -1526,19 +1533,31 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
   margin-bottom: 17px;
   color: #101010;
 }
+<<<<<<< HEAD
 body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form .detail__main-contentsbox-btns h3 > span {
+=======
+body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form h3 > span {
+>>>>>>> origin/feature-js
   font-family: "Pretendard-Bold";
   font-size: 18px;
-  font-style: normal;
+  font-style: bold;
   font-weight: 700;
   line-height: 26px;
   letter-spacing: -0.54px;
 }
+<<<<<<< HEAD
 body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form .detail__main-contentsbox-btns div {
   display: flex;
   justify-content: space-between;
 }
 body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form .detail__main-contentsbox-btns div button {
+=======
+body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form > div {
+  display: flex;
+  justify-content: space-between;
+}
+body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form > div button {
+>>>>>>> origin/feature-js
   padding-top: 2px;
   border: 2px solid #ff6d00;
   outline: none;
@@ -1549,15 +1568,22 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
   border-radius: 5px;
   font-family: "Pretendard-Bold";
   font-size: 18px;
-  font-style: normal;
+  font-style: bold;
   font-weight: 700;
   line-height: 26px;
   letter-spacing: -0.54px;
 }
+<<<<<<< HEAD
 body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form .detail__main-contentsbox-btns div .select-cart-btn {
   color: #ff6d00;
 }
 body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form .detail__main-contentsbox-btns div .select-buy-btn {
+=======
+body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form > div .select-cart-btn {
+  color: #ff6d00;
+}
+body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form > div .select-buy-btn {
+>>>>>>> origin/feature-js
   background-color: #ff6d00;
   color: #fff;
 }
@@ -1607,7 +1633,7 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
   body #createDetail .detail__left-box #product-detail__container .product-detail__header ul li {
     font-family: "Pretendard-Bold";
     font-size: 14px;
-    font-style: normal;
+    font-style: bold;
     font-weight: 700;
     line-height: 22px;
     letter-spacing: -0.42px;
@@ -1867,7 +1893,7 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
   body #createDetail .detail__left-box #main #detail__main-container .detail__main-contentsbox .detail__main-contentsbox-delivery-infos ul li:first-child {
     font-family: "Pretendard-Bold";
     font-size: 14px;
-    font-style: normal;
+    font-style: bold;
     font-weight: 700;
     line-height: 22px;
     letter-spacing: -0.42px;
@@ -1898,7 +1924,7 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
   body #createDetail .detail__left-box #product-detail__container .product-detail__header ul li {
     font-family: "Pretendard-Bold";
     font-size: 14px;
-    font-style: normal;
+    font-style: bold;
     font-weight: 700;
     line-height: 22px;
     letter-spacing: -0.42px;
@@ -1962,7 +1988,7 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
   body #createDetail .detail__left-box #product-detail__container .product-detail__reviews .reviews__counters .counters__header .counters__header__left {
     font-family: "Pretendard-Bold";
     font-size: 16px;
-    font-style: normal;
+    font-style: bold;
     font-weight: 700;
     line-height: 24px;
     letter-spacing: -0.48px;
@@ -1986,7 +2012,7 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
   body #createDetail .detail__left-box #product-detail__container .product-detail__reviews .reviews__counters .counters__header .counters__header__right > span {
     font-family: "Pretendard-Bold";
     font-size: 16px;
-    font-style: normal;
+    font-style: bold;
     font-weight: 700;
     line-height: 24px;
     letter-spacing: -0.48px;
@@ -2012,7 +2038,7 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
   body #createDetail .detail__left-box #product-detail__container .product-detail__contacts .contacts__header .contacts__header__left {
     font-family: "Pretendard-Bold";
     font-size: 16px;
-    font-style: normal;
+    font-style: bold;
     font-weight: 700;
     line-height: 24px;
     letter-spacing: -0.48px;
@@ -2036,7 +2062,7 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
   body #createDetail .detail__left-box #product-detail__container .product-detail__contacts .contacts__header .contacts__header__right > span {
     font-family: "Pretendard-Bold";
     font-size: 16px;
-    font-style: normal;
+    font-style: bold;
     font-weight: 700;
     line-height: 24px;
     letter-spacing: -0.48px;
@@ -2050,7 +2076,7 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
   body #createDetail .detail__left-box #product-detail__container .product-detail__delivery .delivery__header .delivery__header__left {
     font-family: "Pretendard-Bold";
     font-size: 16px;
-    font-style: normal;
+    font-style: bold;
     font-weight: 700;
     line-height: 24px;
     letter-spacing: -0.48px;
@@ -2079,7 +2105,7 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
   body #createDetail .detail__left-box #product-detail__container .product-detail__delivery .delivery__header .delivery__header__right > span {
     font-family: "Pretendard-Bold";
     font-size: 14px;
-    font-style: normal;
+    font-style: bold;
     font-weight: 700;
     line-height: 22px;
     letter-spacing: -0.42px;
@@ -2090,7 +2116,7 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
   body #createDetail .detail__left-box #product-detail__container .product-detail__product-lists .product-lists__header .product-lists__header__left {
     font-family: "Pretendard-Bold";
     font-size: 16px;
-    font-style: normal;
+    font-style: bold;
     font-weight: 700;
     line-height: 24px;
     letter-spacing: -0.48px;
@@ -2112,6 +2138,7 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
     letter-spacing: -0.42px;
   }
   body #createDetail .detail__right-box {
+<<<<<<< HEAD
     padding-right: 15px;
     padding-bottom: 0px;
     padding-left: 15px;
@@ -2130,12 +2157,22 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
   }
   body #createDetail .detail__right-box.open {
     max-height: 344px;
+=======
+    position: fixed;
+    z-index: 10;
+    bottom: 0px;
+    width: 100%;
+    padding-right: 30px;
+    padding-bottom: 0px;
+    background-color: #fff;
+>>>>>>> origin/feature-js
   }
   body #createDetail .detail__right-box .detail__main-contentsbox {
     margin-bottom: 0px;
     padding-top: 15px;
     padding-bottom: 5px;
   }
+<<<<<<< HEAD
   body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-brand > span {
     display: block;
     z-index: 20;
@@ -2157,5 +2194,9 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
     width: 100%;
     min-width: 100%;
     max-width: 100%;
+=======
+  body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select {
+    padding-bottom: 0px;
+>>>>>>> origin/feature-js
   }
 }

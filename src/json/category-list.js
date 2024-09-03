@@ -22,7 +22,10 @@ fetch(categoryURL)
     const categoryOverlay = document.querySelector(".category-overlay");
 
     // 카테고리 마우스 이벤트 시, 오버레이가 생기고 사라지며 스크롤 제어
+<<<<<<< HEAD
     let scrollPosition = 0;
+=======
+>>>>>>> origin/feature-js
     navMenuCategory.addEventListener("mouseenter", () => {
       // 현재 스크롤 위치를 저장합니다.
       scrollPosition = window.pageYOffset;

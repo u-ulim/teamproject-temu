@@ -1085,9 +1085,12 @@ body {
         .detail__main-contentsbox-select {
           padding-bottom: 30px;
           form {
+<<<<<<< HEAD
             position: relative;
             width: 100%;
             height: 100%;
+=======
+>>>>>>> origin/feature-js
             .detail__main-contentsbox-selects {
               display: flex;
               flex-direction: column;
@@ -1108,6 +1111,7 @@ body {
                 }
               }
             }
+<<<<<<< HEAD
             .detail__main-contentsbox-btns {
               padding: 10px 0px 10px 0px;
               // position: static;
@@ -1149,6 +1153,39 @@ body {
 
                   color: map-get($color, color-White);
                 }
+=======
+            h3 {
+              @include text_B_S_14;
+              display: flex;
+              justify-content: space-between;
+              margin-bottom: 17px;
+              color: map-get($color, color-Black);
+              > span {
+                @include text_B_L_18;
+              }
+            }
+            > div {
+              display: flex;
+              justify-content: space-between;
+              button {
+                padding-top: 2px;
+                border: 2px solid map-get($color, primary-color);
+                outline: none;
+                width: 49%;
+                height: 46px;
+                background-color: map-get($color, color-White);
+                cursor: pointer;
+                border-radius: 5px;
+                @include text_B_L_18;
+              }
+              .select-cart-btn {
+                color: map-get($color, primary-color);
+              }
+              .select-buy-btn {
+                background-color: map-get($color, primary-color);
+
+                color: map-get($color, color-White);
+>>>>>>> origin/feature-js
               }
             }
           }
@@ -1698,6 +1735,7 @@ body {
         }
       }
       .detail__right-box {
+<<<<<<< HEAD
         padding-right: 15px;
         padding-bottom: 0px;
         padding-left: 15px;
@@ -1718,10 +1756,20 @@ body {
         &.open {
           max-height: 344px;
         }
+=======
+        position: fixed;
+        z-index: 10;
+        bottom: 0px;
+        width: 100%;
+        padding-right: 30px;
+        padding-bottom: 0px;
+        background-color: map-get($color, color-White);
+>>>>>>> origin/feature-js
         .detail__main-contentsbox {
           margin-bottom: 0px;
           padding-top: 15px;
           padding-bottom: 5px;
+<<<<<<< HEAD
 
           .detail__main-contentsbox-brand {
             // border-top: 2px solid #efefef;
@@ -1747,6 +1795,10 @@ body {
                 max-width: 100%;
               }
             }
+=======
+          .detail__main-contentsbox-select {
+            padding-bottom: 0px;
+>>>>>>> origin/feature-js
           }
         }
       }
