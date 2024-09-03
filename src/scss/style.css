@@ -137,6 +137,10 @@ ul {
   list-style: none;
 }
 
+ul li::marker {
+  content: "";
+}
+
 blockquote,
 q {
   quotes: none;
@@ -601,7 +605,6 @@ table {
   gap: 68px;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid orangered;
   overflow: hidden;
   width: 1213px;
   height: auto;

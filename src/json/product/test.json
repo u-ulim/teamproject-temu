@@ -974,5 +974,589 @@
         }
       }
     }
+  ],
+  "categories": [
+    {
+      "id": "fae05d1e-457f-4e92-8c0b-a4bf50f6f1ea",
+      "title": "스포츠/레저",
+      "sub": {
+        "subListF": {
+          "subtitle": "상하의 세트",
+          "img": "https://image.msscdn.net/images/category_img/men/ITEM_017021_17164419894030_big.png"
+        },
+        "subListS": {
+          "subtitle": "수영복/비치웨어",
+          "img": "https://image.msscdn.net/images/category_img/men/ITEM_017022_17164419897637_big.png"
+        },
+        "subListT": {
+          "subtitle": "스포츠신발",
+          "img": "https://image.msscdn.net/images/category_img/men/ITEM_017023_17164419900373_big.png"
+        },
+        "subListFour": {
+          "subtitle": "기구/용품/장비",
+          "img": "https://image.msscdn.net/images/category_img/men/ITEM_017024_17164459608499_big.png"
+        },
+        "subListFive": {
+          "subtitle": "스포츠가방",
+          "img": "https://image.msscdn.net/images/category_img/men/ITEM_017025_17164419905664_big.png"
+        },
+        "subListSix": {
+          "subtitle": "스포츠잡화",
+          "img": "https://image.msscdn.net/images/category_img/men/ITEM_017026_17164419908091_big.png"
+        },
+        "subListSeven": {
+          "subtitle": "스포츠모자",
+          "img": "https://image.msscdn.net/images/category_img/men/ITEM_017027_17164419911327_big.png"
+        }
+      }
+    },
+    {
+      "id": "a71f6476-0f68-47e5-a22f-3b555f1f896b",
+      "title": "전자 제품",
+      "sub": {
+        "subListF": {
+          "subtitle": "디지털가전",
+          "img": "https://image.msscdn.net/images/category_img/men/ITEM_102001_17198011000113_big.png"
+        },
+        "subListS": {
+          "subtitle": "가구/인테리어",
+          "img": "https://image.msscdn.net/images/category_img/men/ITEM_102002_17164419996955_big.png"
+        },
+        "subListT": {
+          "subtitle": "생활/주방",
+          "img": "https://image.msscdn.net/images/category_img/men/ITEM_102003_17164446460602_big.png"
+        },
+        "subListFour": {
+          "subtitle": "컬처/취미/소품",
+          "img": "https://image.msscdn.net/images/category_img/men/ITEM_102004_17198011229772_big.png"
+        },
+        "subListFive": {
+          "subtitle": "디지털가전",
+          "img": "https://image.msscdn.net/images/category_img/men/ITEM_102001_17198011000113_big.png"
+        },
+        "subListSix": {
+          "subtitle": "가구/인테리어",
+          "img": "https://image.msscdn.net/images/category_img/men/ITEM_102002_17164419996955_big.png"
+        },
+        "subListSeven": {
+          "subtitle": "생활/주방",
+          "img": "https://image.msscdn.net/images/category_img/men/ITEM_102003_17164446460602_big.png"
+        },
+        "subListEight": {
+          "subtitle": "디지털가전",
+          "img": "https://image.msscdn.net/images/category_img/men/ITEM_102001_17198011000113_big.png"
+        },
+        "subListNine": {
+          "subtitle": "생활/주방",
+          "img": "https://image.msscdn.net/images/category_img/men/ITEM_102003_17164446460602_big.png"
+        },
+        "subListTen": {
+          "subtitle": "생활/주방",
+          "img": "https://image.msscdn.net/images/category_img/men/ITEM_102003_17164446460602_big.png"
+        },
+        "subListElev": {
+          "subtitle": "디지털가전",
+          "img": "https://image.msscdn.net/images/category_img/men/ITEM_102001_17198011000113_big.png"
+        },
+        "subListTwelv": {
+          "subtitle": "컬처/취미/소품",
+          "img": "https://image.msscdn.net/images/category_img/men/ITEM_102004_17198011229772_big.png"
+        }
+      }
+    },
+    {
+      "id": "1b9bce89-cd7b-4f60-8b9b-6e3f2f3c8f4e",
+      "title": "패션, 의류",
+      "sub": {
+        "subListF": {
+          "subtitle": "모자",
+          "img": "https://image.msscdn.net/images/category_img/men/ITEM_101001_17164419978898_big.png"
+        },
+        "subListS": {
+          "subtitle": "양말",
+          "img": "https://image.msscdn.net/images/category_img/men/ITEM_101002_17164419982022_big.png"
+        },
+        "subListT": {
+          "subtitle": "선글라스/안경태",
+          "img": "https://image.msscdn.net/images/category_img/men/ITEM_101003_17164419984191_big.png"
+        },
+        "subListFour": {
+          "subtitle": "액세서리",
+          "img": "https://image.msscdn.net/images/category_img/men/ITEM_101004_17164419986938_big.png"
+        },
+        "subListFive": {
+          "subtitle": "시계",
+          "img": "https://image.msscdn.net/images/category_img/men/ITEM_101005_17164419989416_big.png"
+        },
+        "subListSix": {
+          "subtitle": "주얼리",
+          "img": "https://image.msscdn.net/images/category_img/men/ITEM_101006_17164419991765_big.png"
+        },
+        "subListSeven": {
+          "subtitle": "모자",
+          "img": "https://image.msscdn.net/images/category_img/men/ITEM_101001_17164419978898_big.png"
+        },
+        "subListEight": {
+          "subtitle": "양말",
+          "img": "https://image.msscdn.net/images/category_img/men/ITEM_101002_17164419982022_big.png"
+        },
+        "subListNine": {
+          "subtitle": "주얼리",
+          "img": "https://image.msscdn.net/images/category_img/men/ITEM_101006_17164419991765_big.png"
+        },
+        "subListTen": {
+          "subtitle": "시계",
+          "img": "https://image.msscdn.net/images/category_img/men/ITEM_101005_17164419989416_big.png"
+        },
+        "subListElev": {
+          "subtitle": "양말",
+          "img": "https://image.msscdn.net/images/category_img/men/ITEM_101002_17164419982022_big.png"
+        },
+        "subListTwelv": {
+          "subtitle": "모자",
+          "img": "https://image.msscdn.net/images/category_img/men/ITEM_101001_17164419978898_big.png"
+        }
+      }
+    },
+    {
+      "id": "b2b7e8bb-6e3e-4d16-bb47-22d3ec15b51b",
+      "title": "가정, 생활",
+      "sub": {
+        "subListF": {
+          "subtitle": "상의",
+          "img": "https://image.msscdn.net/images/category_img/men/ITEM_106004_17164420087397_big.png"
+        },
+        "subListS": {
+          "subtitle": "아우터",
+          "img": "https://image.msscdn.net/images/category_img/men/ITEM_106005_17164420090512_big.png"
+        },
+        "subListT": {
+          "subtitle": "바지",
+          "img": "https://image.msscdn.net/images/category_img/men/ITEM_106006_17164420093367_big.png"
+        },
+        "subListFour": {
+          "subtitle": "원피스/스커트",
+          "img": "https://image.msscdn.net/images/category_img/men/ITEM_106007_17164420095948_big.png"
+        },
+        "subListFive": {
+          "subtitle": "세트 의류",
+          "img": "https://image.msscdn.net/images/category_img/men/ITEM_106008_17164420098613_big.png"
+        },
+        "subListSix": {
+          "subtitle": "12개월 이하",
+          "img": "https://image.msscdn.net/images/category_img/men/ITEM_106009_17164420101948_big.png"
+        },
+        "subListSeven": {
+          "subtitle": "시즌/테마",
+          "img": "https://image.msscdn.net/images/category_img/men/ITEM_106010_17164420104481_big.png"
+        },
+        "subListEight": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListNine": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListTen": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListElev": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListTwelv": {
+          "subtitle": "",
+          "img": ""
+        }
+      }
+    },
+    {
+      "id": "fdee4e57-3068-4a57-8a82-74bda5e79a24",
+      "title": "도서, 문구",
+      "sub": {
+        "subListF": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListS": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListT": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListFour": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListFive": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListSix": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListSeven": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListEight": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListNine": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListTen": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListElev": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListTwelv": {
+          "subtitle": "",
+          "img": ""
+        }
+      }
+    },
+    {
+      "id": "a46d689f-7b8f-40b0-8b97-56b759c55844",
+      "title": "식품, 건강",
+      "sub": {
+        "subListF": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListS": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListT": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListFour": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListFive": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListSix": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListSeven": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListEight": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListNine": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListTen": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListElev": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListTwelv": {
+          "subtitle": "",
+          "img": ""
+        }
+      }
+    },
+    {
+      "id": "8c6a5714-c96d-4c34-bfc3-1f098ff7fbcb",
+      "title": "화장품, 뷰티",
+      "sub": {
+        "subListF": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListS": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListT": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListFour": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListFive": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListSix": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListSeven": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListEight": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListNine": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListTen": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListElev": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListTwelv": {
+          "subtitle": "",
+          "img": ""
+        }
+      }
+    },
+    {
+      "id": "6ac2731d-39e0-4384-9ff7-bd7c065bba22",
+      "title": "자동차 용품",
+      "sub": {
+        "subListF": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListS": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListT": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListFour": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListFive": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListSix": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListSeven": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListEight": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListNine": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListTen": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListElev": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListTwelv": {
+          "subtitle": "",
+          "img": ""
+        }
+      }
+    },
+    {
+      "id": "9e423ff5-8a26-4fa4-9615-349ed2c67a07",
+      "title": "유아, 아동",
+      "sub": {
+        "subtitle": "",
+        "img": ""
+      }
+    },
+    {
+      "id": "dd1bc6f3-5b6a-47ef-94f1-1109d5d87b9e",
+      "title": "펫 용품",
+      "sub": {
+        "subListF": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListS": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListT": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListFour": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListFive": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListSix": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListSeven": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListEight": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListNine": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListTen": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListElev": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListTwelv": {
+          "subtitle": "",
+          "img": ""
+        }
+      }
+    },
+    {
+      "id": "5fa71a88-cf1f-4d38-8a4a-4d4d8c5b5df3",
+      "title": "여행, 티켓",
+      "sub": {
+        "subListF": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListS": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListT": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListFour": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListFive": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListSix": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListSeven": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListEight": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListNine": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListTen": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListElev": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListTwelv": {
+          "subtitle": "",
+          "img": ""
+        }
+      }
+    },
+    {
+      "id": "c2cfa2b5-305f-4e6d-9d3e-9b7b2fd78724",
+      "title": "홈 인테리어",
+      "sub": {
+        "subListF": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListS": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListT": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListFour": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListFive": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListSix": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListSeven": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListEight": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListNine": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListTen": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListElev": {
+          "subtitle": "",
+          "img": ""
+        },
+        "subListTwelv": {
+          "subtitle": "",
+          "img": ""
+        }
+      }
+    }
   ]
 }

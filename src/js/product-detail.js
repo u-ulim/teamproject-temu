@@ -500,7 +500,7 @@ fetch(productsURL)
           </div>
       </section>
     </div>
-    <div class="detail__right-box">
+    <div class="detail__right-box close">
     <div class="detail__main-contentsbox">
     <div class="detail__main-contentsbox-provider">${
       product.details.provider
@@ -556,7 +556,7 @@ fetch(productsURL)
       </ul>
     </div>
     <div class="detail__main-contentsbox-brand">
-      <span>옵션 선택
+      <span>구매하기
       <i class="fa-solid fa-chevron-up" aria-hidden="true"></i></span>
       <div><i></i>${product.details.provider}</div>
       <button>
@@ -902,10 +902,6 @@ fetch(productsURL)
         if (existingProductIndex > -1) {
           // 기존 제품이 있으면 수량과 가격 업데이트
           setCartProducts[existingProductIndex].quan += cartProduct.quan;
-          setCartProducts[existingProductIndex].sumPrice +=
-            cartProduct.sumPrice;
-          setCartProducts[existingProductIndex].discountedPrice +=
-            cartProduct.discountedPrice;
         } else {
           // 기존 제품이 없으면 새로 추가
           setCartProducts.push(cartProduct);
@@ -918,6 +914,32 @@ fetch(productsURL)
         ".detail__right-box .detail__main-contentsbox-select > form"
       );
       form.addEventListener("submit", setCartHandler);
+
+      // option dropdown Evt
+      let optionDropDownBtn = document.querySelector(
+        ".detail__main-contentsbox-brand > span"
+      );
+      const boxBrandSpan = document.querySelector(
+        ".detail__right-box .detail__main-contentsbox-brand > span"
+      );
+      optionDropDownBtn.addEventListener("click", () => {
+        const detailRightBox = document.querySelector(".detail__right-box");
+
+        if (detailRightBox.classList.contains("close")) {
+          detailRightBox.classList.remove("close");
+          boxBrandSpan.innerHTML = `
+          구매하기 
+          <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+          `;
+        } else {
+          detailRightBox.classList.add("close");
+          console.log("h2");
+          boxBrandSpan.innerHTML = `
+          구매하기 
+          <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
+          `;
+        }
+      });
     };
 
     // 페이지 이동

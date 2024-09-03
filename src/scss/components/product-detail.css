@@ -2123,13 +2123,13 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
     left: 0px;
     z-index: 10;
     width: 100%;
-    max-height: 32px;
+    max-height: 344px;
     background-color: #fff;
     transition: 0.4s;
     cursor: pointer;
   }
-  body #createDetail .detail__right-box.open {
-    max-height: 344px;
+  body #createDetail .detail__right-box.close {
+    max-height: 32px;
   }
   body #createDetail .detail__right-box .detail__main-contentsbox {
     margin-bottom: 0px;

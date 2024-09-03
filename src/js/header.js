@@ -6,7 +6,7 @@ const headerLoad = () => {
     .then((data) => {
       header.innerHTML = data;
 
-      // header scroll evt
+      // header scroll Evt
       const headerScrollEvt = () => {
         let lastScrollY = window.scrollY;
         const nav = document.querySelector("nav");
@@ -81,6 +81,29 @@ const headerLoad = () => {
         });
       };
       headerRollingEvt();
+
+      // header search Evt
+      const searchInput = document.querySelector(".nav__input-wrapper input");
+      const searchButton = document.querySelector(".nav__input-wrapper i");
+
+      const searchEvt = () => {
+        const searchQuery = searchInput.value.trim();
+        if (searchQuery) {
+          const url = `/html/components/search-results.html?query=${encodeURIComponent(
+            searchQuery
+          )}`;
+          window.location.href = url;
+        } else {
+          alert("검색어를 입력하세요!");
+        }
+      };
+
+      searchButton.addEventListener("click", searchEvt);
+      searchInput.addEventListener("keypress", (e) => {
+        if (e.key == "Enter") {
+          searchEvt();
+        }
+      });
 
       // header mobile overflow menu
       const hashContent = document.querySelector(".mobile-menu");

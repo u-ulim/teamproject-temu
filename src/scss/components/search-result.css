@@ -1,3 +1,17 @@
+@font-face {
+  font-family: "Pretendard-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+}
+/* HEADING */
+/* -2% = 0.02 * 'n'px */ /* -3% = 0.03 * 'n'px */
+/* TEXT */
+/* -2% = 0.02 * 'n'px */
+/* -3% = 0.03 * 'n'px */
+/* TEXT BOLD */
+/* -2% = 0.02 * 'n'px */
+/* -3% = 0.03 * 'n'px */
 html,
 body,
 div,
@@ -142,4 +156,28 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+/* VARIABLES */
+.background_cover {
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.list-wrapper {
+  width: 1384px;
+  padding: 0px 15px;
+  margin: 0 auto;
+}
+.list-wrapper ul,
+.list-wrapper li {
+  list-style: none;
+}
+
+@media (max-width: 1384px) {
+  .list-wrapper {
+    width: 100%;
+  }
 }

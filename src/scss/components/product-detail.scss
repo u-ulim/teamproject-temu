@@ -1710,13 +1710,13 @@ body {
         left: 0px;
         z-index: 10;
         width: 100%;
-        max-height: 32px;
-
+        max-height: 344px;
         background-color: map-get($color, color-White);
         transition: 0.4s;
         cursor: pointer;
-        &.open {
-          max-height: 344px;
+        &.close {
+          // max-height: 344px;
+          max-height: 32px;
         }
         .detail__main-contentsbox {
           margin-bottom: 0px;

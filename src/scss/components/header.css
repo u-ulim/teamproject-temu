@@ -170,13 +170,15 @@ table {
   width: 100%;
   margin-bottom: 30px;
   background-color: #fff;
+  background-color: rgba(244, 244, 244, 0.7); /* 투명한 배경 */
+  backdrop-filter: blur(10px); /* 블러 효과 */
 }
 #header .header-top-wrapper {
   width: 100%;
   overflow-y: hidden;
   height: 48px;
   position: relative;
-  background-color: #ff6d00;
+  background-color: #101010;
   color: #fff;
 }
 #header .header-top-wrapper .header-top {
@@ -246,7 +248,8 @@ table {
   align-items: center;
   justify-content: space-between;
   position: relative;
-  height: 82px;
+  height: 63px;
+  -webkit-tap-highlight-color: transparent;
   top: 0px;
   transition: height 0.5s;
   z-index: -1;
@@ -285,7 +288,7 @@ table {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  height: 82px;
+  height: 84px;
   position: relative;
   transition: all 0.5s;
 }
@@ -339,7 +342,8 @@ table {
   transition: 0.5s;
 }
 #header nav .nav-left .nav-left__menus > li .nav-left__link-ico:hover::before {
-  opacity: 1;
+  opacity: 0.2;
+  background-color: #ffaf71;
 }
 #header nav .nav-left .nav-left__menus .nav-menu__category {
   transition: all 0.5s;
@@ -348,7 +352,7 @@ table {
   display: none;
   position: fixed;
   left: 0px;
-  top: 130px;
+  top: 110px;
   content: "";
   width: 100vw;
   height: 100vh;
@@ -368,13 +372,13 @@ table {
   width: 800px;
   position: absolute;
   padding-top: 15px;
-  top: 0px;
+  top: -12px;
   left: 50%;
-  border-top: 1px solid #ff6d00;
   transform: translateX(-50%);
   z-index: 3;
   background-color: #fff;
   display: none;
+  color: #101010;
 }
 #header nav .nav-left .nav-left__menus .nav-menu__category .submenu-wrapper .submenu .submenu-tabs {
   text-align: center;
@@ -461,7 +465,7 @@ table {
   display: inline-block;
   position: absolute;
   right: 5px;
-  width: 41px;
+  width: 31px;
   height: 31px;
   background: url("../../../assets/images/header/menu_search-ico.svg");
   display: inline-block;
