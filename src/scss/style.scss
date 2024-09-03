@@ -16,19 +16,18 @@
     @include width_inner;
     .main__banner {
       overflow: hidden;
-      position: relative;
       // border: 1px solid red;
       z-index: -1;
       width: 875px;
       height: 300px;
-      background: center/cover no-repeat;
       cursor: pointer;
       border-radius: 8px;
       img {
         width: 875px;
         height: 300px;
-        background: center;
+        background: center/contain no-repeat;
         cursor: pointer;
+        object-fit: cover;
         border-radius: 8px;
       }
     }
@@ -165,8 +164,9 @@
         height: 24px;
         line-height: 24px;
         text-align: center;
-        @include background_cover;
         // border: 1px solid #f00;
+        cursor: pointer;
+        @include background_cover;
       }
 
       .promise-top-left {
@@ -227,6 +227,7 @@
       i {
         width: 24px;
         height: 24px;
+        cursor: pointer;
         @include background_cover;
       }
 
@@ -262,8 +263,10 @@
   @include width_full;
   @include text_L_18;
   margin-bottom: 60px;
+  overflow: hidden;
   // border: 1px solid red;
-
+  overflow-x: hidden;
+  cursor: pointer;
   .cart__wrapper {
     @include width_inner;
     display: flex;
@@ -394,13 +397,18 @@
       margin-bottom: 30px;
       padding: 0px 15px 0px 15px;
       .category__title-img {
+        // border: 1px solid blue;
         width: 203px;
-        height: 33px;
-        background: url(../../assets/images/index/cate-title.png);
+        height: 50px;
+        background: url(../../assets/images/index/cate-title2.png) center/cover;
+        object-fit: cover;
       }
 
       p {
         @include heading_S_24;
+        // border: 1px solid blue;
+        margin-top: 35px;
+        position: absolute;
         text-align: center;
       }
       i {
@@ -473,6 +481,7 @@
             width: 115px;
             height: 115px;
             border-radius: 50%;
+            cursor: pointer;
           }
 
           span {
@@ -537,12 +546,16 @@
     margin-bottom: 32px;
     .product__title-img {
       width: 203px;
-      height: 33px;
-      background: url(../../assets/images/index/cate-title.png);
+      height: 50px;
+      background: url(../../assets/images/index/cate-title2.png) center/cover;
+      object-fit: cover;
     }
 
     p {
       @include heading_S_24;
+      // border: 1px solid blue;
+      margin-top: -20px;
+      // position: absolute;
       text-align: center;
     }
   }
@@ -606,6 +619,12 @@
     @include width_full;
     .category__title {
       @include width_full;
+    }
+  }
+  #product {
+    .list-wrapper {
+      @include width_full;
+      // border: 1px solid #f00;
     }
   }
 }
@@ -857,7 +876,7 @@
 
   /* category */
   #category {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     padding: 0 20px;
     // border: 1px solid orange;
     width: 100%;
@@ -866,25 +885,34 @@
     .category__wrapper {
       @include width_full;
       .category__title {
+        // border: 1px solid orange;
         @include width_full;
         display: flex;
         gap: 5px;
-        justify-content: normal;
+        align-items: center;
+        justify-content: flex-start;
         flex-direction: row;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
         padding: 0 20px;
         width: 100%;
         height: 30px;
-        text-align: left;
+        color: map-get($color, color-Neutrals-Grey-8 00);
+        text-align: center;
         .category__title-img {
           display: none;
         }
+        p,
+        i {
+          display: flex;
+          align-items: center;
+          margin-top: 0;
+          position: static;
+        }
         p {
           @include text_S_14;
-          text-align: left;
         }
         i {
-          display: block;
+          // display: flex;
           font-size: 15px;
         }
       }
@@ -892,6 +920,9 @@
         @include width_full;
         width: 100%;
         height: auto;
+        .category__btn {
+          display: none;
+        }
         .category__list {
           display: flex;
           gap: 30px;
@@ -930,6 +961,7 @@
     #mobile__product {
       display: flex;
       margin-bottom: 10px;
+      @include text_S_14;
       .m__product__title {
         display: flex;
         align-content: center;
@@ -947,11 +979,18 @@
           border: none;
           border-bottom: 3px solid map-get($color, secondary-color);
         }
+        i {
+          align-items: center;
+          // border: 1px solid blue;
+          justify-content: center;
+          font-size: 15px;
+          line-height: 22px;
+        }
       }
     }
     #product__btn {
       width: 150px;
-      height: 30px;
+      height: 35px;
       .product__btn-more {
         p {
           @include text_XS_12;
