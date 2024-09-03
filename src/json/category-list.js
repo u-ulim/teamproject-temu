@@ -7,9 +7,26 @@ fetch(categoryURL)
   .then((response) => response.json())
   .then((data) => {
     // 맵핑 한 데이터 출력
-    const createItem = (category) => {
-      console.log(category);
-    };
+
+    const createItem = (category) => {};
+
+    data.forEach((category, index) => {
+      // 카테고리 탭 생성
+      const tab = document.createElement("li");
+      tab.textContent = category.title;
+      tab.setAttribute("data-tab", `tab-${index}`);
+      tabsContainer.appendChild(tab);
+
+      // 서브 카테고리 콘텐츠 생성
+      const contentDiv = document.createElement("div");
+      contentDiv.classList.add("content");
+      contentDiv.setAttribute("id", `tab-${index}`);
+      
+    });
+
+    const tabsContainer = document.querySelector(".submenu-tabs > ul");
+    const contentContainer = document.querySelector(".submenu-content");
+    console.log(tabsContainer, contentContainer);
 
     // 받아온 데이터 맵핑
     const importData = () => {
@@ -46,7 +63,7 @@ fetch(categoryURL)
         document.getElementById(tabContentId).classList.add("active");
       });
     });
-    
+
     // 카테고리 마우스 이벤트 시, 오버레이가 생기고 사라지며 스크롤 제어
     let scrollPosition = 0;
     navMenuCategory.addEventListener("mouseenter", () => {
@@ -58,7 +75,6 @@ fetch(categoryURL)
       document.body.style.top = `-${scrollPosition}px`;
       document.body.style.width = "100%";
       document.body.style.overflowY = "scroll"; // 스크롤바 유지
-
       navMenuCategory.classList.add("active");
     });
 

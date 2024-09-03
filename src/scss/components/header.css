@@ -137,6 +137,10 @@ ul {
   list-style: none;
 }
 
+ul li::marker {
+  content: "";
+}
+
 blockquote,
 q {
   quotes: none;
@@ -170,15 +174,15 @@ table {
   width: 100%;
   margin-bottom: 30px;
   background-color: #fff;
-  background-color: rgba(244, 244, 244, 0.7); /* 투명한 배경 */
-  backdrop-filter: blur(10px); /* 블러 효과 */
+  background-color: rgba(244, 244, 244, 0.9); /* 투명한 배경 */
+  backdrop-filter: blur(5px); /* 블러 효과 */
 }
 #header .header-top-wrapper {
   width: 100%;
   overflow-y: hidden;
   height: 48px;
   position: relative;
-  background-color: #101010;
+  background-color: #ff6d00;
   color: #fff;
 }
 #header .header-top-wrapper .header-top {

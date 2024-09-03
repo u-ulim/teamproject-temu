@@ -14,8 +14,8 @@
   // padding: 65px 0px 65px 0px;
   margin-bottom: 30px;
   background-color: map-get($color, color-White);
-  background-color: rgba(244, 244, 244, 0.7); /* 투명한 배경 */
-  backdrop-filter: blur(10px); /* 블러 효과 */
+  background-color: rgba(244, 244, 244, 0.9); /* 투명한 배경 */
+  backdrop-filter: blur(5px); /* 블러 효과 */
 
   // background-color: #f4a64e;
   .header-top-wrapper {
@@ -23,8 +23,8 @@
     overflow-y: hidden;
     height: 48px;
     position: relative;
-    // background-color: map-get($color, primary-color);
-    background-color: map-get($color, color-Black);
+    background-color: map-get($color, primary-color);
+    // background-color: map-get($color, color-Black);
     color: map-get($color, color-White);
     .header-top {
       display: flex;
