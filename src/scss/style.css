@@ -185,19 +185,18 @@ table {
 }
 #main .main__wrapper .main__banner {
   overflow: hidden;
-  position: relative;
   z-index: -1;
   width: 875px;
   height: 300px;
   cursor: pointer;
-  object-fit: cover;
   border-radius: 8px;
 }
 #main .main__wrapper .main__banner img {
   width: 875px;
   height: 300px;
-  background: center;
+  background: center/contain no-repeat;
   cursor: pointer;
+  object-fit: cover;
   border-radius: 8px;
 }
 #main .main__wrapper .main__slide-container {
@@ -335,6 +334,7 @@ table {
   height: 24px;
   line-height: 24px;
   text-align: center;
+  cursor: pointer;
   display: inline-block;
   background-position: center;
   background-repeat: no-repeat;
@@ -387,6 +387,7 @@ table {
 #promise .promise__wrapper .promise-bottom i {
   width: 24px;
   height: 24px;
+  cursor: pointer;
   display: inline-block;
   background-position: center;
   background-repeat: no-repeat;
@@ -423,8 +424,9 @@ table {
   line-height: 26px;
   letter-spacing: -0.54px;
   margin-bottom: 60px;
-  overflow-x: hidden;
   overflow: hidden;
+  overflow-x: hidden;
+  cursor: pointer;
 }
 #cart .cart__wrapper {
   width: 1384px;
@@ -616,6 +618,7 @@ table {
   width: 115px;
   height: 115px;
   border-radius: 50%;
+  cursor: pointer;
 }
 #category .category__wrapper .category__list__container .category__list li span {
   font-family: "Pretendard-Regular";
@@ -740,6 +743,9 @@ table {
     width: 100%;
   }
   #category .category__title {
+    width: 100%;
+  }
+  #product .list-wrapper {
     width: 100%;
   }
 }
@@ -977,8 +983,8 @@ table {
     width: 100%;
     display: flex;
     gap: 5px;
-    justify-content: flex-start;
     align-items: center;
+    justify-content: flex-start;
     flex-direction: row;
     margin-bottom: 5px;
     padding: 0 20px;
@@ -993,8 +999,8 @@ table {
   #category .category__wrapper .category__title i {
     display: flex;
     align-items: center;
-    position: static;
     margin-top: 0;
+    position: static;
   }
   #category .category__wrapper .category__title p {
     font-family: "Pretendard-Regular";
@@ -1072,14 +1078,14 @@ table {
     border-bottom: 3px solid #009e95;
   }
   #product #mobile__product div i {
-    font-size: 15px;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    font-size: 15px;
     line-height: 22px;
   }
   #product #product__btn {
     width: 150px;
-    height: 30px;
+    height: 35px;
   }
   #product #product__btn .product__btn-more p {
     font-family: "Pretendard-Regular";
