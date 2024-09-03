@@ -4,21 +4,11 @@
 @import "../config/reset.scss";
 @import "../layout/layout.scss";
 
-// body {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   width: 100%;
-//   height: 100vh;
-// }
-
 .wrapper {
-  width: 100%;
-  height: 100vh;
-  text-align: center;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   @include width_full;
   .modal__box {
     // border: 1px solid red;
@@ -77,9 +67,9 @@
     .text {
       margin-bottom: 8px;
       span {
-        color: map-get($color, color-Black);
         display: inline-block;
         width: 413px;
+        color: map-get($color, color-Black);
         text-align: left;
         @include text_XS_12;
       }
@@ -217,9 +207,9 @@
       width: 390px;
       height: 100vh;
       .email {
+        margin-right: 8px;
         // border: 1px solid red;
         margin-left: 8px;
-        margin-right: 8px;
         .email__box input[type="text"] {
           width: 380px;
         }

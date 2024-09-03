@@ -381,9 +381,9 @@
         height: 45px;
         background: map-get($color, color-Neutrals-Grey-500);
         color: map-get($color, color-White);
+        transition: background 0.4s;
         border-radius: 3px;
         @include text_M_16;
-        transition: background 0.4s;
         &.active {
           background: map-get($color, primary-color);
         }
