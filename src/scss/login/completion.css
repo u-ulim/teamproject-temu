@@ -20,11 +20,6 @@
   background-size: cover;
 }
 
-.object_cover {
-  object-fit: cover;
-  object-position: center;
-}
-
 html,
 body,
 div,
@@ -168,10 +163,9 @@ table {
 }
 
 .wrapper {
-  width: 100%;
   height: 100vh;
   width: 1384px;
-  padding: 0px 15px 0px 15px;
+  padding: 0px 15px;
   margin: 0 auto;
 }
 .wrapper .mark__inner {
@@ -183,6 +177,7 @@ table {
   height: 100%;
 }
 .wrapper .mark__inner .leftmenu > ul .home {
+  gap: 5px;
   padding: 20px 18px;
   font-family: "Pretendard-Regular";
   font-size: 12px;
@@ -192,10 +187,15 @@ table {
 }
 .wrapper .mark__inner .leftmenu > ul > li {
   display: flex;
-  gap: 5px;
   align-items: center;
   margin-bottom: 20px;
   cursor: pointer;
+}
+.wrapper .mark__inner .leftmenu > ul > li a {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
 }
 .wrapper .mark__inner .leftmenu > ul > li > div {
   display: flex;
@@ -215,15 +215,6 @@ table {
   width: 24px;
   height: 24px;
   background-image: url(../../../assets/images/mypage/review.svg);
-  display: inline-block;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.wrapper .mark__inner .leftmenu > ul > li .delivery {
-  width: 24px;
-  height: 24px;
-  background-image: url(../../../assets/images/mypage/delivery.svg);
   display: inline-block;
   background-position: center;
   background-repeat: no-repeat;
@@ -289,15 +280,14 @@ table {
 }
 .wrapper .mark__inner .leftmenu > ul .inner .title {
   display: flex;
+  padding: 10px 10px;
   font-family: "Pretendard-Regular";
   font-size: 14px;
   font-style: normal;
   line-height: 22px;
   letter-spacing: -0.42px;
-  padding: 10px 10px;
 }
 .wrapper .mark__inner .leftmenu > ul .inner .title:hover {
-  padding: 5px 5px;
   background: #fff7f0;
 }
 .wrapper .mark__inner .container {
@@ -313,13 +303,13 @@ table {
   color: #292828;
   cursor: pointer;
 }
-.wrapper .mark__inner .container .contents .text span:hover {
+.wrapper .mark__inner .container .contents .text a:hover {
   cursor: pointer;
 }
-.wrapper .mark__inner .container .contents .text span:nth-child(1) {
+.wrapper .mark__inner .container .contents .text a:nth-child(1) {
   color: #818181;
 }
-.wrapper .mark__inner .container .contents .text span:nth-child(1):hover {
+.wrapper .mark__inner .container .contents .text a:nth-child(1):hover {
   color: #292828;
 }
 .wrapper .mark__inner .container .box {

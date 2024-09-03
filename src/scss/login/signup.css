@@ -20,11 +20,6 @@
   background-size: cover;
 }
 
-.object_cover {
-  object-fit: cover;
-  object-position: center;
-}
-
 html,
 body,
 div,
@@ -657,13 +652,13 @@ table {
   height: 45px;
   background: #818181;
   color: #fff;
+  transition: background 0.4s;
   border-radius: 3px;
   font-family: "Pretendard-Regular";
   font-size: 16px;
   font-style: normal;
   line-height: 24px;
   letter-spacing: -0.48px;
-  transition: background 0.4s;
 }
 #wrapper .container #signup__btn button.active {
   background: #ff6d00;

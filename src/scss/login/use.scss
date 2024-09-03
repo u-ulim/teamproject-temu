@@ -6,25 +6,31 @@
 
 .wrapper {
   position: relative;
+  height: 100vh;
   @include width_inner;
   .mark__inner {
     display: flex;
-    height: 100%;
     .leftmenu {
       width: 200px;
       height: 100%;
       // UL
       > ul {
         .home {
+          gap: 5px;
           padding: 20px 18px;
           @include text_XS_12;
         }
         > li {
           display: flex;
-          gap: 5px;
           align-items: center;
           margin-bottom: 20px;
           cursor: pointer;
+          a {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            justify-content: center;
+          }
           & > div {
             display: flex;
             justify-content: space-between;
@@ -41,12 +47,6 @@
             width: 24px;
             height: 24px;
             background-image: url(../../../assets/images/mypage/review.svg);
-            @include background_cover;
-          }
-          .delivery {
-            width: 24px;
-            height: 24px;
-            background-image: url(../../../assets/images/mypage/delivery.svg);
             @include background_cover;
           }
           .star {
@@ -98,11 +98,10 @@
           }
           .title {
             display: flex;
-            @include text_S_14;
             // border: 1px solid red;
             padding: 10px 10px;
+            @include text_S_14;
             &:hover {
-              padding: 5px 5px;
               background: map-get($color-hover, primary-hover-color);
             }
           }
@@ -119,7 +118,7 @@
         width: 100%;
         font-size: 14px;
         cursor: pointer;
-        span {
+        a {
           //   border: 1px solid #f00;
           &:nth-child(1) {
             color: map-get($color, color-Neutrals-Grey-500);
