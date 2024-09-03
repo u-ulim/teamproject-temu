@@ -2,7 +2,8 @@
   font-family: "Pretendard-Regular";
   font-style: normal;
   font-weight: 400;
-  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
 }
 /* HEADING */
 /* -2% = 0.02 * 'n'px */ /* -3% = 0.03 * 'n'px */
@@ -173,7 +174,10 @@ table {
   width: 227px;
   cursor: pointer;
 }
-.product-lists .product-list:hover .product-list__thumb-box .product-list__thumb {
+.product-lists
+  .product-list:hover
+  .product-list__thumb-box
+  .product-list__thumb {
   transform: scale(1.1);
   z-index: -10;
   position: relative;
@@ -217,21 +221,29 @@ table {
   gap: 5px;
   align-items: center;
 }
-.product-lists .product-list .product-list__counters > div .product-list__discount {
+.product-lists
+  .product-list
+  .product-list__counters
+  > div
+  .product-list__discount {
   font-family: "Pretendard-Bold";
   font-size: 22px;
-  font-style: normal;
-  font-weight: 700;
+  font-style: bold;
+  font-weight: 900;
   line-height: 30px;
   letter-spacing: -0.66px;
   display: flex;
   color: #ff6d00;
 }
-.product-lists .product-list .product-list__counters > div .product-list__price {
+.product-lists
+  .product-list
+  .product-list__counters
+  > div
+  .product-list__price {
   font-family: "Pretendard-Bold";
   font-size: 22px;
-  font-style: normal;
-  font-weight: 700;
+  font-style: bold;
+  font-weight: 900;
   line-height: 30px;
   letter-spacing: -0.66px;
   color: #292828;
@@ -246,7 +258,10 @@ table {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.product-lists .product-list .product-list__counters .product-list__cart-ico:hover {
+.product-lists
+  .product-list
+  .product-list__counters
+  .product-list__cart-ico:hover {
   background-image: url("../../../assets/images/products/cart-fill-ico.svg");
 }
 .product-lists .product-list .product-list__reviews {
@@ -276,7 +291,10 @@ table {
   margin-right: 5px;
   color: #6a6a6a;
 }
-.product-lists .product-list .product-list__reviews .product-list__review-count {
+.product-lists
+  .product-list
+  .product-list__reviews
+  .product-list__review-count {
   color: #6a6a6a;
 }
 .product-lists .product-list .product-list__solds {
