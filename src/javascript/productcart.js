@@ -53,13 +53,13 @@ function renderCartItems() {
       selectSize,
       quan,
       discountRate,
-      sumPrice,
       discountingPrice,
+      price,
     } = product;
 
-    const originalTotalPrice = sumPrice * quan;
+    const originalTotalPrice = price * quan;
     const discountedTotalPrice = discountingPrice * quan;
-    const discountAmount = (sumPrice - discountingPrice) * quan;
+    const discountAmount = discountedTotalPrice;
 
     // 장바구니 항목 HTML 생성
     const cartProductHTML = `
@@ -78,7 +78,7 @@ function renderCartItems() {
             <div class="product__text-up"><span>${title}</span></div>
             <div class="product__text-middle"><span>${
               selectColor || "색상"
-            }</span><span>|</span><span>${selectSize || "사이즈"}</span></div>
+            }</span><span> | </span><span>${selectSize || "사이즈"}</span></div>
             <div class="product__text-down">
               <input type="button" value="옵션변경" class="option" data-index="${index}" />
             </div>
@@ -108,8 +108,8 @@ function renderCartItems() {
     productInfoCart.insertAdjacentHTML("beforeend", cartProductHTML);
 
     totalOriginalPrice += originalTotalPrice;
-    totalDiscountedPrice += discountedTotalPrice;
     totalDiscountAmount += discountAmount;
+    totalDiscountedPrice = totalOriginalPrice - totalDiscountAmount;
   });
 
   // aside 정보 업데이트
@@ -585,4 +585,4 @@ function checkIfCartIsEmpty() {
 }
 
 addCheckboxListeners();
-checkIfCartIsEmpty(); // 장바구니가 비었을 때 처리
+checkIfCartIsEmpty();

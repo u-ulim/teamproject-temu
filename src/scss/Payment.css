@@ -887,6 +887,45 @@ aside .checkout__summary .consent .consent__list li .consent-content p:first-chi
   letter-spacing: -0.42px;
   padding-bottom: 5px;
 }
+aside .checkout__summary .consent .consent__list .custom__box {
+  padding-right: 6px;
+  position: relative;
+}
+aside .checkout__summary .consent .consent__list .custom__box input[type=checkbox].custom__box {
+  border: 1px solid #f00;
+  display: none;
+}
+aside .checkout__summary .consent .consent__list .custom__box input[type=checkbox] {
+  display: inline-block;
+  border: 1px solid #ff6d00;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+aside .checkout__summary .consent .consent__list .custom__box input[type=checkbox]::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  content: "";
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+}
+aside .checkout__summary .consent .consent__list .custom__box input[type=checkbox]:checked + .agreeAll {
+  background: #ff6d00;
+}
+aside .checkout__summary .consent .consent__list .custom__box input[type=checkbox]:checked + .agreeAll::after {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ff6d00;
+  color: rgb(255, 255, 255);
+  content: "✓";
+  transform: translate(-50%, -50%);
+}
 aside .checkout__summary .checkout__button {
   margin-bottom: 20px;
   border: none;

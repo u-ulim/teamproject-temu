@@ -313,7 +313,6 @@ main .container .section__up .shopping__info ul li button {
   background-color: #ff6d00;
   color: #fff;
   transition: all 0.3s;
-  cursor: pointer;
   border-radius: 8px;
   font-family: "Pretendard-Bold";
   font-size: 16px;

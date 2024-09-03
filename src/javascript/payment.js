@@ -4,7 +4,7 @@ let addressList = JSON.parse(localStorage.getItem("userAddresses")) || [];
 // 쿠폰 및 크레딧 변수 선언
 let totalCouponValue = 0; // 쿠폰 사용 금액
 let usedCreditValue = 0; // 사용된 크레딧 금액
-const totalCredit = 20000; // 보유 크레딧 양을 20,000원으로 설정
+const totalCredit = 20000; // 보유 크레딧 20,000원
 
 // 변수 선언
 const bannerClose = document.querySelector(".banner-close");
@@ -472,7 +472,7 @@ function loadAddresses() {
 function renderCartItems() {
   productInfo.innerHTML = "";
 
-  let totalAmount = 0;
+  let totalAmount = 0; // 총 금액 초기화
 
   getCartProducts.forEach((product) => {
     const {
@@ -481,15 +481,17 @@ function renderCartItems() {
       selectColor,
       selectSize,
       quan,
-      sumPrice,
+
       discountingPrice,
+      price,
     } = product;
 
+    // 원래 가격과 할인된 가격 계산
+    const originalTotalPrice = price * quan;
     const discountedTotalPrice = discountingPrice * quan;
-    const discountAmount = (sumPrice - discountingPrice) * quan;
+    const totalDiscountAmount = originalTotalPrice - discountedTotalPrice;
 
-    totalAmount = discountAmount - discountedTotalPrice;
-
+    // 각 제품의 HTML 생성
     const productInfoHTML = `
       <li class="product">
         <div class="img">
@@ -503,30 +505,32 @@ function renderCartItems() {
             <span>(${quan})</span>
           </div>
           <div class="product__option">
-            <span>${selectColor}</span>
+            <span>${selectColor || "색상"}</span>
             <span>|</span>
-            <span>${selectSize}</span>
+            <span>${selectSize || "사이즈"}</span>
           </div>
           <div class="price__info">
-            <span class="general-price">￦${discountAmount.toLocaleString()}</span>
-            <span>￦${discountedTotalPrice.toLocaleString()}</span>
+            <span class="general-price">￦${originalTotalPrice.toLocaleString()}</span>
+            <span class="discounted-price">￦${discountedTotalPrice.toLocaleString()}</span>
           </div>
         </div>
       </li>
     `;
 
     productInfo.insertAdjacentHTML("beforeend", productInfoHTML);
+
+    totalAmount += totalDiscountAmount; // 총 금액 계산
   });
 
-  // 총 상품 금액
+  // 총 상품 금액 업데이트
   const totalFeePrice = document.querySelector(".total__fee .price");
   if (totalFeePrice) {
-    totalFeePrice.innerText = `￦${totalAmount.toLocaleString()}`;
+    totalFeePrice.innerText = `￦ ${totalAmount.toLocaleString()}`;
   }
-
-  // 최종 결제 금액 업데이트
-  updateFinalPrice();
 }
+
+// 최종 결제 금액 업데이트
+updateFinalPrice();
 
 const productInfoLength = getCartProducts.length;
 const result = document.querySelector(".order__title h3 span");
@@ -714,7 +718,7 @@ function setupCouponOptions() {
     // 쿠폰 할인 금액 표시
     document.querySelector(
       ".coupon__fee-last"
-    ).innerText = `- ₩${discountAmount.toLocaleString()}`;
+    ).innerText = `- ₩ ${discountAmount.toLocaleString()}`;
 
     // 최종 결제 금액 업데이트
     updateFinalPrice();
@@ -739,7 +743,7 @@ function setupCreditListener() {
 
   fullCreditButton.addEventListener("click", function (event) {
     event.preventDefault();
-    const formattedCredit = `- ₩${totalCredit.toLocaleString()}`;
+    const formattedCredit = `- ₩ ${totalCredit.toLocaleString()}`;
     creditInput.value = formattedCredit;
     creditFeeElement.innerText = formattedCredit;
     updateFinalPrice();
@@ -776,7 +780,7 @@ function updateFinalPrice() {
     lastPriceAll -= creditFee;
   }
 
-  summaryPriceElement.innerText = `₩${lastPriceAll.toLocaleString()}`;
+  summaryPriceElement.innerText = `₩ ${lastPriceAll.toLocaleString()}`;
 }
 
 //결제창 동의서 - 아코디언

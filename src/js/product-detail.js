@@ -764,7 +764,7 @@ fetch(productsURL)
       //   localStorageSave();
       // };
       // cartLocalStorage
-      
+
       let setCartProducts =
         JSON.parse(localStorage.getItem("setCartProducts")) || [];
 
@@ -810,10 +810,6 @@ fetch(productsURL)
             setCartProducts[existingProductIndex].quan;
           console.log(existingProductQuan);
           setCartProducts[existingProductIndex].quan += cartProduct.quan;
-          setCartProducts[existingProductIndex].sumPrice +=
-            cartProduct.sumPrice;
-          setCartProducts[existingProductIndex].discountedPrice +=
-            cartProduct.discountedPrice;
         } else {
           // 기존 제품이 없으면 새로 추가
           setCartProducts.push(cartProduct);

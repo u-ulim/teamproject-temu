@@ -127,7 +127,7 @@ main {
               background-color: map-get($color, primary-color);
               color: map-get($color, color-White);
               transition: all 0.3s;
-              cursor: pointer;
+
               border-radius: 8px;
               @include text_B_M_16;
               &:hover {
