@@ -12,11 +12,7 @@ const productsURL =
 let productsData = [];
 
 // 배너 닫기 기능
-if (bannerClose) {
-  bannerClose.addEventListener("click", () => {
-    banner.style.display = "none";
-  });
-}
+bannerClose?.addEventListener("click", () => (banner.style.display = "none"));
 
 // 제품 데이터 가져오기
 fetch(productsURL)
@@ -27,7 +23,7 @@ fetch(productsURL)
   });
 
 // 장바구니 렌더링
-function renderCartItems() {
+const renderCartItems = () => {
   productInfoCart.innerHTML = "";
 
   if (getCartProducts.length === 0) {
@@ -61,14 +57,12 @@ function renderCartItems() {
     const discountedTotalPrice = discountingPrice * quan;
     const discountAmount = discountedTotalPrice;
 
-    // 장바구니 항목 HTML 생성
+    // 장바구니 항목
     const cartProductHTML = `
       <ul class="product">
         <li class="custom__box">
-         
             <input type="checkbox" id="custom__checkbox_${index}" class="custom__checkbox" data-index="${index}" />
             <label for="custom__checkbox_${index}" class="select"></label>
-        
         </li>
         <li class="img">
           <div><img src="${img}" alt="${title}"/></div>
@@ -122,9 +116,9 @@ function renderCartItems() {
   addCheckboxListeners();
   updateSelectAllCheckbox();
   updateSelectedCount(); // 선택된 항목 개수 업데이트
-}
+};
 
-function updateSelectedCount() {
+const updateSelectedCount = () => {
   const selectedCheckboxes = document.querySelectorAll(
     ".custom__checkbox:checked"
   ).length;
@@ -132,10 +126,10 @@ function updateSelectedCount() {
   if (itemCountElement) {
     itemCountElement.innerText = `(${displayCount})`;
   }
-}
+};
 
 // aside 초기화 함수 (장바구니가 비었을 때 0원으로 설정)
-function resetAsideValues() {
+const resetAsideValues = () => {
   const asideContainer = document.querySelector("aside");
   if (asideContainer) {
     asideContainer.innerHTML = `
@@ -188,25 +182,23 @@ function resetAsideValues() {
       </div>
     `;
   }
-}
+};
 
 // aside 값 업데이트
-function updateAsideValues(
+const updateAsideValues = (
   totalOriginalPrice,
   totalDiscountedPrice,
   totalDiscountAmount
-) {
-  const asideContainer = document.querySelector(".mobile-aside");
-  const pcAsideContainer = document.querySelector(".pc-aside");
-  console.log(asideContainer, pcAsideContainer);
+) => {
+  const finalAmount = totalDiscountedPrice;
+  const discountSum = totalDiscountAmount;
+  const targetAmount = 20000;
+  const shortage = targetAmount - finalAmount;
 
-  if (asideContainer) {
-    const finalAmount = totalDiscountedPrice;
-    const discountSum = totalDiscountAmount;
-    const targetAmount = 20000;
-    const shortage = targetAmount - finalAmount;
+  const asideContainers = document.querySelectorAll(".mobile-aside, .pc-aside");
 
-    const asideHTML = `
+  asideContainers.forEach((container) => {
+    container.innerHTML = `
       <div class="checkout__summary">
         <div class="summary__item">
           <ul>
@@ -216,14 +208,14 @@ function updateAsideValues(
             </li>
             <li class="product__sale">
               <span>상품할인금액</span>
-              <span class="discount"> - ￦${discountSum.toLocaleString()}</span>
+              <span class="discount">- ￦${discountSum.toLocaleString()}</span>
             </li>
             <li class="additional__info" id="additional__info" ${
               shortage > 0
                 ? 'style="display: block;"'
                 : 'style="display: none;"'
             }>
-              ￦${shortage.toLocaleString()} 추가주문 시,<span>구매가능</span>
+              ￦${shortage.toLocaleString()} 추가주문 시, 구매가능
             </li>
           </ul>
         </div>
@@ -264,12 +256,7 @@ function updateAsideValues(
       </div>
     `;
 
-    if (pcAsideContainer) {
-      pcAsideContainer.innerHTML = asideHTML;
-    }
-    asideContainer.innerHTML = asideHTML;
-
-    const checkoutButton = document.querySelector("#checkout__button");
+    const checkoutButton = container.querySelector("#checkout__button");
     if (checkoutButton) {
       checkoutButton.style.cursor = shortage > 0 ? "not-allowed" : "pointer";
       checkoutButton.addEventListener("click", () => {
@@ -279,11 +266,11 @@ function updateAsideValues(
         }
       });
     }
-  }
-}
+  });
+};
 
 // 개별 체크박스 리스너 추가
-function addCheckboxListeners() {
+const addCheckboxListeners = () => {
   productCheckboxes = document.querySelectorAll(".custom__checkbox");
   productCheckboxes.forEach((checkbox) => {
     checkbox.addEventListener("change", () => {
@@ -292,10 +279,10 @@ function addCheckboxListeners() {
       updateSelectAllCheckbox();
     });
   });
-}
+};
 
 // 체크박스 상태 변경 처리
-function handleCheckboxChange() {
+const handleCheckboxChange = () => {
   const selectedCheckboxes = document.querySelectorAll(
     ".custom__checkbox:checked"
   );
@@ -309,35 +296,33 @@ function handleCheckboxChange() {
 
   localStorage.setItem("setCartProducts", JSON.stringify(getCartProducts));
   updateSelectAllCheckbox();
-}
+};
 
 // 전체 선택 체크박스 상태 업데이트
-function updateSelectAllCheckbox() {
+const updateSelectAllCheckbox = () => {
   const allChecked =
     productCheckboxes.length > 0 &&
     Array.from(productCheckboxes).every((checkbox) => checkbox.checked);
   if (selectAllCheckbox) {
     selectAllCheckbox.checked = allChecked;
   }
-}
+};
 
 // 전체 선택 체크박스 클릭 처리
-if (selectAllCheckbox) {
-  selectAllCheckbox.addEventListener("change", () => {
-    const isChecked = selectAllCheckbox.checked;
-    productCheckboxes.forEach((checkbox) => {
-      checkbox.checked = isChecked;
-    });
-    getCartProducts.forEach((product) => {
-      product.checked = isChecked;
-    });
-    localStorage.setItem("setCartProducts", JSON.stringify(getCartProducts));
-    updateSelectedCount();
+selectAllCheckbox?.addEventListener("change", () => {
+  const isChecked = selectAllCheckbox.checked;
+  productCheckboxes.forEach((checkbox) => {
+    checkbox.checked = isChecked;
   });
-}
+  getCartProducts.forEach((product) => {
+    product.checked = isChecked;
+  });
+  localStorage.setItem("setCartProducts", JSON.stringify(getCartProducts));
+  updateSelectedCount();
+});
 
 // 수량 증가/감소 및 삭제 이벤트 처리
-function addEventListeners() {
+const addEventListeners = () => {
   document.querySelectorAll(".original-add").forEach((button) => {
     button.addEventListener("click", (event) => {
       const index = parseInt(event.target.getAttribute("data-index"));
@@ -387,23 +372,18 @@ function addEventListeners() {
 
   // 선택된 항목 삭제 버튼 추가 및 이벤트 처리
   const deleteSelectedButton = document.querySelector(".delete-select");
-  if (deleteSelectedButton) {
-    deleteSelectedButton.addEventListener("click", () => {
-      getCartProducts = getCartProducts.filter(
-        (product, index) =>
-          !document.querySelector(`#custom__checkbox_${index}`).checked
-      );
-      if (getCartProducts.length === 0) {
-        localStorage.removeItem("setCartProducts");
-      } else {
-        localStorage.setItem(
-          "setCartProducts",
-          JSON.stringify(getCartProducts)
-        );
-      }
-      renderCartItems();
-    });
-  }
+  deleteSelectedButton?.addEventListener("click", () => {
+    getCartProducts = getCartProducts.filter(
+      (product, index) =>
+        !document.querySelector(`#custom__checkbox_${index}`).checked
+    );
+    if (getCartProducts.length === 0) {
+      localStorage.removeItem("setCartProducts");
+    } else {
+      localStorage.setItem("setCartProducts", JSON.stringify(getCartProducts));
+    }
+    renderCartItems();
+  });
 
   // 옵션 변경 모달 관련 이벤트 추가
   document.querySelectorAll(".option").forEach((button) => {
@@ -412,10 +392,10 @@ function addEventListeners() {
       openModal(index);
     });
   });
-}
+};
 
 // 모달창 열기 함수
-function openModal(index) {
+const openModal = (index) => {
   const optionModal = document.querySelector(".modal__box");
   const modalClose = optionModal.querySelector(".modal__close-box .close");
   const product = getCartProducts[index];
@@ -435,9 +415,7 @@ function openModal(index) {
     const existingDeliveryInfo = optionModal.querySelector(
       ".modal-delivery-info"
     );
-    if (existingDeliveryInfo) {
-      existingDeliveryInfo.remove();
-    }
+    existingDeliveryInfo?.remove();
 
     const modalDelivery = `
       <p class="modal-delivery-info" style="color:#007316">배송 확률: ${productData.details.deliveryProbability}</p>
@@ -451,7 +429,7 @@ function openModal(index) {
   colorSelect.innerHTML = "<option value='' disabled selected>색상</option>";
   sizeSelect.innerHTML = "<option value='' disabled selected>사이즈</option>";
 
-  if (productData && productData.details.selectOptions.colors.options) {
+  if (productData?.details?.selectOptions?.colors?.options) {
     productData.details.selectOptions.colors.options.forEach((color) => {
       const option = document.createElement("option");
       option.value = color;
@@ -460,7 +438,7 @@ function openModal(index) {
     });
   }
 
-  if (productData && productData.details.selectOptions.sizes.options) {
+  if (productData?.details?.selectOptions?.sizes?.options) {
     productData.details.selectOptions.sizes.options.forEach((size) => {
       const option = document.createElement("option");
       option.value = size;
@@ -541,10 +519,10 @@ function openModal(index) {
 
   optionModal.classList.add("active");
   document.body.style.overflow = "hidden";
-}
+};
 
 // 모달창에서 수량을 업데이트하는 함수
-function updateModalQuantity(delta, index) {
+const updateModalQuantity = (delta, index) => {
   const optionModal = document.querySelector(".modal__box");
   const modalSum = optionModal.querySelector(".final__price");
   const product = getCartProducts[index];
@@ -570,27 +548,27 @@ function updateModalQuantity(delta, index) {
 
   updateLocalStorage();
   renderCartItems();
-}
+};
 
 // 로컬스토리지 업데이트 함수
-function updateLocalStorage() {
+const updateLocalStorage = () => {
   if (getCartProducts.length > 0) {
     localStorage.setItem("setCartProducts", JSON.stringify(getCartProducts));
   } else {
     localStorage.removeItem("setCartProducts");
   }
-}
+};
 
 // 장바구니가 비어 있을 때 초기 처리
-function checkIfCartIsEmpty() {
+const checkIfCartIsEmpty = () => {
   if (getCartProducts.length === 0) {
-    resetAsideValues(); // 장바구니가 비어 있을 때 aside를 초기화
-    selectAllCheckbox.disabled = true; // 장바구니가 비어 있을 때 전체선택 체크박스 비활성화
+    resetAsideValues();
+    selectAllCheckbox.disabled = true;
   } else {
-    renderCartItems(); // 장바구니가 비어있지 않다면 항목을 렌더링
-    selectAllCheckbox.disabled = false; // 장바구니에 항목이 있으면 전체선택 체크박스 활성화
+    renderCartItems();
+    selectAllCheckbox.disabled = false;
   }
-}
+};
 
 addCheckboxListeners();
 checkIfCartIsEmpty();

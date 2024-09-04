@@ -156,7 +156,7 @@ table {
 }
 
 /* VARIABLES */
-/*header*/
+/* Header */
 body {
   position: relative;
   width: 100%;
@@ -170,22 +170,12 @@ body {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  /*main*/
-  /*aside*/
 }
 .container main {
   width: 70%;
-  /*section__up*/
 }
 .container main .section__up {
   width: 100%;
-}
-.container main .section__up article {
-  /*section__title */
-  /*banner */
-  /*toolbar */
-  /*product__info  */
-  /*empty__product  */
 }
 .container main .section__up article .section__title {
   display: flex;
@@ -310,12 +300,6 @@ body {
   align-items: center;
   padding: 0 12px;
   height: 176px;
-  /*checkbox*/
-  /*img*/
-  /*product__info */
-  /*number__input */
-  /*price__info */
-  /*close  */
 }
 .container main .section__up article .product__info-All .product .custom__box {
   padding-right: 10px;
@@ -433,7 +417,6 @@ body {
   height: 34px;
   background-color: white;
   text-align: center;
-  cursor: pointer;
   cursor: pointer;
   font-family: "Pretendard-Regular";
   font-size: 16px;
@@ -622,10 +605,6 @@ body {
 .container .pc-aside .checkout__summary {
   padding: 10px, 0;
   width: 100%;
-  /*summary_item*/
-  /*summary__price*/
-  /*checkout__button*/
-  /*info*/
 }
 .container .pc-aside .checkout__summary .summary__item ul {
   display: flex;
@@ -761,7 +740,7 @@ body {
   letter-spacing: -0.36px;
 }
 
-/*option-modal box*/
+/* Modal Box */
 .modal__box {
   display: none;
   align-items: center;
@@ -931,7 +910,6 @@ body {
   color: #b5b5b5;
   text-align: center;
   cursor: pointer;
-  cursor: pointer;
   font-family: "Pretendard-Regular";
   font-size: 16px;
   font-style: normal;
@@ -1040,7 +1018,7 @@ body {
   transform: rotate(-45deg);
 }
 
-/*미디어쿼리*/
+/* 미디어쿼리 */
 @media (max-width: 1384px) {
   .container {
     flex-direction: column;
@@ -1063,10 +1041,6 @@ body {
     margin: 0 auto;
     padding: 0 22px;
     width: 100%;
-    /*summary_item*/
-    /*summary__price*/
-    /*checkout__button*/
-    /*info*/
   }
   .container main .mobile-aside .checkout__summary .summary__item ul {
     display: flex;
@@ -1296,6 +1270,16 @@ body {
     padding-left: 10px;
     width: 100%;
   }
+  .container main .section__up article .product__info-All .product .product__info div .product__text-up,
+  .container main .section__up article .product__info-All .product .product__info div .product__text-down,
+  .container main .section__up article .product__info-All .product .product__info div .product__text-middle {
+    text-align: left;
+    font-family: "Pretendard-Regular";
+    font-size: 12px;
+    font-style: normal;
+    line-height: 18px;
+    letter-spacing: -0.36px;
+  }
   .container main .section__up article .product__info-All .product .product__info div .product__text-up span {
     display: -webkit-box;
     overflow: hidden;
@@ -1303,16 +1287,6 @@ body {
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
-    font-family: "Pretendard-Regular";
-    font-size: 12px;
-    font-style: normal;
-    line-height: 18px;
-    letter-spacing: -0.36px;
-  }
-  .container main .section__up article .product__info-All .product .product__info div .product__text-up,
-  .container main .section__up article .product__info-All .product .product__info div .product__text-down,
-  .container main .section__up article .product__info-All .product .product__info div .product__text-middle {
-    text-align: left;
     font-family: "Pretendard-Regular";
     font-size: 12px;
     font-style: normal;
@@ -1349,6 +1323,20 @@ body {
   .container main .empty__product .popular-btn {
     margin-bottom: 30px;
   }
+  .container main .section__down {
+    width: 100%;
+  }
+  .container main .section__down .section__down-title h2 {
+    font-family: "Pretendard-Bold";
+    font-size: 16px;
+    font-style: bold;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: -0.48px;
+  }
+  .container main aside {
+    display: none;
+  }
   .mobile-aside {
     display: block;
     margin: 0 auto;
@@ -1359,10 +1347,6 @@ body {
   .mobile-aside .checkout__summary {
     padding: 0 10px;
     width: 100%;
-    /*summary_item*/
-    /*summary__price*/
-    /*checkout__button*/
-    /*info*/
   }
   .mobile-aside .checkout__summary .summary__item ul {
     display: flex;
@@ -1388,7 +1372,7 @@ body {
   }
   .mobile-aside .checkout__summary .summary__item ul .additional__info {
     padding-bottom: 10px;
-    padding-left: 100px;
+    padding-left: 140px;
     font-family: "Pretendard-Regular";
     font-size: 12px;
     font-style: normal;
@@ -1424,7 +1408,7 @@ body {
     line-height: 22px;
     letter-spacing: -0.42px;
   }
-  .mobile-aside .checkout__summary .summary__Price ul .summary__item__total .price {
+  .mobile-aside .checkout__summary .summary__Price ul .summary__item__total .total-price {
     font-family: "Pretendard-Bold";
     font-size: 18px;
     font-style: bold;
@@ -1476,20 +1460,6 @@ body {
     cursor: pointer;
   }
   .mobile-aside .checkout__summary .info {
-    display: none;
-  }
-  .section__down {
-    width: 100%;
-  }
-  .section__down .section__down-title h2 {
-    font-family: "Pretendard-Bold";
-    font-size: 16px;
-    font-style: bold;
-    font-weight: 700;
-    line-height: 24px;
-    letter-spacing: -0.48px;
-  }
-  aside {
     display: none;
   }
   .modal__box {
