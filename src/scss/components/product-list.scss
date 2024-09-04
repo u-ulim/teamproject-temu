@@ -75,6 +75,9 @@
         &:hover {
           background-image: url("../../../assets/images/products/cart-fill-ico.svg");
         }
+        &.active {
+          background-image: url("../../../assets/images/products/cart-fill-ico.svg");
+        }
       }
     }
     .product-list__reviews {
@@ -110,6 +113,8 @@
         background-color: map-get($color, primary-color);
         color: map-get($color, color-White);
         border-radius: 8px;
+        width: 60px;
+        text-align: center;
       }
       .product-list__quantity {
         color: map-get($color, primary-color);

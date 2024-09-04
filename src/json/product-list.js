@@ -91,6 +91,7 @@ productListLoad().then(() => {
         productListPrice.className = "product-list__price";
 
         productListCountersSpan.className = "product-list__cart-ico";
+        productListCountersSpan.setAttribute("data-product-id", product.id);
         productListStar.className = "product-list__star";
         productListRating.className = "product-list__rating";
         productListReviewText.className = "product-list__review-text";
@@ -109,17 +110,300 @@ productListLoad().then(() => {
         productListRating.innerText = product.rating;
         productListReviewText.innerText = `리뷰`;
         productListReviewCount.innerText = `(${product.reviewCount})`;
-        productListSoldsOut.innerText = `매진임박`;
+        // productListSoldsOut.innerText = `매진임박`;
         productListQuantity.innerText = `${product.quantity}개 남음`;
         productListPrice.innerText = price;
 
+        // 랜덤으로 24시간에서 4시간 사이의 시간을 설정 (초 단위로 변환)
+        function getRandomTimeInSeconds() {
+          const maxTime = 24 * 60 * 60; // 24시간을 초로 변환
+          const minTime = 4 * 60 * 60; // 4시간을 초로 변환
+          return Math.floor(Math.random() * (maxTime - minTime + 1)) + minTime;
+        }
+
+        // 시간을 "HH:MM:SS" 형식으로 변환
+        function formatTime(seconds) {
+          const hours = Math.floor(seconds / 3600);
+          const minutes = Math.floor((seconds % 3600) / 60);
+          const secs = seconds % 60;
+          return `${String(hours).padStart(2, "0")}:${String(minutes).padStart(
+            2,
+            "0"
+          )}:${String(secs).padStart(2, "0")}`;
+        }
+
+        // 남은 시간을 줄이는 로직
+        function startCountdown() {
+          let remainingTime = getRandomTimeInSeconds(); // 랜덤 시간 설정
+
+          // 초기값 설정
+          productListSoldsOut.innerText = formatTime(remainingTime);
+
+          // 1초마다 실행되는 타이머
+          const countdownInterval = setInterval(() => {
+            remainingTime--;
+
+            // 남은 시간이 0이 되면 타이머 중지
+            if (remainingTime <= 0) {
+              clearInterval(countdownInterval);
+              productListSoldsOut.innerText = "00:00:00"; // 타이머 종료시 00:00:00 표시
+            } else {
+              // 시간이 줄어드는 것을 화면에 표시
+              productListSoldsOut.innerText = formatTime(remainingTime);
+            }
+          }, 1000); // 1초마다 실행
+        }
+
+        // 제품 타이머를 시작하는 함수 호출
+        startCountdown();
+
         // 클릭 시 제품 상세 페이지로 이동
-        productList.addEventListener("click", () => {
+        productListThumbBox.addEventListener("click", () => {
           const url = `/html/components/product-detail.html?category=${
             product.category
           }&name=${encodeURIComponent(product.title)}`;
           window.location.href = url;
         });
+
+        // /////////////////
+        // // cartLocalStorage: LocalStorage에서 장바구니 상태 가져오기
+        // // cartLocalStorage
+        // let setCartProducts =
+        //   JSON.parse(localStorage.getItem("setCartProducts")) || [];
+
+        // // LocalStorage에 장바구니 상태 저장
+        // const localStorageSave = () => {
+        //   localStorage.setItem(
+        //     "setCartProducts",
+        //     JSON.stringify(setCartProducts)
+        //   );
+        // };
+
+        // // 아이템이 장바구니에 있는지 확인하는 함수
+        // const isInCart = (productId, color, size) => {
+        //   return setCartProducts.some(
+        //     (item) =>
+        //       item.id === productId &&
+        //       item.selectColor === color &&
+        //       item.selectSize === size
+        //   );
+        // };
+
+        // // 장바구니에 상품을 추가하거나 제거하는 함수
+        // const toggleCartItem = (product, iconElement) => {
+        //   const selectColorElement = document.querySelector("#colors");
+        //   const selectSizeElement = document.querySelector("#sizes");
+
+        //   // 색상과 사이즈 요소가 존재하는지 확인하고 값 설정
+        //   const selectColor = selectColorElement
+        //     ? selectColorElement.value
+        //     : "defaultColor";
+        //   const selectSize = selectSizeElement
+        //     ? selectSizeElement.value
+        //     : "defaultSize";
+
+        //   // 수량 요소를 찾아 기본값으로 1을 설정 (quan이 정의되지 않았을 때 기본값 1 사용)
+        //   const quantity = typeof quan !== "undefined" ? Number(quan) : 1;
+
+        //   const cartProduct = {
+        //     id: product.id,
+        //     title: product.title,
+        //     price: product.price,
+        //     quan: quantity,
+        //     sumPrice: product.price * quantity,
+        //     img: product.thumbnail,
+        //     discountRate: product.discountRate,
+        //     beforePrice: product.details.beforePrice,
+        //     discountingPrice: product.details.beforePrice - product.price,
+        //     discountedPrice:
+        //       (product.details.beforePrice - product.price) * quantity,
+        //     selectColor, // 선택된 색상
+        //     selectSize, // 선택된 사이즈
+        //   };
+
+        //   // 장바구니에서 해당 제품이 있는지 확인
+        //   const existingProductIndex = setCartProducts.findIndex(
+        //     (item) =>
+        //       item.id === cartProduct.id &&
+        //       item.selectColor === cartProduct.selectColor &&
+        //       item.selectSize === cartProduct.selectSize
+        //   );
+
+        //   if (existingProductIndex > -1) {
+        //     // 이미 장바구니에 있는 경우 -> 제거
+        //     setCartProducts.splice(existingProductIndex, 1);
+        //     iconElement.classList.remove("active"); // active 클래스 제거
+        //   } else {
+        //     // 장바구니에 없는 경우 -> 추가
+        //     setCartProducts.push(cartProduct);
+        //     iconElement.classList.add("active"); // active 클래스 추가
+        //   }
+
+        //   // LocalStorage에 저장
+        //   localStorageSave();
+        // };
+
+        // // 페이지 로드 시 장바구니에 있는 상품에 대해 아이콘 상태 복원
+        // const restoreCartIcons = () => {
+        //   document
+        //     .querySelectorAll(".product-list__cart-ico")
+        //     .forEach((iconElement) => {
+        //       const productId = iconElement.getAttribute("data-product-id");
+        //       const selectColor = iconElement.getAttribute("data-color");
+        //       const selectSize = iconElement.getAttribute("data-size");
+
+        //       if (isInCart(productId, selectColor, selectSize)) {
+        //         iconElement.classList.add("active");
+        //       } else {
+        //         iconElement.classList.remove("active");
+        //       }
+        //     });
+        // };
+
+        // // 이벤트 핸들러 추가 (form submit 대신 버튼 클릭 시 장바구니 처리)
+        // document
+        //   .querySelectorAll(".product-list__cart-ico")
+        //   .forEach((iconElement) => {
+        //     iconElement.addEventListener("click", function () {
+        //       const productId = this.getAttribute("data-product-id");
+
+        //       // 제품 배열에서 productId에 맞는 제품 찾기
+        //       const product = data.products.find(
+        //         (item) => item.id === productId
+        //       );
+
+        //       if (product) {
+        //         toggleCartItem(product, this);
+        //       } else {
+        //         console.error("Product not found for productId:", productId);
+        //       }
+        //     });
+        //   });
+
+        // // 제품이 로드되면 장바구니 상태에 따라 아이콘 복원
+        // restoreCartIcons();
+        // //////////////////
+
+        /***************** */
+        // LocalStorage에서 장바구니 상태 가져오기
+        let setCartProducts =
+          JSON.parse(localStorage.getItem("setCartProducts")) || [];
+
+        // LocalStorage에 장바구니 상태 저장
+        const localStorageSave = () => {
+          localStorage.setItem(
+            "setCartProducts",
+            JSON.stringify(setCartProducts)
+          );
+        };
+
+        // 아이템이 장바구니에 있는지 확인하는 함수
+        const isInCart = (productId, color, size) => {
+          return setCartProducts.some(
+            (item) =>
+              item.id === productId &&
+              item.selectColor === color &&
+              item.selectSize === size
+          );
+        };
+
+        // 장바구니에 상품을 추가하거나 제거하는 함수
+        const toggleCartItem = (product, iconElement) => {
+          const selectColorElement = document.querySelector("#colors");
+          const selectSizeElement = document.querySelector("#sizes");
+
+          // 색상과 사이즈 요소가 존재하는지 확인하고 값 설정
+          const selectColor = selectColorElement
+            ? selectColorElement.value
+            : "defaultColor";
+          const selectSize = selectSizeElement
+            ? selectSizeElement.value
+            : "defaultSize";
+
+          // 수량 요소를 찾아 기본값으로 1을 설정 (quan이 정의되지 않았을 때 기본값 1 사용)
+          const quantity = typeof quan !== "undefined" ? Number(quan) : 1;
+
+          const cartProduct = {
+            id: product.id,
+            title: product.title,
+            price: product.price,
+            quan: quantity,
+            sumPrice: product.price * quantity,
+            img: product.thumbnail,
+            discountRate: product.discountRate,
+            beforePrice: product.details.beforePrice,
+            discountingPrice: product.details.beforePrice - product.price,
+            discountedPrice:
+              (product.details.beforePrice - product.price) * quantity,
+            selectColor, // 선택된 색상
+            selectSize, // 선택된 사이즈
+          };
+
+          // 장바구니에서 해당 제품이 있는지 확인
+          const existingProductIndex = setCartProducts.findIndex(
+            (item) =>
+              item.id === cartProduct.id &&
+              item.selectColor === cartProduct.selectColor &&
+              item.selectSize === cartProduct.selectSize
+          );
+
+          if (existingProductIndex > -1) {
+            // 이미 장바구니에 있는 경우 -> 제거
+            setCartProducts.splice(existingProductIndex, 1);
+            iconElement.classList.remove("active"); // active 클래스 제거
+          } else {
+            // 장바구니에 없는 경우 -> 추가
+            setCartProducts.push(cartProduct);
+            iconElement.classList.add("active"); // active 클래스 추가
+          }
+
+          // LocalStorage에 저장
+          localStorageSave();
+        };
+
+        // 페이지 로드 시 장바구니에 있는 상품에 대해 아이콘 상태 복원
+        const restoreCartIcons = () => {
+          document
+            .querySelectorAll(".product-list__cart-ico")
+            .forEach((iconElement) => {
+              const productId = iconElement.getAttribute("data-product-id");
+              const selectColor =
+                iconElement.getAttribute("data-color") || "defaultColor";
+              const selectSize =
+                iconElement.getAttribute("data-size") || "defaultSize";
+
+              // 장바구니에 있는 상품인지 확인 후 active 클래스 설정
+              if (isInCart(productId, selectColor, selectSize)) {
+                iconElement.classList.add("active");
+              } else {
+                iconElement.classList.remove("active");
+              }
+            });
+        };
+
+        // 이벤트 핸들러 추가 (form submit 대신 버튼 클릭 시 장바구니 처리)
+        document
+          .querySelectorAll(".product-list__cart-ico")
+          .forEach((iconElement) => {
+            iconElement.addEventListener("click", function () {
+              const productId = this.getAttribute("data-product-id");
+
+              // 제품 배열에서 productId에 맞는 제품 찾기
+              const product = data.products.find(
+                (item) => item.id === productId
+              );
+
+              if (product) {
+                toggleCartItem(product, this);
+              } else {
+                console.error("Product not found for productId:", productId);
+              }
+            });
+          });
+
+        // 제품이 로드되면 장바구니 상태에 따라 아이콘 복원
+        restoreCartIcons();
+        /***************** */
       };
 
       const importData = () => {

@@ -253,6 +253,9 @@ table {
 .product-lists .product-list .product-list__counters .product-list__cart-ico:hover {
   background-image: url("../../../assets/images/products/cart-fill-ico.svg");
 }
+.product-lists .product-list .product-list__counters .product-list__cart-ico.active {
+  background-image: url("../../../assets/images/products/cart-fill-ico.svg");
+}
 .product-lists .product-list .product-list__reviews {
   display: flex;
   align-items: center;
@@ -298,6 +301,8 @@ table {
   background-color: #ff6d00;
   color: #fff;
   border-radius: 8px;
+  width: 60px;
+  text-align: center;
 }
 .product-lists .product-list .product-list__solds .product-list__quantity {
   color: #ff6d00;

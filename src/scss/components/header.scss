@@ -409,7 +409,8 @@
             transition: 0.5s;
           }
           &:hover::before {
-            opacity: 1;
+            opacity: 0.2;
+            background-color: #ffaf71;
           }
           a {
             z-index: 2;

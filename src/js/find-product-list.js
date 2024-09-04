@@ -132,6 +132,9 @@ fetch(productsURL)
         ? queryParams.category.trim().toLowerCase()
         : "";
 
+      const listWrapperSpan = document.querySelector(".list-wrapper span");
+      listWrapperSpan.innerText = query;
+
       // query 또는 category 값에 맞는 아이템만 필터링
       const filteredProducts = data.products.filter((product) => {
         // product.title.toLowerCase().includes(query)

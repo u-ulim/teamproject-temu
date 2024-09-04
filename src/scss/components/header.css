@@ -524,7 +524,8 @@ table {
   transition: 0.5s;
 }
 #header nav .nav-right .nav-right__menus li:hover::before {
-  opacity: 1;
+  opacity: 0.2;
+  background-color: #ffaf71;
 }
 #header nav .nav-right .nav-right__menus li a {
   z-index: 2;

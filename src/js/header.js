@@ -18,6 +18,19 @@ const headerLoad = () => {
         searchInput.value = savedSearchQuery;
       }
 
+      // 로고 클릭 시 searchQuery 삭제
+      const logo = document.querySelector(".nav-left__logo"); // 로고의 클래스 또는 ID로 선택
+      if (logo) {
+        logo.addEventListener("click", () => {
+          // LocalStorage에서 searchQuery 삭제
+          localStorage.removeItem("searchQuery");
+          console.log("searchQuery가 삭제되었습니다.");
+
+          // 로고 클릭 후 홈 페이지로 이동 (필요할 경우)
+          window.location.href = "/index.html"; // 홈페이지 경로로 설정
+        });
+      }
+
       // header scroll Evt
       const headerScrollEvt = () => {
         let lastScrollY = window.scrollY;
@@ -97,9 +110,11 @@ const headerLoad = () => {
       // Header search event
       searchInput = document.querySelector(".nav__input-wrapper input");
       const searchButton = document.querySelector(".nav__input-wrapper i");
-
       const searchEvt = () => {
-        const searchQuery = searchInput.value.trim();
+        const searchQuery = searchInput.value
+          .replace(/[^\w\sㄱ-힣]|_/g, "")
+          .trim();
+
         if (searchQuery) {
           // 검색어를 LocalStorage에 저장
           localStorage.setItem("searchQuery", searchQuery);
@@ -113,7 +128,6 @@ const headerLoad = () => {
           alert("검색어를 입력하세요!");
         }
       };
-      console.log("hi");
 
       // 클릭 및 Enter 키 이벤트 추가
       searchButton.addEventListener("click", searchEvt);
@@ -220,20 +234,11 @@ const headerLoad = () => {
 
             tabLi.setAttribute("data-tab", `tab-${index}`);
             tabsContainer.appendChild(tabLi);
-            // 첫 번째 탭에 active 클래스 추가
-            // if (index === 0) {
-            //   tab.classList.add("active");
-            // }
 
             // 서브 카테고리 콘텐츠 생성
             const contentDiv = document.createElement("div");
             contentDiv.classList.add("content");
             contentDiv.setAttribute("id", `tab-${index}`);
-
-            // 첫 번째 콘텐츠에 active 클래스 추가
-            // if (index === 0) {
-            //   contentDiv.classList.add("active");
-            // }
 
             for (const subKey in category.sub) {
               if (category.sub.hasOwnProperty(subKey)) {
@@ -270,35 +275,8 @@ const headerLoad = () => {
           };
           importData();
 
-          // // 마우스 오버 시 카테고리 리스트 출력
-          // // const tabs = document.querySelector(".submenu-tabs");
-          // const navMenuCategory = document.querySelector(".nav-menu__category");
-          // const categoryOverlay = document.querySelector(".category-overlay");
-          // // 마우스 오버시 카테고리에 맞게끔 서브 카테고리가 나오게끔 설정
-          // document.querySelectorAll(".submenu-tabs li").forEach((tabLi) => {
-          //   tabLi.addEventListener("mouseover", function () {
-          //     // 모든 탭에서 활성화 클래스 제거
-          //     document
-          //       .querySelectorAll(".submenu-tabs li")
-          //       .forEach((t) => t.classList.remove("active"));
-
-          //     // 현재 탭에 활성화 클래스 추가
-          //     this.classList.add("active");
-
-          //     // 모든 콘텐츠에서 활성화 클래스 제거
-          //     document
-          //       .querySelectorAll(".submenu-content .content")
-          //       .forEach((content) => {
-          //         content.classList.remove("active");
-          //       });
-
-          //     // 현재 탭과 연결된 콘텐츠를 활성화
-          //     const tabContentId = this.getAttribute("data-tab");
-          //     document.getElementById(tabContentId).classList.add("active");
-          //   });
-          // });
-          // 모든 탭 요소를 선택
           const tabs = document.querySelectorAll(".submenu-tabs li");
+          const subTabs = document.querySelectorAll(".sub-item");
           const contents = document.querySelectorAll(
             ".submenu-content .content"
           );
@@ -319,8 +297,8 @@ const headerLoad = () => {
 
               // 현재 탭에 활성화 클래스 추가
               this.classList.add("active");
+              // li 내부의 span의 innerText 가져오기
 
-              // 모든 콘텐츠에서 활성화 클래스 제거
               contents.forEach((content) => content.classList.remove("active"));
 
               // 현재 탭과 연결된 콘텐츠를 활성화
@@ -328,6 +306,39 @@ const headerLoad = () => {
               document.getElementById(tabContentId).classList.add("active");
             });
           });
+
+          const tabSearchEvt = function (text) {
+            const searchQuery = text.replace(/[^\w\sㄱ-힣]|_/g, "").trim();
+
+            if (searchQuery) {
+              // 검색어를 LocalStorage에 저장
+              localStorage.setItem("searchQuery", searchQuery);
+
+              // 검색 결과 페이지로 이동
+              const url = `/html/components/search-results.html?query=${encodeURIComponent(
+                searchQuery
+              )}`;
+              window.location.href = url;
+            } else {
+              alert("검색어를 입력하세요!");
+            }
+          };
+
+          tabs.forEach((tabLi) => {
+            tabLi.addEventListener("click", function () {
+              const text = this.querySelector("span").innerText;
+              tabSearchEvt(text);
+            });
+          });
+
+          subTabs.forEach((subTabLi) => {
+            subTabLi.addEventListener("click", function () {
+              const text = this.querySelector("p").innerText;
+              tabSearchEvt(text);
+            });
+          });
+
+          // 마우스 클릭 시 메인 카테고리, 서브 카테고리 => 이동
 
           // 카테고리 마우스 이벤트 시, 오버레이가 생기고 사라지며 스크롤 제어
           let scrollPosition = 0;
