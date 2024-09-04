@@ -213,11 +213,13 @@
           .submenu-wrapper {
             position: relative;
             .submenu {
-              width: 800px;
+              width: 817px;
+              border-radius: 0px 0px 8px 8px;
               position: absolute;
               padding-top: 15px;
               top: -12px;
               left: 50%;
+
               // border-top: 1px solid map-get($color, primary-color);
               transform: translateX(-50%);
               z-index: 3;
@@ -225,10 +227,12 @@
               // background: map-get($color, color-Neutrals-Grey-100);
               display: none;
               color: map-get($color, color-Black);
-
+              height: 100vh;
               .submenu-tabs {
                 text-align: center;
                 ul {
+                  height: 100vh; /* 화면 전체 높이 */
+                  overflow-y: scroll; /* Y축 스크롤 */
                   > li {
                     width: 200px;
                     height: 40px;
@@ -256,48 +260,89 @@
               .submenu-content {
                 max-height: 800px; /* 서브 메뉴 높이 */
                 overflow-x: auto; /* 서브 메뉴 스크롤 */
+
                 .content {
                   display: none;
-                  ul {
-                    display: flex;
-                    width: 600px;
-                    flex-wrap: wrap;
-                    gap: 30px;
-                    padding: 0px 15px 0px 15px;
-                    li {
-                      a {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        gap: 5px;
-                        div {
-                          width: 70px;
-                          height: 70px;
-                          overflow: hidden;
-                          border-radius: 50%;
-                          img {
-                            width: 70px;
-                            height: 70px;
-                            border-radius: 50%;
-                            transition: 0.3s;
+                  width: 600px;
+                  flex-wrap: wrap;
+                  gap: 30px;
 
-                            @include object_cover;
-                            // &:hover {
-                            // }
-                          }
-                        }
-                      }
-                      &:hover {
-                        a {
-                          img {
-                            transform: scale(1.2);
-                          }
+                  padding: 0px 15px 15px 15px;
+                  > .sub-item {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 5px;
+                    p {
+                      display: inline-block;
+                      width: 30px;
+                      height: 30px;
+                      color: black;
+                      width: auto;
+                      max-width: 70px;
+                      text-align: center;
+                    }
+                    > div {
+                      width: 70px;
+                      height: 70px;
+                      overflow: hidden;
+                      border-radius: 50%;
+                      cursor: pointer;
+                      border: 1px solid #f0f0f0;
+                      color: map-get($color, color-Neutrals-Grey-700);
+                      > img {
+                        width: 70px;
+                        height: 70px;
+                        border-radius: 50%;
+                        transition: 0.3s;
+                        @include object_cover;
+                        &:hover {
+                          transform: scale(1.2);
                         }
                       }
                     }
                   }
+
+                  // ul {
+                  //   display: flex;
+                  //   width: 600px;
+                  //   flex-wrap: wrap;
+                  //   gap: 30px;
+                  //   padding: 0px 15px 0px 15px;
+                  //   li {
+                  //     a {
+                  //       display: flex;
+                  //       flex-direction: column;
+                  //       align-items: center;
+                  //       gap: 5px;
+                  //       div {
+                  //         width: 70px;
+                  //         height: 70px;
+                  //         overflow: hidden;
+                  //         border-radius: 50%;
+                  //         img {
+                  //           width: 70px;
+                  //           height: 70px;
+                  //           border-radius: 50%;
+                  //           transition: 0.3s;
+
+                  //           @include object_cover;
+                  //           // &:hover {
+                  //           // }
+                  //         }
+                  //       }
+                  //     }
+                  //     &:hover {
+                  //       a {
+                  //         img {
+                  //           transform: scale(1.2);
+                  //         }
+                  //       }
+                  //     }
+                  //   }
+                  // }
                   &.active {
-                    display: block;
+                    display: flex;
                   }
                 }
               }
