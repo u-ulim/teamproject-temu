@@ -1,0 +1,89 @@
+@import "../config/colors.scss";
+@import "../config/fonts.scss";
+@import "../config/image.scss";
+@import "../config/reset.scss";
+@import "../layout/layout.scss";
+
+#footer {
+  @include width_full;
+  background-color: map-get($color, color-Black);
+  color: map-get($color, color-White);
+  padding-top: 47px;
+
+  .footer-inner {
+    @include width_inner;
+    .footer-menus-wrapper {
+      .footer-menus {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 84px;
+        li {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          h3 {
+            @include text_B_S_14;
+          }
+          ul {
+            @include text_XS_12;
+            color: map-get($color, color-Neutrals-Grey-200);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+          }
+        }
+      }
+    }
+    .footer-notice-wrapper {
+      margin-bottom: 73px;
+      h3 {
+        margin-bottom: 10px;
+        @include text_B_S_14;
+      }
+      .footer-notice__desc {
+        display: flex;
+        gap: 168px;
+        @include text_XS_12;
+        .footer-notice__desc-info {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+        }
+        .footer-notice__desc-contents {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+        }
+      }
+    }
+    .footer-card-wrapper {
+      display: flex;
+      .footer-card__security {
+        h3 {
+          @include text_B_S_14;
+        }
+        .footer-card__security__menus {
+          display: flex;
+          flex-wrap: wrap;
+          li > i {
+            display: inline-block;
+            @include background_cover;
+            height: 27px;
+            &.security__menus__dss-img {
+              width: 43px;
+              background-image: url("../../assets/images/footer/DSS.png");
+            }
+            &.security__menus__visa-img {
+              width: 31px;
+              background-image: url("../../assets/images/footer/visa.png");
+            }
+            &.security__menus__idcheck-img {
+              width: 66px;
+              background-image: url("../../assets/images/footer/id_check.png");
+            }
+          }
+        }
+      }
+    }
+  }
+}

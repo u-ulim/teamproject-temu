@@ -14,14 +14,71 @@
   // padding: 65px 0px 65px 0px;
   margin-bottom: 30px;
   background-color: map-get($color, color-White);
+  background-color: rgba(244, 244, 244, 0.9); /* 투명한 배경 */
+  backdrop-filter: blur(5px); /* 블러 효과 */
 
+  // background-color: #f4a64e;
   .header-top-wrapper {
     @include width_full;
+    overflow-y: hidden;
     height: 48px;
+    position: relative;
     background-color: map-get($color, primary-color);
+    // background-color: map-get($color, color-Black);
     color: map-get($color, color-White);
     .header-top {
-      @include width_inner;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      ul {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 7px;
+        position: relative;
+        width: 100%;
+        li {
+          width: 100%;
+          position: absolute;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
+          gap: 10px;
+
+          span {
+            @include text_B_S_14;
+          }
+          .top__delivery-text {
+            color: #adffa2;
+          }
+          .top__exchange-text {
+            color: #fff7a7;
+          }
+          .top__return-text {
+            color: #fff7a7;
+          }
+          > i {
+            width: 34px;
+            height: 34px;
+            display: inline-block;
+            @include object_cover;
+          }
+        }
+        .header-top__prev {
+          top: -48px;
+          transition: top 0.4s;
+        }
+        .header-top__current {
+          top: 0px;
+          transition: top 0.4s;
+        }
+        .header-top__next {
+          top: 48px;
+        }
+      }
     }
   }
 
@@ -31,7 +88,8 @@
     align-items: center;
     justify-content: space-between;
     position: relative;
-    height: 82px;
+    height: 63px;
+    -webkit-tap-highlight-color: transparent;
     // top: -280px;
     top: 0px;
     // height: 0px;
@@ -40,6 +98,7 @@
     // height: 0px;
     transition: height 0.5s;
     z-index: -1;
+    // color: map-get($color, color-White);
     &.active {
       height: 0px;
       top: -170px;
@@ -71,7 +130,7 @@
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            height: 82px;
+            height: 84px;
             position: relative;
             transition: all 0.5s;
             i {
@@ -121,7 +180,8 @@
               transition: 0.5s;
             }
             &:hover::before {
-              opacity: 1;
+              opacity: 0.2;
+              background-color: #ffaf71;
             }
           }
         }
@@ -131,8 +191,9 @@
             display: none;
             position: fixed;
             left: 0px;
-            top: 130px;
+            top: 110px;
             content: "";
+
             width: 100vw;
             height: 100vh;
             background-color: map-get($color, color-Black);
@@ -152,20 +213,26 @@
           .submenu-wrapper {
             position: relative;
             .submenu {
-              width: 800px;
+              width: 817px;
+              border-radius: 0px 0px 8px 8px;
               position: absolute;
               padding-top: 15px;
-              top: 0px;
+              top: -12px;
               left: 50%;
-              border-top: 1px solid map-get($color, primary-color);
+
+              // border-top: 1px solid map-get($color, primary-color);
               transform: translateX(-50%);
               z-index: 3;
               background-color: map-get($color, color-White);
               // background: map-get($color, color-Neutrals-Grey-100);
               display: none;
+              color: map-get($color, color-Black);
+              height: 100vh;
               .submenu-tabs {
                 text-align: center;
                 ul {
+                  height: 100vh; /* 화면 전체 높이 */
+                  overflow-y: scroll; /* Y축 스크롤 */
                   > li {
                     width: 200px;
                     height: 40px;
@@ -193,48 +260,89 @@
               .submenu-content {
                 max-height: 800px; /* 서브 메뉴 높이 */
                 overflow-x: auto; /* 서브 메뉴 스크롤 */
+
                 .content {
                   display: none;
-                  ul {
-                    display: flex;
-                    width: 600px;
-                    flex-wrap: wrap;
-                    gap: 30px;
-                    padding: 0px 15px 0px 15px;
-                    li {
-                      a {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        gap: 5px;
-                        div {
-                          width: 70px;
-                          height: 70px;
-                          overflow: hidden;
-                          border-radius: 50%;
-                          img {
-                            width: 70px;
-                            height: 70px;
-                            border-radius: 50%;
-                            transition: 0.3s;
+                  width: 600px;
+                  flex-wrap: wrap;
+                  gap: 30px;
 
-                            @include object_cover;
-                            // &:hover {
-                            // }
-                          }
-                        }
-                      }
-                      &:hover {
-                        a {
-                          img {
-                            transform: scale(1.2);
-                          }
+                  padding: 0px 15px 15px 15px;
+                  > .sub-item {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 5px;
+                    p {
+                      display: inline-block;
+                      width: 30px;
+                      height: 30px;
+                      color: black;
+                      width: auto;
+                      max-width: 70px;
+                      text-align: center;
+                    }
+                    > div {
+                      width: 70px;
+                      height: 70px;
+                      overflow: hidden;
+                      border-radius: 50%;
+                      cursor: pointer;
+                      border: 1px solid #f0f0f0;
+                      color: map-get($color, color-Neutrals-Grey-700);
+                      > img {
+                        width: 70px;
+                        height: 70px;
+                        border-radius: 50%;
+                        transition: 0.3s;
+                        @include object_cover;
+                        &:hover {
+                          transform: scale(1.2);
                         }
                       }
                     }
                   }
+
+                  // ul {
+                  //   display: flex;
+                  //   width: 600px;
+                  //   flex-wrap: wrap;
+                  //   gap: 30px;
+                  //   padding: 0px 15px 0px 15px;
+                  //   li {
+                  //     a {
+                  //       display: flex;
+                  //       flex-direction: column;
+                  //       align-items: center;
+                  //       gap: 5px;
+                  //       div {
+                  //         width: 70px;
+                  //         height: 70px;
+                  //         overflow: hidden;
+                  //         border-radius: 50%;
+                  //         img {
+                  //           width: 70px;
+                  //           height: 70px;
+                  //           border-radius: 50%;
+                  //           transition: 0.3s;
+
+                  //           @include object_cover;
+                  //           // &:hover {
+                  //           // }
+                  //         }
+                  //       }
+                  //     }
+                  //     &:hover {
+                  //       a {
+                  //         img {
+                  //           transform: scale(1.2);
+                  //         }
+                  //       }
+                  //     }
+                  //   }
+                  // }
                   &.active {
-                    display: block;
+                    display: flex;
                   }
                 }
               }
@@ -267,7 +375,7 @@
           display: inline-block;
           position: absolute;
           right: 5px;
-          width: 41px;
+          width: 31px;
           height: 31px;
           background: url("../../../assets/images/header/menu_search-ico.svg");
           @include background_cover;
@@ -362,8 +470,10 @@
     }
   }
 }
+
 @media (max-width: 768px) {
   #header {
+    overflow: hidden;
     margin-bottom: 80px;
     nav {
       .nav-left {
@@ -391,26 +501,26 @@
     }
     .mobile-menu {
       display: block;
-      padding: 0px 15px 0px 15px;
       @include text_M_16;
-      width: 100%;
+      padding: 0px 15px 0px 15px;
+      width: 768px;
       overflow: hidden;
       position: relative;
-      ::before {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        content: "";
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          to right,
-          rgba(255, 255, 255, 0),
-          // 왼쪽은 투명
-          rgba(255, 255, 255, 0.2) // 오른쪽은 검은색 70% 투명도
-        );
-        pointer-events: none; // ::before 요소가 클릭 등의 이벤트에 영향을 주지 않도록 설정
-      }
+      // ::before {
+      //   position: absolute;
+      //   top: 0px;
+      //   left: 0px;
+      //   content: "";
+      //   width: 100%;
+      //   height: 100%;
+      //   background: linear-gradient(
+      //     to right,
+      //     rgba(255, 255, 255, 0),
+      //     // 왼쪽은 투명
+      //     rgba(255, 255, 255, 0.2) // 오른쪽은 검은색 70% 투명도
+      //   );
+      //   pointer-events: none; // ::before 요소가 클릭 등의 이벤트에 영향을 주지 않도록 설정
+      // }
       .mobile-menus {
         display: flex;
         gap: 20px;

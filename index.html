@@ -7,7 +7,7 @@
     <script
       defer
       src="https://kit.fontawesome.com/fc51ef092a.js"
-      crossorigin="anonymous"
+      crossorigin="anonymougs"
     ></script>
     <!-- Material Symbols -->
     <link
@@ -25,8 +25,9 @@
     <script defer src="./src/js/header.js"></script>
     <!-- <script defer src="./src/js/index.js"></script> -->
     <script defer src="./src/js/footer.js"></script>
-    <script defer src="./src/json/category-list.js"></script>
     <script defer src="./src/json/product-list.js"></script>
+    <script defer src="./src/js/script.js"></script>
+    <script defer src="./src/js/main-category.js"></script>
   </head>
 
   <body>
@@ -37,11 +38,39 @@
     <!-- MAIN START -->
     <main id="main">
       <div class="main__wrapper">
-        <div class="main__banner"></div>
-        <div class="main__slide__wrapper">
-          <div class="main__slide">
+        <div class="main__banner">
+          <img src="./assets/images/index/main-banner.webp" alt="main-banner" />
+        </div>
+        <div class="main__slide-container">
+          <div class="main__slide__wrapper">
+            <ul class="main__slides">
+              <li>
+                <img
+                  src="./assets/images/index/main-slide1.svg"
+                  alt="main-slide1"
+                />
+              </li>
+              <li>
+                <img
+                  src="./assets/images/index/main-slide2.svg"
+                  alt="main-slide2"
+                />
+              </li>
+              <li>
+                <img
+                  src="./assets/images/index/main-slide3.svg"
+                  alt="main-slide3"
+                />
+              </li>
+              <li>
+                <img
+                  src="./assets/images/index/main-slide4.svg"
+                  alt="main-slide4"
+                />
+              </li>
+            </ul>
             <div class="main__slide-pagination">
-              <p>1/5 +</p>
+              <p class="number">1/4</p>
             </div>
           </div>
           <div class="main__slide-btn">
@@ -51,14 +80,17 @@
             <div class="main__slide-btn-left">
               <i class="fa-solid fa-chevron-left"></i>
             </div>
-            `
           </div>
         </div>
       </div>
       <div class="mobile__main">
         <div class="m-main__wrapper">
-          <div class="m__banner-first"></div>
-          <div class="m__banner-second"></div>
+          <div class="m__banner-first">
+            <img src="./assets/images/index/m-slide1.webp" alt="m-slide1" />
+          </div>
+          <div class="m__banner-second">
+            <img src="./assets/images/index/m-slide2.gif" alt="m-slide2" />
+          </div>
         </div>
       </div>
     </main>
@@ -117,17 +149,15 @@
         </div>
         <div class="m__promise-bottom">
           <div class="m__promise-bottom-list">
-            <div>
+            <div class="bottom-list-item">
               <i class="promise__lock"></i>
               <a href="#">개인 정보 보호</a>
             </div>
-            <p>|</p>
-            <div>
+            <div class="bottom-list-item">
               <i class="promise__card"></i>
               <a href="#">안전한 결제</a>
             </div>
-            <p>|</p>
-            <div>
+            <div class="bottom-list-item">
               <i class="promise__truck"></i>
               <a href="#">배송 보장</a>
             </div>
@@ -146,9 +176,24 @@
             <i class="fa-solid fa-chevron-right"></i>
           </div>
           <ul class="cart__item-list">
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>
+              <img
+                src="./assets/images/index/cart-01-01.webp"
+                alt="cart-01-01"
+              />
+            </li>
+            <li>
+              <img
+                src="./assets/images/index/cart-01-02.webp"
+                alt="cart-01-02"
+              />
+            </li>
+            <li>
+              <img
+                src="./assets/images/index/cart-01-03.webp"
+                alt="cart-01-03"
+              />
+            </li>
           </ul>
         </div>
         <div class="cart__item-second">
@@ -159,9 +204,15 @@
             <i class="fa-solid fa-chevron-right"></i>
           </div>
           <ul class="cart__item-list">
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>
+              <img src="./assets/images/index/cart-02-01.webp" alt="" />
+            </li>
+            <li>
+              <img src="./assets/images/index/cart-02-02.webp" alt="" />
+            </li>
+            <li>
+              <img src="./assets/images/index/cart-02-03.webp" alt="" />
+            </li>
           </ul>
         </div>
         <div class="cart__item-third">
@@ -170,25 +221,37 @@
             <i class="fa-solid fa-chevron-right"></i>
           </div>
           <ul class="cart__item-list">
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>
+              <img src="./assets/images/index/cart-03-01.webp" alt="" />
+            </li>
+            <li>
+              <img src="./assets/images/index/cart-03-02.webp" alt="" />
+            </li>
+            <li>
+              <img src="./assets/images/index/cart-03-03.webp" alt="" />
+            </li>
           </ul>
         </div>
       </div>
-      <div class="mobile__cart">
+      <!-- <div class="mobile__cart">
         <div class="m-cart__item-first">
           <div class="m-cart__item-header">
             <p>장바구니의 <span>7개</span> 상품 품절 임박!</p>
             <i class="fa-solid fa-chevron-right"></i>
           </div>
           <ul class="m-cart__item-list">
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>
+              <img src="./assets/images/index/cart-01-01.webp" alt="" />
+            </li>
+            <li>
+              <img src="./assets/images/index/cart-01-02.webp" alt="" />
+            </li>
+            <li>
+              <img src="./assets/images/index/cart-01-03.webp" alt="" />
+            </li>
           </ul>
         </div>
-      </div>
+      </div> -->
     </section>
     <!-- CART END -->
 
@@ -198,6 +261,7 @@
         <div class="category__title">
           <div class="category__title-img"></div>
           <p>카테고리</p>
+          <i class="fa-solid fa-chevron-right"></i>
         </div>
         <div class="category__list__container">
           <div class="category__btn">
@@ -237,6 +301,89 @@
               <div class="category__list-img"></div>
               <span>홈 데코 용품</span>
             </li>
+            <li>
+              <div class="category__list-img"></div>
+              <span>전자기기</span>
+            </li>
+            <li>
+              <div class="category__list-img"></div>
+              <span>사무용품</span>
+            </li>
+            <li>
+              <div class="category__list-img"></div>
+              <span>여성의류</span>
+            </li>
+            <li>
+              <div class="category__list-img"></div>
+              <span>인형 & 액세서리</span>
+            </li>
+            <li>
+              <div class="category__list-img"></div>
+              <span>욕실 용품</span>
+            </li>
+            <li>
+              <div class="category__list-img"></div>
+              <span>주방 용품</span>
+            </li>
+            <li>
+              <div class="category__list-img"></div>
+              <span>홈 데코 용품</span>
+            </li>
+
+            <li>
+              <div class="category__list-img">
+                <img src="" alt="" />
+              </div>
+              <span>전자기기</span>
+            </li>
+            <li>
+              <div class="category__list-img">
+                <img src="" alt="" />
+              </div>
+              <span>사무용품</span>
+            </li>
+            <li>
+              <div class="category__list-img">
+                <img src="" alt="" />
+              </div>
+              <span>여성의류</span>
+            </li>
+            <li>
+              <div class="category__list-img">
+                <img src="" alt="" />
+              </div>
+              <span>인형 & 액세서리</span>
+            </li>
+            <li>
+              <div class="category__list-img">
+                <img src="" alt="" />
+              </div>
+              <span>욕실 용품</span>
+            </li>
+            <li>
+              <div class="category__list-img">
+                <img src="" alt="" />
+              </div>
+              <span>주방 용품</span>
+            </li>
+            <li>
+              <div class="category__list-img">
+                <img src="" alt="" />
+              </div>
+              <span>홈 데코 용품</span>
+            </li>
+            <li>
+              <div class="category__list-img">
+                <img src="" alt="" />
+              </div>
+              <span>뷰티 & 건강</span>
+            </li>
+            <li>
+              <div class="category__list-img">
+                <img src="" alt="" />
+              </div>
+              <span>아동 패션</span>
+            </li>
           </ul>
         </div>
       </div>
@@ -251,9 +398,29 @@
           <p>상품 둘러보기</p>
         </div>
       </div>
+      <div id="mobile__product">
+        <div class="m__product__title">
+          <div>
+            <p>모두</p>
+          </div>
+          <div>
+            <i class="fa-solid fa-bolt-lightning"></i>
+            <p>할인</p>
+          </div>
+          <div>
+            <i class="fa-solid fa-star"></i>
+            <p>별점 5점</p>
+          </div>
+          <div>
+            <i class="fa-solid fa-thumbs-up"></i>
+            <p>베스트셀러</p>
+          </div>
+        </div>
+      </div>
       <div class="list-wrapper">
         <div id="product-list"></div>
       </div>
+
       <div id="product__btn">
         <div class="product__btn-more">
           <p>더보기</p>
