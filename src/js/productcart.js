@@ -264,8 +264,7 @@ function updateAsideValues(
       checkoutButton.style.cursor = shortage > 0 ? "not-allowed" : "pointer";
       checkoutButton.addEventListener("click", function () {
         if (shortage <= 0) {
-          window.location.href =
-            "http://127.0.0.1:5501/html/components/Payment.html";
+          window.location.href = "/html/components/Payment.html";
         }
       });
     }

@@ -982,103 +982,11 @@
       "sub": {
         "subListF": {
           "subtitle": "상하의 세트",
-          "img": "https://image.msscdn.net/images/category_img/men/ITEM_017021_17164419894030_big.png"
+          "img": "/assets/images/header/category/product.jpg"
         },
         "subListS": {
-          "subtitle": "수영복/비치웨어",
-          "img": "https://image.msscdn.net/images/category_img/men/ITEM_017022_17164419897637_big.png"
-        },
-        "subListT": {
-          "subtitle": "스포츠신발",
-          "img": "https://image.msscdn.net/images/category_img/men/ITEM_017023_17164419900373_big.png"
-        },
-        "subListFour": {
-          "subtitle": "기구/용품/장비",
-          "img": "https://image.msscdn.net/images/category_img/men/ITEM_017024_17164459608499_big.png"
-        },
-        "subListFive": {
-          "subtitle": "스포츠가방",
-          "img": "https://image.msscdn.net/images/category_img/men/ITEM_017025_17164419905664_big.png"
-        },
-        "subListSix": {
-          "subtitle": "스포츠잡화",
-          "img": "https://image.msscdn.net/images/category_img/men/ITEM_017026_17164419908091_big.png"
-        },
-        "subListSeven": {
-          "subtitle": "스포츠모자",
-          "img": "https://image.msscdn.net/images/category_img/men/ITEM_017027_17164419911327_big.png"
-        },
-        "subListEight": {
-          "subtitle": "스포츠모자",
-          "img": "https://image.msscdn.net/images/category_img/men/ITEM_017027_17164419911327_big.png"
-        },
-        "subListNine": {
-          "subtitle": "스포츠가방",
-          "img": "https://image.msscdn.net/images/category_img/men/ITEM_017025_17164419905664_big.png"
-        },
-        "subListTen": {
-          "subtitle": "수영복/비치웨어",
-          "img": "https://image.msscdn.net/images/category_img/men/ITEM_017022_17164419897637_big.png"
-        },
-        "subListEleven": {
           "subtitle": "상하의 세트",
-          "img": "https://image.msscdn.net/images/category_img/men/ITEM_017021_17164419894030_big.png"
-        },
-        "subListTwelve": {
-          "subtitle": "스포츠신발",
-          "img": "https://image.msscdn.net/images/category_img/men/ITEM_017023_17164419900373_big.png"
-        },
-        "subListThirteen": {
-          "subtitle": "기구/용품/장비",
-          "img": "https://image.msscdn.net/images/category_img/men/ITEM_017024_17164459608499_big.png"
-        },
-        "subListFourteen": {
-          "subtitle": "스포츠가방",
-          "img": "https://image.msscdn.net/images/category_img/men/ITEM_017025_17164419905664_big.png"
-        },
-        "subListFifteen": {
-          "subtitle": "스포츠잡화",
-          "img": "https://image.msscdn.net/images/category_img/men/ITEM_017026_17164419908091_big.png"
-        },
-        "subListSixteen": {
-          "subtitle": "스포츠모자",
-          "img": "https://image.msscdn.net/images/category_img/men/ITEM_017027_17164419911327_big.png"
-        },
-        "subListSeventeen": {
-          "subtitle": "수영복/비치웨어",
-          "img": "https://image.msscdn.net/images/category_img/men/ITEM_017022_17164419897637_big.png"
-        },
-        "subListEighteen": {
-          "subtitle": "상하의 세트",
-          "img": "https://image.msscdn.net/images/category_img/men/ITEM_017021_17164419894030_big.png"
-        },
-        "subListNineteen": {
-          "subtitle": "스포츠모자",
-          "img": "https://image.msscdn.net/images/category_img/men/ITEM_017027_17164419911327_big.png"
-        },
-        "subListTwenty": {
-          "subtitle": "스포츠가방",
-          "img": "https://image.msscdn.net/images/category_img/men/ITEM_017025_17164419905664_big.png"
-        },
-        "subListTwentyOne": {
-          "subtitle": "스포츠잡화",
-          "img": "https://image.msscdn.net/images/category_img/men/ITEM_017026_17164419908091_big.png"
-        },
-        "subListTwentyTwo": {
-          "subtitle": "기구/용품/장비",
-          "img": "https://image.msscdn.net/images/category_img/men/ITEM_017024_17164459608499_big.png"
-        },
-        "subListTwentyThree": {
-          "subtitle": "수영복/비치웨어",
-          "img": "https://image.msscdn.net/images/category_img/men/ITEM_017022_17164419897637_big.png"
-        },
-        "subListTwentyFour": {
-          "subtitle": "스포츠신발",
-          "img": "https://image.msscdn.net/images/category_img/men/ITEM_017023_17164419900373_big.png"
-        },
-        "subListTwentyFive": {
-          "subtitle": "스포츠가방",
-          "img": "https://image.msscdn.net/images/category_img/men/ITEM_017025_17164419905664_big.png"
+          "img": "/assets/images/header/category/product.jpg"
         }
       }
     },
@@ -3837,6 +3745,6 @@
           "img": "https://image.msscdn.net/images/category_img/men/ITEM_101006_17164419991765_big.png"
         }
       }
-    } 
+    }
   ]
 }
