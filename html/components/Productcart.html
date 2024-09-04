@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../../src/scss/components/product-list.css" />
     <link rel="stylesheet" href="../../src/scss/components/header.css" />
     <link rel="stylesheet" href="../../src/scss/components/footer.css" />
-    <script defer src="../../src/javascript/productcart.js"></script>
+    <script defer src="../../src/js/productcart.js"></script>
     <script defer src="../../src/json/product-list.js"></script>
     <script defer src="../../src/js/header.js"></script>
     <script defer src="../../src/js/footer.js"></script>
@@ -48,11 +48,7 @@
               </div>
             </div>
             <div class="toolbar">
-              <form
-                method="post"
-                action="/delete-all-product"
-                class="form__left"
-              >
+              <form class="form__left">
                 <div class="custom__box">
                   <input
                     type="checkbox"
@@ -247,7 +243,7 @@
         </section>
       </main>
       <!--ASIDE START-->
-      <aside>
+      <aside class="pc-aside">
         <!-- <div class="checkout__summary">
         
           <div class="summary__item">

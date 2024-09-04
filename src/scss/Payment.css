@@ -732,7 +732,10 @@ main .delivery__service .delivery__info .delivery__memo li:nth-child(3) {
   border: 1px solid #ff7629;
   box-shadow: 0 0 4px #ff7629;
 }
-.payment__method .methods ul [type=radio]:checked + label {
+.payment__method .methods ul input[type=radio] {
+  display: none;
+}
+.payment__method .methods ul input[type=radio]:checked + label {
   border: 1px solid #ff7629;
   box-shadow: 0 0 4px #ff7629;
 }
@@ -822,7 +825,6 @@ aside .checkout__summary .consent .consent__list li:first-child {
   display: flex;
   align-items: center;
   padding: 10px 19px;
-  border-bottom: none;
   border-bottom: 1px solid #9a9a9a;
   height: 60px;
   font-family: "Pretendard-Regular";
@@ -840,6 +842,7 @@ aside .checkout__summary .consent .consent__list li:last-child .consent-title.ac
 aside .checkout__summary .consent .consent__list li .consent-title {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 10px 19px;
   border-bottom: 1px solid #9a9a9a;
   height: 60px;
@@ -852,10 +855,11 @@ aside .checkout__summary .consent .consent__list li .consent-title {
   letter-spacing: -0.42px;
 }
 aside .checkout__summary .consent .consent__list li .consent-title::after {
-  position: absolute;
-  right: 5%;
-  font-family: "fontawesome";
   content: "\f107";
+  font-family: "FontAwesome";
+  font-size: 16px;
+  color: #818181;
+  transition: transform 0.3s ease;
 }
 aside .checkout__summary .consent .consent__list li .consent-title.active::after {
   transform: rotate(180deg);
@@ -885,46 +889,53 @@ aside .checkout__summary .consent .consent__list li .consent-content p:first-chi
   font-style: normal;
   line-height: 22px;
   letter-spacing: -0.42px;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
+}
+aside .checkout__summary .consent .consent__list li .consent-title.active + .consent-content {
+  display: block;
 }
 aside .checkout__summary .consent .consent__list .custom__box {
   padding-right: 6px;
   position: relative;
 }
-aside .checkout__summary .consent .consent__list .custom__box input[type=checkbox].custom__box {
-  border: 1px solid #f00;
+aside .checkout__summary .consent .consent__list .custom__box input[type=checkbox] {
   display: none;
 }
-aside .checkout__summary .consent .consent__list .custom__box input[type=checkbox] {
-  display: inline-block;
-  border: 1px solid #ff6d00;
+aside .checkout__summary .consent .consent__list .custom__box label {
   position: relative;
-  width: 16px;
-  height: 16px;
+  padding-left: 25px;
   cursor: pointer;
-  border-radius: 50%;
 }
-aside .checkout__summary .consent .consent__list .custom__box input[type=checkbox]::after {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 10px;
-  height: 10px;
+aside .checkout__summary .consent .consent__list .custom__box label::before {
   content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 13px;
+  height: 13px;
+  border: 1px solid #ff6d00;
   border-radius: 50%;
-  transform: translate(-50%, -50%) scale(0);
+  background-color: white;
 }
-aside .checkout__summary .consent .consent__list .custom__box input[type=checkbox]:checked + .agreeAll {
-  background: #ff6d00;
-}
-aside .checkout__summary .consent .consent__list .custom__box input[type=checkbox]:checked + .agreeAll::after {
+aside .checkout__summary .consent .consent__list .custom__box label::after {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) scale(0);
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: #ff6d00;
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #ff6d00;
-  color: rgb(255, 255, 255);
-  content: "✓";
-  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease;
+}
+aside .checkout__summary .consent .consent__list .custom__box input[type=checkbox]:checked + label::after {
+  transform: translateY(-50%) scale(1);
 }
 aside .checkout__summary .checkout__button {
   margin-bottom: 20px;

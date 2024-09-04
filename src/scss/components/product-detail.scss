@@ -1086,11 +1086,17 @@ body {
           padding-bottom: 30px;
           form {
 <<<<<<< HEAD
+<<<<<<< HEAD
             position: relative;
             width: 100%;
             height: 100%;
 =======
 >>>>>>> origin/feature-js
+=======
+            position: relative;
+            width: 100%;
+            height: 100%;
+>>>>>>> 072d7761d9bf401ee4a7a5ddf73b5e6abf97f6c1
             .detail__main-contentsbox-selects {
               display: flex;
               flex-direction: column;
@@ -1112,6 +1118,9 @@ body {
               }
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 072d7761d9bf401ee4a7a5ddf73b5e6abf97f6c1
             .detail__main-contentsbox-btns {
               padding: 10px 0px 10px 0px;
               // position: static;
@@ -1153,6 +1162,7 @@ body {
 
                   color: map-get($color, color-White);
                 }
+<<<<<<< HEAD
 =======
             h3 {
               @include text_B_S_14;
@@ -1186,6 +1196,8 @@ body {
 
                 color: map-get($color, color-White);
 >>>>>>> origin/feature-js
+=======
+>>>>>>> 072d7761d9bf401ee4a7a5ddf73b5e6abf97f6c1
               }
             }
           }
@@ -1736,6 +1748,9 @@ body {
       }
       .detail__right-box {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 072d7761d9bf401ee4a7a5ddf73b5e6abf97f6c1
         padding-right: 15px;
         padding-bottom: 0px;
         padding-left: 15px;
@@ -1748,14 +1763,15 @@ body {
         left: 0px;
         z-index: 10;
         width: 100%;
-        max-height: 32px;
-
+        max-height: 344px;
         background-color: map-get($color, color-White);
         transition: 0.4s;
         cursor: pointer;
-        &.open {
-          max-height: 344px;
+        &.close {
+          // max-height: 344px;
+          max-height: 32px;
         }
+<<<<<<< HEAD
 =======
         position: fixed;
         z-index: 10;
@@ -1765,11 +1781,16 @@ body {
         padding-bottom: 0px;
         background-color: map-get($color, color-White);
 >>>>>>> origin/feature-js
+=======
+>>>>>>> 072d7761d9bf401ee4a7a5ddf73b5e6abf97f6c1
         .detail__main-contentsbox {
           margin-bottom: 0px;
           padding-top: 15px;
           padding-bottom: 5px;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 072d7761d9bf401ee4a7a5ddf73b5e6abf97f6c1
 
           .detail__main-contentsbox-brand {
             // border-top: 2px solid #efefef;
@@ -1795,10 +1816,13 @@ body {
                 max-width: 100%;
               }
             }
+<<<<<<< HEAD
 =======
           .detail__main-contentsbox-select {
             padding-bottom: 0px;
 >>>>>>> origin/feature-js
+=======
+>>>>>>> 072d7761d9bf401ee4a7a5ddf73b5e6abf97f6c1
           }
         }
       }

@@ -4,7 +4,7 @@
 @import "../layout/layout.scss";
 @import "../config/image.scss";
 
-.product-lists {
+.find-product-lists {
   // border: 1px solid blue;
   display: flex;
   justify-content: space-between;
@@ -38,6 +38,7 @@
         @include object_cover;
       }
     }
+
     .product-list__title {
       display: -webkit-box;
       margin-bottom: 10px;
@@ -117,8 +118,9 @@
     }
   }
 }
+
 @media (max-width: 1384px) {
-  .product-lists {
+  .find-product-lists {
     @include width_full;
     .product-list {
       margin-bottom: 20px;
@@ -134,7 +136,7 @@
 }
 
 @media (max-width: 1000px) {
-  .product-lists {
+  .find-product-lists {
     @include width_full;
     .product-list {
       margin-bottom: 0px;
@@ -153,7 +155,7 @@
 }
 
 @media (max-width: 768px) {
-  .product-lists {
+  .find-product-lists {
     @include width_full;
     .product-list {
       margin-bottom: 0px;
@@ -170,14 +172,16 @@
     }
   }
 }
+
 @media (max-width: 390px) {
-  .product-lists {
+  .find-product-lists {
     @include width_full;
     .product-list {
       margin-bottom: 40px;
       overflow: hidden;
       width: 45%;
       height: 100%;
+
       .product-list__thumb-box {
         width: 100%;
         height: 40%;

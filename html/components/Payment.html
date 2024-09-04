@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../../src/scss/Payment.css" />
     <link rel="stylesheet" href="../../src/scss/components/header.css" />
     <link rel="stylesheet" href="../../src/scss/components/footer.css" />
-    <script defer src="../../src/javascript/payment.js"></script>
+    <script defer src="../../src/js/payment.js"></script>
     <script defer src="../../src/js/header.js"></script>
     <script defer src="../../src/js/footer.js"></script>
     <script defer src="../../src/json/category-list.js"></script>
@@ -162,6 +162,7 @@
           <div class="methods">
             <ul>
               <li>
+                <input type="radio" name="radio" id="card" />
                 <label for="card">
                   <span>Card</span>
                   <div class="img">
@@ -170,67 +171,66 @@
                       alt="card"
                     />
                   </div>
-                  <input type="radio" name="radio" id="card" />
                 </label>
               </li>
               <li>
+                <input type="radio" name="radio" id="KakaoPay" />
                 <label for="KakaoPay">
                   <span>KakaoPay</span>
                   <div class="img">
                     <img
-                      src="../../assets/images/payment/kakaopay.png "
+                      src="../../assets/images/payment/kakaopay.png"
                       alt="kakaopay"
                     />
                   </div>
-                  <input type="radio" name="radio" id="KakaoPay" />
                 </label>
               </li>
               <li>
+                <input type="radio" name="radio" id="TossPay" />
                 <label for="TossPay">
                   <span>TossPay</span>
                   <div class="img">
                     <img
-                      src="../../assets/images/payment/toss.png "
+                      src="../../assets/images/payment/toss.png"
                       alt="tosspay"
                     />
                   </div>
-                  <input type="radio" name="radio" id="TossPay" />
                 </label>
               </li>
               <li>
+                <input type="radio" name="radio" id="NaverPay" />
                 <label for="NaverPay">
                   <span>NaverPay</span>
                   <div class="img">
                     <img
-                      src="../../assets/images/payment/naverpay.png "
+                      src="../../assets/images/payment/naverpay.png"
                       alt="naverpay"
                     />
                   </div>
-                  <input type="radio" name="radio" id="NaverPay" />
                 </label>
               </li>
               <li>
+                <input type="radio" name="radio" id="PayPal" />
                 <label for="PayPal">
                   <span>PayPal</span>
                   <div class="img">
                     <img
-                      src="../../assets/images/payment/paypal.png "
+                      src="../../assets/images/payment/paypal.png"
                       alt="paypal"
                     />
                   </div>
-                  <input type="radio" name="radio" id="PayPal" />
                 </label>
               </li>
               <li>
+                <input type="radio" name="radio" id="GogglePay" />
                 <label for="GogglePay">
                   <span>GogglePay</span>
                   <div class="img">
                     <img
-                      src="../../assets/images/payment/gogglepay.png "
+                      src="../../assets/images/payment/gogglepay.png"
                       alt="gogglpay"
                     />
                   </div>
-                  <input type="radio" name="radio" id="GogglePay" />
                 </label>
               </li>
             </ul>
@@ -352,12 +352,13 @@
                 </div>
               </li>
               <li>
+                <!-- 추가된 <li> 태그 -->
                 <div class="consent-title">
-                  <div>
+                  <div class="custom__box">
                     <input
                       type="checkbox"
                       name="transferInfo"
-                      id="ransferInfo"
+                      id="transferInfo"
                       class="transferInfo"
                     />
                     <label for="transferInfo"
@@ -371,7 +372,7 @@
                     이전할 수 있습니다.
                   </p>
                   <p>
-                    인정보는 안전한 서버에 저장되며, 법적 요구 사항을 준수하는
+                    개인정보는 안전한 서버에 저장되며, 법적 요구 사항을 준수하는
                     방식으로 처리됩니다. 국외 이전에 따른 위험은 최소화되며,
                     사용자의 동의 없이 타 국가로 이전되지 않습니다.
                   </p>
@@ -382,8 +383,9 @@
                 </div>
               </li>
               <li>
+                <!-- 추가된 <li> 태그 -->
                 <div class="consent-title">
-                  <div>
+                  <div class="custom__box">
                     <input
                       type="checkbox"
                       name="treePlanting"
@@ -411,6 +413,7 @@
               </li>
             </ul>
           </div>
+
           <!--button-->
           <button type="submit" class="checkout__button" value="결제하기">
             결제하기

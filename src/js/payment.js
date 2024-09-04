@@ -255,7 +255,7 @@ form.addEventListener("submit", function (e) {
   const customsNumber = customsNumberInput.value;
   const name = nameInput.value;
   const phoneNumber = phoneNumberInput.value;
-  const siSelected = siSelect.value;
+  const siSelectedValue = siSelect.value;
   const guKunSelected = guKunselect.value;
   const optionAddress = detailedAddressInput.value;
 
@@ -264,15 +264,15 @@ form.addEventListener("submit", function (e) {
     customsNumber === "" ||
     name === "" ||
     phoneNumber === "" ||
-    siSelected === "" ||
+    siSelectedValue === "" ||
     guKunSelected === ""
   ) {
     alert("빈칸이 있습니다. 확인해주세요");
     return;
   }
 
-  const selectedSiText = siSelect.options[siSelect.selectedIndex].innerText;
-  const selectedGuKunText =
+  const selectedSi = si.find((s) => s.name === siSelectedValue).Kname;
+  const selectedGuKun =
     guKunselect.options[guKunselect.selectedIndex].innerText;
 
   const newIndex = addressList.length;
@@ -284,7 +284,7 @@ form.addEventListener("submit", function (e) {
     </li>
     <li>
       <span class="zipcode">${zipcode}</span>
-      <span class="useraddress">대한민국 ${selectedSiText} ${selectedGuKunText}</span>
+      <span class="useraddress">대한민국 ${selectedSi} ${selectedGuKun}</span>
     </li>
     <li>
       <span class="useraddress-option">${optionAddress}</span>
@@ -313,7 +313,7 @@ form.addEventListener("submit", function (e) {
       name,
       phoneNumber,
       zipcode,
-      siSelected,
+      siSelected: selectedSi,
       guKunSelected,
       optionAddress,
     });
@@ -324,10 +324,9 @@ form.addEventListener("submit", function (e) {
   toggleAddressModal("plus", false);
   toggleAddressModal("main", true);
 
-  form.reset(); // 폼 리셋
+  form.reset();
 
-  // 주소 업데이트 후, 주소가 없을 때 빈 메시지 표시
-  updateAddressInfoDisplay();
+  updateAddressInfoDisplay(); // 주소가 없을 때 빈 메시지 표시
 });
 
 // 주소 항목 삭제 및 편집
@@ -372,7 +371,6 @@ userInfo.addEventListener("click", function (e) {
 userInfo.addEventListener("change", function (e) {
   if (e.target.id === "useraddress__radio") {
     const index = parseInt(e.target.dataset.index);
-    localStorage.setItem("defaultAddressIndex", index);
     updateInfoDown(addressList[index]);
   }
 });
@@ -381,7 +379,7 @@ userInfo.addEventListener("change", function (e) {
 function updateAddressInfoDisplay() {
   const addressEmptyMessage = document.querySelector(".info__down-empty");
 
-  if (addressList.length === 0) {
+  if (!localStorage.getItem("defaultAddress")) {
     addressEmptyMessage.style.display = "block"; // 주소가 없을 때만 메시지 표시
     infoDown.style.display = "none";
     if (addressBtn) {
@@ -397,6 +395,7 @@ function updateAddressInfoDisplay() {
 }
 
 // 기본 주소를 info__down에 업데이트
+
 function updateInfoDown(address) {
   if (!address) return;
 
@@ -406,7 +405,7 @@ function updateInfoDown(address) {
         <span>${address.name}</span>
         <span>+82 ${address.phoneNumber}</span>
       </li>
-      <li>${address.zipcode}  대한민국 ${address.siSelected} ${address.guKunSelected}</li>
+      <li>${address.zipcode} 대한민국 ${address.siSelected} ${address.guKunSelected}</li>
       <li>${address.optionAddress}</li>
     </ul>
   `;
@@ -414,55 +413,17 @@ function updateInfoDown(address) {
   if (infoDown) {
     infoDown.innerHTML = infoDownHTML;
   }
+
+  localStorage.setItem("defaultAddress", JSON.stringify(address));
+
   toggleAddressModal("main", false);
 }
 
 //  주소 정보 표시
 function loadAddresses() {
-  if (addressList.length > 0) {
-    addressList.forEach((address, index) => {
-      const selectedSiText = si.find(
-        (s) => s.name === address.siSelected
-      ).Kname;
-      const selectedGuKunText = address.guKunSelected;
-
-      const newListItemHTML = `
-        <li>
-          <span class="username">${address.name}</span>
-          <span class="usernumber"><span>+82</span> ${address.phoneNumber}</span>
-        </li>
-        <li>
-          <span class="zipcode">${address.zipcode}</span>
-          <span class="useraddress">대한민국 ${selectedSiText} ${selectedGuKunText}</span>
-        </li>
-        <li>
-          <span class="useraddress-option">${address.optionAddress}</span>
-        </li>
-        <li>
-          <div>
-            <label for="useraddress__radio"></label>
-            <input type="radio" name="useraddress__radio" id="useraddress__radio" data-index="${index}"/>
-            <span>기본주소</span>
-          </div>
-          <div>
-            <span class="edit"><i class="fa-regular fa-pen-to-square"></i>편집</span>
-            <span class="delete"><i class="fa-regular fa-trash-can"></i>삭제</span>
-          </div>
-        </li>
-      `;
-      const newListItem = document.createElement("ul");
-      newListItem.innerHTML = newListItemHTML;
-      userInfo.appendChild(newListItem);
-    });
-
-    const defaultIndex = localStorage.getItem("defaultAddressIndex");
-    if (defaultIndex !== null && addressList[defaultIndex]) {
-      updateInfoDown(addressList[defaultIndex]);
-      userInfo.querySelector(
-        `input[data-index="${defaultIndex}"]`
-      ).checked = true;
-    }
-    userInfo.style.display = "block";
+  const savedAddress = JSON.parse(localStorage.getItem("defaultAddress"));
+  if (savedAddress) {
+    updateInfoDown(savedAddress);
   } else {
     updateAddressInfoDisplay();
   }
@@ -491,7 +452,7 @@ function renderCartItems() {
     const discountedTotalPrice = discountingPrice * quan;
     const totalDiscountAmount = originalTotalPrice - discountedTotalPrice;
 
-    // 각 제품의 HTML 생성
+    // 상품리스트
     const productInfoHTML = `
       <li class="product">
         <div class="img">

@@ -500,7 +500,7 @@ fetch(productsURL)
           </div>
       </section>
     </div>
-    <div class="detail__right-box">
+    <div class="detail__right-box close">
     <div class="detail__main-contentsbox">
     <div class="detail__main-contentsbox-provider">${
       product.details.provider
@@ -556,7 +556,7 @@ fetch(productsURL)
       </ul>
     </div>
     <div class="detail__main-contentsbox-brand">
-      <span>옵션 선택
+      <span>구매하기
       <i class="fa-solid fa-chevron-up" aria-hidden="true"></i></span>
       <div><i></i>${product.details.provider}</div>
       <button>
@@ -569,12 +569,16 @@ fetch(productsURL)
           ${createSelectOptions(product.details.selectOptions)}
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 072d7761d9bf401ee4a7a5ddf73b5e6abf97f6c1
         <div class="detail__main-contentsbox-btns">
           <h3>주문금액 <span>${price}원</span></h3>
           <div>
            <button type="submit" class="select-cart-btn">장바구니</button>
             <button type="button" class="select-buy-btn">바로구매</button>
           </div>
+<<<<<<< HEAD
 =======
         
         <h3>주문금액 <span>${price}원</span></h3>
@@ -582,6 +586,8 @@ fetch(productsURL)
           <button type="submit" class="select-cart-btn">장바구니</button>
           <button type="button" class="select-buy-btn">바로구매</button>
 >>>>>>> origin/feature-js
+=======
+>>>>>>> 072d7761d9bf401ee4a7a5ddf73b5e6abf97f6c1
         </div>
       </form>
     </div>
@@ -682,10 +688,14 @@ fetch(productsURL)
       let multiplePrice;
       let sumPrice = document.querySelector(
 <<<<<<< HEAD
+<<<<<<< HEAD
         ".detail__right-box .detail__main-contentsbox-select > form > .detail__main-contentsbox-btns > h3 > span"
 =======
         ".detail__right-box .detail__main-contentsbox-select > form >  h3 > span"
 >>>>>>> origin/feature-js
+=======
+        ".detail__right-box .detail__main-contentsbox-select > form > .detail__main-contentsbox-btns > h3 > span"
+>>>>>>> 072d7761d9bf401ee4a7a5ddf73b5e6abf97f6c1
       );
       let quan = 1;
       const selectQuantityElement = document.querySelector(
@@ -777,6 +787,9 @@ fetch(productsURL)
       });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 072d7761d9bf401ee4a7a5ddf73b5e6abf97f6c1
       //scroll
       const detailMenuSections = document.querySelectorAll(
         "#detail-headers, #reviews__counters, #reviews__contacts, #detail__delivery, #detail__product-list"
@@ -838,8 +851,11 @@ fetch(productsURL)
       //   );
       //   form.addEventListener("submit", setCartHandler);
       // };
+<<<<<<< HEAD
 =======
 >>>>>>> origin/feature-js
+=======
+>>>>>>> 072d7761d9bf401ee4a7a5ddf73b5e6abf97f6c1
       // // cartLocalStorage
       // let setCartProducts =
       //   JSON.parse(localStorage.getItem("setCartProducts")) || [];
@@ -917,6 +933,7 @@ fetch(productsURL)
         if (existingProductIndex > -1) {
           // 기존 제품이 있으면 수량과 가격 업데이트
 <<<<<<< HEAD
+<<<<<<< HEAD
           setCartProducts[existingProductIndex].quan += cartProduct.quan;
           setCartProducts[existingProductIndex].sumPrice +=
             cartProduct.sumPrice;
@@ -928,6 +945,9 @@ fetch(productsURL)
           console.log(existingProductQuan);
           setCartProducts[existingProductIndex].quan += cartProduct.quan;
 >>>>>>> origin/feature-js
+=======
+          setCartProducts[existingProductIndex].quan += cartProduct.quan;
+>>>>>>> 072d7761d9bf401ee4a7a5ddf73b5e6abf97f6c1
         } else {
           // 기존 제품이 없으면 새로 추가
           setCartProducts.push(cartProduct);
@@ -940,6 +960,32 @@ fetch(productsURL)
         ".detail__right-box .detail__main-contentsbox-select > form"
       );
       form.addEventListener("submit", setCartHandler);
+
+      // option dropdown Evt
+      let optionDropDownBtn = document.querySelector(
+        ".detail__main-contentsbox-brand > span"
+      );
+      const boxBrandSpan = document.querySelector(
+        ".detail__right-box .detail__main-contentsbox-brand > span"
+      );
+      optionDropDownBtn.addEventListener("click", () => {
+        const detailRightBox = document.querySelector(".detail__right-box");
+
+        if (detailRightBox.classList.contains("close")) {
+          detailRightBox.classList.remove("close");
+          boxBrandSpan.innerHTML = `
+          구매하기 
+          <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+          `;
+        } else {
+          detailRightBox.classList.add("close");
+          console.log("h2");
+          boxBrandSpan.innerHTML = `
+          구매하기 
+          <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
+          `;
+        }
+      });
     };
 
     // 페이지 이동

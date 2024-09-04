@@ -136,6 +136,10 @@ ul {
   list-style: none;
 }
 
+ul li::marker {
+  content: "";
+}
+
 blockquote,
 q {
   quotes: none;
@@ -1485,13 +1489,19 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
   padding-bottom: 30px;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 072d7761d9bf401ee4a7a5ddf73b5e6abf97f6c1
 body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form {
   position: relative;
   width: 100%;
   height: 100%;
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/feature-js
+=======
+>>>>>>> 072d7761d9bf401ee4a7a5ddf73b5e6abf97f6c1
 body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form .detail__main-contentsbox-selects {
   display: flex;
   flex-direction: column;
@@ -1512,6 +1522,9 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
   cursor: pointer;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 072d7761d9bf401ee4a7a5ddf73b5e6abf97f6c1
 body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form .detail__main-contentsbox-btns {
   padding: 10px 0px 10px 0px;
   bottom: 20px;
@@ -1519,9 +1532,12 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
   background-color: #fff;
 }
 body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form .detail__main-contentsbox-btns h3 {
+<<<<<<< HEAD
 =======
 body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form h3 {
 >>>>>>> origin/feature-js
+=======
+>>>>>>> 072d7761d9bf401ee4a7a5ddf73b5e6abf97f6c1
   font-family: "Pretendard-Bold";
   font-size: 14px;
   font-style: bold;
@@ -1534,10 +1550,14 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
   color: #101010;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form .detail__main-contentsbox-btns h3 > span {
 =======
 body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form h3 > span {
 >>>>>>> origin/feature-js
+=======
+body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form .detail__main-contentsbox-btns h3 > span {
+>>>>>>> 072d7761d9bf401ee4a7a5ddf73b5e6abf97f6c1
   font-family: "Pretendard-Bold";
   font-size: 18px;
   font-style: bold;
@@ -1546,11 +1566,15 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
   letter-spacing: -0.54px;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 072d7761d9bf401ee4a7a5ddf73b5e6abf97f6c1
 body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form .detail__main-contentsbox-btns div {
   display: flex;
   justify-content: space-between;
 }
 body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form .detail__main-contentsbox-btns div button {
+<<<<<<< HEAD
 =======
 body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form > div {
   display: flex;
@@ -1558,6 +1582,8 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
 }
 body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form > div button {
 >>>>>>> origin/feature-js
+=======
+>>>>>>> 072d7761d9bf401ee4a7a5ddf73b5e6abf97f6c1
   padding-top: 2px;
   border: 2px solid #ff6d00;
   outline: none;
@@ -1574,16 +1600,22 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
   letter-spacing: -0.54px;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 072d7761d9bf401ee4a7a5ddf73b5e6abf97f6c1
 body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form .detail__main-contentsbox-btns div .select-cart-btn {
   color: #ff6d00;
 }
 body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form .detail__main-contentsbox-btns div .select-buy-btn {
+<<<<<<< HEAD
 =======
 body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form > div .select-cart-btn {
   color: #ff6d00;
 }
 body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form > div .select-buy-btn {
 >>>>>>> origin/feature-js
+=======
+>>>>>>> 072d7761d9bf401ee4a7a5ddf73b5e6abf97f6c1
   background-color: #ff6d00;
   color: #fff;
 }
@@ -2139,6 +2171,9 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
   }
   body #createDetail .detail__right-box {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 072d7761d9bf401ee4a7a5ddf73b5e6abf97f6c1
     padding-right: 15px;
     padding-bottom: 0px;
     padding-left: 15px;
@@ -2150,11 +2185,12 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
     left: 0px;
     z-index: 10;
     width: 100%;
-    max-height: 32px;
+    max-height: 344px;
     background-color: #fff;
     transition: 0.4s;
     cursor: pointer;
   }
+<<<<<<< HEAD
   body #createDetail .detail__right-box.open {
     max-height: 344px;
 =======
@@ -2166,6 +2202,10 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
     padding-bottom: 0px;
     background-color: #fff;
 >>>>>>> origin/feature-js
+=======
+  body #createDetail .detail__right-box.close {
+    max-height: 32px;
+>>>>>>> 072d7761d9bf401ee4a7a5ddf73b5e6abf97f6c1
   }
   body #createDetail .detail__right-box .detail__main-contentsbox {
     margin-bottom: 0px;
@@ -2173,6 +2213,9 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
     padding-bottom: 5px;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 072d7761d9bf401ee4a7a5ddf73b5e6abf97f6c1
   body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-brand > span {
     display: block;
     z-index: 20;
@@ -2194,9 +2237,12 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
     width: 100%;
     min-width: 100%;
     max-width: 100%;
+<<<<<<< HEAD
 =======
   body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select {
     padding-bottom: 0px;
 >>>>>>> origin/feature-js
+=======
+>>>>>>> 072d7761d9bf401ee4a7a5ddf73b5e6abf97f6c1
   }
 }

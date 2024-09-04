@@ -1,0 +1,19 @@
+@import "../config/fonts.scss";
+@import "../config/reset.scss";
+@import "../config/colors.scss";
+@import "../layout/layout.scss";
+@import "../config/image.scss";
+
+.list-wrapper {
+  @include width_inner;
+  ul,
+  li {
+    list-style: none;
+  }
+}
+
+@media (max-width: 1384px) {
+  .list-wrapper {
+    @include width_full;
+  }
+}

@@ -13,15 +13,17 @@ let productsData = [];
 
 // 배너 닫기 기능
 if (bannerClose) {
-  bannerClose.addEventListener("click", () => {
+  bannerClose.addEventListener("click", function () {
     banner.style.display = "none";
   });
 }
 
 // 제품 데이터 가져오기
 fetch(productsURL)
-  .then((response) => response.json())
-  .then((data) => {
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
     productsData = data.products;
     renderCartItems();
   });
@@ -45,7 +47,7 @@ function renderCartItems() {
   let totalDiscountedPrice = 0;
   let totalDiscountAmount = 0;
 
-  getCartProducts.forEach((product, index) => {
+  getCartProducts.forEach(function (product, index) {
     const {
       img,
       title,
@@ -59,16 +61,12 @@ function renderCartItems() {
 
     const originalTotalPrice = price * quan;
     const discountedTotalPrice = discountingPrice * quan;
-    const discountAmount = discountedTotalPrice;
 
-    // 장바구니 항목 HTML 생성
     const cartProductHTML = `
       <ul class="product">
         <li class="custom__box">
-          <div>
             <input type="checkbox" id="custom__checkbox_${index}" class="custom__checkbox" data-index="${index}" />
             <label for="custom__checkbox_${index}" class="select"></label>
-          </div>
         </li>
         <li class="img">
           <div><img src="${img}" alt="${title}"/></div>
@@ -108,11 +106,10 @@ function renderCartItems() {
     productInfoCart.insertAdjacentHTML("beforeend", cartProductHTML);
 
     totalOriginalPrice += originalTotalPrice;
-    totalDiscountAmount += discountAmount;
+    totalDiscountAmount += discountedTotalPrice;
     totalDiscountedPrice = totalOriginalPrice - totalDiscountAmount;
   });
 
-  // aside 정보 업데이트
   updateAsideValues(
     totalOriginalPrice,
     totalDiscountedPrice,
@@ -124,11 +121,12 @@ function renderCartItems() {
   updateSelectedCount(); // 선택된 항목 개수 업데이트
 }
 
+// 선택된 항목 개수 업데이트
 function updateSelectedCount() {
   const selectedCheckboxes = document.querySelectorAll(
     ".custom__checkbox:checked"
   ).length;
-  const displayCount = Math.max(0, selectedCheckboxes - 1);
+  const displayCount = Math.max(0, selectedCheckboxes);
   if (itemCountElement) {
     itemCountElement.innerText = `(${displayCount})`;
   }
@@ -196,14 +194,15 @@ function updateAsideValues(
   totalDiscountedPrice,
   totalDiscountAmount
 ) {
-  const asideContainer = document.querySelector("aside");
-  if (asideContainer) {
-    const finalAmount = totalDiscountedPrice;
-    const discountSum = totalDiscountAmount;
-    const targetAmount = 20000;
-    const shortage = targetAmount - finalAmount;
+  const finalAmount = totalDiscountedPrice;
+  const discountSum = totalDiscountAmount;
+  const targetAmount = 20000;
+  const shortage = targetAmount - finalAmount;
 
-    asideContainer.innerHTML = `
+  const asideContainers = document.querySelectorAll(".mobile-aside, .pc-aside");
+
+  asideContainers.forEach(function (container) {
+    container.innerHTML = `
       <div class="checkout__summary">
         <div class="summary__item">
           <ul>
@@ -213,14 +212,14 @@ function updateAsideValues(
             </li>
             <li class="product__sale">
               <span>상품할인금액</span>
-              <span class="discount"> - ￦${discountSum.toLocaleString()}</span>
+              <span class="discount">- ￦${discountSum.toLocaleString()}</span>
             </li>
             <li class="additional__info" id="additional__info" ${
               shortage > 0
                 ? 'style="display: block;"'
                 : 'style="display: none;"'
             }>
-              ￦${shortage.toLocaleString()} 추가주문 시,<span>구매가능</span>
+              ￦${shortage.toLocaleString()} 추가주문 시, 구매가능
             </li>
           </ul>
         </div>
@@ -260,42 +259,42 @@ function updateAsideValues(
         </div>
       </div>
     `;
-
-    const checkoutButton = document.querySelector("#checkout__button");
+    const checkoutButton = container.querySelector("#checkout__button");
     if (checkoutButton) {
       checkoutButton.style.cursor = shortage > 0 ? "not-allowed" : "pointer";
-      checkoutButton.addEventListener("click", () => {
+      checkoutButton.addEventListener("click", function () {
         if (shortage <= 0) {
           window.location.href =
             "http://127.0.0.1:5501/html/components/Payment.html";
         }
       });
     }
-  }
+  });
 }
 
 // 개별 체크박스 리스너 추가
 function addCheckboxListeners() {
   productCheckboxes = document.querySelectorAll(".custom__checkbox");
-  productCheckboxes.forEach((checkbox) => {
-    checkbox.addEventListener("change", () => {
+  productCheckboxes.forEach(function (checkbox) {
+    checkbox.addEventListener("change", function () {
       handleCheckboxChange();
       updateSelectedCount();
       updateSelectAllCheckbox();
     });
   });
 }
-
 // 체크박스 상태 변경 처리
 function handleCheckboxChange() {
   const selectedCheckboxes = document.querySelectorAll(
     ".custom__checkbox:checked"
   );
-  const productIndexes = Array.from(selectedCheckboxes).map((checkbox) =>
-    parseInt(checkbox.getAttribute("data-index"))
-  );
+  const productIndexes = Array.from(selectedCheckboxes).map(function (
+    checkbox
+  ) {
+    return parseInt(checkbox.getAttribute("data-index"));
+  });
 
-  getCartProducts.forEach((product, index) => {
+  getCartProducts.forEach(function (product, index) {
     product.checked = productIndexes.includes(index);
   });
 
@@ -307,7 +306,9 @@ function handleCheckboxChange() {
 function updateSelectAllCheckbox() {
   const allChecked =
     productCheckboxes.length > 0 &&
-    Array.from(productCheckboxes).every((checkbox) => checkbox.checked);
+    Array.from(productCheckboxes).every(function (checkbox) {
+      return checkbox.checked;
+    });
   if (selectAllCheckbox) {
     selectAllCheckbox.checked = allChecked;
   }
@@ -315,12 +316,12 @@ function updateSelectAllCheckbox() {
 
 // 전체 선택 체크박스 클릭 처리
 if (selectAllCheckbox) {
-  selectAllCheckbox.addEventListener("change", () => {
+  selectAllCheckbox.addEventListener("change", function () {
     const isChecked = selectAllCheckbox.checked;
-    productCheckboxes.forEach((checkbox) => {
+    productCheckboxes.forEach(function (checkbox) {
       checkbox.checked = isChecked;
     });
-    getCartProducts.forEach((product) => {
+    getCartProducts.forEach(function (product) {
       product.checked = isChecked;
     });
     localStorage.setItem("setCartProducts", JSON.stringify(getCartProducts));
@@ -330,8 +331,8 @@ if (selectAllCheckbox) {
 
 // 수량 증가/감소 및 삭제 이벤트 처리
 function addEventListeners() {
-  document.querySelectorAll(".original-add").forEach((button) => {
-    button.addEventListener("click", (event) => {
+  document.querySelectorAll(".original-add").forEach(function (button) {
+    button.addEventListener("click", function (event) {
       const index = parseInt(event.target.getAttribute("data-index"));
       if (index >= 0) {
         getCartProducts[index].quan++;
@@ -344,8 +345,8 @@ function addEventListeners() {
     });
   });
 
-  document.querySelectorAll(".original-minus").forEach((button) => {
-    button.addEventListener("click", (event) => {
+  document.querySelectorAll(".original-minus").forEach(function (button) {
+    button.addEventListener("click", function (event) {
       const index = parseInt(event.target.getAttribute("data-index"));
       if (index >= 0 && getCartProducts[index].quan > 1) {
         getCartProducts[index].quan--;
@@ -358,9 +359,8 @@ function addEventListeners() {
     });
   });
 
-  // 개별 제품 삭제 이벤트 처리
-  document.querySelectorAll(".product__close i").forEach((icon) => {
-    icon.addEventListener("click", (event) => {
+  document.querySelectorAll(".product__close i").forEach(function (icon) {
+    icon.addEventListener("click", function (event) {
       const index = parseInt(event.target.getAttribute("data-index"));
       if (index >= 0) {
         getCartProducts.splice(index, 1);
@@ -377,14 +377,12 @@ function addEventListeners() {
     });
   });
 
-  // 선택된 항목 삭제 버튼 추가 및 이벤트 처리
   const deleteSelectedButton = document.querySelector(".delete-select");
   if (deleteSelectedButton) {
-    deleteSelectedButton.addEventListener("click", () => {
-      getCartProducts = getCartProducts.filter(
-        (product, index) =>
-          !document.querySelector(`#custom__checkbox_${index}`).checked
-      );
+    deleteSelectedButton.addEventListener("click", function () {
+      getCartProducts = getCartProducts.filter(function (product, index) {
+        return !document.querySelector(`#custom__checkbox_${index}`).checked;
+      });
       if (getCartProducts.length === 0) {
         localStorage.removeItem("setCartProducts");
       } else {
@@ -397,21 +395,22 @@ function addEventListeners() {
     });
   }
 
-  // 옵션 변경 모달 관련 이벤트 추가
-  document.querySelectorAll(".option").forEach((button) => {
-    button.addEventListener("click", (event) => {
+  document.querySelectorAll(".option").forEach(function (button) {
+    button.addEventListener("click", function (event) {
       const index = parseInt(event.target.getAttribute("data-index"));
       openModal(index);
     });
   });
 }
 
-// 모달창 열기 함수
+// 모달창 열기
 function openModal(index) {
   const optionModal = document.querySelector(".modal__box");
   const modalClose = optionModal.querySelector(".modal__close-box .close");
   const product = getCartProducts[index];
-  const productData = productsData.find((item) => item.id === product.id);
+  const productData = productsData.find(function (item) {
+    return item.id === product.id;
+  });
 
   const modalImg = optionModal.querySelector(".product__img img");
   const modalTitle = optionModal.querySelector(".product__info-title");
@@ -427,24 +426,17 @@ function openModal(index) {
     const existingDeliveryInfo = optionModal.querySelector(
       ".modal-delivery-info"
     );
-    if (existingDeliveryInfo) {
-      existingDeliveryInfo.remove();
-    }
+    if (existingDeliveryInfo) existingDeliveryInfo.remove();
 
-    const modalDelivery = `
-      <p class="modal-delivery-info" style="color:#007316">배송 확률: ${productData.details.deliveryProbability}</p>
-    `;
+    const modalDelivery = `<p class="modal-delivery-info" style="color:#007316">배송 확률: ${productData.details.deliveryProbability}</p>`;
     modalTitle.insertAdjacentHTML("afterend", modalDelivery);
   }
 
   const colorSelect = optionModal.querySelector("#color");
   const sizeSelect = optionModal.querySelector("#size");
 
-  colorSelect.innerHTML = "<option value='' disabled selected>색상</option>";
-  sizeSelect.innerHTML = "<option value='' disabled selected>사이즈</option>";
-
-  if (productData && productData.details.selectOptions.colors.options) {
-    productData.details.selectOptions.colors.options.forEach((color) => {
+  if (productData?.details?.selectOptions?.colors?.options) {
+    productData.details.selectOptions.colors.options.forEach(function (color) {
       const option = document.createElement("option");
       option.value = color;
       option.textContent = color;
@@ -452,8 +444,8 @@ function openModal(index) {
     });
   }
 
-  if (productData && productData.details.selectOptions.sizes.options) {
-    productData.details.selectOptions.sizes.options.forEach((size) => {
+  if (productData?.details?.selectOptions?.sizes?.options) {
+    productData.details.selectOptions.sizes.options.forEach(function (size) {
       const option = document.createElement("option");
       option.value = size;
       option.textContent = size;
@@ -461,11 +453,11 @@ function openModal(index) {
     });
   }
 
-  colorSelect.addEventListener("change", () => {
+  colorSelect.addEventListener("change", function () {
     modalColor.innerHTML = colorSelect.value;
   });
 
-  sizeSelect.addEventListener("change", () => {
+  sizeSelect.addEventListener("change", function () {
     modalSize.innerHTML = sizeSelect.value;
   });
 
@@ -485,15 +477,15 @@ function openModal(index) {
   const modalAddBtn = optionModal.querySelector(".modal-add");
   const modalMinusBtn = optionModal.querySelector(".modal-minus");
 
-  modalAddBtn.addEventListener("click", () => {
+  modalAddBtn.addEventListener("click", function () {
     updateModalQuantity(1, index);
   });
 
-  modalMinusBtn.addEventListener("click", () => {
+  modalMinusBtn.addEventListener("click", function () {
     updateModalQuantity(-1, index);
   });
 
-  modalClose.addEventListener("click", () => {
+  modalClose.addEventListener("click", function () {
     optionModal.classList.remove("active");
     document.body.style.overflow = "auto";
   });
@@ -501,7 +493,7 @@ function openModal(index) {
   const confirmBtn = optionModal.querySelector(
     'input[type="submit"][value="확인"]'
   );
-  confirmBtn.addEventListener("click", () => {
+  confirmBtn.addEventListener("click", function () {
     const updatedProduct = {
       ...product,
       selectColor: colorSelect.value,
@@ -509,14 +501,15 @@ function openModal(index) {
       quan: parseInt(modalAmount.value),
     };
 
-    const existingProductIndex = getCartProducts.findIndex(
-      (item) =>
+    const existingProductIndex = getCartProducts.findIndex(function (item) {
+      return (
         item.id === updatedProduct.id &&
         item.selectColor.toLowerCase().trim() ===
           updatedProduct.selectColor.toLowerCase().trim() &&
         item.selectSize.toLowerCase().trim() ===
           updatedProduct.selectSize.toLowerCase().trim()
-    );
+      );
+    });
 
     if (existingProductIndex !== -1 && existingProductIndex !== index) {
       getCartProducts[existingProductIndex].quan += updatedProduct.quan;
@@ -576,11 +569,11 @@ function updateLocalStorage() {
 // 장바구니가 비어 있을 때 초기 처리
 function checkIfCartIsEmpty() {
   if (getCartProducts.length === 0) {
-    resetAsideValues(); // 장바구니가 비어 있을 때 aside를 초기화
-    selectAllCheckbox.disabled = true; // 장바구니가 비어 있을 때 전체선택 체크박스 비활성화
+    resetAsideValues();
+    selectAllCheckbox.disabled = true;
   } else {
-    renderCartItems(); // 장바구니가 비어있지 않다면 항목을 렌더링
-    selectAllCheckbox.disabled = false; // 장바구니에 항목이 있으면 전체선택 체크박스 활성화
+    renderCartItems();
+    selectAllCheckbox.disabled = false;
   }
 }
 

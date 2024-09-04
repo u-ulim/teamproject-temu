@@ -1,4 +1,5 @@
 // product-list.html 파일을 로드하여 #product 안에 삽입
+console.log("hi");
 const productListLoad = () => {
   const productList = document.getElementById("product-list");
   fetch("../../html/components/product-list.html")
@@ -11,5 +12,3 @@ const productListLoad = () => {
 };
 
 productListLoad();
-
-console.log(createDetail)

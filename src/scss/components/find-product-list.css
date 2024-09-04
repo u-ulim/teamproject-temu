@@ -166,30 +166,30 @@ table {
   background-size: cover;
 }
 
-.product-lists {
+.find-product-lists {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
 }
-.product-lists .product-list {
+.find-product-lists .product-list {
   margin-bottom: 60px;
   width: 227px;
   cursor: pointer;
 }
-.product-lists .product-list:hover .product-list__thumb-box .product-list__thumb {
+.find-product-lists .product-list:hover .product-list__thumb-box .product-list__thumb {
   transform: scale(1.1);
   z-index: -10;
   position: relative;
 }
-.product-lists .product-list .product-list__thumb-box {
+.find-product-lists .product-list .product-list__thumb-box {
   margin-bottom: 10px;
   overflow: hidden;
   width: 227px;
   height: 227px;
   border-radius: 8px;
 }
-.product-lists .product-list .product-list__thumb-box .product-list__thumb {
+.find-product-lists .product-list .product-list__thumb-box .product-list__thumb {
   width: 100%;
   height: 100%;
   transition: all 0.3s;
@@ -197,7 +197,7 @@ table {
   object-fit: cover;
   object-position: center;
 }
-.product-lists .product-list .product-list__title {
+.find-product-lists .product-list .product-list__title {
   display: -webkit-box;
   margin-bottom: 10px;
   overflow: hidden;
@@ -211,36 +211,36 @@ table {
   line-height: 22px;
   letter-spacing: -0.42px;
 }
-.product-lists .product-list .product-list__counters {
+.find-product-lists .product-list .product-list__counters {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.product-lists .product-list .product-list__counters > div {
+.find-product-lists .product-list .product-list__counters > div {
   display: flex;
   gap: 5px;
   align-items: center;
 }
-.product-lists .product-list .product-list__counters > div .product-list__discount {
+.find-product-lists .product-list .product-list__counters > div .product-list__discount {
   font-family: "Pretendard-Bold";
   font-size: 22px;
-  font-style: bold;
-  font-weight: 900;
+  font-style: normal;
+  font-weight: 700;
   line-height: 30px;
   letter-spacing: -0.66px;
   display: flex;
   color: #ff6d00;
 }
-.product-lists .product-list .product-list__counters > div .product-list__price {
+.find-product-lists .product-list .product-list__counters > div .product-list__price {
   font-family: "Pretendard-Bold";
   font-size: 22px;
-  font-style: bold;
-  font-weight: 900;
+  font-style: normal;
+  font-weight: 700;
   line-height: 30px;
   letter-spacing: -0.66px;
   color: #292828;
 }
-.product-lists .product-list .product-list__counters .product-list__cart-ico {
+.find-product-lists .product-list .product-list__counters .product-list__cart-ico {
   width: 45px;
   height: 35px;
   background-image: url("../../../assets/images/products/cart-ico.svg");
@@ -250,10 +250,10 @@ table {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.product-lists .product-list .product-list__counters .product-list__cart-ico:hover {
+.find-product-lists .product-list .product-list__counters .product-list__cart-ico:hover {
   background-image: url("../../../assets/images/products/cart-fill-ico.svg");
 }
-.product-lists .product-list .product-list__reviews {
+.find-product-lists .product-list .product-list__reviews {
   display: flex;
   align-items: center;
   margin-bottom: 5px;
@@ -263,7 +263,7 @@ table {
   line-height: 22px;
   letter-spacing: -0.42px;
 }
-.product-lists .product-list .product-list__reviews .product-list__star {
+.find-product-lists .product-list .product-list__reviews .product-list__star {
   width: 20px;
   height: 20px;
   background-image: url("../../../assets/images/products/product-list__star.svg");
@@ -272,18 +272,18 @@ table {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.product-lists .product-list .product-list__reviews .product-list__rating {
+.find-product-lists .product-list .product-list__reviews .product-list__rating {
   margin-right: 5px;
   color: #009e95;
 }
-.product-lists .product-list .product-list__reviews .product-list__review-text {
+.find-product-lists .product-list .product-list__reviews .product-list__review-text {
   margin-right: 5px;
   color: #6a6a6a;
 }
-.product-lists .product-list .product-list__reviews .product-list__review-count {
+.find-product-lists .product-list .product-list__reviews .product-list__review-count {
   color: #6a6a6a;
 }
-.product-lists .product-list .product-list__solds {
+.find-product-lists .product-list .product-list__solds {
   font-family: "Pretendard-Regular";
   font-size: 12px;
   font-style: normal;
@@ -292,86 +292,86 @@ table {
   display: flex;
   align-items: center;
 }
-.product-lists .product-list .product-list__solds .product-list__solds-out {
+.find-product-lists .product-list .product-list__solds .product-list__solds-out {
   margin-right: 5px;
   padding: 2px 6px 0px 6px;
   background-color: #ff6d00;
   color: #fff;
   border-radius: 8px;
 }
-.product-lists .product-list .product-list__solds .product-list__quantity {
+.find-product-lists .product-list .product-list__solds .product-list__quantity {
   color: #ff6d00;
 }
 
 @media (max-width: 1384px) {
-  .product-lists {
+  .find-product-lists {
     width: 100%;
   }
-  .product-lists .product-list {
+  .find-product-lists .product-list {
     margin-bottom: 20px;
     overflow: hidden;
   }
-  .product-lists .product-list .product-list__thumb-box {
+  .find-product-lists .product-list .product-list__thumb-box {
     width: 100%;
   }
-  .product-lists .product-list .product-list__title {
+  .find-product-lists .product-list .product-list__title {
     width: 100%;
   }
 }
 @media (max-width: 1000px) {
-  .product-lists {
+  .find-product-lists {
     width: 100%;
   }
-  .product-lists .product-list {
+  .find-product-lists .product-list {
     margin-bottom: 0px;
     width: 49%;
     height: 50vw;
     overflow: hidden;
   }
-  .product-lists .product-list .product-list__thumb-box {
+  .find-product-lists .product-list .product-list__thumb-box {
     width: 100%;
     height: 50%;
   }
-  .product-lists .product-list .product-list__title {
+  .find-product-lists .product-list .product-list__title {
     width: 100%;
   }
 }
 @media (max-width: 768px) {
-  .product-lists {
+  .find-product-lists {
     width: 100%;
   }
-  .product-lists .product-list {
+  .find-product-lists .product-list {
     margin-bottom: 0px;
     overflow: hidden;
     width: 48%;
     height: 80vw;
   }
-  .product-lists .product-list .product-list__thumb-box {
+  .find-product-lists .product-list .product-list__thumb-box {
     width: 100%;
     height: 60%;
   }
-  .product-lists .product-list .product-list__title {
+  .find-product-lists .product-list .product-list__title {
     width: 100%;
   }
 }
 @media (max-width: 390px) {
-  .product-lists {
+  .find-product-lists {
     width: 100%;
   }
-  .product-lists .product-list {
+  .find-product-lists .product-list {
     margin-bottom: 40px;
     overflow: hidden;
     width: 45%;
     height: 100%;
   }
-  .product-lists .product-list .product-list__thumb-box {
+  .find-product-lists .product-list .product-list__thumb-box {
     width: 100%;
     height: 40%;
   }
-  .product-lists .product-list .product-list__thumb-box .product-list__thumb {
+  .find-product-lists .product-list .product-list__thumb-box .product-list__thumb {
     height: 160px;
   }
-  .product-lists .product-list .product-list__title {
+  .find-product-lists .product-list .product-list__title {
     width: 100%;
   }
 }
