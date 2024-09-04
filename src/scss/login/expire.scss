@@ -7,7 +7,7 @@
 .wrapper {
   position: relative;
   height: 100vh;
-  @include width_inner;
+  @include width_full;
   .mark__inner {
     display: flex;
     height: 100%;
@@ -114,8 +114,6 @@
         display: flex;
         gap: 60px;
         margin-bottom: 13px;
-        // border: 1px solid #f00;
-        padding-top: 50px;
         width: 100%;
         font-size: 14px;
         cursor: pointer;

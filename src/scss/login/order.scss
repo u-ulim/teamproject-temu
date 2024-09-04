@@ -5,7 +5,7 @@
 @import "../layout/layout.scss";
 
 .wrapper {
-  @include width_inner;
+  @include width_full;
   height: 100vh;
   .mark__inner {
     display: flex;
@@ -113,7 +113,6 @@
       display: flex;
       justify-content: center;
       flex-direction: column;
-      padding: 55px 40px;
       .order {
         width: 60px;
         height: 35px;

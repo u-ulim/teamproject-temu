@@ -7,7 +7,7 @@
 // WRAPPER
 .wrapper {
   height: 100vh;
-  @include width_inner;
+  @include width_full;
   .mark__inner {
     display: flex;
     height: 100%;
@@ -19,7 +19,7 @@
       > ul {
         .home {
           gap: 5px;
-          padding: 20px 18px;
+          padding: 0px 18px;
           @include text_XS_12;
         }
         > li {
@@ -100,7 +100,6 @@
           }
           .title {
             display: flex;
-            // border: 1px solid red;
             padding: 10px 10px;
             @include text_S_14;
             &:hover {
@@ -120,7 +119,6 @@
           display: flex;
           gap: 60px;
           margin-bottom: 20px;
-          padding-top: 50px;
           width: 100%;
           font-size: 14px;
           color: map-get($color, color-Neutrals-Grey-800);
