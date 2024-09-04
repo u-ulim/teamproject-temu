@@ -858,8 +858,9 @@ fetch(productsURL)
       //   console.log(setCartProducts);
       //   localStorageSave();
       // };
-      // cartLocalStorage
 
+
+      // cartLocalStorage
       let setCartProducts =
         JSON.parse(localStorage.getItem("setCartProducts")) || [];
 
