@@ -404,6 +404,109 @@ productListLoad().then(() => {
         // 제품이 로드되면 장바구니 상태에 따라 아이콘 복원
         restoreCartIcons();
         /***************** */
+
+        // //&&&&&&&&&&&&&&///
+        // // LocalStorage에서 장바구니 상태 가져오기
+        // let setCartProducts =
+        //   JSON.parse(localStorage.getItem("setCartProducts")) || [];
+
+        // // LocalStorage에 장바구니 상태 저장
+        // const localStorageSave = () => {
+        //   localStorage.setItem(
+        //     "setCartProducts",
+        //     JSON.stringify(setCartProducts)
+        //   );
+        // };
+
+        // // 아이템이 장바구니에 있는지 확인하는 함수
+        // const isInCart = (productId, color, size) => {
+        //   return setCartProducts.some(
+        //     (item) =>
+        //       item.id === productId &&
+        //       item.selectColor === color &&
+        //       item.selectSize === size
+        //   );
+        // };
+
+        // // 장바구니에 상품을 추가하거나 제거하는 함수
+        // const toggleCartItem = (product) => {
+        //   const selectColorElement = document.querySelector("#colors");
+        //   const selectSizeElement = document.querySelector("#sizes");
+
+        //   // 색상과 사이즈 요소가 존재하는지 확인하고 값 설정
+        //   const selectColor = selectColorElement
+        //     ? selectColorElement.value
+        //     : "defaultColor";
+        //   const selectSize = selectSizeElement
+        //     ? selectSizeElement.value
+        //     : "defaultSize";
+
+        //   // 수량 요소를 찾아 기본값으로 1을 설정 (quan이 정의되지 않았을 때 기본값 1 사용)
+        //   const quantity = typeof quan !== "undefined" ? Number(quan) : 1;
+
+        //   const cartProduct = {
+        //     id: product.id,
+        //     title: product.title,
+        //     price: product.price,
+        //     quan: quantity,
+        //     sumPrice: product.price * quantity,
+        //     img: product.thumbnail,
+        //     discountRate: product.discountRate,
+        //     beforePrice: product.details.beforePrice,
+        //     discountingPrice: product.details.beforePrice - product.price,
+        //     discountedPrice:
+        //       (product.details.beforePrice - product.price) * quantity,
+        //     selectColor, // 선택된 색상
+        //     selectSize, // 선택된 사이즈
+        //   };
+
+        //   // 장바구니에서 해당 제품이 있는지 확인
+        //   const existingProductIndex = setCartProducts.findIndex(
+        //     (item) =>
+        //       item.id === cartProduct.id &&
+        //       item.selectColor === cartProduct.selectColor &&
+        //       item.selectSize === cartProduct.selectSize
+        //   );
+
+        //   if (existingProductIndex > -1) {
+        //     // 이미 장바구니에 있는 경우 -> 제거 (alert는 띄우지 않음)
+        //     setCartProducts.splice(existingProductIndex, 1);
+        //   } else {
+        //     // 장바구니에 없는 경우 -> 추가
+        //     setCartProducts.push(cartProduct);
+
+        //     // 아이템이 처음 장바구니에 추가되었을 때만 알림 표시
+        //     alert("장바구니에 담겼습니다!");
+        //   }
+
+        //   // LocalStorage에 저장
+        //   localStorageSave();
+        // };
+
+        // // 이벤트 핸들러 추가 (form submit 대신 버튼 클릭 시 장바구니 처리)
+        // document
+        //   .querySelectorAll(".product-list__cart-ico")
+        //   .forEach((iconElement) => {
+        //     // 이미 등록된 이벤트 핸들러가 있다면 중복 방지를 위해 삭제
+        //     iconElement.removeEventListener("click", handleCartClick);
+
+        //     // 새로운 클릭 이벤트 핸들러 추가
+        //     iconElement.addEventListener("click", handleCartClick);
+        //   });
+
+        // function handleCartClick() {
+        //   const productId = this.getAttribute("data-product-id");
+
+        //   // 제품 배열에서 productId에 맞는 제품 찾기
+        //   const product = data.products.find((item) => item.id === productId);
+
+        //   if (product) {
+        //     toggleCartItem(product);
+        //   } else {
+        //     console.error("Product not found for productId:", productId);
+        //   }
+        // }
+        // //&&&&&&&&&&&&&&///
       };
 
       const importData = () => {

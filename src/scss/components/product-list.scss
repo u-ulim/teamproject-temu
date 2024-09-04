@@ -72,9 +72,9 @@
         background-image: url("../../../assets/images/products/cart-ico.svg");
         transition: all 0.3s;
         @include background_cover;
-        &:hover {
-          background-image: url("../../../assets/images/products/cart-fill-ico.svg");
-        }
+        // &:hover {
+        //   background-image: url("../../../assets/images/products/cart-fill-ico.svg");
+        // }
         &.active {
           background-image: url("../../../assets/images/products/cart-fill-ico.svg");
         }

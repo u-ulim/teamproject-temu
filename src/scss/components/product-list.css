@@ -250,9 +250,6 @@ table {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.product-lists .product-list .product-list__counters .product-list__cart-ico:hover {
-  background-image: url("../../../assets/images/products/cart-fill-ico.svg");
-}
 .product-lists .product-list .product-list__counters .product-list__cart-ico.active {
   background-image: url("../../../assets/images/products/cart-fill-ico.svg");
 }
