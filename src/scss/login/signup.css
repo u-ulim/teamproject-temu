@@ -310,6 +310,9 @@ table {
   margin-bottom: 8px;
   color: #0a8800;
 }
+#wrapper .container #info .info__password .success__password span {
+  margin-left: 3px;
+}
 #wrapper .container #info .info__password__check .password__check {
   font-family: "Pretendard-Bold";
   font-size: 16px;
@@ -366,6 +369,9 @@ table {
   margin-bottom: 8px;
   color: #0a8800;
 }
+#wrapper .container #info .info__password__check .password__success span {
+  margin-left: 3px;
+}
 #wrapper .container #info .info__email .user__email {
   font-family: "Pretendard-Bold";
   font-size: 16px;
@@ -421,6 +427,9 @@ table {
   margin-bottom: 8px;
   color: #0a8800;
 }
+#wrapper .container #info .info__email .email__success span {
+  margin-left: 3px;
+}
 #wrapper .container #info .info__email .email__fail {
   font-family: "Pretendard-Regular";
   font-size: 14px;
@@ -457,7 +466,6 @@ table {
   flex-direction: column;
   margin-bottom: 10px;
   padding: 5px 20px;
-  border: 1px solid red;
   border: 1px solid #b5b5b5;
   width: 100%;
   border-radius: 3px;

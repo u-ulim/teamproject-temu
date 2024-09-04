@@ -164,9 +164,7 @@ table {
 
 .wrapper {
   height: 100vh;
-  width: 1384px;
-  padding: 0px 15px;
-  margin: 0 auto;
+  width: 100%;
 }
 .wrapper .mark__inner {
   display: flex;
@@ -178,7 +176,7 @@ table {
 }
 .wrapper .mark__inner .leftmenu > ul .home {
   gap: 5px;
-  padding: 20px 18px;
+  padding: 0px 18px;
   font-family: "Pretendard-Regular";
   font-size: 12px;
   font-style: normal;
@@ -297,7 +295,6 @@ table {
   display: flex;
   gap: 60px;
   margin-bottom: 20px;
-  padding-top: 50px;
   width: 100%;
   font-size: 14px;
   color: #292828;

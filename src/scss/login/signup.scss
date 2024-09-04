@@ -110,6 +110,9 @@
           display: none;
           margin-bottom: 8px;
           color: map-get($color-system, info-color);
+          span {
+            margin-left: 3px;
+          }
         }
       }
       .info__password__check {
@@ -153,6 +156,9 @@
           display: none;
           margin-bottom: 8px;
           color: map-get($color-system, info-color);
+          span {
+            margin-left: 3px;
+          }
         }
       }
       .info__email {
@@ -195,6 +201,9 @@
           display: none;
           margin-bottom: 8px;
           color: map-get($color-system, info-color);
+          span {
+            margin-left: 3px;
+          }
         }
         .email__fail {
           @include text_S_14;
@@ -224,7 +233,6 @@
           flex-direction: column;
           margin-bottom: 10px;
           padding: 5px 20px;
-          border: 1px solid red;
           border: 1px solid map-get($color, color-Neutrals-Grey-300);
           width: 100%;
           border-radius: 3px;
