@@ -169,9 +169,7 @@ table {
 .wrapper {
   position: relative;
   height: 100vh;
-  width: 1384px;
-  padding: 0px 15px;
-  margin: 0 auto;
+  width: 100%;
 }
 .wrapper .mark__inner {
   display: flex;
@@ -298,7 +296,6 @@ table {
   display: flex;
   gap: 60px;
   margin-bottom: 13px;
-  padding-top: 50px;
   width: 100%;
   font-size: 14px;
   cursor: pointer;
@@ -383,12 +380,10 @@ table {
 @media screen and (max-width: 768px) {
   .wrapper {
     width: 100%;
-    height: 100vh;
     width: 100%;
   }
   .wrapper .mark__inner {
     display: flex;
-    height: 100%;
   }
   .wrapper .mark__inner .leftmenu {
     display: flex;
@@ -426,48 +421,10 @@ table {
   }
 }
 @media screen and (max-width: 390px) {
-  .wrapper {
-    width: 100%;
-    width: 390px;
-    height: 100vh;
-  }
   .wrapper .mark__inner {
     display: flex;
   }
   .wrapper .mark__inner .leftmenu {
     display: none;
-  }
-  .wrapper .mark__inner .contents .text {
-    gap: 30px;
-  }
-  .wrapper .mark__inner .contents .coupon__code {
-    gap: 10px;
-  }
-  .wrapper .mark__inner .contents .coupon__code .code {
-    width: 290px;
-  }
-  .wrapper .mark__inner .contents .coupon__code button {
-    width: 60px;
-    height: 40px;
-  }
-  .wrapper .mark__inner .box .icon .text__box {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-  }
-  .wrapper .mark__inner .box .icon .text__box span {
-    font-family: "Pretendard-Regular";
-    font-size: 12px;
-    font-style: normal;
-    line-height: 18px;
-    letter-spacing: -0.36px;
-  }
-  .wrapper .mark__inner .box .icon .text__box p {
-    font-family: "Pretendard-Regular";
-    font-size: 12px;
-    font-style: normal;
-    line-height: 18px;
-    letter-spacing: -0.36px;
   }
 }

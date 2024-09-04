@@ -6,8 +6,11 @@
 
 .list-wrapper {
   @include width_inner;
+
   h2 {
-    
+    @include text_B_S_14;
+    color: map-get($color, color-Neutrals-Grey-600);
+    margin-bottom: 12px;
   }
   ul,
   li {

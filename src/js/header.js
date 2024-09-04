@@ -6,6 +6,18 @@ const headerLoad = () => {
     .then((data) => {
       header.innerHTML = data;
 
+      const savedSearchQuery = localStorage.getItem("searchQuery");
+      console.log("헤더 로드 완료");
+      console.log("저장된 검색어:", savedSearchQuery);
+
+      let searchInput = document.querySelector(".nav__input-wrapper input");
+      console.log("검색창 요소:", searchInput);
+
+      // 저장된 검색어가 있을 경우 input에 값 넣기
+      if (savedSearchQuery && searchInput) {
+        searchInput.value = savedSearchQuery;
+      }
+
       // header scroll Evt
       const headerScrollEvt = () => {
         let lastScrollY = window.scrollY;
@@ -82,13 +94,17 @@ const headerLoad = () => {
       };
       headerRollingEvt();
 
-      // header search Evt
-      const searchInput = document.querySelector(".nav__input-wrapper input");
+      // Header search event
+      searchInput = document.querySelector(".nav__input-wrapper input");
       const searchButton = document.querySelector(".nav__input-wrapper i");
 
       const searchEvt = () => {
         const searchQuery = searchInput.value.trim();
         if (searchQuery) {
+          // 검색어를 LocalStorage에 저장
+          localStorage.setItem("searchQuery", searchQuery);
+
+          // 검색 결과 페이지로 이동
           const url = `/html/components/search-results.html?query=${encodeURIComponent(
             searchQuery
           )}`;
@@ -97,7 +113,9 @@ const headerLoad = () => {
           alert("검색어를 입력하세요!");
         }
       };
+      console.log("hi");
 
+      // 클릭 및 Enter 키 이벤트 추가
       searchButton.addEventListener("click", searchEvt);
       searchInput.addEventListener("keypress", (e) => {
         if (e.key == "Enter") {
@@ -174,7 +192,7 @@ const headerLoad = () => {
       hashContent.addEventListener("touchstart", onScrollStart);
       hashContent.addEventListener("mousedown", onScrollStart);
 
-      // category menu Evt
+      // category menu overlay // Evt
       // JSON 데이터 변수
       const categoryURL =
         "https://raw.githubusercontent.com/u-ulim/temu-products/main/test.json";

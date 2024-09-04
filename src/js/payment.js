@@ -809,8 +809,7 @@ function setupCheckboxListeners() {
 
   checkoutButton.addEventListener("click", function () {
     if (!checkoutButton.disabled) {
-      window.location.href =
-        "http://127.0.0.1:5501/html/components/Ordercompleted.html";
+      window.location.href = "/html/components/Ordercompleted.html";
     }
   });
 

@@ -572,7 +572,7 @@ fetch(productsURL)
           <h3>주문금액 <span>${price}원</span></h3>
           <div>
            <button type="submit" class="select-cart-btn">장바구니</button>
-            <button type="button" class="select-buy-btn">바로구매</button>
+            
           </div>
         </div>
       </form>
@@ -909,6 +909,8 @@ fetch(productsURL)
 
         console.log(setCartProducts);
         localStorageSave();
+
+        window.location.href = "/html/components/Productcart.html";
       };
       const form = document.querySelector(
         ".detail__right-box .detail__main-contentsbox-select > form"

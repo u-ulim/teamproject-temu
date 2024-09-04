@@ -1134,16 +1134,22 @@ body {
                   padding-top: 2px;
                   border: 2px solid map-get($color, primary-color);
                   outline: none;
-                  width: 49%;
+                  width: 100%;
                   height: 46px;
-                  background-color: map-get($color, color-White);
+                  background-color: map-get($color, primary-color);
+                  color: map-get($color, color-White);
                   cursor: pointer;
                   border-radius: 5px;
                   @include text_B_L_18;
+                  transition: all 0.4s;
+                  &:hover {
+                    background-color: map-get($color-hover, primary-color);
+                    border: 2px solid map-get($color-hover, primary-color);
+                  }
                 }
-                .select-cart-btn {
-                  color: map-get($color, primary-color);
-                }
+                // .select-cart-btn {
+                //   color: map-get($color, primary-color);
+                // }
                 .select-buy-btn {
                   background-color: map-get($color, primary-color);
 

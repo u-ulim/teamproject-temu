@@ -171,6 +171,16 @@ table {
   padding: 0px 15px;
   margin: 0 auto;
 }
+.list-wrapper h2 {
+  font-family: "Pretendard-Bold";
+  font-size: 14px;
+  font-style: bold;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: -0.42px;
+  color: #6a6a6a;
+  margin-bottom: 12px;
+}
 .list-wrapper ul,
 .list-wrapper li {
   list-style: none;

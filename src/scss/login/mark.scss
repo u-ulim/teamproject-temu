@@ -5,7 +5,7 @@
 @import "../layout/layout.scss";
 
 .wrapper {
-  @include width_inner;
+  @include width_full;
   height: 100vh;
   .mark__inner {
     display: flex;
@@ -111,10 +111,8 @@
     }
     .box {
       span {
-        // border: 1px solid red;
         @include text_L_18;
         display: inline-block;
-        margin-top: 10px;
       }
       .container {
         display: inline-block;

@@ -1546,9 +1546,10 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
   padding-top: 2px;
   border: 2px solid #ff6d00;
   outline: none;
-  width: 49%;
+  width: 100%;
   height: 46px;
-  background-color: #fff;
+  background-color: #ff6d00;
+  color: #fff;
   cursor: pointer;
   border-radius: 5px;
   font-family: "Pretendard-Bold";
@@ -1557,9 +1558,11 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
   font-weight: 700;
   line-height: 26px;
   letter-spacing: -0.54px;
+  transition: all 0.4s;
 }
-body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form .detail__main-contentsbox-btns div .select-cart-btn {
-  color: #ff6d00;
+body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form .detail__main-contentsbox-btns div button:hover {
+  background-color: #f99256;
+  border: 2px solid #f99256;
 }
 body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form .detail__main-contentsbox-btns div .select-buy-btn {
   background-color: #ff6d00;

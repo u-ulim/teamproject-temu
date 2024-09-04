@@ -421,10 +421,15 @@ table {
   width: 27px;
   height: 32px;
   background-image: url("../../../assets/images/footer/app-store.svg");
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
   display: inline-block;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+>>>>>>> 072d7761d9bf401ee4a7a5ddf73b5e6abf97f6c1
 }
 #footer
   .footer-inner
@@ -433,6 +438,17 @@ table {
   .footer-apps__google-play
   i {
   display: inline-block;
+<<<<<<< HEAD
+>>>>>>> origin/feature-js
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#footer .footer-inner .footer-menus-wrapper .footer-apps .footer-apps__google-play i {
+  display: inline-block;
+=======
+>>>>>>> 072d7761d9bf401ee4a7a5ddf73b5e6abf97f6c1
   width: 27px;
   height: 27px;
   background-image: url("../../../assets/images/footer/google-play.svg");

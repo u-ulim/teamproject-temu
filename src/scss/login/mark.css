@@ -167,9 +167,7 @@ table {
 }
 
 .wrapper {
-  width: 1384px;
-  padding: 0px 15px;
-  margin: 0 auto;
+  width: 100%;
   height: 100vh;
 }
 .wrapper .mark__inner {
@@ -302,7 +300,6 @@ table {
   line-height: 26px;
   letter-spacing: -0.54px;
   display: inline-block;
-  margin-top: 10px;
 }
 .wrapper .mark__inner .box .container {
   display: inline-block;

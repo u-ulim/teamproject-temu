@@ -8,10 +8,17 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="../../src/scss/login/signup.css" />
+    <link rel="stylesheet" href="../../src/scss/components/footer.css" />
+    <link rel="stylesheet" href="../../src/scss/components/header.css" />
+
     <script defer src="../../src/js/login.js"></script>
+    <script defer src="../../src/js/header.js"></script>
+    <script defer src="../../src/js/footer.js"></script>
     <title>Document</title>
   </head>
   <body>
+    
+    <header id="header"></header>
     <div id="wrapper">
       <div class="container">
         <form action="http://127.0.0.1:5502" method="post">
@@ -54,7 +61,10 @@
               <div class="password__message">
                 8글자 이상, 영문, 숫자, 특수문자(@$!%*#?&)를 사용하세요
               </div>
-              <div class="success__password">사용 가능한 비밀번호 입니다</div>
+              <div class="success__password">
+                <i class="fa-regular fa-circle-check"></i
+                ><span>사용 가능한 비밀번호 입니다</span>
+              </div>
             </div>
             <div class="info__password__check">
               <article class="password__check">비밀번호 확인</article>
@@ -68,7 +78,10 @@
                 <span><i class="fa-regular fa-eye-slash"></i></span>
               </fieldset>
               <div class="mismatch__message">비밀번호가 일치하지 않습니다</div>
-              <div class="password__success">비밀번호가 일치합니다</div>
+              <div class="password__success">
+                <i class="fa-regular fa-circle-check"></i
+                ><span>비밀번호가 일치합니다</span>
+              </div>
             </div>
             <div class="info__email">
               <article class="user__email">이메일</article>
@@ -95,7 +108,10 @@
                   <option value="manual">직접입력</option>
                 </select>
               </div>
-              <div class="email__success">사용 가능한 이메일입니다.</div>
+              <div class="email__success">
+                <i class="fa-regular fa-circle-check"></i
+                ><span>사용 가능한 이메일입니다.</span>
+              </div>
               <div class="email__fail">
                 이메일은 8글자 이상으로 영어와 숫자를 포함해야 합니다.
               </div>
@@ -162,5 +178,6 @@
         </form>
       </div>
     </div>
+    <footer id="footer"></footer>
   </body>
 </html>

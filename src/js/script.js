@@ -134,3 +134,31 @@ btns.addEventListener("mouseenter", () => {
 btns.addEventListener("mouseleave", () => {
   autoSlide();
 });
+
+const cartItemFirst = document.querySelector(
+  ".cart__wrapper .cart__item-first"
+);
+const cartItemSecon = document.querySelector(
+  ".cart__wrapper .cart__item-second"
+);
+const cartItemThird = document.querySelector(
+  ".cart__wrapper .cart__item-third"
+);
+
+console.log(cartItemFirst);
+console.log(cartItemSecon);
+console.log(cartItemThird);
+
+const goToCartPageHandler = (e) => {
+  console.log(e.target.value);
+};
+
+const cartItems = document.querySelectorAll(
+  ".cart__wrapper .cart__item-first, .cart__wrapper .cart__item-second, .cart__wrapper .cart__item-third"
+);
+
+cartItems.forEach((cartItem) => {
+  cartItem.addEventListener("click", (e) => {
+    window.location.href = "/html/components/Productcart.html";
+  });
+});
