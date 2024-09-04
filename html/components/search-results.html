@@ -28,7 +28,7 @@
       rel="stylesheet"
       href="../../src/scss/components/find-product-list.css"
     />
-
+    <link rel="stylesheet" href="../../src/scss/components/product-list.css" />
     <link rel="stylesheet" href="../../src/scss/components/search-result.css" />
 
     <!-- CUSTOM JS-->
@@ -52,7 +52,8 @@
       defer
       src="../../src/js/find-product-list.js"
     ></script>
-
+    <script type="module" defer src="../../src/js/product-list.js"></script>
+    <script defer src="../../src/json/product-list.js"></script>
   </head>
   <body>
     <!-- HEADER START -->
@@ -61,6 +62,7 @@
 
     <!-- FIND PRODUCT LIST START -->
     <div class="list-wrapper">
+      <h2>"<span>시계</span>"에 대한 검색결과</h2>
       <div class="find-product-lists"></div>
       <!-- <div id="product-list"></div> -->
     </div>
@@ -68,7 +70,8 @@
 
     <!-- FIND PRODUCT LIST START -->
     <div class="list-wrapper">
-      <div class="product-lists">l</div>
+      <h2>연관 상품 리스트</h2>
+      <div class="product-lists"></div>
       <!-- <div id="product-list"></div> -->
     </div>
     <!-- FIND PRODUCT LIST END -->

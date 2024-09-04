@@ -6,6 +6,9 @@
 
 .list-wrapper {
   @include width_inner;
+  h2 {
+    
+  }
   ul,
   li {
     list-style: none;
