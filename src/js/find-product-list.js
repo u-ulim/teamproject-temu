@@ -15,7 +15,7 @@ const productsURL =
 fetch(productsURL)
   .then((response) => response.json())
   .then((data) => {
-    const productLists = document.querySelector(".product-lists");
+    const productLists = document.querySelector(".find-product-lists");
 
     console.log(productLists);
     const createItem = (product) => {
