@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* VARIABLES */
 @font-face {
   font-family: "Pretendard-Regular";
@@ -184,22 +185,25 @@ table {
   color: #4a4949;
   text-align: center;
   font-family: "Pretendard-Bold";
-  font-size: 24px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 700;
-  letter-spacing: -0.48px;
+  letter-spacing: -0.6px;
 }
 #wrapper .container #info {
   color: #4a4949;
 }
+#wrapper .container #info .info__id {
+  margin-bottom: 20px;
+}
 #wrapper .container #info .info__id .id {
-  font-family: "Pretendard-Bold";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 24px;
-  letter-spacing: -0.48px;
   margin-bottom: 5px;
+  font-family: "Pretendard-Bold";
+  font-size: 14px;
+  font-style: bold;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: -0.42px;
 }
 #wrapper .container #info .info__id .user__id {
   display: flex;
@@ -209,21 +213,23 @@ table {
 #wrapper .container #info .info__id .user__id .userid {
   padding: 10px;
   border: 1px solid #b5b5b5;
-  width: 360px;
-  height: 40px;
+  width: 100%;
   border-radius: 5px;
-  font-family: "Pretendard-Regular";
-  font-size: 16px;
-  font-style: normal;
-  line-height: 24px;
-  letter-spacing: -0.48px;
-}
-#wrapper .container #info .info__id .user__id .success {
   font-family: "Pretendard-Regular";
   font-size: 14px;
   font-style: normal;
   line-height: 22px;
   letter-spacing: -0.42px;
+  margin-bottom: 5px;
+  height: 40px;
+}
+#wrapper .container #info .info__id .user__id .success {
+  font-family: "Pretendard-Bold";
+  font-size: 12px;
+  font-style: bold;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: -0.36px;
   display: none;
   color: #0a8800;
 }
@@ -231,39 +237,43 @@ table {
   margin-left: 3px;
 }
 #wrapper .container #info .info__id .user__id .failure {
-  font-family: "Pretendard-Regular";
-  font-size: 14px;
-  font-style: normal;
-  line-height: 22px;
-  letter-spacing: -0.42px;
+  font-family: "Pretendard-Bold";
+  font-size: 12px;
+  font-style: bold;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: -0.36px;
   display: none;
   color: #fc3310;
 }
 #wrapper .container #info .info__id .user__id .failure__message {
-  font-family: "Pretendard-Regular";
-  font-size: 14px;
-  font-style: normal;
-  line-height: 22px;
-  letter-spacing: -0.42px;
+  font-family: "Pretendard-Bold";
+  font-size: 12px;
+  font-style: bold;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: -0.36px;
   display: none;
-  margin-bottom: 8px;
   color: #fc3310;
+}
+#wrapper .container #info .info__password {
+  margin-bottom: 20px;
 }
 #wrapper .container #info .info__password .user__password {
   font-family: "Pretendard-Bold";
-  font-size: 16px;
-  font-style: normal;
+  font-size: 14px;
+  font-style: bold;
   font-weight: 700;
-  line-height: 24px;
-  letter-spacing: -0.48px;
-  margin-bottom: 2px;
+  line-height: 22px;
+  letter-spacing: -0.42px;
+  margin-bottom: 5px;
 }
 #wrapper .container #info .info__password .password__txt {
   font-family: "Pretendard-Regular";
-  font-size: 14px;
+  font-size: 12px;
   font-style: normal;
-  line-height: 22px;
-  letter-spacing: -0.42px;
+  line-height: 18px;
+  letter-spacing: -0.36px;
   margin-bottom: 2px;
   color: #6a6a6a;
 }
@@ -273,18 +283,18 @@ table {
 }
 #wrapper .container #info .info__password fieldset .password {
   display: flex;
-  margin-bottom: 5px;
+  margin-bottom: 7px;
   padding: 10px;
   border: 1px solid #b5b5b5;
   position: relative;
-  width: 360px;
+  width: 100%;
   height: 40px;
   border-radius: 5px;
   font-family: "Pretendard-Regular";
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
-  line-height: 24px;
-  letter-spacing: -0.48px;
+  line-height: 22px;
+  letter-spacing: -0.42px;
 }
 #wrapper .container #info .info__password fieldset .fa-eye-slash,
 #wrapper .container #info .info__password fieldset .fa-eye {
@@ -295,13 +305,14 @@ table {
   transform: translate(-150%, -60%);
 }
 #wrapper .container #info .info__password .password__message {
-  font-family: "Pretendard-Regular";
-  font-size: 14px;
-  font-style: normal;
-  line-height: 22px;
-  letter-spacing: -0.42px;
+  font-family: "Pretendard-Bold";
+  font-size: 12px;
+  font-style: bold;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: -0.36px;
   display: none;
-  margin-bottom: 8px;
+  margin-bottom: 3px;
   color: #fc3310;
 }
 #wrapper .container #info .info__password .success__password {
@@ -311,39 +322,43 @@ table {
   line-height: 22px;
   letter-spacing: -0.42px;
   display: none;
-  margin-bottom: 8px;
+  margin-bottom: 3px;
   color: #0a8800;
 }
 #wrapper .container #info .info__password .success__password span {
   margin-left: 3px;
 }
+#wrapper .container #info .info__password__check {
+  margin-bottom: 20px;
+}
 #wrapper .container #info .info__password__check .password__check {
+  margin-bottom: 5px;
   font-family: "Pretendard-Bold";
-  font-size: 16px;
-  font-style: normal;
+  font-size: 14px;
+  font-style: bold;
   font-weight: 700;
-  line-height: 24px;
-  letter-spacing: -0.48px;
-  margin-bottom: 2px;
+  line-height: 22px;
+  letter-spacing: -0.42px;
 }
 #wrapper .container #info .info__password__check fieldset {
   display: flex;
   align-items: center;
 }
 #wrapper .container #info .info__password__check fieldset .confrim__password {
+  border: 1px solid #f00;
   display: flex;
   margin-bottom: 5px;
   padding: 10px;
   border: 1px solid #b5b5b5;
   position: relative;
-  width: 360px;
+  width: 100%;
   height: 40px;
   border-radius: 5px;
   font-family: "Pretendard-Regular";
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
-  line-height: 24px;
-  letter-spacing: -0.48px;
+  line-height: 22px;
+  letter-spacing: -0.42px;
 }
 #wrapper .container #info .info__password__check fieldset .fa-eye-slash,
 #wrapper .container #info .info__password__check fieldset .fa-eye {
@@ -354,21 +369,23 @@ table {
   transform: translate(-150%, -60%);
 }
 #wrapper .container #info .info__password__check .mismatch__message {
-  font-family: "Pretendard-Regular";
-  font-size: 14px;
-  font-style: normal;
-  line-height: 22px;
-  letter-spacing: -0.42px;
+  font-family: "Pretendard-Bold";
+  font-size: 12px;
+  font-style: bold;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: -0.36px;
   display: none;
   margin-bottom: 8px;
   color: #fc3310;
 }
 #wrapper .container #info .info__password__check .password__success {
-  font-family: "Pretendard-Regular";
-  font-size: 14px;
-  font-style: normal;
-  line-height: 22px;
-  letter-spacing: -0.42px;
+  font-family: "Pretendard-Bold";
+  font-size: 12px;
+  font-style: bold;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: -0.36px;
   display: none;
   margin-bottom: 8px;
   color: #0a8800;
@@ -376,14 +393,17 @@ table {
 #wrapper .container #info .info__password__check .password__success span {
   margin-left: 3px;
 }
+#wrapper .container #info .info__email {
+  margin-bottom: 20px;
+}
 #wrapper .container #info .info__email .user__email {
+  margin-bottom: 5px;
   font-family: "Pretendard-Bold";
-  font-size: 16px;
-  font-style: normal;
+  font-size: 14px;
+  font-style: bold;
   font-weight: 700;
-  line-height: 24px;
-  letter-spacing: -0.48px;
-  margin-bottom: 2px;
+  line-height: 22px;
+  letter-spacing: -0.42px;
 }
 #wrapper .container #info .info__email #email__item {
   display: flex;
@@ -398,10 +418,10 @@ table {
   height: 40px;
   border-radius: 5px;
   font-family: "Pretendard-Regular";
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
-  line-height: 24px;
-  letter-spacing: -0.48px;
+  line-height: 22px;
+  letter-spacing: -0.42px;
 }
 #wrapper .container #info .info__email #email__item span {
   color: #9a9a9a;
@@ -416,17 +436,18 @@ table {
   color: #6a6a6a;
   border-radius: 5px;
   font-family: "Pretendard-Regular";
-  font-size: 16px;
-  font-style: normal;
-  line-height: 24px;
-  letter-spacing: -0.48px;
-}
-#wrapper .container #info .info__email .email__success {
-  font-family: "Pretendard-Regular";
   font-size: 14px;
   font-style: normal;
   line-height: 22px;
   letter-spacing: -0.42px;
+}
+#wrapper .container #info .info__email .email__success {
+  font-family: "Pretendard-Bold";
+  font-size: 12px;
+  font-style: bold;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: -0.36px;
   display: none;
   margin-bottom: 8px;
   color: #0a8800;
@@ -435,42 +456,44 @@ table {
   margin-left: 3px;
 }
 #wrapper .container #info .info__email .email__fail {
-  font-family: "Pretendard-Regular";
-  font-size: 14px;
-  font-style: normal;
-  line-height: 22px;
-  letter-spacing: -0.42px;
+  font-family: "Pretendard-Bold";
+  font-size: 12px;
+  font-style: bold;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: -0.36px;
   display: none;
   margin-bottom: 8px;
   color: #fc3310;
 }
 #wrapper .container #info .info__email .email__error {
-  font-family: "Pretendard-Regular";
-  font-size: 14px;
-  font-style: normal;
-  line-height: 22px;
-  letter-spacing: -0.42px;
+  font-family: "Pretendard-Bold";
+  font-size: 12px;
+  font-style: bold;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: -0.36px;
   display: none;
   margin-bottom: 8px;
   color: #fc3310;
 }
 #wrapper .container #agreement #agree .agree__title {
-  margin-bottom: 2px;
-  color: #292828;
   font-family: "Pretendard-Bold";
-  font-size: 16px;
-  font-style: normal;
+  font-size: 14px;
+  font-style: bold;
   font-weight: 700;
-  line-height: 24px;
-  letter-spacing: -0.48px;
+  line-height: 22px;
+  letter-spacing: -0.42px;
+  margin-bottom: 5px;
+  color: #292828;
 }
 #wrapper .container #agreement #agree #items {
   display: flex;
-  justify-content: start;
   flex-direction: column;
+  justify-content: center;
   margin-bottom: 10px;
   padding: 5px 20px;
-  border: 1px solid #b5b5b5;
+  border: 1px solid #dcdcdc;
   width: 100%;
   border-radius: 3px;
 }
@@ -479,190 +502,318 @@ table {
 }
 #wrapper .container #agreement #agree #items #agree__box {
   display: flex;
+  padding-left: 3px;
   margin-bottom: 2px;
-  border-bottom: 1px solid #b5b5b5;
+  border-bottom: 1px solid #dcdcdc;
 }
 #wrapper .container #agreement #agree #items #agree__box .agree__checkbox {
   display: flex;
   align-items: center;
   margin-bottom: 3px;
+  padding-right: 6px;
+  position: relative;
 }
 #wrapper .container #agreement #agree #items #agree__box .agree__checkbox .checkbox {
-  width: 18px;
-  height: 18px;
+  display: none;
+}
+#wrapper .container #agreement #agree #items #agree__box .agree__checkbox .checkbox:checked + .checkbox__indicator {
+  background: orange;
+}
+#wrapper .container #agreement #agree #items #agree__box .agree__checkbox .checkbox:checked + .checkbox__indicator::after {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  content: "✓";
+  color: white;
+  transform: translate(-50%, -50%);
+}
+#wrapper .container #agreement #agree #items #agree__box .agree__checkbox .checkbox__indicator {
+  display: inline-block;
+  border: 1px solid orange;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  background: white;
+}
+#wrapper .container #agreement #agree #items #agree__box .agree__checkbox .checkbox__indicator::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  content: "";
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background: transparent;
 }
 #wrapper .container #agreement #agree #items #agree__box .agree__checkbox .All__checkbox {
-  font-family: "Pretendard-Bold";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 24px;
-  letter-spacing: -0.48px;
   margin-left: 5px;
+  font-size: 14px;
 }
 #wrapper .container #agreement #agree #items #agree__box .agree__checkbox .box__txt {
-  font-family: "Pretendard-Regular";
   font-size: 12px;
-  font-style: normal;
-  line-height: 18px;
-  letter-spacing: -0.36px;
   margin-left: 5px;
-  color: #6a6a6a;
+  padding-top: 1px;
+  color: #6c757d;
 }
-#wrapper .container #agreement #agree #items #age__box {
-  display: flex;
-  margin-bottom: 2px;
-}
-#wrapper .container #agreement #agree #items #age__box .age__checkbox {
-  display: flex;
-  align-items: center;
-  margin: 3px;
-}
-#wrapper .container #agreement #agree #items #age__box .age__checkbox .checkbox {
-  width: 18px;
-  height: 18px;
-}
-#wrapper .container #agreement #agree #items #age__box .age__checkbox .txt {
-  font-family: "Pretendard-Regular";
-  font-size: 14px;
-  font-style: normal;
-  line-height: 22px;
-  letter-spacing: -0.42px;
-  margin-left: 5px;
-}
-#wrapper .container #agreement #agree #items #age__box .age__checkbox .txt__box {
-  font-family: "Pretendard-Regular";
-  font-size: 12px;
-  font-style: normal;
-  line-height: 18px;
-  letter-spacing: -0.36px;
-  margin-left: 5px;
-  color: #009fce;
-}
-#wrapper .container #agreement #agree #items #use__box {
-  display: flex;
-  margin-bottom: 2px;
-}
-#wrapper .container #agreement #agree #items #use__box .use__checkbox {
-  display: flex;
-  align-items: center;
-  margin: 3px;
-}
-#wrapper .container #agreement #agree #items #use__box .use__checkbox .checkbox {
-  width: 18px;
-  height: 18px;
-}
-#wrapper .container #agreement #agree #items #use__box .use__checkbox .txt {
-  font-family: "Pretendard-Regular";
-  font-size: 14px;
-  font-style: normal;
-  line-height: 22px;
-  letter-spacing: -0.42px;
-  margin-left: 5px;
-}
-#wrapper .container #agreement #agree #items #use__box .use__checkbox .txt__box {
-  font-family: "Pretendard-Regular";
-  font-size: 12px;
-  font-style: normal;
-  line-height: 18px;
-  letter-spacing: -0.36px;
-  margin-left: 5px;
-  color: #009fce;
-}
-#wrapper .container #agreement #agree #items #userinfo__box {
-  display: flex;
-  margin-bottom: 2px;
-}
-#wrapper .container #agreement #agree #items #userinfo__box .userinfo__checkbox {
-  display: flex;
-  align-items: center;
-  margin: 3px;
-}
-#wrapper .container #agreement #agree #items #userinfo__box .userinfo__checkbox .checkbox {
-  width: 18px;
-  height: 18px;
-}
-#wrapper .container #agreement #agree #items #userinfo__box .userinfo__checkbox .txt {
-  font-family: "Pretendard-Regular";
-  font-size: 14px;
-  font-style: normal;
-  line-height: 22px;
-  letter-spacing: -0.42px;
-  margin-left: 5px;
-}
-#wrapper .container #agreement #agree #items #userinfo__box .userinfo__checkbox .txt__box {
-  font-family: "Pretendard-Regular";
-  font-size: 12px;
-  font-style: normal;
-  line-height: 18px;
-  letter-spacing: -0.36px;
-  margin-left: 5px;
-  color: #009fce;
-}
-#wrapper .container #agreement #agree #items #marketing__box {
-  display: flex;
-  margin-bottom: 2px;
-}
-#wrapper .container #agreement #agree #items #marketing__box .marketing__checkbox {
-  display: flex;
-  align-items: center;
-  margin: 3px;
-}
-#wrapper .container #agreement #agree #items #marketing__box .marketing__checkbox .checkbox {
-  width: 18px;
-  height: 18px;
-}
-#wrapper .container #agreement #agree #items #marketing__box .marketing__checkbox .txt {
-  font-family: "Pretendard-Regular";
-  font-size: 14px;
-  font-style: normal;
-  line-height: 22px;
-  letter-spacing: -0.42px;
-  margin-left: 5px;
-}
-#wrapper .container #agreement #agree #items #marketing__box .marketing__checkbox .txt__box {
-  font-family: "Pretendard-Regular";
-  font-size: 12px;
-  font-style: normal;
-  line-height: 18px;
-  letter-spacing: -0.36px;
-  margin-left: 5px;
-  color: #6a6a6a;
-}
+#wrapper .container #agreement #agree #items #age__box,
+#wrapper .container #agreement #agree #items #use__box,
+#wrapper .container #agreement #agree #items #userinfo__box,
+#wrapper .container #agreement #agree #items #marketing__box,
 #wrapper .container #agreement #agree #items #event__box {
   display: flex;
+  margin-bottom: 2px;
 }
+#wrapper .container #agreement #agree #items #age__box .age__checkbox,
+#wrapper .container #agreement #agree #items #age__box .use__checkbox,
+#wrapper .container #agreement #agree #items #age__box .userinfo__checkbox,
+#wrapper .container #agreement #agree #items #age__box .marketing__checkbox,
+#wrapper .container #agreement #agree #items #age__box .event__checkbox,
+#wrapper .container #agreement #agree #items #use__box .age__checkbox,
+#wrapper .container #agreement #agree #items #use__box .use__checkbox,
+#wrapper .container #agreement #agree #items #use__box .userinfo__checkbox,
+#wrapper .container #agreement #agree #items #use__box .marketing__checkbox,
+#wrapper .container #agreement #agree #items #use__box .event__checkbox,
+#wrapper .container #agreement #agree #items #userinfo__box .age__checkbox,
+#wrapper .container #agreement #agree #items #userinfo__box .use__checkbox,
+#wrapper .container #agreement #agree #items #userinfo__box .userinfo__checkbox,
+#wrapper .container #agreement #agree #items #userinfo__box .marketing__checkbox,
+#wrapper .container #agreement #agree #items #userinfo__box .event__checkbox,
+#wrapper .container #agreement #agree #items #marketing__box .age__checkbox,
+#wrapper .container #agreement #agree #items #marketing__box .use__checkbox,
+#wrapper .container #agreement #agree #items #marketing__box .userinfo__checkbox,
+#wrapper .container #agreement #agree #items #marketing__box .marketing__checkbox,
+#wrapper .container #agreement #agree #items #marketing__box .event__checkbox,
+#wrapper .container #agreement #agree #items #event__box .age__checkbox,
+#wrapper .container #agreement #agree #items #event__box .use__checkbox,
+#wrapper .container #agreement #agree #items #event__box .userinfo__checkbox,
+#wrapper .container #agreement #agree #items #event__box .marketing__checkbox,
 #wrapper .container #agreement #agree #items #event__box .event__checkbox {
   display: flex;
   align-items: center;
   margin: 3px;
+  padding-right: 6px;
+  position: relative;
 }
+#wrapper .container #agreement #agree #items #age__box .age__checkbox .checkbox,
+#wrapper .container #agreement #agree #items #age__box .use__checkbox .checkbox,
+#wrapper .container #agreement #agree #items #age__box .userinfo__checkbox .checkbox,
+#wrapper .container #agreement #agree #items #age__box .marketing__checkbox .checkbox,
+#wrapper .container #agreement #agree #items #age__box .event__checkbox .checkbox,
+#wrapper .container #agreement #agree #items #use__box .age__checkbox .checkbox,
+#wrapper .container #agreement #agree #items #use__box .use__checkbox .checkbox,
+#wrapper .container #agreement #agree #items #use__box .userinfo__checkbox .checkbox,
+#wrapper .container #agreement #agree #items #use__box .marketing__checkbox .checkbox,
+#wrapper .container #agreement #agree #items #use__box .event__checkbox .checkbox,
+#wrapper .container #agreement #agree #items #userinfo__box .age__checkbox .checkbox,
+#wrapper .container #agreement #agree #items #userinfo__box .use__checkbox .checkbox,
+#wrapper .container #agreement #agree #items #userinfo__box .userinfo__checkbox .checkbox,
+#wrapper .container #agreement #agree #items #userinfo__box .marketing__checkbox .checkbox,
+#wrapper .container #agreement #agree #items #userinfo__box .event__checkbox .checkbox,
+#wrapper .container #agreement #agree #items #marketing__box .age__checkbox .checkbox,
+#wrapper .container #agreement #agree #items #marketing__box .use__checkbox .checkbox,
+#wrapper .container #agreement #agree #items #marketing__box .userinfo__checkbox .checkbox,
+#wrapper .container #agreement #agree #items #marketing__box .marketing__checkbox .checkbox,
+#wrapper .container #agreement #agree #items #marketing__box .event__checkbox .checkbox,
+#wrapper .container #agreement #agree #items #event__box .age__checkbox .checkbox,
+#wrapper .container #agreement #agree #items #event__box .use__checkbox .checkbox,
+#wrapper .container #agreement #agree #items #event__box .userinfo__checkbox .checkbox,
+#wrapper .container #agreement #agree #items #event__box .marketing__checkbox .checkbox,
 #wrapper .container #agreement #agree #items #event__box .event__checkbox .checkbox {
-  width: 18px;
-  height: 18px;
+  display: none;
 }
+#wrapper .container #agreement #agree #items #age__box .age__checkbox .checkbox:checked + .checkbox__indicator,
+#wrapper .container #agreement #agree #items #age__box .use__checkbox .checkbox:checked + .checkbox__indicator,
+#wrapper .container #agreement #agree #items #age__box .userinfo__checkbox .checkbox:checked + .checkbox__indicator,
+#wrapper .container #agreement #agree #items #age__box .marketing__checkbox .checkbox:checked + .checkbox__indicator,
+#wrapper .container #agreement #agree #items #age__box .event__checkbox .checkbox:checked + .checkbox__indicator,
+#wrapper .container #agreement #agree #items #use__box .age__checkbox .checkbox:checked + .checkbox__indicator,
+#wrapper .container #agreement #agree #items #use__box .use__checkbox .checkbox:checked + .checkbox__indicator,
+#wrapper .container #agreement #agree #items #use__box .userinfo__checkbox .checkbox:checked + .checkbox__indicator,
+#wrapper .container #agreement #agree #items #use__box .marketing__checkbox .checkbox:checked + .checkbox__indicator,
+#wrapper .container #agreement #agree #items #use__box .event__checkbox .checkbox:checked + .checkbox__indicator,
+#wrapper .container #agreement #agree #items #userinfo__box .age__checkbox .checkbox:checked + .checkbox__indicator,
+#wrapper .container #agreement #agree #items #userinfo__box .use__checkbox .checkbox:checked + .checkbox__indicator,
+#wrapper .container #agreement #agree #items #userinfo__box .userinfo__checkbox .checkbox:checked + .checkbox__indicator,
+#wrapper .container #agreement #agree #items #userinfo__box .marketing__checkbox .checkbox:checked + .checkbox__indicator,
+#wrapper .container #agreement #agree #items #userinfo__box .event__checkbox .checkbox:checked + .checkbox__indicator,
+#wrapper .container #agreement #agree #items #marketing__box .age__checkbox .checkbox:checked + .checkbox__indicator,
+#wrapper .container #agreement #agree #items #marketing__box .use__checkbox .checkbox:checked + .checkbox__indicator,
+#wrapper .container #agreement #agree #items #marketing__box .userinfo__checkbox .checkbox:checked + .checkbox__indicator,
+#wrapper .container #agreement #agree #items #marketing__box .marketing__checkbox .checkbox:checked + .checkbox__indicator,
+#wrapper .container #agreement #agree #items #marketing__box .event__checkbox .checkbox:checked + .checkbox__indicator,
+#wrapper .container #agreement #agree #items #event__box .age__checkbox .checkbox:checked + .checkbox__indicator,
+#wrapper .container #agreement #agree #items #event__box .use__checkbox .checkbox:checked + .checkbox__indicator,
+#wrapper .container #agreement #agree #items #event__box .userinfo__checkbox .checkbox:checked + .checkbox__indicator,
+#wrapper .container #agreement #agree #items #event__box .marketing__checkbox .checkbox:checked + .checkbox__indicator,
+#wrapper .container #agreement #agree #items #event__box .event__checkbox .checkbox:checked + .checkbox__indicator {
+  background: orange;
+}
+#wrapper .container #agreement #agree #items #age__box .age__checkbox .checkbox:checked + .checkbox__indicator::after,
+#wrapper .container #agreement #agree #items #age__box .use__checkbox .checkbox:checked + .checkbox__indicator::after,
+#wrapper .container #agreement #agree #items #age__box .userinfo__checkbox .checkbox:checked + .checkbox__indicator::after,
+#wrapper .container #agreement #agree #items #age__box .marketing__checkbox .checkbox:checked + .checkbox__indicator::after,
+#wrapper .container #agreement #agree #items #age__box .event__checkbox .checkbox:checked + .checkbox__indicator::after,
+#wrapper .container #agreement #agree #items #use__box .age__checkbox .checkbox:checked + .checkbox__indicator::after,
+#wrapper .container #agreement #agree #items #use__box .use__checkbox .checkbox:checked + .checkbox__indicator::after,
+#wrapper .container #agreement #agree #items #use__box .userinfo__checkbox .checkbox:checked + .checkbox__indicator::after,
+#wrapper .container #agreement #agree #items #use__box .marketing__checkbox .checkbox:checked + .checkbox__indicator::after,
+#wrapper .container #agreement #agree #items #use__box .event__checkbox .checkbox:checked + .checkbox__indicator::after,
+#wrapper .container #agreement #agree #items #userinfo__box .age__checkbox .checkbox:checked + .checkbox__indicator::after,
+#wrapper .container #agreement #agree #items #userinfo__box .use__checkbox .checkbox:checked + .checkbox__indicator::after,
+#wrapper .container #agreement #agree #items #userinfo__box .userinfo__checkbox .checkbox:checked + .checkbox__indicator::after,
+#wrapper .container #agreement #agree #items #userinfo__box .marketing__checkbox .checkbox:checked + .checkbox__indicator::after,
+#wrapper .container #agreement #agree #items #userinfo__box .event__checkbox .checkbox:checked + .checkbox__indicator::after,
+#wrapper .container #agreement #agree #items #marketing__box .age__checkbox .checkbox:checked + .checkbox__indicator::after,
+#wrapper .container #agreement #agree #items #marketing__box .use__checkbox .checkbox:checked + .checkbox__indicator::after,
+#wrapper .container #agreement #agree #items #marketing__box .userinfo__checkbox .checkbox:checked + .checkbox__indicator::after,
+#wrapper .container #agreement #agree #items #marketing__box .marketing__checkbox .checkbox:checked + .checkbox__indicator::after,
+#wrapper .container #agreement #agree #items #marketing__box .event__checkbox .checkbox:checked + .checkbox__indicator::after,
+#wrapper .container #agreement #agree #items #event__box .age__checkbox .checkbox:checked + .checkbox__indicator::after,
+#wrapper .container #agreement #agree #items #event__box .use__checkbox .checkbox:checked + .checkbox__indicator::after,
+#wrapper .container #agreement #agree #items #event__box .userinfo__checkbox .checkbox:checked + .checkbox__indicator::after,
+#wrapper .container #agreement #agree #items #event__box .marketing__checkbox .checkbox:checked + .checkbox__indicator::after,
+#wrapper .container #agreement #agree #items #event__box .event__checkbox .checkbox:checked + .checkbox__indicator::after {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  content: "✓";
+  color: white;
+  transform: translate(-50%, -50%);
+}
+#wrapper .container #agreement #agree #items #age__box .age__checkbox .checkbox__indicator,
+#wrapper .container #agreement #agree #items #age__box .use__checkbox .checkbox__indicator,
+#wrapper .container #agreement #agree #items #age__box .userinfo__checkbox .checkbox__indicator,
+#wrapper .container #agreement #agree #items #age__box .marketing__checkbox .checkbox__indicator,
+#wrapper .container #agreement #agree #items #age__box .event__checkbox .checkbox__indicator,
+#wrapper .container #agreement #agree #items #use__box .age__checkbox .checkbox__indicator,
+#wrapper .container #agreement #agree #items #use__box .use__checkbox .checkbox__indicator,
+#wrapper .container #agreement #agree #items #use__box .userinfo__checkbox .checkbox__indicator,
+#wrapper .container #agreement #agree #items #use__box .marketing__checkbox .checkbox__indicator,
+#wrapper .container #agreement #agree #items #use__box .event__checkbox .checkbox__indicator,
+#wrapper .container #agreement #agree #items #userinfo__box .age__checkbox .checkbox__indicator,
+#wrapper .container #agreement #agree #items #userinfo__box .use__checkbox .checkbox__indicator,
+#wrapper .container #agreement #agree #items #userinfo__box .userinfo__checkbox .checkbox__indicator,
+#wrapper .container #agreement #agree #items #userinfo__box .marketing__checkbox .checkbox__indicator,
+#wrapper .container #agreement #agree #items #userinfo__box .event__checkbox .checkbox__indicator,
+#wrapper .container #agreement #agree #items #marketing__box .age__checkbox .checkbox__indicator,
+#wrapper .container #agreement #agree #items #marketing__box .use__checkbox .checkbox__indicator,
+#wrapper .container #agreement #agree #items #marketing__box .userinfo__checkbox .checkbox__indicator,
+#wrapper .container #agreement #agree #items #marketing__box .marketing__checkbox .checkbox__indicator,
+#wrapper .container #agreement #agree #items #marketing__box .event__checkbox .checkbox__indicator,
+#wrapper .container #agreement #agree #items #event__box .age__checkbox .checkbox__indicator,
+#wrapper .container #agreement #agree #items #event__box .use__checkbox .checkbox__indicator,
+#wrapper .container #agreement #agree #items #event__box .userinfo__checkbox .checkbox__indicator,
+#wrapper .container #agreement #agree #items #event__box .marketing__checkbox .checkbox__indicator,
+#wrapper .container #agreement #agree #items #event__box .event__checkbox .checkbox__indicator {
+  display: inline-block;
+  border: 1px solid orange;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  background: white;
+}
+#wrapper .container #agreement #agree #items #age__box .age__checkbox .checkbox__indicator::after,
+#wrapper .container #agreement #agree #items #age__box .use__checkbox .checkbox__indicator::after,
+#wrapper .container #agreement #agree #items #age__box .userinfo__checkbox .checkbox__indicator::after,
+#wrapper .container #agreement #agree #items #age__box .marketing__checkbox .checkbox__indicator::after,
+#wrapper .container #agreement #agree #items #age__box .event__checkbox .checkbox__indicator::after,
+#wrapper .container #agreement #agree #items #use__box .age__checkbox .checkbox__indicator::after,
+#wrapper .container #agreement #agree #items #use__box .use__checkbox .checkbox__indicator::after,
+#wrapper .container #agreement #agree #items #use__box .userinfo__checkbox .checkbox__indicator::after,
+#wrapper .container #agreement #agree #items #use__box .marketing__checkbox .checkbox__indicator::after,
+#wrapper .container #agreement #agree #items #use__box .event__checkbox .checkbox__indicator::after,
+#wrapper .container #agreement #agree #items #userinfo__box .age__checkbox .checkbox__indicator::after,
+#wrapper .container #agreement #agree #items #userinfo__box .use__checkbox .checkbox__indicator::after,
+#wrapper .container #agreement #agree #items #userinfo__box .userinfo__checkbox .checkbox__indicator::after,
+#wrapper .container #agreement #agree #items #userinfo__box .marketing__checkbox .checkbox__indicator::after,
+#wrapper .container #agreement #agree #items #userinfo__box .event__checkbox .checkbox__indicator::after,
+#wrapper .container #agreement #agree #items #marketing__box .age__checkbox .checkbox__indicator::after,
+#wrapper .container #agreement #agree #items #marketing__box .use__checkbox .checkbox__indicator::after,
+#wrapper .container #agreement #agree #items #marketing__box .userinfo__checkbox .checkbox__indicator::after,
+#wrapper .container #agreement #agree #items #marketing__box .marketing__checkbox .checkbox__indicator::after,
+#wrapper .container #agreement #agree #items #marketing__box .event__checkbox .checkbox__indicator::after,
+#wrapper .container #agreement #agree #items #event__box .age__checkbox .checkbox__indicator::after,
+#wrapper .container #agreement #agree #items #event__box .use__checkbox .checkbox__indicator::after,
+#wrapper .container #agreement #agree #items #event__box .userinfo__checkbox .checkbox__indicator::after,
+#wrapper .container #agreement #agree #items #event__box .marketing__checkbox .checkbox__indicator::after,
+#wrapper .container #agreement #agree #items #event__box .event__checkbox .checkbox__indicator::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  content: "";
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background: transparent;
+}
+#wrapper .container #agreement #agree #items #age__box .age__checkbox .txt,
+#wrapper .container #agreement #agree #items #age__box .use__checkbox .txt,
+#wrapper .container #agreement #agree #items #age__box .userinfo__checkbox .txt,
+#wrapper .container #agreement #agree #items #age__box .marketing__checkbox .txt,
+#wrapper .container #agreement #agree #items #age__box .event__checkbox .txt,
+#wrapper .container #agreement #agree #items #use__box .age__checkbox .txt,
+#wrapper .container #agreement #agree #items #use__box .use__checkbox .txt,
+#wrapper .container #agreement #agree #items #use__box .userinfo__checkbox .txt,
+#wrapper .container #agreement #agree #items #use__box .marketing__checkbox .txt,
+#wrapper .container #agreement #agree #items #use__box .event__checkbox .txt,
+#wrapper .container #agreement #agree #items #userinfo__box .age__checkbox .txt,
+#wrapper .container #agreement #agree #items #userinfo__box .use__checkbox .txt,
+#wrapper .container #agreement #agree #items #userinfo__box .userinfo__checkbox .txt,
+#wrapper .container #agreement #agree #items #userinfo__box .marketing__checkbox .txt,
+#wrapper .container #agreement #agree #items #userinfo__box .event__checkbox .txt,
+#wrapper .container #agreement #agree #items #marketing__box .age__checkbox .txt,
+#wrapper .container #agreement #agree #items #marketing__box .use__checkbox .txt,
+#wrapper .container #agreement #agree #items #marketing__box .userinfo__checkbox .txt,
+#wrapper .container #agreement #agree #items #marketing__box .marketing__checkbox .txt,
+#wrapper .container #agreement #agree #items #marketing__box .event__checkbox .txt,
+#wrapper .container #agreement #agree #items #event__box .age__checkbox .txt,
+#wrapper .container #agreement #agree #items #event__box .use__checkbox .txt,
+#wrapper .container #agreement #agree #items #event__box .userinfo__checkbox .txt,
+#wrapper .container #agreement #agree #items #event__box .marketing__checkbox .txt,
 #wrapper .container #agreement #agree #items #event__box .event__checkbox .txt {
-  font-family: "Pretendard-Regular";
+  margin-left: 5px;
   font-size: 14px;
-  font-style: normal;
-  line-height: 22px;
-  letter-spacing: -0.42px;
-  margin-left: 5px;
 }
+#wrapper .container #agreement #agree #items #age__box .age__checkbox .txt__box,
+#wrapper .container #agreement #agree #items #age__box .use__checkbox .txt__box,
+#wrapper .container #agreement #agree #items #age__box .userinfo__checkbox .txt__box,
+#wrapper .container #agreement #agree #items #age__box .marketing__checkbox .txt__box,
+#wrapper .container #agreement #agree #items #age__box .event__checkbox .txt__box,
+#wrapper .container #agreement #agree #items #use__box .age__checkbox .txt__box,
+#wrapper .container #agreement #agree #items #use__box .use__checkbox .txt__box,
+#wrapper .container #agreement #agree #items #use__box .userinfo__checkbox .txt__box,
+#wrapper .container #agreement #agree #items #use__box .marketing__checkbox .txt__box,
+#wrapper .container #agreement #agree #items #use__box .event__checkbox .txt__box,
+#wrapper .container #agreement #agree #items #userinfo__box .age__checkbox .txt__box,
+#wrapper .container #agreement #agree #items #userinfo__box .use__checkbox .txt__box,
+#wrapper .container #agreement #agree #items #userinfo__box .userinfo__checkbox .txt__box,
+#wrapper .container #agreement #agree #items #userinfo__box .marketing__checkbox .txt__box,
+#wrapper .container #agreement #agree #items #userinfo__box .event__checkbox .txt__box,
+#wrapper .container #agreement #agree #items #marketing__box .age__checkbox .txt__box,
+#wrapper .container #agreement #agree #items #marketing__box .use__checkbox .txt__box,
+#wrapper .container #agreement #agree #items #marketing__box .userinfo__checkbox .txt__box,
+#wrapper .container #agreement #agree #items #marketing__box .marketing__checkbox .txt__box,
+#wrapper .container #agreement #agree #items #marketing__box .event__checkbox .txt__box,
+#wrapper .container #agreement #agree #items #event__box .age__checkbox .txt__box,
+#wrapper .container #agreement #agree #items #event__box .use__checkbox .txt__box,
+#wrapper .container #agreement #agree #items #event__box .userinfo__checkbox .txt__box,
+#wrapper .container #agreement #agree #items #event__box .marketing__checkbox .txt__box,
 #wrapper .container #agreement #agree #items #event__box .event__checkbox .txt__box {
-  font-family: "Pretendard-Regular";
   font-size: 12px;
-  font-style: normal;
-  line-height: 18px;
-  letter-spacing: -0.36px;
   margin-left: 5px;
-  color: #6a6a6a;
+  color: #6c757d;
 }
 #wrapper .container #signup__btn button {
   border: none;
   width: 100%;
   height: 45px;
-  background: #818181;
+  background: #ff6d00;
   color: #fff;
   transition: background 0.4s;
   border-radius: 3px;
@@ -671,7 +822,8 @@ table {
   font-style: normal;
   line-height: 24px;
   letter-spacing: -0.48px;
+  cursor: pointer;
 }
 #wrapper .container #signup__btn button.active {
-  background: #ff6d00;
+  background: #f99256;
 }

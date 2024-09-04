@@ -171,46 +171,17 @@ table {
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 100%;
+  width: 1384px;
+  padding: 0px 15px;
+  margin: 0 auto;
+  height: 100vh;
 }
 .wrapper .modal__box {
-  width: 493px;
+  width: 413px;
   height: 575px;
 }
 .wrapper .modal__box .container {
   margin-bottom: 70px;
-}
-.wrapper .modal__box .container .inner {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 10px;
-}
-.wrapper .modal__box .container .inner span {
-  font-family: "Pretendard-Regular";
-  font-size: 16px;
-  font-style: normal;
-  line-height: 24px;
-  letter-spacing: -0.48px;
-  color: #292828;
-}
-.wrapper .modal__box .container .inner span:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-.wrapper .modal__box .container .inner span .fa-chevron-left {
-  width: 17px;
-  height: 17px;
-  font-size: 17px;
-}
-.wrapper .modal__box .container .inner .fa-xmark {
-  width: 17px;
-  height: 17px;
-  font-size: 17px;
-  transition: all 0.5s;
-  border-radius: 50%;
-}
-.wrapper .modal__box .container .inner .fa-xmark:hover {
-  background-color: #d4d4d4;
 }
 .wrapper .modal__box .container .login {
   margin-bottom: 15px;
@@ -227,21 +198,19 @@ table {
   display: inline-block;
   margin-right: 6px;
   font-size: 13px;
-}
-.wrapper .modal__box .container .data span {
-  color: #009e95;
   font-family: "Pretendard-Regular";
   font-size: 12px;
   font-style: normal;
   line-height: 18px;
   letter-spacing: -0.36px;
+  color: #0a8800;
 }
-.wrapper .email .text {
+.wrapper .modal__box .email .text {
   margin-bottom: 8px;
 }
-.wrapper .email .text span {
+.wrapper .modal__box .email .text span {
   display: inline-block;
-  width: 413px;
+  width: 100%;
   color: #101010;
   text-align: left;
   font-family: "Pretendard-Regular";
@@ -250,31 +219,31 @@ table {
   line-height: 18px;
   letter-spacing: -0.36px;
 }
-.wrapper .email .email__box input[type=text] {
+.wrapper .modal__box .email .email__box input[type=text] {
   margin-bottom: 20px;
   padding-left: 20px;
   border: 1px solid #b5b5b5;
-  width: 413px;
+  width: 100%;
   height: 45px;
   border-radius: 8px;
 }
-.wrapper .email button {
+.wrapper .modal__box .email button {
   margin-bottom: 14px;
   border: none;
-  width: 413px;
+  width: 100%;
   height: 47px;
   background: #ff6d00;
   color: #fff;
   transition: all 0.3s;
   border-radius: 8px;
 }
-.wrapper .email button:hover {
+.wrapper .modal__box .email button:hover {
   background: #ff6d00;
   color: #fff;
   cursor: pointer;
   touch-action: manipulation;
 }
-.wrapper .email .text__box span {
+.wrapper .modal__box .email .text__box span {
   display: inline-block;
   margin-bottom: 24px;
   color: #818181;
@@ -284,15 +253,14 @@ table {
   line-height: 18px;
   letter-spacing: -0.36px;
 }
-.wrapper .email .text__box span:hover {
+.wrapper .modal__box .email .text__box span:hover {
   text-decoration: underline;
   cursor: pointer;
 }
-.wrapper .box .other .line {
+.wrapper .modal__box .box .other .line {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-basis: 100%;
   margin: 8px;
   margin-bottom: 25px;
   color: #4a4949;
@@ -302,95 +270,132 @@ table {
   line-height: 18px;
   letter-spacing: -0.36px;
 }
-.wrapper .box .other .line::before {
+.wrapper .modal__box .box .other .line::before {
   flex-grow: 1;
-  margin: 0 12px;
+  margin-right: 12px;
   height: 1px;
   background: #9a9a9a;
   line-height: 0;
   content: "";
 }
-.wrapper .box .other .line::after {
+.wrapper .modal__box .box .other .line::after {
   flex-grow: 1;
-  margin: 0 12px;
+  margin-left: 12px;
   height: 1px;
   background: #9a9a9a;
   line-height: 0;
   content: "";
 }
-.wrapper .icon {
+.wrapper .modal__box .icon {
   display: flex;
   gap: 40px;
   align-items: center;
   justify-content: center;
 }
-.wrapper .icon span {
+.wrapper .modal__box .icon span {
   display: inline-block;
-  margin-bottom: 96px;
+  margin-bottom: 40px;
 }
-.wrapper .icon span:hover {
+.wrapper .modal__box .icon span:hover {
   cursor: pointer;
 }
-.wrapper .icon span .google-icon {
+.wrapper .modal__box .icon span .google-icon {
   display: inline-block;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   background: url("../../../assets/images/mypage/google-icon.svg") center/cover no-repeat;
 }
-.wrapper .icon span .naver-icon {
+.wrapper .modal__box .icon span .naver-icon {
   display: inline-block;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   background: url("../../../assets/images/mypage/naver.svg") center/cover no-repeat;
 }
-.wrapper .icon span .apple-icon {
+.wrapper .modal__box .icon span .apple-icon {
   display: inline-block;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   background: url("../../../assets/images/mypage/apple.svg") center/cover no-repeat;
 }
-.wrapper .agree {
-  margin-bottom: 36px;
+.wrapper .modal__box .img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border: 1px;
+  width: 100%;
+  height: 100px;
+  margin-bottom: 40px;
+}
+.wrapper .modal__box .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.wrapper .modal__box .agree {
   color: #292828;
   font-family: "Pretendard-Regular";
   font-size: 12px;
   font-style: normal;
   line-height: 18px;
   letter-spacing: -0.36px;
+  margin-bottom: -3px;
 }
-.wrapper .agree span {
+.wrapper .modal__box .agree span {
   color: #0065be;
 }
-.wrapper .agree span:hover {
+.wrapper .modal__box .agree span:hover {
   text-decoration: underline;
   cursor: pointer;
 }
+.wrapper .modal__box .copy span:nth-child(1) {
+  font-family: "Pretendard-Bold";
+  font-size: 12px;
+  font-style: bold;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: -0.36px;
+  color: #ff6d00;
+}
+.wrapper .modal__box .copy span:nth-child(2) {
+  font-family: "Pretendard-Regular";
+  font-size: 12px;
+  font-style: normal;
+  line-height: 18px;
+  letter-spacing: -0.36px;
+  color: #818181;
+}
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1384px) {
   .wrapper {
-    width: 100%;
-    height: 100vh;
     width: 100%;
   }
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 768px) {
   .wrapper {
-    width: 390px;
-    height: 100vh;
-    width: 100%;
+    display: flex;
+    margin: 0 auto;
   }
   .wrapper .modal__box {
-    width: 390px;
-    height: 100vh;
+    width: 100%;
+  }
+  .wrapper .modal__box .container {
+    width: 100%;
   }
   .wrapper .modal__box .email {
-    margin-right: 8px;
-    margin-left: 8px;
+    width: 100%;
   }
   .wrapper .modal__box .email .email__box input[type=text] {
-    width: 380px;
+    width: 100%;
   }
-  .wrapper .modal__box .email button {
-    width: 380px;
+  .wrapper .modal__box .email .button {
+    width: 100%;
+  }
+  .wrapper .modal__box .img {
+    width: 100%;
+  }
+  .wrapper .modal__box .img img {
+    width: 100%;
   }
 }
