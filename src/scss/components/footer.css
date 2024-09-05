@@ -597,6 +597,7 @@ table {
     font-style: normal;
     line-height: 24px;
     letter-spacing: -0.48px;
+    cursor: pointer;
     display: flex;
     gap: 3px;
     align-items: center;
@@ -605,6 +606,13 @@ table {
     color: #101010;
     padding-top: 5px;
     transition: all 0.3s;
+  }
+  #footer .footer-m-inner ul li a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   #footer .footer-m-inner ul li i {
     display: inline-block;
@@ -642,6 +650,9 @@ table {
   }
 }
 @media (max-width: 390px) {
+  #footer {
+    background-color: #fff;
+  }
   #footer .footer-m-inner ul li {
     font-family: "Pretendard-Regular";
     font-size: 16px;

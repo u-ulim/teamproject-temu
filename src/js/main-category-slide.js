@@ -77,8 +77,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const itemWidth = listItems[0].offsetWidth + 18; // 각 항목의 너비 + 간격
 
   // 양쪽에 항목을 복사하여 자연스러운 무한 슬라이드처럼 보이게 함
-  const cloneFirst = listItems.slice(0, 14); // 첫 3개 항목 복사
-  const cloneLast = listItems.slice(-14); // 마지막 3개 항목 복사
+  const cloneFirst = listItems.slice(0, 30); // 첫 3개 항목 복사
+  const cloneLast = listItems.slice(-30); // 마지막 3개 항목 복사
 
   // 복사한 항목을 리스트 앞과 뒤에 추가
   cloneFirst.forEach((item) => categoryList.appendChild(item.cloneNode(true)));

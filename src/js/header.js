@@ -278,6 +278,8 @@ const headerLoad = () => {
             ".submenu-content .content"
           );
 
+          const mobileMenus = document.querySelectorAll(".mobile-menus li");
+
           // 첫 번째 탭과 콘텐츠에 active 클래스 추가
           if (tabs.length > 0) {
             tabs[0].classList.add("active");
@@ -331,6 +333,13 @@ const headerLoad = () => {
           subTabs.forEach((subTabLi) => {
             subTabLi.addEventListener("click", function () {
               const text = this.querySelector("p").innerText;
+              tabSearchEvt(text);
+            });
+          });
+
+          mobileMenus.forEach((mbmenus) => {
+            mbmenus.addEventListener("click", function () {
+              const text = this.querySelector("a").innerText;
               tabSearchEvt(text);
             });
           });
