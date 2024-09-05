@@ -32,9 +32,6 @@ main {
         .category {
           color: map-get($color, color-Neutrals-Grey-500);
         }
-        .back-box {
-          display: none;
-        }
         .select__category {
           gap: 10px;
         }
@@ -750,6 +747,7 @@ aside {
         @include text_S_14;
       }
       .user__info {
+        // display: none;
         &.active {
           display: none;
         }
@@ -1185,12 +1183,15 @@ aside {
     width: 100%;
     .section__up {
       margin-bottom: 10px;
+
       article {
+        padding-top: 40px;
         .section__title {
           display: flex;
           align-items: center;
           justify-content: center;
           margin-bottom: 0;
+
           width: 100%;
           height: 48px;
           text-align: center;
@@ -1318,8 +1319,8 @@ aside {
   aside {
     padding-top: 0;
     .checkout__summary {
-      padding: 0 20px;
       width: 100%;
+      padding: 0;
       .consent {
         .consent-title {
           &::after {
@@ -1345,6 +1346,8 @@ aside {
     width: 100%;
     .address__modal__inner {
       width: 100%;
+      height: 100%;
+      margin: 0 auto;
       .address__modal__inner-box {
         padding: 40px;
         width: 100%;
@@ -1359,6 +1362,8 @@ aside {
     width: 100%;
     .plus__modal__inner {
       width: 100%;
+      height: 100%;
+      margin: 0 auto;
       .plus__modal__inner-box {
         width: 100%;
         form {
@@ -1387,10 +1392,8 @@ aside {
             }
             #mobile-user {
               display: block;
-              padding-right: 5px;
               padding-bottom: 10px;
               color: map-get($color, primary-color);
-              text-align: right;
               @include text_XS_12;
             }
             input[type="text"] {
