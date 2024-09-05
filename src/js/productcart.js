@@ -128,7 +128,7 @@ function updateSelectedCount() {
   ).length;
   const displayCount = Math.max(0, selectedCheckboxes);
   if (itemCountElement) {
-    itemCountElement.innerText = `(${displayCount})`;
+    itemCountElement.innerText = `(${Math.max(0, displayCount - 1)})`;
   }
 }
 
