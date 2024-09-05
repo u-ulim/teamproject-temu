@@ -72,6 +72,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const categoryList = document.querySelector(".category__list");
   const listItems = Array.from(document.querySelectorAll(".category__list li"));
+
   // const rightBtn = document.querySelector(".category__slide-btn-right");
   // const leftBtn = document.querySelector(".category__slide-btn-left");
   const itemWidth = listItems[0].offsetWidth + 18; // 각 항목의 너비 + 간격
@@ -88,6 +89,34 @@ document.addEventListener("DOMContentLoaded", function () {
       categoryList.firstElementChildChild
     )
   );
+
+  const categoryItems = document.querySelectorAll(".category__list li");
+
+  console.log(categoryItems);
+
+  const tabSearchEvt = function (text) {
+    const searchQuery = text.replace(/[^\w\sㄱ-힣]|_/g, "").trim();
+
+    if (searchQuery) {
+      // 검색어를 LocalStorage에 저장
+      localStorage.setItem("searchQuery", searchQuery);
+
+      // 검색 결과 페이지로 이동
+      const url = `/html/components/search-results.html?query=${encodeURIComponent(
+        searchQuery
+      )}`;
+      window.location.href = url;
+    } else {
+      alert("검색어를 입력하세요!");
+    }
+  };
+
+  categoryItems.forEach((categoryItem) => {
+    categoryItem.addEventListener("click", function () {
+      const text = this.querySelector("span").innerText;
+      tabSearchEvt(text);
+    });
+  });
 
   let currentIndex = listItems.length; // 처음에 복사된 첫 번째 항목을 넘어서 시작
   const totalItems = categoryList.children.length;
