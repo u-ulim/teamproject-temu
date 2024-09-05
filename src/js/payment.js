@@ -326,6 +326,8 @@ form.addEventListener("submit", function (e) {
     </li>
   `;
 
+  console.log(newListItemHTML);
+
   document
     .querySelectorAll('input[name="useraddress__radio"]')
     .forEach((radio) => {
@@ -335,6 +337,8 @@ form.addEventListener("submit", function (e) {
   if (editingItem) {
     editingItem.innerHTML = newListItemHTML;
     editingItem = null;
+    console.log(newListItemHTML);
+    console.log(editingItem);
   } else {
     const newListItem = document.createElement("ul");
     newListItem.innerHTML = newListItemHTML;
@@ -361,6 +365,7 @@ form.addEventListener("submit", function (e) {
   phoneNumberInput.value = "";
   detailedAddressInput.value = "";
   siSelect.value = "";
+
   guKunselect.innerHTML = "<option selected disabled>시/군/구</option>";
   updateAddressInfoDisplay();
 });
@@ -402,18 +407,67 @@ userInfo.addEventListener("click", function (e) {
     detailedAddressInput.value = address.optionAddress;
     siSelect.value = address.siSelected;
 
-    guKunselect.innerHTML = "";
-    if (guKun[address.siSelected]) {
-      guKun[address.siSelected].forEach((gu) => {
+    // ******************* //
+    // // guKunselect 기본 선택 항목을 초기화하고 '시/군/구를 선택하세요' 기본 옵션 추가
+
+    // const defaultOption = document.createElement("option");
+    // defaultOption.value = "";
+    // defaultOption.innerText = "시/군/구";
+    // defaultOption.selected = true;
+    // guKunselect.appendChild(defaultOption);
+
+    // // '서울특별시'의 구/군 목록을 동적으로 추가
+    // if (guKun["seoul"]) {
+    //   guKun["seoul"].forEach((gu) => {
+    //     const guOption = document.createElement("option");
+    //     guOption.value = gu;
+    //     guOption.innerText = gu;
+    //     if (gu === address.guKunSelected) {
+    //       // 만약 이전에 선택한 구/군이 있다면 선택된 상태로 설정
+    //       guOption.selected = true;
+    //     }
+    //     guKunselect.appendChild(guOption);
+    //   });
+    // }
+    // ******************* //
+
+    ///////////////
+    siSelect.innerHTML = ""; // 기존 내용을 모두 비우는 부분
+
+    si.forEach((area) => {
+      const siOption = document.createElement("option");
+      siOption.value = area.name;
+      siOption.innerText = area.Kname;
+      siSelect.appendChild(siOption);
+    });
+
+    const defaultSiOption = document.createElement("option");
+    defaultSiOption.value = "서울특별시";
+    defaultSiOption.innerText = "서울특별시";
+    defaultSiOption.selected = true;
+    siSelect.appendChild(defaultSiOption);
+
+    const defaultOption = document.createElement("option");
+    defaultOption.value = "";
+    defaultOption.innerText = "시/군/구";
+    defaultOption.selected = true;
+    guKunselect.appendChild(defaultOption);
+
+    // '서울특별시'의 구/군 목록을 동적으로 추가
+    if (guKun["seoul"]) {
+      guKun["seoul"].forEach((gu) => {
         const guOption = document.createElement("option");
         guOption.value = gu;
         guOption.innerText = gu;
         if (gu === address.guKunSelected) {
+          // 만약 이전에 선택한 구/군이 있다면 선택된 상태로 설정
           guOption.selected = true;
         }
         guKunselect.appendChild(guOption);
       });
     }
+
+    ///////////////
 
     editingItem = listItem;
 
@@ -675,19 +729,22 @@ function setupDiscountListeners() {
 function toggleAddressModal(type, show) {
   const modalType =
     type === "plus" ? ".address__modal__box-plus" : ".address__modal__box";
+
   const modal = document.querySelector(modalType);
 
   if (modal) {
     modal.classList.toggle("active", show);
     document.body.style.overflow = show ? "hidden" : "auto";
   }
+  console.log(modalType);
+  console.log(modal);
 }
 
 function addModalEventListeners() {
   if (addressBtn) {
-    addressBtn.addEventListener("click", () =>
-      toggleAddressModal("main", true)
-    );
+    addressBtn.addEventListener("click", () => {
+      toggleAddressModal("main", true);
+    });
   }
 
   if (addressClose) {

@@ -1051,9 +1051,6 @@ aside .checkout__summary .info ul li div i {
   line-height: 22px;
   letter-spacing: -0.42px;
 }
-.address__modal__box .address__modal__inner .address__modal__inner-box .user__info {
-  display: none;
-}
 .address__modal__box .address__modal__inner .address__modal__inner-box .user__info.active {
   display: none;
 }
