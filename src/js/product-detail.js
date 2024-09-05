@@ -496,8 +496,10 @@ fetch(productsURL)
                 </div>
               </div>
             </div>
-            <div class="product-lists">
-            </div>
+            <div class="product-lists"></div>
+            <button id="loadMoreBtn" class="load-more-btn">
+            더 보기
+            </button>
             
           </div>
       </section>

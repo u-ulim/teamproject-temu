@@ -334,6 +334,24 @@
   }
 }
 
+// 더보기 버튼
+#loadMoreBtn {
+  background: map-get($color, primary-color);
+  color: map-get($color, color-White);
+  @include text_B_S_14;
+  margin: 0 auto;
+  width: 200px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-top: 40px;
+}
+
 /* 반응형 디자인 */
 
 /* 1384px 이상, 5개 아이템 */

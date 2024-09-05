@@ -32,6 +32,12 @@ const eventCheckbox = document.querySelector("#event__box .checkbox");
 // 5. 회원가입 버튼
 const signupButton = document.querySelector(".signup__button");
 
+const formSubmitBtn = doucment.querySelector(".container > form");
+formSubmitBtn.addEventListener("submit", (e) => {
+  e.preventDefault();
+  console.log(e);
+});
+
 // 1. 아이디 유효성 검사
 // 아이디는 5자 이상이어야 하고, 영어 소문자 및 숫자만 포함해야 합니다.
 let idValidation = false;
@@ -244,18 +250,11 @@ const validationFnc = () => {
     const signUpBtn = document.querySelector("#signup__btn > button");
     signUpBtn.disabled = false;
     signUpBtn.classList.add("active");
-    
   } else {
-    console.log(
-      idValidation,
-      "id",
-      passwordValidation,
-      "password",
-      emailValidation,
-      "email",
-      checkboxValidation,
-      "checkbox"
-    );
+    const signUpBtn = document.querySelector("#signup__btn > button");
+
+    signUpBtn.disabled = true;
+    signUpBtn.classList.remove("active");
     console.log("nope");
   }
 };

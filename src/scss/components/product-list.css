@@ -308,6 +308,28 @@ table {
   color: #ff6d00;
 }
 
+#loadMoreBtn {
+  background: #ff6d00;
+  color: #fff;
+  font-family: "Pretendard-Bold";
+  font-size: 14px;
+  font-style: bold;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: -0.42px;
+  margin: 0 auto;
+  width: 200px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-top: 40px;
+}
+
 /* 반응형 디자인 */
 /* 1384px 이상, 5개 아이템 */
 @media (min-width: 1384px) {
