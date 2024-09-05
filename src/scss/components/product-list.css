@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Pretendard-Regular";
   font-style: normal;
@@ -167,15 +168,18 @@ table {
 }
 
 .product-lists {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 기본적으로 5개의 열 설정 */
+  gap: 40px; /* 아이템 간의 간격 */
   width: 100%;
+  /* 전체 너비 설정 (필요시 조정) */
+  justify-items: center; /* 아이템을 가운데 정렬 */
+  align-items: start; /* 아이템을 상단 정렬 */
 }
 .product-lists .product-list {
-  margin-bottom: 60px;
-  width: 227px;
+  margin-bottom: 20px;
   cursor: pointer;
+  box-sizing: border-box;
 }
 .product-lists .product-list:hover .product-list__thumb-box .product-list__thumb {
   transform: scale(1.1);
@@ -185,7 +189,7 @@ table {
 .product-lists .product-list .product-list__thumb-box {
   margin-bottom: 10px;
   overflow: hidden;
-  width: 227px;
+  width: 100%;
   height: 227px;
   border-radius: 8px;
 }
@@ -198,13 +202,14 @@ table {
   object-position: center;
 }
 .product-lists .product-list .product-list__title {
-  display: -webkit-box;
   margin-bottom: 10px;
-  overflow: hidden;
-  width: 227px;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: 2;
+  width: 100%;
+  height: 40px; /* 고정된 높이 (예시) */
+  display: -webkit-box;
   -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* 두 줄로 제한 */
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-family: "Pretendard-Regular";
   font-size: 14px;
   font-style: normal;
@@ -250,7 +255,7 @@ table {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.product-lists .product-list .product-list__counters .product-list__cart-ico.active {
+.product-lists .product-list .product-list__counters .product-list__cart-ico:hover {
   background-image: url("../../../assets/images/products/cart-fill-ico.svg");
 }
 .product-lists .product-list .product-list__reviews {
@@ -298,82 +303,43 @@ table {
   background-color: #ff6d00;
   color: #fff;
   border-radius: 8px;
-  width: 60px;
-  text-align: center;
 }
 .product-lists .product-list .product-list__solds .product-list__quantity {
   color: #ff6d00;
 }
 
-@media (max-width: 1384px) {
+/* 반응형 디자인 */
+/* 1384px 이상, 5개 아이템 */
+@media (min-width: 1384px) {
   .product-lists {
-    width: 100%;
-  }
-  .product-lists .product-list {
-    margin-bottom: 20px;
-    overflow: hidden;
-  }
-  .product-lists .product-list .product-list__thumb-box {
-    width: 100%;
-  }
-  .product-lists .product-list .product-list__title {
-    width: 100%;
+    grid-template-columns: repeat(5, 1fr);
   }
 }
-@media (max-width: 1000px) {
+/* 768px ~ 1384px, 4개 아이템 */
+@media (min-width: 768px) and (max-width: 1384px) {
   .product-lists {
-    width: 100%;
-  }
-  .product-lists .product-list {
-    margin-bottom: 0px;
-    width: 49%;
-    height: 50vw;
-    overflow: hidden;
-  }
-  .product-lists .product-list .product-list__thumb-box {
-    width: 100%;
-    height: 50%;
-  }
-  .product-lists .product-list .product-list__title {
-    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
   }
 }
-@media (max-width: 768px) {
+/* 390px ~ 768px, 2개 아이템 */
+@media (min-width: 390px) and (max-width: 768px) {
   .product-lists {
-    width: 100%;
-  }
-  .product-lists .product-list {
-    margin-bottom: 0px;
-    overflow: hidden;
-    width: 48%;
-    height: 80vw;
-  }
-  .product-lists .product-list .product-list__thumb-box {
-    width: 100%;
-    height: 60%;
-  }
-  .product-lists .product-list .product-list__title {
-    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
+/* 390px 미만, 1개 아이템 */
 @media (max-width: 390px) {
   .product-lists {
-    width: 100%;
-  }
-  .product-lists .product-list {
-    margin-bottom: 40px;
-    overflow: hidden;
-    width: 45%;
-    height: 100%;
+    grid-template-columns: repeat(1, 1fr); /* 한 줄에 하나씩 */
   }
   .product-lists .product-list .product-list__thumb-box {
+    margin-bottom: 10px;
+    overflow: hidden;
     width: 100%;
-    height: 40%;
-  }
-  .product-lists .product-list .product-list__thumb-box .product-list__thumb {
-    height: 160px;
+    height: 43vw; /* 비율에 따라 조정 */
+    border-radius: 8px;
   }
   .product-lists .product-list .product-list__title {
-    width: 100%;
+    height: auto; /* 모바일에서는 높이를 자동으로 조정 */
   }
 }

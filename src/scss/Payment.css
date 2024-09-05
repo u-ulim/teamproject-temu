@@ -137,6 +137,10 @@ ul {
   list-style: none;
 }
 
+ul li::marker {
+  content: "";
+}
+
 blockquote,
 q {
   quotes: none;
@@ -168,7 +172,7 @@ table {
 
 .container {
   width: 1384px;
-  padding: 0px 15px 0px 15px;
+  padding: 0px 15px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -351,7 +355,7 @@ main .address .shopping__info .info__down-empty button {
   transition: background 0.3s;
 }
 main .address .shopping__info .info__down-empty button:hover {
-  background: #ff7629;
+  background: #f99256;
 }
 main .delivery__service {
   flex: 2;
@@ -667,7 +671,7 @@ main .delivery__service .delivery__info .delivery__memo li:nth-child(3) {
   letter-spacing: -0.42px;
 }
 .credit .used__credit button:hover {
-  background-color: #ff7629;
+  background-color: #f99256;
   cursor: pointer;
 }
 
@@ -729,15 +733,15 @@ main .delivery__service .delivery__info .delivery__memo li:nth-child(3) {
 }
 .payment__method .methods ul label:hover {
   cursor: pointer;
-  border: 1px solid #ff7629;
-  box-shadow: 0 0 4px #ff7629;
+  border: 1px solid #f99256;
+  box-shadow: 0 0 4px #f99256;
 }
 .payment__method .methods ul input[type=radio] {
   display: none;
 }
 .payment__method .methods ul input[type=radio]:checked + label {
-  border: 1px solid #ff7629;
-  box-shadow: 0 0 4px #ff7629;
+  border: 1px solid #f99256;
+  box-shadow: 0 0 4px #f99256;
 }
 
 /*aside*/
@@ -954,7 +958,7 @@ aside .checkout__summary .checkout__button {
   letter-spacing: -0.48px;
 }
 aside .checkout__summary .checkout__button:hover {
-  background-color: #ff7629;
+  background-color: #f99256;
   cursor: pointer;
 }
 aside .checkout__summary .info {
@@ -1036,7 +1040,7 @@ aside .checkout__summary .info ul li div i {
   letter-spacing: -0.48px;
 }
 .address__modal__box .address__modal__inner .address__modal__inner-box #plus-address:hover {
-  color: #ff7629;
+  color: #f99256;
 }
 .address__modal__box .address__modal__inner .address__modal__inner-box .info__password {
   display: flex;
@@ -1445,7 +1449,7 @@ aside .checkout__summary .info ul li div i {
   border-radius: 8px;
 }
 .address__modal__box-plus .plus__modal__inner .plus__modal__inner-box form .submit__box input[type=submit]:hover {
-  background-color: #ff7629;
+  background-color: #f99256;
 }
 .address__modal__box-plus .plus__modal__inner .plus__modal__inner-box .box {
   display: flex;

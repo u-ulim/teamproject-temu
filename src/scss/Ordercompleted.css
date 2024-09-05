@@ -137,6 +137,10 @@ ul {
   list-style: none;
 }
 
+ul li::marker {
+  content: "";
+}
+
 blockquote,
 q {
   quotes: none;
@@ -172,7 +176,7 @@ body {
 
 .container {
   width: 1384px;
-  padding: 0px 15px 0px 15px;
+  padding: 0px 15px;
   margin: 0 auto;
   margin: 0 auto;
 }
@@ -322,7 +326,7 @@ main .container .section__up .shopping__info ul li button {
   letter-spacing: -0.48px;
 }
 main .container .section__up .shopping__info ul li button:hover {
-  background: #ff7629;
+  background: #f99256;
 }
 main .container .section__up .info {
   margin-bottom: 65px;
@@ -398,7 +402,7 @@ main .container .section__down .section__down-product button i {
   padding-left: 12px;
 }
 main .container .section__down .section__down-product button:hover {
-  background-color: #ff7629;
+  background-color: #f99256;
   cursor: pointer;
 }
 

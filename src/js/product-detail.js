@@ -496,7 +496,9 @@ fetch(productsURL)
                 </div>
               </div>
             </div>
-            <div id="product-list"></div>
+            <div class="product-lists">
+            </div>
+            
           </div>
       </section>
     </div>
@@ -858,7 +860,6 @@ fetch(productsURL)
       //   console.log(setCartProducts);
       //   localStorageSave();
       // };
-
 
       // cartLocalStorage
       let setCartProducts =

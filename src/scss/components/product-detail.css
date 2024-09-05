@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Pretendard-Regular";
   font-style: normal;
@@ -1205,6 +1206,150 @@ body #createDetail .detail__left-box #product-detail__container .product-detail_
   color: #ff6d00;
   cursor: pointer;
 }
+body #createDetail .detail__left-box #product-detail__container .product-detail__product-lists .product-lists {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 기본적으로 5개의 열 설정 */
+  gap: 40px; /* 아이템 간의 간격 */
+  width: 100%;
+  /* 전체 너비 설정 (필요시 조정) */
+  justify-items: center; /* 아이템을 가운데 정렬 */
+  align-items: start; /* 아이템을 상단 정렬 */
+}
+body #createDetail .detail__left-box #product-detail__container .product-detail__product-lists .product-lists ul,
+body #createDetail .detail__left-box #product-detail__container .product-detail__product-lists .product-lists li {
+  list-style: none;
+}
+body #createDetail .detail__left-box #product-detail__container .product-detail__product-lists .product-lists .product-list {
+  margin-bottom: 20px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+body #createDetail .detail__left-box #product-detail__container .product-detail__product-lists .product-lists .product-list:hover .product-list__thumb-box .product-list__thumb {
+  transform: scale(1.1);
+  z-index: -10;
+  position: relative;
+}
+body #createDetail .detail__left-box #product-detail__container .product-detail__product-lists .product-lists .product-list .product-list__thumb-box {
+  margin-bottom: 10px;
+  overflow: hidden;
+  width: 100%;
+  height: 227px;
+  border-radius: 8px;
+}
+body #createDetail .detail__left-box #product-detail__container .product-detail__product-lists .product-lists .product-list .product-list__thumb-box .product-list__thumb {
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s;
+  border-radius: 8px;
+  object-fit: cover;
+  object-position: center;
+}
+body #createDetail .detail__left-box #product-detail__container .product-detail__product-lists .product-lists .product-list .product-list__title {
+  margin-bottom: 10px;
+  width: 100%;
+  height: 40px; /* 고정된 높이 (예시) */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* 두 줄로 제한 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: "Pretendard-Regular";
+  font-size: 14px;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: -0.42px;
+}
+body #createDetail .detail__left-box #product-detail__container .product-detail__product-lists .product-lists .product-list .product-list__counters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body #createDetail .detail__left-box #product-detail__container .product-detail__product-lists .product-lists .product-list .product-list__counters > div {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+body #createDetail .detail__left-box #product-detail__container .product-detail__product-lists .product-lists .product-list .product-list__counters > div .product-list__discount {
+  font-family: "Pretendard-Bold";
+  font-size: 22px;
+  font-style: bold;
+  font-weight: 900;
+  line-height: 30px;
+  letter-spacing: -0.66px;
+  display: flex;
+  color: #ff6d00;
+}
+body #createDetail .detail__left-box #product-detail__container .product-detail__product-lists .product-lists .product-list .product-list__counters > div .product-list__price {
+  font-family: "Pretendard-Bold";
+  font-size: 22px;
+  font-style: bold;
+  font-weight: 900;
+  line-height: 30px;
+  letter-spacing: -0.66px;
+  color: #292828;
+}
+body #createDetail .detail__left-box #product-detail__container .product-detail__product-lists .product-lists .product-list .product-list__counters .product-list__cart-ico {
+  width: 45px;
+  height: 35px;
+  background-image: url("../../../assets/images/products/cart-ico.svg");
+  transition: all 0.3s;
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body #createDetail .detail__left-box #product-detail__container .product-detail__product-lists .product-lists .product-list .product-list__counters .product-list__cart-ico:hover {
+  background-image: url("../../../assets/images/products/cart-fill-ico.svg");
+}
+body #createDetail .detail__left-box #product-detail__container .product-detail__product-lists .product-lists .product-list .product-list__reviews {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  font-family: "Pretendard-Regular";
+  font-size: 14px;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: -0.42px;
+}
+body #createDetail .detail__left-box #product-detail__container .product-detail__product-lists .product-lists .product-list .product-list__reviews .product-list__star {
+  width: 20px;
+  height: 20px;
+  background-image: url("../../../assets/images/products/product-list__star.svg");
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body #createDetail .detail__left-box #product-detail__container .product-detail__product-lists .product-lists .product-list .product-list__reviews .product-list__rating {
+  margin-right: 5px;
+  color: #009e95;
+}
+body #createDetail .detail__left-box #product-detail__container .product-detail__product-lists .product-lists .product-list .product-list__reviews .product-list__review-text {
+  margin-right: 5px;
+  color: #6a6a6a;
+}
+body #createDetail .detail__left-box #product-detail__container .product-detail__product-lists .product-lists .product-list .product-list__reviews .product-list__review-count {
+  color: #6a6a6a;
+}
+body #createDetail .detail__left-box #product-detail__container .product-detail__product-lists .product-lists .product-list .product-list__solds {
+  font-family: "Pretendard-Regular";
+  font-size: 12px;
+  font-style: normal;
+  line-height: 18px;
+  letter-spacing: -0.36px;
+  display: flex;
+  align-items: center;
+}
+body #createDetail .detail__left-box #product-detail__container .product-detail__product-lists .product-lists .product-list .product-list__solds .product-list__solds-out {
+  margin-right: 5px;
+  padding: 2px 6px 0px 6px;
+  background-color: #ff6d00;
+  color: #fff;
+  border-radius: 8px;
+}
+body #createDetail .detail__left-box #product-detail__container .product-detail__product-lists .product-lists .product-list .product-list__solds .product-list__quantity {
+  color: #ff6d00;
+}
 body #createDetail .detail__right-box {
   width: 38%;
 }
@@ -1745,6 +1890,9 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
   body #createDetail .detail__left-box #product-detail__container .product-detail__product-lists .product-lists__header .product-lists__header__right > div {
     margin-right: 0px;
     order: 2;
+  }
+  body #createDetail .detail__left-box #product-detail__container .product-detail__product-lists .product-lists {
+    grid-template-columns: repeat(2, 1fr);
   }
   body #createDetail .detail__right-box .detail__main-contentsbox {
     width: 100%;

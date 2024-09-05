@@ -151,14 +151,16 @@ fetch(productsURL)
 
       // 홀수 개의 아이템일 경우, 짝수 개로 맞추기 위해 빈 li 추가
       // 아이템이 5개가 되도록 빈 li 추가
-      const numItems = filteredProducts.length;
-      if (numItems < 5) {
-        for (let i = 0; i < 5 - numItems; i++) {
-          const emptyListItem = document.createElement("li");
-          emptyListItem.className = "product-list empty-item";
-          productLists.appendChild(emptyListItem);
-        }
-      }
+      // const numItems = filteredProducts.length;
+      // if (numItems < 5) {
+      //   for (let i = 0; i < 5 - numItems; i++) {
+      //     const emptyListItem = document.createElement("li");
+      //     emptyListItem.className = "product-list empty-item";
+      //     productLists.appendChild(emptyListItem);
+      //   }
+      // }
+
+     
     };
     // 데이터를 처리하여 제품 목록 추가
     importData();

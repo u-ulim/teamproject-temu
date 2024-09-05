@@ -179,7 +179,8 @@ table {
   line-height: 22px;
   letter-spacing: -0.42px;
   color: #6a6a6a;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
+  margin-top: 40px;
 }
 .list-wrapper ul,
 .list-wrapper li {

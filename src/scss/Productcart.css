@@ -160,6 +160,13 @@ table {
 }
 
 /* VARIABLES */
+.background_cover {
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 /* Header */
 body {
   position: relative;
@@ -552,7 +559,7 @@ body {
   letter-spacing: -0.48px;
 }
 .container main .section__up article .empty__product .popular-btn:hover {
-  background-color: #ff7629;
+  background-color: #f99256;
 }
 .container main .mobile-aside {
   display: none;
@@ -579,12 +586,157 @@ body {
   justify-content: center;
   flex-direction: column;
 }
+.container main .section__down .section__down-product .product-lists {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 기본적으로 5개의 열 설정 */
+  gap: 40px; /* 아이템 간의 간격 */
+  width: 100%;
+  /* 전체 너비 설정 (필요시 조정) */
+  justify-items: center; /* 아이템을 가운데 정렬 */
+  align-items: start; /* 아이템을 상단 정렬 */
+}
+.container main .section__down .section__down-product .product-lists ul,
+.container main .section__down .section__down-product .product-lists li {
+  list-style: none;
+}
+.container main .section__down .section__down-product .product-lists .product-list {
+  margin-bottom: 20px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.container main .section__down .section__down-product .product-lists .product-list:hover .product-list__thumb-box .product-list__thumb {
+  transform: scale(1.1);
+  z-index: -10;
+  position: relative;
+}
+.container main .section__down .section__down-product .product-lists .product-list .product-list__thumb-box {
+  margin-bottom: 10px;
+  overflow: hidden;
+  width: 100%;
+  height: 227px;
+  border-radius: 8px;
+}
+.container main .section__down .section__down-product .product-lists .product-list .product-list__thumb-box .product-list__thumb {
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s;
+  border-radius: 8px;
+  object-fit: cover;
+  object-position: center;
+}
+.container main .section__down .section__down-product .product-lists .product-list .product-list__title {
+  margin-bottom: 10px;
+  width: 100%;
+  height: 40px; /* 고정된 높이 (예시) */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* 두 줄로 제한 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: "Pretendard-Regular";
+  font-size: 14px;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: -0.42px;
+}
+.container main .section__down .section__down-product .product-lists .product-list .product-list__counters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container main .section__down .section__down-product .product-lists .product-list .product-list__counters > div {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.container main .section__down .section__down-product .product-lists .product-list .product-list__counters > div .product-list__discount {
+  font-family: "Pretendard-Bold";
+  font-size: 22px;
+  font-style: bold;
+  font-weight: 900;
+  line-height: 30px;
+  letter-spacing: -0.66px;
+  display: flex;
+  color: #ff6d00;
+}
+.container main .section__down .section__down-product .product-lists .product-list .product-list__counters > div .product-list__price {
+  font-family: "Pretendard-Bold";
+  font-size: 22px;
+  font-style: bold;
+  font-weight: 900;
+  line-height: 30px;
+  letter-spacing: -0.66px;
+  color: #292828;
+}
+.container main .section__down .section__down-product .product-lists .product-list .product-list__counters .product-list__cart-ico {
+  width: 45px;
+  height: 35px;
+  background-image: url("../../../assets/images/products/cart-ico.svg");
+  transition: all 0.3s;
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container main .section__down .section__down-product .product-lists .product-list .product-list__counters .product-list__cart-ico:hover {
+  background-image: url("../../../assets/images/products/cart-fill-ico.svg");
+}
+.container main .section__down .section__down-product .product-lists .product-list .product-list__reviews {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  font-family: "Pretendard-Regular";
+  font-size: 14px;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: -0.42px;
+}
+.container main .section__down .section__down-product .product-lists .product-list .product-list__reviews .product-list__star {
+  width: 20px;
+  height: 20px;
+  background-image: url("../../../assets/images/products/product-list__star.svg");
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container main .section__down .section__down-product .product-lists .product-list .product-list__reviews .product-list__rating {
+  margin-right: 5px;
+  color: #009e95;
+}
+.container main .section__down .section__down-product .product-lists .product-list .product-list__reviews .product-list__review-text {
+  margin-right: 5px;
+  color: #6a6a6a;
+}
+.container main .section__down .section__down-product .product-lists .product-list .product-list__reviews .product-list__review-count {
+  color: #6a6a6a;
+}
+.container main .section__down .section__down-product .product-lists .product-list .product-list__solds {
+  font-family: "Pretendard-Regular";
+  font-size: 12px;
+  font-style: normal;
+  line-height: 18px;
+  letter-spacing: -0.36px;
+  display: flex;
+  align-items: center;
+}
+.container main .section__down .section__down-product .product-lists .product-list .product-list__solds .product-list__solds-out {
+  margin-right: 5px;
+  padding: 2px 6px 0px 6px;
+  background-color: #ff6d00;
+  color: #fff;
+  border-radius: 8px;
+}
+.container main .section__down .section__down-product .product-lists .product-list .product-list__solds .product-list__quantity {
+  color: #ff6d00;
+}
 .container main .section__down .section__down-product button {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
   border: none;
+  border: 1px solid red;
   width: 158px;
   height: 38px;
   background-color: #ff6d00;
@@ -596,7 +748,7 @@ body {
   padding-left: 12px;
 }
 .container main .section__down .section__down-product button:hover {
-  background-color: #ff7629;
+  background-color: #f99256;
   cursor: pointer;
 }
 .container .pc-aside {
@@ -721,7 +873,7 @@ body {
   letter-spacing: -0.48px;
 }
 .container .pc-aside .checkout__summary .checkout__button:hover {
-  background-color: #ff7629;
+  background-color: #f99256;
   cursor: pointer;
 }
 .container .pc-aside .checkout__summary .info {
@@ -852,7 +1004,7 @@ body {
   letter-spacing: -0.42px;
 }
 .modal__box .modal__inner .modal__inner-box form ul li select:hover {
-  border: 1px solid #ff7629;
+  border: 1px solid #f99256;
 }
 .modal__box .modal__inner .modal__inner-box .product-info-origin {
   margin-bottom: 17px;
@@ -995,7 +1147,7 @@ body {
   color: #fff;
 }
 .modal__box .modal__inner .modal__inner-box .button input:nth-child(2):hover {
-  background: #ff7629;
+  background: #f99256;
 }
 .modal__box .modal__close-box {
   position: absolute;
@@ -1155,7 +1307,7 @@ body {
     letter-spacing: -0.48px;
   }
   .container main .mobile-aside .checkout__summary .checkout__button:hover {
-    background-color: #ff7629;
+    background-color: #f99256;
     cursor: pointer;
   }
   .container main .mobile-aside .checkout__summary .info {
@@ -1176,8 +1328,11 @@ body {
     margin-bottom: 20px;
     padding-left: 10px;
   }
-  .container main .section__down {
+  .container main .section__down .section__down-product {
     width: 100%;
+  }
+  .container main .section__down .section__down-product .product-lists {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (max-width: 768px) {
@@ -1330,6 +1485,12 @@ body {
   .container main .section__down {
     width: 100%;
   }
+  .container main .section__down .section__down-product {
+    width: 100%;
+  }
+  .container main .section__down .section__down-product .product-lists {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .container main .section__down .section__down-title h2 {
     font-family: "Pretendard-Bold";
     font-size: 16px;
@@ -1460,7 +1621,7 @@ body {
     letter-spacing: -0.48px;
   }
   .mobile-aside .checkout__summary .checkout__button:hover {
-    background-color: #ff7629;
+    background-color: #f99256;
     cursor: pointer;
   }
   .mobile-aside .checkout__summary .info {

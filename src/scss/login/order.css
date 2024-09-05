@@ -659,7 +659,7 @@ table {
   .wrapper .mark__inner .rightmenu .userInfo .container h4 {
     font-family: "Pretendard-Bold";
     font-size: 14px;
-    font-style: normal;
+    font-style: bold;
     font-weight: 700;
     line-height: 22px;
     letter-spacing: -0.42px;
@@ -682,7 +682,7 @@ table {
   .wrapper .mark__inner .rightmenu .userInfo .orderClock span:nth-child(1) {
     font-family: "Pretendard-Bold";
     font-size: 14px;
-    font-style: normal;
+    font-style: bold;
     font-weight: 700;
     line-height: 22px;
     letter-spacing: -0.42px;

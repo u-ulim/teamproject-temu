@@ -10,7 +10,8 @@
   h2 {
     @include text_B_S_14;
     color: map-get($color, color-Neutrals-Grey-600);
-    margin-bottom: 12px;
+    margin-bottom: 20px;
+    margin-top: 40px;
   }
   ul,
   li {
