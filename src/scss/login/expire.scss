@@ -5,15 +5,18 @@
 @import "../layout/layout.scss";
 
 .wrapper {
-  position: relative;
-  height: 100vh;
   @include width_full;
+  height: 500px;
   .mark__inner {
+    @include width_inner;
+    gap: 50px;
     display: flex;
-    height: 100%;
+    // height: 100%;
+    // LEFTMENU
     .leftmenu {
-      width: 200px;
+      width: 300px;
       height: 100%;
+      padding-left: 20px;
       // UL
       > ul {
         .home {
@@ -33,9 +36,7 @@
             justify-content: center;
           }
           & > div {
-            display: flex;
-            justify-content: space-between;
-            width: 14;
+            text-align: center;
           }
           .document {
             width: 24px;
@@ -70,8 +71,9 @@
           display: flex;
           align-items: center;
           justify-content: space-between;
-          // border: 1px solid red;
-          width: 170px;
+
+          width: 100%;
+          text-align: lefts;
 
           > div {
             display: flex;
@@ -110,6 +112,7 @@
       }
     }
     .contents {
+      // TEXT
       .text {
         display: flex;
         gap: 60px;
@@ -117,10 +120,12 @@
         width: 100%;
         font-size: 14px;
         cursor: pointer;
-        span {
-          //   border: 1px solid #f00;
+        // SPAN
+        a {
+          // border: 1px solid #f00;
           &:nth-child(1) {
             color: map-get($color, color-Neutrals-Grey-500);
+
             &:hover {
               color: map-get($color, color-Neutrals-Grey-800);
             }
@@ -133,16 +138,20 @@
           }
         }
       }
+      // COUPON__CODE
       .coupon__code {
+        margin-bottom: 40px;
         display: flex;
         gap: 22px;
+        // CODE
         .code {
           padding-left: 14px;
           border: 1px solid map-get($color, color-Neutrals-Grey-400);
-          width: 308px;
+          width: 600px;
           height: 40px;
           border-radius: 8px;
         }
+        // BUTTON
         button {
           border: 1px solid map-get($color, color-Neutrals-Grey-800);
           width: 82px;
@@ -155,28 +164,23 @@
           }
         }
       }
-    }
-    .box {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      .icon {
-        // border: 1px solid #f00;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        .coupon__icon {
-          display: inline-block;
-          //   border: 1px solid #f00;
-          margin-bottom: 10px;
-          width: 120px;
-          height: 120px;
-          background-image: url(../../../assets/images/mypage/coupon__icon.svg);
-          @include background_cover;
-        }
-        .text__box {
+      .box {
+        .icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          // COUPON__ICON
+          .coupon__icon {
+            display: inline-block;
+            //   border: 1px solid #f00;
+            margin-bottom: 10px;
+            width: 150px;
+            height: 120px;
+            background-image: url(../../../assets/images/mypage/coupon__icon.svg);
+            @include background_cover;
+          }
+          // SPAN
           span {
             @include text_M_16;
             display: flex;
@@ -184,8 +188,80 @@
             justify-content: center;
             margin-bottom: 7px;
           }
-          p {
-            @include text_S_14;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1384px) {
+  .wrapper {
+    width: 100%;
+    .mark__inner {
+      width: 100%;
+      gap: 30px;
+      .leftmenu {
+        width: 250px;
+      }
+      .contents {
+        .coupon__code {
+          width: 500px;
+        }
+        .box {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+// MOBILE
+@media screen and (max-width: 768px) {
+  // WRAPPER
+  .wrapper {
+    @include width_full;
+    width: 100%;
+
+    // MARK__INNER
+    .mark__inner {
+      display: flex;
+      height: 100%;
+      // LEFTMENU
+      .leftmenu {
+        display: flex;
+        //FA-CHEVRON-DOWN
+        .fa-chevron-down {
+          margin-left: 30px;
+        }
+      }
+      // //CONTENTS
+      .contents {
+        // TEXT
+        .text {
+          gap: 30px;
+        }
+        // COUPON__CODE
+        .coupon__code {
+          gap: 10px;
+          // CODE
+          .code {
+            // border: 1px solid red;
+            width: 290px;
+          }
+          // BUTTON
+          button {
+            width: 60px;
+            height: 40px;
+          }
+        }
+      }
+      // BOX
+      .box {
+        // ICON
+        .icon {
+          // border: 1px solid red;
+          span {
+            @include text_XS_12;
           }
         }
       }
@@ -193,84 +269,47 @@
   }
 }
 
-@media screen and (max-width: 768px) {
-  .wrapper {
-    @include width_full;
-    width: 100%;
-    height: 100vh;
-    .mark__inner {
-      display: flex;
-      height: 100%;
-      .leftmenu {
-        display: flex;
-        .fa-chevron-down {
-          margin-left: 30px;
-        }
-      }
-      .contents {
-        .text {
-          gap: 30px;
-        }
-        .coupon__code {
-          gap: 10px;
-          .code {
-            // border: 1px solid red;
-            width: 290px;
-          }
-          button {
-            width: 60px;
-            height: 40px;
-          }
-        }
-      }
-      .box {
-        .icon {
-          width: 320px;
-          span {
-            @include text_S_14;
-          }
-          p {
-            @include text_S_14;
-          }
-        }
-      }
-    }
-  }
-}
+// MOBILE
 @media screen and (max-width: 390px) {
+  // WRAPPER
   .wrapper {
     @include width_full;
     width: 390px;
-    height: 100vh;
+
+    // MARK__INNER
     .mark__inner {
       display: flex;
+      // LEFTMENU
       .leftmenu {
         display: none;
       }
+      // CONTENTS
       .contents {
         .text {
           gap: 30px;
         }
+        // COUPON__CODE
         .coupon__code {
           gap: 10px;
+          //CODE
           .code {
             // border: 1px solid red;
             width: 290px;
           }
+          // BUTTON
           button {
             width: 60px;
             height: 40px;
           }
         }
       }
+      // BOX
       .box {
+        margin-top: 30px;
+        // ICON
         .icon {
-          width: 320px;
           span {
-            @include text_S_14;
-          }
-          p {
-            @include text_S_14;
+            @include text_XS_12;
           }
         }
       }
