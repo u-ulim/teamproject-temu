@@ -416,116 +416,300 @@
       }
     }
 
+    // 기존
+    // .category__list__container {
+    //   // border: 1px solid #f00;
+    //   @include width_inner;
+    //   display: flex;
+    //   align-items: center;
+    //   justify-content: center;
+    //   // border: 1px solid red;
+    //   padding: 0px 15px 0px 15px;
+    //   position: relative;
+    //   .category__btn {
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: space-between;
+    //     position: absolute;
+    //     // border: 1px solid #f00;
+    //     width: 1332px;
+    //     height: 40px;
+    //     cursor: pointer;
+    //     .category__slide-btn-left {
+    //       display: flex;
+    //       align-items: center;
+    //       justify-content: center;
+    //       position: absolute;
+    //       left: 0;
+    //       width: 40px;
+    //       height: 40px;
+    //       background: map-get($color, color-Neutrals-Grey-100);
+    //       border-radius: 50%;
+    //       .fa-chevron-left {
+    //         color: map-get($color, color-Neutrals-Grey-700);
+    //       }
+    //     }
+    //     .category__slide-btn-right {
+    //       display: flex;
+    //       align-items: center;
+    //       justify-content: center;
+    //       position: absolute;
+    //       right: 0;
+    //       width: 40px;
+    //       height: 40px;
+    //       background: map-get($color, color-Neutrals-Grey-100);
+    //       border-radius: 50%;
+    //       .fa-chevron-right {
+    //         color: map-get($color, color-Neutrals-Grey-700);
+    //       }
+    //     }
+    //   }
+    //   // .category__list {
+    //   //   display: flex;
+    //   //   gap: 68px;
+    //   //   align-items: center;
+    //   //   justify-content: space-between;
+    //   //   overflow: hidden;
+    //   //   width: 1213px;
+    //   //   height: auto;
+    //   //   text-align: center;
+    //   //   li {
+    //   //     .category__list-img {
+    //   //       width: 115px;
+    //   //       height: 115px;
+    //   //       cursor: pointer;
+    //   //       border-radius: 50%;
+    //   //     }
+
+    //   //     span {
+    //   //       @include text_L_18;
+    //   //     }
+    //   //   }
+
+    //   //   li:nth-child(1) .category__list-img {
+    //   //     background: url(../../assets/images/index/cate-01.webp) center/cover;
+    //   //   }
+    //   //   li:nth-child(2) .category__list-img {
+    //   //     background: url(../../assets/images/index/cate-02.webp) center/cover;
+    //   //   }
+    //   //   li:nth-child(3) .category__list-img {
+    //   //     background: url(../../assets/images/index/cate-03.webp) center/cover;
+    //   //   }
+    //   //   li:nth-child(4) .category__list-img {
+    //   //     background: url(../../assets/images/index/cate-04.webp) center/cover;
+    //   //   }
+    //   //   li:nth-child(5) .category__list-img {
+    //   //     background: url(../../assets/images/index/cate-05.webp) center/cover;
+    //   //   }
+    //   //   li:nth-child(6) .category__list-img {
+    //   //     background: url(../../assets/images/index/cate-06.webp) center/cover;
+    //   //   }
+    //   //   li:nth-child(7) .category__list-img {
+    //   //     background: url(../../assets/images/index/cate-07.webp) center/cover;
+    //   //   }
+    //   //   li:nth-child(8) .category__list-img {
+    //   //     background: url(../../assets/images/index/cate-08.webp) center/cover;
+    //   //   }
+    //   //   li:nth-child(9) .category__list-img {
+    //   //     background: url(../../assets/images/index/cate-09.webp) center/cover;
+    //   //   }
+    //   //   li:nth-child(10) .category__list-img {
+    //   //     background: url(../../assets/images/index/cate-10.webp) center/cover;
+    //   //   }
+    //   //   li:nth-child(11) .category__list-img {
+    //   //     background: url(../../assets/images/index/cate-11.webp) center/cover;
+    //   //   }
+    //   //   li:nth-child(12) .category__list-img {
+    //   //     background: url(../../assets/images/index/cate-12.webp) center/cover;
+    //   //   }
+    //   //   li:nth-child(13) .category__list-img {
+    //   //     background: url(../../assets/images/index/cate-13.webp) center/cover;
+    //   //   }
+    //   //   li:nth-child(14) .category__list-img {
+    //   //     background: url(../../assets/images/index/cate-14.webp) center/cover;
+    //   //   }
+    //   // }
+    //   .category__list {
+    //     display: flex;
+    //     gap: 68px;
+    //     align-items: center;
+    //     justify-content: flex-start;
+    //     overflow: hidden; /* 리스트가 슬라이딩되면서 넘칠 경우 숨김 처리 */
+    //     width: 1213px;
+    //     height: auto;
+    //     text-align: center;
+    //     position: relative; /* 슬라이드 위치를 잡기 위해 relative */
+    //     animation: slide-left 15s linear infinite; /* 슬라이딩 애니메이션 */
+    //   }
+
+    //   li {
+    //     .category__list-img {
+    //       width: 115px;
+    //       height: 115px;
+    //       cursor: pointer;
+    //       border-radius: 50%;
+    //     }
+
+    //     span {
+    //       @include text_L_18;
+    //     }
+    //   }
+
+    //   li:nth-child(1) .category__list-img {
+    //     background: url(../../assets/images/index/cate-01.webp) center/cover;
+    //   }
+    //   li:nth-child(1) .category__list-img {
+    //     background: url(../../assets/images/index/cate-01.webp) center/cover;
+    //   }
+    //   li:nth-child(2) .category__list-img {
+    //     background: url(../../assets/images/index/cate-02.webp) center/cover;
+    //   }
+    //   li:nth-child(3) .category__list-img {
+    //     background: url(../../assets/images/index/cate-03.webp) center/cover;
+    //   }
+    //   li:nth-child(4) .category__list-img {
+    //     background: url(../../assets/images/index/cate-04.webp) center/cover;
+    //   }
+    //   li:nth-child(5) .category__list-img {
+    //     background: url(../../assets/images/index/cate-05.webp) center/cover;
+    //   }
+    //   li:nth-child(6) .category__list-img {
+    //     background: url(../../assets/images/index/cate-06.webp) center/cover;
+    //   }
+    //   li:nth-child(7) .category__list-img {
+    //     background: url(../../assets/images/index/cate-07.webp) center/cover;
+    //   }
+    //   li:nth-child(8) .category__list-img {
+    //     background: url(../../assets/images/index/cate-08.webp) center/cover;
+    //   }
+    //   li:nth-child(9) .category__list-img {
+    //     background: url(../../assets/images/index/cate-09.webp) center/cover;
+    //   }
+    //   li:nth-child(10) .category__list-img {
+    //     background: url(../../assets/images/index/cate-10.webp) center/cover;
+    //   }
+    //   li:nth-child(11) .category__list-img {
+    //     background: url(../../assets/images/index/cate-11.webp) center/cover;
+    //   }
+    //   li:nth-child(12) .category__list-img {
+    //     background: url(../../assets/images/index/cate-12.webp) center/cover;
+    //   }
+    //   li:nth-child(13) .category__list-img {
+    //     background: url(../../assets/images/index/cate-13.webp) center/cover;
+    //   }
+    //   li:nth-child(14) .category__list-img {
+    //     background: url(../../assets/images/index/cate-14.webp) center/cover;
+    //   }
+    //   /* 나머지 nth-child의 배경 이미지 생략 */
+    // }
+
     .category__list__container {
-      // border: 1px solid #f00;
-      @include width_inner;
+      width: 1384px; /* inner width */
+      overflow: hidden; /* 넘치는 li를 숨김 */
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0px 15px;
+      height: 160px;
+    }
+
+    .category__btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: absolute;
+      width: 1332px;
+      height: 40px;
+      cursor: pointer;
+    }
+
+    .category__slide-btn-left,
+    .category__slide-btn-right {
       display: flex;
       align-items: center;
       justify-content: center;
-      // border: 1px solid red;
-      padding: 0px 15px 0px 15px;
+      width: 40px;
+      height: 40px;
+      background: #f0f0f0;
+      border-radius: 50%;
+    }
+
+    .category__list {
+      display: flex;
+      gap: 68px;
+      align-items: center;
+      justify-content: flex-start;
+      width: 1213px;
+      height: auto;
+      text-align: center;
       position: relative;
-      .category__btn {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        position: absolute;
-        // border: 1px solid #f00;
-        width: 1332px;
-        height: 40px;
+      transition: transform 0.5s ease; /* 부드러운 슬라이드 애니메이션 */
+    }
+
+    .category__list li {
+      min-width: 115px; /* 각 항목의 너비 */
+      height: 115px;
+      border-radius: 50%;
+      transition: transform 0.5s ease;
+      .category__list-img {
+        width: 115px;
+        height: 115px;
         cursor: pointer;
-        .category__slide-btn-left {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          position: absolute;
-          left: 0;
-          width: 40px;
-          height: 40px;
-          background: map-get($color, color-Neutrals-Grey-100);
+        border-radius: 50%;
+        img {
+          width: 100%;
+          height: 100%;
           border-radius: 50%;
-          .fa-chevron-left {
-            color: map-get($color, color-Neutrals-Grey-700);
-          }
-        }
-        .category__slide-btn-right {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          position: absolute;
-          right: 0;
-          width: 40px;
-          height: 40px;
-          background: map-get($color, color-Neutrals-Grey-100);
-          border-radius: 50%;
-          .fa-chevron-right {
-            color: map-get($color, color-Neutrals-Grey-700);
-          }
+          @include background_cover;
         }
       }
-      .category__list {
-        display: flex;
-        gap: 68px;
-        align-items: center;
-        justify-content: space-between;
-        // border: 1px solid orangered;
-        overflow: hidden;
-        // border: 1px solid #f00;
-        width: 1213px;
-        height: auto;
-        text-align: center;
-        li {
-          // width: 115px;
-          // height: 141px;
-          .category__list-img {
-            width: 115px;
-            height: 115px;
-            border-radius: 50%;
-            cursor: pointer;
-          }
-
-          span {
-            @include text_L_18;
-          }
-        }
-
-        li:nth-child(1) .category__list-img {
-          background: url(../../assets/images/index/cate-01.webp) center/cover;
-        }
-
-        li:nth-child(2) .category__list-img {
-          background: url(../../assets/images/index/cate-02.webp) center/cover;
-        }
-
-        li:nth-child(3) .category__list-img {
-          background: url(../../assets/images/index/cate-03.webp) center/cover;
-        }
-
-        li:nth-child(4) .category__list-img {
-          background: url(../../assets/images/index/cate-04.webp) center/cover;
-        }
-
-        li:nth-child(5) .category__list-img {
-          background: url(../../assets/images/index/cate-05.webp) center/cover;
-        }
-
-        li:nth-child(6) .category__list-img {
-          background: url(../../assets/images/index/cate-06.webp) center/cover;
-        }
-
-        li:nth-child(7) .category__list-img {
-          background: url(../../assets/images/index/cate-07.webp) center/cover;
-        }
-
-        li:nth-child(8) .category__list-img {
-          background: url(../../assets/images/index/cate-08.webp) center/cover;
-        }
-
-        li:nth-child(9) .category__list-img {
-          background: url(../../assets/images/index/cate-09.webp) center/cover;
-        }
+      span {
+        @include text_M_16;
       }
     }
+    // li:nth-child(1) .category__list-img {
+    //   background: url(/assets/images/index/cate-01.webp) center/cover;
+    // }
+    // li:nth-child(2) .category__list-img {
+    //   background: url(/assets/images/index/cate-01.webp) center/cover;
+    // }
+    // li:nth-child(3) .category__list-img {
+    //   background: url(../../assets/images/index/cate-03.webp) center/cover;
+    // }
+    // li:nth-child(4) .category__list-img {
+    //   background: url(../../assets/images/index/cate-04.webp) center/cover;
+    // }
+    // li:nth-child(5) .category__list-img {
+    //   background: url(../../assets/images/index/cate-05.webp) center/cover;
+    // }
+    // li:nth-child(6) .category__list-img {
+    //   background: url(../../assets/images/index/cate-06.webp) center/cover;
+    // }
+    // li:nth-child(7) .category__list-img {
+    //   background: url(../../assets/images/index/cate-07.webp) center/cover;
+    // }
+    // li:nth-child(8) .category__list-img {
+    //   background: url(../../assets/images/index/cate-08.webp) center/cover;
+    // }
+    // li:nth-child(9) .category__list-img {
+    //   background: url(../../assets/images/index/cate-09.webp) center/cover;
+    // }
+    // li:nth-child(10) .category__list-img {
+    //   background: url(../../assets/images/index/cate-10.webp) center/cover;
+    // }
+    // li:nth-child(11) .category__list-img {
+    //   background: url(../../assets/images/index/cate-11.webp) center/cover;
+    // }
+    // li:nth-child(12) .category__list-img {
+    //   background: url(../../assets/images/index/cate-12.webp) center/cover;
+    // }
+    // li:nth-child(13) .category__list-img {
+    //   background: url(../../assets/images/index/cate-13.webp) center/cover;
+    // }
+    // li:nth-child(14) .category__list-img {
+    //   background: url(../../assets/images/index/cate-14.webp) center/cover;
+    // }
   }
 }
 
@@ -917,28 +1101,32 @@
         }
       }
       .category__list__container {
-        @include width_full;
+        // @include width_full;
+
         width: 100%;
-        height: auto;
+        height: 100%;
         .category__btn {
           display: none;
         }
         .category__list {
           display: flex;
-          gap: 30px;
+          gap: 0px;
+          padding-top: 20px;
           align-items: center;
           // border: 1px solid red;
-          overflow: hidden;
+          // overflow: hidden;
           width: 100%;
           height: 100px;
           li {
-            flex-basis: 20%;
+            min-width: 90px;
+            flex-basis: 10%;
             height: 100px;
             .category__list-img {
               margin: 0 auto;
-              width: 55px;
-              height: 55px;
+              width: 65px;
+              height: 65px;
               object-fit: cover;
+              margin-bottom: 9px;
             }
             span {
               @include text_S_14;

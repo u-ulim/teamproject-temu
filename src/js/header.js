@@ -7,11 +7,8 @@ const headerLoad = () => {
       header.innerHTML = data;
 
       const savedSearchQuery = localStorage.getItem("searchQuery");
-      console.log("헤더 로드 완료");
-      console.log("저장된 검색어:", savedSearchQuery);
 
       let searchInput = document.querySelector(".nav__input-wrapper input");
-      console.log("검색창 요소:", searchInput);
 
       // 저장된 검색어가 있을 경우 input에 값 넣기
       if (savedSearchQuery && searchInput) {
@@ -380,7 +377,43 @@ const headerLoad = () => {
           });
 
           // login check
+          ///////////////////////////////
+          // const navRightloginBtn = document.querySelector(
+          //   ".nav-right-loginbtn"
+          // );
 
+          // navRightloginBtn.addEventListener("click", () => {
+          //   const navRightSpanText = document.querySelector(
+          //     ".nav-right__menus a span"
+          //   ).innerText;
+          //   console.log(navRightSpanText);
+          //   if (navRightSpanText === "로그인/회원가입") {
+          //     window.location.href = "/html/components/login.html";
+          //   } else {
+          //     window.location.href = "/html/components/order.html";
+          //   }
+          // });
+
+          // const users = JSON.parse(localStorage.getItem("users")) || [];
+
+          // const loginUser = () => {
+          //   const navRightSpan = document.querySelector(
+          //     ".nav-right__menus a span"
+          //   );
+          //   if (users[0].id) {
+          //   }
+          // };
+
+          // // document.addEventListener("load", () => {
+
+          // // })
+
+          // if (users) {
+          //   loginUser();
+          // }
+          ////////////////////////
+
+          // 로그인 버튼 클릭 이벤트 처리
           const navRightloginBtn = document.querySelector(
             ".nav-right-loginbtn"
           );
@@ -397,53 +430,25 @@ const headerLoad = () => {
             }
           });
 
+          // 로컬스토리지에서 users 배열 가져오기 (없으면 빈 배열로 초기화)
           const users = JSON.parse(localStorage.getItem("users")) || [];
 
           const loginUser = () => {
             const navRightSpan = document.querySelector(
               ".nav-right__menus a span"
             );
-            navRightSpan.innerText = `${users[0].id}`;
+
+            // users 배열이 비어있지 않으면 (즉, 로그인된 유저가 있으면)
+            if (users.length > 0 && users[0].id) {
+              // 로그인된 유저의 아이디를 가져와서 navRightSpan에 표시
+              navRightSpan.innerText = `${users[0].id}님`; // 유저의 아이디 표시
+            } else {
+              // users 배열이 비어있거나 로그인 정보가 없을 때 처리
+              navRightSpan.innerText = "로그인/회원가입"; // 기본 상태
+            }
           };
 
-          // document.addEventListener("load", () => {
-
-          // })
-
-          if (users) {
-            loginUser();
-          }
-
-          console.log(navRightSpan);
-          // const users = JSON.parse(localStorage.getItem("users")) || [];
-
-          // const loginUser = () => {
-          //   const navRightSpan = document.querySelector(".nav-right__menus a");
-          //   navRightSpan.innerText = `${users[0].id}`;
-          //   console.log(users[0].id);
-          // };
-
-          // if (users) {
-          //   loginUser();
-          // }
-
-          // const navRightloginBtn = document.querySelector(
-          //   ".nav-right-loginbtn"
-          // );
-
-          // console.log(navRightloginBtn);
-          // navRightloginBtn.addEventListener("click", () => {
-          //   console.log("hi");
-          //   const loginBtn = navRightloginBtn.querySelector("a");
-          //   console.log(loginBtn);
-          //   const loginBtnText = loginBtn.innerText;
-
-          //   if (loginBtnText !== "로그인/회원가입")
-          //     window.location.href = "/html/components/order.html";
-          //   else window.location.href = "/html/components/login.html";
-          // });
-
-          // console.log(users);
+          loginUser();
         })
         .catch((error) => {
           console.log(error);
