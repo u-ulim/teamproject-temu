@@ -174,14 +174,14 @@ table {
   width: 1384px;
   padding: 0px 15px;
   margin: 0 auto;
-  height: 100vh;
 }
 .wrapper .modal__box {
+  padding-top: 60px;
   width: 413px;
   height: 575px;
 }
 .wrapper .modal__box .container {
-  margin-bottom: 70px;
+  margin-bottom: 60px;
 }
 .wrapper .modal__box .container .login {
   margin-bottom: 15px;
@@ -254,6 +254,61 @@ table {
   letter-spacing: -0.36px;
 }
 .wrapper .modal__box .email .text__box span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.wrapper .modal__box .password {
+  display: none;
+}
+.wrapper .modal__box .password .text {
+  margin-bottom: 8px;
+}
+.wrapper .modal__box .password .text span {
+  display: inline-block;
+  width: 100%;
+  color: #101010;
+  text-align: left;
+  font-family: "Pretendard-Regular";
+  font-size: 12px;
+  font-style: normal;
+  line-height: 18px;
+  letter-spacing: -0.36px;
+}
+.wrapper .modal__box .password .password__box input[type=text] {
+  margin-bottom: 20px;
+  padding-left: 20px;
+  border: 1px solid #b5b5b5;
+  width: 100%;
+  height: 45px;
+  border-radius: 8px;
+}
+.wrapper .modal__box .password button {
+  margin-bottom: 14px;
+  border: none;
+  width: 100%;
+  height: 47px;
+  background: #ff6d00;
+  color: #fff;
+  transition: all 0.3s;
+  border-radius: 8px;
+}
+.wrapper .modal__box .password button:hover {
+  background: #ff6d00;
+  color: #fff;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.wrapper .modal__box .password .text__box span {
+  display: inline-block;
+  margin-bottom: 24px;
+  color: #818181;
+  font-family: "Pretendard-Regular";
+  font-size: 12px;
+  font-style: normal;
+  line-height: 18px;
+  letter-spacing: -0.36px;
+}
+.wrapper .modal__box .password .text__box span:hover {
   text-decoration: underline;
   cursor: pointer;
 }
@@ -397,5 +452,8 @@ table {
   }
   .wrapper .modal__box .img img {
     width: 100%;
+  }
+  .wrapper .modal__box .copy {
+    padding-bottom: 10px;
   }
 }

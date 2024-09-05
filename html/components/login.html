@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="../../src/scss/login/login.css" />
     <script defer src="../../src/js/header.js"></script>
     <script defer src="../../src/js/footer.js"></script>
+    <script defer src="../../src/js/login.js"></script>
     <title>Document</title>
   </head>
   <body>
@@ -60,12 +61,41 @@
               type="text"
               name="email"
               id="email"
-              placeholder="아이디 또는 이메일"
+              placeholder="아이디를 적어주세요"
+            />
+            <!-- INPUT END -->
+          </div>
+
+          <!-- EMAIL__BOX END -->
+          <button id="open">계속</button>
+          <!-- TEXT__BOX START -->
+          <div class="text__box">
+            <span>로그인하는데 문제가 있으신가요?</span>
+            <a href="http://127.0.0.1:5502/html/components/signup.html">
+              <span>회원가입</span>
+            </a>
+          </div>
+          <!-- TEXT__BOX END -->
+        </div>
+        <div class="password">
+          <!-- TEXT START -->
+          <div class="text">
+            <span>비밀번호</span>
+          </div>
+          <!-- TEXT END -->
+          <!-- EMAIL__BOX START -->
+          <div class="password__box">
+            <!-- INPUT START -->
+            <input
+              type="text"
+              name="password"
+              id="password"
+              placeholder="비밀번호를 적어주세요"
             />
             <!-- INPUT END -->
           </div>
           <!-- EMAIL__BOX END -->
-          <button id="open">계속</button>
+          <button id="close">계속</button>
           <!-- TEXT__BOX START -->
           <div class="text__box">
             <span>로그인하는데 문제가 있으신가요?</span>

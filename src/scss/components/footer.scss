@@ -374,13 +374,16 @@
 
 @media (max-width: 768px) {
   #footer {
+    padding-top: 40px;
+    .footer-inner {
+      display: none;
+    }
     .footer-m-inner {
       display: block;
-      padding: 10px 0px 0px 0px;
       position: fixed;
       bottom: 0px;
       width: 100%;
-      // height: 60px;
+      padding: 10px 0;
       background-color: map-get($color, color-White);
       ul {
         display: flex;
@@ -392,16 +395,16 @@
           gap: 3px;
           align-items: center;
           flex-direction: column;
-          border-bottom: 2px solid map-get($color, primary-color);
           width: 24%;
           color: map-get($color, color-Black);
           padding-top: 5px;
+          transition: all 0.3s;
           i {
             display: inline-block;
             width: 32px;
             height: 32px;
             @include object_cover;
-            margin-top: 15px;
+            // margin-top: 10px;
           }
           &.footer-m__menu-home i {
             background-image: url("../../../assets/images/footer/t-menu-home-ico.svg");
@@ -414,6 +417,21 @@
           }
           &.footer-m__menu-cart i {
             background-image: url("../../../assets/images/footer/t-menu-cart-ico.svg");
+          }
+          &:hover {
+            color: map-get($color, primary-color);
+            &.footer-m__menu-home i {
+              background-image: url(../../../assets/images/footer/t-menu-home-active-ico.svg);
+            }
+            &.footer-m__menu-category i {
+              background-image: url(../../../assets/images/footer/t-menu-category-active-ico.svg);
+            }
+            &.footer-m__menu-my i {
+              background-image: url(../../../assets/images/footer/t-menu-my-active-ico.svg);
+            }
+            &.footer-m__menu-cart i {
+              background-image: url(../../../assets/images/footer/t-menu-cart-active-ico.svg);
+            }
           }
         }
       }
@@ -432,6 +450,7 @@
           align-items: center;
           flex-direction: column;
           color: map-get($color, color-Black);
+          transition: all 0.3s;
           i {
             display: inline-block;
             width: 24px;
@@ -449,6 +468,21 @@
           }
           &.footer-m__menu-cart i {
             background-image: url("../../../assets/images/footer/m-menu-cart-ico.svg");
+          }
+          &:hover {
+            color: map-get($color, primary-color);
+            &.footer-m__menu-home i {
+              background-image: url(../../../assets/images/footer/m-menu-home-active-ico.svg);
+            }
+            &.footer-m__menu-category i {
+              background-image: url(../../../assets/images/footer/m-menu-category-active-ico.svg);
+            }
+            &.footer-m__menu-my i {
+              background-image: url(../../../assets/images/footer/m-menu-my-active-ico.svg);
+            }
+            &.footer-m__menu-cart i {
+              background-image: url(../../../assets/images/footer/m-menu-cart-active-ico.svg);
+            }
           }
         }
       }
