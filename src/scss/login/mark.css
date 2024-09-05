@@ -310,12 +310,44 @@ table {
   display: flex;
   flex-direction: column;
   width: 200px;
-  margin-left: 300px;
+  margin-left: 500px;
 }
 .wrapper .mark__inner .box .container div {
   text-align: center;
 }
 
+@media screen and (max-width: 1384px) {
+  .wrapper {
+    width: 100%;
+  }
+  .wrapper .mark__inner {
+    display: flex;
+    position: relative;
+  }
+  .wrapper .mark__inner .leftmenu {
+    display: flex;
+  }
+  .wrapper .mark__inner .leftmenu .fa-chevron-down {
+    margin-left: 30px;
+  }
+  .wrapper .mark__inner .box {
+    position: relative;
+    right: 100px;
+  }
+  .wrapper .mark__inner .box span {
+    font-family: "Pretendard-Regular";
+    font-size: 18px;
+    font-style: normal;
+    line-height: 26px;
+    letter-spacing: -0.54px;
+    display: inline-block;
+  }
+  .wrapper .mark__inner .box .container {
+    position: absolute;
+    top: 50px;
+    left: -150px;
+  }
+}
 @media screen and (max-width: 768px) {
   .wrapper {
     width: 100%;
@@ -337,8 +369,15 @@ table {
     letter-spacing: -0.54px;
     display: inline-block;
   }
+  .wrapper .mark__inner .box .container {
+    position: absolute;
+    left: -350px;
+  }
 }
 @media screen and (max-width: 390px) {
+  .wrapper .mark__inner {
+    position: relative;
+  }
   .wrapper .mark__inner .leftmenu {
     display: none;
   }
@@ -348,11 +387,11 @@ table {
     font-style: normal;
     line-height: 26px;
     letter-spacing: -0.54px;
-    display: inline-block;
-    margin-top: 10px;
-    padding-bottom: 0;
+    position: absolute;
+    left: 100px;
   }
   .wrapper .mark__inner .box .container {
-    margin-left: 80px;
+    position: absolute;
+    left: -300px;
   }
 }
