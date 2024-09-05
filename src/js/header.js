@@ -378,6 +378,72 @@ const headerLoad = () => {
 
             window.scrollTo(0, scrollPosition);
           });
+
+          // login check
+
+          const navRightloginBtn = document.querySelector(
+            ".nav-right-loginbtn"
+          );
+
+          navRightloginBtn.addEventListener("click", () => {
+            const navRightSpanText = document.querySelector(
+              ".nav-right__menus a span"
+            ).innerText;
+            console.log(navRightSpanText);
+            if (navRightSpanText === "로그인/회원가입") {
+              window.location.href = "/html/components/login.html";
+            } else {
+              window.location.href = "/html/components/order.html";
+            }
+          });
+
+          const users = JSON.parse(localStorage.getItem("users")) || [];
+
+          const loginUser = () => {
+            const navRightSpan = document.querySelector(
+              ".nav-right__menus a span"
+            );
+            navRightSpan.innerText = `${users[0].id}`;
+          };
+
+          // document.addEventListener("load", () => {
+
+          // })
+
+          if (users) {
+            loginUser();
+          }
+
+          console.log(navRightSpan);
+          // const users = JSON.parse(localStorage.getItem("users")) || [];
+
+          // const loginUser = () => {
+          //   const navRightSpan = document.querySelector(".nav-right__menus a");
+          //   navRightSpan.innerText = `${users[0].id}`;
+          //   console.log(users[0].id);
+          // };
+
+          // if (users) {
+          //   loginUser();
+          // }
+
+          // const navRightloginBtn = document.querySelector(
+          //   ".nav-right-loginbtn"
+          // );
+
+          // console.log(navRightloginBtn);
+          // navRightloginBtn.addEventListener("click", () => {
+          //   console.log("hi");
+          //   const loginBtn = navRightloginBtn.querySelector("a");
+          //   console.log(loginBtn);
+          //   const loginBtnText = loginBtn.innerText;
+
+          //   if (loginBtnText !== "로그인/회원가입")
+          //     window.location.href = "/html/components/order.html";
+          //   else window.location.href = "/html/components/login.html";
+          // });
+
+          // console.log(users);
         })
         .catch((error) => {
           console.log(error);
