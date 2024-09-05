@@ -83,7 +83,10 @@ document.addEventListener("DOMContentLoaded", function () {
   // 복사한 항목을 리스트 앞과 뒤에 추가
   cloneFirst.forEach((item) => categoryList.appendChild(item.cloneNode(true)));
   cloneLast.forEach((item) =>
-    categoryList.insertBefore(item.cloneNode(true), categoryList.firstChild)
+    categoryList.insertBefore(
+      item.cloneNode(true),
+      categoryList.firstElementChildChild
+    )
   );
 
   let currentIndex = listItems.length; // 처음에 복사된 첫 번째 항목을 넘어서 시작
@@ -96,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
     currentIndex = newIndex;
 
     // 슬라이드 끝에서 눈속임을 위한 처리
-    if (currentIndex >= totalItems - 3) {
+    if (currentIndex >= totalItems - 6) {
       setTimeout(() => {
         categoryList.style.transition = "none"; // 애니메이션 없이 이동
         categoryList.style.transform = `translateX(${
@@ -137,7 +140,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const autoSlide = () => {
     setInterval(() => {
       slideItems(currentIndex + 1);
-    }, 3000);
+    }, 4000);
   };
 
   // 슬라이드 위치 초기화

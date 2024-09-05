@@ -378,7 +378,7 @@
 /* 390px 미만, 1개 아이템 */
 @media (max-width: 390px) {
   .product-lists {
-    grid-template-columns: repeat(1, 1fr); /* 한 줄에 하나씩 */
+    grid-template-columns: repeat(2, 1fr); /* 한 줄에 하나씩 */
     .product-list {
       .product-list__thumb-box {
         margin-bottom: 10px;
