@@ -199,6 +199,8 @@ main {
           color: map-get($color, color-White);
           transition: all 0.3s;
           border-radius: 8px;
+          margin-top: 20px;
+          margin-bottom: 30px;
           i {
             padding-left: 12px;
           }
@@ -232,6 +234,9 @@ main {
       width: 100%;
       padding: 0 20px;
       .section__up {
+        .section__up-title {
+          padding-top: 30px;
+        }
         .address__info {
           width: 100%;
           .info__down {

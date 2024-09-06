@@ -397,6 +397,8 @@ main .container .section__down .section__down-product button {
   color: #fff;
   transition: all 0.3s;
   border-radius: 8px;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 main .container .section__down .section__down-product button i {
   padding-left: 12px;
@@ -424,6 +426,9 @@ main .container .section__down .section__down-product button:hover {
   main .container {
     width: 100%;
     padding: 0 20px;
+  }
+  main .container .section__up .section__up-title {
+    padding-top: 30px;
   }
   main .container .section__up .address__info {
     width: 100%;
