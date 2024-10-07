@@ -559,59 +559,39 @@ table {
 #category .category__wrapper .category__title i {
   display: none;
 }
-#category .category__wrapper .category__list__container {
-  width: 1384px; /* inner width */
-  overflow: hidden; /* 넘치는 li를 숨김 */
+
+/* SLICK SLIDER*/
+.auto__slider {
+  /* category */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0px 15px;
-  height: 160px;
-}
-#category .category__wrapper .category__btn {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: absolute;
-  width: 1332px;
-  height: 40px;
-  cursor: pointer;
-}
-#category .category__wrapper .category__slide-btn-left,
-#category .category__wrapper .category__slide-btn-right {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background: #f0f0f0;
-  border-radius: 50%;
-}
-#category .category__wrapper .category__list {
-  display: flex;
-  gap: 68px;
-  align-items: center;
-  justify-content: flex-start;
-  width: 1213px;
+  z-index: -2;
+  gap: 50px;
+  width: 1380px;
   height: auto;
+  margin: 0 auto;
   text-align: center;
-  position: relative;
-  transition: transform 0.5s ease; /* 부드러운 슬라이드 애니메이션 */
 }
-#category .category__wrapper .category__list li {
-  min-width: 115px; /* 각 항목의 너비 */
-  height: 115px;
-  border-radius: 50%;
+.auto__slider li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  margin: 0 auto;
+  height: auto;
   transition: transform 0.5s ease;
+  border-radius: 50%;
+  cursor: pointer !important;
 }
-#category .category__wrapper .category__list li .category__list-img {
+.auto__slider li .category__list-img {
   width: 115px;
   height: 115px;
-  cursor: pointer;
-  border-radius: 50%;
+  margin: 0 auto;
 }
-#category .category__wrapper .category__list li .category__list-img img {
+.auto__slider li .category__list-img img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -620,7 +600,7 @@ table {
   background-repeat: no-repeat;
   background-size: cover;
 }
-#category .category__wrapper .category__list li span {
+.auto__slider li span {
   font-family: "Pretendard-Regular";
   font-size: 16px;
   font-style: normal;
@@ -657,8 +637,8 @@ table {
   font-weight: 700;
   letter-spacing: -0.48px;
   margin-top: -20px;
-  text-align: center;
   margin-bottom: 10px;
+  text-align: center;
 }
 #product #mobile__product {
   display: none;
@@ -996,22 +976,22 @@ table {
   #category .category__wrapper .category__list__container .category__list {
     display: flex;
     gap: 0px;
-    padding-top: 20px;
     align-items: center;
+    padding-top: 20px;
     width: 100%;
     height: 100px;
   }
   #category .category__wrapper .category__list__container .category__list li {
-    min-width: 90px;
     flex-basis: 10%;
+    min-width: 90px;
     height: 100px;
   }
   #category .category__wrapper .category__list__container .category__list li .category__list-img {
     margin: 0 auto;
+    margin-bottom: 9px;
     width: 65px;
     height: 65px;
     object-fit: cover;
-    margin-bottom: 9px;
   }
   #category .category__wrapper .category__list__container .category__list li span {
     font-family: "Pretendard-Regular";
@@ -1040,10 +1020,10 @@ table {
     align-content: center;
     gap: 30px;
     justify-content: space-between;
+    margin-bottom: 15px;
     width: 100%;
     height: 30px;
     color: #6a6a6a;
-    margin-bottom: 15px;
   }
   #product #mobile__product div {
     display: flex;
