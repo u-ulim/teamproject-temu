@@ -162,7 +162,7 @@ function resetAsideValues() {
             </li>
             <li class="tax__info">
               <span class="tax__label">TAX</span>
-              <span class="tax__text">Temu의 가격은 관세가격을 포함합니다.</span>
+              <span class="tax__text">Prime의 가격은 관세가격을 포함합니다.</span>
             </li>
           </ul>
         </div>
@@ -232,7 +232,7 @@ function updateAsideValues(
             </li>
             <li class="tax__info">
               <span class="tax__label">TAX</span>
-              <span class="tax__text">Temu의 가격은 관세가격을 포함합니다.</span>
+              <span class="tax__text">Prime의 가격은 관세가격을 포함합니다.</span>
             </li>
           </ul>
         </div>

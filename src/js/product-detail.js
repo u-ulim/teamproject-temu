@@ -144,7 +144,7 @@ fetch(productsURL)
             <i></i>
           </div>
           <div class="detail__main-contentsbox-infotxt">
-            Temu 제품 가격은 관세 등을 포함하고 있어 고객에게 추가적인 비용이
+            Prime의 제품 가격은 관세 등을 포함하고 있어 고객에게 추가적인 비용이
             발생하지 않습니다.
           </div>
           <div class="detail__main-contentsbox-delivery-infos">
@@ -533,7 +533,7 @@ fetch(productsURL)
       <i></i>
     </div>
     <div class="detail__main-contentsbox-infotxt">
-      Temu 제품 가격은 관세 등을 포함하고 있어 고객에게 추가적인 비용이
+    Prime의 제품 가격은 관세 등을 포함하고 있어 고객에게 추가적인 비용이
       발생하지 않습니다.
     </div>
     <div class="detail__main-contentsbox-delivery-infos">
