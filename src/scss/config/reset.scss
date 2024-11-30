@@ -117,6 +117,10 @@ ol,
 ul {
   list-style: none;
 }
+ul li::marker {
+  content: "";
+}
+
 blockquote,
 q {
   quotes: none;

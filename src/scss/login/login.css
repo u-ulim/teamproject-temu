@@ -1,0 +1,459 @@
+/* VARIABLES */
+@font-face {
+  font-family: "Pretendard-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+}
+/* HEADING */
+/* -2% = 0.02 * 'n'px */ /* -3% = 0.03 * 'n'px */
+/* TEXT */
+/* -2% = 0.02 * 'n'px */
+/* -3% = 0.03 * 'n'px */
+/* TEXT BOLD */
+/* -2% = 0.02 * 'n'px */
+/* -3% = 0.03 * 'n'px */
+.background_cover {
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+ul li::marker {
+  content: "";
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 1384px;
+  padding: 0px 15px;
+  margin: 0 auto;
+}
+.wrapper .modal__box {
+  padding-top: 60px;
+  width: 413px;
+  height: 575px;
+}
+.wrapper .modal__box .container {
+  margin-bottom: 60px;
+}
+.wrapper .modal__box .container .login {
+  margin-bottom: 15px;
+}
+.wrapper .modal__box .container .login span {
+  color: #101010;
+  font-family: "Pretendard-Bold";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: -0.6px;
+}
+.wrapper .modal__box .container .data {
+  display: inline-block;
+  margin-right: 6px;
+  font-size: 13px;
+  font-family: "Pretendard-Regular";
+  font-size: 12px;
+  font-style: normal;
+  line-height: 18px;
+  letter-spacing: -0.36px;
+  color: #0a8800;
+}
+.wrapper .modal__box .email .text {
+  margin-bottom: 8px;
+}
+.wrapper .modal__box .email .text span {
+  display: inline-block;
+  width: 100%;
+  color: #101010;
+  text-align: left;
+  font-family: "Pretendard-Regular";
+  font-size: 12px;
+  font-style: normal;
+  line-height: 18px;
+  letter-spacing: -0.36px;
+}
+.wrapper .modal__box .email .email__box input[type=text] {
+  margin-bottom: 20px;
+  padding-left: 20px;
+  border: 1px solid #b5b5b5;
+  width: 100%;
+  height: 45px;
+  border-radius: 8px;
+}
+.wrapper .modal__box .email button {
+  margin-bottom: 14px;
+  border: none;
+  width: 100%;
+  height: 47px;
+  background: #ff6d00;
+  color: #fff;
+  transition: all 0.3s;
+  border-radius: 8px;
+}
+.wrapper .modal__box .email button:hover {
+  background: #ff6d00;
+  color: #fff;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.wrapper .modal__box .email .text__box span {
+  display: inline-block;
+  margin-bottom: 24px;
+  color: #818181;
+  font-family: "Pretendard-Regular";
+  font-size: 12px;
+  font-style: normal;
+  line-height: 18px;
+  letter-spacing: -0.36px;
+}
+.wrapper .modal__box .email .text__box span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.wrapper .modal__box .password {
+  display: none;
+}
+.wrapper .modal__box .password .text {
+  margin-bottom: 8px;
+}
+.wrapper .modal__box .password .text span {
+  display: inline-block;
+  width: 100%;
+  color: #101010;
+  text-align: left;
+  font-family: "Pretendard-Regular";
+  font-size: 12px;
+  font-style: normal;
+  line-height: 18px;
+  letter-spacing: -0.36px;
+}
+.wrapper .modal__box .password .password__box input[type=text] {
+  margin-bottom: 20px;
+  padding-left: 20px;
+  border: 1px solid #b5b5b5;
+  width: 100%;
+  height: 45px;
+  border-radius: 8px;
+}
+.wrapper .modal__box .password button {
+  margin-bottom: 14px;
+  border: none;
+  width: 100%;
+  height: 47px;
+  background: #ff6d00;
+  color: #fff;
+  transition: all 0.3s;
+  border-radius: 8px;
+}
+.wrapper .modal__box .password button:hover {
+  background: #ff6d00;
+  color: #fff;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.wrapper .modal__box .password .text__box span {
+  display: inline-block;
+  margin-bottom: 24px;
+  color: #818181;
+  font-family: "Pretendard-Regular";
+  font-size: 12px;
+  font-style: normal;
+  line-height: 18px;
+  letter-spacing: -0.36px;
+}
+.wrapper .modal__box .password .text__box span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.wrapper .modal__box .box .other .line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 8px;
+  margin-bottom: 25px;
+  color: #4a4949;
+  font-family: "Pretendard-Regular";
+  font-size: 12px;
+  font-style: normal;
+  line-height: 18px;
+  letter-spacing: -0.36px;
+}
+.wrapper .modal__box .box .other .line::before {
+  flex-grow: 1;
+  margin-right: 12px;
+  height: 1px;
+  background: #9a9a9a;
+  line-height: 0;
+  content: "";
+}
+.wrapper .modal__box .box .other .line::after {
+  flex-grow: 1;
+  margin-left: 12px;
+  height: 1px;
+  background: #9a9a9a;
+  line-height: 0;
+  content: "";
+}
+.wrapper .modal__box .icon {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper .modal__box .icon span {
+  display: inline-block;
+  margin-bottom: 40px;
+}
+.wrapper .modal__box .icon span:hover {
+  cursor: pointer;
+}
+.wrapper .modal__box .icon span .google-icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url("../../../assets/images/mypage/google-icon.svg") center/cover no-repeat;
+}
+.wrapper .modal__box .icon span .naver-icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url("../../../assets/images/mypage/naver.svg") center/cover no-repeat;
+}
+.wrapper .modal__box .icon span .apple-icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url("../../../assets/images/mypage/apple.svg") center/cover no-repeat;
+}
+.wrapper .modal__box .img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border: 1px;
+  width: 100%;
+  height: 100px;
+  margin-bottom: 40px;
+}
+.wrapper .modal__box .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.wrapper .modal__box .agree {
+  color: #292828;
+  font-family: "Pretendard-Regular";
+  font-size: 12px;
+  font-style: normal;
+  line-height: 18px;
+  letter-spacing: -0.36px;
+  margin-bottom: -3px;
+}
+.wrapper .modal__box .agree span {
+  color: #0065be;
+}
+.wrapper .modal__box .agree span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.wrapper .modal__box .copy span:nth-child(1) {
+  font-family: "Pretendard-Bold";
+  font-size: 12px;
+  font-style: bold;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: -0.36px;
+  color: #ff6d00;
+}
+.wrapper .modal__box .copy span:nth-child(2) {
+  font-family: "Pretendard-Regular";
+  font-size: 12px;
+  font-style: normal;
+  line-height: 18px;
+  letter-spacing: -0.36px;
+  color: #818181;
+}
+
+@media screen and (max-width: 1384px) {
+  .wrapper {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .wrapper {
+    display: flex;
+    margin: 0 auto;
+  }
+  .wrapper .modal__box {
+    width: 100%;
+  }
+  .wrapper .modal__box .container {
+    width: 100%;
+  }
+  .wrapper .modal__box .email {
+    width: 100%;
+  }
+  .wrapper .modal__box .email .email__box input[type=text] {
+    width: 100%;
+  }
+  .wrapper .modal__box .email .button {
+    width: 100%;
+  }
+  .wrapper .modal__box .img {
+    width: 100%;
+  }
+  .wrapper .modal__box .img img {
+    width: 100%;
+  }
+  .wrapper .modal__box .copy {
+    padding-bottom: 10px;
+  }
+}

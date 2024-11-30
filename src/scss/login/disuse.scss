@@ -1,0 +1,320 @@
+@import "../config/colors.scss";
+@import "../config/fonts.scss";
+@import "../config/image.scss";
+@import "../config/reset.scss";
+@import "../layout/layout.scss";
+
+// WRAPPER
+.wrapper {
+  @include width_full;
+  height: 500px;
+  .mark__inner {
+    @include width_inner;
+    gap: 50px;
+    display: flex;
+    // height: 100%;
+    // LEFTMENU
+    .leftmenu {
+      width: 300px;
+      height: 100%;
+      padding-left: 20px;
+      // UL
+      > ul {
+        .home {
+          gap: 5px;
+          padding: 20px 18px;
+          @include text_XS_12;
+        }
+        > li {
+          display: flex;
+          align-items: center;
+          margin-bottom: 20px;
+          cursor: pointer;
+          a {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            justify-content: center;
+          }
+          & > div {
+            text-align: center;
+          }
+          .document {
+            width: 24px;
+            height: 24px;
+            background-image: url(../../../assets/images/mypage/document.svg);
+            @include background_cover;
+          }
+
+          .review {
+            width: 24px;
+            height: 24px;
+            background-image: url(../../../assets/images/mypage/review.svg);
+            @include background_cover;
+          }
+          .star {
+            width: 24px;
+            height: 24px;
+            background-image: url(../../../assets/images/mypage/star.svg);
+            @include background_cover;
+          }
+          .event {
+            width: 24px;
+            height: 24px;
+            background-image: url(../../../assets/images/mypage/event.svg);
+            @include background_cover;
+          }
+          span {
+            @include text_S_14;
+          }
+        }
+        .my-order {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          width: 100%;
+          text-align: lefts;
+
+          > div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .fa-chevron-down {
+            // margin-right: 20px;
+            transition: transform 0.5s;
+            &.active {
+              transform: rotate(180deg);
+            }
+          }
+        }
+        .inner {
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          @include text_S_14;
+          ul {
+            display: none;
+            &.active {
+              display: block;
+            }
+          }
+          .title {
+            display: flex;
+            // border: 1px solid red;
+            padding: 10px 10px;
+            @include text_S_14;
+            &:hover {
+              background: map-get($color-hover, primary-hover-color);
+            }
+          }
+        }
+      }
+    }
+    // CONTENTS
+    .contents {
+      // TEXT
+      .text {
+        display: flex;
+        gap: 60px;
+        margin-bottom: 13px;
+        width: 100%;
+        font-size: 14px;
+        cursor: pointer;
+        // SPAN
+        a {
+          // border: 1px solid #f00;
+          &:nth-child(2) {
+            color: map-get($color, color-Neutrals-Grey-500);
+
+            &:hover {
+              color: map-get($color, color-Neutrals-Grey-800);
+            }
+          }
+          &:nth-child(3) {
+            color: map-get($color, color-Neutrals-Grey-500);
+            &:hover {
+              color: map-get($color, color-Neutrals-Grey-800);
+            }
+          }
+        }
+      }
+      // COUPON__CODE
+      .coupon__code {
+        margin-bottom: 40px;
+        display: flex;
+        gap: 22px;
+        // CODE
+        .code {
+          padding-left: 14px;
+          border: 1px solid map-get($color, color-Neutrals-Grey-400);
+          width: 600px;
+          height: 40px;
+          border-radius: 8px;
+        }
+        // BUTTON
+        button {
+          border: 1px solid map-get($color, color-Neutrals-Grey-800);
+          width: 82px;
+          height: 40px;
+          background: map-get($color, color-White);
+          cursor: pointer;
+          border-radius: 8px;
+          &:hover {
+            background: map-get($color, color-Neutrals-Grey-100);
+          }
+        }
+      }
+      .box {
+        .icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          // COUPON__ICON
+          .coupon__icon {
+            display: inline-block;
+            //   border: 1px solid #f00;
+            margin-bottom: 10px;
+            width: 150px;
+            height: 120px;
+            background-image: url(../../../assets/images/mypage/coupon__icon.svg);
+            @include background_cover;
+          }
+          // SPAN
+          span {
+            @include text_M_16;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 7px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1384px) {
+  .wrapper {
+    width: 100%;
+    .mark__inner {
+      width: 100%;
+      gap: 30px;
+      .leftmenu {
+        width: 250px;
+      }
+      .contents {
+        .coupon__code {
+          width: 500px;
+        }
+        .box {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+// MOBILE
+@media screen and (max-width: 768px) {
+  // WRAPPER
+  .wrapper {
+    @include width_full;
+    width: 100%;
+
+    // MARK__INNER
+    .mark__inner {
+      display: flex;
+      height: 100%;
+      // LEFTMENU
+      .leftmenu {
+        display: flex;
+        //FA-CHEVRON-DOWN
+        .fa-chevron-down {
+          margin-left: 30px;
+        }
+      }
+      // //CONTENTS
+      .contents {
+        // TEXT
+        .text {
+          gap: 30px;
+        }
+        // COUPON__CODE
+        .coupon__code {
+          gap: 10px;
+          // CODE
+          .code {
+            // border: 1px solid red;
+            width: 290px;
+          }
+          // BUTTON
+          button {
+            width: 60px;
+            height: 40px;
+          }
+        }
+      }
+      // BOX
+      .box {
+        // ICON
+        .icon {
+          // border: 1px solid red;
+          span {
+            @include text_XS_12;
+          }
+        }
+      }
+    }
+  }
+}
+
+// MOBILE
+@media screen and (max-width: 390px) {
+  // WRAPPER
+  .wrapper {
+    @include width_full;
+    width: 390px;
+
+    // MARK__INNER
+    .mark__inner {
+      display: flex;
+      // LEFTMENU
+      .leftmenu {
+        display: none;
+      }
+      // CONTENTS
+      .contents {
+        .text {
+          gap: 30px;
+        }
+        // COUPON__CODE
+        .coupon__code {
+          gap: 10px;
+          //CODE
+          .code {
+            // border: 1px solid red;
+            width: 290px;
+          }
+          // BUTTON
+          button {
+            width: 60px;
+            height: 40px;
+          }
+        }
+      }
+      // BOX
+      .box {
+        margin-top: 30px;
+        // ICON
+        .icon {
+          span {
+            @include text_XS_12;
+          }
+        }
+      }
+    }
+  }
+}

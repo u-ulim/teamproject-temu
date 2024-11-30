@@ -1,0 +1,26 @@
+@import "../config/fonts.scss";
+@import "../config/reset.scss";
+@import "../config/colors.scss";
+@import "../layout/layout.scss";
+@import "../config/image.scss";
+
+.list-wrapper {
+  @include width_inner;
+
+  h2 {
+    @include text_B_S_14;
+    color: map-get($color, color-Neutrals-Grey-600);
+    margin-bottom: 20px;
+    margin-top: 40px;
+  }
+  ul,
+  li {
+    list-style: none;
+  }
+}
+
+@media (max-width: 1384px) {
+  .list-wrapper {
+    @include width_full;
+  }
+}

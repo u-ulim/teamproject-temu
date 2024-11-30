@@ -1,0 +1,458 @@
+/* VARIABLES */
+@font-face {
+  font-family: "Pretendard-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+}
+/* HEADING */
+/* -2% = 0.02 * 'n'px */ /* -3% = 0.03 * 'n'px */
+/* TEXT */
+/* -2% = 0.02 * 'n'px */
+/* -3% = 0.03 * 'n'px */
+/* TEXT BOLD */
+/* -2% = 0.02 * 'n'px */
+/* -3% = 0.03 * 'n'px */
+.background_cover {
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+ul li::marker {
+  content: "";
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.wrapper {
+  width: 100%;
+  height: 500px;
+}
+.wrapper .mark__inner {
+  width: 1384px;
+  padding: 0px 15px;
+  margin: 0 auto;
+  gap: 50px;
+  display: flex;
+}
+.wrapper .mark__inner .leftmenu {
+  width: 300px;
+  height: 100%;
+  padding-left: 20px;
+}
+.wrapper .mark__inner .leftmenu > ul .home {
+  gap: 5px;
+  padding: 20px 18px;
+  font-family: "Pretendard-Regular";
+  font-size: 12px;
+  font-style: normal;
+  line-height: 18px;
+  letter-spacing: -0.36px;
+}
+.wrapper .mark__inner .leftmenu > ul > li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.wrapper .mark__inner .leftmenu > ul > li a {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper .mark__inner .leftmenu > ul > li > div {
+  text-align: center;
+}
+.wrapper .mark__inner .leftmenu > ul > li .document {
+  width: 24px;
+  height: 24px;
+  background-image: url(../../../assets/images/mypage/document.svg);
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.wrapper .mark__inner .leftmenu > ul > li .review {
+  width: 24px;
+  height: 24px;
+  background-image: url(../../../assets/images/mypage/review.svg);
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.wrapper .mark__inner .leftmenu > ul > li .star {
+  width: 24px;
+  height: 24px;
+  background-image: url(../../../assets/images/mypage/star.svg);
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.wrapper .mark__inner .leftmenu > ul > li .event {
+  width: 24px;
+  height: 24px;
+  background-image: url(../../../assets/images/mypage/event.svg);
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.wrapper .mark__inner .leftmenu > ul > li span {
+  font-family: "Pretendard-Regular";
+  font-size: 14px;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: -0.42px;
+}
+.wrapper .mark__inner .leftmenu > ul .my-order {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  text-align: lefts;
+}
+.wrapper .mark__inner .leftmenu > ul .my-order > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper .mark__inner .leftmenu > ul .my-order .fa-chevron-down {
+  transition: transform 0.5s;
+}
+.wrapper .mark__inner .leftmenu > ul .my-order .fa-chevron-down.active {
+  transform: rotate(180deg);
+}
+.wrapper .mark__inner .leftmenu > ul .inner {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-family: "Pretendard-Regular";
+  font-size: 14px;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: -0.42px;
+}
+.wrapper .mark__inner .leftmenu > ul .inner ul {
+  display: none;
+}
+.wrapper .mark__inner .leftmenu > ul .inner ul.active {
+  display: block;
+}
+.wrapper .mark__inner .leftmenu > ul .inner .title {
+  display: flex;
+  padding: 10px 10px;
+  font-family: "Pretendard-Regular";
+  font-size: 14px;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: -0.42px;
+}
+.wrapper .mark__inner .leftmenu > ul .inner .title:hover {
+  background: #fff7f0;
+}
+.wrapper .mark__inner .contents .text {
+  display: flex;
+  gap: 60px;
+  margin-bottom: 13px;
+  width: 100%;
+  font-size: 14px;
+  cursor: pointer;
+}
+.wrapper .mark__inner .contents .text a:nth-child(2) {
+  color: #818181;
+}
+.wrapper .mark__inner .contents .text a:nth-child(2):hover {
+  color: #292828;
+}
+.wrapper .mark__inner .contents .text a:nth-child(3) {
+  color: #818181;
+}
+.wrapper .mark__inner .contents .text a:nth-child(3):hover {
+  color: #292828;
+}
+.wrapper .mark__inner .contents .coupon__code {
+  margin-bottom: 40px;
+  display: flex;
+  gap: 22px;
+}
+.wrapper .mark__inner .contents .coupon__code .code {
+  padding-left: 14px;
+  border: 1px solid #9a9a9a;
+  width: 600px;
+  height: 40px;
+  border-radius: 8px;
+}
+.wrapper .mark__inner .contents .coupon__code button {
+  border: 1px solid #292828;
+  width: 82px;
+  height: 40px;
+  background: #fff;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.wrapper .mark__inner .contents .coupon__code button:hover {
+  background: #f6f6f6;
+}
+.wrapper .mark__inner .contents .box .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.wrapper .mark__inner .contents .box .icon .coupon__icon {
+  display: inline-block;
+  margin-bottom: 10px;
+  width: 150px;
+  height: 120px;
+  background-image: url(../../../assets/images/mypage/coupon__icon.svg);
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.wrapper .mark__inner .contents .box .icon span {
+  font-family: "Pretendard-Regular";
+  font-size: 16px;
+  font-style: normal;
+  line-height: 24px;
+  letter-spacing: -0.48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 7px;
+}
+
+@media screen and (max-width: 1384px) {
+  .wrapper {
+    width: 100%;
+  }
+  .wrapper .mark__inner {
+    width: 100%;
+    gap: 30px;
+  }
+  .wrapper .mark__inner .leftmenu {
+    width: 250px;
+  }
+  .wrapper .mark__inner .contents .coupon__code {
+    width: 500px;
+  }
+  .wrapper .mark__inner .contents .box {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .wrapper {
+    width: 100%;
+    width: 100%;
+  }
+  .wrapper .mark__inner {
+    display: flex;
+    height: 100%;
+  }
+  .wrapper .mark__inner .leftmenu {
+    display: flex;
+  }
+  .wrapper .mark__inner .leftmenu .fa-chevron-down {
+    margin-left: 30px;
+  }
+  .wrapper .mark__inner .contents .text {
+    gap: 30px;
+  }
+  .wrapper .mark__inner .contents .coupon__code {
+    gap: 10px;
+  }
+  .wrapper .mark__inner .contents .coupon__code .code {
+    width: 290px;
+  }
+  .wrapper .mark__inner .contents .coupon__code button {
+    width: 60px;
+    height: 40px;
+  }
+  .wrapper .mark__inner .box .icon span {
+    font-family: "Pretendard-Regular";
+    font-size: 12px;
+    font-style: normal;
+    line-height: 18px;
+    letter-spacing: -0.36px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .wrapper {
+    width: 100%;
+    width: 390px;
+  }
+  .wrapper .mark__inner {
+    display: flex;
+  }
+  .wrapper .mark__inner .leftmenu {
+    display: none;
+  }
+  .wrapper .mark__inner .contents .text {
+    gap: 30px;
+  }
+  .wrapper .mark__inner .contents .coupon__code {
+    gap: 10px;
+  }
+  .wrapper .mark__inner .contents .coupon__code .code {
+    width: 290px;
+  }
+  .wrapper .mark__inner .contents .coupon__code button {
+    width: 60px;
+    height: 40px;
+  }
+  .wrapper .mark__inner .box {
+    margin-top: 30px;
+  }
+  .wrapper .mark__inner .box .icon span {
+    font-family: "Pretendard-Regular";
+    font-size: 12px;
+    font-style: normal;
+    line-height: 18px;
+    letter-spacing: -0.36px;
+  }
+}

@@ -1,0 +1,299 @@
+@import "./config/fonts.scss";
+@import "./config/reset.scss";
+@import "./config/colors.scss";
+@import "./layout/layout.scss";
+
+.hi {
+  @include heading_XL_48;
+  @include width_full;
+  color: map-get($color, secondary-color);
+}
+
+body {
+  @include width_full;
+}
+
+.container {
+  @include width_inner;
+  margin: 0 auto;
+}
+
+/*main*/
+
+main {
+  .container {
+    /*section__up*/
+    .section__up {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      /*section__up-title*/
+      .section__up-title {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        margin-bottom: 46px;
+        @include text_B_XL_22;
+        i {
+          color: map-get($color-system, info-color);
+        }
+      }
+      /*address_info*/
+      .address__info {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+        width: 700px;
+        height: 168px;
+        .info__up {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 30px;
+          span {
+            &:nth-child(1) {
+              @include text_B_M_16;
+            }
+          }
+        }
+        .info__down {
+          display: flex;
+          flex-direction: column;
+          border: 1px solid map-get($color, primary-color);
+          border-radius: 8px;
+          ul {
+            padding: 16px 8px;
+            li {
+              &:nth-child(1) {
+                @include text_B_M_16;
+              }
+              &:nth-child(2) {
+                @include text_B_S_14;
+                color: map-get($color, color-Neutrals-Grey-500);
+              }
+              &:nth-child(3) {
+                @include text_B_S_14;
+              }
+            }
+          }
+        }
+      }
+      /*shopping__info*/
+      .shopping__info {
+        margin-bottom: 30px;
+        ul {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          padding: 16px 13px;
+          border: 1px solid map-get($color, color-Neutrals-Grey-400);
+          width: 700px;
+          border-radius: 8px;
+          li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:nth-child(1) {
+              display: flex;
+              gap: 21px;
+              align-items: center;
+              justify-content: flex-start;
+              padding: 16px 13px;
+              width: 100%;
+              a {
+                img {
+                  width: 128px;
+                  height: 128px;
+                  border-radius: 8px;
+                }
+              }
+              div {
+                @include text_B_L_18;
+                display: flex;
+                gap: 12px;
+                flex-direction: column;
+                span {
+                  &:nth-child(2) {
+                    color: map-get($color, primary-color);
+                  }
+                }
+              }
+            }
+            button {
+              padding: 8px 0;
+              border: none;
+              width: 674px;
+              height: 40px;
+              background-color: map-get($color, primary-color);
+              color: map-get($color, color-White);
+              transition: all 0.3s;
+
+              border-radius: 8px;
+              @include text_B_M_16;
+              &:hover {
+                background: map-get($color-hover, primary-color);
+              }
+            }
+          }
+        }
+      }
+      /*info*/
+      .info {
+        margin-bottom: 65px;
+        .info-text {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 22px 20px;
+          width: 700px;
+          background-color: map-get($color-background, info-color);
+          border-radius: 8px;
+          ul {
+            display: flex;
+            gap: 5px;
+            flex-direction: column;
+            width: 100%;
+            @include text_S_14;
+            div {
+              display: flex;
+              gap: 6px;
+              align-items: center;
+              justify-content: flex-start;
+            }
+          }
+        }
+      }
+    }
+    /*section__down*/
+    .section__down {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin: 0 auto;
+      width: 961.52px;
+      /*section_down-title*/
+      .section__down-title {
+        margin-bottom: 35px;
+        width: 100%;
+        padding-left: 17px;
+        h2 {
+          @include text_B_L_18;
+        }
+      }
+      .section__down-product {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+
+        button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: none;
+          width: 158px;
+          height: 38px;
+          background-color: map-get($color, primary-color);
+          color: map-get($color, color-White);
+          transition: all 0.3s;
+          border-radius: 8px;
+          margin-top: 20px;
+          margin-bottom: 30px;
+          i {
+            padding-left: 12px;
+          }
+          &:hover {
+            background-color: map-get($color-hover, primary-color);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*미디어쿼리*/
+@media (max-width: 1384px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    border: none;
+    width: 100%;
+    height: 45px;
+  }
+
+  main {
+    width: 100%;
+    .container {
+      width: 100%;
+      padding: 0 20px;
+      .section__up {
+        .section__up-title {
+          padding-top: 30px;
+        }
+        .address__info {
+          width: 100%;
+          .info__down {
+            ul {
+              li {
+                margin-bottom: 3px;
+                &:nth-child(2) {
+                  @include text_B_S_14;
+                }
+                &:nth-child(3) {
+                  @include text_XS_12;
+                }
+              }
+            }
+          }
+        }
+        .shopping__info {
+          width: 100%;
+          ul {
+            width: 100%;
+            li {
+              &:nth-child(1) {
+                a {
+                  img {
+                    width: 70px;
+                    height: 70px;
+                  }
+                }
+                div {
+                  @include text_B_M_16;
+                }
+              }
+              button {
+                width: 300px;
+                height: 50px;
+              }
+            }
+          }
+        }
+        .info {
+          width: 100%;
+          .info-text {
+            width: 100%;
+          }
+        }
+      }
+      .section__down {
+        width: 100%;
+        .section__down-product {
+          display: flex;
+        }
+      }
+    }
+  }
+
+  footer {
+    width: 100%;
+    height: 287px;
+  }
+}

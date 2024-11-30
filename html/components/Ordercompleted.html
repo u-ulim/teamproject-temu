@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TEMU</title>
+
+    <!-- FONTAWESOME -->
+    <script
+      src="https://kit.fontawesome.com/6336e5c545.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- CUSTOM CSS, JS-->
+    <link rel="stylesheet" href="../../src/scss/Ordercompleted.css" />
+    <link rel="stylesheet" href="../../src/scss/components/product-list.css" />
+    <link rel="stylesheet" href="../../src/scss/components/header.css" />
+    <link rel="stylesheet" href="../../src/scss/components/footer.css" />
+    <script defer src="../../src/json/product-list.js"></script>
+    <script defer src="../../src/js/ordercompleted.js"></script>
+    <script defer src="../../src/js/header.js"></script>
+    <script defer src="../../src/js/footer.js"></script>
+    <script defer src="../../src/json/category-list.js"></script>
+  </head>
+  <body>
+    <header id="header"></header>
+
+    <!-- MAIN START -->
+    <main>
+      <div class="container">
+        <!-- section__up -->
+        <section class="section__up">
+          <!-- title -->
+          <article class="section__up-title">
+            <i class="fa-solid fa-circle-check"></i>
+            <h2>주문완료!</h2>
+          </article>
+          <!-- address_info -->
+          <article class="address__info">
+            <div class="info__up">
+              <span>배송정보</span>
+            </div>
+            <div class="info__down">
+              <!-- <ul>
+                <li>홍길동</li>
+                <li>82+ 123-4567-8910</li>
+                <li>01234 대한민국 서울특별시 삼각구 이젠 아파트 9동 901호</li>
+              </ul>  -->
+            </div>
+          </article>
+          <!-- shopping__info -->
+          <article class="shopping__info">
+            <!-- <ul>
+              <li>
+                <a href="#none">
+                  <img src="./img/product.png" alt="product" />
+                </a>
+                <div>
+                  <span>주문상품 (2건)</span>
+                  <span>배송날짜 1월 4일 - 14일</span>
+                </div>
+              </li>
+              <li>
+                <button>주문 / 배송</button>
+              </li>
+            </ul> -->
+          </article>
+          <!-- info -->
+          <article class="info">
+            <div class="info-text">
+              <ul>
+                <li>
+                  <div>
+                    <i class="fa-solid fa-circle-info"></i>
+                    마이페이지>주문/배송에서 직접 취소할 수 있습니다.
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <i class="fa-solid fa-circle-info"></i>
+                    Temu 앱으로 배송 조회가 가능합니다.
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </section>
+        <!-- section__down -->
+        <section class="section__down">
+          <!-- section__down-title -->
+          <article class="section__down-title">
+            <h2>다른 고객이 함께 구매한 상품</h2>
+          </article>
+          <!-- product-->
+          <article class="section__down-product">
+            <ul class="product-lists"></ul>
+            <!-- button -->
+            <button>더보기<i class="fa-solid fa-chevron-down"></i></button>
+          </article>
+        </section>
+      </div>
+    </main>
+    <!-- MAIN END -->
+    <footer id="footer"></footer>
+  </body>
+</html>

@@ -1,0 +1,344 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Pretendard-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+}
+/* HEADING */
+/* -2% = 0.02 * 'n'px */ /* -3% = 0.03 * 'n'px */
+/* TEXT */
+/* -2% = 0.02 * 'n'px */
+/* -3% = 0.03 * 'n'px */
+/* TEXT BOLD */
+/* -2% = 0.02 * 'n'px */
+/* -3% = 0.03 * 'n'px */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+ul li::marker {
+  content: "";
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* VARIABLES */
+.background_cover {
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.find-product-lists {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 기본적으로 5개의 열 설정 */
+  gap: 40px; /* 아이템 간의 간격 */
+  width: 100%;
+  /* 전체 너비 설정 (필요시 조정) */
+  justify-items: center; /* 아이템을 가운데 정렬 */
+}
+.find-product-lists .product-list {
+  margin-bottom: 20px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.find-product-lists .product-list:hover .product-list__thumb-box .product-list__thumb {
+  transform: scale(1.1);
+  z-index: -10;
+  position: relative;
+}
+.find-product-lists .product-list .product-list__thumb-box {
+  margin-bottom: 10px;
+  overflow: hidden;
+  width: 100%;
+  height: 227px;
+  border-radius: 8px;
+}
+.find-product-lists .product-list .product-list__thumb-box .product-list__thumb {
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s;
+  border-radius: 8px;
+  object-fit: cover;
+  object-position: center;
+}
+.find-product-lists .product-list .product-list__title {
+  margin-bottom: 10px;
+  width: 100%;
+  height: 40px; /* 고정된 높이 (예시) */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* 두 줄로 제한 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: "Pretendard-Regular";
+  font-size: 14px;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: -0.42px;
+}
+.find-product-lists .product-list .product-list__counters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.find-product-lists .product-list .product-list__counters > div {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.find-product-lists .product-list .product-list__counters > div .product-list__discount {
+  font-family: "Pretendard-Bold";
+  font-size: 22px;
+  font-style: bold;
+  font-weight: 900;
+  line-height: 30px;
+  letter-spacing: -0.66px;
+  display: flex;
+  color: #ff6d00;
+}
+.find-product-lists .product-list .product-list__counters > div .product-list__price {
+  font-family: "Pretendard-Bold";
+  font-size: 22px;
+  font-style: bold;
+  font-weight: 900;
+  line-height: 30px;
+  letter-spacing: -0.66px;
+  color: #292828;
+}
+.find-product-lists .product-list .product-list__counters .product-list__cart-ico {
+  width: 45px;
+  height: 35px;
+  background-image: url("../../../assets/images/products/cart-ico.svg");
+  transition: all 0.3s;
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.find-product-lists .product-list .product-list__counters .product-list__cart-ico:hover {
+  background-image: url("../../../assets/images/products/cart-fill-ico.svg");
+}
+.find-product-lists .product-list .product-list__reviews {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  font-family: "Pretendard-Regular";
+  font-size: 14px;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: -0.42px;
+}
+.find-product-lists .product-list .product-list__reviews .product-list__star {
+  width: 20px;
+  height: 20px;
+  background-image: url("../../../assets/images/products/product-list__star.svg");
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.find-product-lists .product-list .product-list__reviews .product-list__rating {
+  margin-right: 5px;
+  color: #009e95;
+}
+.find-product-lists .product-list .product-list__reviews .product-list__review-text {
+  margin-right: 5px;
+  color: #6a6a6a;
+}
+.find-product-lists .product-list .product-list__reviews .product-list__review-count {
+  color: #6a6a6a;
+}
+.find-product-lists .product-list .product-list__solds {
+  font-family: "Pretendard-Regular";
+  font-size: 12px;
+  font-style: normal;
+  line-height: 18px;
+  letter-spacing: -0.36px;
+  display: flex;
+  align-items: center;
+}
+.find-product-lists .product-list .product-list__solds .product-list__solds-out {
+  margin-right: 5px;
+  padding: 2px 6px 0px 6px;
+  background-color: #ff6d00;
+  color: #fff;
+  border-radius: 8px;
+}
+.find-product-lists .product-list .product-list__solds .product-list__quantity {
+  color: #ff6d00;
+}
+
+/* 반응형 디자인 */
+/* 1384px 이상, 5개 아이템 */
+@media (min-width: 1384px) {
+  .find-product-lists {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+/* 768px ~ 1384px, 4개 아이템 */
+@media (min-width: 768px) and (max-width: 1384px) {
+  .find-product-lists {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+/* 390px ~ 768px, 2개 아이템 */
+@media (min-width: 390px) and (max-width: 768px) {
+  .find-product-lists {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* 390px 미만, 1개 아이템 */
+@media (max-width: 390px) {
+  .find-product-lists {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .find-product-lists .product-list {
+    margin-bottom: 10px;
+  }
+  .find-product-lists .product-list .product-list__thumb-box {
+    margin-bottom: 10px;
+    overflow: hidden;
+    width: 100%;
+    height: 43vw;
+    border-radius: 8px;
+  }
+}
