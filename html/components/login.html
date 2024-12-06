@@ -11,12 +11,12 @@
     <!-- custom css -->
     <link rel="stylesheet" href="../../src/scss/components/footer.css" />
     <link rel="stylesheet" href="../../src/scss/components/header.css" />
-
     <link rel="stylesheet" href="../../src/scss/login/login.css" />
+    <link rel="icon" href="/assets/favicon.png" type="favicon.png" />
     <script defer src="../../src/js/header.js"></script>
     <script defer src="../../src/js/footer.js"></script>
     <script defer src="../../src/js/login.js"></script>
-    <title>Document</title>
+    <title>PRIME</title>
   </head>
   <body>
     <!-- <header id="header"></header> -->
@@ -61,70 +61,44 @@
               type="text"
               name="email"
               id="email"
-              placeholder="아이디를 적어주세요"
+              placeholder="아이디를 입력해주세요"
             />
+            <div class="error-message" id="emailError"></div>
             <!-- INPUT END -->
           </div>
-
-          <!-- EMAIL__BOX END -->
-          <button id="open">계속</button>
-          <!-- TEXT__BOX START -->
-          <div class="text__box">
-            <span>로그인하는데 문제가 있으신가요?</span>
-            <a href="http://127.0.0.1:5502/html/components/signup.html">
-              <span>회원가입</span>
-            </a>
-          </div>
-          <!-- TEXT__BOX END -->
-        </div>
-        <div class="password">
-          <!-- TEXT START -->
           <div class="text">
             <span>비밀번호</span>
           </div>
           <!-- TEXT END -->
           <!-- EMAIL__BOX START -->
-          <div class="password__box">
+          <div class="password_box">
             <!-- INPUT START -->
             <input
-              type="text"
+              type="password"
               name="password"
               id="password"
-              placeholder="비밀번호를 적어주세요"
+              placeholder="비밀번호을 입력하세요"
             />
+            <div class="error-message" id="passwordError"></div>
             <!-- INPUT END -->
           </div>
           <!-- EMAIL__BOX END -->
-          <button id="close">계속</button>
+          <button id="open">로그인</button>
           <!-- TEXT__BOX START -->
           <div class="text__box">
-            <span>로그인하는데 문제가 있으신가요?</span>
-            <a href="http://127.0.0.1:5502/html/components/signup.html">
+            <a href="/html/components/signup.html">
+              <span>로그인하는데 문제가 있으신가요?</span></a
+            >
+            <a href="/html/components/signup.html">
               <span>회원가입</span>
             </a>
           </div>
           <!-- TEXT__BOX END -->
         </div>
         <!-- ENAIL END -->
-        <!-- BOX START -->
-        <div class="box">
-          <!-- OTHER START -->
-          <div class="other">
-            <div class="line">다른 방법으로 로그인</div>
-          </div>
-          <!-- OTHER END -->
-        </div>
-        <!-- BOX END -->
-        <!-- ICON START -->
-        <div class="icon">
-          <span><i class="google-icon"></i></span>
-          <span><i class="naver-icon"></i></span>
-          <span><i class="apple-icon"></i></span>
-        </div>
         <div class="img">
           <img src="../../assets/images/index/main-banner.webp" alt="" />
         </div>
-        <!-- ICON END -->
         <!-- AGREE START -->
         <div class="agree">
           <p>
@@ -133,8 +107,8 @@
           </p>
         </div>
         <div class="copy">
-          <span>TEMU</span>
-          <span> Copyright © Temu Corp. All Rights Reserved.</span>
+          <span>Prime</span>
+          <span> Copyright © Prime Corp. All Rights Reserved.</span>
         </div>
         <!-- AGREE END -->
       </div>

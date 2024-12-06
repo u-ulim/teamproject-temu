@@ -176,12 +176,14 @@ table {
   margin: 0 auto;
 }
 .wrapper .modal__box {
+  margin-top: 90px;
   padding-top: 60px;
+  padding: 0 40px;
   width: 413px;
   height: 575px;
 }
 .wrapper .modal__box .container {
-  margin-bottom: 60px;
+  margin-bottom: 70px;
 }
 .wrapper .modal__box .container .login {
   margin-bottom: 15px;
@@ -196,7 +198,6 @@ table {
 }
 .wrapper .modal__box .container .data {
   display: inline-block;
-  margin-right: 6px;
   font-size: 13px;
   font-family: "Pretendard-Regular";
   font-size: 12px;
@@ -204,6 +205,9 @@ table {
   line-height: 18px;
   letter-spacing: -0.36px;
   color: #0a8800;
+}
+.wrapper .modal__box .email {
+  margin-bottom: 10px;
 }
 .wrapper .modal__box .email .text {
   margin-bottom: 8px;
@@ -220,15 +224,37 @@ table {
   letter-spacing: -0.36px;
 }
 .wrapper .modal__box .email .email__box input[type=text] {
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   padding-left: 20px;
   border: 1px solid #b5b5b5;
   width: 100%;
   height: 45px;
   border-radius: 8px;
+  outline: none;
+}
+.wrapper .modal__box .email .error-message {
+  color: red;
+  font-size: 0.9em;
+  margin-bottom: 15px;
+  text-align: left;
+}
+.wrapper .modal__box .email .password_box input[type=password] {
+  margin-bottom: 5px;
+  padding-left: 20px;
+  border: 1px solid #b5b5b5;
+  width: 100%;
+  height: 45px;
+  border-radius: 8px;
+  outline: none;
+}
+.wrapper .modal__box .email .error-message {
+  color: red;
+  font-size: 0.9em;
+  margin-bottom: 15px;
+  text-align: left;
 }
 .wrapper .modal__box .email button {
-  margin-bottom: 14px;
+  margin-bottom: 10px;
   border: none;
   width: 100%;
   height: 47px;
@@ -256,121 +282,6 @@ table {
 .wrapper .modal__box .email .text__box span:hover {
   text-decoration: underline;
   cursor: pointer;
-}
-.wrapper .modal__box .password {
-  display: none;
-}
-.wrapper .modal__box .password .text {
-  margin-bottom: 8px;
-}
-.wrapper .modal__box .password .text span {
-  display: inline-block;
-  width: 100%;
-  color: #101010;
-  text-align: left;
-  font-family: "Pretendard-Regular";
-  font-size: 12px;
-  font-style: normal;
-  line-height: 18px;
-  letter-spacing: -0.36px;
-}
-.wrapper .modal__box .password .password__box input[type=text] {
-  margin-bottom: 20px;
-  padding-left: 20px;
-  border: 1px solid #b5b5b5;
-  width: 100%;
-  height: 45px;
-  border-radius: 8px;
-}
-.wrapper .modal__box .password button {
-  margin-bottom: 14px;
-  border: none;
-  width: 100%;
-  height: 47px;
-  background: #ff6d00;
-  color: #fff;
-  transition: all 0.3s;
-  border-radius: 8px;
-}
-.wrapper .modal__box .password button:hover {
-  background: #ff6d00;
-  color: #fff;
-  cursor: pointer;
-  touch-action: manipulation;
-}
-.wrapper .modal__box .password .text__box span {
-  display: inline-block;
-  margin-bottom: 24px;
-  color: #818181;
-  font-family: "Pretendard-Regular";
-  font-size: 12px;
-  font-style: normal;
-  line-height: 18px;
-  letter-spacing: -0.36px;
-}
-.wrapper .modal__box .password .text__box span:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-.wrapper .modal__box .box .other .line {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 8px;
-  margin-bottom: 25px;
-  color: #4a4949;
-  font-family: "Pretendard-Regular";
-  font-size: 12px;
-  font-style: normal;
-  line-height: 18px;
-  letter-spacing: -0.36px;
-}
-.wrapper .modal__box .box .other .line::before {
-  flex-grow: 1;
-  margin-right: 12px;
-  height: 1px;
-  background: #9a9a9a;
-  line-height: 0;
-  content: "";
-}
-.wrapper .modal__box .box .other .line::after {
-  flex-grow: 1;
-  margin-left: 12px;
-  height: 1px;
-  background: #9a9a9a;
-  line-height: 0;
-  content: "";
-}
-.wrapper .modal__box .icon {
-  display: flex;
-  gap: 40px;
-  align-items: center;
-  justify-content: center;
-}
-.wrapper .modal__box .icon span {
-  display: inline-block;
-  margin-bottom: 40px;
-}
-.wrapper .modal__box .icon span:hover {
-  cursor: pointer;
-}
-.wrapper .modal__box .icon span .google-icon {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  background: url("../../../assets/images/mypage/google-icon.svg") center/cover no-repeat;
-}
-.wrapper .modal__box .icon span .naver-icon {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  background: url("../../../assets/images/mypage/naver.svg") center/cover no-repeat;
-}
-.wrapper .modal__box .icon span .apple-icon {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  background: url("../../../assets/images/mypage/apple.svg") center/cover no-repeat;
 }
 .wrapper .modal__box .img {
   display: flex;

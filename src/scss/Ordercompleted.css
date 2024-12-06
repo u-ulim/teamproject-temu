@@ -214,7 +214,7 @@ main .container .section__up .section__up-title i {
 main .container .section__up .address__info {
   display: flex;
   flex-direction: column;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
   width: 700px;
   height: 168px;
 }
@@ -236,34 +236,38 @@ main .container .section__up .address__info .info__down {
   flex-direction: column;
   border: 1px solid #ff6d00;
   border-radius: 8px;
+  padding: 20px 0;
 }
 main .container .section__up .address__info .info__down ul {
-  padding: 16px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 20px;
 }
 main .container .section__up .address__info .info__down ul li:nth-child(1) {
+  font-family: "Pretendard-Bold";
+  font-size: 18px;
+  font-style: bold;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: -0.54px;
+}
+main .container .section__up .address__info .info__down ul li:nth-child(2) {
   font-family: "Pretendard-Bold";
   font-size: 16px;
   font-style: bold;
   font-weight: 700;
   line-height: 24px;
   letter-spacing: -0.48px;
-}
-main .container .section__up .address__info .info__down ul li:nth-child(2) {
-  font-family: "Pretendard-Bold";
-  font-size: 14px;
-  font-style: bold;
-  font-weight: 700;
-  line-height: 22px;
-  letter-spacing: -0.42px;
   color: #818181;
 }
 main .container .section__up .address__info .info__down ul li:nth-child(3) {
   font-family: "Pretendard-Bold";
-  font-size: 14px;
+  font-size: 16px;
   font-style: bold;
   font-weight: 700;
-  line-height: 22px;
-  letter-spacing: -0.42px;
+  line-height: 24px;
+  letter-spacing: -0.48px;
 }
 main .container .section__up .shopping__info {
   margin-bottom: 30px;
@@ -317,6 +321,7 @@ main .container .section__up .shopping__info ul li button {
   background-color: #ff6d00;
   color: #fff;
   transition: all 0.3s;
+  cursor: pointer;
   border-radius: 8px;
   font-family: "Pretendard-Bold";
   font-size: 16px;
@@ -446,10 +451,10 @@ main .container .section__down .section__down-product button:hover {
   }
   main .container .section__up .address__info .info__down ul li:nth-child(3) {
     font-family: "Pretendard-Regular";
-    font-size: 12px;
+    font-size: 14px;
     font-style: normal;
-    line-height: 18px;
-    letter-spacing: -0.36px;
+    line-height: 22px;
+    letter-spacing: -0.42px;
   }
   main .container .section__up .shopping__info {
     width: 100%;

@@ -197,8 +197,10 @@ table {
   height: 100%;
   transition: all 0.3s;
   border-radius: 8px;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 .find-product-lists .product-list .product-list__title {
   margin-bottom: 10px;

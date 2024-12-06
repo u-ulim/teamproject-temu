@@ -280,8 +280,8 @@ table {
   align-items: center;
   justify-content: center;
   border: 1px solid #b5b5b5;
-  width: 168px;
-  height: 52px;
+  width: 188px;
+  height: 72px;
   border-radius: 50px;
 }
 #footer .footer-inner .footer-menus-wrapper .footer-apps li div {
@@ -302,6 +302,7 @@ table {
   font-weight: 700;
   line-height: 26px;
   letter-spacing: -0.54px;
+  width: 150px;
   line-height: 18px;
 }
 #footer .footer-inner .footer-menus-wrapper .footer-apps .footer-apps__app-store {
@@ -573,7 +574,7 @@ table {
 }
 @media (max-width: 768px) {
   #footer {
-    padding-top: 40px;
+    background: #fff;
   }
   #footer .footer-inner {
     display: none;

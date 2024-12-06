@@ -261,9 +261,17 @@ table {
   transition: all 0.5s;
   border-radius: 50px;
 }
+#header nav .nav-left .nav__input-wrapper input::-moz-placeholder {
+  color: #ccc; /* 기본 placeholder 색상 */
+  -moz-transition: color 0.5s;
+  transition: color 0.5s; /* placeholder 색상 전환에 대한 트랜지션 */
+}
 #header nav .nav-left .nav__input-wrapper input::placeholder {
   color: #ccc; /* 기본 placeholder 색상 */
   transition: color 0.5s; /* placeholder 색상 전환에 대한 트랜지션 */
+}
+#header nav .nav-left .nav__input-wrapper input:focus::-moz-placeholder {
+  color: transparent; /* 포커스 시 placeholder 색상 투명화 */
 }
 #header nav .nav-left .nav__input-wrapper input:focus::placeholder {
   color: transparent; /* 포커스 시 placeholder 색상 투명화 */

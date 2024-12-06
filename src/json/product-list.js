@@ -451,13 +451,23 @@ const createItem = (product) => {
 
   // 클릭 시 제품 상세 페이지로 이동
   productListThumbBox.addEventListener("click", () => {
-    const url = `/html/components/product-detail.html?category=${
-      product.category
-    }&name=${encodeURIComponent(product.title)}`;
-    window.location.href = url;
+    // 로컬스토리지에서 유저 정보 확인
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+    const isLoggedIn = users.length > 0 && users[0]?.id; // 로그인 상태 확인
+
+    if (!isLoggedIn) {
+      // 비로그인 상태
+      alert("로그인이 필요합니다. 로그인 페이지로 이동합니다.");
+      window.location.href = "/html/components/login.html"; // 로그인 페이지로 이동
+    } else {
+      // 로그인 상태: 상세 페이지로 이동
+      const url = `/html/components/product-detail.html?category=${
+        product.category
+      }&name=${encodeURIComponent(product.title)}`;
+      window.location.href = url;
+    }
   });
 
-  ////
   // LocalStorage에서 장바구니 상태 가져오기
   let setCartProducts =
     JSON.parse(localStorage.getItem("setCartProducts")) || [];
@@ -477,21 +487,25 @@ const createItem = (product) => {
     );
   };
 
-  // 장바구니에 상품을 추가하거나 제거하는 함수
   const toggleCartItem = (product, iconElement) => {
-    const selectColorElement = document.querySelector("#colors");
-    const selectSizeElement = document.querySelector("#sizes");
+    // selectOptions와 옵션 데이터가 있는지 확인
+    const selectOptions = product.selectOptions || {};
+    const colors = selectOptions.colors || {};
+    const sizes = selectOptions.sizes || {};
 
-    // 색상과 사이즈 요소가 존재하는지 확인하고 값 설정
-    const selectColor = selectColorElement
-      ? selectColorElement.value
-      : "defaultColor";
-    const selectSize = selectSizeElement
-      ? selectSizeElement.value
-      : "defaultSize";
+    // 색상과 사이즈 기본값 설정
+    const selectColor =
+      colors.options && colors.options.length > 0
+        ? colors.options[0] // 첫 번째 색상 옵션
+        : "defaultColor"; // 기본값 설정
 
-    // 수량 요소를 찾아 기본값으로 1을 설정
-    const quantity = 1; // 기본값으로 수량을 1로 설정
+    const selectSize =
+      sizes.options && sizes.options.length > 0
+        ? sizes.options[0] // 첫 번째 사이즈 옵션
+        : "defaultSize"; // 기본값 설정
+
+    // 수량 기본값 설정
+    const quantity = 1;
 
     const cartProduct = {
       id: product.id,
@@ -508,7 +522,7 @@ const createItem = (product) => {
       selectSize, // 선택된 사이즈
     };
 
-    // 장바구니에서 해당 제품이 있는지 확인
+    // 장바구니에 추가/제거 로직
     const existingProductIndex = setCartProducts.findIndex(
       (item) =>
         item.id === cartProduct.id &&
@@ -517,16 +531,16 @@ const createItem = (product) => {
     );
 
     if (existingProductIndex > -1) {
-      // 이미 장바구니에 있는 경우 -> 제거
+      // 이미 장바구니에 있는 경우 제거
       setCartProducts.splice(existingProductIndex, 1);
-      iconElement.classList.remove("active"); // active 클래스 제거
+      iconElement.classList.remove("active");
     } else {
-      // 장바구니에 없는 경우 -> 추가
+      // 장바구니에 없는 경우 추가
       setCartProducts.push(cartProduct);
-      iconElement.classList.add("active"); // active 클래스 추가
+      iconElement.classList.add("active");
     }
 
-    // LocalStorage에 저장
+    // LocalStorage 저장
     localStorageSave();
   };
 
@@ -536,10 +550,28 @@ const createItem = (product) => {
       .querySelectorAll(".product-list__cart-ico")
       .forEach((iconElement) => {
         const productId = iconElement.getAttribute("data-product-id");
-        const selectColor = "defaultColor";
-        const selectSize = "defaultSize";
+        const product = products.find((item) => item.id === productId);
 
-        // 장바구니에 있는 상품인지 확인 후 active 클래스 설정
+        if (!product) {
+          console.error("Product not found for productId:", productId);
+          return;
+        }
+
+        // 유효성 검증 추가
+        const selectOptions = product.selectOptions || {};
+        const colors = selectOptions.colors || {};
+        const sizes = selectOptions.sizes || {};
+
+        const selectColor =
+          colors.options && colors.options.length > 0
+            ? colors.options[0]
+            : "defaultColor"; // 기본값 설정
+
+        const selectSize =
+          sizes.options && sizes.options.length > 0
+            ? sizes.options[0]
+            : "defaultSize"; // 기본값 설정
+
         if (isInCart(productId, selectColor, selectSize)) {
           iconElement.classList.add("active");
         } else {

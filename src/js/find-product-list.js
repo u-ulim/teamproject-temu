@@ -114,12 +114,23 @@ fetch(productsURL)
       productListQuantity.innerText = `${product.quantity}개 남음`;
       productListPrice.innerText = price;
 
+      // 로컬스토리지에서 유저 정보 확인
+      const users = JSON.parse(localStorage.getItem("users")) || [];
+      const isLoggedIn = users.length > 0 && users[0]?.id; // 로그인 상태 확인
+
       // 클릭 시 제품 상세 페이지로 이동
       productList.addEventListener("click", () => {
-        const url = `/html/components/product-detail.html?category=${
-          product.category
-        }&name=${encodeURIComponent(product.title)}`;
-        window.location.href = url;
+        if (!isLoggedIn) {
+          // 비로그인 상태
+          alert("로그인이 필요합니다. 로그인 페이지로 이동합니다.");
+          window.location.href = "/html/components/login.html"; // 로그인 페이지로 이동
+        } else {
+          // 로그인 상태: 상세 페이지로 이동
+          const url = `/html/components/product-detail.html?category=${
+            product.category
+          }&name=${encodeURIComponent(product.title)}`;
+          window.location.href = url;
+        }
       });
     };
 
@@ -159,8 +170,6 @@ fetch(productsURL)
       //     productLists.appendChild(emptyListItem);
       //   }
       // }
-
-     
     };
     // 데이터를 처리하여 제품 목록 추가
     importData();

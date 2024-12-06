@@ -102,8 +102,8 @@
           align-items: center;
           justify-content: center;
           border: 1px solid map-get($color, color-Neutrals-Grey-300);
-          width: 168px;
-          height: 52px;
+          width: 188px;
+          height: 72px;
           border-radius: 50px;
           div {
             width: 99px;
@@ -113,6 +113,7 @@
             }
             h4 {
               @include text_B_L_18;
+              width: 150px;
               line-height: 18px;
             }
           }
@@ -374,7 +375,7 @@
 
 @media (max-width: 768px) {
   #footer {
-    padding-top: 40px;
+    background: #fff;
     .footer-inner {
       display: none;
     }

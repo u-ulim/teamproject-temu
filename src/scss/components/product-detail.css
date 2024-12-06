@@ -268,8 +268,10 @@ body #createDetail .detail__left-box #main #detail__main-container .detail__main
   transition: opacity 0.1s ease;
   border-radius: 8px;
   opacity: 1;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 body #createDetail .detail__left-box #main #detail__main-container .detail__main-imgbox > div img.fade-out {
   opacity: 0;
@@ -314,8 +316,10 @@ body #createDetail .detail__left-box #main #detail__main-container .detail__main
   height: 34px;
   background-image: url("../../../assets/images/product-detail/share-ico.svg");
   cursor: pointer;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 body #createDetail .detail__left-box #main #detail__main-container .detail__main-contentsbox .detail__main-contentsbox-title > div > div {
   display: flex;
@@ -328,8 +332,10 @@ body #createDetail .detail__left-box #main #detail__main-container .detail__main
   height: 45px;
   background-image: url("../../../assets/images/product-detail/bookmark-ico.svg");
   cursor: pointer;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 body #createDetail .detail__left-box #main #detail__main-container .detail__main-contentsbox .detail__main-contentsbox-reviews {
   display: flex;
@@ -344,8 +350,10 @@ body #createDetail .detail__left-box #main #detail__main-container .detail__main
   width: 16px;
   height: 16px;
   background-image: url("../../../assets/images/product-detail/main-empty-star-ico.svg");
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 body #createDetail .detail__left-box #main #detail__main-container .detail__main-contentsbox .detail__main-contentsbox-reviews ul li.active {
   background-image: url("../../../assets/images/product-detail/main-star-ico.svg");
@@ -412,8 +420,10 @@ body #createDetail .detail__left-box #main #detail__main-container .detail__main
   margin-right: 2px;
 }
 body #createDetail .detail__left-box #main #detail__main-container .detail__main-contentsbox .detail__main-contentsbox-price i {
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   width: 90px;
   height: 26px;
   background-image: url("../../../assets/images/product-detail/free-ico.svg");
@@ -465,8 +475,10 @@ body #createDetail .detail__left-box #main #detail__main-container .detail__main
   width: 24px;
   height: 24px;
   background-image: url("../../../assets/images/product-detail/delivery-check-ico.svg");
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 body #createDetail .detail__left-box #main #detail__main-container .detail__main-contentsbox .detail__main-contentsbox-delivery-infos ul li .delivery-date {
   color: #ff6d00;
@@ -497,8 +509,10 @@ body #createDetail .detail__left-box #main #detail__main-container .detail__main
   width: 24px;
   height: 24px;
   background-image: url("../../../assets/images/product-detail/shop-ico.svg");
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 body #createDetail .detail__left-box #main #detail__main-container .detail__main-contentsbox .detail__main-contentsbox-brand button {
   display: flex;
@@ -537,7 +551,9 @@ body #createDetail .detail__left-box #main #detail__main-container .detail__main
   height: 34px;
   background: url("../../../assets/images/product-detail/select-arrow.svg") no-repeat right 15px center;
   cursor: pointer;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   border-radius: 8px;
 }
 body #createDetail .detail__left-box #main #detail__main-container .detail__main-contentsbox .detail__main-contentsbox-select .detail__mian-contentsbox-selects select option {
@@ -657,8 +673,10 @@ body #createDetail .detail__left-box #product-detail__container .product-detail_
 body #createDetail .detail__left-box #product-detail__container .product-detail__imgs .product-detail__imgs-main img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 body #createDetail .detail__left-box #product-detail__container .product-detail__imgs .product-detail__imgs-secon {
   display: flex;
@@ -672,8 +690,10 @@ body #createDetail .detail__left-box #product-detail__container .product-detail_
 body #createDetail .detail__left-box #product-detail__container .product-detail__imgs .product-detail__imgs-secon div img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 body #createDetail .detail__left-box #product-detail__container .product-detail__imgs .product-detail__imgs-third {
   display: flex;
@@ -686,8 +706,10 @@ body #createDetail .detail__left-box #product-detail__container .product-detail_
 body #createDetail .detail__left-box #product-detail__container .product-detail__imgs .product-detail__imgs-third div img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 body #createDetail .detail__left-box #product-detail__container .product-detail__reviews {
   margin-bottom: 140px;
@@ -767,8 +789,10 @@ body #createDetail .detail__left-box #product-detail__container .product-detail_
   margin-right: 19px;
 }
 body #createDetail .detail__left-box #product-detail__container .product-detail__reviews .reviews__counters .reviews__counter .reviews__counter-leftBox > ul > li {
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   width: 28px;
   height: 28px;
   background-image: url("../../../assets/images/product-detail/review-empty-star-ico.svg");
@@ -888,8 +912,10 @@ body #createDetail .detail__left-box #product-detail__container .product-detail_
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 body #createDetail .detail__left-box #product-detail__container .product-detail__reviews .reviews__comments .comments__contents > li .comment__profile p {
   color: #101010;
@@ -1263,8 +1289,10 @@ body #createDetail .detail__left-box #product-detail__container .product-detail_
   height: 100%;
   transition: all 0.3s;
   border-radius: 8px;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 body #createDetail .detail__left-box #product-detail__container .product-detail__product-lists .product-lists .product-list .product-list__title {
   margin-bottom: 10px;
@@ -1421,8 +1449,10 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
   height: 34px;
   background-image: url("../../../assets/images/product-detail/share-ico.svg");
   cursor: pointer;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-title > div > div {
   display: flex;
@@ -1436,8 +1466,10 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
   height: 45px;
   background-image: url("../../../assets/images/product-detail/bookmark-ico.svg");
   cursor: pointer;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-reviews {
   display: flex;
@@ -1452,8 +1484,10 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
   width: 16px;
   height: 16px;
   background-image: url("../../../assets/images/product-detail/main-empty-star-ico.svg");
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-reviews ul li.active {
   background-image: url("../../../assets/images/product-detail/main-star-ico.svg");
@@ -1520,8 +1554,10 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
   margin-right: 2px;
 }
 body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-price i {
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   width: 90px;
   height: 26px;
   background-image: url("../../../assets/images/product-detail/free-ico.svg");
@@ -1573,8 +1609,10 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
   width: 24px;
   height: 24px;
   background-image: url("../../../assets/images/product-detail/delivery-check-ico.svg");
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-delivery-infos ul li .delivery-date {
   color: #ff6d00;
@@ -1625,8 +1663,10 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
   width: 24px;
   height: 24px;
   background-image: url("../../../assets/images/product-detail/shop-ico.svg");
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-brand button {
   display: flex;
@@ -1673,7 +1713,9 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
   height: 32px;
   background: url("../../../assets/images/product-detail/select-arrow.svg") no-repeat right 15px center;
   cursor: pointer;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   border-radius: 8px;
 }
 body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-contentsbox-select form .detail__main-contentsbox-selects select option {
@@ -1800,8 +1842,10 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
   body #createDetail .detail__left-box #product-detail__container .product-detail__clearance {
     width: 100%;
     height: 21vw;
-    object-fit: cover;
-    object-position: center;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
   }
   body #createDetail .detail__left-box #product-detail__container .product-detail__imgs {
     width: 100%;
@@ -1813,7 +1857,8 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
   body #createDetail .detail__left-box #product-detail__container .product-detail__imgs .product-detail__imgs-main img {
     width: 100%;
     height: auto;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
   body #createDetail .detail__left-box #product-detail__container .product-detail__imgs .product-detail__imgs-secon {
     margin-bottom: 1.5%;
@@ -1825,7 +1870,8 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
   body #createDetail .detail__left-box #product-detail__container .product-detail__imgs .product-detail__imgs-secon div img {
     width: 100%;
     height: auto;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
   body #createDetail .detail__left-box #product-detail__container .product-detail__imgs .product-detail__imgs-third div {
     width: 32%;
@@ -1834,7 +1880,8 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
   body #createDetail .detail__left-box #product-detail__container .product-detail__imgs .product-detail__imgs-third div img {
     width: 100%;
     height: auto;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
   body #createDetail .detail__left-box #product-detail__container .product-detail__reviews {
     width: 100%;
@@ -2110,7 +2157,8 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
   body #createDetail .detail__left-box #product-detail__container .product-detail__imgs .product-detail__imgs-main img {
     width: 100%;
     height: auto;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
   body #createDetail .detail__left-box #product-detail__container .product-detail__imgs .product-detail__imgs-secon {
     margin-bottom: 1.5%;
@@ -2122,7 +2170,8 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
   body #createDetail .detail__left-box #product-detail__container .product-detail__imgs .product-detail__imgs-secon div img {
     width: 100%;
     height: auto;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
   body #createDetail .detail__left-box #product-detail__container .product-detail__imgs .product-detail__imgs-third div {
     width: 32%;
@@ -2131,7 +2180,8 @@ body #createDetail .detail__right-box .detail__main-contentsbox .detail__main-co
   body #createDetail .detail__left-box #product-detail__container .product-detail__imgs .product-detail__imgs-third div img {
     width: 100%;
     height: auto;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
   body #createDetail .detail__left-box #product-detail__container .product-detail__reviews {
     width: 100%;

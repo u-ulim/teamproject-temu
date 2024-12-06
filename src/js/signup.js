@@ -179,12 +179,12 @@ function validateEmail() {
   const isValidEmail = emailRegex.test(email + "@" + domain);
 
   // 이메일 길이 및 문자 유효성 검사
-  const isValidLength = email.length >= 8;
+  // const isValidLength = email.length >= 8;
   const hasLetters = /[a-zA-Z]/.test(email);
   const hasNumbers = /[0-9]/.test(email);
 
   // 이메일 유효성 검사 및 메시지 표시
-  if (isValidEmail && isValidLength && hasLetters && hasNumbers) {
+  if (hasLetters && hasNumbers) {
     emailSuccess.style.display = "block";
     emailValidation = true;
     validationFnc();

@@ -21,7 +21,6 @@ const headerLoad = () => {
         logo.addEventListener("click", () => {
           // LocalStorage에서 searchQuery 삭제
           localStorage.removeItem("searchQuery");
-          console.log("searchQuery가 삭제되었습니다.");
 
           // 로고 클릭 후 홈 페이지로 이동 (필요할 경우)
           window.location.href = "/index.html"; // 홈페이지 경로로 설정
@@ -29,6 +28,7 @@ const headerLoad = () => {
       }
 
       // header scroll Evt
+
       const headerScrollEvt = () => {
         let lastScrollY = window.scrollY;
         const nav = document.querySelector("nav");
@@ -433,32 +433,67 @@ const headerLoad = () => {
             ).innerText;
             console.log(navRightSpanText);
             if (navRightSpanText === "로그인/회원가입") {
+              // 로그인 페이지로 이동
               window.location.href = "/html/components/login.html";
             } else {
-              window.location.href = "/html/components/order.html";
+              // 메인 페이지로 이동
+              window.location.href = "/index.html";
             }
           });
 
           // 로컬스토리지에서 users 배열 가져오기 (없으면 빈 배열로 초기화)
           const users = JSON.parse(localStorage.getItem("users")) || [];
 
+          // 로그인된 유저 상태 확인 및 표시
           const loginUser = () => {
             const navRightSpan = document.querySelector(
               ".nav-right__menus a span"
             );
 
-            // users 배열이 비어있지 않으면 (즉, 로그인된 유저가 있으면)
-            if (users.length > 0 && users[0].id) {
-              // 로그인된 유저의 아이디를 가져와서 navRightSpan에 표시
-              navRightSpan.innerText = `${users[0].id}님`; // 유저의 아이디 표시
+            if (users.length > 0 && users[0]?.id) {
+              // 로그인된 유저의 아이디를 표시
+              navRightSpan.innerText = `${users[0].id}님`;
+              // 로그아웃 이벤트 추가
+              navRightSpan.addEventListener("click", handleLogout);
             } else {
-              // users 배열이 비어있거나 로그인 정보가 없을 때 처리
-              navRightSpan.innerText = "로그인/회원가입"; // 기본 상태
+              // 비로그인 상태일 경우
+              navRightSpan.innerText = "로그인/회원가입";
             }
           };
 
+          // 로그아웃 처리
+          const handleLogout = () => {
+            const confirmLogout = confirm("로그아웃하시겠습니까?");
+            if (confirmLogout) {
+              localStorage.removeItem("users"); // 로컬스토리지에서 유저 정보 제거
+              window.location.href = "/index.html"; // 메인 페이지로 이동
+            }
+          };
+
+          // 장바구니 링크 클릭 이벤트 처리
+          const setupCartLink = () => {
+            const cartLink = document.querySelector(".menu__cart-ico");
+
+            cartLink.addEventListener("click", (event) => {
+              const isLoggedIn = users.length > 0 && users[0]?.id;
+              if (!isLoggedIn) {
+                // 로그인이 필요한 경우
+                event.preventDefault();
+                alert("로그인 페이지로 이동하시겠습니까?");
+                window.location.href = "/html/components/login.html";
+              } else {
+                window.location.href = "/html/components/Productcart.html";
+              }
+            });
+          };
+
+          // 유저 상태 확인 및 초기화
           loginUser();
+
+          // 장바구니 링크 초기화
+          setupCartLink();
         })
+
         .catch((error) => {
           console.log(error);
         });

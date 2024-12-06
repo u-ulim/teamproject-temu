@@ -8,19 +8,17 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="../../src/scss/login/signup.css" />
-    <link rel="stylesheet" href="../../src/scss/components/footer.css" />
-    <link rel="stylesheet" href="../../src/scss/components/header.css" />
-
+    <link rel="icon" href="/assets/favicon.png" type="favicon.png" />
     <script defer src="../../src/js/signup.js"></script>
-    <script defer src="../../src/js/header.js"></script>
-    <script defer src="../../src/js/footer.js"></script>
-    <title>Document</title>
+    <title>PRIME</title>
   </head>
   <body>
     <div id="wrapper">
       <div class="container">
         <form action="http://127.0.0.1:5502" method="post">
-          <article class="inner__contents">회원가입</article>
+          <article class="inner__contents">
+            <img src="../../assets/images/header/LOGO (1).svg" alt="logo"
+          </article>
           <div id="info">
             <div class="info__id">
               <article class="id">아이디</article>
@@ -45,7 +43,8 @@
             <div class="info__password">
               <article class="user__password">비밀번호</article>
               <div class="password__txt">
-                영문, 숫자를 포함한 8자 이상의 비밀번호를 입력해주세요.
+                영문, 숫자, 특수문자를 포함한 8자 이상의 비밀번호를
+                입력해주세요.
               </div>
               <fieldset>
                 <input
@@ -103,6 +102,7 @@
                   <option value="hotmail.com">hotmail.com</option>
                   <option value="outlook.com">outlook.com</option>
                   <option value="icloud.com">icloud.com</option>
+                  <option value="manual">직접입력</option>
                 </select>
               </div>
               <div class="email__success">

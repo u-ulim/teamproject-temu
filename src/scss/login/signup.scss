@@ -10,30 +10,41 @@
   justify-content: center;
   color: map-get($color, color-Neutrals-Grey-800);
   @include width_full;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    height: 100vh;
+  }
+
   .container {
-    display: flex;
-    flex-direction: column;
     padding: 10px 20px;
-    height: 90%;
+    margin-top: 10px;
+    @media screen and (max-width: 390px) {
+      padding: 0;
+    }
     .inner__contents {
-      margin-bottom: 10px;
+      justify-content: center;
+      text-align: left;
       color: map-get($color, color-Neutrals-Grey-700);
-      text-align: center;
+
       @include heading_S_24;
+      img {
+        width: 100%;
+
+        height: 70px;
+        margin-bottom: 20px;
+      }
     }
     #info {
       color: map-get($color, color-Neutrals-Grey-700);
       .info__id {
         .id {
-          //   border: 1px solid red;
           @include text_B_M_16;
           margin-bottom: 5px;
         }
         .user__id {
           display: flex;
           flex-direction: column;
-          // align-items: center;
-          margin-bottom: 10px;
+          margin-bottom: 15px;
           .userid {
             padding: 10px;
             border: 1px solid map-get($color, color-Neutrals-Grey-300);
@@ -65,13 +76,12 @@
       }
       .info__password {
         .user__password {
-          //   border: 1px solid red;
           @include text_B_M_16;
-          margin-bottom: 2px;
+          margin-bottom: 5px;
         }
         .password__txt {
           @include text_S_14;
-          margin-bottom: 2px;
+          margin-bottom: 5px;
           color: map-get($color, color-Neutrals-Grey-600);
         }
         fieldset {
@@ -92,7 +102,6 @@
           .fa-eye-slash,
           .fa-eye {
             position: absolute;
-            // border: 1px solid red;
             bottom: 80;
             left: 50;
             color: map-get($color, color-Neutrals-Grey-500);
@@ -102,13 +111,13 @@
         .password__message {
           @include text_S_14;
           display: none;
-          margin-bottom: 8px;
+          margin-bottom: 15px;
           color: map-get($color-system, error-color);
         }
         .success__password {
           @include text_S_14;
           display: none;
-          margin-bottom: 8px;
+          margin-bottom: 15px;
           color: map-get($color-system, info-color);
           span {
             margin-left: 3px;
@@ -117,9 +126,9 @@
       }
       .info__password__check {
         .password__check {
-          //   border: 1px solid red;
           @include text_B_M_16;
-          margin-bottom: 2px;
+          margin-bottom: 5px;
+          margin-top: 15px;
         }
         fieldset {
           display: flex;
@@ -164,7 +173,8 @@
       .info__email {
         .user__email {
           @include text_B_M_16;
-          margin-bottom: 2px;
+          margin-bottom: 5px;
+          margin-top: 15px;
         }
 
         #email__item {
@@ -186,9 +196,8 @@
           .control {
             display: flex;
             margin-left: 5px;
-            padding-left: 10px;
+            padding: 0px 10px;
             border: 1px solid map-get($color, color-Neutrals-Grey-300);
-            // border: 1px solid red;
             width: 170px;
             height: 40px;
             color: map-get($color, color-Neutrals-Grey-600);
@@ -222,13 +231,13 @@
     #agreement {
       #agree {
         .agree__title {
-          margin-bottom: 2px;
+          margin-top: 15px;
+          margin-bottom: 5px;
           color: map-get($color, color-Neutrals-Grey-800);
           @include text_B_M_16;
         }
         #items {
           display: flex;
-          // justify-content: center;
           justify-content: start;
           flex-direction: column;
           margin-bottom: 10px;
@@ -240,19 +249,18 @@
             height: 28px;
           }
           #agree__box {
-            display: flex;
-            margin-bottom: 2px;
+            margin-left: 2px;
+            margin-bottom: 5px;
             border-bottom: 1px solid map-get($color, color-Neutrals-Grey-300);
             .agree__checkbox {
               display: flex;
               align-items: center;
-              margin-bottom: 3px;
+              margin-bottom: 5px;
               .checkbox {
                 width: 18px;
                 height: 18px;
               }
               .All__checkbox {
-                // border: 1px solid red;
                 @include text_B_M_16;
                 margin-left: 5px;
               }
@@ -275,7 +283,6 @@
                 height: 18px;
               }
               .txt {
-                // border: 1px solid red;
                 @include text_S_14;
                 margin-left: 5px;
               }
@@ -298,7 +305,6 @@
                 height: 18px;
               }
               .txt {
-                // border: 1px solid red;
                 @include text_S_14;
                 margin-left: 5px;
               }
@@ -344,7 +350,6 @@
                 height: 18px;
               }
               .txt {
-                // border: 1px solid red;
                 @include text_S_14;
                 margin-left: 5px;
               }
@@ -357,7 +362,6 @@
           }
           #event__box {
             display: flex;
-            // margin-bottom: 2px;
             .event__checkbox {
               display: flex;
               align-items: center;
@@ -392,6 +396,7 @@
         transition: background 0.4s;
         border-radius: 3px;
         @include text_M_16;
+
         &.active {
           background: map-get($color, primary-color);
         }

@@ -28,6 +28,7 @@ main {
       align-items: center;
       justify-content: center;
       flex-direction: column;
+
       /*section__up-title*/
       .section__up-title {
         display: flex;
@@ -43,7 +44,7 @@ main {
       .address__info {
         display: flex;
         flex-direction: column;
-        margin-bottom: 30px;
+        margin-bottom: 60px;
         width: 700px;
         height: 168px;
         .info__up {
@@ -61,18 +62,22 @@ main {
           flex-direction: column;
           border: 1px solid map-get($color, primary-color);
           border-radius: 8px;
+          padding: 20px 0;
           ul {
-            padding: 16px 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 0 20px;
             li {
               &:nth-child(1) {
-                @include text_B_M_16;
+                @include text_B_L_18;
               }
               &:nth-child(2) {
-                @include text_B_S_14;
+                @include text_B_M_16;
                 color: map-get($color, color-Neutrals-Grey-500);
               }
               &:nth-child(3) {
-                @include text_B_S_14;
+                @include text_B_M_16;
               }
             }
           }
@@ -127,7 +132,7 @@ main {
               background-color: map-get($color, primary-color);
               color: map-get($color, color-White);
               transition: all 0.3s;
-
+              cursor: pointer;
               border-radius: 8px;
               @include text_B_M_16;
               &:hover {
@@ -247,7 +252,7 @@ main {
                   @include text_B_S_14;
                 }
                 &:nth-child(3) {
-                  @include text_XS_12;
+                  @include text_S_14;
                 }
               }
             }

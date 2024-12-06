@@ -52,7 +52,7 @@
             @include text_B_S_14;
           }
           .top__delivery-text {
-            color: #adffa2;
+            color: #fff7a7;
           }
           .top__exchange-text {
             color: #fff7a7;
@@ -112,9 +112,9 @@
       .nav-left__logo {
         display: inline-block;
         width: 45px;
-        height: 45px;
-        background: url("../../../assets/images/header/LOGO.svg") center / cover
-          no-repeat;
+        height: 36px;
+        background: url("../../../assets/images/header/prime-logo.svg") center /
+          cover no-repeat;
       }
       .nav-left__menus {
         display: flex;
@@ -456,7 +456,7 @@
         width: 100%;
         .nav-left__logo {
           width: 45px;
-          height: 45px;
+          height: 36px;
         }
         .nav__input-wrapper {
           flex-grow: 1;
@@ -480,9 +480,10 @@
     nav {
       .nav-left {
         .nav-left__logo {
-          background: url("../../../assets/images/header/LOGO_M.svg");
-          width: 56px;
-          height: 14px;
+          background: url("../../../assets/images/header/prime-logo.svg") cover/
+            center;
+          width: 45px;
+          height: 36px;
           background-repeat: no-repeat;
         }
         .nav-left__menus {

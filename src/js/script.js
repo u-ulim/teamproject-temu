@@ -22,7 +22,10 @@ const totalPages = slideCount;
 
 // 페이지네이션 업데이트 함수
 const updatePagination = () => {
-  const currentPage = (currentIdx % slideCount) + 1;
+  let currentPage =
+    currentIdx >= 0
+      ? (currentIdx % slideCount) + 1
+      : slideCount + (currentIdx % slideCount);
   mainSlidePg.innerText = `${currentPage} / ${totalPages}`;
 };
 
@@ -65,12 +68,33 @@ const makeClone = () => {
 makeClone();
 
 // 버튼 클릭을 통해서 실제 슬라이드를 출력시켜주는 함수
-const moveSlide = (num) => {
-  // console.log(num);
+// --------------------------------------
+// const moveSlide = (num) => {
+//   // console.log(num);
 
+//   slides.style.left = `${-num * (slideWidth + slideMargin)}px`;
+//   currentIdx = num;
+//   if (currentIdx === slideCount || currentIdx === -slideCount) {
+//     setTimeout(() => {
+//       slides.classList.remove("animated");
+//       slides.style.left = "0px";
+//       currentIdx = 0;
+//     }, 500);
+//     setTimeout(() => {
+//       slides.classList.add("animated");
+//     }, 600);
+//   }
+//   updatePagination(); // 페이지네이션 업데이트
+// };
+
+// --------------------------------------
+
+const moveSlide = (num) => {
   slides.style.left = `${-num * (slideWidth + slideMargin)}px`;
   currentIdx = num;
-  if (currentIdx === slideCount || currentIdx === -slideCount) {
+
+  // currentIdx가 slideCount보다 크거나 -slideCount보다 작으면 초기화
+  if (currentIdx >= slideCount) {
     setTimeout(() => {
       slides.classList.remove("animated");
       slides.style.left = "0px";
@@ -79,7 +103,17 @@ const moveSlide = (num) => {
     setTimeout(() => {
       slides.classList.add("animated");
     }, 600);
+  } else if (currentIdx <= -slideCount) {
+    setTimeout(() => {
+      slides.classList.remove("animated");
+      slides.style.left = `${-(slideCount - 1) * (slideWidth + slideMargin)}px`;
+      currentIdx = slideCount - 1;
+    }, 500);
+    setTimeout(() => {
+      slides.classList.add("animated");
+    }, 600);
   }
+
   updatePagination(); // 페이지네이션 업데이트
 };
 
@@ -145,10 +179,6 @@ const cartItemThird = document.querySelector(
   ".cart__wrapper .cart__item-third"
 );
 
-console.log(cartItemFirst);
-console.log(cartItemSecon);
-console.log(cartItemThird);
-
 const goToCartPageHandler = (e) => {
   console.log(e.target.value);
 };
@@ -159,6 +189,79 @@ const cartItems = document.querySelectorAll(
 
 cartItems.forEach((cartItem) => {
   cartItem.addEventListener("click", (e) => {
-    window.location.href = "/html/components/Productcart.html";
+    const user = JSON.parse(localStorage.getItem("users"));
+
+    if (!user) {
+      e.preventDefault();
+      alert("로그인이 필요합니다. 로그인 페이지로 이동합니다.");
+      window.location.href = "/html/components/login.html";
+    } else {
+      // user 정보가 있으면 카트 페이지로 이동
+      window.location.href = "/html/components/Productcart.html";
+    }
   });
 });
+
+// 화면 크기 확인
+if (window.innerWidth <= 768) {
+  const cartContent = document.querySelector(".cart__wrapper");
+
+  // 래퍼의 넓이 정보
+  const containerClientWidth = cartContent.clientWidth;
+  const containerScrollWidth = cartContent.scrollWidth;
+
+  let startX = 0; // 터치 시작 지점
+  let nowX = 0; // 현재 이동 중인 지점
+  let endX = 0; // 터치 종료 지점
+  let scrollX = 0; // 스크롤 위치
+  let isDragging = false; // 드래그 상태 확인
+
+  console.log(startX);
+
+  // 터치 및 마우스 이벤트에서 X 위치 가져오기
+  const getClientX = (e) => (e.touches ? e.touches[0].clientX : e.clientX);
+
+  // X 좌표를 기준으로 이동 거리 계산
+  const onScrollMove = (e) => {
+    if (!isDragging) return;
+
+    nowX = getClientX(e);
+    const diff = nowX - startX; // 이동 거리
+    const newScrollX = scrollX - diff; // 새로운 스크롤 위치 계산
+
+    // 경계값 처리
+    if (newScrollX <= 0) {
+      cartContent.scrollLeft = 0;
+    } else if (newScrollX >= containerScrollWidth - containerClientWidth) {
+      cartContent.scrollLeft = containerScrollWidth - containerClientWidth;
+    } else {
+      cartContent.scrollLeft = newScrollX;
+    }
+  };
+
+  // 드래그 종료 처리
+  const onScrollEnd = () => {
+    isDragging = false;
+    scrollX = cartContent.scrollLeft; // 현재 스크롤 위치 저장
+    window.removeEventListener("touchmove", onScrollMove);
+    window.removeEventListener("mousemove", onScrollMove);
+    window.removeEventListener("touchend", onScrollEnd);
+    window.removeEventListener("mouseup", onScrollEnd);
+  };
+
+  // 드래그 시작 처리
+  const onScrollStart = (e) => {
+    startX = getClientX(e); // 터치 시작 위치 저장
+    isDragging = true;
+    window.addEventListener("touchmove", onScrollMove);
+    window.addEventListener("mousemove", onScrollMove);
+    window.addEventListener("touchend", onScrollEnd);
+    window.addEventListener("mouseup", onScrollEnd);
+  };
+
+  // 터치 및 마우스 이벤트 추가
+  if (cartContent) {
+    cartContent.addEventListener("touchstart", onScrollStart);
+    cartContent.addEventListener("mousedown", onScrollStart);
+  }
+}

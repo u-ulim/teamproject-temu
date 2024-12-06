@@ -175,7 +175,8 @@ table {
   margin-bottom: 30px;
   background-color: #fff;
   background-color: rgba(244, 244, 244, 0.9); /* 투명한 배경 */
-  backdrop-filter: blur(5px); /* 블러 효과 */
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px); /* 블러 효과 */
 }
 #header .header-top-wrapper {
   width: 100%;
@@ -218,7 +219,7 @@ table {
   letter-spacing: -0.42px;
 }
 #header .header-top-wrapper .header-top ul li .top__delivery-text {
-  color: #adffa2;
+  color: #fff7a7;
 }
 #header .header-top-wrapper .header-top ul li .top__exchange-text {
   color: #fff7a7;
@@ -230,8 +231,10 @@ table {
   width: 34px;
   height: 34px;
   display: inline-block;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 #header .header-top-wrapper .header-top ul .header-top__prev {
   top: -48px;
@@ -272,8 +275,8 @@ table {
 #header nav .nav-left .nav-left__logo {
   display: inline-block;
   width: 45px;
-  height: 45px;
-  background: url("../../../assets/images/header/LOGO.svg") center/cover no-repeat;
+  height: 36px;
+  background: url("../../../assets/images/header/prime-logo.svg") center/cover no-repeat;
 }
 #header nav .nav-left .nav-left__menus {
   display: flex;
@@ -450,8 +453,10 @@ table {
   height: 70px;
   border-radius: 50%;
   transition: 0.3s;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 #header nav .nav-left .nav-left__menus .nav-menu__category .submenu-wrapper .submenu .submenu-content .content > .sub-item > div > img:hover {
   transform: scale(1.2);
@@ -473,9 +478,17 @@ table {
   transition: all 0.5s;
   border-radius: 50px;
 }
+#header nav .nav-left .nav__input-wrapper input::-moz-placeholder {
+  color: #ccc; /* 기본 placeholder 색상 */
+  -moz-transition: color 0.5s;
+  transition: color 0.5s; /* placeholder 색상 전환에 대한 트랜지션 */
+}
 #header nav .nav-left .nav__input-wrapper input::placeholder {
   color: #ccc; /* 기본 placeholder 색상 */
   transition: color 0.5s; /* placeholder 색상 전환에 대한 트랜지션 */
+}
+#header nav .nav-left .nav__input-wrapper input:focus::-moz-placeholder {
+  color: transparent; /* 포커스 시 placeholder 색상 투명화 */
 }
 #header nav .nav-left .nav__input-wrapper input:focus::placeholder {
   color: transparent; /* 포커스 시 placeholder 색상 투명화 */
@@ -574,7 +587,7 @@ table {
   }
   #header nav .nav-left .nav-left__logo {
     width: 45px;
-    height: 45px;
+    height: 36px;
   }
   #header nav .nav-left .nav__input-wrapper {
     flex-grow: 1;
@@ -592,9 +605,9 @@ table {
     margin-bottom: 0px;
   }
   #header nav .nav-left .nav-left__logo {
-    background: url("../../../assets/images/header/LOGO_M.svg");
-    width: 56px;
-    height: 14px;
+    background: url("../../../assets/images/header/prime-logo.svg") cover/center;
+    width: 45px;
+    height: 36px;
     background-repeat: no-repeat;
   }
   #header nav .nav-left .nav-left__menus {

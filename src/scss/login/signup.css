@@ -173,21 +173,35 @@ table {
   color: #292828;
   width: 100%;
 }
+@media screen and (max-width: 768px) {
+  #wrapper {
+    width: 100%;
+    height: 100vh;
+  }
+}
 #wrapper .container {
-  display: flex;
-  flex-direction: column;
   padding: 10px 20px;
-  height: 90%;
+  margin-top: 10px;
+}
+@media screen and (max-width: 390px) {
+  #wrapper .container {
+    padding: 0;
+  }
 }
 #wrapper .container .inner__contents {
-  margin-bottom: 10px;
+  justify-content: center;
+  text-align: left;
   color: #4a4949;
-  text-align: center;
   font-family: "Pretendard-Bold";
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
   letter-spacing: -0.48px;
+}
+#wrapper .container .inner__contents img {
+  width: 100%;
+  height: 70px;
+  margin-bottom: 20px;
 }
 #wrapper .container #info {
   color: #4a4949;
@@ -204,7 +218,7 @@ table {
 #wrapper .container #info .info__id .user__id {
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 #wrapper .container #info .info__id .user__id .userid {
   padding: 10px;
@@ -256,7 +270,7 @@ table {
   font-weight: 700;
   line-height: 24px;
   letter-spacing: -0.48px;
-  margin-bottom: 2px;
+  margin-bottom: 5px;
 }
 #wrapper .container #info .info__password .password__txt {
   font-family: "Pretendard-Regular";
@@ -264,7 +278,7 @@ table {
   font-style: normal;
   line-height: 22px;
   letter-spacing: -0.42px;
-  margin-bottom: 2px;
+  margin-bottom: 5px;
   color: #6a6a6a;
 }
 #wrapper .container #info .info__password fieldset {
@@ -301,7 +315,7 @@ table {
   line-height: 22px;
   letter-spacing: -0.42px;
   display: none;
-  margin-bottom: 8px;
+  margin-bottom: 15px;
   color: #fc3310;
 }
 #wrapper .container #info .info__password .success__password {
@@ -311,7 +325,7 @@ table {
   line-height: 22px;
   letter-spacing: -0.42px;
   display: none;
-  margin-bottom: 8px;
+  margin-bottom: 15px;
   color: #0a8800;
 }
 #wrapper .container #info .info__password .success__password span {
@@ -324,7 +338,8 @@ table {
   font-weight: 700;
   line-height: 24px;
   letter-spacing: -0.48px;
-  margin-bottom: 2px;
+  margin-bottom: 5px;
+  margin-top: 15px;
 }
 #wrapper .container #info .info__password__check fieldset {
   display: flex;
@@ -383,7 +398,8 @@ table {
   font-weight: 700;
   line-height: 24px;
   letter-spacing: -0.48px;
-  margin-bottom: 2px;
+  margin-bottom: 5px;
+  margin-top: 15px;
 }
 #wrapper .container #info .info__email #email__item {
   display: flex;
@@ -409,7 +425,7 @@ table {
 #wrapper .container #info .info__email #email__item .control {
   display: flex;
   margin-left: 5px;
-  padding-left: 10px;
+  padding: 0px 10px;
   border: 1px solid #b5b5b5;
   width: 170px;
   height: 40px;
@@ -455,7 +471,8 @@ table {
   color: #fc3310;
 }
 #wrapper .container #agreement #agree .agree__title {
-  margin-bottom: 2px;
+  margin-top: 15px;
+  margin-bottom: 5px;
   color: #292828;
   font-family: "Pretendard-Bold";
   font-size: 16px;
@@ -478,14 +495,14 @@ table {
   height: 28px;
 }
 #wrapper .container #agreement #agree #items #agree__box {
-  display: flex;
-  margin-bottom: 2px;
+  margin-left: 2px;
+  margin-bottom: 5px;
   border-bottom: 1px solid #b5b5b5;
 }
 #wrapper .container #agreement #agree #items #agree__box .agree__checkbox {
   display: flex;
   align-items: center;
-  margin-bottom: 3px;
+  margin-bottom: 5px;
 }
 #wrapper .container #agreement #agree #items #agree__box .agree__checkbox .checkbox {
   width: 18px;

@@ -29,7 +29,7 @@ if (getCartProducts.length > 0) {
         </a>
         <div>
           <span>주문상품 (${getCartProducts.length}건)</span>
-          <span>배송날짜 ${deliveryStart} - ${deliveryEnd}</span>
+          <span>배송예정 ${deliveryStart} - ${deliveryEnd}</span>
         </div>
       </li>
       <li>
@@ -46,7 +46,7 @@ if (addressList) {
     <ul>
       <li>${addressList.name}</li>
       <li>82+ ${addressList.phoneNumber}</li>
-      <li>${addressList.zipcode} 대한민국 ${addressList.siSelected} ${addressList.guKunSelected} ${addressList.optionAddress}</li>
+      <li>${addressList.zipcode} 대한민국 ${addressList.siKname} ${addressList.guKunSelected} ${addressList.optionAddress}</li>
     </ul>
   `;
   addressInfo.innerHTML = createAddress;
